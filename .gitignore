@@ -1,0 +1,62 @@
+# ─── Secrets — NEVER commit ───────────────────────────────────────────────
+x_archive/secrets/
+lst-credentials.txt
+*.pem
+*.key
+*.p12
+*credentials*
+.env
+.env.local
+
+# ─── Archive subtree — staging for relocation/discard, not committed ──────
+x_archive/
+
+# ─── Vendored external source ─────────────────────────────────────────────
+# Joget DX 8 source tree + API Builder source, used for reading only.
+# Both have their own .git. Fetch via `tooling/fetch-vendored.sh`.
+jw-community/
+api-builder/
+
+# ─── Built artifacts ──────────────────────────────────────────────────────
+*.jar
+*.war
+*.jwa
+*.class
+target/
+build/
+dist/
+out/
+
+# ─── Python tooling ───────────────────────────────────────────────────────
+tooling/.venv/
+tooling/__pycache__/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# ─── Node (if used in any plugin) ─────────────────────────────────────────
+node_modules/
+
+# ─── IDE / OS noise ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+~$*
+
+# ─── Maven ─────────────────────────────────────────────────────────────────
+.mvn/wrapper/maven-wrapper.jar
+
+# ─── Logs ──────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Backup / scratch files ───────────────────────────────────────────────
+*.bak
+*.orig
+*~
+.cache/
