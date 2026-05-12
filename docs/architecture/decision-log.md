@@ -1148,3 +1148,15 @@ Set in Joget's `setenv.sh`. Going live = edit one line (`testMode=N`), restart T
 - `tooling/backfill_app_lifecycle_state.py` — docs the path NOT taken.
 
 **Follow-up.** Phase 2 (future slice): wizard save-as-draft + citizen-withdraw UI + operator-open hook + (optionally) consolidate `c_status` into `c_lifecycleState` after all consumers are updated.
+
+## D55 — Lazy polyrepo extraction (2026-05-12)
+
+**Decision.** Reject the mass-extraction plan for the Tier 1 + Tier 2 plugins. Extract plugins to their own repos lazily, only when a concrete second consumer surfaces a real reuse demand. Until each lazy extraction lands, the plugin lives at `farmers-portal/plugins/<plugin-name>/` with its citable GitHub URL.
+
+**Why.** YAGNI dominates Convention-over-Invention in the absence of demand. Mass-extracting 13 plugins speculatively is 3-5 days of work for plugins mostly with no second consumer; each repo would carry placeholder docs that no one reads.
+
+**First trigger.** GAM (banking workflow) needed `joget-status-framework` as a Maven dependency, May 2026. Standalone repo created at `github.com/aarelaponin/joget-status-framework`.
+
+**Trade-off accepted.** Temporary duplication during the window between extraction and Pass C (the eventual consolidation that switches farmers-portal to Maven-artifact consumption + removes in-tree copies). Manual sync discipline: bug fixes land in the standalone repo first, then copied into farmers-portal's in-tree copy.
+
+**Reference.** ADR-032 (`docs/architecture/adr/adr-032-lazy-polyrepo-extraction.md`). Cross-project handover note for GAM at `x_archive/NOTE-for-GAM-adopting-joget-status-framework.md`. Supersedes the "Tier 1 + Tier 2 polyrepo split, Pass B post-UAT" framing in the GovStack alignment report §7.3.

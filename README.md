@@ -20,9 +20,13 @@ Substantially GovStack-conformant for the H1 horizon. See `docs/architecture/gov
 │   ├── seeds/             fixture data (MM, master data, samples)
 │   └── branding/          logos, favicons
 │
-├── plugins/             Lesotho-specific OSGi plugin sources
-│                        (Tier 1/2 generic plugins are extracted to separate
-│                        repos in Pass B — see docs/implementation/)
+├── plugins/             OSGi plugin sources — all 29 plugins (Tier 1 generic,
+│                        Tier 2 RegBB suite, Tier 3 Lesotho-specific) live in
+│                        one tree. Individual plugins are extracted to their
+│                        own repos *lazily*, when a concrete second consumer
+│                        appears — see docs/architecture/adr/adr-032-lazy-
+│                        polyrepo-extraction.md. First lazy extraction:
+│                        joget-status-framework, May 2026 (triggered by GAM).
 │
 ├── tooling/             Python scripts — deploy helpers, test harness,
 │                        seeders, load-tests, e2e tests
@@ -133,7 +137,7 @@ As of 2026-05-12 (pre-UAT):
 - W1-W4 of the pre-UAT plan complete (RBAC, notifications, lifecycle, perf baseline + indexes).
 - W5-W8 ahead (UAT instance + fixtures, kiosk, defect tracker, accessibility, Sesotho i18n scaffolding, runbooks, entry/exit criteria).
 - UAT entry blocked on: MAFSN-provisioned UAT environment, Keycloak realm, SMTP gateway choice (Khotso request out 2026-05-11), named UAT participants.
-- Tier 1 + Tier 2 polyrepo split deferred to Pass B (post-UAT).
+- Polyrepo extraction policy: lazy, per-plugin, triggered by concrete reuse demand. See ADR-032.
 
 ## Credentials and the "DEV-only" hygiene rule
 
