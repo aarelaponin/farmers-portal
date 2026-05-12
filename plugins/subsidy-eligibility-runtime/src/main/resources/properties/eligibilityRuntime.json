@@ -1,0 +1,58 @@
+[{
+    title : '@@plugin.eligibilityRuntime.config.title@@',
+    properties : [{
+        name : 'applicationId',
+        label : '@@property.applicationId.label@@',
+        description : '@@property.applicationId.description@@',
+        type : 'textfield',
+        value : '#variable.applicationId#',
+        required : 'True'
+    },{
+        name : 'applicantFarmerCode',
+        label : '@@property.applicantFarmerCode.label@@',
+        description : '@@property.applicantFarmerCode.description@@',
+        type : 'textfield',
+        value : '#variable.farmerCode#',
+        required : 'True'
+    },{
+        name : 'programCode',
+        label : '@@property.programCode.label@@',
+        description : '@@property.programCode.description@@',
+        type : 'textfield',
+        value : '#variable.programCode#',
+        required : 'True'
+    },{
+        name : 'rulesetCode',
+        label : '@@property.rulesetCode.label@@',
+        description : '@@property.rulesetCode.description@@',
+        type : 'textfield',
+        required : 'False'
+    }]
+},{
+    title : '@@plugin.eligibilityRuntime.jre.title@@',
+    properties : [{
+        name : 'jreBaseUrl',
+        label : '@@property.jreBaseUrl.label@@',
+        description : '@@property.jreBaseUrl.description@@',
+        type : 'textfield',
+        value : 'http://localhost:8080/jw',
+        required : 'True'
+    },{
+        name : 'jreApiKey',
+        label : '@@property.jreApiKey.label@@',
+        description : '@@property.jreApiKey.description@@',
+        type : 'password',
+        required : 'True'
+    },{
+        name : 'writeAuditTrail',
+        label : '@@property.writeAuditTrail.label@@',
+        description : '@@property.writeAuditTrail.description@@',
+        type : 'checkbox',
+        value : 'true',
+        required : 'False',
+        options : [{
+            value : 'true',
+            label : '@@property.writeAuditTrail.option@@'
+        }]
+    }]
+}]

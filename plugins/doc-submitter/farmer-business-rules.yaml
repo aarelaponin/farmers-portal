@@ -1,0 +1,31 @@
+# Business Rules for Farmer Registry Service
+# Defines conditional validation logic
+
+conditional_rules:
+  # Rule 1: If farmer engages in crop production, crop management details are required
+  - trigger_field: cropProduction
+    trigger_value: "yes"
+    requires_grid: cropManagement
+    min_entries: 1
+    message_template: "At least {min_entries} crop entry is required when crop production is '{trigger_value}'"
+
+  # Rule 2: If farmer has livestock, livestock details are required
+  - trigger_field: hasLivestock
+    trigger_value: "yes"
+    requires_grid: livestockDetails
+    message_template: "Livestock details are required when {trigger_field} is '{trigger_value}'"
+
+  # Rule 3: If farmer has gainful employment, government employment status is required
+  - trigger_field: gainfulEmployment
+    trigger_value: "yes"
+    requires_fields:
+      - governmentEmployed
+    message_template: "Government employment status is required when gainful employment is '{trigger_value}'"
+
+  # Rule 4: If farmer receives relative support, support details are required
+  - trigger_field: relativeSupport
+    trigger_value: "yes"
+    requires_fields:
+      - supportFrequency
+      - supportType
+    message_template: "Support frequency and type are required when relative support is '{trigger_value}'"

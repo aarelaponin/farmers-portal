@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__jetbrains__list_directory_tree",
+      "Bash(find:*)",
+      "Bash(mvn clean package:*)",
+      "Bash(unzip:*)",
+      "Bash(for d in /Users/aarelaponin/joget-enterprise-linux-9.0.3/apache-tomcat-11.0.13/temp/target/felix-cache/cache/bundle*/)",
+      "Bash(do if [ -f \"$d/bundle.info\" ])",
+      "Bash(then echo \"=== $d ===\" cat \"$d/bundle.info\")",
+      "Bash(cat:*)",
+      "WebSearch",
+      "WebFetch(domain:kb.joget.org)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd embedded datalist plugin with JDBC filtering and tab visibility fixes\n\n- Fix JDBC Datalist Binder filtering using #requestParam.xxx# hash variable\n  with conditional WHERE clause for design-time compatibility\n- Fix loading issue in tabbed forms by adding tab visibility detection\n- Add AJAX timeout \\(30s\\) to prevent indefinite loading states\n- Update documentation with correct filtering approach\n- Add working example configurations in docs/\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(gh repo view:*)",
+      "Bash(git fetch:*)",
+      "Bash(GIT_CURL_VERBOSE=1 git push:*)",
+      "Bash(git config:*)",
+      "Bash(git credential-osxkeychain:*)",
+      "Bash(git remote set-url:*)"
+    ]
+  }
+}

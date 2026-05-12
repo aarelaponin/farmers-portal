@@ -1,0 +1,114 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "farmerRegistrationForm",
+        "name": "01 - Farmer Registration Form",
+        "tableName": "farms_registry",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "description": "Multi-tab farmer registration form for ASMS",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "both"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.plugin.enterprise.MultiPagedForm",
+                            "properties": {
+                                "prevButtonlabel": "Previous",
+                                "nextButtonlabel": "Next",
+                                "partiallyStore": "true",
+                                "onlyAllowSubmitOnLastPage": "true",
+                                "numberOfPage": {
+                                    "className": "7",
+                                    "properties": {
+                                        "page1_label": "Basic Information",
+                                        "page1_formDefId": "farmerBasicInfo",
+                                        "page1_readonly": "",
+                                        "page1_readonlyLabel": "",
+                                        "page1_parentSubFormId": "basic_data",
+                                        "page1_subFormParentId": "parent_id",
+                                        "page1_validate": "true",
+                                        "page2_label": "Location & Farm",
+                                        "page2_formDefId": "farmerLocation",
+                                        "page2_readonly": "",
+                                        "page2_readonlyLabel": "",
+                                        "page2_parentSubFormId": "location_data",
+                                        "page2_subFormParentId": "parent_id",
+                                        "page2_validate": "true",
+                                        "page3_label": "Agricultural Activities",
+                                        "page3_formDefId": "farmerAgriculture",
+                                        "page3_readonly": "",
+                                        "page3_readonlyLabel": "",
+                                        "page3_parentSubFormId": "activities_data",
+                                        "page3_subFormParentId": "parent_id",
+                                        "page3_validate": "true",
+                                        "page4_label": "Household Members",
+                                        "page4_formDefId": "farmerHousehold",
+                                        "page4_readonly": "",
+                                        "page4_readonlyLabel": "",
+                                        "page4_parentSubFormId": "household_data",
+                                        "page4_subFormParentId": "parent_id",
+                                        "page4_validate": "true",
+                                        "page5_label": "Crops & Livestock",
+                                        "page5_formDefId": "farmerCropsLivestock",
+                                        "page5_readonly": "",
+                                        "page5_readonlyLabel": "",
+                                        "page5_parentSubFormId": "crops_livestock",
+                                        "page5_subFormParentId": "parent_id",
+                                        "page5_validate": "true",
+                                        "page6_label": "Income & Programs",
+                                        "page6_formDefId": "farmerIncomePrograms",
+                                        "page6_readonly": "",
+                                        "page6_readonlyLabel": "",
+                                        "page6_parentSubFormId": "income_data",
+                                        "page6_subFormParentId": "parent_id",
+                                        "page6_validate": "true",
+                                        "page7_label": "Declaration",
+                                        "page7_formDefId": "farmerDeclaration",
+                                        "page7_readonly": "",
+                                        "page7_readonlyLabel": "",
+                                        "page7_parentSubFormId": "declaration",
+                                        "page7_subFormParentId": "parent_id",
+                                        "page7_validate": "true"
+                                    }
+                                },
+                                "displayMode": "tab",
+                                "ajaxMode": "",
+                                "id": "farmerRegistrationWizard",
+                                "css": "",
+                                "storeMainFormOnPartiallyStore": "true"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "",
+                "id": "mainSection"
+            }
+        }
+    ]
+}

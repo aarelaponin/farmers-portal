@@ -1,0 +1,220 @@
+# Example configuration for a Health Registry Service
+# This demonstrates how to configure the plugin for non-farmer services
+# Copy this file to services.yml and customize for your service
+
+service:
+  id: health_registry
+  name: "Health Registry Service"
+  version: "1.0"
+  govstackVersion: "1.0"
+
+entities:
+  primary:
+    type: "Person"
+    identifierTypes:
+      - NationalId
+      - HealthRegistrationNumber
+      - PatientCode
+
+# Service configuration - THIS IS THE KEY SECTION FOR GENERIC SUPPORT
+serviceConfig:
+  # The parent form that serves as the main registration form
+  parentFormId: "healthRegistrationForm"
+
+  # Map section names to actual Joget form IDs
+  sectionToFormMap:
+    patientBasicInfo: "patientBasicInfo"
+    patientContact: "patientContact"
+    medicalHistory: "medicalHistory"
+    currentMedications: "currentMedications"
+    emergencyContacts: "emergencyContacts"
+
+  # Grid configurations - maps grid names to their settings
+  gridMappings:
+    allergies:
+      formId: "allergyForm"
+      parentField: "patient_id"
+    medications:
+      formId: "medicationForm"
+      parentField: "patient_id"
+    emergencyContacts:
+      formId: "emergencyContactForm"
+      parentField: "patient_id"
+    medicalConditions:
+      formId: "medicalConditionForm"
+      parentField: "patient_id"
+
+formMappings:
+  # Tab 1: Patient Basic Information
+  patientBasicInfo:
+    formId: "patientBasicInfo"
+    tableName: "app_fd_patient_basic_data"
+    primaryKey: "c_patient_id"
+    fields:
+      - joget: "national_id"
+        govstack: "identifiers[0].value"
+        govstackType: "identifiers[0].type"
+        typeValue: "NationalId"
+        required: true
+
+      - joget: "first_name"
+        govstack: "name.given[0]"
+        required: true
+
+      - joget: "last_name"
+        govstack: "name.family"
+        required: true
+
+      - joget: "gender"
+        govstack: "gender"
+        valueMapping:
+          male: "male"
+          female: "female"
+          other: "other"
+        required: true
+
+      - joget: "date_of_birth"
+        govstack: "birthDate"
+        transform: "date_ISO8601"
+        required: true
+
+      - joget: "blood_type"
+        govstack: "extension.bloodType"
+        valueMapping:
+          "A+": "A_POSITIVE"
+          "A-": "A_NEGATIVE"
+          "B+": "B_POSITIVE"
+          "B-": "B_NEGATIVE"
+          "O+": "O_POSITIVE"
+          "O-": "O_NEGATIVE"
+          "AB+": "AB_POSITIVE"
+          "AB-": "AB_NEGATIVE"
+
+  # Tab 2: Contact Information
+  patientContact:
+    formId: "patientContact"
+    tableName: "app_fd_patient_contact"
+    primaryKey: "c_patient_id"
+    fields:
+      - joget: "phone_primary"
+        govstack: "telecom[0].value"
+        required: true
+
+      - joget: "email"
+        govstack: "telecom[1].value"
+
+      - joget: "address_line1"
+        govstack: "address[0].line[0]"
+        required: true
+
+      - joget: "city"
+        govstack: "address[0].city"
+        required: true
+
+      - joget: "postal_code"
+        govstack: "address[0].postalCode"
+
+  # Tab 3: Medical History
+  medicalHistory:
+    formId: "medicalHistory"
+    tableName: "app_fd_medical_history"
+    primaryKey: "c_patient_id"
+    fields:
+      - joget: "chronic_conditions"
+        govstack: "extension.chronicConditions"
+
+      - joget: "previous_surgeries"
+        govstack: "extension.previousSurgeries"
+
+      - joget: "family_history"
+        govstack: "extension.familyHistory"
+
+  # Grid: Allergies
+  allergies:
+    type: "array"
+    formId: "allergyForm"
+    tableName: "app_fd_allergies"
+    primaryKey: "c_id"
+    parentKey: "c_patient_id"
+    fields:
+      - joget: "allergen"
+        govstack: "substance"
+        required: true
+
+      - joget: "reaction"
+        govstack: "reaction"
+
+      - joget: "severity"
+        govstack: "criticality"
+        valueMapping:
+          mild: "low"
+          moderate: "medium"
+          severe: "high"
+
+  # Grid: Current Medications
+  medications:
+    type: "array"
+    formId: "medicationForm"
+    tableName: "app_fd_medications"
+    primaryKey: "c_id"
+    parentKey: "c_patient_id"
+    fields:
+      - joget: "medication_name"
+        govstack: "medicationCodeableConcept.text"
+        required: true
+
+      - joget: "dosage"
+        govstack: "dosage[0].text"
+
+      - joget: "frequency"
+        govstack: "dosage[0].timing.repeat.frequency"
+
+      - joget: "start_date"
+        govstack: "effectivePeriod.start"
+        transform: "date_ISO8601"
+
+  # Grid: Emergency Contacts
+  emergencyContacts:
+    type: "array"
+    formId: "emergencyContactForm"
+    tableName: "app_fd_emergency_contacts"
+    primaryKey: "c_id"
+    parentKey: "c_patient_id"
+    fields:
+      - joget: "contact_name"
+        govstack: "name"
+        required: true
+
+      - joget: "relationship"
+        govstack: "relationship[0].text"
+        required: true
+
+      - joget: "phone"
+        govstack: "telecom[0].value"
+        required: true
+
+# Data validation rules (same structure as farmers)
+validation:
+  enabled: true
+  rules:
+    - field: "national_id"
+      type: "regex"
+      pattern: "^[A-Z0-9]{9,12}$"
+      message: "National ID must be 9-12 alphanumeric characters"
+
+    - field: "phone_primary"
+      type: "regex"
+      pattern: "^\\+?[1-9]\\d{1,14}$"
+      message: "Invalid phone number format"
+
+    - field: "email"
+      type: "regex"
+      pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      message: "Invalid email format"
+
+# This configuration demonstrates:
+# 1. Different service ID (health_registry instead of farmers_registry)
+# 2. Different parent form (healthRegistrationForm instead of farmerRegistrationForm)
+# 3. Different section names and form mappings
+# 4. Different grid configurations with health-specific data
+# 5. All farmer-specific elements have been replaced with health-specific ones

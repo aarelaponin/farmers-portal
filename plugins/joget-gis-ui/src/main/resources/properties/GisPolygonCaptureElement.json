@@ -1,0 +1,484 @@
+[
+    {
+        "title": "Basic Settings",
+        "properties": [
+            {
+                "name": "id",
+                "label": "Field ID",
+                "type": "textfield",
+                "required": "true",
+                "value": "geometry"
+            },
+            {
+                "name": "label",
+                "label": "Label",
+                "type": "textfield",
+                "value": "Boundary"
+            },
+            {
+                "name": "required",
+                "label": "Required",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            },
+            {
+                "name": "requiredMessage",
+                "label": "Required Error Message",
+                "type": "textfield",
+                "value": "Please capture a polygon boundary"
+            }
+        ]
+    },
+    {
+        "title": "Output Field Mapping",
+        "properties": [
+            {
+                "name": "areaFieldId",
+                "label": "Area Field ID",
+                "description": "Form field ID to store calculated area in hectares",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "perimeterFieldId",
+                "label": "Perimeter Field ID",
+                "description": "Form field ID to store calculated perimeter in meters",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "centroidFieldId",
+                "label": "Centroid Field ID",
+                "description": "Form field ID to store centroid as GeoJSON Point",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "vertexCountFieldId",
+                "label": "Vertex Count Field ID",
+                "description": "Form field ID to store number of vertices",
+                "type": "textfield",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "Capture Mode Settings",
+        "properties": [
+            {
+                "name": "captureMode",
+                "label": "Capture Mode",
+                "description": "Which capture modes to enable",
+                "type": "selectbox",
+                "required": "true",
+                "options": [
+                    {"value": "BOTH", "label": "Both (User Chooses Walk or Draw)"},
+                    {"value": "WALK", "label": "Walk Mode Only (GPS)"},
+                    {"value": "DRAW", "label": "Draw Mode Only (Desktop)"},
+                    {"value": "VIEW_ONLY", "label": "View Only (Read-only Display)"}
+                ],
+                "value": "BOTH"
+            },
+            {
+                "name": "defaultMode",
+                "label": "Default Mode",
+                "description": "Initial mode when user has choice",
+                "type": "selectbox",
+                "options": [
+                    {"value": "AUTO", "label": "Auto-detect (Mobile=Walk, Desktop=Draw)"},
+                    {"value": "DRAW", "label": "Draw Mode"},
+                    {"value": "WALK", "label": "Walk Mode"}
+                ],
+                "value": "AUTO"
+            }
+        ]
+    },
+    {
+        "title": "Map Settings",
+        "properties": [
+            {
+                "name": "defaultLatitude",
+                "label": "Default Latitude",
+                "description": "Initial map center latitude (e.g., -29.5 for Lesotho)",
+                "type": "textfield",
+                "value": "-29.5"
+            },
+            {
+                "name": "defaultLongitude",
+                "label": "Default Longitude",
+                "description": "Initial map center longitude (e.g., 28.5 for Lesotho)",
+                "type": "textfield",
+                "value": "28.5"
+            },
+            {
+                "name": "defaultZoom",
+                "label": "Default Zoom Level",
+                "description": "Initial zoom level (1-18)",
+                "type": "textfield",
+                "value": "10"
+            },
+            {
+                "name": "tileProvider",
+                "label": "Default Map Tiles",
+                "type": "selectbox",
+                "options": [
+                    {"value": "OSM", "label": "OpenStreetMap"},
+                    {"value": "SATELLITE_ESRI", "label": "Satellite (ESRI)"},
+                    {"value": "SATELLITE_GOOGLE", "label": "Satellite (Google - requires API key)"},
+                    {"value": "HYBRID", "label": "Hybrid (Satellite + Labels)"},
+                    {"value": "TERRAIN", "label": "Terrain"}
+                ],
+                "value": "OSM"
+            },
+            {
+                "name": "showSatelliteOption",
+                "label": "Show Layer Switcher",
+                "description": "Allow user to switch between map styles",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            },
+            {
+                "name": "mapHeight",
+                "label": "Map Height (pixels)",
+                "type": "textfield",
+                "value": "400"
+            }
+        ]
+    },
+    {
+        "title": "Validation Rules",
+        "properties": [
+            {
+                "name": "minAreaHectares",
+                "label": "Minimum Area (hectares)",
+                "description": "Show warning if area is less than this value",
+                "type": "textfield",
+                "value": "0.01"
+            },
+            {
+                "name": "maxAreaHectares",
+                "label": "Maximum Area (hectares)",
+                "description": "Show warning if area exceeds this value",
+                "type": "textfield",
+                "value": "1000"
+            },
+            {
+                "name": "minVertices",
+                "label": "Minimum Vertices",
+                "description": "Minimum number of polygon vertices",
+                "type": "textfield",
+                "value": "3"
+            },
+            {
+                "name": "maxVertices",
+                "label": "Maximum Vertices",
+                "description": "Maximum number of polygon vertices",
+                "type": "textfield",
+                "value": "100"
+            },
+            {
+                "name": "allowSelfIntersection",
+                "label": "Allow Self-Intersecting Polygons",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "Overlap Checking",
+        "properties": [
+            {
+                "name": "enableOverlapCheck",
+                "label": "Enable Overlap Checking",
+                "description": "Check if polygon overlaps with existing records",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            },
+            {
+                "name": "overlapFormId",
+                "label": "Overlap Check Form ID",
+                "description": "Form to check for overlapping polygons",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "overlapGeometryField",
+                "label": "Geometry Field ID",
+                "description": "Field containing GeoJSON geometry in the overlap form",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "overlapDisplayFields",
+                "label": "Display Fields",
+                "description": "Comma-separated field IDs to show in overlap warning",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "overlapFilterCondition",
+                "label": "Filter Condition",
+                "description": "SQL WHERE clause to filter records (e.g., status = 'ACTIVE')",
+                "type": "textfield",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "Nearby Parcels Display",
+        "properties": [
+            {
+                "name": "showNearbyParcels",
+                "label": "Show Nearby Parcels",
+                "description": "Display existing registered parcels as read-only context for fraud prevention",
+                "type": "selectbox",
+                "options": [
+                    {"value": "DISABLED", "label": "Disabled"},
+                    {"value": "ON_LOAD", "label": "Load on map initialization"},
+                    {"value": "ON_DEMAND", "label": "Load on user request (button)"}
+                ],
+                "value": "DISABLED"
+            },
+            {
+                "name": "nearbyParcelsFormId",
+                "label": "Parcels Form ID",
+                "description": "Form containing parcel records to display",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "nearbyParcelsGeometryField",
+                "label": "Parcels Geometry Field ID",
+                "description": "Field containing GeoJSON geometry",
+                "type": "textfield",
+                "value": "c_geometry"
+            },
+            {
+                "name": "nearbyParcelsDisplayFields",
+                "label": "Display Fields",
+                "description": "Comma-separated field IDs to show in popup (e.g., parcel_name,farmer_name)",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "nearbyParcelsFilterCondition",
+                "label": "Filter Condition",
+                "description": "SQL WHERE clause to filter displayed parcels (e.g., status = 'ACTIVE')",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "nearbyParcelsFillColor",
+                "label": "Fill Color",
+                "description": "Fill color for existing parcels (CSS color)",
+                "type": "textfield",
+                "value": "#808080"
+            },
+            {
+                "name": "nearbyParcelsFillOpacity",
+                "label": "Fill Opacity",
+                "description": "Fill opacity for existing parcels (0-1)",
+                "type": "textfield",
+                "value": "0.15"
+            },
+            {
+                "name": "nearbyParcelsStrokeColor",
+                "label": "Stroke Color",
+                "description": "Border color for existing parcels",
+                "type": "textfield",
+                "value": "#666666"
+            },
+            {
+                "name": "nearbyParcelsMaxResults",
+                "label": "Maximum Parcels",
+                "description": "Maximum number of nearby parcels to display",
+                "type": "textfield",
+                "value": "100"
+            }
+        ]
+    },
+    {
+        "title": "GPS Settings (Walk Mode)",
+        "properties": [
+            {
+                "name": "gpsHighAccuracy",
+                "label": "Use High Accuracy GPS",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            },
+            {
+                "name": "gpsMinAccuracy",
+                "label": "Minimum GPS Accuracy (meters)",
+                "description": "Warn user if GPS accuracy is worse than this",
+                "type": "textfield",
+                "value": "10"
+            },
+            {
+                "name": "autoCloseDistance",
+                "label": "Auto-Close Distance (meters)",
+                "description": "Distance from start point to offer closing polygon",
+                "type": "textfield",
+                "value": "15"
+            }
+        ]
+    },
+    {
+        "title": "Simplification Settings",
+        "properties": [
+            {
+                "name": "enableSimplification",
+                "label": "Enable Polygon Simplification",
+                "description": "Reduce vertex count for GPS-captured boundaries",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            },
+            {
+                "name": "simplificationTolerance",
+                "label": "Simplification Tolerance (meters)",
+                "description": "Higher = fewer vertices. Recommended: 2m for GPS",
+                "type": "textfield",
+                "value": "2"
+            }
+        ]
+    },
+    {
+        "title": "Auto-Center Settings",
+        "properties": [
+            {
+                "name": "enableAutoCenter",
+                "label": "Enable Auto-Center",
+                "description": "Automatically center map based on district/village fields",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            },
+            {
+                "name": "autoCenterDistrictFieldId",
+                "label": "District Field ID",
+                "description": "Form field ID containing district value (e.g., district)",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "autoCenterVillageFieldId",
+                "label": "Village Field ID",
+                "description": "Form field ID containing village value (e.g., village)",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "autoCenterLatFieldId",
+                "label": "Latitude Field ID",
+                "description": "Optional: Form field with pre-computed latitude (skips geocoding if populated)",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "autoCenterLonFieldId",
+                "label": "Longitude Field ID",
+                "description": "Optional: Form field with pre-computed longitude (skips geocoding if populated)",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "autoCenterCountrySuffix",
+                "label": "Country Suffix",
+                "description": "Appended to geocode query for accuracy (e.g., Lesotho)",
+                "type": "textfield",
+                "value": "Lesotho"
+            },
+            {
+                "name": "autoCenterZoom",
+                "label": "Auto-Center Zoom Level",
+                "description": "Zoom level after auto-centering (1-18)",
+                "type": "textfield",
+                "value": "14"
+            },
+            {
+                "name": "autoCenterRetryOnFieldChange",
+                "label": "Re-center on Field Change",
+                "description": "Monitor fields and re-center if values change",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            }
+        ]
+    },
+    {
+        "title": "Appearance",
+        "properties": [
+            {
+                "name": "fillColor",
+                "label": "Polygon Fill Color",
+                "type": "textfield",
+                "value": "#3388ff"
+            },
+            {
+                "name": "fillOpacity",
+                "label": "Polygon Fill Opacity (0-1)",
+                "type": "textfield",
+                "value": "0.2"
+            },
+            {
+                "name": "strokeColor",
+                "label": "Polygon Stroke Color",
+                "type": "textfield",
+                "value": "#3388ff"
+            },
+            {
+                "name": "strokeWidth",
+                "label": "Polygon Stroke Width (pixels)",
+                "type": "textfield",
+                "value": "3"
+            }
+        ]
+    },
+    {
+        "title": "API Configuration",
+        "properties": [
+            {
+                "name": "apiEndpoint",
+                "label": "API Base URL",
+                "description": "Base URL for GIS API (e.g., /jw/api/gis/gis)",
+                "type": "textfield",
+                "value": "/jw/api/gis/gis"
+            },
+            {
+                "name": "apiId",
+                "label": "API ID",
+                "description": "API ID for authentication (from API Builder)",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "apiKey",
+                "label": "API Key",
+                "description": "API Key for authentication",
+                "type": "password",
+                "value": ""
+            }
+        ]
+    }
+]

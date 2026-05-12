@@ -1,0 +1,226 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "app_resolver_config",
+    "name": "Identity Resolver Configuration",
+    "description": "One row per named identity-resolver — defines how a foundational identifier (e.g. National ID) maps to a row in a registry. See _design/identity-resolver-design.md §3.1.",
+    "tableName": "app_resolver_config",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identity",
+        "label": "Identity"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "configId",
+                "label": "Config ID",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "regex": "^[a-zA-Z][a-zA-Z0-9_]*$",
+                    "regexMessage": "Camel-case identifier; letters, digits, underscore only"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Name (operator-facing)",
+                "size": "120",
+                "maxlength": "200",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "description",
+                "label": "Description",
+                "rows": "3"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "isActive",
+                "label": "Active",
+                "value": "Y",
+                "options": [
+                  {"value": "Y", "label": "Yes"},
+                  {"value": "N", "label": "No"}
+                ]
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "cacheSeconds",
+                "label": "Cache TTL (seconds)",
+                "size": "10",
+                "maxlength": "10",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "regex": "^[0-9]+$",
+                    "regexMessage": "Non-negative integer"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "source",
+        "label": "Source registry"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "sourceFormId",
+                "label": "Source Form ID",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "sourceLookupField",
+                "label": "Source Lookup Field",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "multipleMatchesPolicy",
+                "label": "Multiple Matches Policy",
+                "value": "ERROR",
+                "options": [
+                  {"value": "ERROR", "label": "Error — refuse to resolve"},
+                  {"value": "FIRST", "label": "First — pick the first match"},
+                  {"value": "LET_USER_PICK", "label": "Let the citizen pick"}
+                ],
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "notFound",
+        "label": "Not-found behaviour"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "notFoundMessage",
+                "label": "Not-found message (citizen-facing)",
+                "size": "120",
+                "maxlength": "500"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "notFoundActionUrl",
+                "label": "Not-found action URL (use #value# for entered lookup value)",
+                "size": "200",
+                "maxlength": "1000"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

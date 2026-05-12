@@ -1,0 +1,2041 @@
+/**
+ * Smart Farmer Search - CSS Styles
+ * Phase 6: Offline Support (Recent Farmers)
+ */
+
+/* ================================================================
+   CSS VARIABLES
+   ================================================================ */
+:root {
+    --fss-primary: #2563eb;
+    --fss-primary-hover: #1d4ed8;
+    --fss-success: #16a34a;
+    --fss-warning: #f59e0b;
+    --fss-danger: #dc2626;
+    --fss-gray-50: #f9fafb;
+    --fss-gray-100: #f3f4f6;
+    --fss-gray-200: #e5e7eb;
+    --fss-gray-300: #d1d5db;
+    --fss-gray-400: #9ca3af;
+    --fss-gray-500: #6b7280;
+    --fss-gray-600: #4b5563;
+    --fss-gray-700: #374151;
+    --fss-gray-800: #1f2937;
+    --fss-border-radius: 6px;
+    --fss-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --fss-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================================================
+   FORM CELL CONTAINER
+   ================================================================ */
+.fss-form-cell {
+    position: relative;
+}
+
+/* ================================================================
+   DISPLAY FIELD (Trigger Button Area)
+   ================================================================ */
+.fss-display-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--fss-gray-50);
+    border: 1px solid var(--fss-gray-300);
+    border-radius: var(--fss-border-radius);
+    min-height: 40px;
+}
+
+.fss-selected-display {
+    flex: 1;
+    font-size: 14px;
+    color: var(--fss-gray-800);
+}
+
+.fss-selected-display .fss-placeholder-text {
+    color: var(--fss-gray-400);
+    font-style: italic;
+}
+
+.fss-selected-display .fss-farmer-name {
+    font-weight: 500;
+}
+
+/* IMPORTANT: Ensure buttons are clickable */
+.fss-search-btn,
+.fss-clear-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s, transform 0.1s;
+    /* Ensure clickability */
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
+}
+
+.fss-search-btn {
+    background: var(--fss-primary);
+    color: white;
+}
+
+.fss-search-btn:hover {
+    background: var(--fss-primary-hover);
+}
+
+.fss-search-btn:active {
+    transform: scale(0.98);
+}
+
+.fss-search-btn:focus {
+    outline: 2px solid var(--fss-primary);
+    outline-offset: 2px;
+}
+
+.fss-clear-btn {
+    background: var(--fss-gray-200);
+    color: var(--fss-gray-600);
+    padding: 6px 8px;
+}
+
+.fss-clear-btn:hover {
+    background: var(--fss-gray-300);
+    color: var(--fss-danger);
+}
+
+/* ================================================================
+   SEARCH CONTAINER
+   ================================================================ */
+.fss-search-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ================================================================
+   POPUP/MODAL MODE
+   ================================================================ */
+.fss-mode-popup .fss-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.fss-mode-popup .fss-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fss-mode-popup .fss-dialog {
+    background: white;
+    border-radius: var(--fss-border-radius);
+    box-shadow: var(--fss-shadow-lg);
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+    overflow: hidden;
+}
+
+/* ================================================================
+   INLINE MODE
+   ================================================================ */
+.fss-mode-inline .fss-dialog {
+    background: white;
+    border: 1px solid var(--fss-gray-200);
+    border-radius: var(--fss-border-radius);
+    margin-top: 8px;
+}
+
+/* ================================================================
+   HEADER (Updated for Phase 6)
+   ================================================================ */
+.fss-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--fss-gray-200);
+    background: var(--fss-gray-50);
+}
+
+.fss-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--fss-gray-800);
+}
+
+.fss-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fss-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--fss-gray-500);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.fss-close-btn:hover {
+    background: var(--fss-gray-200);
+    color: var(--fss-gray-700);
+}
+
+/* ================================================================
+   CONNECTION STATUS INDICATOR (Phase 6)
+   ================================================================ */
+.fss-connection-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.fss-connection-status i {
+    font-size: 8px;
+}
+
+.fss-status-online {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.fss-status-online i {
+    color: #16a34a;
+}
+
+.fss-status-offline {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.fss-status-offline i {
+    color: #dc2626;
+}
+
+/* ================================================================
+   OFFLINE WARNING BANNER (Phase 6)
+   ================================================================ */
+.fss-offline-warning {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #fef3c7;
+    border-bottom: 1px solid #fcd34d;
+    color: #92400e;
+    font-size: 13px;
+}
+
+.fss-offline-warning i {
+    color: #f59e0b;
+    flex-shrink: 0;
+}
+
+.fss-offline-warning span {
+    line-height: 1.4;
+}
+
+/* ================================================================
+   RECENT FARMERS PANEL (Phase 6)
+   ================================================================ */
+.fss-recent-farmers-panel {
+    padding: 12px 16px;
+    background: white;
+    border-bottom: 1px solid var(--fss-gray-200);
+}
+
+.fss-recent-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.fss-recent-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fss-gray-600);
+}
+
+.fss-recent-title i {
+    color: var(--fss-gray-400);
+}
+
+.fss-clear-recent-btn {
+    font-size: 12px;
+    color: var(--fss-gray-500);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.fss-clear-recent-btn:hover {
+    background: var(--fss-gray-100);
+    color: var(--fss-danger);
+}
+
+.fss-recent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.fss-recent-farmer-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: var(--fss-gray-50);
+    border: 1px solid var(--fss-gray-200);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.fss-recent-farmer-item:hover {
+    background: white;
+    border-color: var(--fss-primary);
+}
+
+.fss-recent-farmer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fss-recent-farmer-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fss-gray-200);
+    color: var(--fss-gray-500);
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.fss-recent-farmer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.fss-recent-farmer-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fss-gray-800);
+}
+
+.fss-recent-farmer-location {
+    font-size: 11px;
+    color: var(--fss-gray-500);
+}
+
+.fss-recent-farmer-select {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--fss-primary);
+    background: white;
+    border: 1px solid var(--fss-primary);
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.fss-recent-farmer-select:hover {
+    background: var(--fss-primary);
+    color: white;
+}
+
+.fss-recent-empty {
+    text-align: center;
+    padding: 20px;
+    color: var(--fss-gray-400);
+    font-size: 13px;
+}
+
+/* ================================================================
+   SECTION DIVIDER (Phase 6)
+   ================================================================ */
+.fss-section-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background: var(--fss-gray-50);
+}
+
+.fss-divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--fss-gray-300);
+}
+
+.fss-divider-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--fss-gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ================================================================
+   SEARCH AREA
+   ================================================================ */
+.fss-search-area {
+    padding: 16px;
+    border-bottom: 1px solid var(--fss-gray-200);
+}
+
+.fss-search-row {
+    display: flex;
+    gap: 10px;
+}
+
+.fss-search-input-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.fss-search-input {
+    width: 100%;
+    padding: 10px 12px;
+    padding-right: 60px;
+    font-size: 14px;
+    border: 1px solid var(--fss-gray-300);
+    border-radius: var(--fss-border-radius);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.fss-search-input:focus {
+    border-color: var(--fss-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.fss-search-input::placeholder {
+    color: var(--fss-gray-400);
+}
+
+.fss-search-input:disabled {
+    background: var(--fss-gray-100);
+    color: var(--fss-gray-400);
+    cursor: not-allowed;
+}
+
+/* Input type badge */
+.fss-input-type-badge {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: none;
+}
+
+.fss-input-type-badge:not(:empty) {
+    display: inline-block;
+}
+
+.fss-type-national-id {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.fss-type-phone {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.fss-type-name {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Search button (in dialog) */
+.fss-do-search-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--fss-primary);
+    color: white;
+    border: none;
+    border-radius: var(--fss-border-radius);
+    cursor: pointer;
+    transition: background-color 0.15s, opacity 0.15s;
+    white-space: nowrap;
+}
+
+.fss-do-search-btn:hover:not(:disabled) {
+    background: var(--fss-primary-hover);
+}
+
+.fss-do-search-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Filter row */
+.fss-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.fss-filter-row label {
+    font-size: 13px;
+    color: var(--fss-gray-600);
+    font-weight: 500;
+}
+
+.fss-district-select {
+    flex: 1;
+    max-width: 200px;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1px solid var(--fss-gray-300);
+    border-radius: 4px;
+    background: white;
+    color: var(--fss-gray-700);
+    cursor: pointer;
+}
+
+.fss-district-select:focus {
+    outline: none;
+    border-color: var(--fss-primary);
+}
+
+.fss-district-select:disabled {
+    background: var(--fss-gray-100);
+    color: var(--fss-gray-400);
+    cursor: not-allowed;
+}
+
+/* ================================================================
+   CONFIDENCE AREA (Phase 4, updated Phase 6)
+   ================================================================ */
+.fss-confidence-area {
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--fss-gray-50);
+    border-radius: var(--fss-border-radius);
+    border: 1px solid var(--fss-gray-200);
+}
+
+.fss-confidence-track {
+    height: 8px;
+    background: var(--fss-gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.fss-confidence-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Confidence level colors */
+.fss-confidence-bar.fss-confidence-high {
+    background: var(--fss-success);
+}
+
+.fss-confidence-bar.fss-confidence-medium {
+    background: var(--fss-warning);
+}
+
+.fss-confidence-bar.fss-confidence-low {
+    background: var(--fss-danger);
+}
+
+/* Confidence area border colors */
+.fss-confidence-area.fss-confidence-high {
+    border-color: rgba(22, 163, 74, 0.3);
+    background: rgba(22, 163, 74, 0.05);
+}
+
+.fss-confidence-area.fss-confidence-medium {
+    border-color: rgba(245, 158, 11, 0.3);
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.fss-confidence-area.fss-confidence-low {
+    border-color: rgba(220, 38, 38, 0.3);
+    background: rgba(220, 38, 38, 0.05);
+}
+
+.fss-confidence-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.fss-confidence-percent {
+    font-weight: 600;
+    color: var(--fss-gray-700);
+}
+
+.fss-confidence-text {
+    color: var(--fss-gray-500);
+}
+
+/* Cached data indicator (Phase 6) */
+.fss-cached-data-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 4px 8px;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 11px;
+    border-radius: 4px;
+}
+
+.fss-cached-data-indicator i {
+    font-size: 10px;
+}
+
+/* Validation message styles */
+.fss-validation-message {
+    margin-top: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    display: none;
+}
+
+.fss-validation-message.fss-validation-rejected {
+    background: #fef2f2;
+    color: #991b1b;
+    display: block;
+}
+
+.fss-validation-message.fss-validation-warning {
+    background: #fefce8;
+    color: #854d0e;
+    display: block;
+}
+
+.fss-validation-message.fss-validation-success {
+    background: #f0fdf4;
+    color: #166534;
+    display: block;
+}
+
+/* ================================================================
+   RESULTS AREA
+   ================================================================ */
+.fss-results-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    min-height: 200px;
+    max-height: 400px;
+}
+
+/* Results header */
+.fss-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--fss-gray-200);
+}
+
+.fss-results-count {
+    font-weight: 500;
+    color: var(--fss-gray-700);
+}
+
+.fss-search-time {
+    font-size: 12px;
+    color: var(--fss-gray-400);
+}
+
+/* Results list */
+.fss-results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ================================================================
+   FARMER CARD
+   ================================================================ */
+.fss-farmer-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: var(--fss-gray-50);
+    border: 1px solid var(--fss-gray-200);
+    border-radius: var(--fss-border-radius);
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s, box-shadow 0.15s;
+}
+
+.fss-farmer-card:hover {
+    border-color: var(--fss-primary);
+    background: white;
+    box-shadow: var(--fss-shadow);
+}
+
+.fss-farmer-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fss-farmer-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.fss-farmer-icon.fss-gender-male {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.fss-farmer-icon.fss-gender-female {
+    background: #fce7f3;
+    color: #be185d;
+}
+
+.fss-farmer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.fss-farmer-card .fss-farmer-name {
+    font-weight: 500;
+    color: var(--fss-gray-800);
+}
+
+.fss-farmer-location {
+    font-size: 12px;
+    color: var(--fss-gray-500);
+}
+
+.fss-farmer-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.fss-farmer-id {
+    font-size: 12px;
+    color: var(--fss-gray-500);
+    font-family: monospace;
+}
+
+.fss-farmer-score {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.fss-score-high {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.fss-score-medium {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.fss-score-low {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.fss-score-verylow {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ================================================================
+   EMPTY STATE
+   ================================================================ */
+.fss-empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: var(--fss-gray-400);
+    font-size: 14px;
+}
+
+/* ================================================================
+   LOADING STATE
+   ================================================================ */
+.fss-loading-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100px;
+    color: var(--fss-gray-500);
+}
+
+.fss-loading-panel i {
+    font-size: 20px;
+    color: var(--fss-primary);
+}
+
+/* ================================================================
+   ERROR STATE
+   ================================================================ */
+.fss-error-panel {
+    padding: 12px;
+}
+
+.fss-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: var(--fss-border-radius);
+    color: #b91c1c;
+}
+
+.fss-error i {
+    color: #dc2626;
+}
+
+/* ================================================================
+   NO RESULTS
+   ================================================================ */
+.fss-no-results {
+    text-align: center;
+    padding: 24px;
+    color: var(--fss-gray-500);
+}
+
+.fss-no-results i {
+    font-size: 48px;
+    color: var(--fss-gray-300);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.fss-no-results p {
+    margin: 8px 0;
+}
+
+.fss-suggestions {
+    text-align: left;
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--fss-gray-50);
+    border-radius: var(--fss-border-radius);
+}
+
+.fss-suggestions ul {
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+
+.fss-suggestions li {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+/* ================================================================
+   INIT ERROR
+   ================================================================ */
+.fss-init-error {
+    padding: 16px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: var(--fss-border-radius);
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+/* ================================================================
+   CRITERIA BUILDER (Phase 5)
+   ================================================================ */
+.fss-criteria-builder {
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--fss-gray-50);
+    border: 1px dashed var(--fss-gray-300);
+    border-radius: var(--fss-border-radius);
+}
+
+.fss-criteria-builder-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.fss-criteria-builder-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--fss-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Criteria rows container */
+.fss-criteria-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Individual criteria row */
+.fss-criteria-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: white;
+    border: 1px solid var(--fss-gray-200);
+    border-radius: 4px;
+    animation: fss-slide-in 0.2s ease-out;
+}
+
+.fss-criteria-row.fss-removing {
+    animation: fss-slide-out 0.2s ease-in forwards;
+}
+
+@keyframes fss-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fss-slide-out {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.fss-criteria-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fss-gray-600);
+    min-width: 110px;
+    flex-shrink: 0;
+}
+
+.fss-criteria-input-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.fss-criteria-input {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 13px;
+    border: 1px solid var(--fss-gray-300);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.fss-criteria-input:focus {
+    border-color: var(--fss-primary);
+}
+
+.fss-criteria-input::placeholder {
+    color: var(--fss-gray-400);
+}
+
+.fss-criteria-input.fss-has-error {
+    border-color: var(--fss-danger);
+    background: #fef2f2;
+}
+
+.fss-criteria-error {
+    font-size: 11px;
+    color: var(--fss-danger);
+    margin-top: 4px;
+}
+
+/* Remove criteria button */
+.fss-remove-criteria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--fss-gray-400);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s, color 0.15s;
+    flex-shrink: 0;
+}
+
+.fss-remove-criteria:hover {
+    background: #fee2e2;
+    color: var(--fss-danger);
+}
+
+/* Add criteria button */
+.fss-add-criteria-wrapper {
+    position: relative;
+    margin-top: 8px;
+}
+
+.fss-add-criteria-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fss-primary);
+    background: white;
+    border: 1px dashed var(--fss-primary);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s, border-style 0.15s;
+}
+
+.fss-add-criteria-btn:hover:not(:disabled) {
+    background: #eff6ff;
+    border-style: solid;
+}
+
+.fss-add-criteria-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.fss-add-criteria-btn i {
+    font-size: 12px;
+}
+
+/* Criteria type menu */
+.fss-criteria-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    min-width: 200px;
+    background: white;
+    border: 1px solid var(--fss-gray-200);
+    border-radius: var(--fss-border-radius);
+    box-shadow: var(--fss-shadow-lg);
+    z-index: 100;
+    animation: fss-fade-in 0.15s ease-out;
+}
+
+@keyframes fss-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fss-criteria-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: var(--fss-gray-700);
+    cursor: pointer;
+    transition: background-color 0.15s;
+    border-bottom: 1px solid var(--fss-gray-100);
+}
+
+.fss-criteria-menu-item:last-child {
+    border-bottom: none;
+}
+
+.fss-criteria-menu-item:hover {
+    background: var(--fss-gray-50);
+}
+
+.fss-criteria-menu-item.fss-disabled {
+    color: var(--fss-gray-400);
+    cursor: not-allowed;
+}
+
+.fss-criteria-menu-item.fss-disabled:hover {
+    background: transparent;
+}
+
+.fss-criteria-menu-item i {
+    width: 16px;
+    color: var(--fss-gray-400);
+}
+
+/* Autocomplete dropdown */
+.fss-autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 2px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid var(--fss-gray-200);
+    border-radius: 4px;
+    box-shadow: var(--fss-shadow);
+    z-index: 50;
+}
+
+.fss-autocomplete-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--fss-gray-700);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.fss-autocomplete-item:hover,
+.fss-autocomplete-item.fss-active {
+    background: var(--fss-gray-50);
+}
+
+.fss-autocomplete-item-name {
+    flex: 1;
+}
+
+.fss-autocomplete-item-count {
+    font-size: 11px;
+    color: var(--fss-gray-400);
+    margin-left: 8px;
+}
+
+.fss-autocomplete-loading {
+    padding: 12px;
+    text-align: center;
+    color: var(--fss-gray-400);
+    font-size: 13px;
+}
+
+.fss-autocomplete-empty {
+    padding: 12px;
+    text-align: center;
+    color: var(--fss-gray-400);
+    font-size: 13px;
+}
+
+/* District required message */
+.fss-district-required {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #fefce8;
+    border: 1px solid #fef08a;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #854d0e;
+}
+
+.fss-district-required i {
+    color: #ca8a04;
+}
+
+/* Partial input validation */
+.fss-partial-input-hint {
+    font-size: 11px;
+    color: var(--fss-gray-400);
+    margin-top: 4px;
+}
+
+/* ================================================================
+   AUTO-SELECT NOTIFICATION
+   ================================================================ */
+.fss-auto-select-notification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #16a34a;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fss-auto-select-notification.fss-notification-show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.fss-auto-select-notification.fss-notification-hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.fss-auto-select-notification i {
+    font-size: 20px;
+}
+
+.fss-auto-select-notification strong {
+    font-weight: 600;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 600px) {
+    .fss-mode-popup .fss-modal {
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .fss-search-row {
+        flex-direction: column;
+    }
+
+    .fss-do-search-btn {
+        width: 100%;
+    }
+
+    .fss-farmer-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .fss-farmer-meta {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    /* Recent farmers responsive */
+    .fss-recent-farmer-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .fss-recent-farmer-select {
+        align-self: stretch;
+        text-align: center;
+    }
+    
+    /* Connection status */
+    .fss-header-right {
+        gap: 8px;
+    }
+    
+    .fss-connection-status {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}
+
+/* ================================================================
+   PHASE 7: ENHANCED ERROR HANDLING
+   ================================================================ */
+
+/* Error panel container */
+.fss-error-panel .fss-error {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background: var(--fss-red-50, #fef2f2);
+    border: 1px solid var(--fss-red-200, #fecaca);
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.fss-error-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.fss-error-content > i {
+    color: var(--fss-red-500, #ef4444);
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.fss-error-text {
+    flex: 1;
+}
+
+.fss-error-message {
+    display: block;
+    font-weight: 500;
+    color: var(--fss-red-700, #b91c1c);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Error suggestions list */
+.fss-error-suggestions {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style-type: disc;
+}
+
+.fss-error-suggestions li {
+    color: var(--fss-red-600, #dc2626);
+    font-size: 13px;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.fss-error-suggestions li:last-child {
+    margin-bottom: 0;
+}
+
+/* Error action buttons */
+.fss-error-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    padding-top: 8px;
+    border-top: 1px solid var(--fss-red-200, #fecaca);
+}
+
+.fss-retry-btn,
+.fss-dismiss-error-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: none;
+}
+
+.fss-retry-btn {
+    background: var(--fss-primary, #3b82f6);
+    color: white;
+}
+
+.fss-retry-btn:hover {
+    background: var(--fss-primary-dark, #2563eb);
+}
+
+.fss-retry-btn:focus-visible {
+    outline: 2px solid var(--fss-primary, #3b82f6);
+    outline-offset: 2px;
+}
+
+.fss-dismiss-error-btn {
+    background: var(--fss-gray-100, #f3f4f6);
+    color: var(--fss-gray-700, #374151);
+    border: 1px solid var(--fss-gray-300, #d1d5db);
+}
+
+.fss-dismiss-error-btn:hover {
+    background: var(--fss-gray-200, #e5e7eb);
+}
+
+.fss-dismiss-error-btn:focus-visible {
+    outline: 2px solid var(--fss-gray-400, #9ca3af);
+    outline-offset: 2px;
+}
+
+/* Retry loading state */
+.fss-retry-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.fss-retry-loading > i {
+    font-size: 24px;
+    color: var(--fss-primary, #3b82f6);
+}
+
+.fss-retry-loading > span {
+    color: var(--fss-gray-600, #4b5563);
+    font-size: 14px;
+}
+
+.fss-retry-countdown {
+    font-weight: 600;
+    color: var(--fss-primary, #3b82f6);
+}
+
+.fss-retry-attempt {
+    font-size: 12px;
+    color: var(--fss-gray-400, #9ca3af);
+}
+
+/* Error type specific styling */
+.fss-error.fss-error-err-network,
+.fss-error.fss-error-err-timeout {
+    background: var(--fss-amber-50, #fffbeb);
+    border-color: var(--fss-amber-200, #fde68a);
+}
+
+.fss-error.fss-error-err-network .fss-error-content > i,
+.fss-error.fss-error-err-timeout .fss-error-content > i {
+    color: var(--fss-amber-500, #f59e0b);
+}
+
+.fss-error.fss-error-err-network .fss-error-message,
+.fss-error.fss-error-err-timeout .fss-error-message {
+    color: var(--fss-amber-700, #b45309);
+}
+
+.fss-error.fss-error-err-network .fss-error-suggestions li,
+.fss-error.fss-error-err-timeout .fss-error-suggestions li {
+    color: var(--fss-amber-600, #d97706);
+}
+
+.fss-error.fss-error-err-no-results {
+    background: var(--fss-blue-50, #eff6ff);
+    border-color: var(--fss-blue-200, #bfdbfe);
+}
+
+.fss-error.fss-error-err-no-results .fss-error-content > i {
+    color: var(--fss-blue-500, #3b82f6);
+}
+
+.fss-error.fss-error-err-no-results .fss-error-message {
+    color: var(--fss-blue-700, #1d4ed8);
+}
+
+.fss-error.fss-error-err-no-results .fss-error-suggestions li {
+    color: var(--fss-blue-600, #2563eb);
+}
+
+/* ================================================================
+   PHASE 7: KEYBOARD NAVIGATION & FOCUS STYLES
+   ================================================================ */
+
+/* Focus visible for all interactive elements */
+.fss-dialog button:focus-visible,
+.fss-dialog input:focus-visible,
+.fss-dialog select:focus-visible,
+.fss-dialog [tabindex="0"]:focus-visible {
+    outline: 2px solid var(--fss-primary, #3b82f6);
+    outline-offset: 2px;
+}
+
+/* Highlighted result card (keyboard navigation) */
+.fss-farmer-card.fss-highlighted {
+    background: var(--fss-primary-light, #dbeafe);
+    border-color: var(--fss-primary, #3b82f6);
+    box-shadow: 0 0 0 2px var(--fss-primary, #3b82f6);
+}
+
+.fss-farmer-card:focus {
+    outline: none;
+}
+
+.fss-farmer-card:focus-visible {
+    background: var(--fss-primary-light, #dbeafe);
+    border-color: var(--fss-primary, #3b82f6);
+    box-shadow: 0 0 0 2px var(--fss-primary, #3b82f6);
+}
+
+/* Recent farmer item keyboard focus */
+.fss-recent-farmer-item:focus-visible {
+    outline: 2px solid var(--fss-primary, #3b82f6);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+/* Skip link for accessibility */
+.fss-skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--fss-primary, #3b82f6);
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+}
+
+.fss-skip-link:focus {
+    top: 0;
+}
+
+/* Screen reader only text */
+.fss-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ================================================================
+   PHASE 7: ENHANCED MOBILE RESPONSIVENESS
+   ================================================================ */
+
+/* Mobile-first improvements */
+@media (max-width: 768px) {
+    /* Full-screen modal on mobile */
+    .fss-mode-popup .fss-modal {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    .fss-dialog {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fss-results-area {
+        flex: 1;
+        overflow-y: auto;
+    }
+    
+    /* Touch-friendly tap targets (minimum 44px) */
+    .fss-farmer-card {
+        min-height: 72px;
+        padding: 16px;
+    }
+    
+    .fss-recent-farmer-item {
+        min-height: 56px;
+        padding: 12px;
+    }
+    
+    .fss-do-search-btn,
+    .fss-close-btn,
+    .fss-add-criteria-btn,
+    .fss-remove-criteria {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .fss-search-input,
+    .fss-district-select,
+    .fss-criteria-input {
+        min-height: 44px;
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+    
+    /* Error actions stacked on mobile */
+    .fss-error-actions {
+        flex-direction: column;
+    }
+    
+    .fss-retry-btn,
+    .fss-dismiss-error-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+    }
+    
+    /* Autocomplete dropdown mobile */
+    .fss-autocomplete-dropdown {
+        max-height: 200px;
+    }
+    
+    .fss-autocomplete-item {
+        min-height: 44px;
+        padding: 12px 16px;
+    }
+    
+    /* Criteria menu mobile */
+    .fss-criteria-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        border-radius: 16px 16px 0 0;
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+    
+    .fss-criteria-menu-item {
+        min-height: 48px;
+        padding: 14px 16px;
+    }
+    
+    /* Header adjustments */
+    .fss-header {
+        padding: 16px;
+        flex-shrink: 0;
+    }
+    
+    .fss-title {
+        font-size: 18px;
+    }
+    
+    /* Search area adjustments */
+    .fss-search-area {
+        padding: 16px;
+    }
+    
+    /* Confidence area mobile */
+    .fss-confidence-info {
+        flex-wrap: wrap;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+    .fss-header {
+        padding: 12px;
+    }
+    
+    .fss-search-area {
+        padding: 12px;
+    }
+    
+    .fss-farmer-card {
+        padding: 12px;
+    }
+    
+    .fss-farmer-name {
+        font-size: 14px;
+    }
+    
+    .fss-farmer-location {
+        font-size: 12px;
+    }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .fss-mode-popup .fss-modal {
+        max-height: 100vh;
+    }
+    
+    .fss-recent-farmers-panel {
+        max-height: 120px;
+    }
+    
+    .fss-results-list {
+        max-height: 200px;
+    }
+}
+
+/* Touch device enhancements */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .fss-farmer-card:hover {
+        background: transparent;
+        transform: none;
+    }
+    
+    /* Add active state instead */
+    .fss-farmer-card:active {
+        background: var(--fss-gray-100, #f3f4f6);
+        transform: scale(0.98);
+    }
+    
+    .fss-recent-farmer-item:active {
+        background: var(--fss-gray-100, #f3f4f6);
+    }
+    
+    /* Larger touch targets */
+    .fss-close-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .fss-farmer-card {
+        border-width: 2px;
+    }
+    
+    .fss-farmer-card.fss-highlighted {
+        border-width: 3px;
+    }
+    
+    .fss-confidence-bar {
+        border: 1px solid currentColor;
+    }
+    
+    .fss-error {
+        border-width: 2px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .fss-farmer-card,
+    .fss-auto-select-notification,
+    .fss-criteria-row,
+    .fss-autocomplete-dropdown,
+    .fss-confidence-bar {
+        transition: none;
+    }
+    
+    .fss-farmer-card:hover {
+        transform: none;
+    }
+}
+
+/* ================================================================
+   PHASE 7: COLOR VARIABLES (ensure fallbacks work)
+   ================================================================ */
+:root {
+    /* Red palette */
+    --fss-red-50: #fef2f2;
+    --fss-red-200: #fecaca;
+    --fss-red-500: #ef4444;
+    --fss-red-600: #dc2626;
+    --fss-red-700: #b91c1c;
+    
+    /* Amber/Warning palette */
+    --fss-amber-50: #fffbeb;
+    --fss-amber-200: #fde68a;
+    --fss-amber-500: #f59e0b;
+    --fss-amber-600: #d97706;
+    --fss-amber-700: #b45309;
+    
+    /* Blue/Info palette */
+    --fss-blue-50: #eff6ff;
+    --fss-blue-200: #bfdbfe;
+    --fss-blue-500: #3b82f6;
+    --fss-blue-600: #2563eb;
+    --fss-blue-700: #1d4ed8;
+    
+    /* Primary light */
+    --fss-primary-light: #dbeafe;
+}
+
+/* ================================================================
+   PHASE 7: INLINE QUICK ENTRY STYLES
+   ================================================================ */
+
+/* Inline search container (shown when no farmer selected) */
+.fss-inline-search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    min-width: 0;
+}
+
+/* Inline input field */
+.fss-inline-input {
+    flex: 1;
+    min-width: 0;
+    height: 36px;
+    padding: 0 8px;
+    padding-right: 48px; /* Space for type badge */
+    border: 1px solid var(--fss-gray-300, #d1d5db);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--fss-gray-900, #111827);
+    background: white;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.fss-inline-input:focus {
+    outline: none;
+    border-color: var(--fss-primary, #2563eb);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.fss-inline-input:disabled {
+    background: var(--fss-gray-50, #f9fafb);
+    cursor: not-allowed;
+}
+
+.fss-inline-input::placeholder {
+    color: var(--fss-gray-400, #9ca3af);
+}
+
+/* Type badge in inline input */
+.fss-inline-type-badge {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.fss-inline-type-badge:empty {
+    display: none;
+}
+
+.fss-inline-type-badge.fss-type-national-id {
+    background: var(--fss-green-100, #dcfce7);
+    color: var(--fss-green-700, #15803d);
+}
+
+.fss-inline-type-badge.fss-type-phone {
+    background: var(--fss-blue-100, #dbeafe);
+    color: var(--fss-blue-700, #1d4ed8);
+}
+
+.fss-inline-type-badge.fss-type-name {
+    background: var(--fss-purple-100, #f3e8ff);
+    color: var(--fss-purple-700, #7c3aed);
+}
+
+/* Inline loading indicator */
+.fss-inline-loading {
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    gap: 6px;
+    padding: 2px 8px;
+    background: var(--fss-gray-100, #f3f4f6);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--fss-gray-600, #4b5563);
+}
+
+.fss-inline-loading i {
+    font-size: 12px;
+    color: var(--fss-primary, #2563eb);
+}
+
+/* Inline error message */
+.fss-inline-error {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 4px);
+    z-index: 10;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: var(--fss-red-50, #fef2f2);
+    border: 1px solid var(--fss-red-200, #fecaca);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--fss-red-600, #dc2626);
+}
+
+.fss-inline-error i {
+    font-size: 12px;
+}
+
+.fss-inline-error-text {
+    flex: 1;
+}
+
+/* Selected farmer display (shown when farmer selected) */
+.fss-selected-display {
+    display: none; /* Hidden by default, shown when farmer selected */
+    flex: 1;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.fss-selected-display .fss-farmer-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.fss-selected-display .fss-farmer-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--fss-gray-900, #111827);
+}
+
+/* Display field container adjustments for inline mode */
+.fss-display-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    min-height: 44px;
+    background: var(--fss-gray-50, #f9fafb);
+    border: 1px solid var(--fss-gray-200, #e5e7eb);
+    border-radius: 8px;
+}
+
+/* Search button styling in display field */
+.fss-search-btn {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    background: var(--fss-primary, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fss-search-btn:hover {
+    background: var(--fss-primary-dark, #1d4ed8);
+}
+
+.fss-search-btn:active {
+    transform: scale(0.98);
+}
+
+/* Clear button styling */
+.fss-clear-btn {
+    display: none; /* Hidden by default */
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: var(--fss-gray-100, #f3f4f6);
+    color: var(--fss-gray-500, #6b7280);
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    align-items: center;
+    justify-content: center;
+}
+
+.fss-clear-btn:hover {
+    background: var(--fss-red-100, #fee2e2);
+    color: var(--fss-red-600, #dc2626);
+}
+
+/* Mobile adjustments for inline */
+@media (max-width: 480px) {
+    .fss-display-field {
+        flex-wrap: wrap;
+    }
+    
+    .fss-inline-search {
+        width: 100%;
+        order: 1;
+        margin-bottom: 8px;
+    }
+    
+    .fss-selected-display {
+        width: 100%;
+        order: 1;
+        margin-bottom: 8px;
+    }
+    
+    .fss-search-btn {
+        order: 2;
+        flex: 1;
+    }
+    
+    .fss-clear-btn {
+        order: 3;
+    }
+}

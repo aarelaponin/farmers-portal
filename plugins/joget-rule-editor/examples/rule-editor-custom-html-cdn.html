@@ -1,0 +1,424 @@
+<!--
+    Rule Editor - Self-contained Custom HTML for Joget
+    Uses jQuery (provided by Joget) for AJAX calls with proper session auth.
+-->
+
+<style>
+/* CodeMirror core styles (minified) */
+.CodeMirror{font-family:monospace;height:300px;color:#000;direction:ltr}.CodeMirror-lines{padding:4px 0}.CodeMirror pre.CodeMirror-line,.CodeMirror pre.CodeMirror-line-like{padding:0 4px}.CodeMirror-gutter-filler,.CodeMirror-scrollbar-filler{background-color:#fff}.CodeMirror-gutters{border-right:1px solid #ddd;background-color:#f7f7f7;white-space:nowrap}.CodeMirror-linenumber{padding:0 3px 0 5px;min-width:20px;text-align:right;color:#999;white-space:nowrap}.CodeMirror-guttermarker{color:#000}.CodeMirror-guttermarker-subtle{color:#999}.CodeMirror-cursor{border-left:1px solid #000;border-right:none;width:0}.CodeMirror div.CodeMirror-secondarycursor{border-left:1px solid silver}.cm-fat-cursor .CodeMirror-cursor{width:auto;border:0!important;background:#7e7}.cm-fat-cursor div.CodeMirror-cursors{z-index:1}.cm-fat-cursor .CodeMirror-line::selection,.cm-fat-cursor .CodeMirror-line>span::selection,.cm-fat-cursor .CodeMirror-line>span>span::selection{background:0 0}.cm-fat-cursor .CodeMirror-line::-moz-selection,.cm-fat-cursor .CodeMirror-line>span::-moz-selection,.cm-fat-cursor .CodeMirror-line>span>span::-moz-selection{background:0 0}.cm-fat-cursor{caret-color:transparent}@-moz-keyframes blink{50%{background-color:transparent}}@-webkit-keyframes blink{50%{background-color:transparent}}@keyframes blink{50%{background-color:transparent}}.cm-tab{display:inline-block;text-decoration:inherit}.CodeMirror-rulers{position:absolute;left:0;right:0;top:-50px;bottom:0;overflow:hidden}.CodeMirror-ruler{border-left:1px solid #ccc;top:0;bottom:0;position:absolute}.cm-s-default .cm-header{color:#00f}.cm-s-default .cm-quote{color:#090}.cm-negative{color:#d44}.cm-positive{color:#292}.cm-header,.cm-strong{font-weight:700}.cm-em{font-style:italic}.cm-link{text-decoration:underline}.cm-strikethrough{text-decoration:line-through}.cm-s-default .cm-keyword{color:#708}.cm-s-default .cm-atom{color:#219}.cm-s-default .cm-number{color:#164}.cm-s-default .cm-def{color:#00f}.cm-s-default .cm-variable-2{color:#05a}.cm-s-default .cm-type,.cm-s-default .cm-variable-3{color:#085}.cm-s-default .cm-comment{color:#a50}.cm-s-default .cm-string{color:#a11}.cm-s-default .cm-string-2{color:#f50}.cm-s-default .cm-meta,.cm-s-default .cm-qualifier{color:#555}.cm-s-default .cm-builtin{color:#30a}.cm-s-default .cm-bracket{color:#997}.cm-s-default .cm-tag{color:#170}.cm-s-default .cm-attribute{color:#00c}.cm-s-default .cm-hr{color:#999}.cm-s-default .cm-link{color:#00c}.cm-invalidchar,.cm-s-default .cm-error{color:red}.CodeMirror-composing{border-bottom:2px solid}div.CodeMirror span.CodeMirror-matchingbracket{color:#0b0}div.CodeMirror span.CodeMirror-nonmatchingbracket{color:#a22}.CodeMirror-matchingtag{background:rgba(255,150,0,.3)}.CodeMirror-activeline-background{background:#e8f2ff}.CodeMirror{position:relative;overflow:hidden;background:#fff}.CodeMirror-scroll{overflow:scroll!important;margin-bottom:-50px;margin-right:-50px;padding-bottom:50px;height:100%;outline:0;position:relative;z-index:0}.CodeMirror-sizer{position:relative;border-right:50px solid transparent}.CodeMirror-gutter-filler,.CodeMirror-hscrollbar,.CodeMirror-scrollbar-filler,.CodeMirror-vscrollbar{position:absolute;z-index:6;display:none;outline:0}.CodeMirror-vscrollbar{right:0;top:0;overflow-x:hidden;overflow-y:scroll}.CodeMirror-hscrollbar{bottom:0;left:0;overflow-y:hidden;overflow-x:scroll}.CodeMirror-scrollbar-filler{right:0;bottom:0}.CodeMirror-gutter-filler{left:0;bottom:0}.CodeMirror-gutters{position:absolute;left:0;top:0;min-height:100%;z-index:3}.CodeMirror-gutter{white-space:normal;height:100%;display:inline-block;vertical-align:top;margin-bottom:-50px}.CodeMirror-gutter-wrapper{position:absolute;z-index:4;background:0 0!important;border:none!important}.CodeMirror-gutter-background{position:absolute;top:0;bottom:0;z-index:4}.CodeMirror-gutter-elt{position:absolute;cursor:default;z-index:4}.CodeMirror-gutter-wrapper ::selection{background-color:transparent}.CodeMirror-gutter-wrapper ::-moz-selection{background-color:transparent}.CodeMirror-lines{cursor:text;min-height:1px}.CodeMirror pre.CodeMirror-line,.CodeMirror pre.CodeMirror-line-like{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;border-width:0;background:0 0;font-family:inherit;font-size:inherit;margin:0;white-space:pre;word-wrap:normal;line-height:inherit;color:inherit;z-index:2;position:relative;overflow:visible;-webkit-tap-highlight-color:transparent;-webkit-font-variant-ligatures:contextual;font-variant-ligatures:contextual}.CodeMirror-wrap pre.CodeMirror-line,.CodeMirror-wrap pre.CodeMirror-line-like{word-wrap:break-word;white-space:pre-wrap;word-break:normal}.CodeMirror-linebackground{position:absolute;left:0;right:0;top:0;bottom:0;z-index:0}.CodeMirror-linewidget{position:relative;z-index:2;padding:.1px}.CodeMirror-rtl pre{direction:rtl}.CodeMirror-code{outline:0}.CodeMirror-gutter,.CodeMirror-gutters,.CodeMirror-linenumber,.CodeMirror-scroll,.CodeMirror-sizer{-moz-box-sizing:content-box;box-sizing:content-box}.CodeMirror-measure{position:absolute;width:100%;height:0;overflow:hidden;visibility:hidden}.CodeMirror-cursor{position:absolute;pointer-events:none}.CodeMirror-measure pre{position:static}div.CodeMirror-cursors{visibility:hidden;position:relative;z-index:3}div.CodeMirror-dragcursors,div.CodeMirror-focused div.CodeMirror-cursors{visibility:visible}.CodeMirror-selected{background:#d9d9d9}.CodeMirror-focused .CodeMirror-selected{background:#d7d4f0}.CodeMirror-crosshair{cursor:crosshair}.CodeMirror-line::selection,.CodeMirror-line>span::selection,.CodeMirror-line>span>span::selection{background:#d7d4f0}.CodeMirror-line::-moz-selection,.CodeMirror-line>span::-moz-selection,.CodeMirror-line>span>span::-moz-selection{background:#d7d4f0}.cm-searching{background-color:#ffa;background-color:rgba(255,255,0,.4)}.cm-force-border{padding-right:.1px}@media print{.CodeMirror div.CodeMirror-cursors{visibility:hidden}}.cm-tab-wrap-hack:after{content:''}span.CodeMirror-selectedtext{background:0 0}
+
+/* Rule Editor Styles */
+.jre-editor-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.jre-messages {
+    padding: 12px 16px;
+    min-height: 20px;
+    border-bottom: 1px solid #ddd;
+    background: #f8f9fa;
+    font-size: 14px;
+}
+.jre-messages.success { background: #d4edda; color: #155724; border-bottom-color: #c3e6cb; }
+.jre-messages.error { background: #f8d7da; color: #721c24; border-bottom-color: #f5c6cb; }
+.jre-messages.loading { background: #fff3cd; color: #856404; border-bottom-color: #ffeeba; }
+.jre-message-title { font-weight: 600; display: block; margin-bottom: 4px; }
+.jre-error-list { margin: 8px 0 0 0; padding: 0; list-style: none; max-height: 150px; overflow-y: auto; }
+.jre-error-item { padding: 4px 8px; margin: 4px 0; background: rgba(255,255,255,0.5); border-radius: 3px; cursor: pointer; display: flex; align-items: flex-start; }
+.jre-error-item:hover { background: rgba(255,255,255,0.8); }
+.jre-error-icon { margin-right: 8px; font-weight: bold; }
+.jre-error-item.error .jre-error-icon { color: #dc3545; }
+.jre-error-item.warning .jre-error-icon { color: #ffc107; }
+.jre-error-item.success .jre-error-icon { color: #28a745; }
+.jre-error-line-num { font-family: monospace; background: rgba(0,0,0,0.1); padding: 1px 6px; border-radius: 3px; margin-right: 8px; font-size: 12px; }
+.jre-toolbar { padding: 10px 16px; background: #f0f0f0; border-bottom: 1px solid #ddd; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.jre-toolbar button { padding: 8px 16px; border: 1px solid #ccc; border-radius: 4px; background: #fff; cursor: pointer; font-size: 14px; font-weight: 500; }
+.jre-toolbar button:hover { background: #e9e9e9; }
+.jre-btn-primary { background: #007bff !important; border-color: #007bff !important; color: white !important; }
+.jre-btn-primary:hover { background: #0056b3 !important; }
+.jre-toolbar button:disabled { opacity: 0.6; cursor: not-allowed; }
+.jre-toolbar-spacer { flex: 1; }
+.jre-status { font-size: 13px; color: #666; }
+.jre-editor-wrapper .CodeMirror { height: 400px; font-size: 14px; line-height: 1.5; }
+.jre-line-error { background: rgba(220, 53, 69, 0.15) !important; }
+.jre-line-warning { background: rgba(255, 193, 7, 0.15) !important; }
+.jre-gutter-error { color: #dc3545; font-size: 12px; padding-left: 4px; }
+.jre-gutter-warning { color: #ffc107; font-size: 12px; padding-left: 4px; }
+.jre-help-panel { display: none; padding: 16px; background: #f8f9fa; border-top: 1px solid #ddd; font-size: 13px; }
+.jre-help-panel.visible { display: block; }
+.jre-help-panel h4 { margin: 0 0 12px 0; }
+.jre-help-panel code { background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-family: monospace; font-size: 12px; }
+.jre-help-columns { display: flex; gap: 24px; flex-wrap: wrap; }
+.jre-help-column { flex: 1; min-width: 180px; }
+.jre-help-column ul { margin: 4px 0; padding-left: 16px; }
+
+/* EREL Syntax highlighting */
+.cm-s-default .cm-keyword { color: #0000ff; font-weight: bold; }
+.cm-s-default .cm-def { color: #6f42c1; font-weight: bold; }
+.cm-s-default .cm-type { color: #795e26; }
+.cm-s-default .cm-variable { color: #6f42c1; }
+.cm-s-default .cm-string { color: #22863a; }
+.cm-s-default .cm-number { color: #005cc5; }
+.cm-s-default .cm-atom { color: #d73a49; font-weight: bold; }
+.cm-s-default .cm-comment { color: #6a737d; font-style: italic; }
+.cm-s-default .cm-operator { color: #d73a49; }
+</style>
+
+<!-- Editor Container -->
+<div id="jre-editor-container" class="jre-editor-container">
+    <div id="jre-messages" class="jre-messages">
+        <span class="jre-message-title">Rule Editor</span>
+        <div>Enter eligibility rules and click <strong>Validate</strong>. Press <kbd>Ctrl+Enter</kbd> to validate.</div>
+    </div>
+    <div class="jre-toolbar">
+        <button type="button" id="jre-validate-btn" class="jre-btn-primary">✓ Validate</button>
+        <button type="button" id="jre-clear-btn">Clear</button>
+        <button type="button" id="jre-sample-btn">Sample</button>
+        <button type="button" id="jre-help-btn">? Help</button>
+        <div class="jre-toolbar-spacer"></div>
+        <span id="jre-status" class="jre-status"></span>
+    </div>
+    <div class="jre-editor-wrapper">
+        <textarea id="jre-textarea"></textarea>
+    </div>
+    <div id="jre-help-panel" class="jre-help-panel">
+        <h4>Rules Script Quick Reference</h4>
+        <div class="jre-help-columns">
+            <div class="jre-help-column">
+                <strong>Structure:</strong>
+                <ul>
+                    <li><code>RULE "name"</code> - Start a rule</li>
+                    <li><code>TYPE:</code> INCLUSION | EXCLUSION | PRIORITY | BONUS</li>
+                    <li><code>MANDATORY:</code> YES | NO</li>
+                    <li><code>WHEN</code> condition</li>
+                    <li><code>FAIL MESSAGE:</code> "text"</li>
+                </ul>
+            </div>
+            <div class="jre-help-column">
+                <strong>Operators:</strong>
+                <ul>
+                    <li><code>=  !=  &gt;  &gt;=  &lt;  &lt;=</code></li>
+                    <li><code>BETWEEN x AND y</code></li>
+                    <li><code>IN ("a", "b", "c")</code></li>
+                    <li><code>CONTAINS  STARTS WITH</code></li>
+                    <li><code>IS EMPTY  IS NOT EMPTY</code></li>
+                </ul>
+            </div>
+            <div class="jre-help-column">
+                <strong>Logic:</strong>
+                <ul>
+                    <li><code>AND</code> - Both must be true</li>
+                    <li><code>OR</code> - Either can be true</li>
+                    <li><code>NOT</code> - Negate condition</li>
+                    <li><code>( )</code> - Group conditions</li>
+                    <li><code>#</code> - Comment line</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden field for form submission -->
+<input type="hidden" id="eligibilityScript" name="eligibilityScript" value="">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
+<script>
+(function() {
+    'use strict';
+    
+    // API Configuration - UPDATE THESE VALUES or disable API auth in Joget
+    var API_CONFIG = {
+        apiId: 'API-481bf967-b75b-47d4-9e48-4deead0dca7d',
+        apiKey: 'b2cc0157ab464ff5b1f07a5907ef9690'
+    };
+    
+    // EREL Mode for CodeMirror
+    CodeMirror.defineMode("jre", function() {
+        var keywords = /^(RULE|WHEN|AND|OR|NOT|BETWEEN|IN|CONTAINS|IS|EMPTY|STARTS|ENDS|WITH|DEPENDS|ON|STOP|FAIL|PASS|EFFECTIVE|FROM|TO)\b/i;
+        var clauses = /^(TYPE|CATEGORY|MANDATORY|ORDER|SCORE|WEIGHT|MESSAGE)\b/i;
+        var types = /^(INCLUSION|EXCLUSION|PRIORITY|BONUS|DEMOGRAPHIC|ECONOMIC|AGRICULTURAL|VULNERABILITY|HOUSEHOLD)\b/i;
+        var booleans = /^(YES|NO|true|false|Y|N)\b/i;
+        var operators = /^(>=|<=|!=|<>|=|>|<|\+|-)/;
+
+        return {
+            startState: function() { return { inString: false, stringChar: null }; },
+            token: function(stream, state) {
+                if (state.inString) {
+                    while (!stream.eol()) {
+                        var ch = stream.next();
+                        if (ch === state.stringChar) { state.inString = false; state.stringChar = null; return "string"; }
+                        if (ch === '\\') stream.next();
+                    }
+                    return "string";
+                }
+                if (stream.eatSpace()) return null;
+                if (stream.match('#')) { stream.skipToEnd(); return "comment"; }
+                var ch = stream.peek();
+                if (ch === '"' || ch === "'") { stream.next(); state.inString = true; state.stringChar = ch; return "string"; }
+                if (stream.match(/^[+-]?\d+(\.\d+)?/)) return "number";
+                if (stream.match(operators)) return "operator";
+                if (stream.match(':')) return "punctuation";
+                if (stream.match(/^[\(\),]/)) return "bracket";
+                if (stream.match(/^[a-zA-Z_][a-zA-Z0-9_]*/)) {
+                    var word = stream.current();
+                    if (keywords.test(word)) return "keyword";
+                    if (clauses.test(word)) return "def";
+                    if (types.test(word)) return "type";
+                    if (booleans.test(word)) return "atom";
+                    return "variable";
+                }
+                stream.next();
+                return null;
+            }
+        };
+    });
+
+    // Initialize editor
+    var textarea = document.getElementById('jre-textarea');
+    var hiddenField = document.getElementById('eligibilityScript');
+    var messagesEl = document.getElementById('jre-messages');
+    var statusEl = document.getElementById('jre-status');
+    var lineMarkers = [];
+
+    var cm = CodeMirror.fromTextArea(textarea, {
+        mode: 'jre',
+        lineNumbers: true,
+        indentUnit: 2,
+        tabSize: 2,
+        lineWrapping: true,
+        gutters: ['CodeMirror-linenumbers', 'jre-gutter'],
+        extraKeys: {
+            'Ctrl-Enter': function() { validate(); },
+            'Cmd-Enter': function() { validate(); },
+            'Tab': function(cm) { cm.replaceSelection('  ', 'end'); }
+        }
+    });
+
+    // Load existing value
+    if (hiddenField && hiddenField.value) {
+        cm.setValue(hiddenField.value);
+    }
+    updateStatus();
+
+    // Sync to hidden field
+    cm.on('change', function() {
+        if (hiddenField) hiddenField.value = cm.getValue();
+        updateStatus();
+    });
+
+    function updateStatus() {
+        statusEl.textContent = cm.lineCount() + ' lines, ' + cm.getValue().length + ' chars';
+    }
+
+    function clearMarkers() {
+        lineMarkers.forEach(function(m) { cm.removeLineClass(m.line, 'background', m.className); });
+        lineMarkers = [];
+        cm.clearGutter('jre-gutter');
+    }
+
+    function addMarker(lineNum, type) {
+        var idx = lineNum - 1;
+        if (idx < 0 || idx >= cm.lineCount()) return;
+        var cls = type === 'error' ? 'jre-line-error' : 'jre-line-warning';
+        cm.addLineClass(idx, 'background', cls);
+        lineMarkers.push({ line: idx, className: cls });
+        var marker = document.createElement('span');
+        marker.className = type === 'error' ? 'jre-gutter-error' : 'jre-gutter-warning';
+        marker.innerHTML = type === 'error' ? '●' : '▲';
+        cm.setGutterMarker(idx, 'jre-gutter', marker);
+    }
+
+    function showMessage(type, title, content, items) {
+        messagesEl.className = 'jre-messages ' + type;
+        var html = '<span class="jre-message-title">' + escapeHtml(title) + '</span>';
+        if (content) html += '<div>' + escapeHtml(content) + '</div>';
+        if (items && items.length > 0) {
+            html += '<ul class="jre-error-list">';
+            items.forEach(function(item) {
+                html += '<li class="jre-error-item ' + (item.type || '') + '" data-line="' + (item.line || '') + '">';
+                html += '<span class="jre-error-icon">' + (item.icon || '•') + '</span>';
+                if (item.line) html += '<span class="jre-error-line-num">Line ' + item.line + '</span>';
+                html += '<span>' + escapeHtml(item.message) + '</span></li>';
+            });
+            html += '</ul>';
+        }
+        messagesEl.innerHTML = html;
+        messagesEl.querySelectorAll('.jre-error-item[data-line]').forEach(function(el) {
+            el.addEventListener('click', function() {
+                var line = parseInt(this.getAttribute('data-line'));
+                if (line > 0) { cm.setCursor({ line: line - 1, ch: 0 }); cm.focus(); }
+            });
+        });
+    }
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    function getContextPath() {
+        // Try Joget's FormUtil
+        if (typeof FormUtil !== 'undefined' && FormUtil.getContextPath) {
+            return FormUtil.getContextPath();
+        }
+        // Try to detect from URL
+        var path = window.location.pathname;
+        var match = path.match(/^(\/[^\/]+)/);
+        return match ? match[1] : '/jw';
+    }
+
+    function validate() {
+        var script = cm.getValue();
+        clearMarkers();
+        showMessage('loading', 'Validating...', null);
+        document.getElementById('jre-validate-btn').disabled = true;
+
+        var contextPath = getContextPath();
+        var apiUrl = contextPath + '/api/erel/rules/validate';
+        
+        console.log('EREL: Validating script, URL:', apiUrl);
+
+        // Use jQuery if available (Joget includes it), otherwise XMLHttpRequest
+        if (typeof jQuery !== 'undefined') {
+            jQuery.ajax({
+                url: apiUrl,
+                type: 'POST',
+                contentType: 'application/json',
+                headers: {
+                    'api_id': API_CONFIG.apiId,
+                    'api_key': API_CONFIG.apiKey
+                },
+                data: JSON.stringify({ script: script }),
+                dataType: 'json',
+                success: function(response) {
+                    console.log('EREL: Raw response:', response);
+                    document.getElementById('jre-validate-btn').disabled = false;
+                    handleResponse(response);
+                },
+                error: function(xhr, status, error) {
+                    console.log('EREL: Error:', status, error, xhr.responseText);
+                    document.getElementById('jre-validate-btn').disabled = false;
+                    showMessage('error', 'Request Failed', 'Status: ' + xhr.status + ' - ' + error);
+                }
+            });
+        } else {
+            // Fallback to XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', apiUrl, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('api_id', API_CONFIG.apiId);
+            xhr.setRequestHeader('api_key', API_CONFIG.apiKey);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    document.getElementById('jre-validate-btn').disabled = false;
+                    if (xhr.status === 200) {
+                        try {
+                            var response = JSON.parse(xhr.responseText);
+                            handleResponse(response);
+                        } catch (e) {
+                            showMessage('error', 'Parse Error', 'Invalid response from server');
+                        }
+                    } else {
+                        showMessage('error', 'Request Failed', 'Status: ' + xhr.status);
+                    }
+                }
+            };
+            xhr.send(JSON.stringify({ script: script }));
+        }
+    }
+
+    function handleResponse(response) {
+        console.log('EREL: Handling response:', response);
+        
+        // Joget API wraps response: {date, code, message}
+        // The actual result is in 'message' as a JSON string
+        var result;
+        
+        if (response.message && typeof response.message === 'string') {
+            // Wrapped response - parse the message field
+            try {
+                result = JSON.parse(response.message);
+                console.log('EREL: Parsed inner result:', result);
+            } catch (e) {
+                console.log('EREL: Failed to parse message:', e);
+                showMessage('error', 'Parse Error', 'Invalid response format');
+                return;
+            }
+        } else if (response.valid !== undefined) {
+            // Direct response (not wrapped)
+            result = response;
+        } else {
+            showMessage('error', 'Unknown Response', 'Unexpected response format');
+            return;
+        }
+        
+        displayResult(result);
+    }
+
+    function displayResult(result) {
+        if (result.valid) {
+            var items = [];
+            if (result.rules && result.rules.length > 0) {
+                result.rules.forEach(function(rule) {
+                    items.push({ 
+                        icon: '✓', 
+                        message: (rule.ruleName || 'Rule') + ' (' + (rule.ruleType || 'UNKNOWN') + ')', 
+                        type: 'success' 
+                    });
+                });
+            }
+            showMessage('success', '✓ Validation Successful', result.ruleCount + ' rule(s) parsed', items);
+        } else {
+            var items = [];
+            if (result.errors && result.errors.length > 0) {
+                result.errors.forEach(function(err) {
+                    items.push({ icon: '✕', line: err.line, message: err.message, type: 'error' });
+                    addMarker(err.line, 'error');
+                });
+            }
+            if (result.warnings && result.warnings.length > 0) {
+                result.warnings.forEach(function(warn) {
+                    items.push({ icon: '⚠', line: warn.line, message: warn.message, type: 'warning' });
+                    addMarker(warn.line, 'warning');
+                });
+            }
+            showMessage('error', '✕ Validation Failed', null, items);
+        }
+    }
+
+    // Button handlers
+    document.getElementById('jre-validate-btn').addEventListener('click', validate);
+    
+    document.getElementById('jre-clear-btn').addEventListener('click', function() {
+        if (confirm('Clear all content?')) {
+            cm.setValue('');
+            clearMarkers();
+            showMessage('', 'Editor Cleared', 'Enter eligibility rules and click Validate.');
+        }
+    });
+    
+    document.getElementById('jre-sample-btn').addEventListener('click', function() {
+        var sample = '# Sample Rules Script Rules\n\nRULE "Adult Farmer"\n  TYPE: INCLUSION\n  MANDATORY: YES\n  ORDER: 10\n\n  WHEN age >= 18\n\n  FAIL MESSAGE: "Applicant must be 18 years or older"\n\nRULE "Has Agricultural Activity"\n  TYPE: INCLUSION\n  MANDATORY: YES\n  ORDER: 20\n\n  WHEN hasCrops = true OR hasLivestock = true\n\n  FAIL MESSAGE: "Must be engaged in farming activities"';
+        var current = cm.getValue();
+        cm.setValue(current ? current + '\n\n' + sample : sample);
+        clearMarkers();
+    });
+    
+    document.getElementById('jre-help-btn').addEventListener('click', function() {
+        var panel = document.getElementById('jre-help-panel');
+        var visible = panel.classList.toggle('visible');
+        this.textContent = visible ? '✕ Close' : '? Help';
+    });
+
+    // Expose for debugging
+    window.jreEditor = { cm: cm, validate: validate };
+    
+    console.log('Rule Editor initialized. Context path:', getContextPath());
+})();
+</script>

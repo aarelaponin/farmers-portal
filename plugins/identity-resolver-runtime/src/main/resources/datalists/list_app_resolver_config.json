@@ -1,0 +1,40 @@
+{
+  "id": "list_app_resolver_config",
+  "name": "Identity Resolver Configurations",
+  "description": "CRUD list for app_resolver_config — admin-edited identity resolver definitions.",
+  "properties": {"key": "id"},
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": {
+      "formDefId": "app_resolver_config",
+      "orderBy": "dateModified",
+      "extraCondition": "",
+      "order": "DESC"
+    }
+  },
+  "filters": [],
+  "columns": [
+    {"name": "configId", "width": "180", "label": "Config ID", "sortable": "true"},
+    {"name": "name", "width": "*", "label": "Name", "sortable": "true"},
+    {"name": "sourceFormId", "width": "180", "label": "Source Form", "sortable": "true"},
+    {"name": "sourceLookupField", "width": "150", "label": "Lookup Field", "sortable": "true"},
+    {"name": "multipleMatchesPolicy", "width": "120", "label": "On multiple", "sortable": "true"},
+    {"name": "isActive", "width": "60", "label": "Active", "sortable": "true"},
+    {"name": "dateModified", "width": "150",
+     "format": {"className": "org.joget.plugin.enterprise.DateFormatter",
+                "properties": {"format": "yyyy-MM-dd HH:mm"}},
+     "label": "Modified", "sortable": "true"}
+  ],
+  "actions": [
+    {"name": "create", "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+     "label": "+ New resolver", "properties": {"hyperlink": "?action=create"}}
+  ],
+  "rowActions": [
+    {"name": "edit", "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+     "label": "Edit", "properties": {"hyperlink": "?action=edit&id=#row.id#"}},
+    {"name": "fields", "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+     "label": "Fields →", "properties": {
+       "hyperlink": "/jw/web/userview/farmersPortal/v/_/list_app_resolver_field_map_crud?_resolverConfigId=#row.configId#"
+     }}
+  ]
+}

@@ -1,0 +1,1707 @@
+/**
+ * GIS Polygon Capture Component Styles
+ * Version: 1.0
+ */
+
+/* ============================================
+   Container & Layout
+   ============================================ */
+.gis-container {
+    position: relative;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+/* ============================================
+   Empty State
+   ============================================ */
+.gis-empty-state {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+.gis-empty-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.gis-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.7;
+}
+
+.gis-empty-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.gis-capture-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(51, 136, 255, 0.3);
+}
+
+.gis-capture-btn:hover {
+    background: #2266cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(51, 136, 255, 0.4);
+}
+
+.gis-capture-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   Step Progress Indicator
+   ============================================ */
+.gis-step-progress {
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px 8px 0 0;
+}
+
+.gis-step-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gis-step-bar {
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.gis-step-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3388ff 0%, #28a745 100%);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.gis-step-labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gis-step-label {
+    font-size: 11px;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.gis-step-label.active {
+    color: #3388ff;
+    font-weight: 600;
+}
+
+.gis-step-label.complete {
+    color: #28a745;
+}
+
+/* ============================================
+   Numbered Vertex Markers
+   ============================================ */
+.gis-numbered-vertex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: 3px solid #3388ff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: move;
+    transition: all 0.15s ease;
+}
+
+.gis-numbered-vertex span {
+    font-size: 11px;
+    font-weight: 700;
+    color: #3388ff;
+    line-height: 1;
+}
+
+.gis-numbered-vertex.first {
+    border-color: #28a745;
+}
+
+.gis-numbered-vertex.first span {
+    color: #28a745;
+}
+
+.gis-numbered-vertex.enlarged {
+    transform: scale(1.3);
+    box-shadow: 0 3px 8px rgba(40, 167, 69, 0.4);
+}
+
+.gis-numbered-vertex:hover {
+    transform: scale(1.1);
+}
+
+.gis-numbered-vertex.selected {
+    border-color: #dc3545 !important;
+    background: #fff5f5;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse-selected 1.5s infinite;
+}
+
+.gis-numbered-vertex.selected span {
+    color: #dc3545 !important;
+}
+
+@keyframes pulse-selected {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2); }
+    50% { box-shadow: 0 0 0 5px rgba(220, 53, 69, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2); }
+}
+
+/* ============================================
+   Close Polygon Hint Tooltip
+   ============================================ */
+.gis-close-hint-tooltip {
+    background: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gis-close-hint-tooltip::before {
+    border-top-color: #28a745 !important;
+}
+
+.gis-map-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gis-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* ============================================
+   Mode Selection Panel
+   ============================================ */
+.gis-mode-selection {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.gis-mode-selection h3 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.gis-mode-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gis-mode-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 150px;
+}
+
+.gis-mode-btn:hover {
+    border-color: #3388ff;
+    box-shadow: 0 2px 8px rgba(51, 136, 255, 0.2);
+}
+
+.gis-mode-btn.selected {
+    border-color: #3388ff;
+    background: #f0f7ff;
+}
+
+.gis-mode-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.gis-mode-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.gis-mode-subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ============================================
+   Toolbar
+   ============================================ */
+.gis-toolbar {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gis-toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.15s ease;
+}
+
+.gis-toolbar-btn:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+}
+
+.gis-toolbar-btn.active {
+    background: #3388ff;
+    border-color: #3388ff;
+    color: white;
+}
+
+.gis-toolbar-btn.primary {
+    background: #3388ff;
+    border-color: #3388ff;
+    color: white;
+}
+
+.gis-toolbar-btn.primary:hover {
+    background: #2266cc;
+}
+
+.gis-toolbar-btn.danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.gis-toolbar-btn.danger:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.gis-toolbar-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.gis-toolbar-separator {
+    width: 1px;
+    height: 24px;
+    background: #ddd;
+    margin: 0 4px;
+}
+
+.gis-toolbar-spacer {
+    flex: 1;
+}
+
+/* ============================================
+   Info Panel (Metrics)
+   ============================================ */
+.gis-info-panel {
+    display: flex;
+    gap: 16px;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-top: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.gis-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.gis-info-label {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gis-info-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.gis-info-value.highlight {
+    color: #3388ff;
+}
+
+/* ============================================
+   GPS Panel (Walk Mode)
+   ============================================ */
+.gis-gps-panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 12px 14px;
+    min-width: 200px;
+}
+
+.gis-gps-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.gis-gps-icon {
+    font-size: 14px;
+}
+
+.gis-gps-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.gis-gps-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.gis-gps-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.gis-gps-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    background: #ccc;
+}
+
+.gis-gps-bar-fill.excellent {
+    background: linear-gradient(90deg, #28a745 0%, #34ce57 100%);
+}
+
+.gis-gps-bar-fill.good {
+    background: linear-gradient(90deg, #28a745 0%, #5cb85c 100%);
+}
+
+.gis-gps-bar-fill.fair {
+    background: linear-gradient(90deg, #ffc107 0%, #ffda6a 100%);
+}
+
+.gis-gps-bar-fill.poor {
+    background: linear-gradient(90deg, #fd7e14 0%, #ffc107 100%);
+}
+
+.gis-gps-bar-fill.very-poor {
+    background: linear-gradient(90deg, #dc3545 0%, #fd7e14 100%);
+}
+
+.gis-gps-accuracy-value {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 50px;
+    text-align: right;
+}
+
+.gis-gps-accuracy-value.excellent,
+.gis-gps-accuracy-value.good {
+    color: #28a745;
+}
+
+.gis-gps-accuracy-value.fair {
+    color: #e69500;
+}
+
+.gis-gps-accuracy-value.poor {
+    color: #fd7e14;
+}
+
+.gis-gps-accuracy-value.very-poor {
+    color: #dc3545;
+}
+
+.gis-gps-status-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gis-gps-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    flex-shrink: 0;
+}
+
+.gis-gps-indicator.searching {
+    background: #ffc107;
+    animation: pulse 1.5s infinite;
+}
+
+.gis-gps-indicator.excellent,
+.gis-gps-indicator.good {
+    background: #28a745;
+}
+
+.gis-gps-indicator.fair {
+    background: #ffc107;
+}
+
+.gis-gps-indicator.poor {
+    background: #fd7e14;
+}
+
+.gis-gps-indicator.very-poor {
+    background: #dc3545;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.gis-gps-status-label {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gis-gps-status-label.excellent,
+.gis-gps-status-label.good {
+    color: #28a745;
+}
+
+.gis-gps-status-label.fair {
+    color: #e69500;
+}
+
+.gis-gps-status-label.poor {
+    color: #fd7e14;
+}
+
+.gis-gps-status-label.very-poor {
+    color: #dc3545;
+}
+
+/* Legacy classes for backwards compatibility */
+.gis-gps-accuracy.good {
+    color: #28a745;
+}
+
+.gis-gps-accuracy.fair {
+    color: #ffc107;
+}
+
+.gis-gps-accuracy.poor {
+    color: #dc3545;
+}
+
+.gis-gps-label {
+    font-size: 11px;
+    color: #666;
+}
+
+/* ============================================
+   Mark Corner Button (Walk Mode)
+   ============================================ */
+.gis-mark-corner-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #3388ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(51, 136, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+.gis-mark-corner-btn:hover {
+    background: #2266cc;
+    box-shadow: 0 6px 16px rgba(51, 136, 255, 0.4);
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.gis-mark-corner-btn:active {
+    transform: translateX(-50%) translateY(0);
+}
+
+.gis-mark-corner-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ============================================
+   Vertex Markers
+   ============================================ */
+.gis-vertex-marker {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 3px solid #3388ff;
+    border-radius: 50%;
+    cursor: move;
+}
+
+.gis-vertex-marker.first {
+    border-color: #28a745;
+}
+
+.gis-midpoint-marker {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border: 2px solid #3388ff;
+    border-radius: 50%;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.gis-midpoint-marker:hover {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+/* ============================================
+   Midpoint Handles (Diamond shape)
+   ============================================ */
+.gis-midpoint-handle {
+    cursor: grab;
+}
+
+.gis-midpoint-handle:active {
+    cursor: grabbing;
+}
+
+.gis-midpoint-diamond {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: 2px solid #3388ff;
+    transform: rotate(45deg);
+    opacity: 0.7;
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.gis-midpoint-handle.hover .gis-midpoint-diamond,
+.gis-midpoint-handle:hover .gis-midpoint-diamond {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.3);
+    background: #e3f2fd;
+    border-color: #1976d2;
+    box-shadow: 0 2px 6px rgba(25, 118, 210, 0.3);
+}
+
+/* ============================================
+   Intersection Warning Tooltip
+   ============================================ */
+.gis-intersection-tooltip {
+    background: #dc3545;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+}
+
+.gis-intersection-tooltip::before {
+    border-top-color: #dc3545 !important;
+}
+
+/* ============================================
+   Validation Messages
+   ============================================ */
+.gis-validation-panel {
+    padding: 12px 16px;
+    border-top: 1px solid #ddd;
+}
+
+.gis-validation-error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #fff3f3;
+    border: 1px solid #ffcdd2;
+    border-radius: 4px;
+    color: #c62828;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.gis-validation-warning {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #fff8e1;
+    border: 1px solid #ffecb3;
+    border-radius: 4px;
+    color: #f57f17;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.gis-validation-success {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 4px;
+    color: #2e7d32;
+    font-size: 13px;
+}
+
+/* ============================================
+   Warning Panel (Real-time warnings during drawing)
+   ============================================ */
+.gis-warning-panel {
+    padding: 8px 16px;
+    background: #fff8e1;
+    border-top: 2px solid #ff9800;
+}
+
+.gis-warning-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 13px;
+    color: #e65100;
+}
+
+.gis-warning-item:not(:last-child) {
+    border-bottom: 1px solid #ffe0b2;
+}
+
+.gis-warning-item.intersection {
+    color: #c62828;
+}
+
+.gis-warning-item.intersection .gis-warning-icon {
+    color: #dc3545;
+}
+
+.gis-warning-icon {
+    font-size: 16px;
+    color: #ff9800;
+}
+
+.gis-warning-text {
+    flex: 1;
+}
+
+/* ============================================
+   Overlap Warning Panel
+   ============================================ */
+.gis-overlap-panel {
+    padding: 0;
+    background: #fff3e0;
+    border-top: 3px solid #ff9800;
+    border-radius: 0 0 8px 8px;
+}
+
+.gis-overlap-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+    color: white;
+}
+
+.gis-overlap-icon {
+    font-size: 20px;
+}
+
+.gis-overlap-title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.gis-overlap-content {
+    padding: 12px 16px;
+}
+
+.gis-overlap-content p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #5d4037;
+}
+
+.gis-overlap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.gis-overlap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid #ffe0b2;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.gis-overlap-item:last-child {
+    margin-bottom: 0;
+}
+
+.gis-overlap-record-name {
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+}
+
+.gis-overlap-record-info {
+    color: #e65100;
+    font-weight: 600;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.gis-overlap-total {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ffe0b2;
+    font-size: 13px;
+}
+
+.gis-overlap-total strong {
+    color: #e65100;
+}
+
+.gis-overlap-actions {
+    display: flex;
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid #ffe0b2;
+    background: #fff8f0;
+}
+
+.gis-overlap-loading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+.gis-overlap-loading span {
+    font-size: 14px;
+    color: #5d4037;
+}
+
+/* Overlap panel buttons */
+.gis-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gis-btn-secondary {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.gis-btn-secondary:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+}
+
+.gis-btn-warning {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+    color: white;
+    box-shadow: 0 2px 6px rgba(255, 152, 0, 0.3);
+}
+
+.gis-btn-warning:hover {
+    background: linear-gradient(135deg, #f57c00 0%, #ef6c00 100%);
+    box-shadow: 0 3px 8px rgba(255, 152, 0, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Overlap popup on map */
+.gis-overlap-popup {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.gis-overlap-popup strong {
+    color: #333;
+}
+
+.gis-overlap-popup .gis-overlap-info {
+    display: block;
+    margin-top: 4px;
+    color: #e65100;
+    font-weight: 600;
+}
+
+/* ============================================
+   Loading State
+   ============================================ */
+.gis-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+}
+
+.gis-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3388ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   Toast Notifications
+   ============================================ */
+.gis-toast-container {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.gis-toast {
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.2s ease;
+}
+
+.gis-toast.success {
+    background: #28a745;
+    color: white;
+}
+
+.gis-toast.warning {
+    background: #ffc107;
+    color: #333;
+}
+
+.gis-toast.error {
+    background: #dc3545;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   Layer Control
+   ============================================ */
+.gis-layer-control {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.gis-layer-btn {
+    padding: 8px 12px;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.gis-layer-btn:hover {
+    background: #f5f5f5;
+}
+
+.gis-layer-dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 4px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 150px;
+    display: none;
+}
+
+.gis-layer-dropdown.open {
+    display: block;
+}
+
+.gis-layer-option {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+}
+
+.gis-layer-option:last-child {
+    border-bottom: none;
+}
+
+.gis-layer-option:hover {
+    background: #f5f5f5;
+}
+
+.gis-layer-option.selected {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+/* ============================================
+   Location Search
+   ============================================ */
+
+/* Search toggle button */
+.gis-search-toggle {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    z-index: 1000;
+    width: 34px;
+    height: 34px;
+    background: white;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.gis-search-toggle:hover {
+    background: #f4f4f4;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.gis-search-toggle:focus {
+    outline: 2px solid rgba(51, 136, 255, 0.6);
+    outline-offset: 2px;
+}
+
+.gis-search-toggle.active {
+    background: #3388ff;
+    border-color: #3388ff;
+    color: white;
+}
+
+/* Search container */
+.gis-search-container {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    z-index: 1000;
+    display: flex;
+    align-items: stretch;
+    max-width: 280px;
+}
+
+.gis-search-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    outline: none;
+    min-width: 150px;
+}
+
+.gis-search-input:focus {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(51, 136, 255, 0.4);
+}
+
+.gis-search-input::placeholder {
+    color: #999;
+}
+
+.gis-search-btn {
+    padding: 10px 14px;
+    background: #3388ff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.gis-search-btn:hover {
+    background: #2266cc;
+}
+
+.gis-search-btn:focus {
+    outline: 2px solid rgba(51, 136, 255, 0.6);
+    outline-offset: 2px;
+}
+
+.gis-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.gis-search-result-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gis-search-result-item:last-child {
+    border-bottom: none;
+}
+
+.gis-search-result-item:hover,
+.gis-search-result-item:focus {
+    background: #f0f7ff;
+    outline: none;
+}
+
+.gis-search-result-item:focus {
+    background: #e3f2fd;
+}
+
+.gis-search-loading,
+.gis-search-no-results,
+.gis-search-error {
+    padding: 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.gis-search-loading {
+    color: #3388ff;
+}
+
+.gis-search-error {
+    color: #dc3545;
+}
+
+/* ============================================
+   Accessibility - Focus Styles
+   ============================================ */
+.gis-toolbar-btn:focus,
+.gis-capture-btn:focus,
+.gis-mark-corner-btn:focus,
+.gis-layer-btn:focus,
+.gis-mode-btn:focus,
+.gis-btn:focus {
+    outline: 2px solid rgba(51, 136, 255, 0.6);
+    outline-offset: 2px;
+}
+
+.gis-map:focus {
+    outline: 3px solid rgba(51, 136, 255, 0.5);
+    outline-offset: -3px;
+}
+
+/* Visually hidden but accessible to screen readers */
+.gis-sr-only,
+.gis-live-region {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skip to main content link (for keyboard users) */
+.gis-skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #3388ff;
+    color: white;
+    padding: 8px 16px;
+    z-index: 9999;
+    transition: top 0.2s ease;
+}
+
+.gis-skip-link:focus {
+    top: 0;
+}
+
+/* ============================================
+   Responsive / Mobile
+   ============================================ */
+@media (max-width: 768px) {
+    .gis-toolbar {
+        padding: 6px;
+    }
+
+    /* W3.4 hardening (mobile audit MA-005): bump toolbar buttons to the
+       44px touch floor. Previously 6px/10px/12px-font collapsed to ~26px
+       high, below Apple HIG. */
+    .gis-toolbar-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+        min-height: 44px;
+    }
+
+    .gis-mode-buttons {
+        flex-direction: column;
+    }
+
+    .gis-mode-btn {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .gis-info-panel {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .gis-mark-corner-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+
+    /* W3.4 MA-002: search-toggle bumped to 44x44. */
+    .gis-search-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .gis-search-container {
+        left: 56px;
+        max-width: calc(100% - 70px);
+    }
+
+    .gis-search-input {
+        min-width: 100px;
+        min-height: 44px;
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+}
+
+/* =====================================================
+   NEARBY PARCELS DISPLAY (READ-ONLY)
+   ===================================================== */
+
+/* Control button container */
+.gis-nearby-parcels-control {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    z-index: 1000;
+}
+
+/* Toggle button */
+.gis-nearby-parcels-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gis-nearby-parcels-btn:hover {
+    background: #f4f4f4;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.gis-nearby-parcels-btn:focus {
+    outline: 2px solid rgba(51, 136, 255, 0.6);
+    outline-offset: 2px;
+}
+
+.gis-nearby-parcels-btn.active {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    color: #1565c0;
+}
+
+.gis-nearby-parcels-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.gis-nearby-parcels-btn.loading::after {
+    content: '...';
+    animation: gis-loading-dots 1s infinite;
+}
+
+@keyframes gis-loading-dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* Count badge */
+.gis-nearby-parcels-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #2196f3;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.gis-nearby-parcels-badge.warning {
+    background: #ff9800;
+}
+
+/* Popup styling for nearby parcels */
+.gis-nearby-parcel-popup {
+    min-width: 180px;
+    max-width: 280px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.gis-nearby-parcel-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.gis-nearby-parcel-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.gis-nearby-parcel-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.gis-nearby-parcel-info {
+    padding: 4px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.gis-nearby-parcel-info .gis-info-label {
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gis-nearby-parcel-info .gis-info-value {
+    color: #333;
+    font-weight: 500;
+}
+
+.gis-nearby-parcel-footer {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #e0e0e0;
+    color: #888;
+    font-style: italic;
+    font-size: 11px;
+}
+
+/* Legend for map */
+.gis-legend {
+    position: absolute;
+    bottom: 45px;
+    left: 10px;
+    background: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-size: 12px;
+    z-index: 1000;
+    max-width: 180px;
+}
+
+.gis-legend-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gis-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.gis-legend-swatch {
+    width: 22px;
+    height: 14px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.gis-legend-swatch.nearby {
+    background: rgba(128, 128, 128, 0.15);
+    border: 1px dashed #666;
+}
+
+.gis-legend-swatch.current {
+    background: rgba(51, 136, 255, 0.2);
+    border: 2px solid #3388ff;
+}
+
+.gis-legend-swatch.overlap {
+    background: rgba(220, 53, 69, 0.35);
+    border: 2px solid #dc3545;
+}
+
+.gis-legend-label {
+    color: #555;
+    font-size: 12px;
+}
+
+/* Loading indicator for nearby parcels */
+.gis-nearby-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1001;
+    font-size: 14px;
+    color: #333;
+}
+
+.gis-nearby-loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #e0e0e0;
+    border-top-color: #2196f3;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Status message when no parcels found */
+.gis-nearby-status {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    z-index: 1000;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Responsive adjustments for nearby parcels */
+@media (max-width: 768px) {
+    .gis-nearby-parcels-control {
+        right: 50px;
+    }
+
+    /* W3.4 MA-003: nearby-parcels toggle to 44px touch floor. */
+    .gis-nearby-parcels-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+        min-height: 44px;
+    }
+
+    .gis-legend {
+        bottom: 35px;
+        left: 8px;
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .gis-legend-swatch {
+        width: 18px;
+        height: 12px;
+    }
+
+    .gis-nearby-parcel-popup {
+        min-width: 160px;
+        max-width: 240px;
+    }
+}
+
+/* =====================================================
+   AUTO-CENTER STATUS INDICATOR
+   ===================================================== */
+
+.gis-autocenter-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1001;
+    font-size: 14px;
+    color: #333;
+}
+
+.gis-autocenter-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #e0e0e0;
+    border-top-color: #3388ff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.gis-autocenter-text {
+    font-weight: 500;
+}
+
+/* =====================================================
+   NETWORK STATUS INDICATOR
+   ===================================================== */
+
+.gis-network-status {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.gis-network-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.gis-network-status.online .gis-network-indicator {
+    background: #28a745;
+}
+
+.gis-network-status.online .gis-network-label {
+    color: #28a745;
+}
+
+.gis-network-status.offline {
+    background: #fff3f3;
+    border: 1px solid #dc3545;
+}
+
+.gis-network-status.offline .gis-network-indicator {
+    background: #dc3545;
+    animation: pulse 1.5s infinite;
+}
+
+.gis-network-status.offline .gis-network-label {
+    color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .gis-network-status {
+        top: 110px;
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+}
+
+/* =====================================================
+   W3.4 mobile hardening — finishing touches
+   ===================================================== */
+
+/* MA-006: Leaflet's stock zoom +/- controls are 30x30 by default
+   (Leaflet 1.x ships the rule `.leaflet-control-zoom a { width: 26px;
+   height: 26px; }`). Override for touch viewports so citizens with
+   thumbs can hit zoom without pinch-gesture fallback. */
+@media (max-width: 768px) {
+    .leaflet-touch .leaflet-bar a,
+    .leaflet-bar a {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 22px;
+    }
+
+    /* MA-012a: step header was 13px (1px under the 14px hint floor). */
+    .gis-step-header {
+        font-size: 14px;
+    }
+
+    /* MA-012b: step-icon-text in the progress stamps was 11px. Inside
+       circle stamps, not flowed text, but easy to lift one notch. */
+    .gis-step-icon-text {
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,25 @@
+[{
+    "title": "Filter Panel Configuration",
+    "properties": [
+        {
+            "name": "panelTitle",
+            "label": "Panel Title",
+            "type": "textfield",
+            "value": "FILTER CRITERIA"
+        },
+        {
+            "name": "columns",
+            "label": "Grid Columns",
+            "description": "Number of columns in the filter grid (default: 3)",
+            "type": "textfield",
+            "value": "3"
+        },
+        {
+            "name": "hierarchyHint",
+            "label": "Hierarchy Hint",
+            "description": "Text shown in panel header right side",
+            "type": "textfield",
+            "value": "District \u2192 Centre \u2192 Sub-Centre \u2192 Village"
+        }
+    ]
+}]

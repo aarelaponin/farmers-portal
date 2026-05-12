@@ -1,0 +1,144 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "qa_gate",
+    "name": "QA Gate",
+    "description": "Status-transition gate. Declares: when field X on the primary form is changing to one of Y values, block the transition if any issues of severity \u2265 Z are still active for the record. Multiple gates per service allowed.",
+    "tableName": "qa_gate",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "main",
+        "label": "Gate"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service ID (FK)",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "gateField",
+                "label": "Gated Field ID",
+                "size": "60",
+                "maxlength": "60",
+                "value": "status",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "gateValues",
+                "label": "Gated Values (CSV)",
+                "size": "120",
+                "maxlength": "500",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "blockedBySeverity",
+                "label": "Blocked By (severity threshold)",
+                "options": [
+                  {
+                    "value": "ERROR",
+                    "label": "ERROR only"
+                  },
+                  {
+                    "value": "WARNING",
+                    "label": "ERROR + WARNING"
+                  }
+                ],
+                "value": "ERROR",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "isActive",
+                "label": "Active",
+                "value": "Y",
+                "options": [
+                  {
+                    "value": "Y",
+                    "label": "Yes"
+                  },
+                  {
+                    "value": "N",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "notes",
+                "label": "Notes / rationale",
+                "rows": "4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

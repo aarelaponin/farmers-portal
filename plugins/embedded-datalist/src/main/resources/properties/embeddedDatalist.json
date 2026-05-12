@@ -1,0 +1,136 @@
+[
+    {
+        "title": "@@embeddedDatalist.basicSettings@@",
+        "properties": [
+            {
+                "name": "id",
+                "label": "@@embeddedDatalist.id@@",
+                "type": "textfield",
+                "required": "true",
+                "regex_validation": "^[a-zA-Z0-9_]+$",
+                "validation_message": "@@embeddedDatalist.id.validation@@"
+            },
+            {
+                "name": "label",
+                "label": "@@embeddedDatalist.label@@",
+                "type": "textfield"
+            },
+            {
+                "name": "datalistId",
+                "label": "@@embeddedDatalist.datalistId@@",
+                "type": "selectbox",
+                "required": "true",
+                "options_ajax": "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/options"
+            }
+        ]
+    },
+    {
+        "title": "@@embeddedDatalist.filterParameters@@",
+        "properties": [
+            {
+                "name": "filterParams",
+                "label": "@@embeddedDatalist.filterParams@@",
+                "description": "@@embeddedDatalist.filterParams.description@@",
+                "type": "grid",
+                "columns": [
+                    {
+                        "key": "paramName",
+                        "label": "@@embeddedDatalist.filterParams.paramName@@"
+                    },
+                    {
+                        "key": "fieldId",
+                        "label": "@@embeddedDatalist.filterParams.fieldId@@"
+                    },
+                    {
+                        "key": "defaultValue",
+                        "label": "@@embeddedDatalist.filterParams.defaultValue@@"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "@@embeddedDatalist.displayOptions@@",
+        "properties": [
+            {
+                "name": "height",
+                "label": "@@embeddedDatalist.height@@",
+                "type": "textfield",
+                "value": "400px",
+                "description": "@@embeddedDatalist.height.description@@"
+            },
+            {
+                "name": "showPagination",
+                "label": "@@embeddedDatalist.showPagination@@",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            },
+            {
+                "name": "pageSize",
+                "label": "@@embeddedDatalist.pageSize@@",
+                "type": "textfield",
+                "value": "10"
+            },
+            {
+                "name": "showFilter",
+                "label": "@@embeddedDatalist.showFilter@@",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ]
+            },
+            {
+                "name": "showExport",
+                "label": "@@embeddedDatalist.showExport@@",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ]
+            },
+            {
+                "name": "emptyMessage",
+                "label": "@@embeddedDatalist.emptyMessage@@",
+                "type": "textfield",
+                "value": "No records found."
+            }
+        ]
+    },
+    {
+        "title": "@@embeddedDatalist.advanced@@",
+        "properties": [
+            {
+                "name": "refreshOnChange",
+                "label": "@@embeddedDatalist.refreshOnChange@@",
+                "type": "textfield",
+                "description": "@@embeddedDatalist.refreshOnChange.description@@"
+            },
+            {
+                "name": "rowClickAction",
+                "label": "@@embeddedDatalist.rowClickAction@@",
+                "type": "selectbox",
+                "options": [
+                    {"value": "", "label": "@@embeddedDatalist.rowClickAction.none@@"},
+                    {"value": "popup", "label": "@@embeddedDatalist.rowClickAction.popup@@"},
+                    {"value": "redirect", "label": "@@embeddedDatalist.rowClickAction.redirect@@"}
+                ]
+            },
+            {
+                "name": "rowClickFormId",
+                "label": "@@embeddedDatalist.rowClickFormId@@",
+                "type": "selectbox",
+                "options_ajax": "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/options",
+                "control_field": "rowClickAction",
+                "control_value": "popup,redirect"
+            },
+            {
+                "name": "customCss",
+                "label": "@@embeddedDatalist.customCss@@",
+                "type": "textarea",
+                "description": "@@embeddedDatalist.customCss.description@@"
+            }
+        ]
+    }
+]

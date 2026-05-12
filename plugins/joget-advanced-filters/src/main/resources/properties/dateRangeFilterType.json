@@ -1,0 +1,59 @@
+[{
+    "title": "Date Range Configuration",
+    "properties": [
+        {
+            "name": "fromParamSuffix",
+            "label": "From Parameter Suffix",
+            "description": "Filter name suffix for the From date, e.g. date_from",
+            "type": "textfield",
+            "required": "true",
+            "value": "date_from"
+        },
+        {
+            "name": "toParamSuffix",
+            "label": "To Parameter Suffix",
+            "description": "Filter name suffix for the To date, e.g. date_to",
+            "type": "textfield",
+            "required": "true",
+            "value": "date_to"
+        },
+        {
+            "name": "defaultFromValue",
+            "label": "Default From Value",
+            "description": "Default From date (YYYY-MM-DD format)",
+            "type": "textfield"
+        },
+        {
+            "name": "defaultToValue",
+            "label": "Default To Value",
+            "description": "Default To date (YYYY-MM-DD format)",
+            "type": "textfield"
+        }
+    ]
+},
+{
+    "title": "Filter Panel Styling",
+    "properties": [
+        {
+            "name": "panelTitle",
+            "label": "Panel Title",
+            "description": "Leave empty to disable panel wrapping",
+            "type": "textfield",
+            "value": "FILTER CRITERIA"
+        },
+        {
+            "name": "panelColumns",
+            "label": "Grid Columns",
+            "description": "Number of columns in the filter grid (default: 3)",
+            "type": "textfield",
+            "value": "3"
+        },
+        {
+            "name": "panelHierarchyHint",
+            "label": "Hierarchy Hint",
+            "description": "Text shown in panel header right side",
+            "type": "textfield",
+            "value": "District \u2192 Centre \u2192 Sub-Centre \u2192 Village"
+        }
+    ]
+}]

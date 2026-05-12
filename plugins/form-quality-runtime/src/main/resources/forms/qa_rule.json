@@ -1,0 +1,189 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "qa_rule",
+    "name": "QA Rule",
+    "description": "One quality rule. Bound to a service + (optional) tab; rule script is JRE DSL (parsed by joget-rules-api). Severity drives panel grouping and gate behaviour.",
+    "tableName": "qa_rule",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "scope",
+        "label": "Scope"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service ID (FK)",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "tabCode",
+                "label": "Tab Code (FK, optional)",
+                "size": "40",
+                "maxlength": "40"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "ruleCode",
+                "label": "Rule Code",
+                "size": "60",
+                "maxlength": "80",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "regex": "^[a-z0-9_.]+$",
+                    "regexMessage": "Lowercase, digits, underscore, dot only"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "severity",
+                "label": "Severity",
+                "options": [
+                  {
+                    "value": "ERROR",
+                    "label": "Error (blocks gated transitions)"
+                  },
+                  {
+                    "value": "WARNING",
+                    "label": "Warning (advisory)"
+                  },
+                  {
+                    "value": "INFO",
+                    "label": "Info (notice only)"
+                  }
+                ],
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "affectedFields",
+                "label": "Affected Fields (CSV)",
+                "size": "120",
+                "maxlength": "500"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "isActive",
+                "label": "Active",
+                "value": "Y",
+                "options": [
+                  {
+                    "value": "Y",
+                    "label": "Yes"
+                  },
+                  {
+                    "value": "N",
+                    "label": "No"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "logic",
+        "label": "Logic"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "ruleScript",
+                "label": "Rule Script (JRE DSL)",
+                "rows": "8",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "message",
+                "label": "Failure Message",
+                "size": "200",
+                "maxlength": "500",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

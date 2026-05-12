@@ -1,0 +1,931 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "subsidyProgramSimple",
+        "name": "Subsidy Program (Simple)",
+        "tableName": "subsidy_program01",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        },
+        "description": ""
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section1Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>1. Basic Program Information</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.IdGeneratorField",
+                            "properties": {
+                                "format": "ID-??????",
+                                "envVariable": "counter",
+                                "isDistributedGeneration": "",
+                                "label": "Program Code",
+                                "id": "program_code",
+                                "hidden": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Program Name",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "programName",
+                                "value": "",
+                                "maxlength": "255",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Program name must be between 10 and 255 characters"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter program name (min 10 characters)",
+                                "size": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "disableIncrementDecrementArrow": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "label": "Program Type",
+                                "readonlyLabel": "",
+                                "id": "programType",
+                                "options": [
+                                    {
+                                        "value": "INPUT_SUBSIDY",
+                                        "label": "Input Subsidy",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "CASH_TRANSFER",
+                                        "label": "Cash Transfer",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "VOUCHER",
+                                        "label": "Voucher Program",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "EQUIPMENT",
+                                        "label": "Equipment Support",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "TRAINING",
+                                        "label": "Training Support",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "MIXED",
+                                        "label": "Mixed Program",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Program type is required"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "multiple": "",
+                                "size": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "style": "",
+                                "label": "Program Description",
+                                "readonlyLabel": "",
+                                "id": "programDescription",
+                                "value": "",
+                                "cols": "60",
+                                "rows": "5",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Description must be between 50 and 500 characters"
+                                    }
+                                },
+                                "placeholder": "Provide a detailed description (50-500 characters)",
+                                "workflowVariable": "",
+                                "requiredSanitize": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "label": "Program Status",
+                                "readonlyLabel": "",
+                                "id": "programStatus",
+                                "options": [
+                                    {
+                                        "value": "DRAFT",
+                                        "label": "Draft",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "ACTIVE",
+                                        "label": "Active",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "SUSPENDED",
+                                        "label": "Suspended",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "CLOSED",
+                                        "label": "Closed",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "DRAFT",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Program status is required"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "multiple": "",
+                                "size": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Basic Program Information",
+                "id": "basic_program_information",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            }
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Program Timeline",
+                "id": "program_timeline",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section2Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>2. Program Timeline</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "dateFormat": "yy-mm-dd",
+                                "yearRange": "c-0:c+10",
+                                "readonly": "",
+                                "label": "Application Start Date",
+                                "readonlyLabel": "",
+                                "id": "applicationStartDate",
+                                "value": "",
+                                "currentDateAs": "",
+                                "datePickerType": "",
+                                "format": "yy-mm-dd",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Application start date is required"
+                                    }
+                                },
+                                "size": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "allowManual": "",
+                                "dataFormat": "",
+                                "startDateFieldId": "",
+                                "endDateFieldId": "",
+                                "placeholder": "",
+                                "disableWeekends": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "dateFormat": "yy-mm-dd",
+                                "yearRange": "c-0:c+10",
+                                "readonly": "",
+                                "label": "Application End Date",
+                                "readonlyLabel": "",
+                                "id": "applicationEndDate",
+                                "value": "",
+                                "currentDateAs": "",
+                                "datePickerType": "",
+                                "format": "yy-mm-dd",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Application end date must be on or after start date"
+                                    }
+                                },
+                                "size": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "allowManual": "",
+                                "dataFormat": "",
+                                "startDateFieldId": "",
+                                "endDateFieldId": "",
+                                "placeholder": "",
+                                "disableWeekends": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "dateFormat": "yy-mm-dd",
+                                "yearRange": "c-0:c+10",
+                                "readonly": "",
+                                "label": "Program Start Date",
+                                "readonlyLabel": "",
+                                "id": "programStartDate",
+                                "value": "",
+                                "currentDateAs": "",
+                                "datePickerType": "",
+                                "format": "yy-mm-dd",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Program start date must be on or after application start"
+                                    }
+                                },
+                                "size": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "allowManual": "",
+                                "dataFormat": "",
+                                "startDateFieldId": "",
+                                "endDateFieldId": "",
+                                "placeholder": "",
+                                "disableWeekends": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "dateFormat": "yy-mm-dd",
+                                "yearRange": "c-0:c+10",
+                                "readonly": "",
+                                "label": "Program End Date",
+                                "readonlyLabel": "",
+                                "id": "programEndDate",
+                                "value": "",
+                                "currentDateAs": "",
+                                "datePickerType": "dateTime",
+                                "format": "yy-mm-dd",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Program end date must be on or after program start"
+                                    }
+                                },
+                                "size": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "allowManual": "",
+                                "dataFormat": "",
+                                "format24hr": "",
+                                "startDateFieldId": "",
+                                "endDateFieldId": "",
+                                "placeholder": "",
+                                "disableWeekends": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Budget & Benefit Model",
+                "id": "budget_and_benefit",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section3Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>3. Budget & Benefit Model</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Total Budget (LSL)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "totalBudget",
+                                "value": "",
+                                "maxlength": "15",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "Float",
+                                        "message": "Minimum budget is LSL 1,000"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter total budget amount",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "readonly": "",
+                                "label": "Benefit Model",
+                                "readonlyLabel": "",
+                                "id": "benefitModel",
+                                "options": [
+                                    {
+                                        "value": "FIXED_AMOUNT",
+                                        "label": "Fixed Amount Per Farmer"
+                                    },
+                                    {
+                                        "value": "PERCENTAGE",
+                                        "label": "Percentage of Costs"
+                                    },
+                                    {
+                                        "value": "OTHER",
+                                        "label": "Other (specify in notes)"
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "FIXED_AMOUNT",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "message": "Benefit model is required"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Fixed Benefit Amount (LSL)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "fixedBenefitAmount",
+                                "value": "",
+                                "maxlength": "15",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "Float",
+                                        "message": "Minimum benefit amount is LSL 100"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter fixed amount per farmer",
+                                "size": "",
+                                "controlField": "benefitModel",
+                                "controlValue": "FIXED_AMOUNT",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Subsidy Percentage (%)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "subsidyPercentage",
+                                "value": "",
+                                "maxlength": "3",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "Integer",
+                                        "message": "Percentage must be between 1 and 100"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter percentage (1-100)",
+                                "size": "",
+                                "controlField": "benefitModel",
+                                "controlValue": "PERCENTAGE",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Maximum Benefit Per Farmer (LSL)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "maxBenefitPerFarmer",
+                                "value": "",
+                                "maxlength": "15",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "Float",
+                                        "message": "Enter maximum benefit amount"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter maximum cap (optional)",
+                                "size": "",
+                                "controlField": "benefitModel",
+                                "controlValue": "PERCENTAGE",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Estimated Number of Beneficiaries",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "estimatedBeneficiaries",
+                                "value": "",
+                                "maxlength": "10",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "Integer",
+                                        "message": "Must be at least 1 beneficiary"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter estimated number",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Target & Location",
+                "id": "target_and_location",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section4Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>4. Target Beneficiaries & Geographic Coverage</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "readonly": "",
+                                "label": "Target Beneficiary Groups",
+                                "readonlyLabel": "",
+                                "id": "targetGroups",
+                                "options": [
+                                    {
+                                        "value": "SMALLHOLDER",
+                                        "label": "Smallholder Farmers"
+                                    },
+                                    {
+                                        "value": "COMMERCIAL",
+                                        "label": "Commercial Farmers"
+                                    },
+                                    {
+                                        "value": "WOMEN",
+                                        "label": "Women Farmers"
+                                    },
+                                    {
+                                        "value": "YOUTH",
+                                        "label": "Youth Farmers"
+                                    },
+                                    {
+                                        "value": "COOPERATIVE",
+                                        "label": "Cooperatives"
+                                    },
+                                    {
+                                        "value": "LIVESTOCK",
+                                        "label": "Livestock Farmers"
+                                    },
+                                    {
+                                        "value": "CROP",
+                                        "label": "Crop Farmers"
+                                    },
+                                    {
+                                        "value": "VULNERABLE",
+                                        "label": "Vulnerable Farmers"
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "message": "Select at least one target group"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "readonly": "",
+                                "label": "Target Districts",
+                                "readonlyLabel": "",
+                                "id": "target_districts",
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.plugin.enterprise.DatabaseWizardOptionsBinder",
+                                    "properties": {
+                                        "jdbcDatasource": "default",
+                                        "tableName": "app_fd_district",
+                                        "joins": [],
+                                        "valueColumn": "c_code",
+                                        "labelColumn": "c_name",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "addEmpty": "true",
+                                        "emptyLabel": "",
+                                        "filters": [],
+                                        "extraCondition": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "controlField": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Program Administration",
+                "id": "program_administration",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section7Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>5. Program Administration</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Program Officer",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "programOfficer",
+                                "value": "",
+                                "maxlength": "100",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "message": "Program officer name is required"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter officer name",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Contact Email",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "contactEmail",
+                                "value": "",
+                                "maxlength": "100",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "Email",
+                                        "message": "Please enter a valid email address"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "officer@agriculture.gov.ls",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Contact Phone",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "contactPhone",
+                                "value": "",
+                                "maxlength": "20",
+                                "requiredSanitize": "",
+                                "placeholder": "+266 5800 0001",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "readonly": "",
+                                "label": "Is Program Active?",
+                                "readonlyLabel": "",
+                                "id": "isActive",
+                                "options": [
+                                    {
+                                        "value": "YES",
+                                        "label": "Yes"
+                                    },
+                                    {
+                                        "value": "NO",
+                                        "label": "No"
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "YES",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "message": "Please specify if program is active"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "style": "",
+                                "label": "Additional Notes",
+                                "readonlyLabel": "",
+                                "id": "additionalNotes",
+                                "value": "",
+                                "cols": "60",
+                                "rows": "4",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "placeholder": "Any additional information or special instructions",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+  "testData": [{
+    "resourceType": "Person",
+    "id": "missing-fields-001",
+    "meta": {
+      "profile": ["https://govstack.global/Registration/StructureDefinition/Person"],
+      "lastUpdated": "2025-01-29T01:00:00Z"
+    },
+    "_comment": "Missing required fields: identifiers, name, gender, birthDate",
+    "relatedPerson": []
+  }]
+}

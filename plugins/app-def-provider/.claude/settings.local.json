@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(done)",
+      "Bash(mvn clean package:*)",
+      "Bash(jar -tf:*)",
+      "Bash(javap:*)",
+      "Bash(cat:*)",
+      "Bash(mysql -u root jwdb:*)",
+      "Bash(python3:*)",
+      "Bash(curl:*)",
+      "Bash(mvn:*)",
+      "Bash(jar -xf:*)",
+      "Read(//private/tmp/**)",
+      "Bash(git log:*)",
+      "Bash(xargs javap:*)",
+      "Bash(for class in org/joget/api/lib/*.class)",
+      "Bash(do javap -v \"$class\")",
+      "Read(//Users/aarelaponin/PycharmProjects/dev/sysadmin-scripts/**)",
+      "Bash(xargs ls:*)",
+      "Read(//Users/aarelaponin/PycharmProjects/dev/gam_utilities/**)",
+      "Read(//Users/aarelaponin/PycharmProjects/dev/joget_forms/**)",
+      "Read(//Users/aarelaponin/**)",
+      "Bash(paste:*)",
+      "Bash(./tomcat8.sh stop:*)",
+      "Bash(./tomcat8.sh start:*)",
+      "Bash(./tomcat.sh stop:*)",
+      "Bash(./tomcat.sh start:*)",
+      "Bash(lsof:*)",
+      "Bash(ps:*)",
+      "Bash(mysql:*)",
+      "Bash([ -f /Users/aarelaponin/joget-enterprise-linux-9.0.0/apache-tomcat-11.0.10/logs/localhost.2025-11-04.log ])"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

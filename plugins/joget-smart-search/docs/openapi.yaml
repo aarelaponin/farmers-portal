@@ -1,0 +1,324 @@
+components: 
+  schemas: 
+    ApiResponse: 
+      type: object
+      properties: 
+        date: 
+          format: date
+          type: string
+        code: 
+          format: int32
+          type: integer
+        message: 
+          type: string
+  securitySchemes: 
+    Authorization: 
+      in: header
+      name: Authorization
+      type: apiKey
+    "api-key": 
+      in: header
+      name: "api-key"
+      type: apiKey
+    "api-id": 
+      in: header
+      name: "api-id"
+      type: apiKey
+    token: 
+      in: header
+      name: token
+      type: apiKey
+servers: 
+  - url: "http\x3A//20.87.213.78\x3A8080/jw/api"
+openapi: "3.0.1"
+paths: 
+  "/fss/community-councils": 
+    get: 
+      summary: "Get\x20community\x20councils\x20list"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      description: "Get\x20list\x20of\x20community\x20councils\x20for\x20autocomplete\x2C\x20optionally\x20filtered\x20by\x20district"
+      operationId: communityCouncils
+      responses: 
+        200: 
+          description: "Community\x20councils\x20list\x20returned"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: query
+          name: district
+          description: "District\x20code\x20filter"
+          required: false
+      tags: 
+        - fss
+  "/fss/statistics": 
+    get: 
+      summary: "Get\x20search\x20statistics"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      description: "Returns\x20statistics\x20for\x20client-side\x20confidence\x20calculation\x20including\x20name\x20frequencies\x20and\x20effectiveness\x20factors"
+      operationId: statistics
+      responses: 
+        200: 
+          description: "Statistics\x20returned\x20successfully"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: query
+          name: refresh
+          description: "Force\x20refresh\x20statistics\x20\x28bypass\x20cache\x29"
+          required: false
+      tags: 
+        - fss
+  "/fss/search": 
+    post: 
+      summary: "Search\x20for\x20farmers"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      requestBody: 
+        description: "Search\x20criteria"
+        content: 
+          "application/json": 
+      description: "Search\x20for\x20farmers\x20using\x20various\x20criteria\x20including\x20name\x2C\x20ID\x2C\x20phone\x2C\x20district\x2C\x20and\x20village"
+      operationId: search
+      responses: 
+        200: 
+          description: "Search\x20results\x20returned\x20successfully"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20search\x20criteria"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      tags: 
+        - fss
+  "/fss/search/byPhone/\x7Bphone\x7D": 
+    get: 
+      summary: "Search\x20by\x20Phone"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      description: "Find\x20farmer\x20by\x20phone\x20number"
+      operationId: searchByPhone
+      responses: 
+        200: 
+          description: "Search\x20results\x20returned"
+          content: 
+            "application/json": 
+        404: 
+          description: "Farmer\x20not\x20found"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: path
+          name: phone
+          description: "Phone\x20number\x20to\x20search"
+          required: true
+      tags: 
+        - fss
+  "/fss/lookup/\x7Bid\x7D": 
+    get: 
+      summary: "Get\x20farmer\x20by\x20ID"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      description: "Retrieve\x20a\x20single\x20farmer\x20record\x20by\x20their\x20index\x20ID"
+      operationId: lookup
+      responses: 
+        200: 
+          description: "Farmer\x20found"
+          content: 
+            "application/json": 
+        404: 
+          description: "Farmer\x20not\x20found"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: path
+          name: id
+          description: "Farmer\x20index\x20ID"
+          required: true
+      tags: 
+        - fss
+  "/fss/villages": 
+    get: 
+      summary: "Get\x20villages\x20list"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      description: "Get\x20list\x20of\x20villages\x20for\x20autocomplete\x2C\x20optionally\x20filtered\x20by\x20district"
+      operationId: villages
+      responses: 
+        200: 
+          description: "Villages\x20list\x20returned"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: query
+          name: district
+          description: "District\x20code\x20filter"
+          required: false
+        - schema: 
+            type: string
+          in: query
+          name: q
+          description: "Search\x20query"
+          required: false
+      tags: 
+        - fss
+  "/fss/cooperatives": 
+    get: 
+      summary: "Get\x20cooperatives\x20list"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      description: "Get\x20list\x20of\x20cooperatives\x20for\x20autocomplete\x2C\x20optionally\x20filtered\x20by\x20district\x20and\x20search\x20query"
+      operationId: cooperatives
+      responses: 
+        200: 
+          description: "Cooperatives\x20list\x20returned"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: query
+          name: district
+          description: "District\x20code\x20filter"
+          required: false
+        - schema: 
+            type: string
+          in: query
+          name: q
+          description: "Search\x20query"
+          required: false
+      tags: 
+        - fss
+  "/fss/search/byNationalId/\x7BnationalId\x7D": 
+    get: 
+      summary: "Search\x20by\x20National\x20ID"
+      security: 
+        - "api-key": 
+          "api-id": 
+        - "api-key": 
+          "api-id": 
+          token: 
+        - Authorization: 
+          "api-key": 
+          "api-id": 
+      description: "Find\x20farmer\x20by\x20exact\x20national\x20ID\x20match"
+      operationId: searchByNationalId
+      responses: 
+        200: 
+          description: "Search\x20results\x20returned"
+          content: 
+            "application/json": 
+        404: 
+          description: "Farmer\x20not\x20found"
+          content: 
+            "application/json": 
+        500: 
+          description: "Internal\x20server\x20error"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: path
+          name: nationalId
+          description: "National\x20ID\x20to\x20search"
+          required: true
+      tags: 
+        - fss
+info: 
+  contact: 
+    email: "aare@fiscaladmin.com"
+  description: "Farmer\x20Smart\x20Search"
+  title: fss
+  version: "9.0.4"
+tags: 
+  - name: fss
+    description: "Farmer\x20Smart\x20Search"

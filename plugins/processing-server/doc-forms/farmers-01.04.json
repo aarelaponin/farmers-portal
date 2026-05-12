@@ -1,0 +1,172 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "farmerHousehold",
+        "name": "01.04 - Farmer Household Members",
+        "tableName": "farmer_household",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "description": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "create"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "id": "parent_id",
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "householdInstruction",
+                                "label": "",
+                                "value": "<div class='alert alert-info'><strong>Instructions:</strong> List all household members starting with the head of household. Enter surname first for each member.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.plugin.enterprise.FormGrid",
+                            "properties": {
+                                "showRowNumber": "true",
+                                "disabledDelete": "",
+                                "errorMessage": "Invalid number of household members",
+                                "deleteSubformData": "",
+                                "pageSize": "20",
+                                "label": "Household Members",
+                                "enableSorting": "",
+                                "deleteFiles": "",
+                                "readonly": "",
+                                "deleteGridData": "",
+                                "disabledAdd": "",
+                                "width": "100%",
+                                "abortRelatedRunningProcesses": "",
+                                "readonlyLabel": "",
+                                "height": "400",
+                                "id": "householdMembers",
+                                "formDefId": "householdMemberForm",
+                                "options": [
+                                    {
+                                        "value": "memberName",
+                                        "label": "Name (Surname First)",
+                                        "formatType": "text",
+                                        "format": "",
+                                        "width": "200"
+                                    },
+                                    {
+                                        "value": "sex",
+                                        "label": "Sex",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "80"
+                                    },
+                                    {
+                                        "value": "date_of_birth",
+                                        "label": "Date of Birth",
+                                        "formatType": "date",
+                                        "format": "dd/MM/yyyy",
+                                        "width": "120"
+                                    },
+                                    {
+                                        "value": "relationship",
+                                        "label": "Relationship to Head",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "150"
+                                    },
+                                    {
+                                        "value": "orphanhoodStatus",
+                                        "label": "Orphanhood Status",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "150"
+                                    },
+                                    {
+                                        "value": "participatesInAgriculture",
+                                        "label": "Participates in Agriculture",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "150"
+                                    },
+                                    {
+                                        "value": "disability",
+                                        "label": "Disability Status",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "150"
+                                    },
+                                    {
+                                        "value": "chronicallyIll",
+                                        "label": "Chronically Ill",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "100"
+                                    }
+                                ],
+                                "submit-label-normal": "",
+                                "submit-label-readonly": "",
+                                "deleteMessage": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "uniqueKey": "",
+                                "validateMinRow": "1",
+                                "validateMaxRow": "",
+                                "loadBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "householdMemberForm",
+                                        "foreignKey": "farmer_id"
+                                    }
+                                },
+                                "storeBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "householdMemberForm",
+                                        "foreignKey": "farmer_id"
+                                    }
+                                },
+                                "requestParams": []
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Demographic Characteristics of Household Members",
+                "id": "householdSection"
+            }
+        }
+    ]
+}

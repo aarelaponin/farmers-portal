@@ -1,0 +1,24 @@
+# Validation Rules for GovStack Registration Building Block
+# This file was generated automatically from business-rules.yaml
+# Generated at: Mon Oct 06 16:35:38 EEST 2025
+
+validation_rules:
+  conditional_validations:
+  - condition: cropProduction == 'yes'
+    required_grids:
+    - cropManagement
+    min_entries: 1
+    message: At least 1 crop entry is required when crop production is 'yes'
+  - condition: hasLivestock == 'yes'
+    required_grids:
+    - livestockDetails
+    message: Livestock details are required when hasLivestock is 'yes'
+  - condition: gainfulEmployment == 'yes'
+    required_fields:
+    - governmentEmployed
+    message: Government employment status is required when gainful employment is 'yes'
+  - condition: relativeSupport == 'yes'
+    required_fields:
+    - supportFrequency
+    - supportType
+    message: Support frequency and type are required when relative support is 'yes'

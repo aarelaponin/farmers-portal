@@ -1,0 +1,52 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spApplicationDeclaration",
+    "name": "Application Tab 4 — Declaration",
+    "tableName": "sp_application_decln",
+    "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "permission": {"className": "", "properties": {}},
+    "postProcessor": {
+      "className": "global.govstack.application.hook.ApplicationSeedingTool",
+      "properties": {}
+    },
+    "postProcessorRunOn": "both"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {"id": "main", "label": "Declaration"},
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "100%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "parent_id", "label": "Parent (application id)"}},
+            {"className": "org.joget.apps.form.lib.CustomHTML",
+             "properties": {
+               "id": "declarationText",
+               "label": "",
+               "value": "<div style='background:#fafafa;border-left:4px solid #185fa5;padding:10px 14px;border-radius:4px;color:#222;font-size:13px;line-height:1.5;'>I declare that the information I have provided in this application is true and complete to the best of my knowledge. I understand that providing false information may result in disqualification from the programme and prosecution under applicable law.</div>"}},
+            {"className": "org.joget.apps.form.lib.CheckBox",
+             "properties": {
+               "id": "declaration_accepted",
+               "label": "I accept the declaration",
+               "options": [{"value": "Y", "label": "Yes — I confirm the above"}],
+               "validator": {"className": "org.joget.apps.form.lib.DefaultValidator",
+                             "properties": {"mandatory": "true",
+                                            "regex": "Y",
+                                            "regexMessage": "You must accept the declaration to submit."}}}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "signature_name", "label": "Sign with your full name", "size": "60", "maxlength": "200",
+                            "validator": {"className": "org.joget.apps.form.lib.DefaultValidator",
+                                          "properties": {"mandatory": "true"}}}},
+            {"className": "org.joget.apps.form.lib.DatePicker",
+             "properties": {"id": "signature_date", "label": "Date of signature"}}
+          ]
+        }
+      ]
+    }
+  ]
+}

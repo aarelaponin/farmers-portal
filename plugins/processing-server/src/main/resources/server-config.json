@@ -1,0 +1,45 @@
+{
+  "formId": "farmerRegistrationForm",
+  "processDefinitionId": "formsForAgriEcosystem#latest#farmerApplicationProcess",
+  "roles": {
+    "adminUsername": "admin",
+    "farmerUsername": "admin",
+    "chiefReviewerUsername": "cat"
+  },
+  "activities": {
+    "submitActivityId": "submitFarmerApplication",
+    "reviewActivityId": "cheifReviewApplication"
+  },
+  "fields": [
+    {"name": "application_number", "type": "String", "mandatory": true},
+    {"name": "residence_proof", "type": "String"},
+    {"name": "national_id", "type": "String", "mandatory": true},
+    {"name": "createdByName", "type": "String"},
+    {"name": "gender", "type": "String", "mandatory": true},
+    {"name": "dob", "type": "String"},
+    {"name": "latitude", "type": "String"},
+    {"name": "primary_phone", "type": "String"},
+    {"name": "passport_photo", "type": "String"},
+    {"name": "village", "type": "String"},
+    {"name": "modifiedByName", "type": "String"},
+    {"name": "dateCreated", "type": "String"},
+    {"name": "secondary_phone", "type": "String"},
+    {"name": "modifiedBy", "type": "String"},
+    {"name": "id", "type": "String"},
+    {"name": "email", "type": "String"},
+    {"name": "document_type", "type": "String"},
+    {"name": "upload_date", "type": "String"},
+    {"name": "longitude", "type": "String"},
+    {"name": "elevation", "type": "String"},
+    {"name": "id_scan", "type": "String"},
+    {"name": "primary_language", "type": "String"},
+    {"name": "dateModified", "type": "String"},
+    {"name": "location_description", "type": "String"},
+    {"name": "marital_status", "type": "String"},
+    {"name": "full_name", "type": "String"},
+    {"name": "createdBy", "type": "String"},
+    {"name": "gps_accuracy", "type": "String"},
+    {"name": "district", "type": "String", "mandatory": true},
+    {"name": "farming_experience", "type": "String"}
+  ]
+}

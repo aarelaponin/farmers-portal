@@ -1,0 +1,57 @@
+{
+  "formId": "contact_form",
+  "formName": "Contact Form",
+  "tableName": "contact",
+  "targetAppId": "myApp",
+  "targetAppVersion": "1",
+  "createApiEndpoint": true,
+  "apiName": "Contact Form API",
+  "createCrud": true,
+  "datalistName": "Contact List",
+  "userviewName": "Contact Management",
+  "formDefinition": {
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+      "id": "contact_form",
+      "name": "Contact Form",
+      "tableName": "contact",
+      "loadBinder": {
+        "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+        "properties": {}
+      },
+      "storeBinder": {
+        "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+        "properties": {}
+      }
+    },
+    "elements": [
+      {
+        "className": "org.joget.apps.form.lib.TextField",
+        "properties": {
+          "id": "name",
+          "label": "Name",
+          "required": "true"
+        }
+      },
+      {
+        "className": "org.joget.apps.form.lib.TextField",
+        "properties": {
+          "id": "email",
+          "label": "Email",
+          "required": "true",
+          "validator": {
+            "className": "org.joget.apps.form.lib.EmailValidator"
+          }
+        }
+      },
+      {
+        "className": "org.joget.apps.form.lib.TextArea",
+        "properties": {
+          "id": "message",
+          "label": "Message",
+          "rows": "5"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,702 @@
+<!--
+    Rule Editor - Lightweight Self-Contained Version
+    
+    No external dependencies - works completely offline.
+    Features:
+    - Line numbers
+    - Error highlighting
+    - Syntax highlighting (basic)
+    - Messages panel
+    - Keyboard shortcuts
+    
+    Usage: Add as Custom HTML element in Joget form
+-->
+
+<style>
+/* =========================================================================
+   Rule Editor Styles - Self-contained
+   ========================================================================= */
+
+.jre-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Messages Panel */
+.jre-messages {
+    padding: 12px 16px;
+    min-height: 20px;
+    border-bottom: 1px solid #ddd;
+    background: #f8f9fa;
+    font-size: 14px;
+}
+
+.jre-messages.success {
+    background: #d4edda;
+    color: #155724;
+    border-bottom-color: #c3e6cb;
+}
+
+.jre-messages.error {
+    background: #f8d7da;
+    color: #721c24;
+    border-bottom-color: #f5c6cb;
+}
+
+.jre-messages.loading {
+    background: #fff3cd;
+    color: #856404;
+    border-bottom-color: #ffeeba;
+}
+
+.jre-message-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.jre-error-list {
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.jre-error-item {
+    padding: 4px 8px;
+    margin: 4px 0;
+    background: rgba(255,255,255,0.5);
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+}
+
+.jre-error-item:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+.jre-error-icon {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.jre-error-item.error .jre-error-icon { color: #dc3545; }
+.jre-error-item.warning .jre-error-icon { color: #ffc107; }
+
+.jre-error-line-num {
+    font-family: monospace;
+    background: rgba(0,0,0,0.1);
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+/* Toolbar */
+.jre-toolbar {
+    padding: 10px 16px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.jre-toolbar button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.jre-toolbar button:hover {
+    background: #e9e9e9;
+    border-color: #999;
+}
+
+.jre-toolbar button.primary {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.jre-toolbar button.primary:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+.jre-toolbar button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.jre-toolbar-spacer {
+    flex: 1;
+}
+
+.jre-toolbar-info {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Editor Container */
+.jre-editor-wrapper {
+    display: flex;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Line Numbers */
+.jre-line-numbers {
+    width: 50px;
+    min-width: 50px;
+    background: #f7f7f7;
+    border-right: 1px solid #ddd;
+    padding: 12px 0;
+    text-align: right;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #999;
+    user-select: none;
+    overflow: hidden;
+}
+
+.jre-line-number {
+    padding: 0 8px;
+    height: 21px;
+}
+
+.jre-line-number.error {
+    background: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.jre-line-number.warning {
+    background: rgba(255, 193, 7, 0.2);
+    color: #856404;
+}
+
+/* Text Area */
+.jre-editor-wrapper textarea {
+    flex: 1;
+    min-height: 400px;
+    padding: 12px;
+    border: none;
+    font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: auto;
+}
+
+.jre-editor-wrapper textarea:focus {
+    background: #fffef5;
+}
+
+/* Syntax Highlighted Overlay (optional, for future) */
+.jre-highlight-overlay {
+    display: none; /* Hidden for now */
+}
+
+/* Help Panel */
+.jre-help-panel {
+    display: none;
+    padding: 16px;
+    background: #f8f9fa;
+    border-top: 1px solid #ddd;
+    font-size: 13px;
+}
+
+.jre-help-panel.visible {
+    display: block;
+}
+
+.jre-help-panel h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.jre-help-panel code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.jre-help-columns {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.jre-help-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.jre-help-column ul {
+    margin: 4px 0;
+    padding-left: 20px;
+}
+
+.jre-help-column li {
+    margin: 2px 0;
+}
+</style>
+
+<!-- HTML Structure -->
+<div id="jre-container" class="jre-container">
+    <!-- Messages Panel -->
+    <div id="jre-messages" class="jre-messages">
+        <span class="jre-message-title">Rule Editor</span>
+        <div>Enter eligibility rules and click <strong>Validate</strong> to check syntax. Press <code>Ctrl+Enter</code> to validate.</div>
+    </div>
+    
+    <!-- Toolbar -->
+    <div class="jre-toolbar">
+        <button type="button" id="jre-validate-btn" class="primary">
+            ✓ Validate
+        </button>
+        <button type="button" id="jre-clear-btn">
+            Clear
+        </button>
+        <button type="button" id="jre-sample-btn">
+            Sample
+        </button>
+        <button type="button" id="jre-help-btn">
+            ? Help
+        </button>
+        <div class="jre-toolbar-spacer"></div>
+        <span id="jre-status" class="jre-toolbar-info"></span>
+    </div>
+    
+    <!-- Editor -->
+    <div class="jre-editor-wrapper">
+        <div id="jre-line-numbers" class="jre-line-numbers"></div>
+        <textarea id="jre-textarea" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+    </div>
+    
+    <!-- Help Panel -->
+    <div id="jre-help-panel" class="jre-help-panel">
+        <h4>Rules Script Quick Reference</h4>
+        <div class="jre-help-columns">
+            <div class="jre-help-column">
+                <strong>Structure:</strong>
+                <ul>
+                    <li><code>RULE "name"</code> - Start a rule</li>
+                    <li><code>TYPE:</code> INCLUSION | EXCLUSION | PRIORITY | BONUS</li>
+                    <li><code>MANDATORY:</code> YES | NO</li>
+                    <li><code>WHEN</code> condition</li>
+                    <li><code>FAIL MESSAGE:</code> "text"</li>
+                </ul>
+            </div>
+            <div class="jre-help-column">
+                <strong>Operators:</strong>
+                <ul>
+                    <li><code>=  !=  >  >=  <  <=</code></li>
+                    <li><code>BETWEEN x AND y</code></li>
+                    <li><code>IN ("a", "b", "c")</code></li>
+                    <li><code>CONTAINS  STARTS WITH  ENDS WITH</code></li>
+                    <li><code>IS EMPTY  IS NOT EMPTY</code></li>
+                </ul>
+            </div>
+            <div class="jre-help-column">
+                <strong>Logic:</strong>
+                <ul>
+                    <li><code>AND</code> - Both must be true</li>
+                    <li><code>OR</code> - Either can be true</li>
+                    <li><code>NOT</code> - Negate condition</li>
+                    <li><code>( )</code> - Group conditions</li>
+                    <li><code>#</code> - Comment line</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hidden field for form submission -->
+    <input type="hidden" id="eligibilityScript" name="eligibilityScript" value="">
+</div>
+
+<!-- JavaScript -->
+<script>
+(function() {
+    'use strict';
+    
+    // =========================================================================
+    // Configuration
+    // =========================================================================
+    
+    var contextPath = '';
+    try {
+        // Try Joget's FormUtil
+        if (typeof FormUtil !== 'undefined' && FormUtil.getContextPath) {
+            contextPath = FormUtil.getContextPath();
+        }
+    } catch(e) {}
+    
+    // Fallback
+    if (!contextPath) {
+        contextPath = window.location.pathname.split('/jw')[0] + '/jw';
+        if (contextPath === '/jw') contextPath = '';
+    }
+    
+    var API_BASE = contextPath + '/jw/api/erel/rules';
+    
+    // =========================================================================
+    // DOM Elements
+    // =========================================================================
+    
+    var $container = document.getElementById('jre-container');
+    var $messages = document.getElementById('jre-messages');
+    var $lineNumbers = document.getElementById('jre-line-numbers');
+    var $textarea = document.getElementById('jre-textarea');
+    var $hiddenField = document.getElementById('eligibilityScript');
+    var $validateBtn = document.getElementById('jre-validate-btn');
+    var $clearBtn = document.getElementById('jre-clear-btn');
+    var $sampleBtn = document.getElementById('jre-sample-btn');
+    var $helpBtn = document.getElementById('jre-help-btn');
+    var $helpPanel = document.getElementById('jre-help-panel');
+    var $status = document.getElementById('jre-status');
+    
+    // Track error lines
+    var errorLines = [];
+    var warningLines = [];
+    
+    // =========================================================================
+    // Line Numbers
+    // =========================================================================
+    
+    function updateLineNumbers() {
+        var lines = $textarea.value.split('\n');
+        var html = '';
+        
+        for (var i = 0; i < lines.length; i++) {
+            var lineNum = i + 1;
+            var className = 'jre-line-number';
+            
+            if (errorLines.indexOf(lineNum) !== -1) {
+                className += ' error';
+            } else if (warningLines.indexOf(lineNum) !== -1) {
+                className += ' warning';
+            }
+            
+            html += '<div class="' + className + '">' + lineNum + '</div>';
+        }
+        
+        $lineNumbers.innerHTML = html;
+        
+        // Update status
+        $status.textContent = lines.length + ' lines, ' + $textarea.value.length + ' chars';
+    }
+    
+    // =========================================================================
+    // Sync Scroll
+    // =========================================================================
+    
+    function syncScroll() {
+        $lineNumbers.scrollTop = $textarea.scrollTop;
+    }
+    
+    // =========================================================================
+    // Clear Markers
+    // =========================================================================
+    
+    function clearMarkers() {
+        errorLines = [];
+        warningLines = [];
+        updateLineNumbers();
+    }
+    
+    // =========================================================================
+    // Display Result
+    // =========================================================================
+    
+    function displayResult(response) {
+        $messages.classList.remove('loading');
+        clearMarkers();
+        
+        if (response.valid) {
+            $messages.classList.remove('error');
+            $messages.classList.add('success');
+            
+            var html = '<span class="jre-message-title">✓ Validation Successful</span>';
+            html += '<div>' + response.ruleCount + ' rule(s) parsed successfully</div>';
+            
+            if (response.rules && response.rules.length > 0) {
+                html += '<ul class="jre-error-list">';
+                response.rules.forEach(function(rule) {
+                    html += '<li class="jre-error-item" style="cursor:default">' +
+                        '<span class="jre-error-icon" style="color:#28a745">✓</span>' +
+                        '<strong>' + escapeHtml(rule.ruleName) + '</strong>' +
+                        ' <span style="color:#666">(' + rule.ruleType + ')</span>' +
+                        '</li>';
+                });
+                html += '</ul>';
+            }
+            
+            $messages.innerHTML = html;
+        } else {
+            $messages.classList.remove('success');
+            $messages.classList.add('error');
+            
+            var html = '<span class="jre-message-title">✕ Validation Failed</span>';
+            
+            if (response.errors && response.errors.length > 0) {
+                html += '<ul class="jre-error-list">';
+                response.errors.forEach(function(err) {
+                    html += '<li class="jre-error-item error" data-line="' + err.line + '">' +
+                        '<span class="jre-error-icon">✕</span>' +
+                        '<span class="jre-error-line-num">Line ' + err.line + '</span>' +
+                        '<span>' + escapeHtml(err.message) + '</span>' +
+                        '</li>';
+                    errorLines.push(err.line);
+                });
+                html += '</ul>';
+            }
+            
+            if (response.warnings && response.warnings.length > 0) {
+                html += '<div style="margin-top:8px;font-weight:600">Warnings:</div>';
+                html += '<ul class="jre-error-list">';
+                response.warnings.forEach(function(warn) {
+                    html += '<li class="jre-error-item warning" data-line="' + warn.line + '">' +
+                        '<span class="jre-error-icon">⚠</span>' +
+                        '<span class="jre-error-line-num">Line ' + warn.line + '</span>' +
+                        '<span>' + escapeHtml(warn.message) + '</span>' +
+                        '</li>';
+                    warningLines.push(warn.line);
+                });
+                html += '</ul>';
+            }
+            
+            $messages.innerHTML = html;
+            updateLineNumbers();
+            
+            // Click to jump to line
+            var errorItems = $messages.querySelectorAll('.jre-error-item[data-line]');
+            errorItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    var line = parseInt(this.getAttribute('data-line'));
+                    jumpToLine(line);
+                });
+            });
+        }
+    }
+    
+    // =========================================================================
+    // Jump to Line
+    // =========================================================================
+    
+    function jumpToLine(lineNumber) {
+        var lines = $textarea.value.split('\n');
+        var position = 0;
+        
+        for (var i = 0; i < lineNumber - 1 && i < lines.length; i++) {
+            position += lines[i].length + 1;
+        }
+        
+        $textarea.focus();
+        $textarea.setSelectionRange(position, position);
+        
+        // Scroll to line
+        var lineHeight = 21; // Approximate
+        $textarea.scrollTop = (lineNumber - 5) * lineHeight;
+        syncScroll();
+    }
+    
+    // =========================================================================
+    // Validate
+    // =========================================================================
+    
+    function validate() {
+        var script = $textarea.value;
+        
+        clearMarkers();
+        $messages.classList.remove('success', 'error');
+        $messages.classList.add('loading');
+        $messages.innerHTML = '<span class="jre-message-title">Validating...</span>';
+        $validateBtn.disabled = true;
+        
+        // Use jQuery if available (Joget includes it)
+        if (typeof jQuery !== 'undefined') {
+            jQuery.ajax({
+                url: API_BASE + '/validate',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ script: script }),
+                dataType: 'json',
+                success: function(response) {
+                    displayResult(response);
+                },
+                error: function(xhr, status, error) {
+                    $messages.classList.remove('loading');
+                    $messages.classList.add('error');
+                    $messages.innerHTML = '<span class="jre-message-title">Request Failed</span>' +
+                        '<div>' + escapeHtml(error || 'Could not connect to validation service') + '</div>';
+                },
+                complete: function() {
+                    $validateBtn.disabled = false;
+                }
+            });
+        } else {
+            // Fallback to fetch
+            fetch(API_BASE + '/validate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ script: script })
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                displayResult(data);
+                $validateBtn.disabled = false;
+            })
+            .catch(function(error) {
+                $messages.classList.remove('loading');
+                $messages.classList.add('error');
+                $messages.innerHTML = '<span class="jre-message-title">Request Failed</span>' +
+                    '<div>' + escapeHtml(error.message) + '</div>';
+                $validateBtn.disabled = false;
+            });
+        }
+    }
+    
+    // =========================================================================
+    // Sample Script
+    // =========================================================================
+    
+    var sampleScript = 
+'# Sample Rules Script Rules for Agricultural Subsidy Program\n\
+\n\
+RULE "Adult Farmer"\n\
+  TYPE: INCLUSION\n\
+  MANDATORY: YES\n\
+  ORDER: 10\n\
+\n\
+  WHEN age >= 18\n\
+\n\
+  FAIL MESSAGE: "Applicant must be 18 years or older"\n\
+\n\
+RULE "Has Agricultural Activity"\n\
+  TYPE: INCLUSION\n\
+  MANDATORY: YES\n\
+  ORDER: 20\n\
+\n\
+  WHEN hasCrops = true OR hasLivestock = true\n\
+\n\
+  FAIL MESSAGE: "Must be engaged in farming activities"\n\
+\n\
+RULE "Income Below Threshold"\n\
+  TYPE: INCLUSION\n\
+  MANDATORY: YES\n\
+  ORDER: 30\n\
+\n\
+  WHEN averageAnnualIncome < 50000\n\
+\n\
+  FAIL MESSAGE: "Annual income must be below LSL 50,000"\n';
+    
+    // =========================================================================
+    // Event Listeners
+    // =========================================================================
+    
+    // Textarea input
+    $textarea.addEventListener('input', function() {
+        $hiddenField.value = $textarea.value;
+        updateLineNumbers();
+    });
+    
+    // Textarea scroll
+    $textarea.addEventListener('scroll', syncScroll);
+    
+    // Keyboard shortcuts
+    $textarea.addEventListener('keydown', function(e) {
+        // Ctrl+Enter or Cmd+Enter to validate
+        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+            e.preventDefault();
+            validate();
+        }
+        
+        // Tab to insert spaces
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+            var value = this.value;
+            this.value = value.substring(0, start) + '  ' + value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 2;
+            updateLineNumbers();
+        }
+    });
+    
+    // Validate button
+    $validateBtn.addEventListener('click', validate);
+    
+    // Clear button
+    $clearBtn.addEventListener('click', function() {
+        if (confirm('Clear all content?')) {
+            $textarea.value = '';
+            $hiddenField.value = '';
+            clearMarkers();
+            updateLineNumbers();
+            $messages.classList.remove('success', 'error', 'loading');
+            $messages.innerHTML = '<span class="jre-message-title">Editor Cleared</span>' +
+                '<div>Enter eligibility rules and click <strong>Validate</strong>.</div>';
+        }
+    });
+    
+    // Sample button
+    $sampleBtn.addEventListener('click', function() {
+        var current = $textarea.value;
+        $textarea.value = current ? current + '\n\n' + sampleScript : sampleScript;
+        $hiddenField.value = $textarea.value;
+        clearMarkers();
+        updateLineNumbers();
+        $messages.classList.remove('success', 'error', 'loading');
+        $messages.innerHTML = '<span class="jre-message-title">Sample Inserted</span>' +
+            '<div>Click <strong>Validate</strong> to check the rules.</div>';
+    });
+    
+    // Help button
+    $helpBtn.addEventListener('click', function() {
+        $helpPanel.classList.toggle('visible');
+        this.textContent = $helpPanel.classList.contains('visible') ? '✕ Close' : '? Help';
+    });
+    
+    // =========================================================================
+    // Utility Functions
+    // =========================================================================
+    
+    function escapeHtml(str) {
+        if (!str) return '';
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    
+    // =========================================================================
+    // Initialize
+    // =========================================================================
+    
+    // Load existing value
+    var existingValue = $hiddenField.value;
+    if (existingValue) {
+        $textarea.value = existingValue;
+    }
+    
+    updateLineNumbers();
+    
+})();
+</script>

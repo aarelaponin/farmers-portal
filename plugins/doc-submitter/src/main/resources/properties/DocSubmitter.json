@@ -1,0 +1,144 @@
+[{
+    "title": "API Configuration",
+    "properties": [{
+        "name": "apiEndpoint",
+        "label": "GovStack API Endpoint",
+        "type": "textfield",
+        "value": "http://localhost:8080/jw/api/govstack/v2/farmers_registry/apply",
+        "description": "URL of the GovStack Processing Server API endpoint",
+        "required": "true"
+    }, {
+        "name": "apiId",
+        "label": "API ID",
+        "type": "textfield",
+        "value": "API-001",
+        "description": "API authentication ID",
+        "required": "true"
+    }, {
+        "name": "apiKey",
+        "label": "API Key",
+        "type": "textfield",
+        "value": "",
+        "description": "API authentication key (leave empty if not required)"
+    }]
+}, {
+    "title": "Data Extraction Settings",
+    "properties": [{
+        "name": "extractionMode",
+        "label": "Data Extraction Mode",
+        "type": "selectbox",
+        "value": "workflow",
+        "options": [{
+            "value": "workflow",
+            "label": "From Workflow Process ID"
+        }, {
+            "value": "specific",
+            "label": "Specific Farmer ID"
+        }],
+        "description": "How to determine which farmer record to process"
+    }, {
+        "name": "specificFarmerId",
+        "label": "Specific Farmer ID",
+        "type": "textfield",
+        "value": "",
+        "description": "Farmer ID to process (only used if extraction mode is 'specific')"
+    }, {
+        "name": "workflowVariable",
+        "label": "Workflow Variable Name",
+        "type": "textfield",
+        "value": "farmerId",
+        "description": "Name of workflow variable containing farmer ID"
+    }]
+}, {
+    "title": "Processing Options",
+    "properties": [{
+        "name": "validateBeforeSending",
+        "label": "Validate Before Sending",
+        "type": "checkbox",
+        "value": "true",
+        "options": [{
+            "value": "true",
+            "label": ""
+        }],
+        "description": "Validate data completeness before sending to API"
+    }, {
+        "name": "updateWorkflowStatus",
+        "label": "Update Workflow Status",
+        "type": "checkbox",
+        "value": "true",
+        "options": [{
+            "value": "true",
+            "label": ""
+        }],
+        "description": "Update workflow variables with submission result"
+    }, {
+        "name": "retryOnFailure",
+        "label": "Retry on Failure",
+        "type": "checkbox",
+        "value": "true",
+        "options": [{
+            "value": "true",
+            "label": ""
+        }],
+        "description": "Retry API call if it fails"
+    }, {
+        "name": "maxRetries",
+        "label": "Maximum Retries",
+        "type": "textfield",
+        "value": "3",
+        "description": "Maximum number of retry attempts",
+        "regex_validation": "^[0-9]+$",
+        "validation_message": "Please enter a valid number"
+    }]
+}, {
+    "title": "Timeout Settings",
+    "properties": [{
+        "name": "connectionTimeout",
+        "label": "Connection Timeout (seconds)",
+        "type": "textfield",
+        "value": "30",
+        "description": "Maximum time to establish connection",
+        "regex_validation": "^[0-9]+$",
+        "validation_message": "Please enter a valid number of seconds"
+    }, {
+        "name": "readTimeout",
+        "label": "Read Timeout (seconds)",
+        "type": "textfield",
+        "value": "60",
+        "description": "Maximum time to wait for response",
+        "regex_validation": "^[0-9]+$",
+        "validation_message": "Please enter a valid number of seconds"
+    }]
+}, {
+    "title": "Logging",
+    "properties": [{
+        "name": "logLevel",
+        "label": "Logging Level",
+        "type": "selectbox",
+        "value": "INFO",
+        "options": [{
+            "value": "DEBUG",
+            "label": "Debug - All details"
+        }, {
+            "value": "INFO",
+            "label": "Info - Important events"
+        }, {
+            "value": "WARN",
+            "label": "Warning - Issues only"
+        }, {
+            "value": "ERROR",
+            "label": "Error - Errors only"
+        }],
+        "description": "Level of detail for logging"
+    }, {
+        "name": "logJsonPayload",
+        "label": "Log JSON Payload",
+        "type": "checkbox",
+        "value": "false",
+        "options": [{
+            "value": "true",
+            "label": ""
+        }],
+        "description": "Log the full JSON payload being sent (may contain sensitive data)"
+    }]
+}]

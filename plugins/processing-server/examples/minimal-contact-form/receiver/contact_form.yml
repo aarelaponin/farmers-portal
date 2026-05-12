@@ -1,0 +1,61 @@
+# GovStack Contact Form Service - Receiver Configuration
+# Purpose: Simple contact form example demonstrating minimal service setup
+# Complexity: Simple (1 child form, no grids)
+# Version: 1.0.0
+# Last Updated: 2025-10-29
+
+service:
+  id: contact_form
+  name: "Contact Form Service"
+  version: "1.0"
+  govstackVersion: "1.0"
+  metadataVersion: "1.0.0"
+  lastUpdated: "2025-10-29"
+  description: "Minimal example service for contact information collection"
+
+  serviceConfig:
+    # Parent form holding reference to contact data
+    parentFormId: "contactRegistrationForm"
+
+    # Single reference field linking to contact info
+    parentReferenceFields:
+      - "contact_data"
+
+    # Single section mapping
+    sectionToFormMap:
+      contactInfo: "contactForm"
+
+    # No grids in this simple example
+    gridMappings: {}
+
+    defaults:
+      gridParentField: "parent_id"
+      gridParentColumn: "c_parent_id"
+
+# Field Mappings
+formMappings:
+  # Single section with basic contact fields
+  contactInfo:
+    type: form
+    formId: contactForm
+    description: "Maps contact information from GovStack JSON to Joget form"
+    fields:
+      - joget: full_name
+        govstack: name.text
+        jsonPath: $.name.text
+        description: "Contact's full name"
+
+      - joget: email
+        govstack: extension.email
+        jsonPath: $.extension.email
+        description: "Contact's email address"
+
+      - joget: phone
+        govstack: extension.phone
+        jsonPath: $.extension.phone
+        description: "Contact's phone number (optional)"
+
+      - joget: message
+        govstack: extension.message
+        jsonPath: $.extension.message
+        description: "Contact message or inquiry"

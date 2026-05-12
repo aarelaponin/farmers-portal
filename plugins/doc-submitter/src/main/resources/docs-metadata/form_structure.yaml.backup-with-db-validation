@@ -1,0 +1,3683 @@
+metadata:
+  total_forms: 11
+  forms_directory: forms
+  entry_points:
+  - farmerRegistrationForm
+  parent_forms:
+  - farmerRegistrationForm
+  grid_forms:
+  - householdMemberForm
+  - cropManagementForm
+  - livestockDetailsForm
+form_hierarchy:
+  farmerRegistrationForm:
+  - farmerAgriculture
+  - farmerBasicInfo
+  - farmerCropsLivestock
+  - farmerDeclaration
+  - farmerHousehold
+  - farmerIncomePrograms
+  - farmerLocation
+  farmerHousehold:
+  - householdMemberForm
+  farmerCropsLivestock:
+  - cropManagementForm
+  - livestockDetailsForm
+forms:
+  cropManagementForm:
+    form_name: 01.05-1 - Crop Management Form
+    table_name: crop_management
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerCropsLivestock
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 7
+      total_grids: 0
+      total_sections: 1
+      total_tabs: 0
+    sections:
+    - section_id: section1
+      label: ''
+      depth: 1
+      fields:
+      - field_id: farmer_id
+        label: ''
+        type: hidden
+        column: c_farmer_id
+        required: false
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: cropType
+        label: Crop Type
+        type: select
+        column: c_cropType
+        required: true
+        lookup_form: crops
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: areaCultivated
+        label: Area Cultivated
+        type: text
+        column: c_areaCultivated
+        required: true
+        transform_hint: numeric
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: areaUnit
+        label: Area Unit
+        type: select
+        column: c_areaUnit
+        required: true
+        lookup_form: areaUnit
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: bagsHarvested
+        label: 50kg Bags Harvested
+        type: text
+        column: c_bagsHarvested
+        required: true
+        transform_hint: numeric
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: fertilizerApplied
+        label: Did you apply fertilizer?
+        type: select
+        column: c_fertilizerApplied
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: pesticidesApplied
+        label: Did you apply pesticides/herbicides?
+        type: select
+        column: c_pesticidesApplied
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: farmer_id
+      label: ''
+      type: hidden
+      column: c_farmer_id
+      required: false
+      depth: 2
+      table: crop_management
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: cropType
+      label: Crop Type
+      type: select
+      column: c_cropType
+      required: true
+      depth: 2
+      lookup_form: crops
+      table: crop_management
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: areaCultivated
+      label: Area Cultivated
+      type: text
+      column: c_areaCultivated
+      required: true
+      depth: 2
+      transform_hint: numeric
+      table: crop_management
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: areaUnit
+      label: Area Unit
+      type: select
+      column: c_areaUnit
+      required: true
+      depth: 2
+      lookup_form: areaUnit
+      table: crop_management
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: bagsHarvested
+      label: 50kg Bags Harvested
+      type: text
+      column: c_bagsHarvested
+      required: true
+      depth: 2
+      transform_hint: numeric
+      table: crop_management
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: fertilizerApplied
+      label: Did you apply fertilizer?
+      type: select
+      column: c_fertilizerApplied
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: crop_management
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: pesticidesApplied
+      label: Did you apply pesticides/herbicides?
+      type: select
+      column: c_pesticidesApplied
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: crop_management
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerAgriculture:
+    form_name: 01.03 - Farmer Agricultural Activities
+    table_name: farmer_registry
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerRegistrationForm
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 14
+      total_grids: 0
+      total_sections: 3
+      total_tabs: 0
+    sections:
+    - section_id: agriculturalActivitiesSection
+      label: Agricultural Activities and Skills
+      depth: 1
+      fields:
+      - field_id: agriculture_key
+        label: ''
+        type: hidden
+        column: c_agriculture_key
+        required: false
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: cropProduction
+        label: Was the household engaged in crop production last agricultural season?
+        type: radio
+        column: c_cropProduction
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: livestockProduction
+        label: Was the household engaged in livestock production last agricultural season?
+        type: radio
+        column: c_livestockProduction
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: canReadWrite
+        label: Can the head read and write?
+        type: radio
+        column: c_canReadWrite
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: parent_id
+        label: ''
+        type: hidden
+        column: c_parent_id
+        required: false
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: mainSourceFarmLabour
+        label: What is your main source of farm labour?
+        type: select
+        column: c_mainSourceFarmLabour
+        required: true
+        lookup_form: farmLabourSource
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: mainSourceLivelihood
+        label: What is your main source of livelihood?
+        type: select
+        column: c_mainSourceLivelihood
+        required: true
+        lookup_form: livelihoodSource
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: agriculturalManagementSkills
+        label: What is the level of agricultural management skills?
+        type: select
+        column: c_agriculturalManagementSkills
+        required: true
+        lookup_form: educationLevel
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: mainSourceAgriculturalInfo
+        label: What is your main source of agricultural information?
+        type: select
+        column: c_mainSourceAgriculturalInfo
+        required: true
+        lookup_form: infoSource
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: conservationSection
+      label: Conservation Agriculture
+      depth: 1
+      fields:
+      - field_id: conservationPractices
+        label: Agriculture Conservation Practices
+        type: select
+        column: c_conservationPractices
+        required: false
+        lookup_form: conservationPractice
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: conservationPracticesOther
+        label: Other Conservation Practices (Specify)
+        type: text
+        column: c_conservationPracticesOther
+        required: false
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: hazardsSection
+      label: Hazards and Shocks Experienced
+      depth: 1
+      fields:
+      - field_id: shocks_hazards
+        label: Shocks/hazards
+        type: select
+        column: c_shocks_hazards
+        required: false
+        lookup_form: hazard
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: otherHazards
+        label: Other Hazards (Specify)
+        type: text
+        column: c_otherHazards
+        required: false
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: copingMechanisms
+        label: What did the household do to cope with any of these shocks/hazards?
+        type: textarea
+        column: c_copingMechanisms
+        required: false
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: agriculture_key
+      label: ''
+      type: hidden
+      column: c_agriculture_key
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: cropProduction
+      label: Was the household engaged in crop production last agricultural season?
+      type: radio
+      column: c_cropProduction
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: livestockProduction
+      label: Was the household engaged in livestock production last agricultural season?
+      type: radio
+      column: c_livestockProduction
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: canReadWrite
+      label: Can the head read and write?
+      type: radio
+      column: c_canReadWrite
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: parent_id
+      label: ''
+      type: hidden
+      column: c_parent_id
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: mainSourceFarmLabour
+      label: What is your main source of farm labour?
+      type: select
+      column: c_mainSourceFarmLabour
+      required: true
+      depth: 2
+      lookup_form: farmLabourSource
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: mainSourceLivelihood
+      label: What is your main source of livelihood?
+      type: select
+      column: c_mainSourceLivelihood
+      required: true
+      depth: 2
+      lookup_form: livelihoodSource
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: agriculturalManagementSkills
+      label: What is the level of agricultural management skills?
+      type: select
+      column: c_agriculturalManagementSkills
+      required: true
+      depth: 2
+      lookup_form: educationLevel
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: mainSourceAgriculturalInfo
+      label: What is your main source of agricultural information?
+      type: select
+      column: c_mainSourceAgriculturalInfo
+      required: true
+      depth: 2
+      lookup_form: infoSource
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: conservationPractices
+      label: Agriculture Conservation Practices
+      type: select
+      column: c_conservationPractices
+      required: false
+      depth: 2
+      lookup_form: conservationPractice
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: conservationPracticesOther
+      label: Other Conservation Practices (Specify)
+      type: text
+      column: c_conservationPracticesOther
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: shocks_hazards
+      label: Shocks/hazards
+      type: select
+      column: c_shocks_hazards
+      required: false
+      depth: 2
+      lookup_form: hazard
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: otherHazards
+      label: Other Hazards (Specify)
+      type: text
+      column: c_otherHazards
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: copingMechanisms
+      label: What did the household do to cope with any of these shocks/hazards?
+      type: textarea
+      column: c_copingMechanisms
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerBasicInfo:
+    form_name: 01.01 - Farmer Basic Information
+    table_name: farmer_basic_data
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerRegistrationForm
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 13
+      total_grids: 0
+      total_sections: 3
+      total_tabs: 0
+    sections:
+    - section_id: personal_information
+      label: Personal Information
+      depth: 1
+      fields:
+      - field_id: national_id
+        label: National ID
+        type: text
+        column: c_national_id
+        required: true
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: first_name
+        label: First Name
+        type: text
+        column: c_first_name
+        required: true
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: last_name
+        label: Last Name
+        type: text
+        column: c_last_name
+        required: true
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: gender
+        label: Gender
+        type: radio
+        column: c_gender
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: date_of_birth
+        label: Date of Birth
+        type: date
+        column: c_date_of_birth
+        required: false
+        transform_hint: date_ISO8601
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''date'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: marital_status
+        label: Marital Status
+        type: select
+        column: c_marital_status
+        required: false
+        lookup_form: maritalStatus
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: section2
+      label: Section
+      depth: 1
+      fields:
+      - field_id: preferred_language
+        label: Preferred Language
+        type: select
+        column: c_preferred_language
+        required: false
+        lookup_form: language
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: mobile_number
+        label: Mobile Number
+        type: text
+        column: c_mobile_number
+        required: false
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: email_address
+        label: Email Address
+        type: text
+        column: c_email_address
+        required: false
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: extension_officer_name
+        label: Extension Officer Name
+        type: text
+        column: c_extension_officer_name
+        required: false
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: member_of_cooperative
+        label: Cooperative member?
+        type: radio
+        column: c_member_of_cooperative
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: cooperative_name
+        label: Cooperative Name
+        type: text
+        column: c_cooperative_name
+        required: false
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: section3
+      label: Section
+      depth: 1
+      fields:
+      - field_id: parent_id
+        label: ''
+        type: hidden
+        column: c_parent_id
+        required: false
+        table: farmer_basic_data
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: national_id
+      label: National ID
+      type: text
+      column: c_national_id
+      required: true
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: first_name
+      label: First Name
+      type: text
+      column: c_first_name
+      required: true
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: last_name
+      label: Last Name
+      type: text
+      column: c_last_name
+      required: true
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: gender
+      label: Gender
+      type: radio
+      column: c_gender
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: date_of_birth
+      label: Date of Birth
+      type: date
+      column: c_date_of_birth
+      required: false
+      depth: 2
+      transform_hint: date_ISO8601
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''date'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: marital_status
+      label: Marital Status
+      type: select
+      column: c_marital_status
+      required: false
+      depth: 2
+      lookup_form: maritalStatus
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: preferred_language
+      label: Preferred Language
+      type: select
+      column: c_preferred_language
+      required: false
+      depth: 2
+      lookup_form: language
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: mobile_number
+      label: Mobile Number
+      type: text
+      column: c_mobile_number
+      required: false
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: email_address
+      label: Email Address
+      type: text
+      column: c_email_address
+      required: false
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: extension_officer_name
+      label: Extension Officer Name
+      type: text
+      column: c_extension_officer_name
+      required: false
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: member_of_cooperative
+      label: Cooperative member?
+      type: radio
+      column: c_member_of_cooperative
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: cooperative_name
+      label: Cooperative Name
+      type: text
+      column: c_cooperative_name
+      required: false
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: parent_id
+      label: ''
+      type: hidden
+      column: c_parent_id
+      required: false
+      depth: 2
+      table: farmer_basic_data
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerCropsLivestock:
+    form_name: 01.05 - Farmer Crops and Livestock
+    table_name: farmer_crop_livestck
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerRegistrationForm
+    parent_of:
+    - cropManagementForm
+    - livestockDetailsForm
+    max_nesting_depth: 2
+    referenced_forms:
+    - cropManagementForm
+    - livestockDetailsForm
+    statistics:
+      total_fields: 4
+      total_grids: 2
+      total_sections: 2
+      total_tabs: 0
+    sections:
+    - section_id: cropSection
+      label: Crop Production Details
+      depth: 1
+      fields:
+      - field_id: parent_id
+        label: ''
+        type: hidden
+        column: c_parent_id
+        required: false
+        table: farmer_crop_livestck
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: crops_livestock_key
+        label: ''
+        type: hidden
+        column: c_crops_livestock_key
+        required: false
+        table: farmer_crop_livestck
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: cropInstruction
+        label: ''
+        type: html
+        column: c_cropInstruction
+        required: false
+        table: farmer_crop_livestck
+        db_validated: false
+        db_table_exists: true
+        db_column_exists: false
+        db_error: Column 'c_cropInstruction' not found in table 'farmer_crop_livestck'
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      grids:
+      - grid_id: cropManagement
+        label: Crop Management
+        sub_form_id: cropManagementForm
+        foreign_key: farmer_id
+        parent_form_id: farmerCropsLivestock
+        parent_section_id: cropSection
+    - section_id: livestockSection
+      label: Livestock Information
+      depth: 1
+      fields:
+      - field_id: hasLivestock
+        label: Do you have livestock?
+        type: radio
+        column: c_hasLivestock
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: farmer_crop_livestck
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      grids:
+      - grid_id: livestockDetails
+        label: Livestock Details
+        sub_form_id: livestockDetailsForm
+        foreign_key: farmer_id
+        parent_form_id: farmerCropsLivestock
+        parent_section_id: livestockSection
+        control_field: hasLivestock
+        control_value: 'yes'
+    all_fields:
+    - field_id: parent_id
+      label: ''
+      type: hidden
+      column: c_parent_id
+      required: false
+      depth: 2
+      table: farmer_crop_livestck
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: crops_livestock_key
+      label: ''
+      type: hidden
+      column: c_crops_livestock_key
+      required: false
+      depth: 2
+      table: farmer_crop_livestck
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: cropInstruction
+      label: ''
+      type: html
+      column: c_cropInstruction
+      required: false
+      depth: 2
+      table: farmer_crop_livestck
+      db_validated: false
+      db_table_exists: true
+      db_column_exists: false
+      db_error: Column 'c_cropInstruction' not found in table 'farmer_crop_livestck'
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: hasLivestock
+      label: Do you have livestock?
+      type: radio
+      column: c_hasLivestock
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_crop_livestck
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    grids:
+    - grid_id: cropManagement
+      label: Crop Management
+      sub_form_id: cropManagementForm
+      foreign_key: farmer_id
+      parent_form_id: farmerCropsLivestock
+      parent_field_id: cropManagement
+      parent_section_id: cropSection
+      min_rows: null
+      max_rows: 5
+      depth: 2
+      columns:
+      - label: Crop Type
+        value: cropType
+      - label: Area Cultivated
+        value: areaCultivated
+      - label: Unit
+        value: areaUnit
+      - label: 50kg Bags Harvested
+        value: bagsHarvested
+      - label: Fertilizer Applied
+        value: fertilizerApplied
+      - label: Pesticides Applied
+        value: pesticidesApplied
+      sub_form_fields:
+      - field_id: farmer_id
+        label: ''
+        type: hidden
+        column: c_farmer_id
+        required: false
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: cropType
+        label: Crop Type
+        type: select
+        column: c_cropType
+        required: true
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: areaCultivated
+        label: Area Cultivated
+        type: text
+        column: c_areaCultivated
+        required: true
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: areaUnit
+        label: Area Unit
+        type: select
+        column: c_areaUnit
+        required: true
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: bagsHarvested
+        label: 50kg Bags Harvested
+        type: text
+        column: c_bagsHarvested
+        required: true
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: fertilizerApplied
+        label: Did you apply fertilizer?
+        type: select
+        column: c_fertilizerApplied
+        required: true
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: pesticidesApplied
+        label: Did you apply pesticides/herbicides?
+        type: select
+        column: c_pesticidesApplied
+        required: true
+        table: crop_management
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - grid_id: livestockDetails
+      label: Livestock Details
+      sub_form_id: livestockDetailsForm
+      foreign_key: farmer_id
+      parent_form_id: farmerCropsLivestock
+      parent_field_id: livestockDetails
+      parent_section_id: livestockSection
+      min_rows: null
+      max_rows: null
+      depth: 2
+      conditional_display:
+        control_field: hasLivestock
+        required_value: 'yes'
+      columns:
+      - label: Livestock Type
+        value: livestockType
+      - label: Number (Male)
+        value: numberOfMale
+      - label: Number (Female)
+        value: numberOfFemale
+      sub_form_fields:
+      - field_id: farmer_id
+        label: ''
+        type: hidden
+        column: c_farmer_id
+        required: false
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: livestockType
+        label: Livestock Type
+        type: select
+        column: c_livestockType
+        required: true
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: numberOfMale
+        label: Number (Male)
+        type: text
+        column: c_numberOfMale
+        required: false
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: numberOfFemale
+        label: Number (Female)
+        type: text
+        column: c_numberOfFemale
+        required: false
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerDeclaration:
+    form_name: 01.07 - Farmer Declaration
+    table_name: farmer_declaration
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerRegistrationForm
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 13
+      total_grids: 0
+      total_sections: 3
+      total_tabs: 0
+    sections:
+    - section_id: declarationSection
+      label: Declaration
+      depth: 1
+      fields:
+      - field_id: parent_id
+        label: ''
+        type: hidden
+        column: c_parent_id
+        required: false
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: declaration_key
+        label: ''
+        type: hidden
+        column: c_declaration_key
+        required: false
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: declarationHeader
+        label: ''
+        type: html
+        column: c_declarationHeader
+        required: false
+        table: farmer_declaration
+        db_validated: false
+        db_table_exists: true
+        db_column_exists: false
+        db_error: Column 'c_declarationHeader' not found in table 'farmer_declaration'
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: declarationText
+        label: ''
+        type: html
+        column: c_declarationText
+        required: false
+        table: farmer_declaration
+        db_validated: false
+        db_table_exists: true
+        db_column_exists: false
+        db_error: Column 'c_declarationText' not found in table 'farmer_declaration'
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: declarationConsent
+        label: ''
+        type: checkbox
+        column: c_declarationConsent
+        required: true
+        options_count: 4
+        lookup_form: null
+        transform_hint: multiCheckbox
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''checkbox'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: signatureSection
+      label: Signature
+      depth: 1
+      fields:
+      - field_id: declarationFullName
+        label: Full Name (as per National ID)
+        type: text
+        column: c_declarationFullName
+        required: true
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: field13
+        label: Date Picker
+        type: date
+        column: c_field13
+        required: true
+        transform_hint: date_ISO8601
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''date'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: field12
+        label: Signature
+        type: signature
+        column: c_field12
+        required: false
+        transform_hint: base64
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: officialSection
+      label: Official Use Only
+      depth: 1
+      fields:
+      - field_id: registrationInfo
+        label: ''
+        type: html
+        column: c_registrationInfo
+        required: false
+        table: farmer_declaration
+        db_validated: false
+        db_table_exists: true
+        db_column_exists: false
+        db_error: Column 'c_registrationInfo' not found in table 'farmer_declaration'
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: registrationStation
+        label: Registration Station
+        type: text
+        column: c_registrationStation
+        required: false
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: beneficiaryCode
+        label: Beneficiary Code
+        type: id_generator
+        column: c_beneficiaryCode
+        required: false
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''id_generator'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: registrationChannel
+        label: Registration Channel
+        type: select
+        column: c_registrationChannel
+        required: false
+        lookup_form: registrationChannel
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: registrationStatus
+        label: ''
+        type: hidden
+        column: c_registrationStatus
+        required: false
+        table: farmer_declaration
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: parent_id
+      label: ''
+      type: hidden
+      column: c_parent_id
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: declaration_key
+      label: ''
+      type: hidden
+      column: c_declaration_key
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: declarationHeader
+      label: ''
+      type: html
+      column: c_declarationHeader
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: false
+      db_table_exists: true
+      db_column_exists: false
+      db_error: Column 'c_declarationHeader' not found in table 'farmer_declaration'
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: declarationText
+      label: ''
+      type: html
+      column: c_declarationText
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: false
+      db_table_exists: true
+      db_column_exists: false
+      db_error: Column 'c_declarationText' not found in table 'farmer_declaration'
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: declarationConsent
+      label: ''
+      type: checkbox
+      column: c_declarationConsent
+      required: true
+      depth: 2
+      options_count: 4
+      lookup_form: null
+      transform_hint: multiCheckbox
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''checkbox'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: declarationFullName
+      label: Full Name (as per National ID)
+      type: text
+      column: c_declarationFullName
+      required: true
+      depth: 2
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: field13
+      label: Date Picker
+      type: date
+      column: c_field13
+      required: true
+      depth: 2
+      transform_hint: date_ISO8601
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''date'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: field12
+      label: Signature
+      type: signature
+      column: c_field12
+      required: false
+      depth: 2
+      transform_hint: base64
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: registrationInfo
+      label: ''
+      type: html
+      column: c_registrationInfo
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: false
+      db_table_exists: true
+      db_column_exists: false
+      db_error: Column 'c_registrationInfo' not found in table 'farmer_declaration'
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: registrationStation
+      label: Registration Station
+      type: text
+      column: c_registrationStation
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: beneficiaryCode
+      label: Beneficiary Code
+      type: id_generator
+      column: c_beneficiaryCode
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''id_generator'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: registrationChannel
+      label: Registration Channel
+      type: select
+      column: c_registrationChannel
+      required: false
+      depth: 2
+      lookup_form: registrationChannel
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: registrationStatus
+      label: ''
+      type: hidden
+      column: c_registrationStatus
+      required: false
+      depth: 2
+      table: farmer_declaration
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerHousehold:
+    form_name: 01.04 - Farmer Household Members
+    table_name: farmer_registry
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerRegistrationForm
+    parent_of:
+    - householdMemberForm
+    max_nesting_depth: 2
+    referenced_forms:
+    - householdMemberForm
+    statistics:
+      total_fields: 3
+      total_grids: 1
+      total_sections: 1
+      total_tabs: 0
+    sections:
+    - section_id: householdSection
+      label: Demographic Characteristics of Household Members
+      depth: 1
+      fields:
+      - field_id: household_key
+        label: ''
+        type: hidden
+        column: c_household_key
+        required: false
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: parent_id
+        label: ''
+        type: hidden
+        column: c_parent_id
+        required: false
+        table: farmer_registry
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: householdInstruction
+        label: ''
+        type: html
+        column: c_householdInstruction
+        required: false
+        table: farmer_registry
+        db_validated: false
+        db_table_exists: true
+        db_column_exists: false
+        db_error: Column 'c_householdInstruction' not found in table 'farmer_registry'
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      grids:
+      - grid_id: householdMembers
+        label: Household Members
+        sub_form_id: householdMemberForm
+        foreign_key: farmer_id
+        parent_form_id: farmerHousehold
+        parent_section_id: householdSection
+    all_fields:
+    - field_id: household_key
+      label: ''
+      type: hidden
+      column: c_household_key
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: parent_id
+      label: ''
+      type: hidden
+      column: c_parent_id
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: householdInstruction
+      label: ''
+      type: html
+      column: c_householdInstruction
+      required: false
+      depth: 2
+      table: farmer_registry
+      db_validated: false
+      db_table_exists: true
+      db_column_exists: false
+      db_error: Column 'c_householdInstruction' not found in table 'farmer_registry'
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    grids:
+    - grid_id: householdMembers
+      label: Household Members
+      sub_form_id: householdMemberForm
+      foreign_key: farmer_id
+      parent_form_id: farmerHousehold
+      parent_field_id: householdMembers
+      parent_section_id: householdSection
+      min_rows: 1
+      max_rows: null
+      depth: 2
+      columns:
+      - label: Name (Surname First)
+        value: memberName
+      - label: Sex
+        value: sex
+      - label: Date of Birth
+        value: date_of_birth
+      - label: Relationship to Head
+        value: relationship
+      - label: Orphanhood Status
+        value: orphanhoodStatus
+      - label: Participates in Agriculture
+        value: participatesInAgriculture
+      - label: Disability Status
+        value: disability
+      - label: Chronically Ill
+        value: chronicallyIll
+      sub_form_fields:
+      - field_id: farmer_id
+        label: ''
+        type: hidden
+        column: c_farmer_id
+        required: false
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: memberName
+        label: Name (Surname First)
+        type: text
+        column: c_memberName
+        required: true
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: sex
+        label: Sex
+        type: select
+        column: c_sex
+        required: true
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: date_of_birth
+        label: Date of Birth
+        type: date
+        column: c_date_of_birth
+        required: false
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''date'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: relationship
+        label: Relationship to Head
+        type: select
+        column: c_relationship
+        required: true
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: orphanhoodStatus
+        label: Orphanhood Status
+        type: select
+        column: c_orphanhoodStatus
+        required: false
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: participatesInAgriculture
+        label: Participates in Agricultural Activities
+        type: select
+        column: c_participatesInAgriculture
+        required: false
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: disability
+        label: Disability Status
+        type: select
+        column: c_disability
+        required: false
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: chronicallyIll
+        label: Chronically Ill on Palliative Care
+        type: select
+        column: c_chronicallyIll
+        required: false
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerIncomePrograms:
+    form_name: 01.06 - Farmer Income and Programs
+    table_name: farmer_income
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerRegistrationForm
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 21
+      total_grids: 0
+      total_sections: 3
+      total_tabs: 0
+    sections:
+    - section_id: incomeSection
+      label: Household Income
+      depth: 1
+      fields:
+      - field_id: income_programs_key
+        label: ''
+        type: hidden
+        column: c_income_programs_key
+        required: false
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: mainSourceIncome
+        label: Main source of income for the household?
+        type: select
+        column: c_mainSourceIncome
+        required: true
+        lookup_form: incomeSource
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: income_sources
+        label: Income sources (last 12 months)
+        type: select
+        column: c_income_sources
+        required: false
+        lookup_form: incomeSource
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: gainfulEmployment
+        label: Are you in gainful employment where a monthly salary is earned?
+        type: radio
+        column: c_gainfulEmployment
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: governmentEmployed
+        label: If yes, are you employed by the Government of Lesotho?
+        type: radio
+        column: c_governmentEmployed
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: parent_id
+        label: ''
+        type: hidden
+        column: c_parent_id
+        required: false
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: averageAnnualIncome
+        label: Average annual household income?
+        type: text
+        column: c_averageAnnualIncome
+        required: true
+        transform_hint: numeric
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: monthlyExpenditure
+        label: Monthly household expenditure?
+        type: text
+        column: c_monthlyExpenditure
+        required: true
+        transform_hint: numeric
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: relativeSupport
+        label: Receive any support from relative(s) that you rely on entirely for your survival?
+        type: radio
+        column: c_relativeSupport
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: supportFrequency
+        label: Frequency of Support
+        type: radio
+        column: c_supportFrequency
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: supportType
+        label: Type of support
+        type: checkbox
+        column: c_supportType
+        required: false
+        options_count: 3
+        lookup_form: null
+        transform_hint: multiCheckbox
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''checkbox'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: programSection
+      label: Program Participation
+      depth: 1
+      fields:
+      - field_id: supportProgram
+        label: Household benefits from support program (last 12 months)?
+        type: select
+        column: c_supportProgram
+        required: false
+        lookup_form: supportProgram
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: creditDefault
+        label: Is any member of the household in default of any agriculture credit scheme?
+        type: radio
+        column: c_creditDefault
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: everOnISP
+        label: Has any member of the household ever been on ISP?
+        type: radio
+        column: c_everOnISP
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: otherInputSupport
+        label: Has any member of the household ever been on Other Input Support program?
+        type: radio
+        column: c_otherInputSupport
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: socialSafetySection
+      label: Social Safety Nets
+      depth: 1
+      fields:
+      - field_id: totalLoans12Months
+        label: Total amount of loan(s) received in the last 12 months?
+        type: text
+        column: c_totalLoans12Months
+        required: false
+        transform_hint: numeric
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: informalTransfers
+        label: Total amount of informal transfers received (cash, remittances, food, seed gift, etc.)?
+        type: text
+        column: c_informalTransfers
+        required: false
+        transform_hint: numeric
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: networksSupport
+        label: Networks Support
+        type: text
+        column: c_networksSupport
+        required: false
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: formalTransfers
+        label: Total amount of formal transfers received (relief food, cash assistance, livestock, pensions, etc)?
+        type: text
+        column: c_formalTransfers
+        required: false
+        transform_hint: numeric
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: networkAssociations
+        label: Associations (farmer groups, cooperatives, women groups, etc.)
+        type: text
+        column: c_networkAssociations
+        required: false
+        transform_hint: numeric
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: networkRelatives
+        label: Relatives/friends/Family members
+        type: text
+        column: c_networkRelatives
+        required: false
+        transform_hint: numeric
+        table: farmer_income
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: income_programs_key
+      label: ''
+      type: hidden
+      column: c_income_programs_key
+      required: false
+      depth: 2
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: mainSourceIncome
+      label: Main source of income for the household?
+      type: select
+      column: c_mainSourceIncome
+      required: true
+      depth: 2
+      lookup_form: incomeSource
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: income_sources
+      label: Income sources (last 12 months)
+      type: select
+      column: c_income_sources
+      required: false
+      depth: 2
+      lookup_form: incomeSource
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: gainfulEmployment
+      label: Are you in gainful employment where a monthly salary is earned?
+      type: radio
+      column: c_gainfulEmployment
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: governmentEmployed
+      label: If yes, are you employed by the Government of Lesotho?
+      type: radio
+      column: c_governmentEmployed
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: parent_id
+      label: ''
+      type: hidden
+      column: c_parent_id
+      required: false
+      depth: 2
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: averageAnnualIncome
+      label: Average annual household income?
+      type: text
+      column: c_averageAnnualIncome
+      required: true
+      depth: 2
+      transform_hint: numeric
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: monthlyExpenditure
+      label: Monthly household expenditure?
+      type: text
+      column: c_monthlyExpenditure
+      required: true
+      depth: 2
+      transform_hint: numeric
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: relativeSupport
+      label: Receive any support from relative(s) that you rely on entirely for your survival?
+      type: radio
+      column: c_relativeSupport
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: supportFrequency
+      label: Frequency of Support
+      type: radio
+      column: c_supportFrequency
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: supportType
+      label: Type of support
+      type: checkbox
+      column: c_supportType
+      required: false
+      depth: 2
+      options_count: 3
+      lookup_form: null
+      transform_hint: multiCheckbox
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''checkbox'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: supportProgram
+      label: Household benefits from support program (last 12 months)?
+      type: select
+      column: c_supportProgram
+      required: false
+      depth: 2
+      lookup_form: supportProgram
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: creditDefault
+      label: Is any member of the household in default of any agriculture credit scheme?
+      type: radio
+      column: c_creditDefault
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: everOnISP
+      label: Has any member of the household ever been on ISP?
+      type: radio
+      column: c_everOnISP
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: otherInputSupport
+      label: Has any member of the household ever been on Other Input Support program?
+      type: radio
+      column: c_otherInputSupport
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''radio'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: totalLoans12Months
+      label: Total amount of loan(s) received in the last 12 months?
+      type: text
+      column: c_totalLoans12Months
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: informalTransfers
+      label: Total amount of informal transfers received (cash, remittances, food, seed gift, etc.)?
+      type: text
+      column: c_informalTransfers
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: networksSupport
+      label: Networks Support
+      type: text
+      column: c_networksSupport
+      required: false
+      depth: 2
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: formalTransfers
+      label: Total amount of formal transfers received (relief food, cash assistance, livestock, pensions, etc)?
+      type: text
+      column: c_formalTransfers
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: networkAssociations
+      label: Associations (farmer groups, cooperatives, women groups, etc.)
+      type: text
+      column: c_networkAssociations
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: networkRelatives
+      label: Relatives/friends/Family members
+      type: text
+      column: c_networkRelatives
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farmer_income
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerLocation:
+    form_name: 01.02 - Farmer Location and Farm
+    table_name: farm_location
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerRegistrationForm
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 20
+      total_grids: 0
+      total_sections: 4
+      total_tabs: 0
+    sections:
+    - section_id: locationSection
+      label: Location Information
+      depth: 1
+      fields:
+      - field_id: district
+        label: District
+        type: select
+        column: c_district
+        required: true
+        lookup_form: district
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: village
+        label: Village Name
+        type: text
+        column: c_village
+        required: true
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: communityCouncil
+        label: Community Council
+        type: text
+        column: c_communityCouncil
+        required: false
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: agroEcologicalZone
+        label: Agro-Ecological Zone
+        type: select
+        column: c_agroEcologicalZone
+        required: false
+        lookup_form: agroEcologicalZones
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: residency_type
+        label: Residency Type
+        type: select
+        column: c_residency_type
+        required: false
+        lookup_form: residencyType
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: yearsInArea
+        label: Years lived in this area
+        type: text
+        column: c_yearsInArea
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: gpsLatitude
+        label: GPS Latitude
+        type: text
+        column: c_gpsLatitude
+        required: false
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: gpsLongitude
+        label: GPS Longitude
+        type: text
+        column: c_gpsLongitude
+        required: false
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: farmSizeSection
+      label: Farm Size Details
+      depth: 1
+      fields:
+      - field_id: ownedRentedLand
+        label: Owned/Rented Land (Hectares)
+        type: text
+        column: c_ownedRentedLand
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: totalAvailableLand
+        label: Total Available Land (Hectares)
+        type: text
+        column: c_totalAvailableLand
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: cultivatedLand
+        label: Cultivated Land (Hectares)
+        type: text
+        column: c_cultivatedLand
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: conservationAgricultureLand
+        label: Land under Conservation Agriculture (Hectares)
+        type: text
+        column: c_conservationAgricultureLand
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: accessServicesSection
+      label: Access to Services
+      depth: 1
+      fields:
+      - field_id: access_to_services
+        label: Closest Service
+        type: text
+        column: c_access_to_services
+        required: false
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: distanceWaterSource
+        label: Water Source
+        type: text
+        column: c_distanceWaterSource
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: distancePrimarySchool
+        label: Primary School
+        type: text
+        column: c_distancePrimarySchool
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: distancePublicHospital
+        label: Public Hospital
+        type: text
+        column: c_distancePublicHospital
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: distanceLivestockMarket
+        label: Livestock Market
+        type: text
+        column: c_distanceLivestockMarket
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: distanceAgriculturalMarket
+        label: Agricultural/Crops Market
+        type: text
+        column: c_distanceAgriculturalMarket
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: distancePublicTransport
+        label: Public Means of Transport
+        type: text
+        column: c_distancePublicTransport
+        required: false
+        transform_hint: numeric
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - section_id: section4
+      label: Section
+      depth: 1
+      fields:
+      - field_id: parent_id
+        label: ''
+        type: hidden
+        column: c_parent_id
+        required: false
+        table: farm_location
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: district
+      label: District
+      type: select
+      column: c_district
+      required: true
+      depth: 2
+      lookup_form: district
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: village
+      label: Village Name
+      type: text
+      column: c_village
+      required: true
+      depth: 2
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: communityCouncil
+      label: Community Council
+      type: text
+      column: c_communityCouncil
+      required: false
+      depth: 2
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: agroEcologicalZone
+      label: Agro-Ecological Zone
+      type: select
+      column: c_agroEcologicalZone
+      required: false
+      depth: 2
+      lookup_form: agroEcologicalZones
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: residency_type
+      label: Residency Type
+      type: select
+      column: c_residency_type
+      required: false
+      depth: 2
+      lookup_form: residencyType
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: yearsInArea
+      label: Years lived in this area
+      type: text
+      column: c_yearsInArea
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: gpsLatitude
+      label: GPS Latitude
+      type: text
+      column: c_gpsLatitude
+      required: false
+      depth: 2
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: gpsLongitude
+      label: GPS Longitude
+      type: text
+      column: c_gpsLongitude
+      required: false
+      depth: 2
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: ownedRentedLand
+      label: Owned/Rented Land (Hectares)
+      type: text
+      column: c_ownedRentedLand
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: totalAvailableLand
+      label: Total Available Land (Hectares)
+      type: text
+      column: c_totalAvailableLand
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: cultivatedLand
+      label: Cultivated Land (Hectares)
+      type: text
+      column: c_cultivatedLand
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: conservationAgricultureLand
+      label: Land under Conservation Agriculture (Hectares)
+      type: text
+      column: c_conservationAgricultureLand
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: access_to_services
+      label: Closest Service
+      type: text
+      column: c_access_to_services
+      required: false
+      depth: 2
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: distanceWaterSource
+      label: Water Source
+      type: text
+      column: c_distanceWaterSource
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: distancePrimarySchool
+      label: Primary School
+      type: text
+      column: c_distancePrimarySchool
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: distancePublicHospital
+      label: Public Hospital
+      type: text
+      column: c_distancePublicHospital
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: distanceLivestockMarket
+      label: Livestock Market
+      type: text
+      column: c_distanceLivestockMarket
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: distanceAgriculturalMarket
+      label: Agricultural/Crops Market
+      type: text
+      column: c_distanceAgriculturalMarket
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: distancePublicTransport
+      label: Public Means of Transport
+      type: text
+      column: c_distancePublicTransport
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: parent_id
+      label: ''
+      type: hidden
+      column: c_parent_id
+      required: false
+      depth: 2
+      table: farm_location
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  farmerRegistrationForm:
+    form_name: 01 - Farmer Registration Form
+    table_name: farms_registry
+    primary_key: c_id
+    is_parent_form: true
+    is_multi_tab: true
+    multi_tab_plugin: org.joget.plugin.enterprise.MultiPagedForm
+    parent_of:
+    - farmerAgriculture
+    - farmerBasicInfo
+    - farmerCropsLivestock
+    - farmerDeclaration
+    - farmerHousehold
+    - farmerIncomePrograms
+    - farmerLocation
+    max_nesting_depth: 1
+    referenced_forms:
+    - farmerAgriculture
+    - farmerBasicInfo
+    - farmerCropsLivestock
+    - farmerDeclaration
+    - farmerHousehold
+    - farmerIncomePrograms
+    - farmerLocation
+    statistics:
+      total_fields: 0
+      total_grids: 0
+      total_sections: 0
+      total_tabs: 7
+    tabs:
+    - tab_label: Basic Information
+      form_def_id: farmerBasicInfo
+      parent_field_id: basic_data
+      subform_parent_id: parent_id
+    - tab_label: Location & Farm
+      form_def_id: farmerLocation
+      parent_field_id: location_data
+      subform_parent_id: parent_id
+    - tab_label: Agricultural Activities
+      form_def_id: farmerAgriculture
+      parent_field_id: activities_data
+      subform_parent_id: parent_id
+    - tab_label: Household Members
+      form_def_id: farmerHousehold
+      parent_field_id: household_data
+      subform_parent_id: parent_id
+    - tab_label: Crops & Livestock
+      form_def_id: farmerCropsLivestock
+      parent_field_id: crops_livestock
+      subform_parent_id: parent_id
+    - tab_label: Income & Programs
+      form_def_id: farmerIncomePrograms
+      parent_field_id: income_data
+      subform_parent_id: parent_id
+    - tab_label: Declaration
+      form_def_id: farmerDeclaration
+      parent_field_id: declaration
+      subform_parent_id: parent_id
+  householdMemberForm:
+    form_name: 01.04-1 - Household Member Form
+    table_name: household_members
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerHousehold
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 9
+      total_grids: 0
+      total_sections: 1
+      total_tabs: 0
+    sections:
+    - section_id: section1
+      label: ''
+      depth: 1
+      fields:
+      - field_id: farmer_id
+        label: ''
+        type: hidden
+        column: c_farmer_id
+        required: false
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: memberName
+        label: Name (Surname First)
+        type: text
+        column: c_memberName
+        required: true
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: sex
+        label: Sex
+        type: select
+        column: c_sex
+        required: true
+        options_count: 2
+        lookup_form: null
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: date_of_birth
+        label: Date of Birth
+        type: date
+        column: c_date_of_birth
+        required: false
+        transform_hint: date_ISO8601
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''date'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: relationship
+        label: Relationship to Head
+        type: select
+        column: c_relationship
+        required: true
+        lookup_form: relationship
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: orphanhoodStatus
+        label: Orphanhood Status
+        type: select
+        column: c_orphanhoodStatus
+        required: false
+        lookup_form: orphanhoodStatus
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: participatesInAgriculture
+        label: Participates in Agricultural Activities
+        type: select
+        column: c_participatesInAgriculture
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: disability
+        label: Disability Status
+        type: select
+        column: c_disability
+        required: false
+        lookup_form: disabilityStatus
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: chronicallyIll
+        label: Chronically Ill on Palliative Care
+        type: select
+        column: c_chronicallyIll
+        required: false
+        options_count: 2
+        lookup_form: null
+        table: household_members
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: farmer_id
+      label: ''
+      type: hidden
+      column: c_farmer_id
+      required: false
+      depth: 2
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: memberName
+      label: Name (Surname First)
+      type: text
+      column: c_memberName
+      required: true
+      depth: 2
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: sex
+      label: Sex
+      type: select
+      column: c_sex
+      required: true
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: date_of_birth
+      label: Date of Birth
+      type: date
+      column: c_date_of_birth
+      required: false
+      depth: 2
+      transform_hint: date_ISO8601
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''date'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: relationship
+      label: Relationship to Head
+      type: select
+      column: c_relationship
+      required: true
+      depth: 2
+      lookup_form: relationship
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: orphanhoodStatus
+      label: Orphanhood Status
+      type: select
+      column: c_orphanhoodStatus
+      required: false
+      depth: 2
+      lookup_form: orphanhoodStatus
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: participatesInAgriculture
+      label: Participates in Agricultural Activities
+      type: select
+      column: c_participatesInAgriculture
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: disability
+      label: Disability Status
+      type: select
+      column: c_disability
+      required: false
+      depth: 2
+      lookup_form: disabilityStatus
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: chronicallyIll
+      label: Chronically Ill on Palliative Care
+      type: select
+      column: c_chronicallyIll
+      required: false
+      depth: 2
+      options_count: 2
+      lookup_form: null
+      table: household_members
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+  livestockDetailsForm:
+    form_name: 01.05-2 - Livestock Details Form
+    table_name: livestock_details
+    primary_key: c_id
+    is_parent_form: false
+    is_multi_tab: false
+    child_of: farmerCropsLivestock
+    max_nesting_depth: 2
+    referenced_forms: []
+    statistics:
+      total_fields: 4
+      total_grids: 0
+      total_sections: 1
+      total_tabs: 0
+    sections:
+    - section_id: section1
+      label: ''
+      depth: 1
+      fields:
+      - field_id: farmer_id
+        label: ''
+        type: hidden
+        column: c_farmer_id
+        required: false
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: livestockType
+        label: Livestock Type
+        type: select
+        column: c_livestockType
+        required: true
+        lookup_form: livestockType
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: numberOfMale
+        label: Number (Male)
+        type: text
+        column: c_numberOfMale
+        required: false
+        transform_hint: numeric
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+      - field_id: numberOfFemale
+        label: Number (Female)
+        type: text
+        column: c_numberOfFemale
+        required: false
+        transform_hint: numeric
+        table: livestock_details
+        db_validated: true
+        db_table_exists: true
+        db_column_exists: true
+        db_column_type: longtext(4294967295)
+        db_nullable: true
+        db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    all_fields:
+    - field_id: farmer_id
+      label: ''
+      type: hidden
+      column: c_farmer_id
+      required: false
+      depth: 2
+      table: livestock_details
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''hidden'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: livestockType
+      label: Livestock Type
+      type: select
+      column: c_livestockType
+      required: true
+      depth: 2
+      lookup_form: livestockType
+      table: livestock_details
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_warning: 'Potential type mismatch: Joget field type ''select'' vs DB column type ''longtext'''
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: numberOfMale
+      label: Number (Male)
+      type: text
+      column: c_numberOfMale
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: livestock_details
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'
+    - field_id: numberOfFemale
+      label: Number (Female)
+      type: text
+      column: c_numberOfFemale
+      required: false
+      depth: 2
+      transform_hint: numeric
+      table: livestock_details
+      db_validated: true
+      db_table_exists: true
+      db_column_exists: true
+      db_column_type: longtext(4294967295)
+      db_nullable: true
+      db_validation_timestamp: '2025-10-02T00:50:09.569138'

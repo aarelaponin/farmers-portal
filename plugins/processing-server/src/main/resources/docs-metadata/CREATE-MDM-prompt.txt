@@ -1,0 +1,15 @@
+I need you to implement a Python utility for Joget metadata management.
+
+Please read the complete implementation specification from: docs/IMPLEMENTATION_SPEC.md
+
+After reading the spec, please:
+1. Confirm you understand the requirements (especially the two nested LOV patterns)
+2. Create the initial project structure (Phase 0)
+3. Ask me any clarifying questions before beginning implementation
+4. Then proceed with Phase 1 implementation
+
+Key context:
+- I'm working on a Farmers Registry system using Joget DX8
+- We have 39 CSV metadata files in data/metadata/
+- Some use traditional FK relationships, others use subcategory source pattern
+- The subcategory source pattern (MD25/MD27) is critical - child CSVs don't have FK columns

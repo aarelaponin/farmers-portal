@@ -1,0 +1,110 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "qa_record_status",
+    "name": "QA Record Status (runtime)",
+    "description": "ONE row per (formId, recordId) representing the current quality lifecycle state of that record. The 'status' column is what joget-status-framework writes (NOT_VALIDATED, VERIFIED, ISSUES_DETECTED, BLOCKED_FROM_PUBLISH).",
+    "tableName": "qa_record_status",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "main",
+        "label": "Record Status"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service ID",
+                "size": "60",
+                "maxlength": "60",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "formId",
+                "label": "Form ID",
+                "size": "60",
+                "maxlength": "60",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "recordId",
+                "label": "Record ID",
+                "size": "120",
+                "maxlength": "200",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "status",
+                "label": "Quality Status",
+                "size": "30",
+                "maxlength": "30",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "errorCount",
+                "label": "Error Count",
+                "size": "10",
+                "maxlength": "10",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "warningCount",
+                "label": "Warning Count",
+                "size": "10",
+                "maxlength": "10",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "lastEvaluated",
+                "label": "Last Evaluated",
+                "size": "30",
+                "maxlength": "30",
+                "readonly": "true"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

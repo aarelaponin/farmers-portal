@@ -1,0 +1,140 @@
+[{
+    title : 'Workflow Configuration',
+    properties : [{
+        name : 'serviceId',
+        label : 'Service ID',
+        description : 'Service identifier (e.g., farmers_registry, subsidy_application). Must match receiver configuration. Required for multi-service support.',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'useConvention',
+        label : 'Use Naming Convention',
+        description : 'Use {serviceId}_submission as process name. Uncheck to manually specify Process Definition ID or Process Name.',
+        type : 'checkbox',
+        required : 'False',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : 'Yes, use convention (recommended)'
+        }]
+    },
+    {
+        name : 'processDefId',
+        label : 'Process Definition ID',
+        description : 'The exact process definition ID (e.g., myProcess:1:latest). Leave empty to use convention or Process Name.',
+        type : 'textfield',
+        required : 'False'
+    },
+    {
+        name : 'processName',
+        label : 'Process Name',
+        description : 'The process name to invoke. Used if Process Definition ID is not specified and convention is disabled.',
+        type : 'textfield',
+        required : 'False'
+    },
+    {
+        name : 'runMode',
+        label : 'Execution Mode',
+        description : 'How the workflow should be executed',
+        type : 'selectbox',
+        required : 'True',
+        value : 'sync',
+        options : [{
+            value : 'sync',
+            label : 'Synchronous (Wait for start)'
+        },
+        {
+            value : 'async',
+            label : 'Asynchronous (Background execution)'
+        }]
+    },
+    {
+        name : 'waitForCompletion',
+        label : 'Wait for Process Completion',
+        description : 'If enabled, the plugin will wait for the entire workflow to complete before returning (only for simple workflows)',
+        type : 'checkbox',
+        required : 'False',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : 'Yes, wait for workflow completion'
+        }]
+    }]
+},
+{
+    title : 'Data Mapping',
+    properties : [{
+        name : 'passFormData',
+        label : 'Pass Form Data to Workflow',
+        description : 'Automatically pass all form field values as workflow variables',
+        type : 'checkbox',
+        required : 'False',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : 'Yes, pass form data as workflow variables'
+        }]
+    },
+    {
+        name : 'participantMapping',
+        label : 'Participant Assignment',
+        description : 'Workflow participant/user to assign the first activity to. Can use hash variables like #currentUser.username#',
+        type : 'textfield',
+        required : 'False',
+        value : '#currentUser.username#'
+    },
+    {
+        name : 'customVariables',
+        label : 'Custom Workflow Variables',
+        description : 'Additional workflow variables in format: var1=value1;var2=value2. Supports hash variables.',
+        type : 'textarea',
+        required : 'False',
+        rows : '4',
+        cols : '50'
+    }]
+},
+{
+    title : 'Advanced Options',
+    properties : [{
+        name : 'enableLogging',
+        label : 'Enable Detailed Logging',
+        description : 'Log detailed information about workflow activation for debugging',
+        type : 'checkbox',
+        required : 'False',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : 'Yes, enable detailed logging'
+        }]
+    },
+    {
+        name : 'errorHandling',
+        label : 'Error Handling Strategy',
+        description : 'How to handle errors during workflow activation',
+        type : 'selectbox',
+        required : 'True',
+        value : 'log',
+        options : [{
+            value : 'log',
+            label : 'Log error and continue'
+        },
+        {
+            value : 'abort',
+            label : 'Abort form submission on error'
+        },
+        {
+            value : 'retry',
+            label : 'Retry workflow activation once'
+        }]
+    },
+    {
+        name : 'condition',
+        label : 'Activation Condition',
+        description : 'BeanShell expression that must evaluate to true for workflow to be triggered. Leave empty to always trigger. Example: #form.status# == "approved"',
+        type : 'textarea',
+        required : 'False',
+        rows : '3',
+        cols : '50'
+    }]
+}]

@@ -1,0 +1,511 @@
+================================================================================
+GOVSTACK ALIGNMENT DIAGNOSTIC TOOL
+================================================================================
+
+📋 Analyzing Joget forms...
+   Found 11 form definitions
+🔗 Analyzing services.yml mappings...
+   Found 86 field mappings
+📊 Analyzing test data structure...
+   Found 97 data fields
+🔍 Checking alignment...
+
+{
+  "alignedFields": 64,
+  "issueCount": 82,
+  "hasErrors": true,
+  "issues": [
+    {
+      "severity": "ERROR",
+      "type": "FIELD_NOT_IN_FORM",
+      "description": "Field 'hazardsExperienced' mapped but not found in form 'farmerAgriculture'",
+      "suggestion": "Check if field ID in form matches mapping, or update services.yml"
+    },
+    {
+      "severity": "ERROR",
+      "type": "FIELD_NOT_IN_FORM",
+      "description": "Field 'field12' mapped but not found in form 'farmerDeclaration'",
+      "suggestion": "Check if field ID in form matches mapping, or update services.yml"
+    },
+    {
+      "severity": "ERROR",
+      "type": "FIELD_NOT_IN_FORM",
+      "description": "Field 'residency' mapped but not found in form 'farmerLocation'",
+      "suggestion": "Check if field ID in form matches mapping, or update services.yml"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_FORM",
+      "description": "No form found for section: cropManagement",
+      "suggestion": "null"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_FORM",
+      "description": "No form found for section: livestockDetails",
+      "suggestion": "null"
+    },
+    {
+      "severity": "ERROR",
+      "type": "FIELD_NOT_IN_FORM",
+      "description": "Field 'incomeSources12Months' mapped but not found in form 'farmerIncomePrograms'",
+      "suggestion": "Check if field ID in form matches mapping, or update services.yml"
+    },
+    {
+      "severity": "ERROR",
+      "type": "FIELD_NOT_IN_FORM",
+      "description": "Field 'programBenefits' mapped but not found in form 'farmerIncomePrograms'",
+      "suggestion": "Check if field ID in form matches mapping, or update services.yml"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_FORM",
+      "description": "No form found for section: householdMembers",
+      "suggestion": "null"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: areaUnit",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.socialSafety.informalTransfersLSL",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.accessToServices.publicHospitalMinutes",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.income.averageAnnualIncomeLSL",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "ERROR",
+      "type": "FIELD_NAME_MISMATCH",
+      "description": "Test data uses 'livestockProduction' but mapping expects 'engagedInLivestockProduction'",
+      "suggestion": "Update test data: change 'livestockProduction' to 'engagedInLivestockProduction'"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.agriculturalActivities.engagedInLivestockProduction",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.declaration.date",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.socialSafety.networkAssociationsCount",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: type",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.farmLocation.longitude",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.agriculturalActivities.mainInfoSource",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.farmDetails.ownedRentedLandHectares",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.agriculturalActivities.managementSkillLevel",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.registration.channel",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: areaSize",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.income.isGovernmentEmployed",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.income.sources12Months",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.registration.status",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.programs.everOnOtherInputSupport",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.accessToServices.agriculturalMarketMinutes",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: harvest.quantity",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.registration.station",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.participatesInAgriculture",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.conservationAgriculture.otherPractices",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.farmDetails.cultivatedLandHectares",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.programs.benefitPrograms",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.conservationAgriculture.practices",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.accessToServices.waterSourceMinutes",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.socialSafety.networkRelativesCount",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.residencyType",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.programs.inCreditDefault",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.disabilityStatus",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.socialSafety.formalTransfersLSL",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.farmDetails.totalLandHectares",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "ERROR",
+      "type": "FIELD_NAME_MISMATCH",
+      "description": "Test data uses 'cropProduction' but mapping expects 'engagedInCropProduction'",
+      "suggestion": "Update test data: change 'cropProduction' to 'engagedInCropProduction'"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.agriculturalActivities.engagedInCropProduction",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: femaleCount",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.farmDetails.conservationAgricultureHectares",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.yearsInArea",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: maleCount",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.income.monthlyExpenditureLSL",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.income.receivesRelativeSupport",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.orphanhoodStatus",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.declaration.consent",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.hazardsAndShocks.experienced",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.chronicallyIll",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.hazardsAndShocks.other",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.accessToServices.livestockMarketMinutes",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: name.text",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.accessToServices.closestService",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.income.hasGainfulEmployment",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.accessToServices.publicTransportMinutes",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.income.mainSource",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.declaration.fullName",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: pesticidesApplied",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.farmLocation.agroEcologicalZone",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.farmLocation.latitude",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: fertilizerApplied",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.socialSafety.totalLoans12MonthsLSL",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "WARNING",
+      "type": "MISSING_TEST_DATA",
+      "description": "GovStack path not found in test data: extension.accessToServices.primarySchoolMinutes",
+      "suggestion": "Add this field to test data or verify the path is correct"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'shocks_hazards' in form 'farmerAgriculture' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'farmer_id' in form 'householdMemberForm' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'hasLivestock' in form 'farmerCropsLivestock' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'cropManagement' in form 'farmerCropsLivestock' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'livestockDetails' in form 'farmerCropsLivestock' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'residency_type' in form 'farmerLocation' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'householdMembers' in form 'farmerHousehold' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'farmer_id' in form 'cropManagementForm' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'networksSupport' in form 'farmerIncomePrograms' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'income_sources' in form 'farmerIncomePrograms' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'supportProgram' in form 'farmerIncomePrograms' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "INFO",
+      "type": "UNMAPPED_FIELD",
+      "description": "Form field 'farmer_id' in form 'livestockDetailsForm' has no mapping",
+      "suggestion": "Add mapping to services.yml if this field should be saved"
+    },
+    {
+      "severity": "ERROR",
+      "type": "TEST_DATA_ISSUE",
+      "description": "Found 'cropProduction' instead of 'engagedInCropProduction'",
+      "suggestion": "Update test data to match expected field names"
+    },
+    {
+      "severity": "ERROR",
+      "type": "TEST_DATA_ISSUE",
+      "description": "Found 'livestockProduction' instead of 'engagedInLivestockProduction'",
+      "suggestion": "Update test data to match expected field names"
+    }
+  ]
+}

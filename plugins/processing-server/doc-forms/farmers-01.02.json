@@ -1,0 +1,593 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "farmerLocation",
+        "name": "01.02 - Farmer Location and Farm",
+        "tableName": "farm_location",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "description": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "create"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "District",
+                                "readonlyLabel": "",
+                                "id": "district",
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "district",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "groupingColumn": "",
+                                        "extraCondition": "",
+                                        "addEmptyOption": "true",
+                                        "emptyLabel": "",
+                                        "useAjax": "",
+                                        "cacheInterval": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Village Name",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "village",
+                                "value": "",
+                                "maxlength": "100",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter village name",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Community Council",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "communityCouncil",
+                                "value": "",
+                                "maxlength": "100",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter community council name",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Agro-Ecological Zone",
+                                "readonlyLabel": "",
+                                "id": "agroEcologicalZone",
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "agroEcologicalZones",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "groupingColumn": "",
+                                        "extraCondition": "",
+                                        "addEmptyOption": "true",
+                                        "emptyLabel": "",
+                                        "useAjax": "",
+                                        "cacheInterval": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Residency Type",
+                                "readonlyLabel": "",
+                                "id": "residency_type",
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "residencyType",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "groupingColumn": "",
+                                        "extraCondition": "",
+                                        "addEmptyOption": "true",
+                                        "emptyLabel": "",
+                                        "useAjax": "",
+                                        "cacheInterval": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Years lived in this area",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "yearsInArea",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "0",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "GPS Latitude",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "gpsLatitude",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "-29.XXXXXX",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "GPS Longitude",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "gpsLongitude",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "27.XXXXXX",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Location Information",
+                "id": "locationSection"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Owned/Rented Land (Hectares)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "ownedRentedLand",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "0.0",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Total Available Land (Hectares)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "totalAvailableLand",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "0.0",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Cultivated Land (Hectares)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "cultivatedLand",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "0.0",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Land under Conservation Agriculture (Hectares)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "conservationAgricultureLand",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "0.0",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Farm Size Details",
+                "id": "farmSizeSection"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Closest Service",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "access_to_services",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Minutes",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Water Source",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "distanceWaterSource",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Minutes",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Primary School",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "distancePrimarySchool",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Minutes",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Public Hospital",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "distancePublicHospital",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Minutes",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Livestock Market",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "distanceLivestockMarket",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Minutes",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Agricultural/Crops Market",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "distanceAgriculturalMarket",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Minutes",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Public Means of Transport",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "distancePublicTransport",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Minutes",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Access to Services",
+                "id": "accessServicesSection"
+            }
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Section",
+                "id": "section4"
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "id": "parent_id",
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

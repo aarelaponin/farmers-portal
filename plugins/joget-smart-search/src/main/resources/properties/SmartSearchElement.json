@@ -1,0 +1,177 @@
+[
+    {
+        "title": "Basic Settings",
+        "properties": [
+            {
+                "name": "id",
+                "label": "Field ID",
+                "description": "Unique identifier for this field. The selected farmer value will be stored in this field.",
+                "type": "textfield",
+                "required": "true",
+                "value": "farmerId"
+            },
+            {
+                "name": "storeValue",
+                "label": "Value to Store",
+                "description": "Which farmer identifier to save in the form field",
+                "type": "selectbox",
+                "options": [
+                    {"value": "nationalId", "label": "National ID (recommended for interoperability)"},
+                    {"value": "id", "label": "Internal Record ID"},
+                    {"value": "phone", "label": "Phone Number"}
+                ],
+                "value": "nationalId"
+            },
+            {
+                "name": "label",
+                "label": "Label",
+                "description": "Display label for the search field",
+                "type": "textfield",
+                "value": "Select Farmer"
+            },
+            {
+                "name": "required",
+                "label": "Required",
+                "description": "Is farmer selection required?",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ]
+            },
+            {
+                "name": "displayMode",
+                "label": "Display Mode",
+                "description": "How to display the search dialog",
+                "type": "radio",
+                "options": [
+                    {"value": "popup", "label": "Popup/Modal (recommended for data entry forms)"},
+                    {"value": "inline", "label": "Inline (for dedicated search pages)"}
+                ],
+                "value": "popup"
+            }
+        ]
+    },
+    {
+        "title": "Display Configuration",
+        "properties": [
+            {
+                "name": "displayColumns",
+                "label": "Display Columns",
+                "description": "Columns to show in search results (comma-separated). Available: nationalId, firstName, lastName, gender, dateOfBirth, phone, district, village, communityCouncil, cooperative",
+                "type": "textfield",
+                "value": "nationalId,firstName,lastName,district,village"
+            },
+            {
+                "name": "showRecentFarmers",
+                "label": "Show Recent Farmers",
+                "description": "Show quick-access list of recently selected farmers (Phase 6 feature)",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            },
+            {
+                "name": "maxRecentFarmers",
+                "label": "Max Recent Farmers",
+                "description": "Maximum number of recent farmers to show (1-10)",
+                "type": "textfield",
+                "value": "5"
+            }
+        ]
+    },
+    {
+        "title": "API Configuration",
+        "properties": [
+            {
+                "name": "apiEndpoint",
+                "label": "API Base URL",
+                "description": "Base URL for the Farmer Search API (e.g., /jw/api/fss). This should match your API Builder configuration.",
+                "type": "textfield",
+                "required": "true",
+                "value": "/jw/api/fss"
+            },
+            {
+                "name": "apiId",
+                "label": "API ID",
+                "description": "API ID for authentication (from API Builder). Required for API access.",
+                "type": "textfield",
+                "required": "true",
+                "value": ""
+            },
+            {
+                "name": "apiKey",
+                "label": "API Key",
+                "description": "API Key for authentication. Keep this secure.",
+                "type": "password",
+                "required": "true",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "Input Detection",
+        "properties": [
+            {
+                "name": "nationalIdPattern",
+                "label": "National ID Pattern (Regex)",
+                "description": "Regular expression to match national ID format. Default: ^\\d{9,13}$ (9-13 digits). Use ^\\d{4,}$ for testing with short IDs.",
+                "type": "textfield",
+                "value": "^\\d{9,13}$"
+            },
+            {
+                "name": "nationalIdMinLength",
+                "label": "National ID Min Length",
+                "description": "Minimum digits to detect as national ID (before pattern match). Default: 4",
+                "type": "textfield",
+                "value": "4"
+            },
+            {
+                "name": "phonePattern",
+                "label": "Phone Pattern (Regex)",
+                "description": "Regular expression to match phone format. Default: ^\\+?\\d{8,}$ (8+ digits, optional + prefix)",
+                "type": "textfield",
+                "value": "^\\+?\\d{8,}$"
+            },
+            {
+                "name": "phoneMinLength",
+                "label": "Phone Min Length",
+                "description": "Minimum digits to detect as phone number. Default: 8",
+                "type": "textfield",
+                "value": "8"
+            }
+        ]
+    },
+    {
+        "title": "Auto-Select Behavior",
+        "properties": [
+            {
+                "name": "autoSelectSingleResult",
+                "label": "Auto-Select Single Result",
+                "description": "When search returns exactly one result with high confidence, automatically select it without requiring user click.",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            },
+            {
+                "name": "autoSelectMinScore",
+                "label": "Auto-Select Min Score",
+                "description": "Minimum relevance score (0-100) required for auto-selection. Default: 90",
+                "type": "textfield",
+                "value": "90"
+            },
+            {
+                "name": "showAutoSelectNotification",
+                "label": "Show Auto-Select Notification",
+                "description": "Show brief notification when farmer is auto-selected",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            }
+        ]
+    }
+]

@@ -1,0 +1,39 @@
+[{
+    "title": "MDM Multi-Select Configuration",
+    "properties": [
+        {
+            "name": "tableName",
+            "label": "MDM Table Name",
+            "description": "Table suffix, e.g. md03district queries app_fd_md03district",
+            "type": "textfield",
+            "required": "true"
+        },
+        {
+            "name": "codeColumn",
+            "label": "Code Column",
+            "description": "Column for the option value (default: c_code)",
+            "type": "textfield",
+            "value": "c_code"
+        },
+        {
+            "name": "nameColumn",
+            "label": "Name Column",
+            "description": "Column for the option label (default: c_name)",
+            "type": "textfield",
+            "value": "c_name"
+        },
+        {
+            "name": "size",
+            "label": "Visible Rows",
+            "description": "Number of visible options in the select (default: 5)",
+            "type": "textfield",
+            "value": "5"
+        },
+        {
+            "name": "defaultValue",
+            "label": "Default Value",
+            "description": "Default selected values, semicolon-separated",
+            "type": "textfield"
+        }
+    ]
+}]

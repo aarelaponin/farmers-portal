@@ -1,0 +1,32 @@
+# GovStack Contact Form Service - Sender Configuration
+# Purpose: Maps contact form data from Joget to GovStack JSON
+# Version: 1.0.0
+# Last Updated: 2025-10-29
+
+service:
+  id: contact_form
+  name: "Contact Form Service"
+  version: "1.0"
+  govstackVersion: "1.0"
+  metadataVersion: "1.0.0"
+  lastUpdated: "2025-10-29"
+  description: "Sends contact form data from Joget to receiver"
+
+# Field Mappings (Sender: Joget → GovStack JSON)
+formMappings:
+  contactInfo:
+    type: form
+    formId: contactSubmissionForm
+    description: "Maps contact form fields to GovStack JSON structure"
+    fields:
+      - joget: full_name
+        govstack: name.text
+
+      - joget: email
+        govstack: extension.email
+
+      - joget: phone
+        govstack: extension.phone
+
+      - joget: message
+        govstack: extension.message

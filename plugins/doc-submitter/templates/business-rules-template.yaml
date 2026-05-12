@@ -1,0 +1,114 @@
+# Business Rules Template for ValidationRulesGenerator
+# This file defines conditional validation logic
+# Copy this template and customize for your service
+
+# ===================================================================
+# CONDITIONAL VALIDATION RULES
+# ===================================================================
+# Define when fields or grids become required based on other field values
+conditional_rules:
+  # Rule 1: If student has scholarship, scholarship details are required
+  - trigger_field: has_scholarship
+    trigger_value: "yes"
+    requires_fields:
+      - scholarship_type
+      - scholarship_amount
+    message_template: "Scholarship type and amount are required when student has scholarship"
+
+  # Rule 2: If student participates in sports, at least 1 sport must be selected
+  - trigger_field: participates_in_sports
+    trigger_value: "yes"
+    requires_grid: sportsEnrollment
+    min_entries: 1
+    message_template: "At least {min_entries} sport must be selected when student participates in sports"
+
+  # Rule 3: International students must provide visa information
+  - trigger_field: is_international
+    trigger_value: "yes"
+    requires_fields:
+      - nationality
+      - visa_type
+      - passport_number
+    message_template: "International students must provide nationality, visa type, and passport number"
+
+  # Rule 4: If student is under 18, guardian information is required
+  # (This would require age calculation logic, shown as example)
+  - trigger_field: is_minor
+    trigger_value: "yes"
+    requires_grid: guardianInfo
+    min_entries: 1
+    message_template: "At least one guardian is required for students under 18"
+
+  # Rule 5: Grade-specific requirements
+  - trigger_field: grade_level
+    trigger_value: "college"
+    requires_fields:
+      - major
+      - advisor_name
+    message_template: "College students must specify major and advisor name"
+
+# ===================================================================
+# RULE STRUCTURE
+# ===================================================================
+# Each rule must have:
+#   - trigger_field: Field name that triggers the validation
+#   - trigger_value: Value that triggers the rule (usually "yes" for boolean fields)
+#
+# Then ONE of:
+#   - requires_fields: List of field names that become required
+#   - requires_grid: Grid name that becomes required (with optional min_entries)
+#
+# Optionally:
+#   - min_entries: Minimum number of grid rows required (for grids only)
+#   - message_template: Custom error message (can use {trigger_field}, {trigger_value}, {min_entries})
+#
+# If message_template is not provided, a generic message is auto-generated
+
+# ===================================================================
+# EXAMPLES OF COMMON PATTERNS
+# ===================================================================
+
+# Pattern 1: Boolean field requires other fields
+# - trigger_field: has_special_needs
+#   trigger_value: "yes"
+#   requires_fields: [special_needs_type, accommodation_required]
+
+# Pattern 2: Boolean field requires grid with minimum entries
+# - trigger_field: has_dependents
+#   trigger_value: "yes"
+#   requires_grid: dependentsList
+#   min_entries: 1
+
+# Pattern 3: Dropdown value requires specific fields
+# - trigger_field: enrollment_type
+#   trigger_value: "transfer"
+#   requires_fields: [previous_school, transfer_credits]
+
+# Pattern 4: Boolean field requires grid without minimum
+# - trigger_field: has_awards
+#   trigger_value: "yes"
+#   requires_grid: awardsList
+#   # No min_entries means grid can be empty but must be present
+
+# ===================================================================
+# VALIDATION TRIGGER CONDITIONS
+# ===================================================================
+# Currently supported condition format:
+#   field_name == 'value'
+#
+# Future support planned for:
+#   field_name != 'value'
+#   field1 == 'val1' && field2 == 'val2'
+#   field1 == 'val1' || field2 == 'val2'
+
+# ===================================================================
+# MESSAGE TEMPLATE VARIABLES
+# ===================================================================
+# Available placeholders:
+#   {trigger_field}  - Name of the trigger field
+#   {trigger_value}  - Value that triggered the rule
+#   {min_entries}    - Minimum entries required (for grid rules)
+#
+# Example:
+#   "At least {min_entries} entries required when {trigger_field} is '{trigger_value}'"
+#   → "At least 1 entries required when has_scholarship is 'yes'"

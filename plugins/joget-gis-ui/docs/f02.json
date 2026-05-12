@@ -1,0 +1,114 @@
+{
+  "elements": [
+    {
+      "elements": [
+        {
+          "elements": [
+            {
+              "className": "org.joget.plugin.enterprise.MultiPagedForm",
+              "properties": {
+                "prevButtonlabel": "Prev",
+                "css": "",
+                "nextButtonlabel": "Next",
+                "partiallyStore": "",
+                "onlyAllowSubmitOnLastPage": "",
+                "id": "field1",
+                "numberOfPage": {
+                  "className": "4",
+                  "properties": {
+                    "page3_validate": "true",
+                    "page4_formDefId": "parcelClassification",
+                    "page2_readonly": "",
+                    "page2_label": "Location",
+                    "page3_subFormParentId": "parent_id",
+                    "page3_parentSubFormId": "crop",
+                    "page2_subFormParentId": "parent_id",
+                    "page1_parentSubFormId": "general_data",
+                    "page4_readonlyLabel": "",
+                    "page2_readonlyLabel": "",
+                    "page3_formDefId": "parcelCrops",
+                    "page1_subFormParentId": "parent_id",
+                    "page3_label": "Crop Production",
+                    "page3_readonly": "",
+                    "page4_subFormParentId": "parent_id",
+                    "page4_parentSubFormId": "classification",
+                    "page1_formDefId": "parcelLocation",
+                    "page4_validate": "true",
+                    "page1_validate": "true",
+                    "page3_readonlyLabel": "",
+                    "page1_readonly": "",
+                    "page4_readonly": "",
+                    "page2_parentSubFormId": "location",
+                    "page1_label": "General Data",
+                    "page1_readonlyLabel": "",
+                    "page2_validate": "true",
+                    "page4_label": "Classification",
+                    "page2_formDefId": "parcelGeometry"
+                  }
+                },
+                "displayMode": "tab",
+                "ajaxMode": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "parent_id",
+                "value": ""
+              }
+            }
+          ],
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          }
+        }
+      ],
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "visibilityControl": "",
+        "permissionReadonly": "",
+        "permission": {
+          "className": "",
+          "properties": {}
+        },
+        "label": "",
+        "reverse": "",
+        "storeBinder": {
+          "className": "",
+          "properties": {}
+        },
+        "visibilityValue": "",
+        "regex": "",
+        "readonly": "",
+        "loadBinder": {
+          "className": "",
+          "properties": {}
+        },
+        "comment": "",
+        "id": "section1",
+        "join": "",
+        "readonlyLabel": ""
+      }
+    }
+  ],
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+    },
+    "name": "02 - Parcel Registration",
+    "description": "",
+    "id": "parcelRegistration",
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+    },
+    "tableName": "parcelRegistration"
+  }
+}

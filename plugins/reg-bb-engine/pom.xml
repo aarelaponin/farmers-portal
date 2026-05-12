@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>global.govstack</groupId>
+    <artifactId>reg-bb-engine</artifactId>
+    <packaging>bundle</packaging>
+    <version>8.1-SNAPSHOT</version>
+    <name>RegBB Engine</name>
+    <description>
+        GovStack Registration BB — core runtime engine. Renders citizen application
+        screens dynamically from mm_* meta-records (MetaScreenElement); evaluates
+        the rule grammar through DeterminantEvaluator with two internal evaluators
+        (fast-path tree-walker over the closed twenty operator subset; SQL-path
+        compile-and-execute via joget-rules-api for registry-touching and
+        aggregating rules). Single entry point per spec §8.1; routing by AST
+        analysis per ADR-001 revision 2. Phase 1 ships fast-path only; SQL-path
+        wires Week 4 per phase-1-plan.md.
+    </description>
+    <url>https://www.govstack.global</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jogetVersion>8.1-SNAPSHOT</jogetVersion>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>joget-internal</id>
+            <url>https://developer.joget.org/archiva/repository/internal</url>
+        </repository>
+        <repository>
+            <id>joget-snapshots</id>
+            <url>https://developer.joget.org/archiva/repository/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <skipTests>false</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>5.1.9</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>global.govstack.regbb.engine.api</Export-Package>
+                        <Private-Package>{local-packages}</Private-Package>
+                        <Bundle-Activator>global.govstack.regbb.engine.Activator</Bundle-Activator>
+                        <Include-Resource>
+                            {maven-resources}
+                        </Include-Resource>
+                        <Import-Package>!*,org.joget.commons.util,org.joget.plugin.base,org.joget.plugin.property.model,org.joget.plugin.property.service,org.joget.apps.app.dao,org.joget.apps.app.lib,org.joget.apps.app.model,org.joget.apps.app.service,org.joget.apps.form.dao,org.joget.apps.form.model,org.joget.apps.form.service,org.joget.apps.form.lib,org.joget.workflow.util,org.joget.workflow.model,org.joget.workflow.model.service,javax.servlet,javax.servlet.http,javax.sql,org.osgi.framework;version="1.3.0"</Import-Package>
+                        <Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency>
+                        <Embed-Transitive>true</Embed-Transitive>
+                        <Embed-Directory>dependency</Embed-Directory>
+                        <Embed-StripGroup>true</Embed-StripGroup>
+                        <DynamicImport-Package>*</DynamicImport-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.joget</groupId>
+            <artifactId>wflow-core</artifactId>
+            <version>${jogetVersion}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>javax.servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+        <!-- Generic status-lifecycle framework, shared with form-quality-runtime.
+             Notifications (PENDING → SENT/SKIPPED/FAILED/DEAD_LETTER) go through
+             StatusFramework.transition() so every flip writes one row to
+             app_fd_audit_log automatically. See decision-log D53. -->
+        <dependency>
+            <groupId>global.govstack</groupId>
+            <artifactId>joget-status-framework</artifactId>
+            <version>8.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.11.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

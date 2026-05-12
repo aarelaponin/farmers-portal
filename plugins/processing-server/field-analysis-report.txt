@@ -1,0 +1,148 @@
+=== Field Type Classification Report ===
+
+
+LOV_YES_NO (12 fields):
+  - canReadWrite (LOV_YES_NO) options: [yes, no] [REQUIRED]
+  - creditDefault (LOV_YES_NO) options: [yes, no]
+  - cropProduction (LOV_YES_NO) options: [yes, no] [REQUIRED]
+  - everOnISP (LOV_YES_NO) options: [yes, no]
+  - fertilizerApplied (LOV_YES_NO) options: [yes, no] [REQUIRED]
+  - gainfulEmployment (LOV_YES_NO) options: [yes, no]
+  - governmentEmployed (LOV_YES_NO) options: [yes, no]
+  - hasLivestock (LOV_YES_NO) options: [yes, no] [REQUIRED]
+  - member_of_cooperative (LOV_YES_NO) options: [yes, no]
+  - otherInputSupport (LOV_YES_NO) options: [yes, no]
+  - pesticidesApplied (LOV_YES_NO) options: [yes, no] [REQUIRED]
+  - relativeSupport (LOV_YES_NO) options: [yes, no]
+
+LOV_ONE_TWO (3 fields):
+  - chronicallyIll (LOV_ONE_TWO) options: [1, 2]
+  - livestockProduction (LOV_ONE_TWO) options: [1, 2] [REQUIRED]
+  - participatesInAgriculture (LOV_ONE_TWO) options: [1, 2]
+
+LOV_CUSTOM (3 fields):
+  - gender (LOV_CUSTOM) options: [male, female] [REQUIRED]
+  - sex (LOV_CUSTOM) options: [male, female] [REQUIRED]
+  - supportFrequency (LOV_CUSTOM) options: [monthly, seasonal]
+
+MASTERDATA (21 fields):
+  - agriculturalManagementSkills (MASTERDATA) [source: educationLevel] [REQUIRED]
+  - agroEcologicalZone (MASTERDATA) [source: agroEcologicalZones]
+  - areaUnit (MASTERDATA) [source: areaUnit] [REQUIRED]
+  - conservationPractices (MASTERDATA) [source: conservationPractice]
+  - cropType (MASTERDATA) [source: crops] [REQUIRED]
+  - disability (MASTERDATA) [source: disabilityStatus]
+  - district (MASTERDATA) [source: district] [REQUIRED]
+  - income_sources (MASTERDATA) [source: incomeSource]
+  - livestockType (MASTERDATA) [source: livestockType] [REQUIRED]
+  - mainSourceAgriculturalInfo (MASTERDATA) [source: infoSource] [REQUIRED]
+  - mainSourceFarmLabour (MASTERDATA) [source: farmLabourSource] [REQUIRED]
+  - mainSourceIncome (MASTERDATA) [source: incomeSource] [REQUIRED]
+  - mainSourceLivelihood (MASTERDATA) [source: livelihoodSource] [REQUIRED]
+  - marital_status (MASTERDATA) [source: maritalStatus]
+  - orphanhoodStatus (MASTERDATA) [source: orphanhoodStatus]
+  - preferred_language (MASTERDATA) [source: language]
+  - registrationChannel (MASTERDATA) [source: registrationChannel]
+  - relationship (MASTERDATA) [source: relationship] [REQUIRED]
+  - residency_type (MASTERDATA) [source: residencyType]
+  - shocks_hazards (MASTERDATA) [source: hazard]
+  - supportProgram (MASTERDATA) [source: supportProgram]
+
+TEXT (40 fields):
+  - access_to_services (TEXT)
+  - areaCultivated (TEXT) [REQUIRED]
+  - averageAnnualIncome (TEXT) [REQUIRED]
+  - bagsHarvested (TEXT) [REQUIRED]
+  - communityCouncil (TEXT)
+  - conservationAgricultureLand (TEXT)
+  - conservationPracticesOther (TEXT)
+  - cooperative_name (TEXT)
+  - cultivatedLand (TEXT)
+  - declarationFullName (TEXT) [REQUIRED]
+  - distanceAgriculturalMarket (TEXT)
+  - distanceLivestockMarket (TEXT)
+  - distancePrimarySchool (TEXT)
+  - distancePublicHospital (TEXT)
+  - distancePublicTransport (TEXT)
+  - distanceWaterSource (TEXT)
+  - email_address (TEXT)
+  - extension_officer_name (TEXT)
+  - first_name (TEXT) [REQUIRED]
+  - formalTransfers (TEXT)
+  - gpsLatitude (TEXT)
+  - gpsLongitude (TEXT)
+  - informalTransfers (TEXT)
+  - last_name (TEXT) [REQUIRED]
+  - memberName (TEXT) [REQUIRED]
+  - mobile_number (TEXT)
+  - monthlyExpenditure (TEXT) [REQUIRED]
+  - national_id (TEXT) [REQUIRED]
+  - networkAssociations (TEXT)
+  - networkRelatives (TEXT)
+  - networksSupport (TEXT)
+  - numberOfFemale (TEXT)
+  - numberOfMale (TEXT)
+  - otherHazards (TEXT)
+  - ownedRentedLand (TEXT)
+  - registrationStation (TEXT)
+  - totalAvailableLand (TEXT)
+  - totalLoans12Months (TEXT)
+  - village (TEXT) [REQUIRED]
+  - yearsInArea (TEXT)
+
+HIDDEN (5 fields):
+  - declaration_key (HIDDEN)
+  - farmer_id (HIDDEN)
+  - income_programs_key (HIDDEN)
+  - parent_id (HIDDEN)
+  - registrationStatus (HIDDEN)
+
+UNKNOWN (48 fields):
+  - accessServicesSection (UNKNOWN)
+  - agriculturalActivitiesSection (UNKNOWN)
+  - beneficiaryCode (UNKNOWN)
+  - conservationSection (UNKNOWN)
+  - copingMechanisms (UNKNOWN)
+  - cropInstruction (UNKNOWN)
+  - cropManagement (UNKNOWN)
+  - cropManagementForm (UNKNOWN)
+  - cropSection (UNKNOWN)
+  - date_of_birth (UNKNOWN)
+  - declarationConsent (UNKNOWN) [REQUIRED]
+  - declarationHeader (UNKNOWN)
+  - declarationSection (UNKNOWN)
+  - declarationText (UNKNOWN)
+  - farmSizeSection (UNKNOWN)
+  - farmerAgriculture (UNKNOWN)
+  - farmerBasicInfo (UNKNOWN)
+  - farmerCropsLivestock (UNKNOWN)
+  - farmerDeclaration (UNKNOWN)
+  - farmerHousehold (UNKNOWN)
+  - farmerIncomePrograms (UNKNOWN)
+  - farmerLocation (UNKNOWN)
+  - farmerRegistrationForm (UNKNOWN)
+  - farmerRegistrationWizard (UNKNOWN)
+  - field12 (UNKNOWN)
+  - field13 (UNKNOWN) [REQUIRED]
+  - hazardsSection (UNKNOWN)
+  - householdInstruction (UNKNOWN)
+  - householdMemberForm (UNKNOWN)
+  - householdMembers (UNKNOWN)
+  - householdSection (UNKNOWN)
+  - incomeSection (UNKNOWN)
+  - livestockDetails (UNKNOWN)
+  - livestockDetailsForm (UNKNOWN)
+  - livestockSection (UNKNOWN)
+  - locationSection (UNKNOWN)
+  - mainSection (UNKNOWN)
+  - officialSection (UNKNOWN)
+  - personal_information (UNKNOWN)
+  - programSection (UNKNOWN)
+  - registrationInfo (UNKNOWN)
+  - section1 (UNKNOWN)
+  - section2 (UNKNOWN)
+  - section3 (UNKNOWN)
+  - section4 (UNKNOWN)
+  - signatureSection (UNKNOWN)
+  - socialSafetySection (UNKNOWN)
+  - supportType (UNKNOWN)

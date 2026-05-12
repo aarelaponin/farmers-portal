@@ -1,0 +1,271 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "farmerCropsLivestock",
+        "name": "01.05 - Farmer Crops and Livestock",
+        "tableName": "farmer_crop_livestck",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "description": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "create"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "cropInstruction",
+                                "label": "",
+                                "value": "<div class='alert alert-info'><strong>Instructions:</strong> List up to 5 major crops you grew last farming season</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.plugin.enterprise.FormGrid",
+                            "properties": {
+                                "showRowNumber": "true",
+                                "disabledDelete": "",
+                                "errorMessage": "Invalid crop data",
+                                "deleteSubformData": "",
+                                "pageSize": "10",
+                                "label": "Crop Management",
+                                "enableSorting": "",
+                                "deleteFiles": "",
+                                "readonly": "",
+                                "deleteGridData": "",
+                                "disabledAdd": "",
+                                "width": "100%",
+                                "abortRelatedRunningProcesses": "",
+                                "readonlyLabel": "",
+                                "height": "300",
+                                "id": "cropManagement",
+                                "formDefId": "cropManagementForm",
+                                "options": [
+                                    {
+                                        "value": "cropType",
+                                        "label": "Crop Type",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "150"
+                                    },
+                                    {
+                                        "value": "areaCultivated",
+                                        "label": "Area Cultivated",
+                                        "formatType": "text",
+                                        "format": "",
+                                        "width": "120"
+                                    },
+                                    {
+                                        "value": "areaUnit",
+                                        "label": "Unit",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "100"
+                                    },
+                                    {
+                                        "value": "bagsHarvested",
+                                        "label": "50kg Bags Harvested",
+                                        "formatType": "text",
+                                        "format": "",
+                                        "width": "150"
+                                    },
+                                    {
+                                        "value": "fertilizerApplied",
+                                        "label": "Fertilizer Applied",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "120"
+                                    },
+                                    {
+                                        "value": "pesticidesApplied",
+                                        "label": "Pesticides Applied",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "120"
+                                    }
+                                ],
+                                "submit-label-normal": "",
+                                "submit-label-readonly": "",
+                                "deleteMessage": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "uniqueKey": "",
+                                "validateMinRow": "",
+                                "validateMaxRow": "5",
+                                "loadBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "cropManagementForm",
+                                        "foreignKey": "farmer_id"
+                                    }
+                                },
+                                "storeBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "cropManagementForm",
+                                        "foreignKey": "farmer_id"
+                                    }
+                                },
+                                "requestParams": []
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Crop Production Details",
+                "id": "cropSection"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "readonly": "",
+                                "label": "Do you have livestock?",
+                                "readonlyLabel": "",
+                                "id": "hasLivestock",
+                                "options": [
+                                    {
+                                        "value": "yes",
+                                        "label": "Yes",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "no",
+                                        "label": "No",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.plugin.enterprise.FormGrid",
+                            "properties": {
+                                "showRowNumber": "true",
+                                "disabledDelete": "",
+                                "errorMessage": "Invalid livestock data",
+                                "deleteSubformData": "",
+                                "pageSize": "20",
+                                "label": "Livestock Details",
+                                "enableSorting": "",
+                                "deleteFiles": "",
+                                "readonly": "",
+                                "deleteGridData": "",
+                                "disabledAdd": "",
+                                "width": "100%",
+                                "abortRelatedRunningProcesses": "",
+                                "readonlyLabel": "",
+                                "height": "300",
+                                "id": "livestockDetails",
+                                "formDefId": "livestockDetailsForm",
+                                "options": [
+                                    {
+                                        "value": "livestockType",
+                                        "label": "Livestock Type",
+                                        "formatType": "options",
+                                        "format": "",
+                                        "width": "200"
+                                    },
+                                    {
+                                        "value": "numberOfMale",
+                                        "label": "Number (Male)",
+                                        "formatType": "text",
+                                        "format": "",
+                                        "width": "120"
+                                    },
+                                    {
+                                        "value": "numberOfFemale",
+                                        "label": "Number (Female)",
+                                        "formatType": "text",
+                                        "format": "",
+                                        "width": "120"
+                                    }
+                                ],
+                                "submit-label-normal": "",
+                                "submit-label-readonly": "",
+                                "deleteMessage": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "uniqueKey": "",
+                                "validateMinRow": "",
+                                "validateMaxRow": "",
+                                "loadBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "livestockDetailsForm",
+                                        "foreignKey": "farmer_id"
+                                    }
+                                },
+                                "storeBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "livestockDetailsForm",
+                                        "foreignKey": "farmer_id"
+                                    }
+                                },
+                                "requestParams": [],
+                                "controlField": "hasLivestock",
+                                "controlValue": "yes"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Livestock Information",
+                "id": "livestockSection"
+            }
+        }
+    ]
+}

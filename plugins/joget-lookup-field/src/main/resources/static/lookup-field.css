@@ -1,0 +1,29 @@
+/**
+ * Lookup Field Plugin Styles
+ * These styles are also included inline in the FTL template for reliability
+ */
+
+.lookup-field-cell {
+    margin-bottom: 10px;
+}
+
+.lookup-field-display {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    min-width: 100px;
+    min-height: 1.2em;
+}
+
+.lookup-field-input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 4px 8px;
+}
+
+.lookup-field-loading {
+    color: #999;
+    font-style: italic;
+}

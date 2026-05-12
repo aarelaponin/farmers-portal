@@ -1,0 +1,79 @@
+{
+  "testData": [{
+    "resourceType": "Person",
+    "id": "test-mixed-001",
+    "meta": {
+      "profile": ["https://govstack.global/Registration/StructureDefinition/Person"],
+      "lastUpdated": "2025-01-29T01:00:00Z"
+    },
+
+    "identifiers": [{
+      "type": "NationalId",
+      "value": "MIXED001"
+    }],
+
+    "name": {
+      "given": ["Mixed", "Format"],
+      "family": "Test"
+    },
+
+    "gender": "female",
+    "birthDate": "1985-06-15",
+
+    "extension": {
+      "_comment": "This tests mixed formats - some strings, some booleans",
+
+      "extensionOfficer": "Test Officer",
+      "cooperativeMember": "no",
+
+      "farmDetails": {
+        "ownedRentedLand": 2.5,
+        "totalAvailableLand": 2.5,
+        "cultivatedLand": 2.0
+      },
+
+      "agriculturalActivities": {
+        "engagedInLivestockProduction": "1",
+        "engagedInCropProduction": true,
+        "canReadWrite": "yes",
+        "mainSourceFarmLabour": "Seasonally Hired",
+        "fertilizerApplied": false,
+        "pesticidesApplied": "no"
+      },
+
+      "incomeAndPrograms": {
+        "everOnISP": "yes"
+      }
+    },
+
+    "relatedPerson": [{
+      "id": "hh-mixed-01",
+      "name": {
+        "text": "Mixed Member One"
+      },
+      "gender": "male",
+      "birthDate": "2010-03-20",
+      "relationship": "child",
+      "extension": {
+        "orphanhoodStatus": "both_alive",
+        "participatesInAgriculture": "2",
+        "disabilityStatus": "none",
+        "chronicallyIll": false
+      }
+    }, {
+      "id": "hh-mixed-02",
+      "name": {
+        "text": "Mixed Member Two"
+      },
+      "gender": "female",
+      "birthDate": "2015-07-10",
+      "relationship": "child",
+      "extension": {
+        "orphanhoodStatus": "both_alive",
+        "participatesInAgriculture": true,
+        "disabilityStatus": "none",
+        "chronicallyIll": "1"
+      }
+    }]
+  }]
+}

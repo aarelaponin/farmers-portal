@@ -1,0 +1,1180 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "farmerSubsidyApplication",
+        "name": "Subsidy Application Form",
+        "tableName": "asms_application",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "description": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "create"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section1Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>1. Applicant Identification</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.IdGeneratorField",
+                            "properties": {
+                                "format": "FA-??????",
+                                "envVariable": "counter",
+                                "isDistributedGeneration": "",
+                                "label": "Document Number",
+                                "id": "document_number",
+                                "hidden": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "National ID",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "nationalId",
+                                "value": "",
+                                "maxlength": "20",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "message": "National ID is required and must match your farmer registration"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter your National ID",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "nationalIdNote",
+                                "label": "",
+                                "value": "<div class='alert alert-warning' style='margin-top: 10px;'><i class='fas fa-info-circle'></i> <strong>Note:</strong> The system will automatically retrieve your farmer registration information using your National ID. Ensure you have already registered in the Farmers Registry.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "true",
+                                "style": "",
+                                "label": "Last Name",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "last_name",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": "",
+                                "permissionHidden": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "true",
+                                "style": "",
+                                "label": "First Name",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "first_name",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": "",
+                                "permissionHidden": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "true",
+                                "style": "",
+                                "label": "Full Name",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "full_name",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": "",
+                                "permissionHidden": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "dateFormat": "yy-mm-dd",
+                                "yearRange": "c-0:c+0",
+                                "readonly": "true",
+                                "label": "Application Date",
+                                "readonlyLabel": "",
+                                "id": "applicationDate",
+                                "value": "",
+                                "currentDateAs": "systemDate",
+                                "datePickerType": "dateTime",
+                                "format": "yy-mm-dd",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "applicationStatus",
+                                "value": "DRAFT",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Applicant Identification",
+                "id": "applicant_identification",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            }
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Program Data",
+                "id": "program_data",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section2Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>2. Program Selection</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "programInfoNote",
+                                "label": "",
+                                "value": "<div class='alert alert-info' style='margin-top: 10px;'><i class='fas fa-lightbulb'></i> <strong>Tip:</strong> Only active programs within their application period are shown. The form will display relevant sections based on your selected program type.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Subsidy Program",
+                                "readonlyLabel": "",
+                                "id": "subsidy_program",
+                                "iconIncluded": false,
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "subsidyProgramSimple",
+                                        "idColumn": "program_code",
+                                        "labelColumn": "programName",
+                                        "groupingColumn": "",
+                                        "extraCondition": "",
+                                        "addEmptyOption": "true",
+                                        "emptyLabel": "",
+                                        "useAjax": "",
+                                        "cacheInterval": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "General Questions",
+                "id": "general_questions",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section3Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>3. Common Application Questions</h4><p>These questions apply to all program types</p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "label": "Current Food Security Status",
+                                "readonlyLabel": "",
+                                "id": "foodSecurityStatus",
+                                "options": [
+                                    {
+                                        "value": "low",
+                                        "label": "Low",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "moderate",
+                                        "label": "Moderate",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "good",
+                                        "label": "Good",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Please indicate your food security status"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "multiple": "",
+                                "size": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "true",
+                                "style": "",
+                                "label": "Previous Support Programs Received",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "previous_programs",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": "",
+                                "permissionHidden": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "style": "",
+                                "label": "Reason for Application",
+                                "readonlyLabel": "",
+                                "id": "applicationReason",
+                                "value": "",
+                                "cols": "60",
+                                "rows": "4",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "placeholder": "Briefly explain why you are applying for this subsidy",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Input Subsidy Details",
+                "id": "input_subsidy_details",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section4Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>4. Input Subsidy Details</h4><p>Complete this section for Input Subsidy programs</p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Input Type",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "input_type",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Equipment Support Details",
+                "id": "training_program",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section5Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>5. Equipment Support Details</h4><p>Complete this section for Equipment Support programs</p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Equipment Type",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "equipment_type",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Training Program Details",
+                "id": "training_program_details",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section6Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>6. Training Program Details</h4><p>Complete this section for Training programs</p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "style": "",
+                                "label": "Learning Objectives",
+                                "readonlyLabel": "",
+                                "id": "learningObjectives",
+                                "value": "",
+                                "cols": "60",
+                                "rows": "4",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "placeholder": "What do you hope to learn from this training?",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Cash Transfer Details",
+                "id": "cash_transfer_details",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section7Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>7. Cash Transfer Details</h4><p>Complete this section for Cash Transfer programs</p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Primary Purpose of Cash Transfer",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "purpose_of_cash",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "style": "",
+                                "label": "Detailed Expenditure Plan",
+                                "readonlyLabel": "",
+                                "id": "expenditurePlan",
+                                "value": "",
+                                "cols": "60",
+                                "rows": "6",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Detailed plan required (minimum 100 characters)"
+                                    }
+                                },
+                                "placeholder": "Provide a detailed plan of how you intend to use the cash transfer (minimum 100 characters)",
+                                "workflowVariable": "",
+                                "requiredSanitize": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Livestock Support Details",
+                "id": "livestock_support_details",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section8Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>8. Livestock Support Details</h4><p>Complete this section for Livestock programs</p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Livestock Veterinary Requests",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "livestock_veterinary_requests",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "style": "",
+                                "label": "Livestock Management Plan",
+                                "readonlyLabel": "",
+                                "id": "livestockManagementPlan",
+                                "value": "",
+                                "cols": "60",
+                                "rows": "4",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "placeholder": "Describe your current livestock management practices",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Payment Preference",
+                "id": "payment_preference",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section9Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>9. Payment Preference</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Preferred Payment Method",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "preferred_payment_method",
+                                "iconIncluded": false,
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "disableIncrementDecrementArrow": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Bank Account Number",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "bankAccountNumber",
+                                "value": "",
+                                "maxlength": "20",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Required for bank transfer",
+                                "size": "",
+                                "controlField": "paymentPreference",
+                                "controlValue": "BANK_TRANSFER",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Mobile Money Number",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "mobileMoneyNumber",
+                                "value": "",
+                                "maxlength": "15",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "+266 XXXX XXXX",
+                                "size": "",
+                                "controlField": "paymentPreference",
+                                "controlValue": "MOBILE_MONEY",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Supporting Documents",
+                "id": "supporting_documents",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section10Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>10. Supporting Documents</h4><p>Upload required documents as specified by the program</p>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "readonly": "",
+                                "label": "Required Documents (max 100 KB)",
+                                "readonlyLabel": "",
+                                "id": "requiredDocuments",
+                                "value": "",
+                                "maxSize": "100",
+                                "fileType": "image/*,application/pdf",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "size": "",
+                                "workflowVariable": "",
+                                "maxSizeMsg": "",
+                                "fileTypeMsg": "",
+                                "removeFile": "",
+                                "resizeWidth": "",
+                                "resizeHeight": "",
+                                "resizeQuality": "",
+                                "resizeMethod": "",
+                                "permissionType": "",
+                                "multiple": "",
+                                "padding": "",
+                                "attachment": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Declaration and Consent",
+                "id": "declaration_and_consent",
+                "readonly": "",
+                "readonlyLabel": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "join": "",
+                "reverse": "",
+                "visibilityControl": "",
+                "visibilityValue": "",
+                "regex": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "comment": ""
+            },
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    },
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "section11Header",
+                                "label": "",
+                                "value": "<h4 class='section-header'>11. Declaration and Consent</h4>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "declarationText",
+                                "label": "",
+                                "value": "<div style='background-color: #f8f9fa; padding: 20px; border: 1px solid #dee2e6; border-radius: 5px; margin-bottom: 20px;'><h5>Declaration:</h5><p>I hereby declare that:</p><ol><li>I am a registered farmer in the Lesotho Farmers Registry.</li><li>All information provided in this application is true, accurate, and complete.</li><li>I have not applied for the same subsidy from any other source for this season.</li><li>I understand that providing false information may result in disqualification and legal action.</li><li>I authorize the Ministry of Agriculture to verify all information provided.</li><li>I agree to use the subsidy for its intended purpose only.</li><li>I will comply with all program requirements and conditions.</li></ol></div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "readonly": "",
+                                "label": "Consent",
+                                "readonlyLabel": "",
+                                "id": "declarationConsent",
+                                "options": [
+                                    {
+                                        "value": "agree_declaration",
+                                        "label": "I have read and agree to the declaration above",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "agree_terms",
+                                        "label": "I agree to the terms and conditions of the selected program",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "consent_verification",
+                                        "label": "I consent to verification of my application and farmer registration information",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "consent_data_use",
+                                        "label": "I consent to the use of my data for subsidy management and agricultural programs",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "You must agree to all terms to submit your application"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.plugin.enterprise.Signature",
+                            "properties": {
+                                "saveType": "",
+                                "signatureColor": "#000000",
+                                "signatureMin": "1",
+                                "label": "Signature",
+                                "userSigColorCustomizationCheck": "",
+                                "userSigThicknessCusomizationCheck": "",
+                                "encryption": "true",
+                                "readonly": "",
+                                "width": "200",
+                                "userSigBackgroundColorCustomizationCheck": "",
+                                "signatureBackgroundColor": "#FFFFFF",
+                                "signatureMax": "3",
+                                "height": "80",
+                                "id": "signature",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "dateFormat": "yy-mm-dd",
+                                "yearRange": "c-0:c+0",
+                                "readonly": "true",
+                                "label": "Declaration Date",
+                                "readonlyLabel": "",
+                                "id": "declarationDate",
+                                "value": "",
+                                "currentDateAs": "",
+                                "datePickerType": "",
+                                "format": "yy-mm-dd",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "size": "",
+                                "workflowVariable": "",
+                                "iconIncluded": false,
+                                "allowManual": "",
+                                "dataFormat": "",
+                                "startDateFieldId": "",
+                                "endDateFieldId": "",
+                                "placeholder": "",
+                                "disableWeekends": "",
+                                "permissionHidden": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

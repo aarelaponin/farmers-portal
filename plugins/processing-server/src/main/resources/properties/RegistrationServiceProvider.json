@@ -1,0 +1,49 @@
+[
+    {
+        "title": "@@RegistrationServiceProvider.config@@",
+        "properties": [
+            {
+                "name": "useGovStack",
+                "label": "@@RegistrationServiceProvider.useGovStack@@",
+                "type": "checkbox",
+                "value": "true",
+                "description": "@@RegistrationServiceProvider.useGovStack.desc@@",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": "@@RegistrationServiceProvider.useGovStack.enable@@"
+                    }
+                ]
+            },
+            {
+                "name": "serviceId",
+                "label": "@@RegistrationServiceProvider.serviceId@@",
+                "type": "textfield",
+                "value": "farmers_registry",
+                "required": "true",
+                "description": "@@RegistrationServiceProvider.serviceId.desc@@"
+            },
+            {
+                "name": "formId",
+                "label": "@@RegistrationServiceProvider.formId@@",
+                "type": "textfield",
+                "value": "farmerRegistrationForm",
+                "required": "true",
+                "description": "@@RegistrationServiceProvider.formId.desc@@"
+            },
+            {
+                "name": "useV3",
+                "label": "Use Configuration-Driven Implementation (V3)",
+                "type": "checkbox",
+                "value": "true",
+                "description": "Enable V3 implementation with metadata-driven field mappings and grid handling. Disable to use V2 (legacy hardcoded mappings).",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": "Enabled (Recommended)"
+                    }
+                ]
+            }
+        ]
+    }
+]

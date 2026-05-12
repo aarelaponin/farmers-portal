@@ -1,0 +1,378 @@
+service:
+  id: farmers_registry
+  name: Farmers Registry Service
+  version: '1.0'
+  govstackVersion: '1.0'
+metadata:
+  masterDataFields:
+  - agriculturalManagementSkills
+  - agroEcologicalZone
+  - areaUnit
+  - conservationPractices
+  - cropType
+  - disability
+  - district
+  - income_sources
+  - livestockType
+  - mainSourceAgriculturalInfo
+  - mainSourceFarmLabour
+  - mainSourceIncome
+  - mainSourceLivelihood
+  - marital_status
+  - orphanhoodStatus
+  - preferred_language
+  - registrationChannel
+  - relationship
+  - residency_type
+  - shocks_hazards
+  - supportProgram
+  fieldNormalization:
+    yesNo:
+    - canReadWrite
+    - creditDefault
+    - cropProduction
+    - everOnISP
+    - fertilizerApplied
+    - gainfulEmployment
+    - governmentEmployed
+    - hasLivestock
+    - member_of_cooperative
+    - otherInputSupport
+    - pesticidesApplied
+    - relativeSupport
+    oneTwo:
+    - chronicallyIll
+    - gender
+    - livestockProduction
+    - participatesInAgriculture
+    - sex
+    - supportFrequency
+entities:
+  primary:
+    type: Person
+    identifierTypes:
+    - NationalId
+    - Farmers_registryNumber
+serviceConfig:
+  parentFormId: farmerRegistrationForm
+  defaults:
+    gridParentField: farmer_id
+    gridParentColumn: c_farmer_id
+  sectionToFormMap:
+    cropManagementForm: cropManagementForm
+    farmerAgriculture: farmerAgriculture
+    farmerBasicInfo: farmerBasicInfo
+    farmerCropsLivestock: farmerCropsLivestock
+    farmerDeclaration: farmerDeclaration
+    farmerHousehold: farmerHousehold
+    farmerIncomePrograms: farmerIncomePrograms
+    farmerLocation: farmerLocation
+    householdMemberForm: householdMemberForm
+    livestockDetailsForm: livestockDetailsForm
+  gridMappings:
+    cropManagement:
+      formId: cropManagementForm
+      parentField: farmer_id
+      parentColumn: c_farmer_id
+    livestockDetails:
+      formId: livestockDetailsForm
+      parentField: farmer_id
+      parentColumn: c_farmer_id
+    householdMembers:
+      formId: householdMemberForm
+      parentField: farmer_id
+      parentColumn: c_farmer_id
+formMappings:
+  cropManagementForm:
+    formId: cropManagementForm
+    tableName: app_fd_crop_management
+    primaryKey: c_farmer_id
+    uuidReferenceField: cropManagementForm
+    fields:
+    - joget: cropType
+      govstack: extension.cropType
+      required: true
+    - joget: areaCultivated
+      govstack: extension.areaCultivated
+      transform: numeric
+      required: true
+    - joget: areaUnit
+      govstack: extension.areaUnit
+      required: true
+    - joget: bagsHarvested
+      govstack: extension.bagsHarvested
+      transform: numeric
+      required: true
+    - joget: fertilizerApplied
+      govstack: extension.fertilizerApplied
+      required: true
+    - joget: pesticidesApplied
+      govstack: extension.pesticidesApplied
+      required: true
+  farmerAgriculture:
+    formId: farmerAgriculture
+    tableName: app_fd_farmer_activity
+    primaryKey: c_farmer_id
+    uuidReferenceField: agriculture
+    fields:
+    - joget: cropProduction
+      govstack: extension.agriculture.cropProduction
+      required: true
+    - joget: livestockProduction
+      govstack: extension.agriculture.livestockProduction
+      required: true
+    - joget: canReadWrite
+      govstack: extension.agriculture.canReadWrite
+      required: true
+    - joget: mainSourceFarmLabour
+      govstack: extension.agriculture.mainSourceFarmLabour
+      required: true
+    - joget: mainSourceLivelihood
+      govstack: extension.agriculture.mainSourceLivelihood
+      required: true
+    - joget: agriculturalManagementSkills
+      govstack: extension.agriculture.agriculturalManagementSkills
+      required: true
+    - joget: mainSourceAgriculturalInfo
+      govstack: extension.agriculture.mainSourceAgriculturalInfo
+      required: true
+    - joget: conservationPractices
+      govstack: extension.agriculture.conservationPractices
+    - joget: conservationPracticesOther
+      govstack: extension.agriculture.conservationPracticesOther
+    - joget: shocks_hazards
+      govstack: extension.agriculture.shocksHazards
+    - joget: otherHazards
+      govstack: extension.agriculture.otherHazards
+    - joget: copingMechanisms
+      govstack: extension.agriculture.copingMechanisms
+  farmerBasicInfo:
+    formId: farmerBasicInfo
+    tableName: app_fd_farmer_basic_data
+    primaryKey: c_farmer_id
+    uuidReferenceField: basicInfo
+    fields:
+    - joget: national_id
+      govstack: identifiers[0].value
+      required: true
+    - joget: first_name
+      govstack: name.given[0]
+      required: true
+    - joget: last_name
+      govstack: name.family
+      required: true
+    - joget: gender
+      govstack: gender
+      required: true
+    - joget: date_of_birth
+      govstack: birthDate
+      transform: date_ISO8601
+    - joget: marital_status
+      govstack: maritalStatus
+    - joget: preferred_language
+      govstack: communication[0].language
+    - joget: mobile_number
+      govstack: telecom[0].value
+    - joget: email_address
+      govstack: telecom[1].value
+    - joget: extension_officer_name
+      govstack: extension.extensionOfficer
+    - joget: member_of_cooperative
+      govstack: extension.cooperativeMember
+    - joget: cooperative_name
+      govstack: extension.cooperativeName
+  farmerCropsLivestock:
+    formId: farmerCropsLivestock
+    tableName: app_fd_farmer_crop_livestck
+    primaryKey: c_farmer_id
+    uuidReferenceField: cropsLivestock
+    fields:
+    - joget: hasLivestock
+      govstack: extension.cropsLivestock.hasLivestock
+      required: true
+  farmerDeclaration:
+    formId: farmerDeclaration
+    tableName: app_fd_farmer_declaration
+    primaryKey: c_farmer_id
+    uuidReferenceField: declaration
+    fields:
+    - joget: declarationConsent
+      govstack: extension.declaration.consent
+      transform: multiCheckbox
+      required: true
+    - joget: declarationFullName
+      govstack: extension.declaration.fullName
+      required: true
+    - joget: field13
+      govstack: extension.field13
+      transform: date_ISO8601
+      required: true
+    - joget: field12
+      govstack: extension.field12
+      transform: base64
+    - joget: registrationStation
+      govstack: extension.declaration.registrationStation
+    - joget: beneficiaryCode
+      govstack: extension.declaration.beneficiaryCode
+    - joget: registrationChannel
+      govstack: extension.declaration.registrationChannel
+    - joget: registrationStatus
+      govstack: extension.registrationStatus
+  farmerHousehold:
+    formId: farmerHousehold
+    tableName: app_fd_farmer_household
+    primaryKey: c_farmer_id
+    uuidReferenceField: household
+  farmerIncomePrograms:
+    formId: farmerIncomePrograms
+    tableName: app_fd_farmer_income
+    primaryKey: c_farmer_id
+    uuidReferenceField: incomePrograms
+    fields:
+    - joget: mainSourceIncome
+      govstack: extension.income.mainSourceIncome
+      required: true
+    - joget: income_sources
+      govstack: extension.income.incomeSources
+    - joget: gainfulEmployment
+      govstack: extension.income.gainfulEmployment
+    - joget: governmentEmployed
+      govstack: extension.income.governmentEmployed
+    - joget: averageAnnualIncome
+      govstack: extension.income.averageAnnualIncome
+      transform: numeric
+      required: true
+    - joget: monthlyExpenditure
+      govstack: extension.income.monthlyExpenditure
+      transform: numeric
+      required: true
+    - joget: relativeSupport
+      govstack: extension.income.relativeSupport
+    - joget: supportFrequency
+      govstack: extension.income.supportFrequency
+    - joget: supportType
+      govstack: extension.income.supportType
+      transform: multiCheckbox
+    - joget: supportProgram
+      govstack: extension.programs.supportProgram
+    - joget: creditDefault
+      govstack: extension.programs.creditDefault
+    - joget: everOnISP
+      govstack: extension.programs.everOnISP
+    - joget: otherInputSupport
+      govstack: extension.programs.otherInputSupport
+    - joget: totalLoans12Months
+      govstack: extension.socialSafety.totalLoans12Months
+      transform: numeric
+    - joget: informalTransfers
+      govstack: extension.socialSafety.informalTransfers
+      transform: numeric
+    - joget: networksSupport
+      govstack: extension.socialSafety.networksSupport
+    - joget: formalTransfers
+      govstack: extension.socialSafety.formalTransfers
+      transform: numeric
+    - joget: networkAssociations
+      govstack: extension.socialSafety.networkAssociations
+      transform: numeric
+    - joget: networkRelatives
+      govstack: extension.socialSafety.networkRelatives
+      transform: numeric
+  farmerLocation:
+    formId: farmerLocation
+    tableName: app_fd_farm_location
+    primaryKey: c_farmer_id
+    uuidReferenceField: location
+    fields:
+    - joget: district
+      govstack: address[0].district
+      required: true
+    - joget: village
+      govstack: address[0].city
+      required: true
+    - joget: communityCouncil
+      govstack: address[0].line[0]
+    - joget: agroEcologicalZone
+      govstack: extension.farmLocation.agroEcologicalZone
+    - joget: residency_type
+      govstack: extension.residencyType
+    - joget: yearsInArea
+      govstack: extension.yearsInArea
+      transform: numeric
+    - joget: gpsLatitude
+      govstack: extension.farmLocation.latitude
+    - joget: gpsLongitude
+      govstack: extension.farmLocation.longitude
+    - joget: ownedRentedLand
+      govstack: extension.farmDetails.ownedRentedLandHectares
+      transform: numeric
+    - joget: totalAvailableLand
+      govstack: extension.farmDetails.totalLandHectares
+      transform: numeric
+    - joget: cultivatedLand
+      govstack: extension.farmDetails.cultivatedLandHectares
+      transform: numeric
+    - joget: conservationAgricultureLand
+      govstack: extension.farmDetails.conservationAgricultureLandHectares
+      transform: numeric
+    - joget: access_to_services
+      govstack: extension.access_to_services
+    - joget: distanceWaterSource
+      govstack: extension.accessToServices.waterSourceKm
+      transform: numeric
+    - joget: distancePrimarySchool
+      govstack: extension.accessToServices.primarySchoolKm
+      transform: numeric
+    - joget: distancePublicHospital
+      govstack: extension.accessToServices.publicHospitalKm
+      transform: numeric
+    - joget: distanceLivestockMarket
+      govstack: extension.accessToServices.livestockMarketKm
+      transform: numeric
+    - joget: distanceAgriculturalMarket
+      govstack: extension.accessToServices.agriculturalMarketKm
+      transform: numeric
+    - joget: distancePublicTransport
+      govstack: extension.accessToServices.publicTransportKm
+      transform: numeric
+  householdMemberForm:
+    formId: householdMemberForm
+    tableName: app_fd_household_members
+    primaryKey: c_farmer_id
+    uuidReferenceField: householdMemberForm
+    fields:
+    - joget: memberName
+      govstack: extension.memberName
+      required: true
+    - joget: sex
+      govstack: extension.sex
+      required: true
+    - joget: date_of_birth
+      govstack: birthDate
+      transform: date_ISO8601
+    - joget: relationship
+      govstack: extension.relationship
+      required: true
+    - joget: orphanhoodStatus
+      govstack: extension.orphanhoodStatus
+    - joget: participatesInAgriculture
+      govstack: extension.participatesInAgriculture
+    - joget: disability
+      govstack: extension.disability
+    - joget: chronicallyIll
+      govstack: extension.chronicallyIll
+  livestockDetailsForm:
+    formId: livestockDetailsForm
+    tableName: app_fd_livestock_details
+    primaryKey: c_farmer_id
+    uuidReferenceField: livestockDetailsForm
+    fields:
+    - joget: livestockType
+      govstack: extension.livestockType
+      required: true
+    - joget: numberOfMale
+      govstack: extension.numberOfMale
+      transform: numeric
+    - joget: numberOfFemale
+      govstack: extension.numberOfFemale
+      transform: numeric

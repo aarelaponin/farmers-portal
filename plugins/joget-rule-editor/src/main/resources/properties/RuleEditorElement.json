@@ -1,0 +1,156 @@
+[
+    {
+        "title": "Configure Editor Plugin",
+        "properties": [
+            {
+                "name": "id",
+                "label": "Field ID",
+                "type": "textfield",
+                "required": "true",
+                "value": "eligibilityScript"
+            },
+            {
+                "name": "label",
+                "label": "Label",
+                "type": "textfield",
+                "value": "Eligibility Rules"
+            },
+            {
+                "name": "scopeCode",
+                "label": "Field Scope Code",
+                "description": "The field scope to use for validation and autocomplete (filters jreFieldDefinition records)",
+                "type": "textfield",
+                "value": "FARMER_ELIGIBILITY"
+            },
+            {
+                "name": "height",
+                "label": "Editor Height",
+                "description": "Height of the editor. Use 'auto' for auto-sizing, or specify a value like '300px' or '50vh'",
+                "type": "textfield",
+                "value": "auto"
+            },
+            {
+                "name": "showDictionary",
+                "label": "Show Field Dictionary",
+                "description": "Show the field dictionary panel for autocomplete",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            },
+            {
+                "name": "showSaveButton",
+                "label": "Show Save Button",
+                "description": "Show a separate save button in the editor toolbar",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "Ruleset Binding",
+        "properties": [
+            {
+                "name": "rulesetCodeField",
+                "label": "Ruleset Code Field ID",
+                "description": "Form field ID to read/write ruleset code. Leave empty to auto-generate new code on save.",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "rulesetNameField",
+                "label": "Ruleset Name Field ID",
+                "description": "Form field ID to read ruleset name/description",
+                "type": "textfield",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "Field Dictionary Filters",
+        "properties": [
+            {
+                "name": "filterCategories",
+                "label": "Filter by Categories",
+                "description": "Select which field categories to show in the dictionary (leave empty for all)",
+                "type": "checkbox",
+                "options": [
+                    {"value": "DEMOGRAPHIC", "label": "Demographic"},
+                    {"value": "LOCATION", "label": "Location"},
+                    {"value": "HOUSEHOLD", "label": "Household"},
+                    {"value": "AGRICULTURAL", "label": "Agricultural"},
+                    {"value": "ECONOMIC", "label": "Economic"},
+                    {"value": "DERIVED", "label": "Derived/Computed"},
+                    {"value": "PROGRAM", "label": "Program"},
+                    {"value": "OTHER", "label": "Other"}
+                ],
+                "value": ""
+            },
+            {
+                "name": "filterFieldTypes",
+                "label": "Filter by Field Types",
+                "description": "Select which field types to show in the dictionary (leave empty for all)",
+                "type": "checkbox",
+                "options": [
+                    {"value": "TEXT", "label": "Text"},
+                    {"value": "NUMBER", "label": "Number"},
+                    {"value": "DECIMAL", "label": "Decimal"},
+                    {"value": "BOOLEAN", "label": "Boolean"},
+                    {"value": "DATE", "label": "Date"},
+                    {"value": "LOOKUP", "label": "Lookup"},
+                    {"value": "GRID", "label": "Grid"}
+                ],
+                "value": ""
+            },
+            {
+                "name": "filterIsGrid",
+                "label": "Filter by Grid Fields",
+                "description": "Filter fields by whether they are grid fields",
+                "type": "radio",
+                "options": [
+                    {"value": "", "label": "All Fields"},
+                    {"value": "Y", "label": "Grid Fields Only"},
+                    {"value": "N", "label": "Non-Grid Fields Only"}
+                ],
+                "value": ""
+            },
+            {
+                "name": "filterLookupFormId",
+                "label": "Filter by Lookup Form ID",
+                "description": "Only show fields with this lookup form ID (leave empty for all)",
+                "type": "textfield",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "API Configuration",
+        "properties": [
+            {
+                "name": "apiEndpoint",
+                "label": "API Base URL",
+                "description": "Base URL for the Rules API (e.g., /jw/api/jre/jre)",
+                "type": "textfield",
+                "value": "/jw/api/jre/jre"
+            },
+            {
+                "name": "apiId",
+                "label": "API ID",
+                "description": "API ID for Rules service authentication (from API Builder)",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "apiKey",
+                "label": "API Key",
+                "description": "API Key for Rules service authentication",
+                "type": "password",
+                "value": ""
+            }
+        ]
+    }
+]

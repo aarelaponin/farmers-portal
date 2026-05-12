@@ -1,0 +1,90 @@
+# Mapping Hints Template for ServicesYamlGenerator
+# This file provides minimal configuration for generating services.yml
+# Copy this template and customize for your service
+
+# ===================================================================
+# SERVICE INFORMATION
+# ===================================================================
+service:
+  id: student_enrollment          # Service ID (lowercase_with_underscores)
+  name: "Student Enrollment Service"
+  version: "1.0"
+  govstackVersion: "1.0"
+
+# ===================================================================
+# FIELD MAPPINGS
+# ===================================================================
+# Define how Joget fields map to GovStack JSON paths
+# Format: joget_field_name: "govstack.json.path"
+#
+# Fields not listed here will use the default_mapping convention below
+field_mappings:
+  # Identifiers (typically map to identifiers array)
+  student_id: "identifiers[0].value"
+  national_id: "identifiers[1].value"
+
+  # Name fields (map to name object)
+  first_name: "name.given[0]"
+  middle_name: "name.given[1]"
+  last_name: "name.family"
+
+  # Standard Person resource fields
+  date_of_birth: "birthDate"
+  gender: "gender"
+  marital_status: "maritalStatus"
+
+  # Contact information (telecom array)
+  email_address: "telecom[0].value"    # Also set telecom[0].system = "email"
+  mobile_number: "telecom[1].value"    # Also set telecom[1].system = "phone"
+
+  # Address fields
+  district: "address[0].district"
+  city: "address[0].city"
+  village: "address[0].city"           # Can map multiple Joget fields to same path
+  street_address: "address[0].line[0]"
+
+  # All other fields go to extension object by default (see below)
+  # enrollment_date: "extension.enrollment.date"  # Uses default_mapping
+  # grade_level: "extension.enrollment.gradeLevel"
+
+# ===================================================================
+# DEFAULT MAPPING CONVENTION
+# ===================================================================
+# For fields not explicitly listed above, apply this pattern
+# {fieldName} will be replaced with the actual field name
+default_mapping: "extension.{fieldName}"
+
+# Examples of what gets generated:
+#   enrollment_date → extension.enrollment_date
+#   grade_level → extension.grade_level
+#   has_scholarship → extension.has_scholarship
+
+# ===================================================================
+# NORMALIZATION PREFERENCES (Optional)
+# ===================================================================
+# Override auto-detected normalization for yes/no fields
+# By default, the generator detects fields with 2 options as yes/no fields
+normalization:
+  # Force these fields to use yes/no (instead of 1/2)
+  force_yesNo:
+    - has_scholarship
+    - participates_in_sports
+    - has_special_needs
+
+  # Force these fields to use 1/2 (instead of yes/no)
+  force_oneTwo:
+    - is_active
+    - is_international
+
+# ===================================================================
+# NOTES
+# ===================================================================
+# 1. Master data fields (with lookup_form) are auto-detected
+# 2. Date fields are auto-detected and get date_ISO8601 transform
+# 3. Multiselect checkboxes with transform_hint are auto-detected
+# 4. Grid relationships are auto-detected from form_structure.yaml
+#
+# You only need to specify:
+#   - Key field mappings (identifiers, name, contact, address)
+#   - Any non-standard mappings that don't follow default convention
+#   - Normalization overrides if needed

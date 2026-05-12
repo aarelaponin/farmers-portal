@@ -1,0 +1,327 @@
+components: 
+  schemas: 
+    ApiResponse: 
+      type: object
+      properties: 
+        date: 
+          format: date
+          type: string
+        code: 
+          format: int32
+          type: integer
+        message: 
+          type: string
+  securitySchemes: 
+    Authorization: 
+      in: header
+      name: Authorization
+      type: apiKey
+    api_id: 
+      in: header
+      name: api_id
+      type: apiKey
+    api_key: 
+      in: header
+      name: api_key
+      type: apiKey
+    token: 
+      in: header
+      name: token
+      type: apiKey
+servers: 
+  - url: "http\x3A//localhost\x3A8084/jw/api"
+openapi: "3.0.1"
+paths: 
+  "/gis/gis/simplify": 
+    post: 
+      summary: "Simplify\x20geometry"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      requestBody: 
+        content: 
+          "application/json": 
+      description: "Reduces\x20the\x20number\x20of\x20vertices\x20using\x20Douglas-Peucker\x20algorithm\x20while\x20preserving\x20the\x20overall\x20shape."
+      operationId: simplify
+      responses: 
+        200: 
+          description: "Simplification\x20successful"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20GeoJSON"
+          content: 
+            "application/json": 
+        422: 
+          description: "Area\x20change\x20exceeds\x20maximum"
+          content: 
+            "application/json": 
+        500: 
+          description: "Server\x20error"
+          content: 
+            "application/json": 
+      tags: 
+        - gis
+  "/gis/gis/batchCalculate": 
+    post: 
+      summary: "Batch\x20calculate\x20geometry\x20metrics"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      requestBody: 
+        content: 
+          "application/json": 
+      description: "Calculates\x20metrics\x20for\x20multiple\x20geometries\x20in\x20a\x20single\x20request."
+      operationId: batchCalculate
+      responses: 
+        200: 
+          description: "Batch\x20calculation\x20completed"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20request"
+          content: 
+            "application/json": 
+        500: 
+          description: "Server\x20error"
+          content: 
+            "application/json": 
+      tags: 
+        - gis
+  "/gis/gis/checkOverlap": 
+    post: 
+      summary: "Check\x20for\x20overlapping\x20geometries"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      requestBody: 
+        content: 
+          "application/json": 
+      description: "Checks\x20if\x20the\x20given\x20polygon\x20overlaps\x20with\x20existing\x20geometries\x20in\x20any\x20Joget\x20form."
+      operationId: checkOverlap
+      responses: 
+        200: 
+          description: "Overlap\x20check\x20completed"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20request"
+          content: 
+            "application/json": 
+        500: 
+          description: "Server\x20error"
+          content: 
+            "application/json": 
+      tags: 
+        - gis
+  "/gis/gis/calculate": 
+    post: 
+      summary: "Calculate\x20geometry\x20metrics"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      requestBody: 
+        content: 
+          "application/json": 
+      description: "Calculates\x20area\x20\x28hectares\x29\x2C\x20perimeter\x20\x28meters\x29\x2C\x20centroid\x2C\x20and\x20bounding\x20box\x20for\x20a\x20given\x20GeoJSON\x20polygon."
+      operationId: calculate
+      responses: 
+        200: 
+          description: "Calculation\x20successful"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20GeoJSON"
+          content: 
+            "application/json": 
+        422: 
+          description: "Invalid\x20geometry\x20type"
+          content: 
+            "application/json": 
+        500: 
+          description: "Server\x20error"
+          content: 
+            "application/json": 
+      tags: 
+        - gis
+  "/gis/gis/geocode": 
+    get: 
+      summary: "Geocode\x20location"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      description: "Search\x20for\x20a\x20location\x20by\x20name\x20and\x20return\x20coordinates\x20\x28uses\x20Nominatim/OpenStreetMap\x29."
+      operationId: geocode
+      responses: 
+        200: 
+          description: "Geocoding\x20successful"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20query"
+          content: 
+            "application/json": 
+        503: 
+          description: "Geocoding\x20service\x20unavailable"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: query
+          name: query
+          required: false
+        - schema: 
+            format: int32
+            type: integer
+          in: query
+          name: limit
+          required: false
+        - schema: 
+            type: string
+          in: query
+          name: countryCode
+          required: false
+        - schema: 
+            type: string
+          in: query
+          name: boundingBox
+          required: false
+      tags: 
+        - gis
+  "/gis/gis/health": 
+    get: 
+      summary: "Health\x20check"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      description: "Returns\x20service\x20health\x20status\x20and\x20version\x20information."
+      operationId: health
+      responses: 
+        200: 
+          description: "Service\x20is\x20healthy"
+          content: 
+            "application/json": 
+      tags: 
+        - gis
+  "/gis/gis/validate": 
+    post: 
+      summary: "Validate\x20geometry"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      requestBody: 
+        content: 
+          "application/json": 
+      description: "Validates\x20a\x20GeoJSON\x20polygon\x20against\x20configurable\x20rules\x20\x28min/max\x20area\x2C\x20min/max\x20vertices\x2C\x20self-intersection\x2C\x20holes\x2C\x20spikes\x29."
+      operationId: validate
+      responses: 
+        200: 
+          description: "Validation\x20completed"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20GeoJSON"
+          content: 
+            "application/json": 
+        500: 
+          description: "Server\x20error"
+          content: 
+            "application/json": 
+      tags: 
+        - gis
+  "/gis/gis/reverseGeocode": 
+    get: 
+      summary: "Reverse\x20geocode"
+      security: 
+        - api_id: 
+          api_key: 
+        - api_id: 
+          api_key: 
+          token: 
+        - Authorization: 
+          api_id: 
+          api_key: 
+      description: "Get\x20place\x20name\x20from\x20coordinates\x20\x28uses\x20Nominatim/OpenStreetMap\x29."
+      operationId: reverseGeocode
+      responses: 
+        200: 
+          description: "Reverse\x20geocoding\x20successful"
+          content: 
+            "application/json": 
+        400: 
+          description: "Invalid\x20coordinates"
+          content: 
+            "application/json": 
+        503: 
+          description: "Geocoding\x20service\x20unavailable"
+          content: 
+            "application/json": 
+      parameters: 
+        - schema: 
+            type: string
+          in: query
+          name: lon
+          required: false
+        - schema: 
+            type: string
+          in: query
+          name: lat
+          required: false
+        - schema: 
+            format: int32
+            type: integer
+          in: query
+          name: zoom
+          required: false
+      tags: 
+        - gis
+info: 
+  description: ""
+  title: gisServer
+  version: "9.0.3"
+tags: 
+  - name: gis
+    description: ""

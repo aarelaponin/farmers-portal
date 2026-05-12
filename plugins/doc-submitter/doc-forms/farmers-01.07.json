@@ -1,0 +1,344 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "farmerDeclaration",
+        "name": "01.07 - Farmer Declaration",
+        "tableName": "farmer_declaration",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "description": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "create"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "id": "parent_id",
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "id": "declaration_key",
+                                "value": "#form.farmerRegistrationForm.id#",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "declarationHeader",
+                                "label": "",
+                                "value": "<div class='alert alert-warning'><h4>Declaration and Consent</h4><p>Please read the following declaration carefully before proceeding with your registration.</p></div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "declarationText",
+                                "label": "",
+                                "value": "<div style='background-color: #f8f9fa; padding: 20px; border: 1px solid #dee2e6; border-radius: 5px; margin-bottom: 20px;'><h5>Declaration:</h5><p>I hereby declare that:</p><ol><li>All information provided in this registration form is true, accurate, and complete to the best of my knowledge.</li><li>I am a resident of Lesotho and engaged in agricultural activities.</li><li>I understand that providing false information may result in disqualification from agricultural subsidy programs.</li><li>I authorize the Ministry of Agriculture and Food Security to verify the information provided.</li><li>I understand that my information will be used for agricultural subsidy management and related government programs.</li><li>I agree to update my information whenever there are significant changes to my farming activities or personal circumstances.</li></ol><h5>Data Protection and Privacy:</h5><p>Your personal information will be:</p><ul><li>Protected in accordance with Lesotho's data protection laws</li><li>Used only for agricultural subsidy management and related government services</li><li>Shared only with authorized government agencies and partners</li><li>Kept confidential and secure</li></ul></div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "readonly": "",
+                                "label": "",
+                                "readonlyLabel": "",
+                                "id": "declarationConsent",
+                                "options": [
+                                    {
+                                        "value": "agree_declaration",
+                                        "label": "I have read and understood the declaration above",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "agree_terms",
+                                        "label": "I agree to the terms and conditions of the agricultural subsidy programs",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "consent_verification",
+                                        "label": "I consent to the verification of my information",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "consent_data_use",
+                                        "label": "I consent to the use of my data for agricultural program management",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "You must agree to all terms to proceed with registration"
+                                    }
+                                },
+                                "controlField": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Declaration",
+                "id": "declarationSection"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Full Name (as per National ID)",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "declarationFullName",
+                                "value": "",
+                                "maxlength": "100",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": "Please enter your full name"
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Enter your full name",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "readonly": "",
+                                "allowManual": "",
+                                "yearRange": "c-10:c+10",
+                                "dataFormat": "yyyy-MM-dd",
+                                "label": "Date Picker",
+                                "datePickerType": "",
+                                "currentDateAs": "",
+                                "disableWeekends": "",
+                                "readonlyLabel": "",
+                                "id": "field13",
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "startDateFieldId": "",
+                                "endDateFieldId": "",
+                                "placeholder": "",
+                                "format": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.plugin.enterprise.Signature",
+                            "properties": {
+                                "encryption": "true",
+                                "readonly": "False",
+                                "width": "200",
+                                "label": "Signature",
+                                "height": "80",
+                                "id": "field12"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Signature",
+                "id": "signatureSection"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "registrationInfo",
+                                "label": "",
+                                "value": "<div class='alert alert-info'><h5>Registration Information</h5><p>This section will be completed by the Extension Officer</p></div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Registration Station",
+                                "readonlyLabel": "",
+                                "storeNumeric": "",
+                                "id": "registrationStation",
+                                "value": "",
+                                "maxlength": "100",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "Station name",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.IdGeneratorField",
+                            "properties": {
+                                "readonly": "true",
+                                "label": "Beneficiary Code",
+                                "readonlyLabel": "",
+                                "id": "beneficiaryCode",
+                                "value": "",
+                                "envVariable": "beneficiaryCounter",
+                                "format": "BEN-????-######",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Registration Channel",
+                                "readonlyLabel": "",
+                                "id": "registrationChannel",
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "registrationChannel",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "groupingColumn": "",
+                                        "extraCondition": "",
+                                        "addEmptyOption": "true",
+                                        "emptyLabel": "",
+                                        "useAjax": "",
+                                        "cacheInterval": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "id": "registrationStatus",
+                                "value": "pending_verification",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "50%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Official Use Only",
+                "id": "officialSection"
+            }
+        }
+    ]
+}

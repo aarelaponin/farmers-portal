@@ -1,0 +1,30 @@
+/**
+ * Concatenation Field Plugin Styles
+ * These styles are also included inline in the FTL template for reliability
+ */
+
+.concat-field-cell {
+    margin-bottom: 10px;
+}
+
+.concat-field-display {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    min-width: 100px;
+    font-family: monospace;
+}
+
+.concat-field-input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 4px 8px;
+    font-family: monospace;
+}
+
+.concat-field-input[type="text"]:read-only {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}

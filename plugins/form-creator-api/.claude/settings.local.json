@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__jetbrains__list_directory_tree",
+      "mcp__jetbrains__find_files_by_glob",
+      "mcp__jetbrains__get_file_text_by_path",
+      "Bash(mvn clean package:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Form Creator API plugin\n\nJoget DX8 API plugin for creating forms programmatically via REST API.\n\nFeatures:\n- REST API endpoint at /jw/api/formcreator/forms\n- Supports JSON and multipart/form-data requests\n- Creates forms with database table generation\n- Optional API endpoint creation \\(createApiEndpoint flag\\)\n- Optional CRUD interface creation \\(createCrud flag\\)\n- Datalist and Userview generation\n- Self-bootstrapping capability\n\nServices:\n- FormCreationService: Main orchestrator\n- FormDatabaseService: Direct database form registration\n- ApiBuilderService: API endpoint creation\n- DatalistService: Datalist definition creation\n- UserviewService: Userview/menu creation\n- CrudService: CRUD interface coordination\n- JsonProcessingService: JSON generation and parsing\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate README to reflect complete implementation\n\n- Remove outdated \"Pending Integration\" sections\n- Add companion tool reference \\(joget-form-generator\\)\n- Simplify and clarify documentation\n- Update architecture diagram\n- Remove obsolete integration steps\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate CLAUDE.md to reflect complete implementation\n\n- Document all implemented services\n- Add companion tool reference\n- Add GitHub repository link\n- Remove outdated TODO references\n- Expand architecture documentation\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(mdfind:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

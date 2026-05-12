@@ -1,0 +1,261 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "cropManagementForm",
+        "name": "01.05-1 - Crop Management Form",
+        "tableName": "crop_management",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "description": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "create"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "id": "farmer_id",
+                                "value": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Crop Type",
+                                "readonlyLabel": "",
+                                "id": "cropType",
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "crops",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "groupingColumn": "",
+                                        "extraCondition": "",
+                                        "addEmptyOption": "true",
+                                        "emptyLabel": "",
+                                        "useAjax": "",
+                                        "cacheInterval": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "Area Cultivated",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "areaCultivated",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "numeric",
+                                        "message": ""
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "0.0",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Area Unit",
+                                "readonlyLabel": "",
+                                "id": "areaUnit",
+                                "options": [],
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "areaUnit",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "groupingColumn": "",
+                                        "extraCondition": "",
+                                        "addEmptyOption": "true",
+                                        "emptyLabel": "",
+                                        "useAjax": "",
+                                        "cacheInterval": ""
+                                    }
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "encryption": "",
+                                "readonly": "",
+                                "style": "",
+                                "label": "50kg Bags Harvested",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true",
+                                "id": "bagsHarvested",
+                                "value": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "numeric",
+                                        "message": ""
+                                    }
+                                },
+                                "requiredSanitize": "",
+                                "placeholder": "0",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Did you apply fertilizer?",
+                                "readonlyLabel": "",
+                                "id": "fertilizerApplied",
+                                "options": [
+                                    {
+                                        "value": "yes",
+                                        "label": "Yes",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "no",
+                                        "label": "No",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "readonly": "",
+                                "multiple": "",
+                                "label": "Did you apply pesticides/herbicides?",
+                                "readonlyLabel": "",
+                                "id": "pesticidesApplied",
+                                "options": [
+                                    {
+                                        "value": "yes",
+                                        "label": "Yes",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "value": "no",
+                                        "label": "No",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "mandatory": "true",
+                                        "type": "",
+                                        "message": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "size": "",
+                                "workflowVariable": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "",
+                "id": "section1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__jetbrains__list_directory_tree",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git fetch:*)"
+    ]
+  }
+}

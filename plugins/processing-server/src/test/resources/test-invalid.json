@@ -1,0 +1,9 @@
+{
+  "testData": [{
+    "resourceType": "Person",
+    "id": "invalid-001",
+    THIS IS INTENTIONALLY INVALID JSON - MISSING QUOTES AND COMMA
+    "identifiers": [{
+      "type": "NationalId"
+      "value": "INVALID"
+    }]

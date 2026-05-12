@@ -1,0 +1,131 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "qa_service",
+    "name": "QA Service",
+    "description": "One row per RegBB service whose forms are governed by quality rules. Identified by serviceId; binds a primary form to a quality lifecycle.",
+    "tableName": "qa_service",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "main",
+        "label": "Service"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service ID",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "regex": "^[a-z0-9_]+$",
+                    "regexMessage": "Lowercase + underscore only (RegBB convention)"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "serviceName",
+                "label": "Service Name",
+                "size": "120",
+                "maxlength": "200",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "primaryFormId",
+                "label": "Primary Form ID",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "govstackVersion",
+                "label": "GovStack RegBB Version",
+                "size": "20",
+                "maxlength": "20",
+                "value": "1.1.0"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "isActive",
+                "label": "Active",
+                "value": "Y",
+                "options": [
+                  {
+                    "value": "Y",
+                    "label": "Yes"
+                  },
+                  {
+                    "value": "N",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "notes",
+                "label": "Notes",
+                "rows": "4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

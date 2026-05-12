@@ -1,0 +1,299 @@
+<!--
+    Rule Editor - Joget Custom HTML Element
+    
+    Add this as a Custom HTML element in your Joget form.
+    
+    Prerequisites:
+    - joget-rule-editor plugin must be installed and enabled
+    - This form should be in a Subsidy Program context (for future integration)
+-->
+
+<!-- Styles -->
+<style>
+.jre-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.jre-messages {
+    padding: 12px;
+    min-height: 40px;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.jre-messages.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.jre-messages.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.jre-messages.loading {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.jre-error-item {
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.jre-error-item:hover {
+    text-decoration: underline;
+}
+
+.jre-toolbar {
+    padding: 8px 12px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 8px;
+}
+
+.jre-toolbar button {
+    padding: 6px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.jre-toolbar button:hover {
+    background: #e9e9e9;
+}
+
+.jre-toolbar button.primary {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.jre-toolbar button.primary:hover {
+    background: #0056b3;
+}
+
+.jre-editor-area {
+    padding: 0;
+}
+
+.jre-editor-area textarea {
+    width: 100%;
+    min-height: 400px;
+    padding: 12px;
+    border: none;
+    font-family: "Monaco", "Menlo", "Consolas", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.jre-editor-area textarea:focus {
+    outline: none;
+    background: #fffef5;
+}
+
+/* Error line highlighting (for future CodeMirror integration) */
+.jre-error-line {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.jre-warning-line {
+    background: rgba(255, 165, 0, 0.1);
+}
+</style>
+
+<!-- HTML Structure -->
+<div id="jre-container" class="jre-container">
+    <!-- Messages Area (above editor) -->
+    <div id="jre-messages" class="jre-messages">
+        Enter Rules Script rules and click "Validate" to check syntax.
+    </div>
+    
+    <!-- Toolbar -->
+    <div class="jre-toolbar">
+        <button type="button" id="jre-validate-btn" class="primary">
+            ✓ Validate
+        </button>
+        <button type="button" id="jre-clear-btn">
+            Clear
+        </button>
+        <button type="button" id="jre-sample-btn">
+            Insert Sample
+        </button>
+    </div>
+    
+    <!-- Editor Area -->
+    <div class="jre-editor-area">
+        <textarea id="jre-script-editor" 
+                  placeholder="# Enter Rules Script rules here&#10;&#10;RULE &quot;My Rule&quot;&#10;  TYPE: INCLUSION&#10;  MANDATORY: YES&#10;&#10;  WHEN age >= 18&#10;&#10;  FAIL MESSAGE: &quot;Must be 18 or older&quot;"></textarea>
+    </div>
+    
+    <!-- Hidden field for form submission -->
+    <input type="hidden" id="eligibilityScript" name="eligibilityScript" value="">
+</div>
+
+<!-- JavaScript -->
+<script>
+(function() {
+    'use strict';
+    
+    // Configuration
+    var API_BASE = '#request.contextPath#/jw/api/erel';
+    
+    // If running outside Joget, use absolute path
+    if (API_BASE.indexOf('#') === 0) {
+        API_BASE = '/jw/api/erel';
+    }
+    
+    // DOM elements
+    var $messages = $('#jre-messages');
+    var $editor = $('#jre-script-editor');
+    var $hiddenField = $('#eligibilityScript');
+    
+    // Sync editor to hidden field on change
+    $editor.on('input', function() {
+        $hiddenField.val($editor.val());
+    });
+    
+    // Load existing value if present
+    var existingValue = $hiddenField.val();
+    if (existingValue) {
+        $editor.val(existingValue);
+    }
+    
+    // Validate button click
+    $('#jre-validate-btn').click(function() {
+        var script = $editor.val();
+        
+        // Clear previous state
+        $messages.removeClass('success error loading')
+                 .addClass('loading')
+                 .html('Validating...');
+        
+        // Call API
+        $.ajax({
+            url: API_BASE + '/rules/validate',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ script: script }),
+            dataType: 'json',
+            success: function(response) {
+                displayResult(response);
+            },
+            error: function(xhr, status, error) {
+                $messages.removeClass('loading')
+                         .addClass('error')
+                         .html('Validation request failed: ' + error);
+            }
+        });
+    });
+    
+    // Clear button click
+    $('#jre-clear-btn').click(function() {
+        if (confirm('Clear all content?')) {
+            $editor.val('');
+            $hiddenField.val('');
+            $messages.removeClass('success error loading')
+                     .html('Editor cleared. Enter Rules Script rules and click "Validate".');
+        }
+    });
+    
+    // Insert sample button click
+    $('#jre-sample-btn').click(function() {
+        var sample = 
+            '# Sample Rules Script Rules\n\n' +
+            'RULE "Adult Farmer"\n' +
+            '  TYPE: INCLUSION\n' +
+            '  MANDATORY: YES\n' +
+            '\n' +
+            '  WHEN age >= 18\n' +
+            '\n' +
+            '  FAIL MESSAGE: "Applicant must be 18 years or older"\n\n' +
+            'RULE "Has Agricultural Activity"\n' +
+            '  TYPE: INCLUSION\n' +
+            '  MANDATORY: YES\n' +
+            '\n' +
+            '  WHEN hasCrops = true OR hasLivestock = true\n' +
+            '\n' +
+            '  FAIL MESSAGE: "Must be engaged in farming activities"\n';
+        
+        var currentValue = $editor.val();
+        var newValue = currentValue ? currentValue + '\n\n' + sample : sample;
+        $editor.val(newValue);
+        $hiddenField.val(newValue);
+        
+        $messages.removeClass('success error loading')
+                 .html('Sample rules inserted. Click "Validate" to check.');
+    });
+    
+    // Display validation result
+    function displayResult(response) {
+        $messages.removeClass('loading');
+        
+        if (response.valid) {
+            $messages.addClass('success')
+                     .html('✓ <strong>Valid</strong>: ' + response.ruleCount + ' rule(s) parsed successfully');
+        } else {
+            $messages.addClass('error');
+            
+            var html = '<strong>Validation Failed</strong><br>';
+            
+            if (response.errors && response.errors.length > 0) {
+                response.errors.forEach(function(err) {
+                    html += '<div class="jre-error-item" data-line="' + err.line + '">' +
+                            '✕ Line ' + err.line + ': ' + escapeHtml(err.message) +
+                            '</div>';
+                });
+            }
+            
+            if (response.warnings && response.warnings.length > 0) {
+                response.warnings.forEach(function(warn) {
+                    html += '<div class="jre-error-item" data-line="' + warn.line + '">' +
+                            '⚠ Line ' + warn.line + ': ' + escapeHtml(warn.message) +
+                            '</div>';
+                });
+            }
+            
+            $messages.html(html);
+            
+            // Click to jump to line (basic implementation)
+            $messages.find('.jre-error-item').click(function() {
+                var line = parseInt($(this).data('line'));
+                jumpToLine(line);
+            });
+        }
+    }
+    
+    // Jump to a specific line in the editor
+    function jumpToLine(lineNumber) {
+        var text = $editor.val();
+        var lines = text.split('\n');
+        var position = 0;
+        
+        for (var i = 0; i < lineNumber - 1 && i < lines.length; i++) {
+            position += lines[i].length + 1; // +1 for newline
+        }
+        
+        $editor.focus();
+        $editor[0].setSelectionRange(position, position);
+    }
+    
+    // Escape HTML for safe display
+    function escapeHtml(str) {
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+    
+})();
+</script>

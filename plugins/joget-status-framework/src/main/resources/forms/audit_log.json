@@ -1,0 +1,110 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "audit_log",
+    "name": "Status Transition Audit Log",
+    "description": "Append-only audit table populated by global.govstack.statusframework.core.StatusFramework on every successful status transition. Do not edit rows manually.",
+    "tableName": "audit_log",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "auditSection",
+        "label": "Audit row"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "entity_type",
+                "label": "Entity Type",
+                "size": "60",
+                "maxlength": "60",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "entity_id",
+                "label": "Entity ID",
+                "size": "120",
+                "maxlength": "120",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "from_status",
+                "label": "From Status",
+                "size": "60",
+                "maxlength": "60",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "to_status",
+                "label": "To Status",
+                "size": "60",
+                "maxlength": "60",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "triggered_by",
+                "label": "Triggered By",
+                "size": "120",
+                "maxlength": "120",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "reason",
+                "label": "Reason",
+                "size": "500",
+                "maxlength": "500",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "timestamp",
+                "label": "Timestamp (ISO-8601)",
+                "size": "40",
+                "maxlength": "40",
+                "readonly": "true"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

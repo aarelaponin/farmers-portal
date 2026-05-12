@@ -1,0 +1,146 @@
+# Mapping Hints for Farmer Registry Service
+# This file defines key field mappings for generating services.yml
+
+service:
+  id: farmers_registry
+  name: "Farmers Registry Service"
+  version: "1.0"
+  govstackVersion: "1.0"
+
+# Key field mappings (non-standard paths)
+field_mappings:
+  # Identifiers
+  national_id: "identifiers[0].value"
+
+  # Name fields
+  first_name: "name.given[0]"
+  last_name: "name.family"
+
+  # Standard Person fields
+  date_of_birth: "birthDate"
+  gender: "gender"
+  marital_status: "maritalStatus"
+
+  # Communication
+  preferred_language: "communication[0].language"
+  mobile_number: "telecom[0].value"
+  email_address: "telecom[1].value"
+
+  # Cooperative membership
+  member_of_cooperative: "extension.cooperativeMember"
+  cooperative_name: "extension.cooperativeName"
+  extension_officer_name: "extension.extensionOfficer"
+
+  # Address fields
+  district: "address[0].district"
+  village: "address[0].city"
+  communityCouncil: "address[0].line[0]"
+
+  # Farm location details (nested in extension.farmLocation)
+  agroEcologicalZone: "extension.farmLocation.agroEcologicalZone"
+  gpsLatitude: "extension.farmLocation.latitude"
+  gpsLongitude: "extension.farmLocation.longitude"
+  residency_type: "extension.residencyType"
+  yearsInArea: "extension.yearsInArea"
+
+  # Farm size details (nested in extension.farmDetails)
+  ownedRentedLand: "extension.farmDetails.ownedRentedLandHectares"
+  totalAvailableLand: "extension.farmDetails.totalLandHectares"
+  cultivatedLand: "extension.farmDetails.cultivatedLandHectares"
+  conservationAgricultureLand: "extension.farmDetails.conservationAgricultureLandHectares"
+
+  # Access to services (nested in extension.accessToServices)
+  distanceWaterSource: "extension.accessToServices.waterSourceKm"
+  distancePrimarySchool: "extension.accessToServices.primarySchoolKm"
+  distancePublicHospital: "extension.accessToServices.publicHospitalKm"
+  distanceLivestockMarket: "extension.accessToServices.livestockMarketKm"
+  distanceAgriculturalMarket: "extension.accessToServices.agriculturalMarketKm"
+  distancePublicTransport: "extension.accessToServices.publicTransportKm"
+
+  # Agricultural activities
+  cropProduction: "extension.agriculture.cropProduction"
+  livestockProduction: "extension.agriculture.livestockProduction"
+  canReadWrite: "extension.agriculture.canReadWrite"
+  mainSourceFarmLabour: "extension.agriculture.mainSourceFarmLabour"
+  mainSourceLivelihood: "extension.agriculture.mainSourceLivelihood"
+  agriculturalManagementSkills: "extension.agriculture.agriculturalManagementSkills"
+  mainSourceAgriculturalInfo: "extension.agriculture.mainSourceAgriculturalInfo"
+
+  # Conservation practices
+  conservationPractices: "extension.agriculture.conservationPractices"
+  conservationPracticesOther: "extension.agriculture.conservationPracticesOther"
+
+  # Hazards and shocks
+  shocks_hazards: "extension.agriculture.shocksHazards"
+  otherHazards: "extension.agriculture.otherHazards"
+  copingMechanisms: "extension.agriculture.copingMechanisms"
+
+  # Household income
+  mainSourceIncome: "extension.income.mainSourceIncome"
+  income_sources: "extension.income.incomeSources"
+  gainfulEmployment: "extension.income.gainfulEmployment"
+  governmentEmployed: "extension.income.governmentEmployed"
+  averageAnnualIncome: "extension.income.averageAnnualIncome"
+  monthlyExpenditure: "extension.income.monthlyExpenditure"
+  relativeSupport: "extension.income.relativeSupport"
+  supportFrequency: "extension.income.supportFrequency"
+  supportType: "extension.income.supportType"
+
+  # Program participation
+  supportProgram: "extension.programs.supportProgram"
+  creditDefault: "extension.programs.creditDefault"
+  everOnISP: "extension.programs.everOnISP"
+  otherInputSupport: "extension.programs.otherInputSupport"
+
+  # Social safety nets
+  totalLoans12Months: "extension.socialSafety.totalLoans12Months"
+  informalTransfers: "extension.socialSafety.informalTransfers"
+  networksSupport: "extension.socialSafety.networksSupport"
+  formalTransfers: "extension.socialSafety.formalTransfers"
+  networkAssociations: "extension.socialSafety.networkAssociations"
+  networkRelatives: "extension.socialSafety.networkRelatives"
+
+  # Livestock (crops section)
+  hasLivestock: "extension.cropsLivestock.hasLivestock"
+
+  # Declaration
+  declarationConsent: "extension.declaration.consent"
+  declarationFullName: "extension.declaration.fullName"
+  registrationStation: "extension.declaration.registrationStation"
+  beneficiaryCode: "extension.declaration.beneficiaryCode"
+  registrationChannel: "extension.declaration.registrationChannel"
+
+  # Household members array
+  householdMembers: "extension.household.members"
+
+  # Crop management array
+  cropManagement: "extension.agriculture.crops"
+
+  # Livestock details array
+  livestockDetails: "extension.agriculture.livestock"
+
+# Default mapping for unmapped fields
+default_mapping: "extension.{fieldName}"
+
+# Normalization overrides
+normalization:
+  # Force yes/no normalization
+  force_yesNo:
+    - canReadWrite
+    - cropProduction
+    - everOnISP
+    - fertilizerApplied
+    - gainfulEmployment
+    - governmentEmployed
+    - hasLivestock
+    - member_of_cooperative
+    - otherInputSupport
+    - pesticidesApplied
+    - relativeSupport
+    - creditDefault
+
+  # Force 1/2 normalization
+  force_oneTwo:
+    - chronicallyIll
+    - livestockProduction
+    - participatesInAgriculture

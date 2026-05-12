@@ -1,0 +1,80 @@
+[{
+    "title": "MDM Table Configuration",
+    "properties": [
+        {
+            "name": "tableName",
+            "label": "MDM Table Name",
+            "description": "Table suffix, e.g. md03district queries app_fd_md03district",
+            "type": "textfield",
+            "required": "true"
+        },
+        {
+            "name": "codeColumn",
+            "label": "Code Column",
+            "description": "Column for the option value (default: c_code)",
+            "type": "textfield",
+            "value": "c_code"
+        },
+        {
+            "name": "nameColumn",
+            "label": "Name Column",
+            "description": "Column for the option label (default: c_name)",
+            "type": "textfield",
+            "value": "c_name"
+        },
+        {
+            "name": "size",
+            "label": "Visible Rows",
+            "description": "Number of visible options in the select (default: 5)",
+            "type": "textfield",
+            "value": "5"
+        },
+        {
+            "name": "defaultValue",
+            "label": "Default Value",
+            "description": "Default selected values, semicolon-separated",
+            "type": "textfield"
+        }
+    ]
+},
+{
+    "title": "Cascading Configuration",
+    "properties": [
+        {
+            "name": "parentFilterName",
+            "label": "Parent Filter Name",
+            "description": "Filter name of the parent (leave empty if this is a root-level filter)",
+            "type": "textfield"
+        },
+        {
+            "name": "parentCodeColumn",
+            "label": "Parent Code Column (FK)",
+            "description": "Foreign key column referencing parent, e.g. c_district_code",
+            "type": "textfield"
+        }
+    ]
+},
+{
+    "title": "Filter Grouping",
+    "properties": [
+        {
+            "name": "filterGroupName",
+            "label": "Group Name",
+            "description": "Visual group name, e.g. 'Location'",
+            "type": "textfield"
+        },
+        {
+            "name": "filterGroupOrder",
+            "label": "Order in Group",
+            "description": "Position in group (1 = first, renders header)",
+            "type": "textfield",
+            "value": "1"
+        },
+        {
+            "name": "filterGroupHint",
+            "label": "Group Hint",
+            "description": "Hint text shown in group header, e.g. 'Select district first'",
+            "type": "textfield"
+        }
+    ]
+}]

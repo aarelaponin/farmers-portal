@@ -1,0 +1,137 @@
+[
+    {
+        "title": "Basic Settings",
+        "properties": [
+            {
+                "name": "id",
+                "label": "Field ID",
+                "type": "textfield",
+                "required": "true",
+                "value": "concatenated_value"
+            },
+            {
+                "name": "label",
+                "label": "Label",
+                "type": "textfield",
+                "value": "Concatenated Value"
+            },
+            {
+                "name": "displayType",
+                "label": "Display Type",
+                "description": "How to display the concatenated field",
+                "type": "selectbox",
+                "required": "true",
+                "options": [
+                    {"value": "hidden", "label": "Hidden Field"},
+                    {"value": "readonly", "label": "Read-only Text Field"},
+                    {"value": "editable", "label": "Editable Text Field"}
+                ],
+                "value": "hidden"
+            },
+            {
+                "name": "required",
+                "label": "Required",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            },
+            {
+                "name": "requiredMessage",
+                "label": "Required Error Message",
+                "type": "textfield",
+                "value": "This field is required"
+            }
+        ]
+    },
+    {
+        "title": "Source Fields",
+        "properties": [
+            {
+                "name": "sourceFields",
+                "label": "Fields to Concatenate",
+                "description": "List of field IDs to concatenate (in order)",
+                "type": "grid",
+                "columns": [
+                    {
+                        "key": "fieldId",
+                        "label": "Field ID",
+                        "required": "true"
+                    },
+                    {
+                        "key": "transform",
+                        "label": "Transform",
+                        "options": [
+                            {"value": "", "label": "None"},
+                            {"value": "uppercase", "label": "UPPERCASE"},
+                            {"value": "lowercase", "label": "lowercase"},
+                            {"value": "capitalize", "label": "Capitalize"},
+                            {"value": "trim", "label": "Trim whitespace"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Format Settings",
+        "properties": [
+            {
+                "name": "separator",
+                "label": "Separator",
+                "description": "Character(s) to insert between field values",
+                "type": "textfield",
+                "value": "_"
+            },
+            {
+                "name": "formatPattern",
+                "label": "Format Pattern (Optional)",
+                "description": "Custom format pattern using {0}, {1}, {2}... placeholders. Example: '{0}-{1}_{2}' for first-second_third. Leave empty to use simple concatenation with separator.",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "prefix",
+                "label": "Prefix",
+                "description": "Text to add before the concatenated value",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "suffix",
+                "label": "Suffix",
+                "description": "Text to add after the concatenated value",
+                "type": "textfield",
+                "value": ""
+            },
+            {
+                "name": "skipEmpty",
+                "label": "Skip Empty Values",
+                "description": "Don't include separator for empty field values",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": "true"
+            }
+        ]
+    },
+    {
+        "title": "Behavior",
+        "properties": [
+            {
+                "name": "updateOn",
+                "label": "Update On",
+                "description": "When to update the concatenated value",
+                "type": "selectbox",
+                "options": [
+                    {"value": "change", "label": "Field Change (real-time)"},
+                    {"value": "blur", "label": "Field Blur (on focus out)"},
+                    {"value": "submit", "label": "Form Submit Only"}
+                ],
+                "value": "change"
+            }
+        ]
+    }
+]

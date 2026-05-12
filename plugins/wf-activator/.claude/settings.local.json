@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn clean:*)",
+      "Bash(claude --version)",
+      "Bash(grep:*)",
+      "Bash(mvn help:*)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:dev.joget.org)",
+      "WebFetch(domain:kb.joget.org)",
+      "Read(//Users/aarelaponin/IdeaProjects/joget/jw-community/**)",
+      "Read(//Users/aarelaponin/IdeaProjects/gs-plugins/doc-submitter/**)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Read(//Users/aarelaponin/IdeaProjects/joget/**)",
+      "Read(//Users/aarelaponin/joget-enterprise-linux-8.1.6-2/**)",
+      "Bash(find:*)"
+    ],
+    "deny": [],
+    "additionalDirectories": [
+      "/Users/aarelaponin/.local/bin",
+      "/Users/aarelaponin/.local/share/claude/versions"
+    ]
+  }
+}

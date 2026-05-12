@@ -1,0 +1,55 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spApplicationEligibility",
+    "name": "Application Eligibility Check",
+    "description": "One row per programme eligibility criterion seeded onto an application. Farmer fills in applicantResponse; case worker may add evaluatorNote. See _design/application-engine-design.md §4.1.",
+    "tableName": "sp_application_elig_chk",
+    "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "permission": {"className": "", "properties": {}}
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {"id": "main", "label": "Eligibility check"},
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "50%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "parent_id", "label": "Parent (application id)"}},
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "programme_criterion_id", "label": "Programme criterion id"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "criterion_label", "label": "Criterion", "size": "120", "maxlength": "300", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "criterion_severity", "label": "Severity", "size": "20", "maxlength": "20", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "rule_type", "label": "Rule type", "size": "20", "maxlength": "20", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "field_category", "label": "Field category", "size": "20", "maxlength": "20", "readonly": "true"}}
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "50%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.SelectBox",
+             "properties": {
+               "id": "applicant_response", "label": "Applicant response",
+               "options": [
+                 {"value": "", "label": "(unanswered)"},
+                 {"value": "YES", "label": "Yes — meets criterion"},
+                 {"value": "NO",  "label": "No — does not meet"},
+                 {"value": "NA",  "label": "Not applicable"}
+               ]}},
+            {"className": "org.joget.apps.form.lib.TextArea",
+             "properties": {"id": "evaluator_note", "label": "Evaluator note (operator)", "rows": "3"}}
+          ]
+        }
+      ]
+    }
+  ]
+}

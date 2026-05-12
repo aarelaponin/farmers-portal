@@ -1,0 +1,97 @@
+# OBJECTIVE
+Upgrade the joget utility for automated Joget metadata management that can:
+1. Check if forms and API endpoints exist in a Joget instance for every specific CVS file in the folder data/metadata
+2. Create missing forms using the form-creator plugin; currently the plugin is in joget on the 8888 port in the application masterData. Master data should be created in the application subsidyApplication
+3. Populate/update form data from CSV files in the application subsidyApplication
+
+# CONTEXT
+- Platform: Joget DX8 Enterprise Edition
+- Use case: Farmers Registry (BB Registration spec: https://registration.govstack.global/)
+- Architecture: Federated systems requiring common metadata; there are 3 joget instances: on port 8080 (db 3306), 9999 (db 3307) and 8888 (db 3308). Currently we wokr only with joget on port 8888.
+- Development environment: IntelliJ IDE with Python utility
+
+# CURRENT ASSETS
+1. Form Creator Plugin: /Users/aarelaponin/IdeaProjects/gam-plugins/form-creator
+   - API interface: form-creator-api.yaml (in folder joget_utility/config)
+   - Capabilities: Creates form, CRUD, and API endpoint from JSON definition
+
+2. Data Sources:
+   - data/metadata/ folder: Contains CSV files with master data
+   - data/metadata_forms folder: Contains all joget form definitions json files for every master data CSV file; if form is missing, i.e. it is new metadata item
+   - docapp/forms/ folder: Contains JSON form definitions
+     - farmers-registration-form.json (7 tabs, 2 with tables)
+     - civil-registry-01.json
+     - budget-program-01.json
+     - application-01.json
+     Those forms will actually consume of the metadata: once metadata is there, I will add appropriate lookup fields
+
+3. Documentation (in the folder docs):
+   - 02-ucm-design.docx: High-level use case model
+   - BASIC_FORMS_GUIDE.md: High-level description on how to create a joget form
+   - JOGET_NESTED_LOV_GUIDE.md: specific explanation how to create nested LOVs in joget. Please pay attention to this document as I have some metadata which is nested
+
+# TECHNICAL REQUIREMENTS
+- Python 3.13 utility
+- Must work with Joget DX8 REST API
+- Authentication: [SPECIFY YOUR METHOD]
+- Joget instance URL: [SPECIFY OR MAKE CONFIGURABLE]
+
+# REQUIRED UTILITY FEATURES
+
+## Phase 1: Discovery
+- Check if a form exists in Joget by form_id
+- Check if API endpoint exists for the form
+- Retrieve existing form definition if present and compare whether it is the same as in the folder data/metadata_forms; report on all discrepances
+
+## Phase 2: Form Creation (for new metedata items only)
+- Read JSON form definition from data/metadata_forms
+- Call form-creator plugin API with required parameters:
+  * target_app_id = subsidyApplication, target_app_version = 1
+  * form_id, form_name (from form definition json)
+  * form_definition_json (file upload, from the data/metadata_forms)
+  * create_crud, create_api_endpoint flags = yes
+  * table_name = api_name from form definition json
+
+- Handle multipart/form-data upload
+- Verify form creation success
+
+## Phase 3: Data Population
+- Read CSV file from data/metadata/
+- Map CSV columns to form fields
+- Use generated API endpoint to POST/PUT data
+- Handle updates for existing records
+- Batch processing with error recovery
+
+## Phase 4: Configuration & Logging
+- Config file for Joget connection details
+- CSV-to-form mapping configuration
+- Logging for all operations (create/update/error)
+- Validation of CSV data before upload
+
+# QUESTIONS TO CLARIFY
+1. How is the form-creator plugin accessed? (REST endpoint URL?)
+2. What determines if data should be created vs. updated? (Primary key in CSV?)
+3. How do CSV filenames map to form_ids?
+4. Should the utility handle form versioning?
+5. What's the error handling strategy? (retry, skip, fail-all?)
+6. Are there any field transformations needed between CSV and Joget?
+
+# DELIVERABLES
+1. Python utility with CLI interface
+2. Configuration template file
+3. CSV-to-form mapping definition format
+4. README with usage examples
+5. Error handling and logging
+
+# SUCCESS CRITERIA
+- Can provision a new Joget instance with all metadata forms
+- Can update existing metadata without duplication
+- Handles errors gracefully with clear logging
+- Reusable across different metadata forms
+
+Now, analyze this design and create a detailed implementation plan with:
+1. Project structure
+2. Key classes/modules
+3. Step-by-step workflow
+4. API integration approach
+5. Recommended libraries

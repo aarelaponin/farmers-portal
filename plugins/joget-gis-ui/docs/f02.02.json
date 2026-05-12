@@ -1,0 +1,242 @@
+{
+  "elements": [
+    {
+      "elements": [
+        {
+          "elements": [
+            {
+              "className": "global.govstack.gisui.element.GisPolygonCaptureElement",
+              "properties": {
+                "allowSelfIntersection": "",
+                "autoCenterVillageFieldId": "village",
+                "apiKey": "%%%%****SECURE_VALUE****-0%%%%",
+                "overlapDisplayFields": "area_hectares",
+                "defaultLatitude": "-29.6",
+                "autoCenterLonFieldId": "auto_center_lon",
+                "overlapFilterCondition": "",
+                "required": "",
+                "gpsHighAccuracy": "true",
+                "autoCloseDistance": "15",
+                "nearbyParcelsFilterCondition": "",
+                "minVertices": "3",
+                "gpsMinAccuracy": "10",
+                "id": "geometry",
+                "maxAreaHectares": "1000",
+                "strokeColor": "#3388ff",
+                "maxVertices": "200",
+                "showSatelliteOption": "true",
+                "overlapGeometryField": "geometry",
+                "apiEndpoint": "/jw/api/gis/gis",
+                "autoCenterCountrySuffix": "Lesotho",
+                "showNearbyParcels": "ON_DEMAND",
+                "captureMode": "BOTH",
+                "autoCenterRetryOnFieldChange": "true",
+                "requiredMessage": "Please capture the parcel boundary",
+                "strokeWidth": "3",
+                "defaultZoom": "14",
+                "fillOpacity": "0.2",
+                "nearbyParcelsDisplayFields": "area_hectares",
+                "defaultLongitude": "28.2",
+                "nearbyParcelsGeometryField": "geometry",
+                "fillColor": "#3388ff",
+                "enableAutoCenter": "true",
+                "enableOverlapCheck": "true",
+                "minAreaHectares": "0.01",
+                "nearbyParcelsStrokeColor": "",
+                "autoCenterDistrictFieldId": "district",
+                "apiId": "API-d5e0a0cc-a12a-4360-84b5-d794691c732e",
+                "nearbyParcelsFillColor": "",
+                "perimeterFieldId": "perimeter_meters",
+                "centroidFieldId": "centroid_lat",
+                "autoCenterLatFieldId": "auto_center_lat",
+                "label": "",
+                "nearbyParcelsMaxResults": "",
+                "nearbyParcelsFillOpacity": "",
+                "mapHeight": "500",
+                "vertexCountFieldId": "vertex_count",
+                "nearbyParcelsFormId": "parcelGeometry",
+                "defaultMode": "AUTO",
+                "overlapFormId": "parcelGeometry",
+                "areaFieldId": "area_hectares",
+                "tileProvider": "OSM",
+                "autoCenterZoom": "14"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "parent_id",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "area_hectares",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "perimeter_meters",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "vertex_count",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "centroid_lat",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "district_name",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "village_name",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "auto_center_lat",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "useDefaultWhenEmpty": "",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                },
+                "workflowVariable": "",
+                "id": "auto_center_lon",
+                "value": ""
+              }
+            }
+          ],
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          }
+        }
+      ],
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "visibilityControl": "",
+        "permissionReadonly": "",
+        "permission": {
+          "className": "",
+          "properties": {}
+        },
+        "label": "",
+        "reverse": "",
+        "storeBinder": {
+          "className": "",
+          "properties": {}
+        },
+        "visibilityValue": "",
+        "regex": "",
+        "readonly": "",
+        "loadBinder": {
+          "className": "",
+          "properties": {}
+        },
+        "comment": "",
+        "id": "gisSection",
+        "join": "",
+        "readonlyLabel": ""
+      }
+    }
+  ],
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "noPermissionMessage": "",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "name": "02.02 - Parcel Geometry",
+    "description": "Administrative location and geographic boundaries",
+    "postProcessorRunOn": "create",
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "id": "parcelGeometry",
+    "postProcessor": {
+      "className": "",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "tableName": "parcelGeometry"
+  }
+}

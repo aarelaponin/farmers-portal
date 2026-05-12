@@ -1,0 +1,91 @@
+# Test expectations configuration
+# This file defines expected values for testing without hardcoding field names
+
+criticalFields:
+  # These are the most important fields to test
+  - path: "name.given[0]"
+    expectedValue: "Thabo"
+    description: "First name"
+
+  - path: "name.family"
+    expectedValue: "Mokoena"
+    description: "Last name"
+
+  - path: "identifiers[0].value"
+    expectedValue: "9405156789086"
+    description: "National ID"
+
+  - path: "gender"
+    expectedValue: "male"
+    description: "Gender"
+
+  - path: "birthDate"
+    expectedValue: "1994-05-15"
+    description: "Date of birth"
+
+  - path: "address[0].district"
+    expectedValue: "maseru"
+    description: "District"
+
+  - path: "address[0].city"
+    expectedValue: "Ha Matela"
+    description: "Village/City"
+
+arrayDataTests:
+  householdMembers:
+    path: "relatedPerson"
+    expectedCount: 5
+    firstItem:
+      - field: "name.text"
+        expectedValue: "Mokoena, Thabo"
+      - field: "gender"
+        expectedValue: "male"
+      - field: "relationship[0].coding[0].code"
+        expectedValue: "SELF"
+
+  crops:
+    path: "extension.agriculturalData.crops"
+    expectedCount: 4
+    firstItem:
+      - field: "type"
+        expectedValue: "MAIZE"
+      - field: "areaSize"
+        expectedValue: 1.5
+
+  livestock:
+    path: "extension.agriculturalData.livestock"
+    expectedCount: 4
+    firstItem:
+      - field: "type"
+        expectedValue: "cattle-beef"
+      - field: "maleCount"
+        expectedValue: 2
+      - field: "femaleCount"
+        expectedValue: 5
+
+transformationTests:
+  booleanTransformations:
+    - path: "extension.cooperativeMember"
+      rawValue: true
+      transformedValue: "yes"
+
+    - path: "extension.income.hasGainfulEmployment"
+      rawValue: false
+      transformedValue: "no"
+
+  numericTransformations:
+    - path: "extension.farmDetails.totalLandHectares"
+      rawValue: 4.0
+      transformedValue: "4.0"
+
+  valueMappings:
+    - path: "extension.residencyType"
+      rawValue: "rural"
+      mappedValue: "1"
+
+statisticsExpectations:
+  totalMainFormFields: 69
+  totalArraySections: 3
+  householdMemberCount: 5
+  cropCount: 4
+  livestockCount: 4

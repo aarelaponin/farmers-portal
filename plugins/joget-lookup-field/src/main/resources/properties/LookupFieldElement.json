@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Basic Settings",
+        "properties": [
+            {
+                "name": "id",
+                "label": "Field ID",
+                "type": "textfield",
+                "required": "true",
+                "value": "lookup_value"
+            },
+            {
+                "name": "label",
+                "label": "Label",
+                "type": "textfield",
+                "value": "Lookup Value"
+            },
+            {
+                "name": "displayType",
+                "label": "Display Type",
+                "description": "How to display the looked-up value",
+                "type": "selectbox",
+                "required": "true",
+                "options": [
+                    {"value": "hidden", "label": "Hidden Field"},
+                    {"value": "readonly", "label": "Read-only Display"},
+                    {"value": "editable", "label": "Editable Text Field"}
+                ],
+                "value": "readonly"
+            },
+            {
+                "name": "required",
+                "label": "Required",
+                "type": "checkbox",
+                "options": [
+                    {"value": "true", "label": ""}
+                ],
+                "value": ""
+            },
+            {
+                "name": "requiredMessage",
+                "label": "Required Error Message",
+                "type": "textfield",
+                "value": "This field is required"
+            }
+        ]
+    },
+    {
+        "title": "Lookup Configuration",
+        "properties": [
+            {
+                "name": "sourceFieldId",
+                "label": "Source Field ID",
+                "description": "The ID of the SelectBox field to watch. When this field changes, the lookup is triggered.",
+                "type": "textfield",
+                "required": "true",
+                "value": ""
+            },
+            {
+                "name": "lookupFormId",
+                "label": "Lookup Form ID",
+                "description": "The Joget form definition ID to fetch the record from (e.g., 'customerForm', 'assetMasterForm').",
+                "type": "textfield",
+                "required": "true",
+                "value": ""
+            },
+            {
+                "name": "lookupColumn",
+                "label": "Lookup Column",
+                "description": "The column name to extract from the fetched record (e.g., 'displayName', 'ticker', 'isin').",
+                "type": "textfield",
+                "required": "true",
+                "value": ""
+            },
+            {
+                "name": "lookupKeyColumn",
+                "label": "Lookup Key Column",
+                "description": "The column in the lookup form that matches the SelectBox value. For example, if the SelectBox uses idColumn='customerId', set this to 'customerId'. Leave empty to use Joget primary key (only works when SelectBox value IS the record ID).",
+                "type": "textfield",
+                "value": ""
+            }
+        ]
+    },
+    {
+        "title": "Behavior",
+        "properties": [
+            {
+                "name": "updateOn",
+                "label": "Update On",
+                "description": "When to trigger the lookup",
+                "type": "selectbox",
+                "options": [
+                    {"value": "change", "label": "Field Change (recommended)"},
+                    {"value": "blur", "label": "Field Blur (on focus out)"}
+                ],
+                "value": "change"
+            }
+        ]
+    }
+]

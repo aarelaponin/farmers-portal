@@ -1,0 +1,43 @@
+[{
+    title : '@@plugin.farmerDerivedRefresh.config.title@@',
+    properties : [{
+        name : 'scope',
+        label : '@@property.scope.label@@',
+        description : '@@property.scope.description@@',
+        type : 'selectbox',
+        required : 'True',
+        value : 'single',
+        options : [{
+            value : 'single',
+            label : '@@property.scope.single@@'
+        },{
+            value : 'all',
+            label : '@@property.scope.all@@'
+        }]
+    },{
+        name : 'farmerCode',
+        label : '@@property.farmerCode.label@@',
+        description : '@@property.farmerCode.description@@',
+        type : 'textfield',
+        value : '#variable.farmerCode#',
+        required : 'False'
+    },{
+        name : 'staleThresholdDays',
+        label : '@@property.staleThresholdDays.label@@',
+        description : '@@property.staleThresholdDays.description@@',
+        type : 'textfield',
+        value : '1',
+        required : 'False'
+    },{
+        name : 'dryRun',
+        label : '@@property.dryRun.label@@',
+        description : '@@property.dryRun.description@@',
+        type : 'checkbox',
+        required : 'False',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : '@@property.dryRun.option@@'
+        }]
+    }]
+}]

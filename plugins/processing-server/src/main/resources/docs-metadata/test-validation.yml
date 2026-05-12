@@ -1,0 +1,313 @@
+# ============================================================================
+# REFERENCE DOCUMENTATION - Manual Validation Specification
+# ============================================================================
+# Purpose: This file serves as reference documentation showing the expected
+#          database state after processing test-data.json through the plugin.
+#
+# NOTE: This is a MANUAL specification kept for documentation purposes.
+#       For actual validation, use the automated validation framework at:
+#       /Users/aarelaponin/PycharmProjects/dev/gam/joget_validator
+#       which generates validation specs automatically from services.yml
+# ============================================================================
+#
+# Test Validation Specification - Aligned with test-data.json
+# Updated: 2025-09-25 to match actual test data for farmer-002 (Mamosa Elizabeth Motlomelo)
+# Based on verified table and column names from form definitions
+
+validation:
+  description: "Database validation for farmer registration API submission"
+  testDataFile: "test-data.json"
+
+  # Expected records in each table after processing
+  tables:
+    # Main form tables
+    farmer_basic_data:
+      expectedRecords: 1
+      primaryKey: "id"
+      validations:
+        - field: "c_national_id"
+          expectedValue: "8712248901234"
+        - field: "c_first_name"
+          expectedValue: "Mamosa"
+        - field: "c_last_name"
+          expectedValue: "Motlomelo"
+        - field: "c_gender"
+          expectedValue: "female"
+        - field: "c_date_of_birth"
+          expectedValue: "1987-12-24"
+        - field: "c_marital_status"
+          expectedValue: "single"
+        - field: "c_mobile_number"
+          expectedValue: "+26659876543"
+        - field: "c_email_address"
+          expectedValue: "mamosa.motlomelo@gmail.com"
+        - field: "c_member_of_cooperative"
+          expectedValue: "no"
+        - field: "c_extension_officer_name"
+          expectedValue: "Sarah Mofokeng"
+
+    farm_location:
+      expectedRecords: 1
+      primaryKey: "id"
+      linkField: "c_parent_id"  # Links to main farmer ID
+      validations:
+        - field: "c_district"
+          expectedValue: "berea"
+        - field: "c_village"
+          expectedValue: "Ha Nkau"
+        - field: "c_communityCouncil"
+          expectedValue: "Machache Community Council"
+        - field: "c_residency_type"
+          expectedValue: "rural"
+        - field: "c_yearsInArea"
+          expectedValue: "15"
+        - field: "c_gpsLatitude"
+          expectedValue: "-29.195833"
+        - field: "c_gpsLongitude"
+          expectedValue: "27.756944"
+
+    farmer_registry:  # Used by agricultural activities AND household sections
+      expectedRecords: 1
+      primaryKey: "id"
+      linkField: "c_parent_id"
+      validations:
+        # Agricultural activities fields
+        - field: "c_cropProduction"
+          expectedValue: "yes"
+        - field: "c_livestockProduction"
+          expectedValue: "1"  # Yes
+        - field: "c_canReadWrite"
+          expectedValue: "yes"
+        - field: "c_mainSourceFarmLabour"
+          expectedValue: "1"  # Family
+        - field: "c_mainSourceLivelihood"
+          expectedValue: "farming"
+        - field: "c_agriculturalManagementSkills"
+          expectedValue: "intermediate"
+        - field: "c_mainSourceAgriculturalInfo"
+          expectedValue: "extension_services"
+        - field: "c_conservationPractices"
+          expectedValue: "minimum_tillage,crop_rotation,cover_cropping"
+        - field: "c_shocks_hazards"
+          expectedValue: "drought,flood,pests"
+
+    farmer_crop_livestck:
+      expectedRecords: 1
+      primaryKey: "id"
+      linkField: "c_parent_id"
+      validations:
+        - field: "c_hasLivestock"
+          expectedValue: "yes"
+
+    farmer_income:
+      expectedRecords: 1
+      primaryKey: "id"
+      linkField: "c_parent_id"
+      validations:
+        - field: "c_mainSourceIncome"
+          expectedValue: "crop_sales"
+        - field: "c_income_sources"
+          expectedValue: "crop_sales,livestock_sales,remittances"
+        - field: "c_gainfulEmployment"
+          expectedValue: "no"
+        - field: "c_averageAnnualIncome"
+          expectedValue: "25000"
+        - field: "c_monthlyExpenditure"
+          expectedValue: "1500"
+        - field: "c_supportProgram"
+          expectedValue: "subsidized_inputs,school_feeding"
+        - field: "c_everOnISP"
+          expectedValue: "yes"
+        - field: "c_creditDefault"
+          expectedValue: "no"
+
+    farmer_declaration:
+      expectedRecords: 1
+      primaryKey: "id"
+      linkField: "c_parent_id"
+      validations:
+        - field: "c_declarationConsent"
+          expectedValue: "consent_given,data_usage_agreed,terms_accepted"
+        - field: "c_declarationFullName"
+          expectedValue: "John Doe"
+        - field: "c_field13"  # Declaration date
+          expectedValue: "2024-01-15"
+        - field: "c_registrationStation"
+          expectedValue: "Maseru District Office"
+        - field: "c_registrationChannel"
+          expectedValue: "in_person"
+
+    # Grid/Sub-tables with parent-child relationships
+    household_members:
+      expectedRecords: 3  # Based on actual test data
+      primaryKey: "id"
+      parentField: "c_farmer_id"  # Links to parent farmer
+      records:
+        - index: 0
+          validations:
+            - field: "c_memberName"
+              expectedValue: "Motlomelo, Mamosa Elizabeth"
+            - field: "c_sex"
+              expectedValue: "female"
+            - field: "c_date_of_birth"
+              expectedValue: "1987-12-24"
+            - field: "c_orphanhoodStatus"
+              expectedValue: "both_alive"
+            - field: "c_participatesInAgriculture"
+              expectedValue: "1"
+            - field: "c_disability"
+              expectedValue: "none"
+            - field: "c_chronicallyIll"
+              expectedValue: "2"
+
+        - index: 1
+          validations:
+            - field: "c_memberName"
+              expectedValue: "Motlomelo, Teboho"
+            - field: "c_sex"
+              expectedValue: "male"
+            - field: "c_date_of_birth"
+              expectedValue: "2010-06-15"
+            - field: "c_orphanhoodStatus"
+              expectedValue: "both_alive"
+            - field: "c_participatesInAgriculture"
+              expectedValue: "2"
+
+        - index: 2
+          validations:
+            - field: "c_memberName"
+              expectedValue: "Motlomelo, Naleli"
+            - field: "c_sex"
+              expectedValue: "female"
+            - field: "c_date_of_birth"
+              expectedValue: "2014-09-08"
+            - field: "c_orphanhoodStatus"
+              expectedValue: "both_alive"
+            - field: "c_participatesInAgriculture"
+              expectedValue: "2"
+
+    crop_management:
+      expectedRecords: 3  # Based on test data
+      primaryKey: "id"
+      parentField: "c_farmer_id"
+      records:
+        - index: 0
+          validations:
+            - field: "c_cropType"
+              expectedValue: "1"  # MAIZE
+            - field: "c_areaCultivated"
+              expectedValue: "2.5"
+            - field: "c_areaUnit"
+              expectedValue: "hectare"
+            - field: "c_bagsHarvested"
+              expectedValue: "45"
+            - field: "c_fertilizerApplied"
+              expectedValue: "yes"
+            - field: "c_pesticidesApplied"
+              expectedValue: "no"
+
+        - index: 1
+          validations:
+            - field: "c_cropType"
+              expectedValue: "8"  # SORGHUM
+            - field: "c_areaCultivated"
+              expectedValue: "0.5"
+            - field: "c_bagsHarvested"
+              expectedValue: "20"
+            - field: "c_fertilizerApplied"
+              expectedValue: "yes"
+            - field: "c_pesticidesApplied"
+              expectedValue: "yes"
+
+        - index: 2
+          validations:
+            - field: "c_cropType"
+              expectedValue: "15"  # BEANS
+            - field: "c_areaCultivated"
+              expectedValue: "0.25"
+            - field: "c_bagsHarvested"
+              expectedValue: "10"
+            - field: "c_fertilizerApplied"
+              expectedValue: "no"
+            - field: "c_pesticidesApplied"
+              expectedValue: "no"
+
+    livestock_details:
+      expectedRecords: 3  # Based on test data
+      primaryKey: "id"
+      parentField: "c_farmer_id"
+      records:
+        - index: 0
+          validations:
+            - field: "c_livestockType"
+              expectedValue: "cattle-beef"
+            - field: "c_numberOfMale"
+              expectedValue: "1"
+            - field: "c_numberOfFemale"
+              expectedValue: "3"
+
+        - index: 1
+          validations:
+            - field: "c_livestockType"
+              expectedValue: "goats"
+            - field: "c_numberOfMale"
+              expectedValue: "2"
+            - field: "c_numberOfFemale"
+              expectedValue: "8"
+
+        - index: 2
+          validations:
+            - field: "c_livestockType"
+              expectedValue: "chicken-village"
+            - field: "c_numberOfMale"
+              expectedValue: "3"
+            - field: "c_numberOfFemale"
+              expectedValue: "12"
+
+# SQL Verification Queries
+sqlQueries:
+  # Check main farmer record exists
+  verifyFarmerRecord: |
+    SELECT COUNT(*) as count
+    FROM farmer_basic_data
+    WHERE c_national_id = '123456789012';
+
+  # Check all related forms have parent_id set
+  verifyParentLinks: |
+    SELECT
+      (SELECT COUNT(*) FROM farm_location WHERE c_parent_id = ?) as location_count,
+      (SELECT COUNT(*) FROM farmer_registry WHERE c_parent_id = ?) as registry_count,
+      (SELECT COUNT(*) FROM farmer_income WHERE c_parent_id = ?) as income_count,
+      (SELECT COUNT(*) FROM farmer_declaration WHERE c_parent_id = ?) as declaration_count;
+
+  # Check grid data properly linked
+  verifyHouseholdMembers: |
+    SELECT COUNT(*) as count
+    FROM household_members
+    WHERE c_farmer_id = ?;
+
+  verifyCrops: |
+    SELECT COUNT(*) as count
+    FROM crop_management
+    WHERE c_farmer_id = ?;
+
+  verifyLivestock: |
+    SELECT COUNT(*) as count
+    FROM livestock_details
+    WHERE c_farmer_id = ?;
+
+  # Data integrity check
+  checkOrphanedGridRows: |
+    SELECT
+      (SELECT COUNT(*) FROM household_members WHERE c_farmer_id IS NULL) as orphaned_household,
+      (SELECT COUNT(*) FROM crop_management WHERE c_farmer_id IS NULL) as orphaned_crops,
+      (SELECT COUNT(*) FROM livestock_details WHERE c_farmer_id IS NULL) as orphaned_livestock;
+
+# Test execution notes
+notes:
+  - "All table names are verified from actual form JSON definitions"
+  - "Column names use c_ prefix followed by field ID"
+  - "Grid tables link via c_farmer_id field"
+  - "Main forms link via c_parent_id field"
+  - "No app_fd_ prefix is used in actual table names"
+  - "Some forms share tables (e.g., farmer_registry used by multiple sections)"

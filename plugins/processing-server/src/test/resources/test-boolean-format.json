@@ -1,0 +1,63 @@
+{
+  "testData": [{
+    "resourceType": "Person",
+    "id": "test-bool-001",
+    "meta": {
+      "profile": ["https://govstack.global/Registration/StructureDefinition/Person"],
+      "lastUpdated": "2025-01-29T01:00:00Z"
+    },
+
+    "identifiers": [{
+      "type": "NationalId",
+      "value": "TEST001"
+    }],
+
+    "name": {
+      "given": ["Test", "Boolean"],
+      "family": "Farmer"
+    },
+
+    "gender": "male",
+    "birthDate": "1990-01-01",
+
+    "extension": {
+      "extensionOfficer": "Test Officer",
+      "cooperativeMember": false,
+
+      "farmDetails": {
+        "ownedRentedLand": 1.0,
+        "totalAvailableLand": 1.0,
+        "cultivatedLand": 0.8
+      },
+
+      "agriculturalActivities": {
+        "engagedInLivestockProduction": false,
+        "engagedInCropProduction": true,
+        "canReadWrite": true,
+        "mainSourceFarmLabour": "family",
+        "fertilizerApplied": false,
+        "pesticidesApplied": true
+      },
+
+      "incomeAndPrograms": {
+        "everOnISP": true
+      }
+    },
+
+    "relatedPerson": [{
+      "id": "hh-test-01",
+      "name": {
+        "text": "Test Member"
+      },
+      "gender": "female",
+      "birthDate": "1992-05-15",
+      "relationship": "spouse",
+      "extension": {
+        "orphanhoodStatus": "both_alive",
+        "participatesInAgriculture": true,
+        "disabilityStatus": "none",
+        "chronicallyIll": false
+      }
+    }]
+  }]
+}

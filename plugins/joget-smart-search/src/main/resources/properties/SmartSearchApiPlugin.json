@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Configure Smart Farmer Search API",
+        "properties": [
+            {
+                "name": "label",
+                "label": "Label",
+                "type": "textfield",
+                "value": "Farmer Smart Search",
+                "required": "true"
+            },
+            {
+                "name": "description",
+                "label": "Description",
+                "type": "textarea",
+                "value": "Smart Farmer Search API - Progressive criteria-based farmer lookup with fuzzy matching"
+            }
+        ]
+    },
+    {
+        "title": "Search Settings",
+        "properties": [
+            {
+                "name": "maxResults",
+                "label": "Maximum Results",
+                "type": "textfield",
+                "value": "20",
+                "required": "true"
+            },
+            {
+                "name": "enableFuzzyMatch",
+                "label": "Enable Fuzzy Matching",
+                "type": "checkbox",
+                "value": "true",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": "Enable Soundex and Levenshtein matching for names"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__jetbrains__list_directory_tree",
+      "mcp__jetbrains__get_run_configurations",
+      "Bash(mvn clean package:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git config:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}

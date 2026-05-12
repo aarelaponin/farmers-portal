@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Editor - Joget Integration Example</title>
+    
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="../src/main/resources/static/codemirror.min.css">
+    <script src="../src/main/resources/static/codemirror.min.js"></script>
+    
+    <!-- Rule Editor -->
+    <link rel="stylesheet" href="../src/main/resources/static/jre-editor.css">
+    <script src="../src/main/resources/static/jre-mode.js"></script>
+    <script src="../src/main/resources/static/jre-editor.js"></script>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 24px;
+        }
+        .jre-editor-container {
+            margin-bottom: 24px;
+        }
+        .form-section {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .form-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .form-group {
+            flex: 1;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #333;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.15);
+        }
+        .hidden-field {
+            display: none;
+        }
+        .debug-section {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .debug-section h4 {
+            margin-top: 0;
+            color: #666;
+        }
+        .debug-section pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 12px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+            max-height: 200px;
+        }
+        .note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #ffeeba;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rule Editor</h1>
+        <p class="subtitle">Rules Script - Joget Integration Example</p>
+        
+        <div class="note">
+            <strong>Note:</strong> This example requires the Joget Rule Editor to be running on 
+            <code>http://localhost:8084</code>. Update the <code>apiBase</code> option if your 
+            Joget instance is running on a different port.
+        </div>
+        
+        <!-- Context Configuration -->
+        <div class="form-section">
+            <h3>Context Configuration</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contextType">Context Type</label>
+                    <select id="contextType">
+                        <option value="ELIGIBILITY">Eligibility Rules</option>
+                        <option value="DERIVATION">Derivation Rules</option>
+                        <option value="VALIDATION">Validation Rules</option>
+                        <option value="SCORING">Scoring Rules</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contextCode">Context Code (e.g., Program ID)</label>
+                    <input type="text" id="contextCode" value="PROG-2025-001" placeholder="e.g., PROG-2025-001">
+                </div>
+                <div class="form-group">
+                    <label for="scopeCode">Field Scope</label>
+                    <select id="scopeCode">
+                        <option value="FARMER_ELIGIBILITY">Farmer Eligibility</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="rulesetCode">Ruleset Code (auto-generated on first save)</label>
+                    <input type="text" id="rulesetCode" readonly placeholder="Will be generated on save">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rule Editor -->
+        <div id="jre-editor" class="jre-editor-container"></div>
+        
+        <!-- Hidden field for form submission -->
+        <textarea id="eligibilityScript" class="hidden-field"></textarea>
+        
+        <!-- Debug Section -->
+        <div class="debug-section">
+            <h4>Debug Output</h4>
+            <pre id="debug-output">Editor initialized. Try validating or saving a script.</pre>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize the Rule Editor
+        var editor = JREEditor.init('jre-editor', {
+            apiBase: 'http://localhost:8084/jw/api/erel/rules',
+            scopeCode: document.getElementById('scopeCode').value,
+            contextType: document.getElementById('contextType').value,
+            contextCode: document.getElementById('contextCode').value,
+            hiddenFieldId: 'eligibilityScript',
+            rulesetCodeFieldId: 'rulesetCode',
+            height: '400px',
+            showDictionary: true,
+            showSaveButton: true,
+            
+            onValidate: function(result) {
+                updateDebug('Validation Result', result);
+            },
+            
+            onSave: function(result) {
+                updateDebug('Save Result', result);
+                // Update ruleset code field
+                if (result.rulesetCode) {
+                    document.getElementById('rulesetCode').value = result.rulesetCode;
+                }
+            },
+            
+            onError: function(error) {
+                updateDebug('Error', { error: error });
+            }
+        });
+        
+        // Update context when changed
+        document.getElementById('contextType').addEventListener('change', function() {
+            // In a real app, you'd reinitialize or update the editor
+            console.log('Context type changed to:', this.value);
+        });
+        
+        document.getElementById('contextCode').addEventListener('change', function() {
+            console.log('Context code changed to:', this.value);
+        });
+        
+        // Debug output helper
+        function updateDebug(title, data) {
+            var output = document.getElementById('debug-output');
+            output.textContent = title + ':\n' + JSON.stringify(data, null, 2);
+        }
+        
+        // Log that editor is ready
+        console.log('Rule Editor initialized:', editor);
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spApplicationApplicant",
+    "name": "Application Tab 1 — Applicant & Programme",
+    "description": "Tab 1 of the application wizard. Programme picker + applicant identity (auto-filled from National ID via the Identity Resolver).",
+    "tableName": "sp_application_applicnt",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "postProcessor": {
+      "className": "global.govstack.application.hook.ApplicationSeedingTool",
+      "properties": {}
+    },
+    "postProcessorRunOn": "both"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "programmeSection",
+        "label": "Choose the programme you're applying for"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "parent_id",
+                "label": "Parent (application id)"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "programme_id",
+                "label": "Programme *",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "spProgramMain",
+                    "idColumn": "id",
+                    "labelColumn": "programCode",
+                    "extraCondition": "e.customProperties.status = 'ACTIVE'",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "— select a programme —"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Applicant identity (auto-fills from National ID)"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "national_id",
+                "label": "National ID",
+                "size": "30",
+                "maxlength": "60",
+                "placeholder": "Enter National ID then click Resolve"
+              }
+            },
+            {
+              "className": "global.govstack.identity.element.IdentityResolverElement",
+              "properties": {
+                "id": "identityResolver",
+                "resolverConfigId": "farmerByNid",
+                "inputLabel": "Resolve from registry",
+                "valueField": "national_id",
+                "useExternalInput": "Y",
+                "autoResolveOnBlur": "N",
+                "showResolveButton": "Y",
+                "showStatusInline": "Y"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_first_name",
+                "label": "First Name",
+                "size": "60",
+                "maxlength": "120"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_last_name",
+                "label": "Last Name",
+                "size": "60",
+                "maxlength": "120"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_dob",
+                "label": "Date of birth",
+                "size": "30",
+                "maxlength": "20"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_gender",
+                "label": "Gender",
+                "size": "20",
+                "maxlength": "20"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_district",
+                "label": "District",
+                "size": "60",
+                "maxlength": "120"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_village",
+                "label": "Village",
+                "size": "60",
+                "maxlength": "120"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_mobile",
+                "label": "Mobile",
+                "size": "30",
+                "maxlength": "30"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_email",
+                "label": "Email",
+                "size": "60",
+                "maxlength": "120"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

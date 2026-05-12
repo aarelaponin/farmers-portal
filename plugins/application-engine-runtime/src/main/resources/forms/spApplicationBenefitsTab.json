@@ -1,0 +1,67 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spApplicationBenefitsTab",
+    "name": "Application Tab 3 — Benefits requested",
+    "tableName": "sp_application_ben_tab",
+    "loadBinder": {"className": "global.govstack.application.binder.SeedingTabLoadBinder", "properties": {}},
+    "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "permission": {"className": "", "properties": {}},
+    "postProcessor": {
+      "className": "global.govstack.application.hook.ApplicationSeedingTool",
+      "properties": {}
+    },
+    "postProcessorRunOn": "both"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {"id": "main", "label": "Benefit items requested"},
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "100%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "parent_id", "label": "Parent (application id)"}},
+            {"className": "org.joget.apps.form.lib.CustomHTML",
+             "properties": {
+               "id": "intro",
+               "label": "",
+               "value": "<p style='color:#445566;font-size:13px;margin:0 0 10px 0;'>Set requested quantity for each benefit. Rows are auto-populated from the chosen programme.</p>"}},
+            {"className": "org.joget.plugin.enterprise.FormGrid",
+             "properties": {
+               "id": "benefitGrid",
+               "label": "Benefit items",
+               "formDefId": "spApplicationBenefitReq",
+               "pageSize": "30",
+               "showRowNumber": "true",
+               "loadBinder": {
+                 "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                 "properties": {
+                   "formDefId": "spApplicationBenefitReq",
+                   "foreignKey": "parent_id"
+                 }
+               },
+               "storeBinder": {
+                 "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                 "properties": {
+                   "formDefId": "spApplicationBenefitReq",
+                   "foreignKey": "parent_id"
+                 }
+               },
+               "options": [
+                 {"value": "item_label",       "label": "Item",          "formatType": "text", "format": "", "width": "240"},
+                 {"value": "unit",             "label": "Unit",          "formatType": "text", "format": "", "width": "60"},
+                 {"value": "subsidy_percent",  "label": "Subsidy %",     "formatType": "text", "format": "", "width": "80"},
+                 {"value": "default_quantity", "label": "Default qty",   "formatType": "text", "format": "", "width": "90"},
+                 {"value": "requested_qty",    "label": "Requested qty", "formatType": "text", "format": "", "width": "110"},
+                 {"value": "approved_qty",     "label": "Approved qty (operator)", "formatType": "text", "format": "", "width": "130"},
+                 {"value": "status",           "label": "Status",        "formatType": "text", "format": "", "width": "100"}
+               ]}}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "list_app_resolver_field_map",
+  "name": "Identity Resolver Field Maps",
+  "description": "CRUD list for app_resolver_field_map — source→target field mappings per resolver.",
+  "properties": {"key": "id"},
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": {
+      "formDefId": "app_resolver_field_map",
+      "orderBy": "displayOrder",
+      "extraCondition": "",
+      "order": "ASC"
+    }
+  },
+  "filters": [
+    {"name": "resolverConfigId", "label": "Resolver Config", "operator": "AND",
+     "type": {
+       "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+       "properties": {"defaultValue": "#requestParam.resolverConfigId#"}
+     }
+    }
+  ],
+  "columns": [
+    {"name": "resolverConfigId", "width": "150", "label": "Resolver", "sortable": "true"},
+    {"name": "sourceFieldId", "width": "150", "label": "Source field", "sortable": "true"},
+    {"name": "targetFieldId", "width": "150", "label": "Target field", "sortable": "true"},
+    {"name": "chainedSourceFormId", "width": "150", "label": "Chained source", "sortable": "true"},
+    {"name": "resolveStrategy", "width": "150", "label": "Strategy", "sortable": "true"},
+    {"name": "readonlyAfterResolve", "width": "80", "label": "RO?", "sortable": "true"},
+    {"name": "displayOrder", "width": "60", "label": "Order", "sortable": "true"},
+    {"name": "isActive", "width": "60", "label": "Active", "sortable": "true"}
+  ],
+  "actions": [
+    {"name": "create", "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+     "label": "+ New mapping", "properties": {"hyperlink": "?action=create"}}
+  ],
+  "rowActions": [
+    {"name": "edit", "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+     "label": "Edit", "properties": {"hyperlink": "?action=edit&id=#row.id#"}}
+  ]
+}

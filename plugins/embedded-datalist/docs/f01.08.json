@@ -1,0 +1,104 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "parent_id",
+                                "value": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.marketplace.EmbeddedDatalist",
+                            "properties": {
+                                "pageSize": "10",
+                                "showPagination": "true",
+                                "label": "",
+                                "datalistId": "listFarmersParcels",
+                                "emptyMessage": "No records found.",
+                                "showExport": "",
+                                "showFilter": "",
+                                "rowClickAction": "",
+                                "id": "field4",
+                                "refreshOnChange": "",
+                                "filterParams": [
+                                    {
+                                        "paramName": "farm_id",
+                                        "fieldId": "parent_id",
+                                        "defaultValue": ""
+                                    }
+                                ],
+                                "height": "400px",
+                                "customCss": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section1",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "01.08 - Parcels",
+        "description": "",
+        "postProcessorRunOn": "create",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "listParcels",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "listParcels"
+    }
+}

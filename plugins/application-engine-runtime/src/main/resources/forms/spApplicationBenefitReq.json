@@ -1,0 +1,69 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spApplicationBenefitReq",
+    "name": "Application Benefit Request",
+    "description": "One row per programme benefit item seeded onto an application. Farmer fills in requestedQty; case worker sets approvedQty + status on decision. See _design/application-engine-design.md §4.2.",
+    "tableName": "sp_application_ben_req",
+    "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "permission": {"className": "", "properties": {}}
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {"id": "main", "label": "Benefit request"},
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "50%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "parent_id", "label": "Parent (application id)"}},
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "programme_benefit_id", "label": "Programme benefit id"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "item_label", "label": "Item", "size": "120", "maxlength": "200", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "item_code", "label": "Code", "size": "30", "maxlength": "60", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "unit", "label": "Unit", "size": "20", "maxlength": "20", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "unit_cost", "label": "Unit cost", "size": "20", "maxlength": "20", "readonly": "true"}}
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "50%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "subsidy_percent", "label": "Subsidy %", "size": "10", "maxlength": "10", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "subsidy_amount", "label": "Subsidy amount", "size": "20", "maxlength": "20", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "default_quantity", "label": "Default qty", "size": "10", "maxlength": "10", "readonly": "true"}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {
+               "id": "requested_qty", "label": "Requested qty (farmer)",
+               "size": "10", "maxlength": "10",
+               "validator": {"className": "org.joget.apps.form.lib.DefaultValidator",
+                             "properties": {"regex": "^[0-9]+(\\.[0-9]+)?$",
+                                            "regexMessage": "Numeric only"}}}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "approved_qty", "label": "Approved qty (operator)", "size": "10", "maxlength": "10"}},
+            {"className": "org.joget.apps.form.lib.SelectBox",
+             "properties": {
+               "id": "status", "label": "Status",
+               "value": "PENDING",
+               "options": [
+                 {"value": "PENDING",  "label": "Pending"},
+                 {"value": "APPROVED", "label": "Approved"},
+                 {"value": "REDUCED",  "label": "Approved (reduced)"},
+                 {"value": "REJECTED", "label": "Rejected"}
+               ]}}
+          ]
+        }
+      ]
+    }
+  ]
+}

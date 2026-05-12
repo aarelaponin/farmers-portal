@@ -1,0 +1,56 @@
+{
+  "id": "list_qa_issues",
+  "name": "Quality Issues for Record",
+  "description": "Embedded panel datalist — shows active issues for the current record. Filter by recordId via embedded-datalist hash variable.",
+  "properties": {
+    "key": "id"
+  },
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "primaryKey": "id",
+      "sql": "SELECT id, c_severity AS severity, c_tabcode AS tab, c_rulecode AS rule_code, c_message AS message, c_dateraised AS date_raised FROM app_fd_qa_issue WHERE c_isactive = 'Y' AND ('#requestParam.recordId#' = '' OR c_recordid = '#requestParam.recordId#') ORDER BY CASE c_severity WHEN 'ERROR' THEN 1 WHEN 'WARNING' THEN 2 ELSE 3 END, c_tabcode, c_rulecode",
+    "countSql": "SELECT COUNT(*) FROM app_fd_qa_issue WHERE c_isactive = 'Y' AND ('#requestParam.recordId#' = '' OR c_recordid = '#requestParam.recordId#')"
+    }
+  },
+  "columns": [
+    {
+      "name": "severity",
+      "label": "Severity",
+      "sortable": "true",
+      "width": "80",
+      "format": {
+        "className": "",
+        "properties": {}
+      }
+    },
+    {
+      "name": "tab",
+      "label": "Tab",
+      "sortable": "true",
+      "width": "120"
+    },
+    {
+      "name": "rule_code",
+      "label": "Rule",
+      "sortable": "true",
+      "width": "200"
+    },
+    {
+      "name": "message",
+      "label": "Issue",
+      "sortable": "false",
+      "width": "*"
+    },
+    {
+      "name": "date_raised",
+      "label": "Raised",
+      "sortable": "true",
+      "width": "180"
+    }
+  ],
+  "filters": [],
+  "actions": [],
+  "rowActions": []
+}
