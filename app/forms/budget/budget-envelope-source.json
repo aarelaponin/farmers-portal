@@ -1,0 +1,177 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "budget_envelope_source",
+    "name": "04.02 - Budget Envelope Source Contribution",
+    "tableName": "budget_envelope_source",
+    "description": "One row per (envelope × funding source). The envelope's allocated amount is decomposed into source contributions whose proportions are fixed at programme launch. Per methodology §2.2.",
+    "loadBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission": { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "identitySection", "label": "Source Contribution Identity" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Source Contribution Code",
+                "size": "96", "maxlength": "96",
+                "placeholder": "SRC_GOL_PRG_2025_002_FY2526",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "budget_envelope_source",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "Source contribution code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "envelope_code",
+                "label": "Envelope",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "budget_envelope",
+                    "idColumn": "code",
+                    "labelColumn": "code",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(none)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "source_code",
+                "label": "Source Code",
+                "size": "64", "maxlength": "64",
+                "placeholder": "GOL | FAO_IFAD | WORLD_BANK_SADP_II | ...",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "source_name",
+                "label": "Source Name",
+                "size": "255", "maxlength": "255",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "donor_class",
+                "label": "Donor Classification",
+                "options": [
+                  { "value": "government", "label": "Government (own-source)" },
+                  { "value": "bilateral_donor", "label": "Bilateral donor" },
+                  { "value": "multilateral_donor", "label": "Multilateral donor" },
+                  { "value": "private", "label": "Private / philanthropy" }
+                ],
+                "addEmptyOption": "false",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "share_percent",
+                "label": "Share Percent (0–100)",
+                "size": "8", "maxlength": "8",
+                "placeholder": "60.00",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "decimal" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "allocated_amount",
+                "label": "Allocated Amount (this source's share of the envelope total)",
+                "size": "20", "maxlength": "20",
+                "placeholder": "0.00",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "decimal" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "status",
+                "label": "Status",
+                "options": [
+                  { "value": "active", "label": "Active" },
+                  { "value": "frozen", "label": "Frozen" },
+                  { "value": "closed", "label": "Closed" }
+                ],
+                "addEmptyOption": "false",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "notesSection", "label": "Notes" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": { "id": "notes", "label": "Notes", "rows": "3", "cols": "80" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

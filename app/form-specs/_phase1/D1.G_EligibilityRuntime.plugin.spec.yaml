@@ -1,0 +1,317 @@
+# =============================================================================
+# D1.G — EligibilityRuntime plugin spec (REWRITTEN — thin runtime over joget-rules-api)
+# Phase 1, Subsidy Adjustment Plan
+# Skill: joget-plugin-dev
+# Effort: 1.5 days (was 5 — collapsed because joget-rules-api already
+#         compiles rules to SQL; we only need to execute the SQL for one
+#         applicant and persist results)
+# =============================================================================
+
+plugin:
+  className: global.govstack.subsidy.lib.EligibilityRuntime
+  bundle:
+    name: subsidy-eligibility-runtime
+    artifactId: subsidy-eligibility-runtime
+    version: 8.1-SNAPSHOT
+    style: gam-plugins-style
+  base_class: org.joget.plugin.base.DefaultApplicationPlugin
+  type: ApplicationPlugin              # workflow tool plugin (wraps in MultiTools)
+  description: |
+    Thin runtime executor that bridges the existing joget-rules-api
+    (compiles Rules Script DSL to SQL) with per-applicant evaluation
+    workflow steps. Loads the published ruleset for the target programme,
+    invokes the rules-api compiler, runs the resulting fullEligibilityQuery
+    filtered to ONE applicant (by farmer_id), persists the per-rule pass/fail
+    rows to spEligRuleResult and the overall decision to spEligResult.
+    Sets workflow variable eligibilityDecision = PASS|FAIL|ERROR.
+
+depends_on:
+  - joget-rules-api 8.1-SNAPSHOT       # published — supplies RulesetService + RuleScriptCompiler
+  - rules-grammar   8.1-SNAPSHOT       # transitive (embedded in rules-api)
+  - D1.A md51 categories seeded        # FOOD_SECURITY + PROGRAM_HISTORY
+  - D1.D jreFieldDefinition seeded     # 18 evaluable fields under FARMER_APPLICATION scope
+  - D1.E FarmerDerivedRefresh deployed # ensures spFarmerDerived is fresh
+  - D1.I reference rulesets loaded     # for testing — programmes can also define their own
+
+# ----------------------------------------------------------------------------
+# Plugin properties
+# ----------------------------------------------------------------------------
+plugin_properties_schema:
+  applicationId:
+    type: string
+    default: "#variable.applicationId#"
+    description: "spApplication.id of the application being evaluated"
+  applicantFarmerCode:
+    type: string
+    default: "#variable.farmerCode#"
+    description: "Farmer code; used to filter the JRE SQL to one applicant"
+  programCode:
+    type: string
+    default: "#variable.programCode#"
+    description: "Used to look up the bound ruleset"
+  rulesetCode:
+    type: string
+    default: ""
+    description: "Optional: override which ruleset to evaluate. If blank, uses the one bound to the programme via contextType=PROGRAM, contextCode=programCode"
+  writeAuditTrail:
+    type: boolean
+    default: true
+
+multitools_invocation_example:
+  pluginName: org.joget.apps.app.lib.MultiTools
+  pluginProperties:
+    runInMultiThread: ""
+    comment: "Evaluate eligibility via JRE for this application"
+    tools:
+      - className: global.govstack.subsidy.lib.EligibilityRuntime
+        properties:
+          applicationId: "#variable.applicationId#"
+          applicantFarmerCode: "#variable.farmerCode#"
+          programCode: "#variable.programCode#"
+          writeAuditTrail: "true"
+
+# ----------------------------------------------------------------------------
+# Logic specification — note how compact this is vs the original D1.G
+# ----------------------------------------------------------------------------
+logic:
+
+  step_1_load_ruleset:
+    # Use rules-api's RulesetService directly (Spring bean lookup)
+    code_sketch: |
+      RulesetService rsService = (RulesetService) AppUtil.getApplicationContext()
+          .getBean("rulesetService");
+
+      RulesetData ruleset;
+      if (rulesetCode != null && !rulesetCode.isEmpty()) {
+          ruleset = rsService.loadRuleset(rulesetCode);
+      } else {
+          // bind by programme: contextType='PROGRAM', contextCode=programCode
+          ruleset = rsService.loadRulesetByContext("PROGRAM", programCode);
+      }
+      if (ruleset == null) {
+          decision = "ERROR";
+          decisionReason = "No ruleset bound to programme " + programCode;
+          return;
+      }
+
+  step_2_compile:
+    code_sketch: |
+      RuleScriptParser parser = new RuleScriptParser();
+      List<Rule> rules = parser.parse(ruleset.getScript());
+
+      FieldRegistryService fieldRegistry = (FieldRegistryService) AppUtil
+          .getApplicationContext().getBean("fieldRegistryService");
+      FieldMapping fieldMapping = fieldRegistry.buildFieldMapping(
+          ruleset.getFieldScopeCode());  // FARMER_APPLICATION
+
+      RuleScriptCompiler compiler = new RuleScriptCompiler(fieldMapping);
+      CompiledRuleset compiled = compiler.compile(
+          rules, ruleset.getRulesetCode(), ruleset.getFieldScopeCode());
+
+  step_3_run_filtered_to_one_applicant:
+    # The rules-api's fullEligibilityQuery does NOT include a WHERE filter
+    # for a specific record. Inject one by wrapping the query.
+    code_sketch: |
+      String fullSql = compiled.getFullEligibilityQuery();
+      // fullSql looks like:
+      //   SELECT alias.id, <per-rule selects>, is_eligible
+      //   FROM <main_table> alias
+      //   <joins>
+      //   (no WHERE)
+      //
+      // Wrap to filter to one applicant:
+      String singleApplicantSql = "SELECT * FROM (\n" + fullSql
+          + "\n) inner_q WHERE inner_q.id = ?";
+
+      DataSource ds = (DataSource) AppUtil.getApplicationContext()
+          .getBean("setupDataSource");
+      try (Connection conn = ds.getConnection();
+           PreparedStatement ps = conn.prepareStatement(singleApplicantSql)) {
+          ps.setString(1, applicantFarmerCode);
+          ResultSet rs = ps.executeQuery();
+          if (!rs.next()) {
+              decision = "ERROR";
+              decisionReason = "Farmer not in JRE main table — derivation may be stale";
+              return;
+          }
+          // Iterate columns: rule_X_pass, rule_Y_pass, ..., is_eligible
+          // Build per-rule results
+      }
+
+  step_4_score_calculation:
+    # rules-api emits per-BONUS/PRIORITY rule SCORE in the scoringQuery.
+    # For one applicant, we run the scoring SQL filtered to the same id
+    # and read total_score directly.
+    code_sketch: |
+      String scoreSql = "SELECT total_score FROM (\n"
+          + compiled.getScoringQuery() + "\n) score_q WHERE score_q.id = ?";
+      try (PreparedStatement ps = conn.prepareStatement(scoreSql)) {
+          ps.setString(1, applicantFarmerCode);
+          ResultSet rs = ps.executeQuery();
+          if (rs.next()) totalScore = rs.getDouble("total_score");
+      }
+
+  step_5_decision:
+    # is_eligible from fullEligibilityQuery already accounts for mandatory
+    # INCLUSION + EXCLUSION rules. totalScore from scoringQuery handles
+    # BONUS/PRIORITY ranking. Combine for final decision.
+    code_sketch: |
+      decision = (isEligible == 1) ? "PASS" : "FAIL";
+      // Programmes can layer additional thresholds via spProgramEligibility
+      // (minimumScore, passingThreshold) — read those if present:
+      Double minimumScore = programEligibility.get("minimumScore");
+      if (decision.equals("PASS") && minimumScore != null && totalScore < minimumScore) {
+          decision = "FAIL";
+          decisionReason = "Score below programme minimum";
+      }
+
+  step_6_persist:
+    writes:
+      - form: spEligResult
+        method: saveOrUpdate
+        upsert_key: applicationId
+        fields:
+          - applicationId
+          - farmerCode
+          - programCode
+          - rulesetCode
+          - rulesetVersion: ruleset.getVersion()
+          - totalScore
+          - isEligible
+          - mandatoryFailed: derived from per-rule results
+          - decision: PASS | FAIL | ERROR
+          - decisionReason
+          - evaluatedAt: NOW()
+
+      - form: spEligRuleResult
+        method: save
+        cleanup_first: "DELETE FROM app_fd_speligruleresult WHERE c_application_id = ?"
+        fields_per_row:
+          - applicationId
+          - ruleName
+          - ruleType  # INCLUSION | EXCLUSION | PRIORITY | BONUS
+          - mandatory
+          - passed
+          - score
+          - failMessage  # from rule's FAIL MESSAGE clause
+
+  step_7_set_workflow_variable:
+    variable: eligibilityDecision
+    value: decision (PASS | FAIL | ERROR)
+
+  step_8_audit:
+    writes_to: audit_log
+    fields:
+      - operation: ELIGIBILITY_EVALUATION
+      - applicationId, farmerCode, programCode, rulesetCode
+      - decision, totalScore, duration_ms
+
+# ----------------------------------------------------------------------------
+# What we are NOT building — was in the original D1.G, made redundant by JRE
+# ----------------------------------------------------------------------------
+explicitly_NOT_in_scope:
+  - DSL parsing (rules-api does it via rules-grammar/ANTLR)
+  - SQL compilation (rules-api's RuleScriptCompiler)
+  - Operator implementation (rules-api supports =, !=, <, <=, >, >=, BETWEEN, IN, NOT_IN, IS EMPTY, IS NOT EMPTY, AND, OR, NOT plus aggregations)
+  - Field dictionary management (rules-api's FieldRegistryService reads jreFieldDefinition)
+  - Ruleset CRUD (rules-api's RulesetService)
+  - Validation of rule syntax (rules-api's /jre/validate endpoint)
+
+# ----------------------------------------------------------------------------
+# What this runtime adds on top of joget-rules-api
+# ----------------------------------------------------------------------------
+this_plugin_adds:
+  - Per-applicant runtime invocation (rules-api operates on populations)
+  - Persistence of per-rule and per-application results (spEligRuleResult/spEligResult)
+  - Workflow integration (sets workflow variables, callable from XPDL tool activity)
+  - Programme-bound ruleset lookup (loads ruleset by contextType=PROGRAM, contextCode=programCode)
+  - Combination with programme-level minimumScore / passingThreshold thresholds
+
+# ----------------------------------------------------------------------------
+# Maven / OSGi packaging
+# ----------------------------------------------------------------------------
+maven_pom_notes:
+  packaging: bundle
+  use_maven_bundle_plugin: true
+  imports:
+    - org.joget.apps.app.service.*
+    - org.joget.apps.form.dao.FormDataDao
+    - org.joget.commons.util.*
+    - org.joget.plugin.base.*
+    - global.govstack.rulesapi.service.*  # RulesetService, FieldRegistryService
+    - global.govstack.rulesapi.compiler.*  # RuleScriptCompiler, CompiledRuleset, FieldMapping
+    - global.govstack.rulesapi.parser.*    # RuleScriptParser
+  embed_dependencies:
+    - none — everything pulls from rules-api at runtime via OSGi
+
+activator_registration: |
+  bundleContext.registerService(
+    Plugin.class.getName(),
+    new EligibilityRuntime(),
+    null
+  );
+
+# ----------------------------------------------------------------------------
+# Tests
+# ----------------------------------------------------------------------------
+unit_tests:
+  - test: ruleset_not_found
+    given: programCode='UNKNOWN', no ruleset bound
+    expect: { decision: ERROR, decisionReason_contains: "No ruleset bound" }
+
+  - test: applicant_not_in_main_table
+    given: applicantFarmerCode='FR-NONE'
+    expect: { decision: ERROR, decisionReason_contains: "not in JRE main table" }
+
+  - test: smallholder_passes
+    given:
+      ruleset: REF-SMALLHOLDER
+      farmer: { total_land_ha: 1.5, cultivated_land_ha: 1.0, farmer_age: 35 }
+    expect: { decision: PASS, isEligible: 1 }
+
+  - test: smallholder_fails_mandatory_rule
+    given:
+      ruleset: REF-SMALLHOLDER
+      farmer: { total_land_ha: 3.0 }
+    expect: { decision: FAIL, mandatoryFailed: true }
+
+  - test: food_security_scoring
+    given:
+      ruleset: REF-FOOD-TARGET
+      farmer: { food_security_status: SEVERE, vulnerability_score: 60, female_headed_household: true }
+    expect: { decision: PASS, totalScore: 65 }   # 35 + 20 + 10
+
+  - test: idempotent
+    given: same application
+    when: evaluate twice
+    expect:
+      - spEligResult: 1 row (upserted)
+      - spEligRuleResult: N rows (replaced)
+
+integration_test:
+  setup: |
+    1. D1.A md51 + D1.B foodSecurityCode + D1.C 5 fields + D1.D jreFieldDefinition seeds
+    2. Deploy joget-rules-api, joget-rule-editor, FarmerDerivedRefresh, EligibilityRuntime
+    3. Load D1.I reference rulesets via load_reference_rulesets.sh
+    4. Create test programme PROG-TEST-001 bound to REF-FOOD-TARGET
+       (set jreRuleset.contextType='PROGRAM', contextCode='PROG-TEST-001')
+    5. D1.H seed UAT spProgParticip rows
+    6. Run FarmerDerivedRefresh scope=all → spFarmerDerived populated
+    7. Submit application from FR-T00003 to PROG-TEST-001
+    8. Trigger EligibilityRuntime
+  asserts:
+    - spEligResult row created with totalScore + decision
+    - spEligRuleResult has 3 rows (one per food-security rule)
+    - Workflow variable eligibilityDecision = PASS
+    - Re-running produces same row (no duplicates)
+
+# ----------------------------------------------------------------------------
+# Acceptance
+# ----------------------------------------------------------------------------
+acceptance:
+  - Plugin builds, deploys alongside joget-rules-api without OSGi conflicts
+  - When invoked from a tool activity, the workflow variable
+    eligibilityDecision is set to PASS|FAIL|ERROR after execution
+  - spEligResult and spEligRuleResult populated correctly
+  - Re-evaluation is idempotent (no duplicate rows)
+  - Total runtime per application < 500ms on dev (94 farmers, 8 spProgParticip rows)

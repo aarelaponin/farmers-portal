@@ -1,0 +1,136 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "budget_adjustment_request",
+    "name": "04.05 - Budget Adjustment Request",
+    "tableName": "budget_adjustment",
+    "description": "Maker-checker manual adjustment request. Operators file a request (REALLOCATION between envelopes, TOP_UP add funds, CLAWBACK remove funds). A second operator approves; on approval the BudgetAdjustmentBinder dispatches the underlying journal entries through BudgetEngine. Self-approval is rejected by the binder.",
+    "loadBinder":  { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "global.govstack.regbb.engine.binder.BudgetAdjustmentBinder", "properties": {} },
+    "permission":  { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secMain", "label": "Adjustment request" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.IdGeneratorField",
+              "properties": {
+                "id": "code", "label": "Request code",
+                "format": "BAR-??????", "type": "random_number", "size": "6", "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "adjustment_type", "label": "Type",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true" } },
+                "options": [
+                  { "value": "REALLOCATION", "label": "REALLOCATION — move funds between envelopes" },
+                  { "value": "TOP_UP",       "label": "TOP_UP — add funds to an envelope (donor / correction)" },
+                  { "value": "CLAWBACK",     "label": "CLAWBACK — remove funds from an envelope" }
+                ]
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "from_envelope_code", "label": "From envelope (REALLOCATION / CLAWBACK)",
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": { "formDefId": "budget_envelope", "idColumn": "code", "labelColumn": "code", "addEmptyOption": "true", "emptyLabel": "(none)" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "to_envelope_code", "label": "To envelope (REALLOCATION / TOP_UP)",
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": { "formDefId": "budget_envelope", "idColumn": "code", "labelColumn": "code", "addEmptyOption": "true", "emptyLabel": "(none)" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "amount", "label": "Amount (LSL)",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true", "type": "double" } }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "reason", "label": "Reason / justification", "rows": "4", "cols": "80",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true" } }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secApproval", "label": "Approval" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "status", "label": "Status",
+                "value": "requested",
+                "options": [
+                  { "value": "requested", "label": "Requested (pending approval)" },
+                  { "value": "approved",  "label": "Approved (will dispatch on save)" },
+                  { "value": "rejected",  "label": "Rejected" }
+                ]
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": { "id": "requested_by",  "label": "" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": { "id": "requested_at",  "label": "" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": { "id": "approved_by",   "label": "" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": { "id": "approved_at",   "label": "" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "reject_reason", "label": "Reject reason (if rejecting)", "rows": "3", "cols": "80"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": { "id": "dispatch_outcome", "label": "" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": { "id": "dispatch_idempotency_key", "label": "" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

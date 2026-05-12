@@ -1,0 +1,197 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "beneficiary_subledger",
+    "name": "04.04 - Beneficiary Sub-ledger",
+    "tableName": "beneficiary_subledger",
+    "description": "One row per (applicant × programme application). Opened at PRE_COMMITMENT, closed at full EXPENSE or RELEASE. Per methodology §2.3. Activated by 1B BudgetEventListener; the form definition lands in 1A so the table exists.",
+    "loadBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission": { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "identitySection", "label": "Beneficiary Account" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Account Code (BNF_<applicationId>)",
+                "size": "96", "maxlength": "96",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "beneficiary_subledger",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "Beneficiary account code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "envelope_code",
+                "label": "Envelope",
+                "size": "64", "maxlength": "64",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "application_id",
+                "label": "Source Application ID",
+                "size": "64", "maxlength": "64",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_national_id",
+                "label": "Applicant National ID",
+                "size": "32", "maxlength": "32"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicant_name",
+                "label": "Applicant Name (snapshot)",
+                "size": "255", "maxlength": "255"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "amount_total",
+                "label": "Amount Owed (current balance)",
+                "size": "20", "maxlength": "20",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "decimal" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "amount_by_source_json",
+                "label": "Per-Source Breakdown (JSON)",
+                "rows": "4", "cols": "60",
+                "placeholder": "{\"SRC_GOL\":1200.00,\"SRC_FAO\":800.00}"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "status",
+                "label": "Status",
+                "options": [
+                  { "value": "open",                "label": "Open (pre-committed or committed)" },
+                  { "value": "partially_expensed",  "label": "Partially expensed" },
+                  { "value": "closed",              "label": "Closed (fully expensed)" },
+                  { "value": "released",            "label": "Released (cancelled / withdrawn)" }
+                ],
+                "addEmptyOption": "false",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "lifecycleSection", "label": "Lifecycle Timestamps" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": { "id": "pre_committed_at", "label": "Pre-committed At", "size": "32" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": { "id": "committed_at", "label": "Committed At", "size": "32" }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": { "id": "expensed_at", "label": "Expensed At", "size": "32" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": { "id": "closed_at", "label": "Closed At", "size": "32" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "linksSection", "label": "Cross-references" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "voucher_id",
+                "label": "Voucher ID (Phase 3 — set at COMMITMENT)",
+                "size": "64", "maxlength": "64"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "rule_version",
+                "label": "Rule Version (BENEFIT_AMOUNT version at PRE_COMMITMENT)",
+                "size": "32", "maxlength": "32"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": { "id": "notes", "label": "Notes", "rows": "3", "cols": "80" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

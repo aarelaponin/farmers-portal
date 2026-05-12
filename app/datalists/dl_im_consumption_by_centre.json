@@ -1,0 +1,37 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "centre_name",        "id": "column_centre",   "label": "Resource Centre",     "width": "240px" },
+    { "name": "district",           "id": "column_district", "label": "District",            "width": "140px" },
+    { "name": "redemptions_30d",    "id": "column_red",      "label": "Redemptions (30d)",   "width": "120px", "alignment": "right" },
+    { "name": "qty_redeemed_30d",   "id": "column_qty",      "label": "Qty handed over",     "width": "130px", "alignment": "right" },
+    { "name": "distinct_farmers",   "id": "column_farm",     "label": "Distinct farmers",    "width": "120px", "alignment": "right" },
+    { "name": "distinct_inputs",    "id": "column_inp",      "label": "Distinct inputs",     "width": "120px", "alignment": "right" },
+    {
+      "name": "last_redemption", "id": "column_last", "label": "Last redemption",
+      "format": { "className": "org.joget.plugin.enterprise.DateFormatter", "properties": { "format": "yyyy-MM-dd" } }
+    },
+    { "name": "centre_code",        "id": "column_cc",       "label": "Code",                "hidden": "true" }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "IM Report: Consumption rate by centre (last 30 days)",
+  "id": "dl_im_consumption_by_centre",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT centre.c_code AS centre_code, centre.c_name AS centre_name, COALESCE(dist.c_name, centre.c_district_code, '—') AS district, COUNT(rdm.id) AS redemptions_30d, COALESCE(SUM(CAST(NULLIF(rdm.c_quantity_redeemed, '') AS NUMERIC(15,2))), 0) AS qty_redeemed_30d, COUNT(DISTINCT vch.c_farmer_nid) AS distinct_farmers, COUNT(DISTINCT vch.c_input_code) AS distinct_inputs, MAX(rdm.c_redemption_date) AS last_redemption FROM app_fd_md37collectionPoint centre LEFT JOIN app_fd_md03district dist ON dist.c_code = centre.c_district_code LEFT JOIN app_fd_im_voucher_redemption rdm ON rdm.c_redemption_point = centre.c_code AND NULLIF(rdm.c_redemption_date, '')::date >= CURRENT_DATE - INTERVAL '30 days' LEFT JOIN app_fd_im_voucher vch ON vch.c_code = rdm.c_voucher_code GROUP BY centre.c_code, centre.c_name, dist.c_name, centre.c_district_code HAVING COUNT(rdm.id) > 0 ORDER BY redemptions_30d DESC, centre_name",
+      "countSql": "SELECT COUNT(DISTINCT centre.c_code) FROM app_fd_md37collectionPoint centre WHERE EXISTS (SELECT 1 FROM app_fd_im_voucher_redemption rdm WHERE rdm.c_redemption_point = centre.c_code AND NULLIF(rdm.c_redemption_date, '')::date >= CURRENT_DATE - INTERVAL '30 days')",
+      "primaryKey": "centre_code"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

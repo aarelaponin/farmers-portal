@@ -1,0 +1,397 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "parent_id",
+                                "value": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "id": "sectionBenefInstruction",
+                                "label": "",
+                                "value": "<div class=\"alert alert-info\"><strong>Instructions:</strong> Define who can benefit from this program. Choose a targeting strategy and configure target groups if using categorical or combined targeting.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Universal (All Farmers)",
+                                        "value": "UNIVERSAL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Categorical",
+                                        "value": "CATEGORICAL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Geographic",
+                                        "value": "GEOGRAPHIC",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Combined",
+                                        "value": "COMBINED",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "Targeting Strategy",
+                                "id": "targetingStrategy",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "multiple": "",
+                                "options": [
+                                    {
+                                        "label": "First Come First Served",
+                                        "value": "FCFS",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Priority Score",
+                                        "value": "PRIORITY_SCORE",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Random Selection",
+                                        "value": "RANDOM",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Community Nomination",
+                                        "value": "COMMUNITY",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Priority Model",
+                                "id": "priorityModel",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "Requires Application?",
+                                "id": "requiresApplication",
+                                "value": "Y",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "requiresApplication",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "controlValue": "N",
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Auto-Enrol Eligible Farmers?",
+                                "id": "autoEnrollEligible",
+                                "value": "N",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Allow Multiple Benefits?",
+                                "id": "allowMultipleBenefits",
+                                "value": "N",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "controlField": "allowMultipleBenefits",
+                                "maxlength": "",
+                                "controlValue": "Y",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[1-9][0-9]?$",
+                                        "type": "regex",
+                                        "message": "Enter a number between 1 and 99",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Max Benefits Per Farmer",
+                                "encryption": "",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "maxBenefitsPerFarmer",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": "true"
+                            }
+                        },
+                        {
+                            "className": "org.joget.plugin.enterprise.FormGrid",
+                            "properties": {
+                                "validateMaxRow": "",
+                                "controlField": "targetingStrategy",
+                                "formDefId": "spTargetGroupRow",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "pageSize": "20",
+                                "requestParams": [],
+                                "enableSorting": "",
+                                "storeBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "spTargetGroupRow",
+                                        "foreignKey": "program_id"
+                                    }
+                                },
+                                "readonly": "",
+                                "deleteGridData": "",
+                                "options": [
+                                    {
+                                        "format": "",
+                                        "width": "180",
+                                        "label": "Target Group",
+                                        "formatType": "options",
+                                        "value": "targetGroupCode"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "180",
+                                        "label": "Category",
+                                        "formatType": "options",
+                                        "value": "targetCategoryCode"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "100",
+                                        "label": "Priority",
+                                        "formatType": "text",
+                                        "value": "priorityWeight"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "100",
+                                        "label": "Est. Count",
+                                        "formatType": "text",
+                                        "value": "estimatedCount"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "100",
+                                        "label": "Alloc %",
+                                        "formatType": "text",
+                                        "value": "allocationPercent"
+                                    }
+                                ],
+                                "id": "targetGroups",
+                                "abortRelatedRunningProcesses": "",
+                                "height": "300",
+                                "showRowNumber": "true",
+                                "disabledDelete": "",
+                                "validateMinRow": "",
+                                "submit-label-normal": "",
+                                "uniqueKey": "",
+                                "controlValue": "CATEGORICAL;COMBINED",
+                                "errorMessage": "",
+                                "deleteSubformData": "",
+                                "deleteMessage": "",
+                                "label": "Target Groups",
+                                "deleteFiles": "",
+                                "loadBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "spTargetGroupRow",
+                                        "foreignKey": "program_id"
+                                    }
+                                },
+                                "disabledAdd": "",
+                                "submit-label-readonly": "",
+                                "width": "100%",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Beneficiary Notes",
+                                "id": "beneficiaryNotes",
+                                "rows": "3",
+                                "cols": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "sectionBeneficiary",
+                "label": "Beneficiary Targeting"
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "03.04 - Beneficiary Targeting",
+        "description": "Target groups and beneficiary selection strategy",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "spProgramBeneficiary",
+        "postProcessor": {
+            "className": "global.govstack.formquality.hook.FormQualityPostProcessor",
+            "properties": {
+                "serviceId": "farmers_subsidy"
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "sp_program_beneficr"
+    }
+}

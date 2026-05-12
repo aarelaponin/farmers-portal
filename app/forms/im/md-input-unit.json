@@ -1,0 +1,101 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "md_input_unit",
+    "name": "MD - Input Unit (IM)",
+    "tableName": "md_input_unit",
+    "description": "Master data — units of measure for inputs (KG, BAG_25KG, BAG_50KG, LITRE, PIECE). Phase 3 IM Slice 1. Per im-module SAD §5.1.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "section1",
+        "label": "Input Unit"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Code (immutable)",
+                "size": "32",
+                "maxlength": "32",
+                "placeholder": "UPPER_SNAKE_CASE, e.g. KG, BAG_50KG, LITRE",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "md_input_unit",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Input Unit code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Display name",
+                "size": "100",
+                "placeholder": "e.g. 50kg bag, Litre, Kilogram",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "abbreviation",
+                "label": "Short abbreviation (≤8 chars)",
+                "size": "8",
+                "maxlength": "8",
+                "placeholder": "e.g. kg, L, 50kg"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "uom_family",
+                "label": "Unit family",
+                "options": [
+                  { "value": "mass", "label": "Mass (kg, bag)" },
+                  { "value": "volume", "label": "Volume (litre, ml)" },
+                  { "value": "count", "label": "Count (piece)" },
+                  { "value": "area", "label": "Area (ha, m²)" }
+                ],
+                "addEmptyOption": "true",
+                "emptyLabel": "(select)",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

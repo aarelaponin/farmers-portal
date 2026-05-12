@@ -1,0 +1,39 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "occurred_at",   "id": "column_when",        "label": "When",
+      "format": {
+        "className": "org.joget.plugin.enterprise.DateFormatter",
+        "properties": { "format": "yyyy-MM-dd HH:mm:ss" }
+      }
+    },
+    { "name": "event_type",    "id": "column_type",        "label": "Event" },
+    { "name": "envelope_code", "id": "column_envelope",    "label": "Envelope" },
+    { "name": "account_path",  "id": "column_account",     "label": "Account path" },
+    { "name": "direction",     "id": "column_direction",   "label": "Dr/Cr" },
+    { "name": "amount_disp",   "id": "column_amount",      "label": "Amount" },
+    { "name": "correlation_id","id": "column_corr",        "label": "Correlation" },
+    { "name": "actor",         "id": "column_actor",       "label": "Actor" }
+  ],
+  "pageSize": 50,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "20,50,100,200",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "Budget — Recent ledger entries",
+  "id": "dl_budget_events",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT id, datecreated AS occurred_at, c_event_type AS event_type, c_envelope_code AS envelope_code, c_account_path AS account_path, c_direction AS direction, to_char(CAST(c_amount AS NUMERIC(15,2)), 'FM999,999,999.00') AS amount_disp, c_correlation_id AS correlation_id, COALESCE(c_actor, '—') AS actor FROM app_fd_budget_event ORDER BY datecreated DESC NULLS LAST",
+      "countSql": "SELECT count(*) FROM app_fd_budget_event",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

@@ -1,0 +1,42 @@
+{
+  "id": "dl_forensic_search",
+  "name": "Operator: Forensic Search",
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "result_type",   "id": "column_type",  "label": "Type",        "width": "110px" },
+    { "name": "code",          "id": "column_code",  "label": "Code",        "width": "200px" },
+    { "name": "applicant_nid", "id": "column_nid",   "label": "Farmer NID",  "width": "130px" },
+    { "name": "applicant_name","id": "column_name",  "label": "Farmer name", "width": "200px" },
+    { "name": "programme_code","id": "column_prog",  "label": "Programme",   "width": "150px" },
+    { "name": "status",        "id": "column_stat",  "label": "Status",      "width": "150px" },
+    { "name": "occurred_at",   "id": "column_at",    "label": "Occurred at", "width": "150px" },
+    { "name": "summary",       "id": "column_sum",   "label": "Summary",     "width": "240px" },
+    { "name": "view_link",     "id": "column_view",  "label": "Open",        "width": "70px",  "renderHtml": "true" }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [
+    {
+      "name": "q",
+      "label": "Search (NID / voucher code / application code / name)",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    }
+  ],
+  "pageSizeSelectorOptions": "20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "WITH q AS (SELECT NULLIF(LOWER('#requestParam.q?sql#'), '') AS term) SELECT * FROM ( SELECT a.id AS id, 'Application' AS result_type, a.id AS code, COALESCE(a.c_national_id,'') AS applicant_nid, COALESCE(a.c_full_name,'') AS applicant_name, COALESCE(a.c_applied_programme,'') AS programme_code, COALESCE(a.c_status, a.c_decision, '—') AS status, COALESCE(to_char(a.datecreated, 'YYYY-MM-DD HH24:MI'), '—') AS occurred_at, ('Decision: ' || COALESCE(a.c_decision,'—') || ' / Disposition: ' || COALESCE(a.c_eligibility_outcome,'—')) AS summary, '<a target=\"_blank\" href=\"/jw/web/userview/farmersPortal/v/_/subsidyApplicationOperator2025_crud?_action=edit&_id=' || a.id || '\" style=\"color:#1F4E79;font-weight:600;\">Open</a>' AS view_link, a.datecreated AS sort_at FROM app_fd_subsidy_app_2025 a, q WHERE q.term IS NOT NULL AND (LOWER(a.id) LIKE '%' || q.term || '%' OR LOWER(a.c_national_id) LIKE '%' || q.term || '%' OR LOWER(a.c_full_name) LIKE '%' || q.term || '%' OR LOWER(a.c_applied_programme) LIKE '%' || q.term || '%') UNION ALL SELECT v.id AS id, 'Voucher' AS result_type, v.c_code AS code, COALESCE(v.c_farmer_nid,'') AS applicant_nid, COALESCE(v.c_farmer_name,'') AS applicant_name, COALESCE(v.c_programme_code,'') AS programme_code, COALESCE(v.c_status, '—') AS status, COALESCE(v.c_issued_date, to_char(v.datecreated, 'YYYY-MM-DD'), '—') AS occurred_at, ('Issued ' || COALESCE(v.c_issued_date,'—') || ' / expires ' || COALESCE(v.c_expiry_date,'—') || ' / qty ' || COALESCE(v.c_quantity,'—')) AS summary, '<a target=\"_blank\" href=\"/jw/web/userview/farmersPortal/v/_/im_print_voucher?c=' || v.c_code || '\" style=\"color:#1F4E79;font-weight:600;\">Open</a>' AS view_link, v.datecreated AS sort_at FROM app_fd_im_voucher v, q WHERE q.term IS NOT NULL AND (LOWER(v.c_code) LIKE '%' || q.term || '%' OR LOWER(v.c_farmer_nid) LIKE '%' || q.term || '%' OR LOWER(v.c_farmer_name) LIKE '%' || q.term || '%' OR LOWER(v.c_programme_code) LIKE '%' || q.term || '%') UNION ALL SELECT r.id AS id, 'Redemption' AS result_type, r.c_code AS code, '' AS applicant_nid, '' AS applicant_name, '' AS programme_code, COALESCE(r.c_status, '—') AS status, COALESCE(r.c_redemption_date, to_char(r.datecreated, 'YYYY-MM-DD'), '—') AS occurred_at, ('Voucher ' || COALESCE(r.c_voucher_code,'—') || ' / qty ' || COALESCE(r.c_quantity_redeemed,'—') || ' / by ' || COALESCE(r.c_redeemed_by,'—')) AS summary, '<a target=\"_blank\" href=\"/jw/web/userview/farmersPortal/v/_/im_voucher_redemption_crud?_action=edit&_id=' || r.id || '\" style=\"color:#1F4E79;font-weight:600;\">Open</a>' AS view_link, r.datecreated AS sort_at FROM app_fd_im_voucher_redemption r, q WHERE q.term IS NOT NULL AND (LOWER(r.c_code) LIKE '%' || q.term || '%' OR LOWER(r.c_voucher_code) LIKE '%' || q.term || '%' OR LOWER(r.c_redeemed_by) LIKE '%' || q.term || '%') UNION ALL SELECT d.id AS id, 'Distribution' AS result_type, d.c_code AS code, '' AS applicant_nid, '' AS applicant_name, '' AS programme_code, 'signed' AS status, COALESCE(d.c_distribution_date, to_char(d.datecreated, 'YYYY-MM-DD'), '—') AS occurred_at, ('Voucher ' || COALESCE(d.c_voucher_code,'—') || ' / operator ' || COALESCE(d.c_operator_name,'—') || ' / witness ' || COALESCE(d.c_witness_name,'—')) AS summary, '<a target=\"_blank\" href=\"/jw/web/userview/farmersPortal/v/_/im_distribution_crud?_action=edit&_id=' || d.id || '\" style=\"color:#1F4E79;font-weight:600;\">Open</a>' AS view_link, d.datecreated AS sort_at FROM app_fd_im_distribution d, q WHERE q.term IS NOT NULL AND (LOWER(d.c_code) LIKE '%' || q.term || '%' OR LOWER(d.c_voucher_code) LIKE '%' || q.term || '%' OR LOWER(d.c_operator_name) LIKE '%' || q.term || '%') UNION ALL SELECT e.id AS id, 'Audit' AS result_type, COALESCE(e.c_application_id,'(no app)') AS code, COALESCE(e.c_national_id,'') AS applicant_nid, COALESCE(e.c_applicant_name,'') AS applicant_name, COALESCE(e.c_applied_programme,'') AS programme_code, COALESCE(e.c_outcome, '—') AS status, COALESCE(e.c_eval_started_at, to_char(e.datecreated, 'YYYY-MM-DD HH24:MI'), '—') AS occurred_at, ('Determinant ' || COALESCE(e.c_determinant_code,'—') || ' / evaluator ' || COALESCE(e.c_evaluator,'—') || COALESCE(' / err: ' || NULLIF(e.c_error_cause,''), '')) AS summary, '<a target=\"_blank\" href=\"/jw/web/userview/farmersPortal/v/_/regBbEvalAudit_crud?_action=edit&_id=' || e.id || '\" style=\"color:#1F4E79;font-weight:600;\">Open</a>' AS view_link, e.datecreated AS sort_at FROM app_fd_reg_bb_eval_audit e, q WHERE q.term IS NOT NULL AND (LOWER(e.c_application_id) LIKE '%' || q.term || '%' OR LOWER(e.c_national_id) LIKE '%' || q.term || '%' OR LOWER(e.c_applicant_name) LIKE '%' || q.term || '%' OR LOWER(e.c_determinant_code) LIKE '%' || q.term || '%') ) results ORDER BY sort_at DESC NULLS LAST LIMIT 500",
+      "countSql": "SELECT 0",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

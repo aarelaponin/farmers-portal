@@ -1,0 +1,123 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "dateCreated",
+      "id": "column_0",
+      "label": "When (UTC)",
+      "sortable": "true",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.DateFormatter",
+          "properties": { "format": "yyyy-MM-dd HH:mm:ss" }
+        }
+      ]
+    },
+    {
+      "name": "applicant_name",
+      "id": "column_applicant",
+      "label": "Applicant",
+      "sortable": "true"
+    },
+    {
+      "name": "national_id",
+      "id": "column_nid",
+      "label": "National ID",
+      "sortable": "true"
+    },
+    {
+      "name": "applied_programme",
+      "id": "column_prog",
+      "label": "Programme",
+      "sortable": "true",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_registration",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "determinant_code",
+      "id": "column_2",
+      "label": "Determinant",
+      "sortable": "true"
+    },
+    {
+      "name": "evaluator",
+      "id": "column_3",
+      "label": "Path",
+      "sortable": "true"
+    },
+    {
+      "name": "outcome",
+      "id": "column_4",
+      "label": "Outcome",
+      "sortable": "true"
+    },
+    {
+      "name": "eval_duration_ms",
+      "id": "column_5",
+      "label": "ms",
+      "sortable": "true"
+    },
+    {
+      "name": "current_username",
+      "id": "column_6",
+      "label": "Operator",
+      "sortable": "true"
+    },
+    {
+      "name": "error_cause",
+      "id": "column_7",
+      "label": "Error Cause (if any)"
+    }
+  ],
+  "pageSize": 0,
+  "orderBy": "dateCreated",
+  "order": "DESC",
+  "filters": [
+    {
+      "name": "application_id",
+      "label": "Application",
+      "type": {
+        "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+        "properties": { "defaultValue": "" }
+      }
+    },
+    {
+      "name": "determinant_code",
+      "label": "Determinant",
+      "type": {
+        "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+        "properties": { "defaultValue": "" }
+      }
+    },
+    {
+      "name": "outcome",
+      "label": "Outcome",
+      "type": {
+        "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+        "properties": { "defaultValue": "" }
+      }
+    }
+  ],
+  "pageSizeSelectorOptions": "20,50,100,200",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: RegBB Eval Audit",
+  "id": "list_reg_bb_eval_audit",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": {
+      "formDefId": "reg_bb_eval_audit"
+    }
+  },
+  "actions": []
+}

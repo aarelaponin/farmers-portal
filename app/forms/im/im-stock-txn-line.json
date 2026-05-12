@@ -1,0 +1,95 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "im_stock_txn_line",
+    "name": "IM - Stock Transaction Line",
+    "tableName": "im_stock_txn_line",
+    "description": "Inputs Management — line item on im_stock_transaction. One row per (input_code, quantity) pair on a parent stock movement. Phase 3 IM Slice 6d. Per im-module SAD §5.1.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "lineSection",
+        "label": "Line"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "txn_id",
+                "label": "Parent transaction id (FK, populated by FormGrid)"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "input_code",
+                "label": "Input (SKU)",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md27input",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "quantity",
+                "label": "Quantity",
+                "size": "12",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "numeric",
+                    "message": "Numeric quantity required"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "unit_price",
+                "label": "Unit price (optional — RECEIPT)",
+                "size": "12"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "line_notes",
+                "label": "Line notes (optional)",
+                "size": "60"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

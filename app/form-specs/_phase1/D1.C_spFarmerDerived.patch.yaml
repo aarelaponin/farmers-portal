@@ -1,0 +1,125 @@
+# =============================================================================
+# D1.C — Add 5 fields to spFarmerDerived (Food Security & Programs section)
+# Phase 1, Subsidy Adjustment Plan
+# Skill: joget-form-gen (apply patch to existing form JSON)
+# =============================================================================
+
+patch_target:
+  form_id: spFarmerDerived
+  table_name: spFarmerDerived
+  current_field_count: 53
+  expected_field_count_after: 58
+
+# Insertion point: append a new section "Food Security & Programs" at the end,
+# AFTER the "Data Refresh Info" section (which contains lastRefreshed/refreshSource)
+# so that the new currentFoodSecurityStatus visually sits alongside other
+# "computed/derived snapshot" fields.
+insert_section:
+  label: "Food Security & Programs"
+  position: end
+  fields:
+
+    - id: currentFoodSecurityStatus
+      className: org.joget.apps.form.lib.SelectBox
+      properties:
+        id: currentFoodSecurityStatus
+        label: "Current Food Security Status"
+        description: |
+          Consolidated value used by Tab 6 eligibility rules.
+          Reconciled by FarmerDerivedRefresh from:
+            1. farmerIncomePrograms.foodSecurityCode (self-reported, if recent)
+            2. fallback inference from vulnerabilityScore + income + harvest
+        options: []
+        optionsBinder:
+          className: org.joget.apps.form.lib.FormOptionsBinder
+          properties:
+            formDefId: md35foodSecurityStat
+            idColumn: code
+            labelColumn: name
+            addEmptyOption: "true"
+        readonly: "true"
+        readonlyLabel: "false"
+
+    - id: lastBenefitDate
+      className: org.joget.apps.form.lib.DatePicker
+      properties:
+        id: lastBenefitDate
+        label: "Last Benefit Date"
+        description: |
+          Most recent successful benefit redemption across any programme.
+          Computed as MAX(spProgParticip.lastBenefitDate) across all programmes
+          this farmer has participated in.
+        format: "yyyy-MM-dd"
+        readonly: "true"
+
+    - id: totalBenefitsReceivedLT
+      className: org.joget.apps.form.lib.TextField
+      properties:
+        id: totalBenefitsReceivedLT
+        label: "Total Benefits Received (Lifetime, LSL)"
+        description: "SUM(spProgParticip.totalBenefitReceived) across all programmes"
+        storeNumeric: "true"
+        readonly: "true"
+        validator:
+          className: org.joget.apps.form.lib.DefaultValidator
+          properties:
+            type: double
+
+    - id: programsInLast2Seasons
+      className: org.joget.apps.form.lib.TextField
+      properties:
+        id: programsInLast2Seasons
+        label: "Active Programmes in Last 2 Seasons"
+        description: |
+          COUNT(DISTINCT programCode) from spProgParticip where
+          enrollmentDate >= today - 24 months.
+        storeNumeric: "true"
+        readonly: "true"
+        validator:
+          className: org.joget.apps.form.lib.DefaultValidator
+          properties:
+            type: integer
+
+    - id: derivedSnapshotDate
+      className: org.joget.apps.form.lib.DatePicker
+      properties:
+        id: derivedSnapshotDate
+        label: "Derived Snapshot Date"
+        description: |
+          When FarmerDerivedRefresh last computed this row.
+          Use this to detect stale data: if older than 7 days, run refresh
+          before evaluating eligibility.
+        format: "yyyy-MM-dd"
+        readonly: "true"
+
+db_migration:
+  ddl_preview: |
+    ALTER TABLE app_fd_spfarmerderived
+      ADD COLUMN IF NOT EXISTS c_currentFoodSecurityStatus VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS c_lastBenefitDate VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS c_totalBenefitsReceivedLT VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS c_programsInLast2Seasons VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS c_derivedSnapshotDate VARCHAR(255);
+  rollback: |
+    ALTER TABLE app_fd_spfarmerderived
+      DROP COLUMN IF EXISTS c_currentFoodSecurityStatus,
+      DROP COLUMN IF EXISTS c_lastBenefitDate,
+      DROP COLUMN IF EXISTS c_totalBenefitsReceivedLT,
+      DROP COLUMN IF EXISTS c_programsInLast2Seasons,
+      DROP COLUMN IF EXISTS c_derivedSnapshotDate;
+
+note_about_existing_columns:
+  # spFarmerDerived ALREADY has c_lastrefreshed and c_refreshsource.
+  # FarmerDerivedRefresh writes:
+  #   c_lastrefreshed     := NOW()
+  #   c_refreshsource     := 'FarmerDerivedRefresh-v1'
+  #   c_derivedsnapshotdate := same as c_lastrefreshed (date-only convenience)
+  # So the new derivedSnapshotDate field complements (does not replace)
+  # the existing pair.
+  pre_existing: [c_lastrefreshed, c_refreshsource]
+
+acceptance:
+  - 5 new fields visible in spFarmerDerived form (read-only)
+  - All 5 appear as 'sourceColumn' candidates in spEligField seed (D1.D)
+  - Existing 0 spFarmerDerived rows remain unaffected (table is empty pre-Phase 1)
+  - After D1.E runs, all 5 are populated for refreshed farmers

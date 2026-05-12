@@ -1,0 +1,956 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.IdGeneratorField",
+                            "properties": {
+                                "hidden": "",
+                                "format": "CHI-??????",
+                                "workflowVariable": "",
+                                "envVariable": "counter",
+                                "isDistributedGeneration": "",
+                                "id": "itemId",
+                                "label": "Item ID"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Harvest Record ID",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "harvestId",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "farmerIdRef",
+                                "value": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Season Code",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "seasonCode",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Crop",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "md19crops",
+                                        "labelColumn": "name",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "-- Select Crop --",
+                                        "idColumn": "code"
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "cropCode",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Crop Name",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "cropName",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Crop Category",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "cropCategory",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "100",
+                                "label": "Variety (if known)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "varietyName",
+                                "placeholder": "e.g., Improved Maize PAN 6479",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[0-9]+(\\.[0-9]{1,2})?$",
+                                        "type": "regex",
+                                        "message": "Enter a valid number",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Area Cultivated (ha)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "areaCultivated",
+                                "placeholder": "e.g., 2.5",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Area Unit",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Hectares",
+                                        "value": "HA",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Acres",
+                                        "value": "ACRE",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Square Meters",
+                                        "value": "SQMT",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "areaUnit",
+                                "iconIncluded": false,
+                                "value": "HA",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[0-9]+(\\.[0-9]{1,2})?$",
+                                        "type": "regex",
+                                        "message": "Enter a valid number",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Expected Yield (50kg bags)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "expectedYield",
+                                "placeholder": "Based on normal conditions",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Expected Yield Source",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "District Baseline (md49ExpYield)",
+                                        "value": "BASELINE",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Farmer's Historical Average",
+                                        "value": "HISTORICAL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Manually Entered",
+                                        "value": "MANUAL",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "expectedYieldSource",
+                                "iconIncluded": false,
+                                "value": "BASELINE",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[0-9]+(\\.[0-9]{1,2})?$",
+                                        "type": "regex",
+                                        "message": "Enter a valid number",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Actual Yield (50kg bags)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "actualYield",
+                                "placeholder": "Actual harvest this season",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Yield Ratio (%)",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "yieldRatio",
+                                "placeholder": "",
+                                "value": "0",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Production Status",
+                                "readonly": "true",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Excellent (>100%)",
+                                        "value": "EXCELLENT",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Good (75-100%)",
+                                        "value": "GOOD",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Moderate (50-75%)",
+                                        "value": "MODERATE",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Poor (25-50%)",
+                                        "value": "POOR",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Failed (<25%)",
+                                        "value": "FAILED",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "productionStatus",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Seed Type Used",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Improved/Certified",
+                                        "value": "IMPROVED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Recycled/Saved",
+                                        "value": "RECYCLED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Local Variety",
+                                        "value": "LOCAL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Unknown",
+                                        "value": "UNKNOWN",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "seedType",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Seed Source",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Subsidy Program",
+                                        "value": "SUBSIDY",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Purchased (Own Funds)",
+                                        "value": "PURCHASED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Saved from Previous Season",
+                                        "value": "SAVED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Gift/Donation",
+                                        "value": "GIFT",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "On Credit",
+                                        "value": "CREDIT",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "seedSource",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Fertilizer Applied",
+                                "id": "fertilizerApplied",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Basal (Planting)",
+                                        "value": "BASAL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Top Dressing",
+                                        "value": "TOP",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Foliar",
+                                        "value": "FOLIAR",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Organic/Manure",
+                                        "value": "ORGANIC",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Fertilizer Type",
+                                "id": "fertilizerType",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Fertilizer Source",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Subsidy Program",
+                                        "value": "SUBSIDY",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Purchased (Own Funds)",
+                                        "value": "PURCHASED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "On Credit",
+                                        "value": "CREDIT",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "fertilizerSource",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Pesticides/Herbicides Applied",
+                                "id": "pesticidesApplied",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Drought",
+                                        "value": "DROUGHT",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Flooding",
+                                        "value": "FLOOD",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Hail",
+                                        "value": "HAIL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Frost",
+                                        "value": "FROST",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Pest Damage",
+                                        "value": "PESTS",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Crop Disease",
+                                        "value": "DISEASE",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Theft",
+                                        "value": "THEFT",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Animal Damage",
+                                        "value": "ANIMALS",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Late Planting",
+                                        "value": "LATE_PLANTING",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Poor Quality Seed",
+                                        "value": "POOR_SEED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Lack of Inputs",
+                                        "value": "NO_INPUTS",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Loss Factors",
+                                "id": "lossFactors",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[0-9]{1,3}$",
+                                        "type": "regex",
+                                        "message": "Enter a percentage (0-100)",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Estimated Loss (%)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "estimatedLossPercentage",
+                                "placeholder": "e.g., 30",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Irrigation Used",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Rainfed Only",
+                                        "value": "RAINFED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Full Irrigation",
+                                        "value": "FULL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Supplemental Irrigation",
+                                        "value": "SUPPLEMENTAL",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Drip Irrigation",
+                                        "value": "DRIP",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "irrigationType",
+                                "iconIncluded": false,
+                                "value": "RAINFED",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Home Consumption",
+                                        "value": "CONSUMPTION",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Sold",
+                                        "value": "SALE",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Saved for Seed",
+                                        "value": "SEED",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Given Away",
+                                        "value": "GIFT",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "In Storage",
+                                        "value": "STORAGE",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Post-Harvest Loss",
+                                        "value": "LOST",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Harvest Disposition",
+                                "id": "harvestDisposition",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[0-9]+(\\.[0-9]{1,2})?$",
+                                        "type": "regex",
+                                        "message": "Enter a valid number",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Quantity Sold (bags)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "quantitySold",
+                                "placeholder": "If any was sold",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[0-9]+(\\.[0-9]{1,2})?$",
+                                        "type": "regex",
+                                        "message": "Enter a valid amount",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Sale Price per Bag (LSL)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "salePrice",
+                                "placeholder": "Average price received",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Notes",
+                                "id": "notes",
+                                "placeholder": "",
+                                "rows": "2",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section1",
+                "label": "Section"
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Crop Harvest Item",
+        "description": "Individual crop harvest records within seasonal harvest form",
+        "postProcessorRunOn": "create",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "spCropHarvestItem",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "spCropHarvestItem"
+    }
+}

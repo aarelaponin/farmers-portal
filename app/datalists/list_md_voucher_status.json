@@ -1,0 +1,25 @@
+{
+  "id": "list_md_voucher_status",
+  "name": "List: MD - Voucher Status (IM)",
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "sort_order", "id": "column_0", "label": "Order" },
+    { "name": "code", "id": "column_1", "label": "Code" },
+    { "name": "name", "id": "column_2", "label": "Display name" },
+    { "name": "lifecycle_phase", "id": "column_3", "label": "Phase" }
+  ],
+  "pageSize": 0,
+  "orderBy": "sort_order",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": { "formDefId": "md_voucher_status" }
+  },
+  "actions": [],
+  "order": "ASC"
+}

@@ -1,0 +1,184 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "im_inventory",
+    "name": "IM - Inventory",
+    "tableName": "im_inventory",
+    "description": "Inputs Management — current stock balance per (input × distribution_point). One row per combination; updated by im_stock_transaction events. Phase 3 IM Slice 2. Per im-module SAD §5.1.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Stock Position"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Code (synthetic, INV_<point>_<input>)",
+                "size": "100",
+                "maxlength": "100",
+                "placeholder": "e.g. INV_DP_MASERU_DEPOT_SEED_MAIZE_PAN6479_25KG",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "im_inventory",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "An inventory row with this code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "point_code",
+                "label": "Distribution point",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md37collectionPoint",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "input_code",
+                "label": "Input (SKU)",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md27input",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "quantity_on_hand",
+                "label": "Quantity on hand",
+                "size": "16",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "numeric",
+                    "message": "Numeric quantity required"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "quantity_reserved",
+                "label": "Quantity reserved (committed to issued vouchers)",
+                "size": "16",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "type": "numeric", "message": "Numeric value" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "reorder_threshold",
+                "label": "Reorder threshold (alert when on_hand below this)",
+                "size": "16",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "type": "numeric", "message": "Numeric value" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "auditSection",
+        "label": "Audit"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "last_stock_count_date",
+                "label": "Last physical stock-count date",
+                "format": "yy-mm-dd"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "notes",
+                "label": "Notes",
+                "rows": "3",
+                "cols": "60"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

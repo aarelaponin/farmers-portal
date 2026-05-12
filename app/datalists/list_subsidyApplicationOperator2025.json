@@ -1,0 +1,97 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "full_name",
+      "id": "column_0",
+      "label": "Applicant"
+    },
+    {
+      "name": "national_id",
+      "id": "column_nid",
+      "label": "National ID"
+    },
+    {
+      "name": "applied_programme",
+      "id": "column_1",
+      "label": "Applying for"
+    },
+    {
+      "name": "district",
+      "id": "column_2",
+      "label": "District"
+    },
+    {
+      "name": "disposition",
+      "id": "column_3",
+      "label": "Eligibility",
+      "cssClass": "regbb-disposition-cell"
+    },
+    {
+      "name": "score",
+      "id": "column_4",
+      "label": "Score"
+    },
+    {
+      "name": "failed_rule",
+      "id": "column_5",
+      "label": "Failed Rule"
+    },
+    {
+      "name": "decision",
+      "id": "column_6",
+      "label": "Operator Decision"
+    },
+    {
+      "name": "status",
+      "id": "column_7",
+      "label": "Status"
+    }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,30,40,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: 2025 Subsidy Application — Operator Review",
+  "id": "list_subsidyApplicationOperator2025",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT a.id, a.c_full_name AS full_name, a.c_national_id AS national_id, COALESCE(r.c_name, a.c_applied_programme) AS applied_programme, a.c_district AS district, CASE WHEN length(coalesce(a.c_eligibility_outcome, '')) > 0 THEN (a.c_eligibility_outcome::jsonb)->>'disposition' ELSE NULL END AS disposition, CASE WHEN length(coalesce(a.c_eligibility_outcome, '')) > 0 THEN (a.c_eligibility_outcome::jsonb)->>'score' ELSE NULL END AS score, CASE WHEN length(coalesce(a.c_eligibility_outcome, '')) > 0 THEN (a.c_eligibility_outcome::jsonb)->>'failedRule' ELSE NULL END AS failed_rule, a.c_decision AS decision, a.c_status AS status FROM app_fd_subsidy_app_2025 a LEFT JOIN app_fd_mm_registration r ON r.c_code = a.c_applied_programme ORDER BY a.datemodified DESC NULLS LAST",
+      "countSql": "SELECT count(*) FROM app_fd_subsidy_app_2025",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [
+    {
+      "id": "bulk_approve",
+      "name": "bulk_approve",
+      "label": "Approve Selected",
+      "className": "global.govstack.regbb.engine.binder.BulkOperatorDecisionAction",
+      "properties": {
+        "decision": "approve",
+        "label": "Approve Selected",
+        "reason": "Bulk approval (operator inbox)",
+        "confirmation": "Approve all selected applications? Each will be moved to status=approved with audit + budget event."
+      }
+    },
+    {
+      "id": "bulk_reject",
+      "name": "bulk_reject",
+      "label": "Reject Selected",
+      "className": "global.govstack.regbb.engine.binder.BulkOperatorDecisionAction",
+      "properties": {
+        "decision": "reject",
+        "label": "Reject Selected",
+        "reason": "Bulk rejection (operator inbox)",
+        "confirmation": "Reject all selected applications? Each will be moved to status=rejected with audit + budget release."
+      }
+    }
+  ],
+  "order": ""
+}

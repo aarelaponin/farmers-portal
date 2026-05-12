@@ -1,0 +1,36 @@
+{
+  "id": "dl_dashboard_apps_by_district",
+  "name": "Dashboard \u2014 applications by district \u00d7 status",
+  "useSession": "false",
+  "showPageSizeSelector": "false",
+  "pageSize": 0,
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT lower(c_district) AS district, c_status AS status, count(*)::text AS count\n       FROM app_fd_subsidy_app_2025 WHERE c_district IS NOT NULL AND c_district != ''\n       GROUP BY district, status ORDER BY district, status",
+      "countSql": "SELECT 1",
+      "primaryKey": "district"
+    }
+  },
+  "columns": [
+    {
+      "id": "col_district",
+      "name": "district",
+      "label": "District"
+    },
+    {
+      "id": "col_status",
+      "name": "status",
+      "label": "Status"
+    },
+    {
+      "id": "col_count",
+      "name": "count",
+      "label": "Count"
+    }
+  ],
+  "rowActions": [],
+  "actions": [],
+  "filters": []
+}

@@ -1,0 +1,838 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.IdGeneratorField",
+                            "properties": {
+                                "hidden": "",
+                                "format": "NOTIF-??????",
+                                "workflowVariable": "",
+                                "envVariable": "counter",
+                                "isDistributedGeneration": "",
+                                "id": "notificationId",
+                                "label": "Notification ID"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Farmer ID",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "farmerId",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Farmer Code",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "farmerCode",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Farmer Name",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "farmerName",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Recipient Phone",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "recipientPhone",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Recipient Email",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "recipientEmail",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Template",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "spNotifTemplate",
+                                        "labelColumn": "templateName",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "",
+                                        "idColumn": "templateCode"
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "templateCode",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Channel",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md78notifChannel",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "channel",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Language",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md02language",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "language",
+                                "iconIncluded": false,
+                                "value": "sesotho",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "Message Content",
+                                "id": "messageContent",
+                                "placeholder": "",
+                                "rows": "4",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "200",
+                                "label": "Subject (for Email)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "subject",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Trigger Event",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "triggerEvent",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Related Entity Type",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md69entityType",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "relatedEntityType",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Related Entity ID",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "relatedEntityId",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Related Entity Code",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "relatedEntityCode",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Status",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md79notifStatus",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "status",
+                                "iconIncluded": false,
+                                "value": "PENDING",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "yearRange": "c-10:c+10",
+                                "dataFormat": "yyyy-MM-dd HH:mm:ss",
+                                "startDateFieldId": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "format": "",
+                                "label": "Queued Date",
+                                "datePickerType": "",
+                                "currentDateAs": "",
+                                "endDateFieldId": "",
+                                "readonly": "true",
+                                "allowManual": "",
+                                "workflowVariable": "",
+                                "id": "queuedDate",
+                                "placeholder": "",
+                                "iconIncluded": false,
+                                "disableWeekends": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "yearRange": "c-10:c+10",
+                                "dataFormat": "yyyy-MM-dd HH:mm:ss",
+                                "startDateFieldId": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "format": "",
+                                "label": "Sent Date",
+                                "datePickerType": "",
+                                "currentDateAs": "",
+                                "endDateFieldId": "",
+                                "readonly": "true",
+                                "allowManual": "",
+                                "workflowVariable": "",
+                                "id": "sentDate",
+                                "placeholder": "",
+                                "iconIncluded": false,
+                                "disableWeekends": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "yearRange": "c-10:c+10",
+                                "dataFormat": "yyyy-MM-dd HH:mm:ss",
+                                "startDateFieldId": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "format": "",
+                                "label": "Delivered Date",
+                                "datePickerType": "",
+                                "currentDateAs": "",
+                                "endDateFieldId": "",
+                                "readonly": "true",
+                                "allowManual": "",
+                                "workflowVariable": "",
+                                "id": "deliveredDate",
+                                "placeholder": "",
+                                "iconIncluded": false,
+                                "disableWeekends": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Gateway Provider",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "gatewayProvider",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Gateway Message ID",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "gatewayMessageId",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Gateway Status",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "gatewayStatus",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "true",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Gateway Response",
+                                "id": "gatewayResponse",
+                                "placeholder": "",
+                                "rows": "3",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Error Code",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "errorCode",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "true",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Error Message",
+                                "id": "errorMessage",
+                                "placeholder": "",
+                                "rows": "2",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Retry Count",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "retryCount",
+                                "placeholder": "",
+                                "value": "0",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Max Retries",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "maxRetries",
+                                "placeholder": "",
+                                "value": "3",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "yearRange": "c-10:c+10",
+                                "dataFormat": "yyyy-MM-dd HH:mm:ss",
+                                "startDateFieldId": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "format": "",
+                                "label": "Next Retry Date",
+                                "datePickerType": "",
+                                "currentDateAs": "",
+                                "endDateFieldId": "",
+                                "readonly": "true",
+                                "allowManual": "",
+                                "workflowVariable": "",
+                                "id": "nextRetryDate",
+                                "placeholder": "",
+                                "iconIncluded": false,
+                                "disableWeekends": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Unit Cost",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "unitCost",
+                                "placeholder": "",
+                                "value": "0.00",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Message Units (SMS segments)",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "messageUnits",
+                                "placeholder": "",
+                                "value": "1",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Total Cost",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "totalCost",
+                                "placeholder": "",
+                                "value": "0.00",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Created By",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "createdBy",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Priority",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md53priority",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "priority",
+                                "iconIncluded": false,
+                                "value": "NORMAL",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "label": "Batch ID",
+                                "readonly": "true",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "batchId",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Notes",
+                                "id": "notes",
+                                "placeholder": "",
+                                "rows": "2",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section1",
+                "label": "Section"
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Notification Log",
+        "description": "Log of all notifications sent to farmers",
+        "postProcessorRunOn": "create",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "spNotification",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "spNotification"
+    }
+}

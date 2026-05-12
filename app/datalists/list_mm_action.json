@@ -1,0 +1,73 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "serviceId",
+      "id": "column_0",
+      "label": "Service",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_service",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "registrationId",
+      "id": "column_1",
+      "label": "Registration (optional; null = service-level action)",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_registration",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "code",
+      "id": "column_2",
+      "label": "Action Code (immutable)"
+    },
+    {
+      "name": "name",
+      "id": "column_3",
+      "label": "Display Name"
+    },
+    {
+      "name": "kind",
+      "id": "column_4",
+      "label": "Action Kind"
+    },
+    {
+      "name": "triggerJson",
+      "id": "column_5",
+      "label": "Trigger JSON"
+    }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,30,40,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: MM - Action",
+  "id": "list_mm_action",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": {
+      "formDefId": "mm_action"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

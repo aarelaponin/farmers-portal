@@ -1,0 +1,63 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "code",
+      "id": "column_0",
+      "label": "Service Code (immutable)"
+    },
+    {
+      "name": "name",
+      "id": "column_1",
+      "label": "Service Name"
+    },
+    {
+      "name": "version",
+      "id": "column_2",
+      "label": "Version"
+    },
+    {
+      "name": "status",
+      "id": "column_3",
+      "label": "Status"
+    },
+    {
+      "name": "institutionId",
+      "id": "column_4",
+      "label": "Owning Institution",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_institution",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "description",
+      "id": "column_5",
+      "label": "Description"
+    }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,30,40,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: MM - Service",
+  "id": "list_mm_service",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": {
+      "formDefId": "mm_service"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

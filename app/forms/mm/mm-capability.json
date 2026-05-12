@@ -1,0 +1,86 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "mm_capability",
+    "name": "MM - Capability",
+    "tableName": "mm_capability",
+    "description": "RegBB §3.2 capability registry. Each row is one capability domain (farmer, parcels, subsidy, vendor, etc.) addressable by rules as $registry.<code>.<field>. Fields are defined as child rows in mm_capability_field. Replaces hard-coded Java adapters with metadata; adding a new capability is now a YAML edit + seed run, no plugin rebuild.",
+    "loadBinder":  { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission":  { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secMain", "label": "Capability" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code", "label": "Capability code",
+                "placeholder": "farmer | parcels | subsidy | vendor",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "mm_capability",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "Capability code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name", "label": "Display name",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true" } }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": { "id": "description", "label": "Description", "rows": "3", "cols": "80" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secFields", "label": "Fields" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.plugin.enterprise.FormGrid",
+              "properties": {
+                "id": "fields",
+                "label": "",
+                "formDefId": "mm_capability_field",
+                "foreignKey": "capability_code",
+                "pageSize": "20",
+                "height": "300",
+                "showRowNumber": "true",
+                "options": [
+                  { "value": "code",         "label": "Field",       "width": "180" },
+                  { "value": "result_type",  "label": "Type",        "width": "100" },
+                  { "value": "source_table", "label": "Source",      "width": "200" },
+                  { "value": "expression",   "label": "Expression",  "width": "260" }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

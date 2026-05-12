@@ -1,0 +1,102 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "md_donor",
+    "name": "MD.94 - Donor",
+    "tableName": "md_donor",
+    "description": "Master data — donor / funding source. Each programme can be funded by one or more donors; the share split lives in programme_funding. Used by donor-grade financial reporting.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "section1", "label": "Donor" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Code",
+                "placeholder": "WFP / EU / MAFSN_DOMESTIC / WORLD_BANK",
+                "size": "32",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "md_donor",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This donor code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Name",
+                "placeholder": "World Food Programme",
+                "size": "100",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "country",
+                "label": "Country / region of origin",
+                "placeholder": "Italy / Geneva (UN agency)",
+                "size": "60"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "focal_point",
+                "label": "Focal point (donor contact)",
+                "size": "100"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "contact_email",
+                "label": "Contact email",
+                "size": "100"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "notes",
+                "label": "Notes",
+                "rows": "3",
+                "cols": "60"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

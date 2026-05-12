@@ -1,0 +1,35 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "stage_html",       "id": "column_stage",   "label": "Stage",      "width": "150px", "renderHtml": "true" },
+    { "name": "submitted_at",     "id": "column_sub",     "label": "Submitted",  "width": "150px" },
+    { "name": "applicant_nid",    "id": "column_nid",     "label": "Applicant NID","width": "130px" },
+    { "name": "programme_code",   "id": "column_prog",    "label": "Programme",  "width": "150px" },
+    { "name": "attempt_count",    "id": "column_att",     "label": "Attempt",    "width": "70px",  "alignment": "right" },
+    { "name": "next_attempt_at",  "id": "column_next",    "label": "Next attempt","width": "150px" },
+    { "name": "lag_minutes",      "id": "column_lag",     "label": "Lag (min)",  "width": "90px",  "alignment": "right" },
+    { "name": "last_error",       "id": "column_err",     "label": "Last error" },
+    { "name": "application_id",   "id": "column_app",     "label": "Application id","width": "260px" }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "Processing — pending queue",
+  "id": "dl_processing_queue",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT id, c_application_id AS application_id, COALESCE(c_applicant_nid, '—') AS applicant_nid, COALESCE(c_programme_code, '—') AS programme_code, c_submitted_at AS submitted_at, COALESCE(c_attempt_count, '0') AS attempt_count, COALESCE(c_next_attempt_at, '') AS next_attempt_at, COALESCE(LEFT(c_last_error, 120), '') AS last_error, ROUND(EXTRACT(EPOCH FROM (now() - NULLIF(c_submitted_at, '')::timestamp)) / 60.0, 1) AS lag_minutes, CASE WHEN c_stage = 'eligibility_pending' AND COALESCE(c_attempt_count, '0')::int = 0 THEN '<span style=\"display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:12px;background:#fff4e0;color:#7a5d00;font-size:0.82em;font-weight:600;\"><span style=\"width:8px;height:8px;border-radius:50%;background:#e6a700;\"></span>pending</span>' WHEN c_stage = 'eligibility_pending' AND COALESCE(c_attempt_count, '0')::int > 0 THEN '<span style=\"display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:12px;background:#fef3c7;color:#92400e;font-size:0.82em;font-weight:600;\"><span style=\"width:8px;height:8px;border-radius:50%;background:#f59e0b;\"></span>retrying</span>' WHEN c_stage = 'eligibility_done' THEN '<span style=\"display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:12px;background:#dbeafe;color:#1e40af;font-size:0.82em;font-weight:600;\"><span style=\"width:8px;height:8px;border-radius:50%;background:#3b82f6;\"></span>budget</span>' WHEN c_stage = 'budget_done' THEN '<span style=\"display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:12px;background:#e6f4ea;color:#1e6b34;font-size:0.82em;\"><span style=\"width:8px;height:8px;border-radius:50%;background:#2e7d32;\"></span>done</span>' ELSE c_stage END AS stage_html FROM app_fd_processing_queue WHERE c_stage <> 'budget_done' OR c_stage IS NULL ORDER BY c_submitted_at ASC NULLS LAST",
+      "countSql": "SELECT count(*) FROM app_fd_processing_queue WHERE c_stage <> 'budget_done' OR c_stage IS NULL",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

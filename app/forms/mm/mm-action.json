@@ -1,0 +1,280 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "mm_action",
+    "name": "MM - Action",
+    "tableName": "mm_action",
+    "description": "A configurable action triggered by an event (button click, form load, field change, row add). Per spec \u00a76.3.2.7. Lesotho convention per D11: bot_pull configJson uses {imCapabilityRef, subjectIdField, fieldMappings}.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "noPermissionMessage": "",
+    "postProcessor": {
+      "className": "",
+      "properties": {}
+    },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Identity"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_service",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "registrationId",
+                "label": "Registration (optional; null = service-level action)",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_registration",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(service-level)",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Action Code (immutable)",
+                "size": "64",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "mm_action",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Action code already exists",
+                    "mandatory": "true",
+                    "regex": "",
+                    "errorFormatMsg": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Display Name",
+                "size": "255",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "kind",
+                "label": "Action Kind",
+                "options": [
+                  {
+                    "value": "bot_pull",
+                    "label": "bot_pull (fetch from registry)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "bot_send",
+                    "label": "bot_send (push to registry)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "screen_flow",
+                    "label": "screen_flow (jump to screen)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "validate",
+                    "label": "validate (cross-field rules)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "save",
+                    "label": "save (persist draft)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "message",
+                    "label": "message (notification)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "print_pdf",
+                    "label": "print_pdf",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "submit",
+                    "label": "submit (start workflow)",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "configSection",
+        "label": "Trigger + Config + Gating"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "triggerJson",
+                "label": "Trigger JSON",
+                "rows": "3",
+                "cols": "60",
+                "placeholder": "{\"event\": \"field_change\", \"target\": \"national_id\"}",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "configJson",
+                "label": "Config JSON (kind-specific shape)",
+                "rows": "8",
+                "cols": "60",
+                "placeholder": "For bot_pull (per D11): {\"imCapabilityRef\": {\"source\": \"farmers\", \"path\": \"byNid\"}, \"subjectIdField\": \"national_id\", \"fieldMappings\": [{\"target\": \"first_name\", \"source\": \"farmer.firstName\"}]}",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "conditionDeterminantId",
+                "label": "Condition Determinant ID (optional gate)",
+                "size": "64",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "description",
+                "label": "Description",
+                "rows": "3",
+                "cols": "60",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "dl_dashboard_district_metrics",
+  "name": "Dashboard \u2014 per-district metrics",
+  "useSession": "false",
+  "showPageSizeSelector": "false",
+  "pageSize": 0,
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "WITH apps AS (\n         SELECT lower(c_district) AS d, count(*) AS total,\n                count(*) FILTER (WHERE c_status IN ('approved','auto_approved')) AS approved\n         FROM app_fd_subsidy_app_2025 WHERE c_district IS NOT NULL AND c_district != ''\n         GROUP BY d\n       ),\n       parcs AS (\n         SELECT lower(c_district) AS d, count(*) AS n\n         FROM app_fd_parcellocation WHERE c_district IS NOT NULL AND c_district != ''\n         GROUP BY d\n       ),\n       farms AS (\n         SELECT lower(c_district) AS d, count(DISTINCT c_national_id) AS n\n         FROM app_fd_subsidy_app_2025 WHERE c_district IS NOT NULL AND c_district != ''\n         GROUP BY d\n       ),\n       vchs AS (\n         SELECT lower(a.c_district) AS d, count(*) AS n\n         FROM app_fd_im_voucher v LEFT JOIN app_fd_subsidy_app_2025 a ON a.id = v.c_application_id\n         WHERE v.c_status='redeemed' AND a.c_district IS NOT NULL\n         GROUP BY d\n       ),\n       all_d AS (\n         SELECT unnest(ARRAY['butha_buthe','leribe','mokhotlong','berea','thaba_tseka','maseru','mafeteng','qachas_nek','mohales_hoek','quthing']) AS code\n       )\n       SELECT all_d.code AS district,\n              COALESCE(apps.total, 0)::text     AS applications_total,\n              COALESCE(apps.approved, 0)::text  AS applications_approved,\n              CASE WHEN COALESCE(apps.total,0) > 0\n                   THEN ROUND(apps.approved::numeric / apps.total * 100, 1)::text\n                   ELSE '0' END                  AS approval_rate,\n              COALESCE(parcs.n, 0)::text        AS parcels,\n              COALESCE(farms.n, 0)::text        AS farmers,\n              COALESCE(vchs.n, 0)::text         AS vouchers_redeemed\n       FROM all_d\n       LEFT JOIN apps  ON all_d.code = apps.d\n       LEFT JOIN parcs ON all_d.code = parcs.d\n       LEFT JOIN farms ON all_d.code = farms.d\n       LEFT JOIN vchs  ON all_d.code = vchs.d\n       ORDER BY all_d.code",
+      "countSql": "SELECT 1",
+      "primaryKey": "district"
+    }
+  },
+  "columns": [
+    {
+      "id": "col_district",
+      "name": "district",
+      "label": "District"
+    },
+    {
+      "id": "col_apps_total",
+      "name": "applications_total",
+      "label": "Applications"
+    },
+    {
+      "id": "col_apps_approved",
+      "name": "applications_approved",
+      "label": "Approved"
+    },
+    {
+      "id": "col_approval_rate",
+      "name": "approval_rate",
+      "label": "Approval rate %"
+    },
+    {
+      "id": "col_parcels",
+      "name": "parcels",
+      "label": "Parcels"
+    },
+    {
+      "id": "col_farmers",
+      "name": "farmers",
+      "label": "Farmers"
+    },
+    {
+      "id": "col_vouchers_redeemed",
+      "name": "vouchers_redeemed",
+      "label": "Vouchers redeemed"
+    }
+  ],
+  "rowActions": [],
+  "actions": [],
+  "filters": []
+}

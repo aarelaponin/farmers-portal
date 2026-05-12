@@ -1,0 +1,137 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spProgramDocumentsTab",
+    "name": "03.10 - Programme Documents Tab",
+    "description": "Programme wizard Tab 9 (Documents). Holds programme-level policy fields plus a FormGrid of document requirement rows (spDocRequirementRow). One row per programme.",
+    "tableName": "sp_program_doc_tab",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "postProcessor": {
+      "className": "",
+      "properties": {}
+    },
+    "postProcessorRunOn": "create",
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "noPermissionMessage": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "main",
+        "label": "Document requirements"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "parent_id",
+                "useDefaultWhenEmpty": "",
+                "validator": {"className": "", "properties": {}},
+                "workflowVariable": "",
+                "value": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.CustomHTML",
+              "properties": {
+                "id": "intro",
+                "label": "",
+                "customParameterName": "",
+                "value": "<p style='color:#445566;font-size:13px;margin:0 0 10px 0;'>Define the documents the programme requires applicants to upload. Pick from MD.23 Document Type; format and size hints are inherited automatically. Each application against this programme will be seeded with one row per requirement.</p>"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "documentation_notes",
+                "label": "Notes for applicants (optional)",
+                "placeholder": "Free-text guidance shown above the documents list on the application form.",
+                "value": "",
+                "rows": "3",
+                "cols": "50",
+                "readonly": "",
+                "readonlyLabel": "",
+                "encryption": "",
+                "workflowVariable": "",
+                "validator": {"className": "", "properties": {}}
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "mandatory_docs_block_submission",
+                "label": "Block submission if mandatory documents are missing",
+                "value": "Y",
+                "readonly": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "fullWidth": "",
+                "controlField": "",
+                "options": [
+                  {"label": "Yes", "value": "Y", "grouping": ""},
+                  {"label": "No",  "value": "N", "grouping": ""}
+                ],
+                "optionsBinder": {"className": "", "properties": {}},
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "type": "",
+                    "message": "",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.plugin.enterprise.FormGrid",
+              "properties": {
+                "id": "documentRequirements",
+                "label": "Required documents",
+                "formDefId": "spDocRequirementRow",
+                "loadBinder": {
+                  "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                  "properties": {
+                    "formDefId": "spDocRequirementRow",
+                    "foreignKey": "program_id"
+                  }
+                },
+                "storeBinder": {
+                  "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                  "properties": {
+                    "formDefId": "spDocRequirementRow",
+                    "foreignKey": "program_id"
+                  }
+                },
+                "options": [
+                  {"label": "Order",        "value": "display_order",       "format": "", "width": "70",  "formatType": "text"},
+                  {"label": "Type",         "value": "doc_type_code",       "format": "", "width": "200", "formatType": "text"},
+                  {"label": "Mandatory",    "value": "doc_mandatory",       "format": "", "width": "100", "formatType": "text"},
+                  {"label": "Label override","value": "doc_label_override", "format": "", "width": "260", "formatType": "text"}
+                ],
+                "showRowNumber": "true",
+                "pageSize": "30"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+# =============================================================================
+# D1.B — Add foodSecurityCode SelectBox to farmerIncomePrograms
+# Phase 1, Subsidy Adjustment Plan
+# Skill: joget-form-gen (apply patch to existing form JSON)
+# =============================================================================
+
+patch_target:
+  form_id: farmerIncomePrograms
+  table_name: farmer_income          # actual DB table name (Joget convention drops camelCase)
+  current_field_count: 21
+  expected_field_count_after: 22
+
+# Insertion point: place foodSecurityCode immediately after supportProgram
+# (logical group: questions about external support / food situation)
+insert_after_field: supportProgram
+
+new_field:
+  id: foodSecurityCode
+  className: org.joget.apps.form.lib.SelectBox
+  properties:
+    id: foodSecurityCode
+    label: "Household food security status (last 12 months)"
+    # Sesotho translation — matches the bilingual style already used on
+    # spEligField.fieldLabelSt
+    description: |
+      Self-reported by the farmer at registration. Extension officers can
+      update this during field verification.
+
+      Options come from md35 Food Security Status:
+        SECURE   — Food Secure
+        MODERATE — Moderately Food Insecure
+        SEVERE   — Severely Food Insecure
+        CRISIS   — Food Security Crisis
+    options: []
+    optionsBinder:
+      className: org.joget.apps.form.lib.FormOptionsBinder
+      properties:
+        formDefId: md35foodSecurityStat
+        idColumn: code
+        labelColumn: name
+        addEmptyOption: "true"
+        groupingColumn: ""
+        useAjax: ""
+        extraCondition: ""
+        cacheInterval: ""
+        emptyLabel: "-- Select food security status --"
+    controlField: ""
+    validator:
+      className: ""    # not required — farmer may not know / refuse
+      properties: {}
+
+db_migration:
+  # Joget normally adds the column on next form save / app deploy. To be safe,
+  # apply this DDL on a snapshot first and confirm existing 94 rows survive.
+  ddl_preview: |
+    ALTER TABLE app_fd_farmer_income
+      ADD COLUMN IF NOT EXISTS c_foodSecurityCode VARCHAR(255);
+  rollback: |
+    ALTER TABLE app_fd_farmer_income DROP COLUMN IF EXISTS c_foodSecurityCode;
+
+acceptance:
+  - foodSecurityCode SelectBox visible in registration wizard page 6
+  - Selecting "Moderately Food Insecure" persists c_foodSecurityCode = 'MODERATE'
+    in app_fd_farmer_income
+  - Existing 94 records remain valid with c_foodSecurityCode IS NULL
+  - Sesotho label appears when userview language is set to st

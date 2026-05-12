@@ -1,0 +1,166 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "qa_issue",
+    "name": "QA Issue (runtime)",
+    "description": "Runtime ledger. ONE row per (formId, recordId, ruleCode) representing a currently-or-recently active quality issue. Written by FormQualityPostProcessor; never edited by hand. dateResolved + isActive let us keep history while filtering the panel to live issues.",
+    "tableName": "qa_issue",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "main",
+        "label": "Issue"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service ID",
+                "size": "60",
+                "maxlength": "60",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "formId",
+                "label": "Form ID",
+                "size": "60",
+                "maxlength": "60",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "recordId",
+                "label": "Record ID",
+                "size": "120",
+                "maxlength": "200",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "ruleCode",
+                "label": "Rule Code",
+                "size": "80",
+                "maxlength": "80",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "tabCode",
+                "label": "Tab Code",
+                "size": "40",
+                "maxlength": "40",
+                "readonly": "true"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "severity",
+                "label": "Severity",
+                "size": "20",
+                "maxlength": "20",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "affectedFields",
+                "label": "Affected Fields",
+                "size": "120",
+                "maxlength": "500",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "message",
+                "label": "Message",
+                "rows": "3",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "dateRaised",
+                "label": "Date Raised",
+                "size": "30",
+                "maxlength": "30",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "dateResolved",
+                "label": "Date Resolved",
+                "size": "30",
+                "maxlength": "30",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "isActive",
+                "label": "Active",
+                "value": "Y",
+                "options": [
+                  {
+                    "value": "Y",
+                    "label": "Yes"
+                  },
+                  {
+                    "value": "N",
+                    "label": "No"
+                  }
+                ],
+                "readonly": "true"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

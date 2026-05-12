@@ -1,0 +1,77 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "processing_queue",
+    "name": "05.01 - Processing Queue",
+    "tableName": "processing_queue",
+    "description": "ADR-030 — durable queue for asynchronous post-submit processing of subsidy applications. RegBbApplicationStoreBinder writes a row here on every submit; EligibilityProcessingWorker (Step 3) reads + processes; BudgetDispatchWorker (Step 4) consumes the eligibility-completed signal. Queue rows survive Joget restart so in-flight applications are never lost. On exhausted retries the row moves to processing_dead_letter.",
+    "loadBinder":  { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission":  { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secCorrelation", "label": "Correlation" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "application_id",   "label": "Application id (FK to subsidy_app_2025.id)" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "applicant_nid",    "label": "Applicant national_id" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "programme_code",   "label": "Programme code" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "submitted_at",     "label": "Submitted at (ISO-8601)" } }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secStage", "label": "Stage" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "stage", "label": "Pipeline stage",
+                "value": "eligibility_pending",
+                "options": [
+                  { "value": "eligibility_pending", "label": "eligibility_pending — needs eligibility evaluation" },
+                  { "value": "eligibility_done",    "label": "eligibility_done — eligibility evaluated; needs budget dispatch" },
+                  { "value": "budget_done",         "label": "budget_done — both stages complete (terminal)" }
+                ]
+              }
+            },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "attempt_count",     "label": "Retry attempts (0 on first run)" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "next_attempt_at",   "label": "Eligible to be picked up at (ISO-8601)" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "locked_by",         "label": "Worker instance currently processing (empty if free)" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "locked_at",         "label": "Lock acquired at" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "processed_at",      "label": "Processed at (ISO-8601, when stage=budget_done)" } }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secError", "label": "Last error (if any)" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "last_error_at",   "label": "Last error at" } },
+            { "className": "org.joget.apps.form.lib.TextArea",  "properties": { "id": "last_error",      "label": "Last error message", "rows": "4", "cols": "80" } },
+            { "className": "org.joget.apps.form.lib.TextArea",  "properties": { "id": "last_error_stack","label": "Last error stack (truncated)", "rows": "6", "cols": "80" } }
+          ]
+        }
+      ]
+    }
+  ]
+}

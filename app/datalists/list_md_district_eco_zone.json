@@ -1,0 +1,43 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "code",         "id": "column_code",     "label": "Code",          "width": "200px", "sortable": "true" },
+    { "name": "district",     "id": "column_district", "label": "District",      "width": "140px", "sortable": "true",
+      "formats": [{
+        "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+        "properties": { "formDefId": "md03district", "idColumn": "code", "labelColumn": "name" }
+      }] },
+    { "name": "agro_zone",    "id": "column_zone",     "label": "Agro-ecological zone", "width": "180px", "sortable": "true",
+      "formats": [{
+        "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+        "properties": { "formDefId": "md04agroEcologicalZo", "idColumn": "code", "labelColumn": "name" }
+      }] },
+    { "name": "centroid_lat", "id": "column_lat",      "label": "Centroid lat",  "width": "110px" },
+    { "name": "centroid_lon", "id": "column_lon",      "label": "Centroid lon",  "width": "110px" },
+    { "name": "area_km2",     "id": "column_area",     "label": "Area (km²)",    "width": "100px", "sortable": "true" }
+  ],
+  "pageSize": 0,
+  "orderBy": "code",
+  "order": "ASC",
+  "filters": [
+    { "name": "district",  "label": "District",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND" },
+    { "name": "agro_zone", "label": "Agro-zone",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND" }
+  ],
+  "pageSizeSelectorOptions": "10,25,50",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: MD.95 - District × Ecological Zone",
+  "id": "list_md_district_eco_zone",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": { "formDefId": "md_district_eco_zone" }
+  },
+  "actions": [],
+  "order": ""
+}

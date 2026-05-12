@@ -1,0 +1,269 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "budget_event",
+    "name": "04.03 - Budget Event (append-only ledger)",
+    "tableName": "budget_event",
+    "description": "Append-only journal of budget transactions. Every entry is one journal-line side; balanced multi-line transactions are linked by transaction_id. Per methodology §3 (transaction catalogue) and §9 (audit trail). NEVER UPDATE/DELETE rows — corrections post new RECONCILIATION_ADJUSTMENT events referencing the corrected event by id.",
+    "loadBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission": { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "transactionSection", "label": "Transaction" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "transaction_id",
+                "label": "Transaction ID",
+                "size": "64", "maxlength": "64",
+                "placeholder": "UUID linking journal lines of the same transaction",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "event_type",
+                "label": "Transaction Type",
+                "options": [
+                  { "value": "ALLOCATION",                "label": "ALLOCATION" },
+                  { "value": "RESERVATION",               "label": "RESERVATION" },
+                  { "value": "RELEASE_RESERVATION",       "label": "RELEASE_RESERVATION" },
+                  { "value": "PRE_COMMITMENT",            "label": "PRE_COMMITMENT" },
+                  { "value": "RELEASE_PRE_COMMITMENT",    "label": "RELEASE_PRE_COMMITMENT" },
+                  { "value": "COMMITMENT",                "label": "COMMITMENT (Phase 3)" },
+                  { "value": "RELEASE_COMMITMENT",        "label": "RELEASE_COMMITMENT (Phase 3)" },
+                  { "value": "EXPENSE",                   "label": "EXPENSE (Phase 3)" },
+                  { "value": "EXPENSE_ADJUSTMENT",        "label": "EXPENSE_ADJUSTMENT (Phase 3)" },
+                  { "value": "RECONCILIATION_ADJUSTMENT", "label": "RECONCILIATION_ADJUSTMENT" },
+                  { "value": "SOURCE_REALLOCATION",       "label": "SOURCE_REALLOCATION" },
+                  { "value": "PROGRAMME_CLOSURE",         "label": "PROGRAMME_CLOSURE" }
+                ],
+                "addEmptyOption": "false",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "envelope_code",
+                "label": "Envelope Code",
+                "size": "64", "maxlength": "64",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "account_path",
+                "label": "Account Path",
+                "size": "128", "maxlength": "128",
+                "placeholder": "ENV_X.RESERVED  |  SRC_GOL_X.AVAILABLE  |  BNF_<id>",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "direction",
+                "label": "Direction",
+                "options": [
+                  { "value": "debit",  "label": "Debit (Dr)" },
+                  { "value": "credit", "label": "Credit (Cr)" }
+                ],
+                "addEmptyOption": "false",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "amount",
+                "label": "Amount (positive — direction encoded separately)",
+                "size": "20", "maxlength": "20",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "decimal" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "currency",
+                "label": "Currency",
+                "size": "8", "maxlength": "8", "value": "LSL",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "correlationSection", "label": "Correlation & Source" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "correlation_id",
+                "label": "Correlation ID",
+                "size": "64", "maxlength": "64",
+                "placeholder": "applicationId / voucherId / redemptionId"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "correlation_type",
+                "label": "Correlation Type",
+                "options": [
+                  { "value": "subsidy_application", "label": "Subsidy application" },
+                  { "value": "voucher",             "label": "Voucher" },
+                  { "value": "redemption",          "label": "Redemption" },
+                  { "value": "manual",              "label": "Manual" },
+                  { "value": "migration",           "label": "Migration" }
+                ],
+                "addEmptyOption": "true",
+                "emptyLabel": "(none)"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "source_module",
+                "label": "Source Module",
+                "options": [
+                  { "value": "subsidy",   "label": "Subsidy" },
+                  { "value": "im",        "label": "IM" },
+                  { "value": "manual",    "label": "Manual" },
+                  { "value": "migration", "label": "Migration" }
+                ],
+                "addEmptyOption": "false",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "actor",
+                "label": "Actor (user-id or 'system')",
+                "size": "64", "maxlength": "64"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "action_code",
+                "label": "mm_action.code (if dispatched)",
+                "size": "64", "maxlength": "64"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "rule_version",
+                "label": "Rule Version (BENEFIT_AMOUNT / authority rule)",
+                "size": "32", "maxlength": "32"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "authority_basis",
+                "label": "Authority Basis (budget_authorisation rule code)",
+                "size": "64", "maxlength": "64"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "idempotency_key",
+                "label": "Idempotency Key",
+                "size": "128", "maxlength": "128",
+                "placeholder": "Composed from upstream — prevents double-post on retry"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "adjustmentSection", "label": "Adjustment Linkage" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "correction_of",
+                "label": "Correction Of (event id this adjustment corrects, if applicable)",
+                "size": "64", "maxlength": "64"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "notes",
+                "label": "Notes (mandatory for manual adjustments)",
+                "rows": "4", "cols": "80"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

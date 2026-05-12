@@ -1,0 +1,969 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "allFieldTypes",
+    "name": "99.00 - All Field Types (Test)",
+    "tableName": "all_field_types",
+    "description": "Dummy form to test all supported Joget DX 8.x element types and patterns",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "identificationSection", "label": "Identification" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.IdGeneratorField",
+              "properties": {
+                "id": "recordId",
+                "label": "Record ID",
+                "format": "TST-??????",
+                "envVariable": "testCounter",
+                "isDistributedGeneration": "",
+                "hidden": "",
+                "workflowVariable": "recordId"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "title",
+                "label": "Title",
+                "value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "size": "",
+                "encryption": "",
+                "storeNumeric": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "style": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "systemCode",
+                "label": "System Code",
+                "value": "AUTO",
+                "placeholder": "",
+                "maxlength": "",
+                "size": "",
+                "encryption": "",
+                "storeNumeric": "",
+                "readonly": "true",
+                "readonlyLabel": "true",
+                "style": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "referenceCode",
+                "label": "Reference Code",
+                "value": "",
+                "placeholder": "e.g. REF-2024-001",
+                "maxlength": "50",
+                "size": "",
+                "encryption": "",
+                "storeNumeric": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "style": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "sortOrder",
+                "label": "Sort Order",
+                "value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "size": "",
+                "encryption": "",
+                "storeNumeric": "true",
+                "readonly": "",
+                "readonlyLabel": "",
+                "style": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.PasswordField",
+              "properties": {
+                "id": "accessPin",
+                "label": "Access PIN",
+                "value": "",
+                "readonly": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "datesNotesSection", "label": "Dates and Notes" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "startDate",
+                "label": "Start Date",
+                "value": "",
+                "dataFormat": "yyyy-MM-dd",
+                "datePickerType": "",
+                "currentDateAs": "today",
+                "yearRange": "c-5:c+10",
+                "disableWeekends": "",
+                "allowManual": "",
+                "startDateFieldId": "",
+                "endDateFieldId": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "description",
+                "label": "Description",
+                "value": "",
+                "placeholder": "Provide a detailed description...",
+                "rows": "4",
+                "cols": "80",
+                "readonly": "",
+                "readonlyLabel": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "endDate",
+                "label": "End Date",
+                "value": "",
+                "dataFormat": "yyyy-MM-dd",
+                "datePickerType": "",
+                "currentDateAs": "",
+                "yearRange": "c-5:c+10",
+                "disableWeekends": "",
+                "allowManual": "",
+                "startDateFieldId": "startDate",
+                "endDateFieldId": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "internalNotes",
+                "label": "Internal Notes",
+                "value": "",
+                "placeholder": "",
+                "rows": "3",
+                "cols": "80",
+                "readonly": "",
+                "readonlyLabel": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "dropdownsSection", "label": "Dropdowns" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "districtId",
+                "label": "District",
+                "value": "",
+                "multiple": "",
+                "size": "",
+                "controlField": "",
+                "controlValue": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md03district",
+                    "idColumn": "id",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "priority",
+                "label": "Priority",
+                "value": "",
+                "multiple": "",
+                "size": "",
+                "controlField": "",
+                "controlValue": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "options": [
+                  { "value": "high", "label": "High", "grouping": "" },
+                  { "value": "medium", "label": "Medium", "grouping": "" },
+                  { "value": "low", "label": "Low", "grouping": "" }
+                ],
+                "optionsBinder": { "className": "", "properties": {} },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "agroZoneId",
+                "label": "Agro-Ecological Zone",
+                "value": "",
+                "multiple": "",
+                "size": "",
+                "controlField": "",
+                "controlValue": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md04agroEcologicalZo",
+                    "idColumn": "id",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "district_id=#districtId#",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "hazards",
+                "label": "Hazards (multi)",
+                "value": "",
+                "multiple": "true",
+                "size": "",
+                "controlField": "",
+                "controlValue": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md11hazard",
+                    "idColumn": "id",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "radioCheckboxSection", "label": "Radio and Checkboxes" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "gender",
+                "label": "Gender",
+                "value": "",
+                "fullWidth": "",
+                "readonly": "",
+                "controlField": "",
+                "options": [
+                  { "value": "male", "label": "Male", "grouping": "" },
+                  { "value": "female", "label": "Female", "grouping": "" },
+                  { "value": "other", "label": "Other / Prefer not to say", "grouping": "" }
+                ],
+                "optionsBinder": { "className": "", "properties": {} },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.CheckBox",
+              "properties": {
+                "id": "isActive",
+                "label": "Is Active",
+                "value": "true",
+                "workflowVariable": "",
+                "options": [
+                  { "value": "true", "label": "", "grouping": "" }
+                ],
+                "optionsBinder": { "className": "", "properties": {} },
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "maritalStatus",
+                "label": "Marital Status",
+                "value": "",
+                "fullWidth": "",
+                "readonly": "",
+                "controlField": "",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md01maritalStatus",
+                    "idColumn": "id",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.CheckBox",
+              "properties": {
+                "id": "conservationPractices",
+                "label": "Conservation Practices",
+                "value": "",
+                "workflowVariable": "",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md10conservationPrac",
+                    "idColumn": "id",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "attachmentsSection", "label": "Attachments" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.FileUpload",
+              "properties": {
+                "id": "primaryDocument",
+                "label": "Primary Document",
+                "maxSize": "10",
+                "maxSizeMsg": "File size limit exceeded",
+                "multiple": "",
+                "attachment": "true",
+                "readonly": "",
+                "removeFile": "",
+                "permissionType": "",
+                "size": "",
+                "fileTypes": "pdf,doc,docx",
+                "resizeMethod": "",
+                "resizeWidth": "",
+                "resizeQuality": "0.8",
+                "padding": "",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.FileUpload",
+              "properties": {
+                "id": "supportingImages",
+                "label": "Supporting Images",
+                "maxSize": "5",
+                "maxSizeMsg": "File size limit exceeded",
+                "multiple": "true",
+                "attachment": "true",
+                "readonly": "",
+                "removeFile": "",
+                "permissionType": "",
+                "size": "",
+                "fileTypes": "jpg,jpeg,png",
+                "resizeMethod": "",
+                "resizeWidth": "",
+                "resizeQuality": "0.8",
+                "padding": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.CustomHTML",
+              "properties": {
+                "id": "sectionDivider",
+                "label": "",
+                "value": "<div class='alert alert-info' style='margin:8px 0'><strong>\u2139\ufe0f Note:</strong> All uploaded files are stored securely.</div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "computedFieldsSection", "label": "Computed Fields" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "farmAreaHa",
+                "label": "Farm Area (ha)",
+                "value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "size": "",
+                "encryption": "",
+                "storeNumeric": "true",
+                "readonly": "",
+                "readonlyLabel": "",
+                "style": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "double", "message": "" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.plugin.enterprise.CalculationField",
+              "properties": {
+                "id": "drylandAreaHa",
+                "label": "Dryland Area (ha)",
+                "equation": "total - irrigated",
+                "variables": [
+                  { "variableName": "total", "fieldId": "farmAreaHa", "operation": "sum" },
+                  { "variableName": "irrigated", "fieldId": "irrigatedAreaHa", "operation": "sum" }
+                ],
+                "numOfDecimal": "2",
+                "style": "us",
+                "storeNumeric": "",
+                "prefix": "",
+                "postfix": "",
+                "useThousandSeparator": "",
+                "hidden": "",
+                "readonlyLabel": "",
+                "workflowVariable": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "global.govstack.concatfield.element.ConcatFieldElement",
+              "properties": {
+                "id": "locationLabel",
+                "label": "Location",
+                "sourceFields": [
+                  { "fieldId": "districtId", "transform": "" },
+                  { "fieldId": "agroZoneId", "transform": "" }
+                ],
+                "separator": " / ",
+                "formatPattern": "",
+                "prefix": "",
+                "suffix": "",
+                "skipEmpty": "true",
+                "displayType": "readonly",
+                "updateOn": "change",
+                "required": "",
+                "requiredMessage": ""
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "irrigatedAreaHa",
+                "label": "Irrigated Area (ha)",
+                "value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "size": "",
+                "encryption": "",
+                "storeNumeric": "true",
+                "readonly": "",
+                "readonlyLabel": "",
+                "style": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "", "type": "double", "message": "" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "districtName",
+                "label": "District Name",
+                "value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "size": "",
+                "encryption": "",
+                "storeNumeric": "",
+                "readonly": "true",
+                "readonlyLabel": "true",
+                "style": "",
+                "requiredSanitize": "",
+                "workflowVariable": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "plotBoundarySection", "label": "Plot Boundary" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "global.govstack.gisui.element.GisPolygonCaptureElement",
+              "properties": {
+                "id": "geometry",
+                "label": "",
+                "apiEndpoint": "/jw/api/gis/gis",
+                "apiId": "",
+                "apiKey": "",
+                "captureMode": "BOTH",
+                "defaultMode": "AUTO",
+                "defaultLatitude": "-29.6",
+                "defaultLongitude": "28.2",
+                "defaultZoom": "14",
+                "tileProvider": "SATELLITE_ESRI",
+                "showSatelliteOption": "true",
+                "mapHeight": "500",
+                "enableAutoCenter": "true",
+                "autoCenterDistrictFieldId": "districtId",
+                "autoCenterVillageFieldId": "",
+                "autoCenterLatFieldId": "auto_center_lat",
+                "autoCenterLonFieldId": "auto_center_lon",
+                "autoCenterZoom": "14",
+                "autoCenterCountrySuffix": "Lesotho",
+                "autoCenterRetryOnFieldChange": "true",
+                "gpsHighAccuracy": "true",
+                "gpsMinAccuracy": "10",
+                "autoCloseDistance": "15",
+                "minVertices": "3",
+                "maxVertices": "200",
+                "minAreaHectares": "0.01",
+                "maxAreaHectares": "1000",
+                "areaFieldId": "area_hectares",
+                "perimeterFieldId": "perimeter_meters",
+                "centroidFieldId": "centroid_lat",
+                "vertexCountFieldId": "vertex_count",
+                "strokeColor": "#3388ff",
+                "strokeWidth": "3",
+                "fillColor": "#3388ff",
+                "fillOpacity": "0.2",
+                "enableOverlapCheck": "true",
+                "overlapFormId": "parcelGeometry",
+                "overlapGeometryField": "geometry",
+                "overlapDisplayFields": "area_hectares",
+                "overlapFilterCondition": "",
+                "showNearbyParcels": "ON_DEMAND",
+                "nearbyParcelsFormId": "parcelGeometry",
+                "nearbyParcelsGeometryField": "geometry",
+                "nearbyParcelsDisplayFields": "area_hectares",
+                "nearbyParcelsMaxResults": "",
+                "nearbyParcelsFilterCondition": "",
+                "nearbyParcelsFillColor": "",
+                "nearbyParcelsFillOpacity": "",
+                "nearbyParcelsStrokeColor": "",
+                "allowSelfIntersection": "",
+                "enableSimplification": "",
+                "simplificationTolerance": "",
+                "required": "",
+                "requiredMessage": "Please capture the parcel boundary"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "gisHiddenFieldsSection", "label": "" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "area_hectares",
+                "label": "area_hectares",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "centroid_lat",
+                "label": "centroid_lat",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "auto_center_lat",
+                "label": "auto_center_lat",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "perimeter_meters",
+                "label": "perimeter_meters",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "vertex_count",
+                "label": "vertex_count",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "auto_center_lon",
+                "label": "auto_center_lon",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "householdMembersSection", "label": "Household Members" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.plugin.enterprise.FormGrid",
+              "properties": {
+                "id": "householdGrid",
+                "label": "Household Members",
+                "formDefId": "householdMemberForm",
+                "pageSize": "10",
+                "enableSorting": "true",
+                "readonly": "",
+                "deleteGridData": "",
+                "validateMaxRow": "",
+                "requestParams": [],
+                "options": [
+                  { "label": "Name", "value": "memberName", "width": "200px", "format": "", "formatType": "" },
+                  { "label": "Relationship", "value": "relationship", "width": "150px", "format": "", "formatType": "" },
+                  { "label": "Date of Birth", "value": "date_of_birth", "width": "120px", "format": "", "formatType": "" },
+                  { "label": "Sex", "value": "sex", "width": "100px", "format": "", "formatType": "" }
+                ],
+                "storeBinder": {
+                  "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                  "properties": {
+                    "formDefId": "householdMemberForm",
+                    "foreignKey": "farmer_id"
+                  }
+                },
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "entitlementsSection", "label": "Entitlements" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.marketplace.EmbeddedDatalist",
+              "properties": {
+                "id": "entitlementsList",
+                "label": "",
+                "datalistId": "list_imEntitlement",
+                "height": "300px",
+                "pageSize": "10",
+                "showPagination": "true",
+                "showFilter": "",
+                "showExport": "",
+                "refreshOnChange": "",
+                "rowClickAction": "",
+                "emptyMessage": "No records found.",
+                "filterParams": [
+                  { "name": "farmerId", "value": "#recordId#" }
+                ],
+                "customCss": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "systemFieldsSection", "label": "" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "parentId",
+                "label": "parentId",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "true",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "createdAt",
+                "label": "createdAt",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "workflowStatus",
+                "label": "workflowStatus",
+                "value": "",
+                "workflowVariable": "status",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "createdBy",
+                "label": "createdBy",
+                "value": "",
+                "workflowVariable": "",
+                "useDefaultWhenEmpty": "",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

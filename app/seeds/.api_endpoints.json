@@ -1,0 +1,12 @@
+{
+  "API_SUBSIDY_APP_2025_CITIZEN": {
+    "apiId": "API-API_SUBSIDY_APP_2025_CITIZEN",
+    "apiKind": "crud",
+    "formId": "subsidyApplication2025"
+  },
+  "API_SUBSIDY_APP_2025_OPERATOR": {
+    "apiId": "API-API_SUBSIDY_APP_2025_OPERATOR",
+    "apiKind": "read_only",
+    "formId": "subsidyApplicationOperator2025"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "code",         "id": "column_code",   "label": "Code",          "width": "120px" },
+    { "name": "name",         "id": "column_name",   "label": "Name",          "width": "260px" },
+    { "name": "country",      "id": "column_ctry",   "label": "Country/Region","width": "180px" },
+    { "name": "focal_point",  "id": "column_focal",  "label": "Focal point",   "width": "180px" },
+    { "name": "contact_email","id": "column_email",  "label": "Contact email", "width": "200px" }
+  ],
+  "pageSize": 0,
+  "orderBy": "code",
+  "order": "ASC",
+  "filters": [
+    {
+      "name": "code",
+      "label": "Code",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "name",
+      "label": "Name",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    }
+  ],
+  "pageSizeSelectorOptions": "10,20,50",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: MD.94 - Donor",
+  "id": "list_md_donor",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": { "formDefId": "md_donor" }
+  },
+  "actions": [],
+  "order": ""
+}

@@ -1,0 +1,29 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "false",
+  "rowActions": [],
+  "columns": [
+    { "name": "metric_label", "id": "column_label", "label": "Metric",        "width": "320px" },
+    { "name": "metric_value", "id": "column_value", "label": "Value",         "width": "200px", "alignment": "right" },
+    { "name": "metric_note",  "id": "column_note",  "label": "Notes",         "width": "300px" }
+  ],
+  "pageSize": 0,
+  "orderBy": "sort_order",
+  "order": "ASC",
+  "filters": [],
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "IM Report: Dashboard KPIs",
+  "id": "dl_im_dashboard_summary",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT * FROM (VALUES ('1', 1, 'Vouchers issued (all time)', (SELECT COUNT(*)::text FROM app_fd_im_voucher), 'Total voucher records since system launch'), ('2', 2, 'Vouchers redeemed', (SELECT COUNT(*)::text FROM app_fd_im_voucher WHERE c_status = 'redeemed'), 'Vouchers logically marked redeemed'), ('3', 3, 'Redemption rate %', COALESCE((SELECT ROUND((SUM(CASE WHEN c_status='redeemed' THEN 1 ELSE 0 END) * 100.0) / NULLIF(COUNT(*), 0), 1)::text || '%' FROM app_fd_im_voucher), '—'), 'Redeemed ÷ issued × 100'), ('4', 4, 'Distinct farmers served', (SELECT COUNT(DISTINCT c_farmer_nid)::text FROM app_fd_im_voucher WHERE c_status = 'redeemed'), 'Distinct national IDs that redeemed at least one voucher'), ('5', 5, 'Active centres (last 30 days)', (SELECT COUNT(DISTINCT c_redemption_point)::text FROM app_fd_im_voucher_redemption WHERE NULLIF(c_redemption_date, '')::date >= CURRENT_DATE - INTERVAL '30 days'), 'Resource Centres that processed at least one redemption'), ('6', 6, 'Signed distribution receipts', (SELECT COUNT(*)::text FROM app_fd_im_distribution), 'Physical handover acknowledgements (im_distribution)'), ('7', 7, 'SKU-locations with stock', (SELECT COUNT(*)::text FROM app_fd_im_inventory WHERE COALESCE(CAST(NULLIF(c_quantity_on_hand, '') AS NUMERIC(15,2)), 0) > 0), 'Inventory rows where on-hand quantity > 0'), ('8', 8, 'SKU-locations below reorder threshold', (SELECT COUNT(*)::text FROM app_fd_im_inventory WHERE COALESCE(CAST(NULLIF(c_quantity_on_hand, '') AS NUMERIC(15,2)), 0) < COALESCE(CAST(NULLIF(c_reorder_threshold, '') AS NUMERIC(15,2)), 0)), 'Stock at or below the reorder line — restock priority'), ('9', 9, 'Stock receipts (RECEIPT txns)', (SELECT COUNT(*)::text FROM app_fd_im_stock_txn WHERE c_txn_type = 'RECEIPT'), 'Goods-in events from suppliers'), ('10',10, 'Total budget allocated (LSL)', COALESCE((SELECT to_char(SUM(allocated), 'FM999,999,999.00') FROM budget_projection bp INNER JOIN app_fd_budget_envelope env ON env.c_code = bp.envelope_code WHERE env.c_programme_code IN (SELECT DISTINCT c_programme_code FROM app_fd_im_voucher)), '—'), 'Across programmes that have issued at least one voucher'), ('11',11, 'Total budget committed (LSL)', COALESCE((SELECT to_char(SUM(committed), 'FM999,999,999.00') FROM budget_projection bp INNER JOIN app_fd_budget_envelope env ON env.c_code = bp.envelope_code WHERE env.c_programme_code IN (SELECT DISTINCT c_programme_code FROM app_fd_im_voucher)), '—'), 'Vouchers issued but not yet redeemed'), ('12',12, 'Total budget expensed (LSL)', COALESCE((SELECT to_char(SUM(expensed), 'FM999,999,999.00') FROM budget_projection bp INNER JOIN app_fd_budget_envelope env ON env.c_code = bp.envelope_code WHERE env.c_programme_code IN (SELECT DISTINCT c_programme_code FROM app_fd_im_voucher)), '—'), 'Vouchers redeemed (logical)'), ('13',13, 'As of', to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'), 'Snapshot timestamp')) AS kpi(id, sort_order, metric_label, metric_value, metric_note)",
+      "countSql": "SELECT 13",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

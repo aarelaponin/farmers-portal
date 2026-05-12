@@ -1,0 +1,60 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "occurred_at",
+      "id": "column_when",
+      "label": "When",
+      "format": {
+        "className": "org.joget.plugin.enterprise.DateFormatter",
+        "properties": { "format": "yyyy-MM-dd HH:mm:ss" }
+      },
+      "width": "150px"
+    },
+    { "name": "actor",       "id": "column_actor",  "label": "Actor",       "width": "180px" },
+    { "name": "entity_type", "id": "column_etype",  "label": "Entity",      "width": "130px" },
+    { "name": "entity_code", "id": "column_ecode",  "label": "Code",        "width": "180px" },
+    { "name": "action",      "id": "column_action", "label": "Action",      "width": "140px" },
+    { "name": "detail",      "id": "column_detail", "label": "Detail",      "width": "auto" }
+  ],
+  "pageSize": 100,
+  "orderBy": "",
+  "filters": [
+    {
+      "name": "actor",
+      "label": "Actor",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "entity_type",
+      "label": "Entity type",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "entity_code",
+      "label": "Code",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    }
+  ],
+  "pageSizeSelectorOptions": "50,100,200,500",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "Audit Trail (cross-system who-did-what-when)",
+  "id": "dl_audit_trail",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT * FROM (SELECT id, NULLIF(c_issued_date,'')::timestamp AS occurred_at, COALESCE(NULLIF(c_redeemed_by,''), '(system)') AS actor, 'voucher' AS entity_type, c_code AS entity_code, COALESCE(c_status,'issued') AS action, 'farmer=' || COALESCE(c_farmer_nid,'?') || ', input=' || COALESCE(c_input_code,'?') || ', qty=' || COALESCE(c_quantity,'?') || ', programme=' || COALESCE(c_programme_code,'?') AS detail FROM app_fd_im_voucher WHERE NULLIF(c_issued_date,'')::date >= CURRENT_DATE - interval '90 days' UNION ALL SELECT id, NULLIF(c_redemption_date,'')::timestamp AS occurred_at, COALESCE(c_redeemed_by, '(system)') AS actor, 'redemption' AS entity_type, c_code AS entity_code, COALESCE(c_status, 'completed') AS action, 'voucher=' || COALESCE(c_voucher_code,'?') || ', point=' || COALESCE(c_redemption_point,'?') || ', qty=' || COALESCE(c_quantity_redeemed,'?') AS detail FROM app_fd_im_voucher_redemption WHERE NULLIF(c_redemption_date,'')::date >= CURRENT_DATE - interval '90 days' UNION ALL SELECT id, NULLIF(c_distribution_date,'')::timestamp AS occurred_at, COALESCE(c_operator_name, '(unknown)') AS actor, 'distribution' AS entity_type, c_code AS entity_code, 'signed' AS action, 'voucher=' || COALESCE(c_voucher_code,'?') || COALESCE(', witness=' || NULLIF(c_witness_name,''),'') AS detail FROM app_fd_im_distribution WHERE NULLIF(c_distribution_date,'')::date >= CURRENT_DATE - interval '90 days' UNION ALL SELECT id, NULLIF(c_txn_date,'')::timestamp AS occurred_at, COALESCE(c_performed_by, '(unknown)') AS actor, 'stock_txn' AS entity_type, c_code AS entity_code, c_txn_type AS action, 'point=' || COALESCE(c_point_code,'?') || COALESCE(', supplier=' || NULLIF(c_supplier_code,''), '') || COALESCE(', invoice=' || NULLIF(c_supplier_invoice_no,''), '') AS detail FROM app_fd_im_stock_txn WHERE NULLIF(c_txn_date,'')::date >= CURRENT_DATE - interval '90 days') merged ORDER BY occurred_at DESC NULLS LAST",
+      "countSql": "SELECT (SELECT count(*) FROM app_fd_im_voucher WHERE NULLIF(c_issued_date,'')::date >= CURRENT_DATE - interval '90 days') + (SELECT count(*) FROM app_fd_im_voucher_redemption WHERE NULLIF(c_redemption_date,'')::date >= CURRENT_DATE - interval '90 days') + (SELECT count(*) FROM app_fd_im_distribution WHERE NULLIF(c_distribution_date,'')::date >= CURRENT_DATE - interval '90 days') + (SELECT count(*) FROM app_fd_im_stock_txn WHERE NULLIF(c_txn_date,'')::date >= CURRENT_DATE - interval '90 days')",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

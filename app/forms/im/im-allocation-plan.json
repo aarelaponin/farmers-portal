@@ -1,0 +1,222 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "im_allocation_plan",
+    "name": "IM - Allocation Plan",
+    "tableName": "im_allocation_plan",
+    "description": "Inputs Management — allocation plan header tying a subsidy programme to a list of (Resource Centre × input × farmer category) line items. Phase 3 IM Slice 3. Per im-module SAD §5.1 + Phase C of the lifecycle (see _07_Training/_im_overview).",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Plan Identity"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Plan code (immutable)",
+                "size": "64",
+                "maxlength": "64",
+                "placeholder": "AP_<programme>_<cycle>, e.g. AP_PRG_2025_001_2025-26",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "im_allocation_plan",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This allocation-plan code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Display name",
+                "size": "200",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "programme_code",
+                "label": "Subsidy programme",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_registration",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "cycle_label",
+                "label": "Cycle label",
+                "size": "60",
+                "placeholder": "e.g. 2025/26 lowlands season"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "effective_from",
+                "label": "Effective from",
+                "format": "yy-mm-dd"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "effective_to",
+                "label": "Effective to",
+                "format": "yy-mm-dd"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "status",
+                "label": "Status",
+                "options": [
+                  { "value": "draft", "label": "Draft (Procurement Officer authoring)" },
+                  { "value": "pending_approval", "label": "Pending Program Manager approval" },
+                  { "value": "approved", "label": "Approved (locked, vouchers can issue)" },
+                  { "value": "closed", "label": "Closed (cycle ended)" }
+                ],
+                "value": "draft",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "approved_by",
+                "label": "Approved by (operator name)",
+                "size": "100"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "approval_date",
+                "label": "Approval date",
+                "format": "yy-mm-dd"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "linesSection",
+        "label": "Allocation Lines"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.plugin.enterprise.FormGrid",
+              "properties": {
+                "id": "lines",
+                "label": "Lines (one row per centre × input × farmer category)",
+                "formDefId": "im_allocation_line",
+                "foreignKey": "plan_id",
+                "options": [
+                  { "value": "code",            "label": "Line code", "width": "230" },
+                  { "value": "point_code",      "label": "Resource Centre", "width": "180" },
+                  { "value": "input_code",      "label": "Input", "width": "180" },
+                  { "value": "farmer_category", "label": "Farmer cat.", "width": "120" },
+                  { "value": "quantity",        "label": "Qty", "width": "70" },
+                  { "value": "priority_weight", "label": "Priority", "width": "70" }
+                ],
+                "loadBinder": {
+                  "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                  "properties": {
+                    "formDefId": "im_allocation_line",
+                    "foreignKey": "plan_id"
+                  }
+                },
+                "storeBinder": {
+                  "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                  "properties": {
+                    "formDefId": "im_allocation_line",
+                    "foreignKey": "plan_id"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "notesSection",
+        "label": "Notes"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "notes",
+                "label": "Plan notes",
+                "rows": "4",
+                "cols": "80"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

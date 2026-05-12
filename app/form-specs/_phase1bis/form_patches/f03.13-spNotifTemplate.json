@@ -1,0 +1,558 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "50",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[A-Z][A-Z0-9_]+$",
+                                        "type": "regex",
+                                        "message": "Use UPPERCASE letters, numbers, and underscores",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Template Code",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "templateCode",
+                                "placeholder": "e.g., APP_SUBMITTED, APP_APPROVED",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "200",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Template Name",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "templateName",
+                                "placeholder": "e.g., Application Submitted Confirmation",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Category",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md80notifCategory",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "category",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "label": "Trigger Event",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md34notificationType",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "triggerEvent",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "smsSection",
+                                "label": "SMS Template",
+                                "customParameterName": "",
+                                "value": "<h4><i class=\"fas fa-sms\"></i> SMS Message Template</h4>\n<p>Use placeholders: {farmer_name}, {program_name}, {application_code}, {status}, \n   {date}, {location}, {amount}, {voucher_code}, {expiry_date}</p>\n"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "SMS Enabled",
+                                "id": "smsEnabled",
+                                "value": "Y",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "SMS Template (English)",
+                                "id": "smsTemplateEn",
+                                "placeholder": "Dear {farmer_name}, your application {application_code} has been {status}.",
+                                "rows": "3",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "SMS Template (Sesotho)",
+                                "id": "smsTemplateSt",
+                                "placeholder": "Motho ea ratehang {farmer_name}, kopo ea hau {application_code} e {status}.",
+                                "rows": "3",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "smsCharCount",
+                                "label": "Character Count Guide",
+                                "customParameterName": "",
+                                "value": "<div class=\"alert alert-info\">\n  <small>SMS limit: 160 characters for single message. \n  Longer messages will be split and may incur additional cost.</small>\n</div>\n"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "emailSection",
+                                "label": "Email Template",
+                                "customParameterName": "",
+                                "value": "<h4><i class=\"fas fa-envelope\"></i> Email Template (Optional)</h4>\n"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Email Enabled",
+                                "id": "emailEnabled",
+                                "value": "N",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "200",
+                                "label": "Email Subject (English)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "emailSubjectEn",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "200",
+                                "label": "Email Subject (Sesotho)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "emailSubjectSt",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Email Body (English)",
+                                "id": "emailBodyEn",
+                                "placeholder": "",
+                                "rows": "8",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "encryption": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Email Body (Sesotho)",
+                                "id": "emailBodySt",
+                                "placeholder": "",
+                                "rows": "8",
+                                "cols": "50",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "scheduleSection",
+                                "label": "Scheduling",
+                                "customParameterName": "",
+                                "value": "<h4><i class=\"fas fa-clock\"></i> Send Timing</h4>\n"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md81sendTiming",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Send Timing",
+                                "id": "sendImmediately",
+                                "value": "IMMEDIATE",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^[0-9]+$",
+                                        "type": "regex",
+                                        "message": "Enter number of minutes",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Delay (Minutes)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "delayMinutes",
+                                "placeholder": "",
+                                "value": "0",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "regex": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+                                        "type": "regex",
+                                        "message": "Enter time in HH:MM format",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Scheduled Send Time (for batch)",
+                                "readonly": "",
+                                "size": "",
+                                "encryption": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "scheduledTime",
+                                "placeholder": "HH:MM (24-hour format)",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "Active",
+                                "id": "isActive",
+                                "value": "Y",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Priority",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md53priority",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "priority",
+                                "iconIncluded": false,
+                                "value": "NORMAL",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section1",
+                "label": "Section"
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Notification Template",
+        "description": "Configurable templates for farmer notifications",
+        "postProcessorRunOn": "create",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "spNotifTemplate",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "spNotifTemplate"
+    }
+}

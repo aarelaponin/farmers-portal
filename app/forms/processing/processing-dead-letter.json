@@ -1,0 +1,79 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "processing_dead_letter",
+    "name": "05.02 - Processing Dead Letter",
+    "tableName": "processing_dead_letter",
+    "description": "ADR-030 — terminal failure log. When a processing_queue row exhausts its retry budget (default 5 attempts), the worker moves it here and removes the queue row. Ops surfaces these via the alerts list and either: (a) corrects the underlying data + re-enqueues, (b) marks the application as manually_failed in the operator review form, or (c) closes the row as 'unrecoverable, no action needed'. Forensic record only — no automatic re-processing from this table.",
+    "loadBinder":  { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission":  { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secCorrelation", "label": "Correlation" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "application_id",   "label": "Application id" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "applicant_nid",    "label": "Applicant national_id" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "programme_code",   "label": "Programme code" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "submitted_at",     "label": "Originally submitted at" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "stage_at_failure", "label": "Pipeline stage at terminal failure" } }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secFailure", "label": "Failure" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "dead_lettered_at", "label": "Dead-lettered at" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "attempts_used",    "label": "Attempts before giving up" } },
+            { "className": "org.joget.apps.form.lib.TextArea",  "properties": { "id": "last_error",       "label": "Final error message", "rows": "4", "cols": "80" } },
+            { "className": "org.joget.apps.form.lib.TextArea",  "properties": { "id": "last_error_stack", "label": "Final error stack", "rows": "8", "cols": "80" } }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secResolution", "label": "Operator resolution" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "resolution",
+                "label": "Resolution",
+                "value": "open",
+                "options": [
+                  { "value": "open",            "label": "open — needs investigation" },
+                  { "value": "re_enqueued",     "label": "re_enqueued — operator fixed data and pushed back to queue" },
+                  { "value": "manually_failed", "label": "manually_failed — application marked as failed in subsidy form" },
+                  { "value": "unrecoverable",   "label": "unrecoverable — no action available, archived" }
+                ]
+              }
+            },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "resolved_by",  "label": "Resolved by (operator)" } },
+            { "className": "org.joget.apps.form.lib.TextField", "properties": { "id": "resolved_at",  "label": "Resolved at" } },
+            { "className": "org.joget.apps.form.lib.TextArea",  "properties": { "id": "resolution_note", "label": "Resolution note", "rows": "4", "cols": "80" } }
+          ]
+        }
+      ]
+    }
+  ]
+}

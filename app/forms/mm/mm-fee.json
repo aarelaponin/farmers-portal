@@ -1,0 +1,345 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "mm_fee",
+    "name": "MM - Fee",
+    "tableName": "mm_fee",
+    "description": "A fee charged to the citizen for a registration. Per RegBB spec \u00a74.1.10 / \u00a77.2.11. Note: subsidies/benefits paid TO the citizen are modelled separately as mm_benefit (per D8) \u2014 fee charges and benefit issuances are not collapsed.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "noPermissionMessage": "",
+    "postProcessor": {
+      "className": "",
+      "properties": {}
+    },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Identity"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "registrationId",
+                "label": "Registration",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_registration",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service (denormalised)",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_service",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Fee Code",
+                "size": "64",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "mm_fee",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Fee code already exists",
+                    "mandatory": "true",
+                    "regex": "",
+                    "errorFormatMsg": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "label",
+                "label": "Display Label",
+                "size": "255",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Name",
+                "size": "255",
+                "maxlength": "255",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "type",
+                "label": "Fee Type",
+                "options": [
+                  {
+                    "value": "flat",
+                    "label": "Flat amount",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "calculated",
+                    "label": "Calculated (formulaJson)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "waivable",
+                    "label": "Waivable (gated by determinant)",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "value": "flat",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "flatAmount",
+                "label": "Flat Amount (when type=flat)",
+                "size": "16",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "false",
+                    "type": "double",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "currency",
+                "label": "Currency",
+                "size": "8",
+                "value": "LSL",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "paymentTiming",
+                "label": "Payment Timing",
+                "options": [
+                  {
+                    "value": "pre_submit",
+                    "label": "Pre-submit (before submission)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "post_decision",
+                    "label": "Post-decision",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "post_completion",
+                    "label": "Post-completion",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "value": "pre_submit",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.CheckBox",
+              "properties": {
+                "id": "paymentMethods",
+                "label": "Payment Methods",
+                "options": [
+                  {
+                    "value": "online",
+                    "label": "Online",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "cash",
+                    "label": "Cash",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "mobile",
+                    "label": "Mobile",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "value": "online",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "formulaSection",
+        "label": "Formula + Trigger"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "formulaJson",
+                "label": "Formula JSON (when type=calculated)",
+                "rows": "5",
+                "cols": "60",
+                "placeholder": "{\"op\": \"mul\", \"args\": [{\"op\": \"sub\", \"left\": \"$applicant.engineCC\", \"right\": 2000}, 0.05]}",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "triggerDeterminantId",
+                "label": "Trigger Determinant ID (gates whether fee applies)",
+                "size": "64",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

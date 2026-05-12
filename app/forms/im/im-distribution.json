@@ -1,0 +1,181 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "im_distribution",
+    "name": "IM - Distribution Receipt",
+    "tableName": "im_distribution",
+    "description": "Inputs Management — signed receipt of physical handover at the Resource Centre. Closes the audit gap between logical voucher redemption (im_voucher_redemption) and physical handover. One row per redeemed voucher; captures farmer signature + operator signature as evidence. Phase 3 IM Slice 8. Per im-module SAD §6.3 + role-model 'Service Counter' actor.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "headerSection",
+        "label": "Receipt"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.IdGeneratorField",
+              "properties": {
+                "id": "code",
+                "label": "Receipt code (auto-generated)",
+                "format": "DR-??????",
+                "envVariable": "counter",
+                "isDistributedGeneration": "",
+                "hidden": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "voucher_code",
+                "label": "Voucher code",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "im_voucher",
+                    "idColumn": "code",
+                    "labelColumn": "code",
+                    "extraCondition": "e.customProperties.status = 'redeemed'",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select redeemed voucher)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "im_distribution",
+                    "fieldId": "voucher_code",
+                    "errorDuplicateMsg": "A receipt has already been recorded for this voucher",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "distribution_date",
+                "label": "Distribution date",
+                "format": "yy-mm-dd",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "operator_name",
+                "label": "Operator (counter staff who handed over)",
+                "size": "100",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "witness_name",
+                "label": "Witness (optional)",
+                "size": "100"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "signatureSection",
+        "label": "Signatures"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.plugin.enterprise.Signature",
+              "properties": {
+                "id": "farmer_signature",
+                "label": "Farmer signature",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "message": "Farmer signature is required as evidence of receipt"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.plugin.enterprise.Signature",
+              "properties": {
+                "id": "operator_signature",
+                "label": "Operator signature",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "notesSection",
+        "label": "Notes"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "notes",
+                "label": "Notes (condition of goods, partial handover, exceptions)",
+                "rows": "3",
+                "cols": "80"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

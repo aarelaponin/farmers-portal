@@ -1,0 +1,98 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "md_voucher_status",
+    "name": "MD - Voucher Status (IM)",
+    "tableName": "md_voucher_status",
+    "description": "Master data — voucher lifecycle states (issued → redeemed → reconciled, plus expired_unredeemed, cancelled). Phase 3 IM Slice 1. Per im-module SAD §8.2 — voucher chain integrity, status framework anchor.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "section1",
+        "label": "Voucher Status"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Code (immutable)",
+                "size": "32",
+                "maxlength": "32",
+                "placeholder": "lower_snake_case, e.g. issued, redeemed, expired_unredeemed",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "md_voucher_status",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Voucher Status code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Display name",
+                "size": "100",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "lifecycle_phase",
+                "label": "Lifecycle phase",
+                "options": [
+                  { "value": "active", "label": "Active (in flight)" },
+                  { "value": "terminal_success", "label": "Terminal success (redeemed/reconciled)" },
+                  { "value": "terminal_failure", "label": "Terminal failure (expired_unredeemed/cancelled)" }
+                ],
+                "addEmptyOption": "true",
+                "emptyLabel": "(select)",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "sort_order",
+                "label": "Sort order (1=earliest)",
+                "size": "8",
+                "value": "10"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

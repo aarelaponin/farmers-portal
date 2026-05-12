@@ -1,0 +1,50 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "programme_name",  "id": "column_prog",  "label": "Programme",       "width": "240px" },
+    { "name": "donor_name",      "id": "column_donor", "label": "Donor",           "width": "200px" },
+    { "name": "share_pct_disp",  "id": "column_share", "label": "Share",           "width": "70px",  "alignment": "right" },
+    { "name": "grant_reference", "id": "column_grant", "label": "Grant ref",       "width": "180px" },
+    { "name": "envelope_alloc",  "id": "column_ea",    "label": "Env. alloc.",     "width": "130px", "alignment": "right" },
+    { "name": "donor_allocated", "id": "column_da",    "label": "Donor alloc.",    "width": "130px", "alignment": "right" },
+    { "name": "donor_committed", "id": "column_dc",    "label": "Donor commit.",   "width": "130px", "alignment": "right" },
+    { "name": "donor_expensed",  "id": "column_de",    "label": "Donor expense",   "width": "130px", "alignment": "right" },
+    { "name": "donor_remaining", "id": "column_dr",    "label": "Donor remain",    "width": "130px", "alignment": "right" },
+    { "name": "programme_code",  "id": "column_pc",    "label": "Code",            "hidden": "true" },
+    { "name": "donor_code",      "id": "column_dcode", "label": "Donor code",      "hidden": "true" }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [
+    {
+      "name": "programme_code",
+      "label": "Programme code",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "donor_code",
+      "label": "Donor code",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    }
+  ],
+  "pageSizeSelectorOptions": "10,20,50",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "IM Report: Programme funding breakdown (per donor)",
+  "id": "dl_programme_funding_breakdown",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT pf.id, pf.c_programme_code AS programme_code, COALESCE(reg.c_name, pf.c_programme_code) AS programme_name, pf.c_donor_code AS donor_code, COALESCE(d.c_name, pf.c_donor_code) AS donor_name, COALESCE(pf.c_share_percent,'?') || '%' AS share_pct_disp, COALESCE(pf.c_grant_reference,'') AS grant_reference, to_char(COALESCE(CAST(env.c_allocated_amount AS NUMERIC),0), 'FM999,999,999.00') AS envelope_alloc, to_char(COALESCE(CAST(env.c_allocated_amount AS NUMERIC),0) * CAST(NULLIF(pf.c_share_percent,'') AS NUMERIC) / 100.0, 'FM999,999,999.00') AS donor_allocated, to_char(COALESCE(proj.committed,0) * CAST(NULLIF(pf.c_share_percent,'') AS NUMERIC) / 100.0, 'FM999,999,999.00') AS donor_committed, to_char(COALESCE(proj.expensed,0) * CAST(NULLIF(pf.c_share_percent,'') AS NUMERIC) / 100.0, 'FM999,999,999.00') AS donor_expensed, to_char((COALESCE(CAST(env.c_allocated_amount AS NUMERIC),0) - COALESCE(proj.committed,0) - COALESCE(proj.expensed,0)) * CAST(NULLIF(pf.c_share_percent,'') AS NUMERIC) / 100.0, 'FM999,999,999.00') AS donor_remaining FROM app_fd_programme_funding pf LEFT JOIN app_fd_md_donor d ON d.c_code = pf.c_donor_code LEFT JOIN app_fd_mm_registration reg ON reg.c_code = pf.c_programme_code LEFT JOIN app_fd_budget_envelope env ON env.c_programme_code = pf.c_programme_code LEFT JOIN budget_projection proj ON proj.envelope_code = env.c_code ORDER BY pf.c_programme_code, CAST(NULLIF(pf.c_share_percent,'0') AS NUMERIC) DESC NULLS LAST",
+      "countSql": "SELECT count(*) FROM app_fd_programme_funding",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

@@ -1,0 +1,174 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "budget_envelope",
+    "name": "04.01 - Budget Envelope",
+    "tableName": "budget_envelope",
+    "description": "One row per programme × fiscal year. The envelope is the control account whose six subaccounts (Allocated, Available, Reserved, PreCommitted, Committed, Expensed) are derived from the budget_event ledger via the budget_projection materialised view. Per `_design/architecture/components/budget-accounting-methodology.md` §2.1.",
+    "loadBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission": { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "identitySection", "label": "Envelope Identity" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Envelope Code",
+                "size": "64", "maxlength": "64",
+                "placeholder": "ENV_PRG_2025_001_FY2526",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "budget_envelope",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "Envelope code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "programme_code",
+                "label": "Programme",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_registration",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(none)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "fiscal_year",
+                "label": "Fiscal Year",
+                "size": "16", "maxlength": "16",
+                "placeholder": "2025/26",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "currency",
+                "label": "Currency",
+                "size": "8", "maxlength": "8", "value": "LSL",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "allocated_amount",
+                "label": "Allocated Amount (control total — set by ALLOCATION events)",
+                "size": "20", "maxlength": "20",
+                "placeholder": "0.00",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "decimal" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "status",
+                "label": "Status",
+                "options": [
+                  { "value": "active", "label": "Active" },
+                  { "value": "frozen", "label": "Frozen (invariant violation under review)" },
+                  { "value": "closed", "label": "Closed" }
+                ],
+                "addEmptyOption": "false",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "revision",
+                "label": "Revision",
+                "size": "8", "maxlength": "8", "value": "1",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "type": "numeric" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "frozen_reason",
+                "label": "Freeze reason (auto-populated)",
+                "readonly": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "frozen_at",
+                "label": "Frozen at (auto-populated)",
+                "readonly": "true"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "notesSection", "label": "Notes" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": { "id": "notes", "label": "Notes", "rows": "4", "cols": "80" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "parent_id",
+                                "value": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "id": "sectionGeoInstruction",
+                                "label": "",
+                                "value": "<div class=\"alert alert-info\"><strong>Instructions:</strong> Define the geographic coverage of this program. Select NATIONAL for countrywide programs, or DISTRICT/ZONE for targeted coverage. District-level programs require budget allocations per district.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "formDefId": "md55geographicScope",
+                                        "idColumn": "code",
+                                        "labelColumn": "name",
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "extraCondition": "e.customProperties.isActive = 'Y'",
+                                        "cacheInterval": "",
+                                        "emptyLabel": ""
+                                    }
+                                },
+                                "options": [],
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "Geographic Scope",
+                                "id": "geographicScope",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "md03district",
+                                        "labelColumn": "name",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "",
+                                        "idColumn": "code"
+                                    }
+                                },
+                                "controlValue": "DISTRICT;ZONE",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Target Districts",
+                                "id": "targetDistricts",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "md04agroEcologicalZo",
+                                        "labelColumn": "name",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "",
+                                        "idColumn": "code"
+                                    }
+                                },
+                                "controlValue": "ZONE",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Target Agro-Ecological Zones",
+                                "id": "targetZones",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "md37collectionPoint",
+                                        "labelColumn": "name",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "",
+                                        "idColumn": "code"
+                                    }
+                                },
+                                "controlValue": "DISTRICT;ZONE",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Resource Centre",
+                                "id": "collectionPoints",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.plugin.enterprise.FormGrid",
+                            "properties": {
+                                "validateMaxRow": "",
+                                "controlField": "geographicScope",
+                                "formDefId": "spDistrictAllocation",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "pageSize": "20",
+                                "requestParams": [],
+                                "enableSorting": "",
+                                "storeBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "spDistrictAllocation",
+                                        "foreignKey": "program_id"
+                                    }
+                                },
+                                "readonly": "",
+                                "deleteGridData": "",
+                                "options": [
+                                    {
+                                        "format": "",
+                                        "width": "150",
+                                        "label": "District",
+                                        "formatType": "options",
+                                        "value": "districtCode"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "150",
+                                        "label": "Zone",
+                                        "formatType": "options",
+                                        "value": "zoneCode"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "120",
+                                        "label": "Budget (LSL)",
+                                        "formatType": "text",
+                                        "value": "allocatedBudget"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "120",
+                                        "label": "Est. Beneficiaries",
+                                        "formatType": "text",
+                                        "value": "estimatedBeneficiaries"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "150",
+                                        "label": "Collection Point",
+                                        "formatType": "options",
+                                        "value": "collectionPointCode"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "80",
+                                        "label": "Priority",
+                                        "formatType": "text",
+                                        "value": "priorityRank"
+                                    }
+                                ],
+                                "id": "districtAllocations",
+                                "abortRelatedRunningProcesses": "",
+                                "height": "300",
+                                "showRowNumber": "true",
+                                "disabledDelete": "",
+                                "validateMinRow": "",
+                                "submit-label-normal": "",
+                                "uniqueKey": "",
+                                "controlValue": "DISTRICT",
+                                "errorMessage": "",
+                                "deleteSubformData": "",
+                                "deleteMessage": "",
+                                "label": "District Allocations",
+                                "deleteFiles": "",
+                                "loadBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "spDistrictAllocation",
+                                        "foreignKey": "program_id"
+                                    }
+                                },
+                                "disabledAdd": "",
+                                "submit-label-readonly": "",
+                                "width": "100%",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Geography Notes",
+                                "id": "geographyNotes",
+                                "rows": "3",
+                                "cols": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "sectionGeography",
+                "label": "Geographic Targeting"
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "03.03 - Geographic Targeting",
+        "description": "Program geographic coverage and district allocations",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "spProgramGeography",
+        "postProcessor": {
+            "className": "global.govstack.formquality.hook.FormQualityPostProcessor",
+            "properties": {
+                "serviceId": "farmers_subsidy"
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "sp_program_geography"
+    }
+}

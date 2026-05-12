@@ -1,0 +1,469 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "mm_determinant",
+    "name": "MM - Determinant",
+    "tableName": "mm_determinant",
+    "description": "Conditional logic record: scope, rule, action. Per RegBB spec \u00a74.1.11 / \u00a77.2.12. Lesotho extension per D6: score + ruleType for the scoring evaluation strategy. Rule grammar per ADR-001r2 (DSL canonical, fast-path subset closed-twenty).",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "noPermissionMessage": "",
+    "postProcessor": {
+      "className": "",
+      "properties": {}
+    },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Identity"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "serviceId",
+                "label": "Service",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_service",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "registrationId",
+                "label": "Registration (optional; null = service-level)",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_registration",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(service-level)",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Determinant Code (immutable)",
+                "size": "64",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "mm_determinant",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Determinant code already exists",
+                    "mandatory": "true",
+                    "regex": "",
+                    "errorFormatMsg": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Name",
+                "size": "255",
+                "maxlength": "255",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "scope",
+                "label": "Scope",
+                "options": [
+                  {
+                    "value": "field",
+                    "label": "field (visibility / requiredness)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "screen",
+                    "label": "screen (visibility of step)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "document",
+                    "label": "document (conditional doc requirement)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "fee",
+                    "label": "fee (apply / waive / surcharge)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "eligibility",
+                    "label": "eligibility (registration applicable)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "routing",
+                    "label": "routing (workflow gateway)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "action",
+                    "label": "action (gate an mm_action)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "role",
+                    "label": "role (activate / deactivate)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "quality",
+                    "label": "quality (data-quality issue surface — ADR-031)",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "ruleType",
+                "label": "Rule Type (per D6)",
+                "options": [
+                  {
+                    "value": "inclusion",
+                    "label": "inclusion (must pass)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "exclusion",
+                    "label": "exclusion (must NOT match)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "priority",
+                    "label": "priority (scored when true)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "bonus",
+                    "label": "bonus (scored when true)",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "value": "inclusion",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "score",
+                "label": "Score (when ruleType=priority|bonus, per D6)",
+                "size": "8",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "false",
+                    "type": "double",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.CheckBox",
+              "properties": {
+                "id": "allowSlowPath",
+                "label": "Allow SQL-path on field/screen scopes (suppresses publish-time warning)",
+                "options": [
+                  {
+                    "value": "true",
+                    "label": "Yes",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "ruleSection",
+        "label": "Rule + Action"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "ruleJson",
+                "label": "Rule JSON (fast-path AST or DSL source per ADR-001r2)",
+                "rows": "8",
+                "cols": "60",
+                "placeholder": "Fast-path: {\"op\": \"lte\", \"left\": \"$registry.farmers.totalParcelHectares\", \"right\": 2}\\n\\nSQL-path: count($registry.applications WHERE applicantId = $applicant.nationalId AND status = 'approved') == 0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "actionJson",
+                "label": "Action JSON",
+                "rows": "4",
+                "cols": "60",
+                "placeholder": "{\"action\": \"applicable\", \"target\": \"registration:MM-REG-XXXXXX\"}",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "failMessage",
+                "label": "Fail Message (shown to citizen / operator)",
+                "size": "255",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "targetValue",
+                "label": "Target Value (for assignment-type rules — ADR-027 / ADR-028)",
+                "size": "64",
+                "placeholder": "e.g. auto_approved, approved, sent_back",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "description",
+                "label": "Description (operator-facing)",
+                "rows": "3",
+                "cols": "60",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "unifiedSection",
+        "label": "Unified Engine (ADR-031) — additive; existing rules leave these blank"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "severity",
+                "label": "Severity (quality scope only — ADR-031)",
+                "options": [
+                  { "value": "",        "label": "(n/a — eligibility uses ruleType)", "grouping": "" },
+                  { "value": "error",   "label": "error (blocks gates)",               "grouping": "" },
+                  { "value": "warning", "label": "warning (informational only)",       "grouping": "" }
+                ],
+                "optionsBinder": { "className": "", "properties": {} },
+                "validator":     { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "triggerOn",
+                "label": "Trigger (when does the engine evaluate this rule)",
+                "options": [
+                  { "value": "",        "label": "(default — derived from scope)",      "grouping": "" },
+                  { "value": "submit",  "label": "submit (eligibility default)",        "grouping": "" },
+                  { "value": "save",    "label": "save (quality default)",              "grouping": "" },
+                  { "value": "manual",  "label": "manual (only when explicitly invoked)","grouping": "" },
+                  { "value": "field_change", "label": "field_change (bot_pull style)",  "grouping": "" }
+                ],
+                "optionsBinder": { "className": "", "properties": {} },
+                "validator":     { "className": "", "properties": {} }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "aggregation",
+                "label": "Aggregation (how the engine reports the outcome)",
+                "options": [
+                  { "value": "",            "label": "(default — derived from scope)",                 "grouping": "" },
+                  { "value": "disposition", "label": "disposition (per-application — eligibility)",    "grouping": "" },
+                  { "value": "issue_list",  "label": "issue_list (per-record open issue — quality)",   "grouping": "" }
+                ],
+                "optionsBinder": { "className": "", "properties": {} },
+                "validator":     { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "affectedFields",
+                "label": "Affected fields (comma-separated form-field IDs — UI flagging)",
+                "size": "255",
+                "placeholder": "e.g. acceptDeclaration, mobile_number",
+                "validator": { "className": "", "properties": {} }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "tabCode",
+                "label": "Tab code (quality scope only — groups issues by wizard tab)",
+                "size": "64",
+                "placeholder": "e.g. identity, geography",
+                "validator": { "className": "", "properties": {} }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

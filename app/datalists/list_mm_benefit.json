@@ -1,0 +1,83 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "registrationId",
+      "id": "column_0",
+      "label": "Registration",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_registration",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "serviceId",
+      "id": "column_1",
+      "label": "Service (denormalised)",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_service",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "code",
+      "id": "column_2",
+      "label": "Benefit Code (e.g. SEED-MAIZE, VOUCHER, CASH-T1)"
+    },
+    {
+      "name": "label",
+      "id": "column_3",
+      "label": "Display Label"
+    },
+    {
+      "name": "kind",
+      "id": "column_4",
+      "label": "Benefit Kind"
+    },
+    {
+      "name": "category",
+      "id": "column_5",
+      "label": "Category Code (FK to mm_catalog code='benefitCategory')",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_catalog",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,30,40,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: MM - Benefit",
+  "id": "list_mm_benefit",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": {
+      "formDefId": "mm_benefit"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

@@ -1,0 +1,3074 @@
+# Canonical Lesotho mm_* test fixture, seeded via _tooling/seed.py.
+#
+# Conventions (per D20 / D22 / D23):
+#   - Joget UUID id is internal/auto; never written by the seeder.
+#   - Every entity is keyed by its business `code`; the seeder upserts by code.
+#   - Cross-entity FKs use the target's code (e.g. service: SUBSIDY_2025), not
+#     the target's UUID. Joget's FormOptionsBinder resolves it.
+#   - Joget-internal FKs (FormGrid: mm_field.screenId pointing at a screen's
+#     UUID) are resolved by the seeder using the special form
+#     `_ref:<formId>:<code>`, which it substitutes for the parent's UUID.
+#   - No `isActive` (D23: hard-delete only).
+
+# =====================================================================
+#  GROUP A — Service definition (top-down structural)
+# =====================================================================
+
+mm_institution:
+  - code: MIN_AGRO
+    name: Ministry of Agriculture and Food Security
+    institutiontype: ministry
+
+mm_service:
+  - code: SUBSIDY_2025
+    name: Farmers Subsidy 2025
+    entityInstitutionId: MIN_AGRO
+    description: |
+      Single-Window service for the 2025 subsidy season. Houses four
+      registrations (Block Farming, Mountain Pulses, E-Voucher Pilot,
+      Drought Emergency) under one citizen-facing entry point.
+
+  # Phase 3 IM Slice 1 — Inputs Management namespace per ADR-017.
+  # No mm_registration rows for INPUTS_2025: per IM SAD §4.4 mm_service
+  # for IM is namespace-only — inputs distribution is supply-chain
+  # logistics, not a citizen service. All IM mm_* rows (determinants,
+  # actions, screens, fields) carry serviceId='INPUTS_2025' so they
+  # group together for the operator's authoring surface.
+  - code: INPUTS_2025
+    name: Inputs Management 2025/26 Cycle
+    entityInstitutionId: MIN_AGRO
+    description: |
+      Inputs Management module — supply-chain side of the subsidy programme:
+      catalogue, supplier registry, inventory, allocation plans, voucher
+      issuance, distribution events. Triggered downstream of subsidy
+      approval (mm_action ISSUE_IM_ENTITLEMENT, future slice).
+
+mm_registration:
+  - code: PRG_2025_001
+    name: Block Farming — Maize Lowlands 2025/26
+    serviceId: SUBSIDY_2025
+    applicabilityKind: optional_for_specific
+    applicabilityDeterminantId: DET_LOWLANDS
+    # Phase 1 (slice 1B-c) shipped this as score_based(50, 150) with two
+    # 100-point rules to demo the pending_review band. L4-1 D-005 surfaced
+    # the loophole: a non-lowlands applicant who's in the registry could
+    # still squeak through the threshold (100 + 50 = 150 ≥ 150 → passed).
+    # Combined with L4-1 D-003 (duplicate check needs to be mandatory-fail),
+    # the cleanest path is all_must_pass: every eligibility rule must be
+    # TRUE, no scoring, no loopholes. Aligns this programme with PRG_002,
+    # PRG_003, PRG_004 — all four now use the same strategy.
+    evaluationStrategy: all_must_pass
+    acceptanceWindowFrom: "2025-08-01"
+    acceptanceWindowTo:   "2026-01-31"
+    attributesJson: |
+      {"programmeType":"INPUT_SUBSIDY","seasonCode":"2024-25-summer",
+       "legalBasis":"Subsidy Policy 2003 §4.2.1",
+       "fundingSource":"Government of Lesotho — MAFSN Annual Budget"}
+    description: Lowlands intensive crop strategy; Block Farming Programme since 2005/06.
+
+  - code: PRG_2025_002
+    name: Mountain Pulses & Wheat — Winter 2025
+    serviceId: SUBSIDY_2025
+    applicabilityKind: optional_for_specific
+    applicabilityDeterminantId: DET_MOUNTAINS_OR_SENQU
+    # Single-rule programme; switched from score_based(0,50) to all_must_pass.
+    # With score_based(min=0, pass=50) and one DET_MOUNTAINS_OR_SENQU(score=100):
+    # rule TRUE → 100 ≥ 50 → passed; rule FALSE → score=0, but 0 ≥ 0 (min) AND
+    # 0 < 50 (pass) → pending_review (instead of failed_mandatory). That's the
+    # L4-1 D-004 defect — non-mountain applicants land in pending_operator_review
+    # instead of auto_rejected. all_must_pass turns this single-rule programme
+    # into all-or-nothing: TRUE → passed, FALSE → failed_mandatory. Cleanest
+    # semantics for a programme that has only one geographic gate.
+    evaluationStrategy: all_must_pass
+    acceptanceWindowFrom: "2025-04-01"
+    acceptanceWindowTo:   "2025-06-30"
+    attributesJson: |
+      {"programmeType":"INPUT_SUBSIDY","seasonCode":"2025-winter",
+       "legalBasis":"Subsidy Policy 2003 §4.3",
+       "fundingSource":"Mixed: 60% Government of Lesotho, 40% FAO/IFAD"}
+    description: Mountains & Senqu River Valley strategy. Wheat/peas/beans favoured.
+
+  - code: PRG_2025_003
+    name: Smallholder E-Voucher Pilot 2025/26
+    serviceId: SUBSIDY_2025
+    applicabilityKind: optional_for_specific
+    applicabilityDeterminantId: DET_SMALLHOLDER
+    # Single-rule programme; same fix as PRG_2025_002 (D-004). One eligibility
+    # rule DET_SMALLHOLDER means score_based(0, 70) misclassifies non-smallholder
+    # applicants as pending_review instead of failed_mandatory. all_must_pass.
+    evaluationStrategy: all_must_pass
+    acceptanceWindowFrom: "2025-07-01"
+    acceptanceWindowTo:   "2025-12-31"
+    attributesJson: |
+      {"programmeType":"VOUCHER","seasonCode":"2024-25-summer",
+       "legalBasis":"Subsidy Policy 2003 §1.2.viii (investment) + §2.4 (private-sector distribution)",
+       "fundingSource":"Donor: World Bank — SADP-II"}
+    description: Pilot under World Bank SADP-II; private-sector e-voucher distribution.
+
+  - code: PRG_2025_004
+    name: Drought Emergency Relief 2025
+    serviceId: SUBSIDY_2025
+    applicabilityKind: optional_for_specific
+    applicabilityDeterminantId: DET_DROUGHT_DECLARED
+    evaluationStrategy: all_must_pass
+    acceptanceWindowFrom: "2025-09-01"
+    acceptanceWindowTo:   "2026-03-31"
+    attributesJson: |
+      {"programmeType":"EMERGENCY","seasonCode":"2024-25-summer",
+       "legalBasis":"DMA Declaration 2025-001; Subsidy Policy §2.2.2",
+       "fundingSource":"Donor: WFP + UNICEF + Government emergency reserve"}
+    description: Emergency response to acute food insecurity.
+
+# =====================================================================
+#  Application flow — six shared screens at service level
+# =====================================================================
+
+mm_screen:
+  - code: APP_INTRO
+    audience: citizen
+    title: Welcome — 2025 Subsidy Application
+    serviceId: SUBSIDY_2025
+    kind: guide
+    guideKind: catalogue        # L2-2 — RegBB §6.1.6 single-window catalogue
+    orderIndex: "1"
+    description: |
+      Choose a programme below to begin your application. Each card shows
+      whether you're currently eligible based on the information already
+      captured. If a programme says "Need more information" — fill in the
+      next tabs and return here to re-evaluate.
+
+  - code: APP_APPLICANT
+    audience: citizen
+    title: Applicant Identity
+    serviceId: SUBSIDY_2025
+    kind: form
+    orderIndex: "2"
+    description: Identity and contact details of the applicant.
+
+  - code: APP_PARCEL
+    audience: citizen
+    title: Parcel Information
+    serviceId: SUBSIDY_2025
+    kind: form
+    orderIndex: "3"
+    description: Where the farm is located and how big it is.
+
+  - code: APP_CROPS
+    audience: citizen
+    title: Crops & Activities
+    serviceId: SUBSIDY_2025
+    kind: form
+    orderIndex: "4"
+    description: What the applicant grows and produces.
+
+  - code: APP_DOCUMENTS
+    audience: citizen
+    title: Required Documents
+    serviceId: SUBSIDY_2025
+    kind: documents
+    orderIndex: "5"
+    description: |
+      Uploads. Required documents differ by programme — list comes from
+      mm_required_doc rows scoped to the matching registration.
+
+  - code: APP_REVIEW
+    audience: citizen
+    title: Review & Submit
+    serviceId: SUBSIDY_2025
+    kind: review
+    orderIndex: "6"
+    description: Confirm the application before sending.
+
+  # ---- Operator-side screens (rendered with readonly=Y for citizen sections,
+  # and a dedicated OP_DECISION section that the operator fills in). ----
+  - code: OP_DECISION
+    audience: operator
+    title: Operator Decision
+    serviceId: SUBSIDY_2025
+    kind: form
+    orderIndex: "10"
+    description: |
+      Operator decision section. Renders alongside the citizen's submitted
+      data (which the operator inspects in readonly mode via Meta Screen
+      widgets pointing at APP_APPLICANT / APP_PARCEL / APP_CROPS).
+
+# =====================================================================
+#  Fields per screen (FormGrid-managed; screenId via _ref placeholder)
+# =====================================================================
+
+mm_field:
+  # ---- APP_APPLICANT ----
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: applied_programme
+    label: Applying for
+    widget: select
+    dataType: string
+    orderIndex: "0"
+    defaultBehaviorOnError: required
+    displayOnList: "Y"
+    claimType: application.appliedProgramme
+    optionsCatalogId: PROGRAMMES_2025
+    helpText: Pick one of the four 2025 subsidy programmes. The system will check your eligibility for the selected programme on submit.
+
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: national_id
+    label: National ID
+    widget: text
+    dataType: string
+    orderIndex: "1"
+    defaultBehaviorOnError: required
+    claimType: applicant.nationalId
+    actionIds: AUTOFILL_FROM_FARMER_REGISTRY      # L2-3 — bot_pull on blur
+    helpText: 13-digit national identity number issued by the Department of National Identity. Other fields auto-fill if you're already in the registry.
+
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: full_name
+    label: Full Name
+    widget: text
+    dataType: string
+    orderIndex: "2"
+    defaultBehaviorOnError: required
+    displayOnList: "Y"
+    claimType: applicant.fullName
+
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: gender
+    label: Gender
+    widget: radio
+    dataType: string
+    orderIndex: "3"
+    defaultBehaviorOnError: required
+    claimType: applicant.gender
+    optionsCatalogId: GENDER
+
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: date_of_birth
+    label: Date of Birth
+    widget: date
+    dataType: date
+    orderIndex: "4"
+    defaultBehaviorOnError: required
+    claimType: applicant.dateOfBirth
+
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: contact_phone
+    label: Mobile Phone (+266 XXXX XXXX)
+    widget: text
+    dataType: string
+    orderIndex: "5"
+    defaultBehaviorOnError: required
+    claimType: applicant.contactPhone
+
+  # L1-3 — signature widget pass-through. Citizen signs at the bottom of the
+  # Applicant Identity screen confirming the personal details they entered.
+  # Pure render test today — when the applicant signs, the base64-encoded
+  # PNG persists into c_applicant_signature on the application table.
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: applicant_signature
+    label: Applicant Signature
+    widget: signature
+    dataType: string
+    orderIndex: "6"
+    defaultBehaviorOnError: optional
+    claimType: applicant.signature
+    helpText: Sign here to confirm the personal details above are correct.
+
+  # L1-4 — one-off file_upload on a form-kind screen. NOT a mm_required_doc
+  # entry; this is the "I have an extra document I'd like to attach"
+  # affordance. Stores the bare filename in c_extra_id_attachment; the file
+  # itself moves to wflow/app_formuploads/subsidy_app_2025/<id>/<filename>
+  # on save. Optional — citizen can skip.
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: extra_id_attachment
+    label: Optional ID Attachment
+    widget: file_upload
+    dataType: string
+    orderIndex: "7"
+    defaultBehaviorOnError: optional
+    claimType: applicant.extraIdAttachment
+    helpText: |
+      Optional. Upload one extra identity document if applicable
+      (passport scan, employer letter, etc.). PDF/JPG/PNG up to 5 MB.
+
+  # L1-6 — repeating_group widget pointing at the existing
+  # householdMemberForm. Demonstrates the kernel can synthesise a FormGrid
+  # via metadata: child form holds the rows, kernel attaches both
+  # MultirowFormBinder load and store binders so add/edit/delete + reload
+  # round-trip correctly.
+  #
+  # Rows persist into app_fd_household_members.c_farmer_id pointing at the
+  # subsidy application id (foreignKey=farmer_id is the existing column on
+  # that form — we're reusing the table conceptually as "people associated
+  # with this application").
+  #
+  # Columns are widgetConfig-driven per ADR-029 — analyst picks which child
+  # fields appear in the grid and their headers/widths. NO mm_field column
+  # is created for this storageKey because the data lives in the child
+  # table, not on the parent.
+  - screenId: "_ref:mm_screen:APP_APPLICANT"
+    storageKey: application_household_members
+    label: Household Members for this Application
+    widget: repeating_group
+    dataType: string
+    orderIndex: "8"
+    defaultBehaviorOnError: optional
+    referencedFormId: householdMemberForm
+    claimType: applicant.householdMembers
+    helpText: |
+      Add household members covered by this application. The kernel
+      renders this as an editable grid.
+    widgetConfig: |
+      {
+        "foreignKey": "farmer_id",
+        "pageSize": 10,
+        "height": 350,
+        "validateMinRow": 0,
+        "options": [
+          { "value": "memberName",   "label": "Name",        "width": "200", "formatType": "text"    },
+          { "value": "sex",          "label": "Sex",         "width": "80",  "formatType": "options" },
+          { "value": "date_of_birth","label": "DoB",         "width": "120", "formatType": "date",   "format": "dd/MM/yyyy" },
+          { "value": "relationship", "label": "Relationship","width": "150", "formatType": "options" }
+        ]
+      }
+
+  # ---- APP_PARCEL ----
+  - screenId: "_ref:mm_screen:APP_PARCEL"
+    storageKey: district
+    label: District
+    widget: select
+    dataType: string
+    orderIndex: "1"
+    defaultBehaviorOnError: required
+    displayOnList: "Y"
+    claimType: parcel.district
+    optionsCatalogId: LESOTHO_DISTRICTS
+
+  - screenId: "_ref:mm_screen:APP_PARCEL"
+    storageKey: agro_zone
+    label: Agro-Ecological Zone
+    widget: select
+    dataType: string
+    orderIndex: "2"
+    defaultBehaviorOnError: required
+    claimType: parcel.agroZone
+    optionsCatalogId: AGRO_ZONES
+    helpText: Determines which programme(s) you may apply for.
+
+  - screenId: "_ref:mm_screen:APP_PARCEL"
+    storageKey: village_name
+    label: Village Name
+    widget: cascading_select          # L1-1 — kernel pass-through to native Joget cascade
+    dataType: string
+    orderIndex: "3"
+    defaultBehaviorOnError: required
+    claimType: parcel.village
+    optionsCatalogId: md_village      # form id (NOT mm_catalog code) — cascading_select convention
+    optionsFilterField: district      # parent field whose value filters the village dropdown
+
+  - screenId: "_ref:mm_screen:APP_PARCEL"
+    storageKey: area_hectares
+    label: Cultivated Area (hectares)
+    widget: number
+    dataType: number
+    orderIndex: "4"
+    defaultBehaviorOnError: required
+    claimType: parcel.areaHectares
+    helpText: Total cultivated area on this parcel for the upcoming season.
+
+  - screenId: "_ref:mm_screen:APP_PARCEL"
+    storageKey: tenure_type
+    label: Land Tenure
+    widget: select
+    dataType: string
+    orderIndex: "5"
+    defaultBehaviorOnError: required
+    claimType: parcel.tenureType
+    optionsCatalogId: TENURE_TYPES
+
+  # L1-5 — gis_polygon widget. Stores the drawn polygon as GeoJSON in
+  # c_parcel_geometry. Six companion HiddenFields (area_hectares,
+  # perimeter_meters, vertex_count, centroid_lat, auto_center_lat,
+  # auto_center_lon) are auto-synthesised by MetaScreenElement.
+  # area_hectares already exists as a number field above (orderIndex 4),
+  # so the JS will write the auto-computed value into the visible TextField
+  # — citizen sees the area update as they draw. The dedupe guard in
+  # attachGisCompanionHiddenFields keeps it from being duplicated as a
+  # HiddenField.
+  - screenId: "_ref:mm_screen:APP_PARCEL"
+    storageKey: parcel_geometry
+    label: Draw Parcel Boundary
+    widget: gis_polygon
+    dataType: string
+    orderIndex: "6"
+    defaultBehaviorOnError: optional
+    claimType: parcel.geometry
+    helpText: |
+      Walk the parcel boundary (mobile GPS) or click points on the map
+      (desktop) to capture the polygon. Area, perimeter, and vertex
+      count are computed automatically as you draw.
+    # L1-5b — analyst-authored widget overrides. Kernel defaults set
+    # defaultZoom=13, mapHeight=400 — this row tunes them up for a
+    # closer-in initial view and a taller map. Allowlist enforces that
+    # field-binding props (areaFieldId etc.) cannot be overridden.
+    widgetConfig: |
+      {
+        "defaultZoom": 15,
+        "mapHeight": 500,
+        "minVertices": 3,
+        "maxVertices": 50
+      }
+
+  # ---- APP_CROPS ----
+  - screenId: "_ref:mm_screen:APP_CROPS"
+    storageKey: primary_crop
+    label: Primary Crop (intended)
+    widget: select
+    dataType: string
+    orderIndex: "1"
+    defaultBehaviorOnError: required
+    claimType: parcel.primaryCrop
+    optionsCatalogId: CROPS
+
+  - screenId: "_ref:mm_screen:APP_CROPS"
+    storageKey: block_farming_member
+    label: Member of a Block Farming Cooperative?
+    widget: radio
+    dataType: string
+    orderIndex: "2"
+    defaultBehaviorOnError: optional
+    claimType: applicant.blockFarmingMember
+    optionsCatalogId: YES_NO
+    helpText: Required for Block Farming programmes.
+
+  - screenId: "_ref:mm_screen:APP_CROPS"
+    storageKey: cooperative_name
+    label: Cooperative Name
+    widget: text
+    dataType: string
+    orderIndex: "3"
+    defaultBehaviorOnError: optional
+    claimType: applicant.cooperativeName
+    # §6.4 Conditional UI — only show when block_farming_member == "yes"
+    visibilityDeterminantId: DET_BLOCK_FARMING_MEMBER
+    requirednessDeterminantId: DET_BLOCK_FARMING_MEMBER
+
+  - screenId: "_ref:mm_screen:APP_CROPS"
+    storageKey: drought_affected_decl
+    label: Has your parcel been impacted by the 2025 drought?
+    widget: radio
+    dataType: string
+    orderIndex: "4"
+    defaultBehaviorOnError: optional
+    claimType: applicant.droughtAffectedDeclaration
+    optionsCatalogId: YES_NO
+    helpText: Required for Drought Emergency Relief.
+
+  - screenId: "_ref:mm_screen:APP_CROPS"
+    storageKey: notes
+    label: Additional Notes
+    widget: textarea
+    dataType: string
+    orderIndex: "5"
+    defaultBehaviorOnError: optional
+
+  # ---- OP_DECISION (operator side) ----
+  # Eligibility summary — read-only panel showing the engine's verdict
+  # (status + disposition + score + failed rule) so the operator sees the
+  # same outcome reported on the inbox list, in context of the application
+  # they're reviewing. No column persisted.
+  - screenId: "_ref:mm_screen:OP_DECISION"
+    storageKey: eligibility_summary_panel
+    label: Eligibility Outcome
+    widget: eligibility_summary
+    dataType: string
+    orderIndex: "0"
+    defaultBehaviorOnError: optional
+
+  # L3-1 3a form-side — render-only Budget Impact panel above the decision
+  # radio. Same renderer as the inbox-list BudgetHintFormatter, so the
+  # operator sees identical figures on both surfaces. No column persisted.
+  - screenId: "_ref:mm_screen:OP_DECISION"
+    storageKey: budget_hint_panel
+    label: Budget Impact
+    widget: budget_hint
+    dataType: string
+    orderIndex: "1"
+    defaultBehaviorOnError: optional
+
+  - screenId: "_ref:mm_screen:OP_DECISION"
+    storageKey: decision
+    label: Decision
+    widget: radio
+    dataType: string
+    orderIndex: "2"
+    defaultBehaviorOnError: required
+    displayOnList: "Y"
+    claimType: operator.decision
+    optionsCatalogId: DECISION_OUTCOMES
+
+  - screenId: "_ref:mm_screen:OP_DECISION"
+    storageKey: decision_score
+    label: Recommended Score (for score_based programmes)
+    widget: number
+    dataType: number
+    orderIndex: "3"
+    defaultBehaviorOnError: optional
+    displayOnList: "Y"
+    claimType: operator.recommendedScore
+    helpText: 0–100. Ignored for all_must_pass strategies (e.g. PRG_2025_004 Drought Emergency).
+
+  - screenId: "_ref:mm_screen:OP_DECISION"
+    storageKey: decision_comment
+    label: Operator Comment
+    widget: textarea
+    dataType: string
+    orderIndex: "4"
+    defaultBehaviorOnError: required
+
+  - screenId: "_ref:mm_screen:OP_DECISION"
+    storageKey: decided_at
+    label: Decision Date
+    widget: date
+    dataType: date
+    orderIndex: "5"
+    defaultBehaviorOnError: required
+
+# =====================================================================
+#  GROUP B — Reusable building blocks
+# =====================================================================
+
+mm_catalog:
+  - code: PROGRAMMES_2025
+    name: 2025 Subsidy Programmes
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"PRG_2025_001","label":"Block Farming — Maize Lowlands 2025/26"},
+       {"value":"PRG_2025_002","label":"Mountain Pulses & Wheat — Winter 2025"},
+       {"value":"PRG_2025_003","label":"Smallholder E-Voucher Pilot 2025/26"},
+       {"value":"PRG_2025_004","label":"Drought Emergency Relief 2025"}]
+    description: |
+      Static for now. When the engine learns to read source=registry catalogs,
+      replace with imCapabilityRef pointing at mm_registration so newly added
+      programmes auto-appear in the dropdown.
+
+  - code: GENDER
+    name: Gender
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"male","label":"Male"},
+       {"value":"female","label":"Female"}]
+
+  - code: YES_NO
+    name: Yes / No
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"yes","label":"Yes"},
+       {"value":"no","label":"No"}]
+
+  - code: LESOTHO_DISTRICTS
+    name: Lesotho Districts
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"berea","label":"Berea"},
+       {"value":"butha_buthe","label":"Butha-Buthe"},
+       {"value":"leribe","label":"Leribe"},
+       {"value":"mafeteng","label":"Mafeteng"},
+       {"value":"maseru","label":"Maseru"},
+       {"value":"mohales_hoek","label":"Mohale's Hoek"},
+       {"value":"mokhotlong","label":"Mokhotlong"},
+       {"value":"qachas_nek","label":"Qacha's Nek"},
+       {"value":"quthing","label":"Quthing"},
+       {"value":"thaba_tseka","label":"Thaba-Tseka"}]
+    description: |
+      Static for now. When D21 cascading filter lands, replace with
+      source=joget_form pointing at md03district to inherit the canonical
+      MD list.
+
+  - code: AGRO_ZONES
+    name: Agro-Ecological Zones
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"lowlands","label":"Lowlands (under 1800 m)"},
+       {"value":"foothills","label":"Foothills (1800–2000 m)"},
+       {"value":"mountains","label":"Mountains (over 2000 m)"},
+       {"value":"senqu_river_valley","label":"Senqu River Valley"}]
+
+  - code: TENURE_TYPES
+    name: Land Tenure
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"customary","label":"Customary (chief-allocated)"},
+       {"value":"leasehold","label":"Registered leasehold"},
+       {"value":"cooperative","label":"Cooperative / association"},
+       {"value":"sharecrop","label":"Sharecrop arrangement"}]
+
+  - code: CROPS
+    name: Common Crops
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"maize","label":"Maize"},
+       {"value":"wheat","label":"Wheat"},
+       {"value":"sorghum","label":"Sorghum"},
+       {"value":"beans","label":"Beans"},
+       {"value":"peas","label":"Peas"},
+       {"value":"potatoes","label":"Potatoes"}]
+
+  - code: DECISION_OUTCOMES
+    name: Operator Decision Outcomes
+    scope: instance
+    source: static
+    itemsJson: |
+      [{"value":"approve","label":"Approve"},
+       {"value":"reject","label":"Reject"},
+       {"value":"send_back","label":"Send back to applicant for clarification"}]
+
+mm_determinant:
+  - code: DET_LOWLANDS
+    name: Applicant farms in the Lowlands
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    # Per ADR-003: ruleJson stores DSL source verbatim. Bare identifiers
+    # resolve against $applicant.* per spec §4.3.1; storage keys are
+    # mm_field.storageKey values (matching c_<storageKey> columns).
+    ruleJson: agro_zone == 'lowlands'
+    failMessage: This programme is restricted to Lowlands applicants.
+    description: |
+      Block Farming — Maize Lowlands targets the lowlands intensive crop
+      strategy. Mountain / Senqu applicants are not eligible.
+
+  - code: DET_AREA_NONZERO
+    name: Applicant has declared a positive cultivated area
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    # Slice 1B-a demo rule: second eligibility check on PRG_2025_001 so the
+    # all_must_pass aggregation has something to aggregate over. Also exercises
+    # the numeric-comparison path (`gt`) of the fast-path evaluator, which
+    # DET_LOWLANDS doesn't.
+    ruleJson: area_hectares > 0
+    failMessage: Cultivated area must be greater than zero hectares.
+    description: |
+      Block Farming applications must declare a non-zero cultivated parcel.
+      A nil or missing area indicates an incomplete application; the rule
+      returns FALSE on zero, NULL on missing — both are caught by aggregation.
+
+  - code: DET_FARMER_REGISTERED
+    name: Applicant is registered in the farmer registry
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    scope: applicability
+    ruleType: inclusion
+    score: "50"
+    allowSlowPath: "N"
+    # Slice 1B-b demo rule. The $registry.farmer reference forces the routing
+    # evaluator to dispatch this rule to the SQL path: it pre-resolves the
+    # farmer's first_name from app_fd_farmerbasicinfo (joined by national_id),
+    # substitutes the literal back into the rule, then defers to fast-path
+    # for the != '' comparison. Applicants whose national_id has no row in
+    # the farmer registry resolve to null → comparison returns NULL → score-
+    # based aggregation propagates to indeterminate (per ADR-007 never-null).
+    ruleJson: $registry.farmer.first_name != ""
+    failMessage: Applicant is not yet registered in the farmer registry; complete farmer registration first.
+    description: |
+      Block Farming participants must be on the national farmer registry.
+      Touches a different table than the application's own data, so this
+      rule routes through the SqlPathEvaluator (slice 1B-b).
+
+  - code: DET_MOUNTAINS_OR_SENQU
+    name: Applicant farms in the Mountains or Senqu River Valley
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    ruleJson: agro_zone in ['mountains','senqu_river_valley']
+    failMessage: This programme is restricted to Mountain or Senqu River Valley applicants.
+
+  - code: DET_SMALLHOLDER
+    name: Smallholder (≤ 5 ha cultivated area)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    ruleJson: area_hectares <= 5
+    failMessage: The E-Voucher Pilot is restricted to smallholders (≤ 5 ha).
+
+  - code: DET_DROUGHT_DECLARED
+    name: Applicant in a drought-declared district
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    ruleJson: district in ['mafeteng','mohales_hoek','qachas_nek','quthing'] AND drought_affected_decl == 'yes'
+    failMessage: Emergency Relief is limited to drought-declared districts and self-declared affected applicants.
+
+  # ------------------------------------------------------------------
+  # L4-1 D-003 — uniqueness check. RegBB §6.5 requires "one application
+  # per applicant per (registration, period)". Implemented via the
+  # capability registry pattern (RegBB §3.2 / ADR-020): a new adapter
+  # `subsidy.prior_applications_this_programme` counts existing rows in
+  # app_fd_subsidy_app_2025 with the same (national_id, applied_programme),
+  # excluding the current application's own id (so an applicant editing
+  # their own draft doesn't see false duplicates).
+  #
+  # The rule is replicated per-programme rather than authored once with
+  # registrationId="" because MetaModelDao.listDeterminantsForRegistration
+  # selects by exact registrationId match — service-wide eligibility rules
+  # are an engine extension for L4-2 / Phase 2. Four identical rule bodies
+  # is a minor copy-paste cost for keeping the engine logic unchanged.
+  #
+  # Pairs with mm_registration.evaluationStrategy=all_must_pass on every
+  # programme (D-004 + D-005 fixes): if this rule returns FALSE, the
+  # programme's eligibility evaluation falls to failed_mandatory →
+  # auto_rejected, blocking the duplicate cleanly with a clear failMessage.
+  # ------------------------------------------------------------------
+  - code: DET_NO_DUPLICATE_PRG_001
+    name: No prior application for this programme (PRG_2025_001)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    ruleJson: $registry.subsidy.prior_applications_this_programme == "0"
+    failMessage: You have already submitted an application for this programme. Each applicant may apply once per cycle.
+
+  - code: DET_NO_DUPLICATE_PRG_002
+    name: No prior application for this programme (PRG_2025_002)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    ruleJson: $registry.subsidy.prior_applications_this_programme == "0"
+    failMessage: You have already submitted an application for this programme. Each applicant may apply once per cycle.
+
+  - code: DET_NO_DUPLICATE_PRG_003
+    name: No prior application for this programme (PRG_2025_003)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    ruleJson: $registry.subsidy.prior_applications_this_programme == "0"
+    failMessage: You have already submitted an application for this programme. Each applicant may apply once per cycle.
+
+  - code: DET_NO_DUPLICATE_PRG_004
+    name: No prior application for this programme (PRG_2025_004)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    scope: applicability
+    ruleType: inclusion
+    score: "100"
+    allowSlowPath: "N"
+    ruleJson: $registry.subsidy.prior_applications_this_programme == "0"
+    failMessage: You have already submitted an application for this programme. Each applicant may apply once per cycle.
+
+  # ------------------------------------------------------------------
+  # L3-1 — Budget amount-formula determinants. Per the budget-accounting
+  # methodology §3, every budget transaction needs a per-applicant amount.
+  # 1B-i ships flat amounts via targetValue (closed-twenty grammar is
+  # boolean-only; expression evaluation is 1C). Per-programme amounts
+  # roughly proportional to envelope size and 2024-25 cycle scale.
+  # ruleJson is left empty — the BudgetEngine reads targetValue directly.
+  # ------------------------------------------------------------------
+  - code: BENEFIT_AMOUNT_PRG_2025_001
+    name: Block Farming — flat M2,000 per applicant
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    scope: budget_amount
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: ""
+    targetValue: "2000.00"
+    failMessage: ""
+
+  - code: BENEFIT_AMOUNT_PRG_2025_002
+    name: Mountain Pulses — flat M2,000 per applicant
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    scope: budget_amount
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: ""
+    targetValue: "2000.00"
+    failMessage: ""
+
+  - code: BENEFIT_AMOUNT_PRG_2025_003
+    name: E-Voucher Pilot — flat M1,500 per applicant
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    scope: budget_amount
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: ""
+    targetValue: "1500.00"
+    failMessage: ""
+
+  - code: BENEFIT_AMOUNT_PRG_2025_004
+    name: Drought Emergency Relief — flat M5,000 per applicant
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    scope: budget_amount
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: ""
+    targetValue: "5000.00"
+    failMessage: |
+      Note: 1C-era expression rule will replace this flat with
+      base + per-dependent (e.g. M5,000 + M1,000 × dependents under 12).
+
+  # ------------------------------------------------------------------
+  # L3-1 1C — programme_launch_gate rules. Per the budget-accounting
+  # methodology §11.5 + ADR-025: programmes can be published only when
+  # the projected cost fits the envelope. CES evaluates these rules at
+  # programme-launch time AND can be re-evaluated at any moment to
+  # surface drift. Default policy: coverage_ratio_pct ≤ 105 (5% over-
+  # spend allowed; tightened or loosened per programme by overriding
+  # with a programme-specific rule).
+  #
+  # registrationId="" makes these cross-programme defaults; analyst
+  # adds a programme-scoped row with the same scope to override for
+  # one specific programme (e.g. drought emergency: 110% allowed since
+  # overruns are recoverable from the GoL emergency reserve).
+  # ------------------------------------------------------------------
+  - code: GATE_LAUNCH_DEFAULT
+    name: Default — coverage ratio ≤ 105% of envelope
+    serviceId: SUBSIDY_2025
+    registrationId: ""
+    scope: programme_launch_gate
+    ruleType: inclusion
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: coverage_ratio_pct <= 105
+    failMessage: Estimated cost exceeds envelope allocation by more than 5%. Increase the envelope or reduce expected applicant count before launching.
+
+  - code: GATE_LAUNCH_DROUGHT_RELIEF
+    name: Drought Emergency — coverage ratio ≤ 110% (emergency reserve drawable)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    scope: programme_launch_gate
+    ruleType: inclusion
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: coverage_ratio_pct <= 110
+    failMessage: Drought-relief overrun exceeds 10% of the envelope. Coordinate with WFP/UNICEF/Treasury for additional contribution before launching.
+
+  # ------------------------------------------------------------------
+  # §6.4 Conditional UI demo rule. Drives mm_field.visibilityDeterminantId
+  # on `cooperative_name` so the field hides until the citizen ticks
+  # block_farming_member = "yes". scope=field per mm_determinant options.
+  # ------------------------------------------------------------------
+  - code: DET_BLOCK_FARMING_MEMBER
+    name: Applicant has declared Block Farming Cooperative membership
+    serviceId: SUBSIDY_2025
+    registrationId: ""        # cross-programme — applies wherever block_farming_member exists
+    scope: field
+    ruleType: inclusion
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: block_farming_member == 'yes'
+    failMessage: Cooperative name only required when the applicant is a Block Farming member.
+
+  # ------------------------------------------------------------------
+  # ADR-027 — initial_status_assignment scope. Default rules covering
+  # the four dispositions; preserve pre-ADR-027 behaviour. Programmes
+  # can override by authoring rules with serviceId / registrationId set.
+  # ------------------------------------------------------------------
+  - code: INIT_STATUS_DEFAULT_AUTO_APPROVED
+    name: Default — auto-approve when eligibility passes
+    serviceId: ""
+    registrationId: ""
+    scope: initial_status_assignment
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: disposition == 'eligibility_passed'
+    targetValue: auto_approved
+    failMessage: ""
+
+  - code: INIT_STATUS_DEFAULT_AUTO_REJECTED
+    name: Default — auto-reject on mandatory eligibility failure
+    serviceId: ""
+    registrationId: ""
+    scope: initial_status_assignment
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: disposition == 'eligibility_failed_mandatory'
+    targetValue: auto_rejected
+    failMessage: ""
+
+  - code: INIT_STATUS_DEFAULT_PENDING_REVIEW
+    name: Default — operator review on pending_review disposition
+    serviceId: ""
+    registrationId: ""
+    scope: initial_status_assignment
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: disposition == 'eligibility_pending_review'
+    targetValue: pending_operator_review
+    failMessage: ""
+
+  - code: INIT_STATUS_DEFAULT_PENDING_CLARIFICATION
+    name: Default — data clarification on indeterminate
+    serviceId: ""
+    registrationId: ""
+    scope: initial_status_assignment
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: disposition == 'indeterminate'
+    targetValue: pending_data_clarification
+    failMessage: ""
+
+  # ------------------------------------------------------------------
+  # ADR-028 — decision_to_status scope. Default rules for the three
+  # standard operator decisions; programmes can override.
+  # ------------------------------------------------------------------
+  - code: DECISION_DEFAULT_APPROVE
+    name: Default — approve → approved
+    serviceId: ""
+    registrationId: ""
+    scope: decision_to_status
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: decision_value == 'approve'
+    targetValue: approved
+    failMessage: ""
+
+  - code: DECISION_DEFAULT_REJECT
+    name: Default — reject → rejected
+    serviceId: ""
+    registrationId: ""
+    scope: decision_to_status
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: decision_value == 'reject'
+    targetValue: rejected
+    failMessage: ""
+
+  - code: DECISION_DEFAULT_SEND_BACK
+    name: Default — send_back → sent_back
+    serviceId: ""
+    registrationId: ""
+    scope: decision_to_status
+    ruleType: assignment
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: decision_value == 'send_back'
+    targetValue: sent_back
+    failMessage: ""
+
+  # ------------------------------------------------------------------
+  # L2-1 capability-registry test rules (ADR-020). Two test rules
+  # exercising both adapters end-to-end via the /eval endpoint.
+  # Not attached to any registration — pure /eval probes.
+  # ------------------------------------------------------------------
+
+  # Regression: existing FarmerByNidAdapter still resolves
+  # $registry.farmer.<field> correctly after the registry refactor.
+  - code: TEST_FARMER_REGISTERED_HAS_NAME
+    name: TEST — farmer is registered (has a non-empty first_name)
+    serviceId: ""
+    registrationId: ""
+    scope: applicability
+    ruleType: inclusion
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: $registry.farmer.first_name != ""
+    failMessage: Farmer is not in the registry (no first_name).
+    description: |
+      L2-1 regression test. /eval with applicantData.national_id matching a
+      registered farmer should return TRUE. /eval with a made-up NID (no row
+      in app_fd_farmerbasicinfo) should return NULL — the grammar's null-
+      propagation per spec §4.3.0.1.
+
+  # New: ParcelsSummaryAdapter returns parcel count via the new capability.
+  # Live data has 184 parcels with empty c_parent_id, so this returns 0 for
+  # every NID until parcel→farmer linkage is populated. The rule still
+  # evaluates correctly (FALSE for "has parcels") and audit captures the
+  # resolved 0 — proving the dispatch path through ParcelsSummaryAdapter
+  # works end-to-end.
+  - code: TEST_FARMER_HAS_PARCELS
+    name: TEST — farmer has at least one parcel registered
+    serviceId: ""
+    registrationId: ""
+    scope: applicability
+    ruleType: inclusion
+    score: "0"
+    allowSlowPath: "N"
+    ruleJson: $registry.parcels_summary.parcel_count > 0
+    failMessage: Farmer has no parcels in the registry.
+    description: |
+      L2-1 capability-registry probe. Today returns FALSE for everyone
+      because parcelregistration.c_parent_id is empty across all 184 live
+      rows (data integrity gap noted in registry-integration SAD §5.3).
+      When that linkage is populated, this rule activates without code
+      change — the test of pluggability.
+
+mm_action:
+  # Phase 2-b demo binding. Sysadmin creates a Joget process called
+  # `subsidy_2025_approval_notification` with a single tool step pointing at
+  # the RegBB Workflow Echo Tool. When an operator approves an application
+  # for SUBSIDY_2025, RegBbOperatorDecisionBinder transitions status →
+  # "approved" and WorkflowDispatcher fires this rule's workflow.
+  #
+  # The convention: triggerJson carries onStatus + workflowId. The
+  # workflowId can be either the full "packageId#version#processId" or just
+  # the processId — getConvertedLatestProcessDefId resolves it to the
+  # latest published version automatically.
+  - code: NOTIFY_APPROVAL
+    name: Notify approval — fire downstream workflow
+    serviceId: SUBSIDY_2025
+    registrationId: ""    # service-wide; matches any registration
+    kind: status_change
+    triggerJson: |
+      {"onStatus":"approved","workflowId":"subsidy_2025_approval_notification"}
+    description: |
+      When an operator approves an application, fire the configured Joget
+      process. Slice 2-b uses RegBbWorkflowEchoTool to verify the handoff;
+      production replaces with notification + downstream tool steps designed
+      in Joget Process Builder by sysadmin.
+
+  # L2-3 — bot_pull demo. Citizen types NID on the Identity tab; on blur
+  # the kernel fires this action, which resolves applicant fields from the
+  # farmer registry via the L2-1 capability adapter (farmer.<field>) and
+  # returns target → value JSON. Client-side JS auto-fills the form.
+  #
+  # mm_field.actionIds=AUTOFILL_FROM_FARMER_REGISTRY on national_id wires
+  # the trigger; configJson.fieldMappings names the targets and the source
+  # capability/field for each.
+  - code: AUTOFILL_FROM_FARMER_REGISTRY
+    name: Auto-fill identity tab from farmer registry on NID entry
+    serviceId: SUBSIDY_2025
+    registrationId: ""    # service-wide
+    kind: bot_pull
+    triggerJson: |
+      {"fieldId":"national_id"}
+    configJson: |
+      {
+        "fieldMappings": [
+          {"target":"full_name",     "sourceCapability":"farmer", "sourceField":"full_name"},
+          {"target":"date_of_birth", "sourceCapability":"farmer", "sourceField":"date_of_birth"},
+          {"target":"contact_phone", "sourceCapability":"farmer", "sourceField":"contact_phone"},
+          {"target":"gender",        "sourceCapability":"farmer", "sourceField":"gender"}
+        ]
+      }
+    description: |
+      D11 / L2-3 — eliminate re-entry. Citizen types NID; the system
+      resolves identity fields from the farmer registry. Doesn't overwrite
+      values the citizen has already typed (JS guards against that). Audit
+      row records the auto-fill via the underlying capability adapter call.
+
+      Targets are limited to fields that (a) exist on the APP_APPLICANT
+      screen AND (b) are resolvable via FarmerByNidAdapter. Notably district
+      is NOT here — the registry's farmerbasicinfo table doesn't carry it,
+      and farmerresidency hasn't been populated yet. When the residency
+      tab gets stable columns, add a farmerResidencyByNidAdapter capability
+      and extend mappings here without touching the kernel.
+
+  # ---- L3-1 1B-i — budget lifecycle hooks ----
+  # Each mm_action.kind=budget_event row is dispatched by 1B-ii to the
+  # BudgetEngine listener at the appropriate lifecycle moment. For 1B-i
+  # they're triggered manually via POST /budget/dispatch with the action
+  # code; 1B-ii will wire them into the subsidy storeBinder so the firing
+  # is automatic on application save / status transition.
+  #
+  # triggerJson shape for budget_event:
+  #   eventType         — RESERVATION | RELEASE_RESERVATION | PRE_COMMITMENT | etc.
+  #   amountFormulaRule — mm_determinant.code (BENEFIT_AMOUNT_*) — flat in 1B-i
+  #   conditionRule     — optional; rule that gates the dispatch (e.g. only on
+  #                       certain dispositions)
+  #   envelopeCode      — optional; if absent, the engine resolves from
+  #                       mm_registration[applied_programme].budgetEnvelopeCode
+  #                       (1B-ii); for 1B-i the test driver passes it explicitly.
+
+  - code: BUDGET_RESERVE_ON_SUBMIT_PRG_001
+    name: Budget reservation on application submit (PRG_001)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_001"}
+    description: |
+      Fires when a citizen submits a PRG_001 application. Posts a
+      RESERVATION transaction: M2,000 moves from ENV_PRG_2025_001.AVAILABLE
+      to ENV_PRG_2025_001.RESERVED, with full source proration (single
+      source: GOL 100%).
+
+  - code: BUDGET_RESERVE_ON_SUBMIT_PRG_002
+    name: Budget reservation on application submit (PRG_002)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_002"}
+    description: |
+      Fires on PRG_002 submission. Posts RESERVATION + 60/40 proration
+      to GOL/FAO-IFAD source contributions.
+
+  - code: BUDGET_RESERVE_ON_SUBMIT_PRG_003
+    name: Budget reservation on application submit (PRG_003)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_003"}
+
+  - code: BUDGET_RESERVE_ON_SUBMIT_PRG_004
+    name: Budget reservation on application submit (PRG_004)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_004"}
+
+  - code: BUDGET_RELEASE_ON_REJECT_PRG_001
+    name: Budget release on application reject/withdrawal (PRG_001)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_001"}
+    description: |
+      Fires when a citizen's submitted application is rejected (auto or
+      operator) or withdrawn. Reverses the prior RESERVATION.
+
+  - code: BUDGET_RELEASE_ON_REJECT_PRG_002
+    name: Budget release on application reject/withdrawal (PRG_002)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_002"}
+
+  - code: BUDGET_RELEASE_ON_REJECT_PRG_003
+    name: Budget release on application reject/withdrawal (PRG_003)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_003"}
+
+  - code: BUDGET_RELEASE_ON_REJECT_PRG_004
+    name: Budget release on application reject/withdrawal (PRG_004)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_004"}
+
+  - code: BUDGET_PRE_COMMIT_ON_APPROVE_PRG_001
+    name: Budget pre-commitment on operator approval (PRG_001)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_001"}
+    description: |
+      Fires when an operator approves a PRG_001 application. Money moves
+      from ENV.RESERVED to ENV.PRE_COMMITTED. A beneficiary sub-ledger
+      account opens (BNF_<applicationId>) holding the obligation.
+
+  - code: BUDGET_PRE_COMMIT_ON_APPROVE_PRG_002
+    name: Budget pre-commitment on operator approval (PRG_002)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_002"}
+
+  - code: BUDGET_PRE_COMMIT_ON_APPROVE_PRG_003
+    name: Budget pre-commitment on operator approval (PRG_003)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_003"}
+
+  - code: BUDGET_PRE_COMMIT_ON_APPROVE_PRG_004
+    name: Budget pre-commitment on operator approval (PRG_004)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    kind: budget_event
+    triggerJson: |
+      {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_004"}
+
+# =====================================================================
+#  GROUP C — Per-registration outcomes
+# =====================================================================
+
+mm_required_doc:
+  # ---- Service-level (always required, regardless of selected programme) ----
+  # NID is a single identity document; the front and back are conceptually
+  # one document but uploaded as two files for legibility.
+  - code: DOC_NID_FRONT
+    name: National ID — front
+    label: National ID (front)
+    serviceId: SUBSIDY_2025
+    registrationId: ""    # service-level; not scoped to a specific programme
+    requiredness: mandatory
+    deliveryMode: upload
+    acceptedTypes: pdf,jpg,png
+    maxSizeBytes: "5242880"
+    helpText: Scan or photo of the FRONT side of your national ID card. Legible, full card visible.
+
+  - code: DOC_NID_BACK
+    name: National ID — back
+    label: National ID (back)
+    serviceId: SUBSIDY_2025
+    registrationId: ""
+    requiredness: mandatory
+    deliveryMode: upload
+    acceptedTypes: pdf,jpg,png
+    maxSizeBytes: "5242880"
+    helpText: Scan or photo of the BACK side of your national ID card. Same applicant as the front.
+
+  # ---- Programme-specific docs (only show for the selected programme) ----
+  # PRG_2025_001 — Block Farming
+  - code: DOC_COOP_MEMBER_001
+    name: Cooperative membership certificate
+    label: Cooperative Membership Certificate
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    requiredness: mandatory
+    deliveryMode: upload
+    acceptedTypes: pdf
+    maxSizeBytes: "5242880"
+
+  - code: DOC_LAND_001
+    name: Land tenure proof
+    label: Proof of Land Use Rights
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    requiredness: mandatory
+    deliveryMode: upload
+    acceptedTypes: pdf,jpg,png
+    maxSizeBytes: "5242880"
+
+  # PRG_2025_002 — Mountain Pulses & Wheat
+  - code: DOC_LAND_002
+    name: Land tenure proof
+    label: Proof of Land Use Rights (mountain or Senqu valley parcel)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    requiredness: mandatory
+    deliveryMode: upload
+    acceptedTypes: pdf,jpg,png
+    maxSizeBytes: "5242880"
+
+  # PRG_2025_003 — E-Voucher Pilot
+  - code: DOC_SH_DECL_003
+    name: Smallholder self-declaration
+    label: Smallholder Self-Declaration Form
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    requiredness: mandatory
+    deliveryMode: upload
+    acceptedTypes: pdf
+    maxSizeBytes: "2097152"
+
+  # PRG_2025_004 — Drought Emergency
+  - code: DOC_VULN_004
+    name: Vulnerability assessment
+    label: Vulnerability Assessment (LVAC or extension officer signed)
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    requiredness: mandatory
+    deliveryMode: upload
+    acceptedTypes: pdf
+    maxSizeBytes: "5242880"
+
+mm_fee: []   # No applicant fees for any of the four programmes.
+
+mm_benefit:
+  # PRG_2025_001 — Maize input pack
+  - code: BEN_001_SEED_MAIZE
+    name: Maize seed pack (50 kg)
+    label: Hybrid Maize Seed — 50 kg
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    kind: input
+    category: seed
+    itemCode: SEED-MAIZE
+    displayOrder: "1"
+    quantity: "50"
+    unit: kg
+    unitCost: "180"
+    subsidyPercent: "80"
+    paymentTiming: post_decision
+    paymentMethods: in_kind
+
+  - code: BEN_001_FERT_NPK
+    name: NPK Fertiliser (100 kg)
+    label: NPK 23:21:0 Fertiliser — 100 kg
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_001
+    kind: input
+    category: fertiliser
+    itemCode: FERT-NPK
+    displayOrder: "2"
+    quantity: "100"
+    unit: kg
+    unitCost: "240"
+    subsidyPercent: "80"
+    paymentTiming: post_decision
+    paymentMethods: in_kind
+
+  # PRG_2025_002 — Mountain pulses & wheat
+  - code: BEN_002_SEED_WHEAT
+    name: Wheat seed pack (50 kg)
+    label: Wheat Seed — 50 kg
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    kind: input
+    category: seed
+    itemCode: SEED-WHEAT
+    displayOrder: "1"
+    quantity: "50"
+    unit: kg
+    unitCost: "150"
+    subsidyPercent: "75"
+    paymentTiming: post_decision
+    paymentMethods: in_kind
+
+  - code: BEN_002_SEED_PEAS
+    name: Pea seed pack (20 kg)
+    label: Pea Seed — 20 kg
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_002
+    kind: input
+    category: seed
+    itemCode: SEED-PEAS
+    displayOrder: "2"
+    quantity: "20"
+    unit: kg
+    unitCost: "200"
+    subsidyPercent: "75"
+    paymentTiming: post_decision
+    paymentMethods: in_kind
+
+  # PRG_2025_003 — E-Voucher
+  - code: BEN_003_EVOUCHER
+    name: E-Voucher (2000 LSL)
+    label: Smallholder E-Voucher — 2,000 LSL
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_003
+    kind: voucher
+    category: voucher
+    itemCode: EVOUCHER-2000
+    displayOrder: "1"
+    quantity: "1"
+    unit: voucher
+    unitCost: "2000"
+    subsidyPercent: "100"
+    paymentTiming: post_decision
+    paymentMethods: e_voucher
+
+  # PRG_2025_004 — Emergency relief
+  - code: BEN_004_FOOD_KIT
+    name: Emergency food kit (30 days)
+    label: Emergency Food Kit — 30-day household ration
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    kind: in_kind
+    category: emergency_relief
+    itemCode: FOOD-KIT-30
+    displayOrder: "1"
+    quantity: "1"
+    unit: kit
+    unitCost: "1500"
+    subsidyPercent: "100"
+    paymentTiming: post_decision
+    paymentMethods: in_kind
+
+  - code: BEN_004_SEED_SURVIVAL
+    name: Drought-tolerant seed pack
+    label: Drought-Tolerant Seed Survival Pack
+    serviceId: SUBSIDY_2025
+    registrationId: PRG_2025_004
+    kind: input
+    category: seed
+    itemCode: SEED-SURVIVAL
+    displayOrder: "2"
+    quantity: "1"
+    unit: pack
+    unitCost: "350"
+    subsidyPercent: "100"
+    paymentTiming: post_decision
+    paymentMethods: in_kind
+
+# =====================================================================
+#  GROUP D — Operator side (Week 3+ scope, empty for now)
+# =====================================================================
+
+mm_role:
+  - code: REVIEWER
+    name: Application Reviewer
+    serviceId: SUBSIDY_2025
+    kind: review
+    position: "1"
+    entityInstitutionId: MIN_AGRO
+    description: |
+      Front-line officer who reviews submitted applications for completeness
+      and obvious eligibility issues. First role in the processing chain.
+
+  - code: APPROVER
+    name: Programme Approver
+    serviceId: SUBSIDY_2025
+    kind: approve
+    position: "2"
+    entityInstitutionId: MIN_AGRO
+    description: |
+      Senior officer who makes the final approval/rejection decision based
+      on the reviewer's recommendation and the engine's eligibility outcome.
+
+  - code: ISSUER
+    name: Benefit Issuer
+    serviceId: SUBSIDY_2025
+    kind: issue
+    position: "3"
+    entityInstitutionId: MIN_AGRO
+    description: |
+      Officer responsible for issuing the approved benefit (input voucher,
+      seed pack delivery, e-voucher activation).
+
+mm_role_screen:
+  # ---- REVIEWER ----
+  - code: REVIEWER_INBOX
+    name: Reviewer — Inbox
+    roleId: REVIEWER
+    serviceId: SUBSIDY_2025
+    kind: inbox
+    mode: list
+    notes: List of applications in status=submitted; reviewer picks one to review.
+
+  - code: REVIEWER_REVIEW
+    name: Reviewer — Application Review
+    roleId: REVIEWER
+    serviceId: SUBSIDY_2025
+    kind: review
+    mode: readonly_inspection_with_decision
+    sectionsJson: |
+      {"sections":[
+        {"screen":"APP_APPLICANT","mode":"readonly"},
+        {"screen":"APP_PARCEL","mode":"readonly"},
+        {"screen":"APP_CROPS","mode":"readonly"},
+        {"screen":"APP_DOCUMENTS","mode":"readonly"},
+        {"screen":"OP_DECISION","mode":"editable"}
+      ]}
+    notes: Reviewer sees citizen-submitted data read-only, fills OP_DECISION.
+
+  # ---- APPROVER ----
+  - code: APPROVER_INBOX
+    name: Approver — Inbox
+    roleId: APPROVER
+    serviceId: SUBSIDY_2025
+    kind: inbox
+    mode: list
+    notes: Applications in status=reviewed, awaiting final approval.
+
+  - code: APPROVER_DECIDE
+    name: Approver — Final Decision
+    roleId: APPROVER
+    serviceId: SUBSIDY_2025
+    kind: review
+    mode: readonly_inspection_with_decision
+    sectionsJson: |
+      {"sections":[
+        {"screen":"APP_APPLICANT","mode":"readonly"},
+        {"screen":"APP_PARCEL","mode":"readonly"},
+        {"screen":"APP_CROPS","mode":"readonly"},
+        {"screen":"OP_DECISION","mode":"editable"}
+      ]}
+
+  # ---- ISSUER ----
+  - code: ISSUER_INBOX
+    name: Issuer — Inbox
+    roleId: ISSUER
+    serviceId: SUBSIDY_2025
+    kind: inbox
+    mode: list
+    notes: Approved applications awaiting benefit issuance.
+
+  - code: ISSUER_ISSUE
+    name: Issuer — Benefit Issuance
+    roleId: ISSUER
+    serviceId: SUBSIDY_2025
+    kind: review
+    mode: issuance
+    sectionsJson: |
+      {"sections":[
+        {"screen":"APP_APPLICANT","mode":"readonly"},
+        {"screen":"APP_PARCEL","mode":"readonly"}
+      ]}
+    notes: Phase 1 stub. Week 4+ adds an issuance screen with benefit-pickup tracking.
+
+# =====================================================================
+#  Seed order — parents first.
+#  Catalogs and determinants come BEFORE registrations and screens that
+#  reference them, even though declared lower in the file. The seeder
+#  walks this list, not the YAML key order.
+# =====================================================================
+
+# =====================================================================
+#  Sample applications (transactional data, not metadata)
+#  Five realistic applications across the four programmes. Lets the
+#  operator side be tested without manually filling out citizen forms.
+#
+#  Note: applications are upserted by national_id (not 'code') — see
+#  _seed_business_keys below.
+# =====================================================================
+
+subsidyApplication2025:
+  # ---- 1. Lerato Mokoena → Block Farming (PRG_2025_001) ----
+  - national_id:           "1985041500123"
+    full_name:             "Lerato Mokoena"
+    gender:                "female"
+    date_of_birth:         "1985-04-15"
+    contact_phone:         "+266 5812 3456"
+    applied_programme:     "PRG_2025_001"
+    district:              "maseru"
+    agro_zone:             "lowlands"
+    village_name:          "Ha Mabote"
+    area_hectares:         "3.5"
+    tenure_type:           "customary"
+    primary_crop:          "maize"
+    block_farming_member:  "yes"
+    cooperative_name:      "Mabote Block Farming Cooperative"
+    drought_affected_decl: "no"
+    notes:                 "Family of five; depends on maize for both consumption and surplus sale."
+
+  # ---- 2. Thabo Sekhoane → Mountain Pulses (PRG_2025_002) ----
+  - national_id:           "1972081200456"
+    full_name:             "Thabo Sekhoane"
+    gender:                "male"
+    date_of_birth:         "1972-08-12"
+    contact_phone:         "+266 6234 7890"
+    applied_programme:     "PRG_2025_002"
+    district:              "mokhotlong"
+    agro_zone:             "mountains"
+    village_name:          "Sehonghong"
+    area_hectares:         "2.2"
+    tenure_type:           "customary"
+    primary_crop:          "wheat"
+    block_farming_member:  "no"
+    cooperative_name:      ""
+    drought_affected_decl: "no"
+    notes:                 "Winter wheat under irrigation from Sehonghong river. Has grown peas previously."
+
+  # ---- 3. Mpho Letsoela → E-Voucher Pilot (PRG_2025_003) ----
+  - national_id:           "1990061800789"
+    full_name:             "Mpho Letsoela"
+    gender:                "female"
+    date_of_birth:         "1990-06-18"
+    contact_phone:         "+266 5901 2345"
+    applied_programme:     "PRG_2025_003"
+    district:              "berea"
+    agro_zone:             "foothills"
+    village_name:          "Ha Mantsi"
+    area_hectares:         "1.5"
+    tenure_type:           "customary"
+    primary_crop:          "maize"
+    block_farming_member:  "no"
+    cooperative_name:      ""
+    drought_affected_decl: "no"
+    notes:                 "First-time e-voucher user; has mobile money account."
+
+  # ---- 4. Nthabiseng Mafa → Drought Emergency (PRG_2025_004) ----
+  - national_id:           "1968111000234"
+    full_name:             "'Nthabiseng Mafa"
+    gender:                "female"
+    date_of_birth:         "1968-11-10"
+    contact_phone:         "+266 6345 6789"
+    applied_programme:     "PRG_2025_004"
+    district:              "mafeteng"
+    agro_zone:             "lowlands"
+    village_name:          "Ha Phamotse"
+    area_hectares:         "4.0"
+    tenure_type:           "customary"
+    primary_crop:          "maize"
+    block_farming_member:  "no"
+    cooperative_name:      ""
+    drought_affected_decl: "yes"
+    notes:                 "Lost 80% of 2024-25 maize crop to drought. Three dependants under 12. Vulnerability assessment from district extension officer attached."
+
+  # ---- 5. Tšepiso Khabo → Block Farming (geographically ineligible — for testing rule rejection) ----
+  - national_id:           "1995022700567"
+    full_name:             "Tšepiso Khabo"
+    gender:                "male"
+    date_of_birth:         "1995-02-27"
+    contact_phone:         "+266 5723 4567"
+    applied_programme:     "PRG_2025_001"
+    district:              "thaba_tseka"
+    agro_zone:             "mountains"
+    village_name:          "Ha Lebele"
+    area_hectares:         "2.8"
+    tenure_type:           "leasehold"
+    primary_crop:          "maize"
+    block_farming_member:  "yes"
+    cooperative_name:      "Thaba-Tseka Highland Cooperative"
+    drought_affected_decl: "no"
+    notes:                 "Mountain applicant — expected to fail PRG_2025_001 applicability determinant DET_LOWLANDS once the Determinant evaluator is online (Week 3 task #4)."
+
+# =====================================================================
+#  Per-entity business-key overrides for the seeder.
+#  Default is 'code' (most mm_* tables). Transactional tables use a
+#  natural unique key from the row itself.
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# L1-1 cascading_select test data — md_village
+# 12 villages across 4 districts. Used by the kernel's cascading_select
+# widget on the parcel registry's village_name field. district codes
+# match app_fd_md03district.c_code.
+# ---------------------------------------------------------------------
+md_village:
+  - code: maseru-mabote
+    name: Ha Mabote
+    district: maseru
+  - code: maseru-thetsane
+    name: Thetsane
+    district: maseru
+  - code: maseru-khubetsoana
+    name: Khubetsoana
+    district: maseru
+  - code: berea-mantsi
+    name: Ha Mantsi
+    district: berea
+  - code: berea-teyateyaneng
+    name: Teyateyaneng
+    district: berea
+  - code: berea-pulane
+    name: Ha Pulane
+    district: berea
+  - code: mafeteng-phamotse
+    name: Ha Phamotse
+    district: mafeteng
+  - code: mafeteng-matlakeng
+    name: Matlakeng
+    district: mafeteng
+  - code: mafeteng-mantsupa
+    name: Mantšupa
+    district: mafeteng
+  - code: mokhotlong-sehonghong
+    name: Sehonghong
+    district: mokhotlong
+  - code: mokhotlong-mapholaneng
+    name: Mapholaneng
+    district: mokhotlong
+  - code: mokhotlong-letseng
+    name: Letšeng
+    district: mokhotlong
+
+# =====================================================================
+#  L3-1 — Budget & Commitment Engine: envelopes, source contributions,
+#  initial ALLOCATION events.
+#
+#  Implements the methodology in
+#  `_design/architecture/components/budget-accounting-methodology.md` §2-§3:
+#    - One envelope per (programme × fiscal year), four programmes.
+#    - Source contributions per envelope (single-source for PRG_001/003,
+#      multi-source 60/40 for PRG_002, mixed for PRG_004).
+#    - Initial ALLOCATION journal entries posting Allocated + Available
+#      to envelope and (prorated) source contribution accounts.
+#
+#  Indicative amounts based on 2024-25 cycle scale + descriptions from
+#  mm_registration.attributesJson; analyst can adjust before deploy.
+#
+#  Account-path convention used by the materialised view in
+#  _seeds/migrations/001_budget_projection_view.sql:
+#    ENV_<envelope_code>.<subaccount>     for envelope-level entries
+#    SRC_<source_short>_<envelope_short>.<subaccount>  for source-level entries
+#  where subaccount ∈ {ALLOCATED, AVAILABLE, RESERVED, PRE_COMMITTED,
+#                      COMMITTED, EXPENSED}.
+# =====================================================================
+
+# =====================================================================
+#  GROUP D — Capability registry (RegBB §3.2 / ADR-020 follow-up)
+#
+#  The three capability adapters that used to be hard-coded Java classes
+#  (FarmerByNidAdapter / ParcelsSummaryAdapter / SubsidyApplicationCountAdapter)
+#  are now driven by metadata. SqlPathEvaluator reads mm_capability rows
+#  at construction time, registers one MetaCapabilityAdapter per code.
+#  Each MetaCapabilityAdapter reads its mm_capability_field rows to find
+#  the SQL definition for any field referenced as $registry.<code>.<field>
+#  in a Determinant rule.
+#
+#  Adding a new capability (e.g. livestock.summary, vendor.history,
+#  entitlement.balance for the IM module): add an mm_capability row + N
+#  mm_capability_field rows here, run the seed. No Java rebuild.
+#
+#  Named placeholders supported in where_clause:
+#    :nid           — the applicant's national_id (always provided)
+#    :applicationId — current application's UUID (empty in fresh add-mode)
+#    :<any-key>     — value from EvalContext.data.<key> (e.g. :applied_programme)
+#
+#  Security: source_table / expression / where_clause are spliced verbatim
+#  into the SQL string and are therefore TRUSTED INPUTS — only an admin
+#  with App Composer access can author/edit these rows. Bound parameters
+#  (the :placeholder substitution) are still safe via PreparedStatement.
+# =====================================================================
+
+mm_capability:
+  - code: farmer
+    name: Farmer registry
+    description: |
+      Single-row lookup against app_fd_farmerbasicinfo keyed by national_id.
+      Exposes the farmer's identity fields to eligibility rules and to
+      L2-3 bot_pull NID auto-fill. Replaces the legacy FarmerByNidAdapter
+      Java class.
+  - code: parcels_summary
+    name: Parcels summary
+    description: |
+      Aggregates a farmer's parcels. Used by every parcel-aware programme
+      rule (DET_SMALLHOLDER's "≤ 5 ha cultivated", DET_AREA_NONZERO's "> 0
+      ha"). Replaces ParcelsSummaryAdapter. Joins
+      app_fd_farmerbasicinfo → app_fd_parcelregistration via parent_id.
+  - code: subsidy
+    name: Subsidy applications
+    description: |
+      Counts an applicant's existing subsidy applications, scoped by the
+      programme they're currently applying for. Used by
+      DET_NO_DUPLICATE_<programme> rules to prevent double-submission
+      (L4-1 D-003 fix). Replaces SubsidyApplicationCountAdapter.
+
+mm_capability_field:
+  # ---- farmer.* ---------------------------------------------------------
+  - capability_code: farmer
+    code: national_id
+    name: National ID
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: c_national_id
+    where_clause: c_national_id = :nid
+    default_when_no_anchor: ""
+    default_when_no_row: ""
+  - capability_code: farmer
+    code: first_name
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: c_first_name
+    where_clause: c_national_id = :nid
+  - capability_code: farmer
+    code: last_name
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: c_last_name
+    where_clause: c_national_id = :nid
+  - capability_code: farmer
+    code: full_name
+    name: Full name (computed)
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: TRIM(COALESCE(c_first_name,'') || ' ' || COALESCE(c_last_name,''))
+    where_clause: c_national_id = :nid
+  - capability_code: farmer
+    code: date_of_birth
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: c_date_of_birth
+    where_clause: c_national_id = :nid
+  - capability_code: farmer
+    code: gender
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: c_gender
+    where_clause: c_national_id = :nid
+  - capability_code: farmer
+    code: contact_phone
+    name: Mobile (alias)
+    description: Aliased — schema column is c_mobile_number.
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: c_mobile_number
+    where_clause: c_national_id = :nid
+  - capability_code: farmer
+    code: email
+    result_type: scalar
+    source_table: app_fd_farmerbasicinfo
+    expression: c_email_address
+    where_clause: c_national_id = :nid
+
+  # ---- parcels_summary.* -----------------------------------------------
+  - capability_code: parcels_summary
+    code: parcel_count
+    name: Number of parcels
+    result_type: scalar
+    source_table: app_fd_parcelregistration p JOIN app_fd_farmerbasicinfo f ON f.id = p.c_parent_id
+    expression: count(*)
+    where_clause: f.c_national_id = :nid
+    default_when_no_anchor: "0"
+    default_when_no_row: "0"
+  - capability_code: parcels_summary
+    code: cultivated_total
+    name: Sum of c_area_hectares
+    result_type: scalar
+    source_table: app_fd_parcelregistration p JOIN app_fd_farmerbasicinfo f ON f.id = p.c_parent_id JOIN app_fd_parcelgeometry g ON g.c_parent_id = p.id
+    expression: COALESCE(sum(CAST(NULLIF(g.c_area_hectares,'') AS NUMERIC(12,4))), 0)
+    where_clause: f.c_national_id = :nid
+    default_when_no_anchor: "0"
+    default_when_no_row: "0"
+  - capability_code: parcels_summary
+    code: largest_parcel
+    name: Max parcel size (Ha)
+    result_type: scalar
+    source_table: app_fd_parcelregistration p JOIN app_fd_farmerbasicinfo f ON f.id = p.c_parent_id JOIN app_fd_parcelgeometry g ON g.c_parent_id = p.id
+    expression: max(CAST(NULLIF(g.c_area_hectares,'') AS NUMERIC(12,4)))
+    where_clause: f.c_national_id = :nid
+
+  # ---- subsidy.* -------------------------------------------------------
+  - capability_code: subsidy
+    code: prior_applications_this_programme
+    name: Prior applications by this NID for the same programme
+    description: |
+      Used by DET_NO_DUPLICATE_<programme> rules. Excludes the current
+      application's own row (id <> :applicationId) so a re-evaluation of
+      the applicant's own draft doesn't trigger a false duplicate signal.
+    result_type: scalar
+    source_table: app_fd_subsidy_app_2025
+    expression: count(*)
+    where_clause: c_national_id = :nid AND c_applied_programme = :applied_programme AND id <> :applicationId
+    default_when_no_anchor: "0"
+    default_when_no_row: "0"
+
+# =====================================================================
+#  GROUP E — Budget envelopes + ledger (L3-1)
+# =====================================================================
+
+budget_envelope:
+  - code: ENV_PRG_2025_001_FY2526
+    programme_code: PRG_2025_001
+    fiscal_year: "2025/26"
+    currency: LSL
+    allocated_amount: "1200000.00"
+    status: active
+    revision: "1"
+    notes: |
+      Block Farming — Maize Lowlands. Single funding source: Government of
+      Lesotho own-source revenue per attributesJson "Subsidy Policy 2003 §4.2.1".
+
+  - code: ENV_PRG_2025_002_FY2526
+    programme_code: PRG_2025_002
+    fiscal_year: "2025/26"
+    currency: LSL
+    allocated_amount: "450000.00"
+    status: active
+    revision: "1"
+    notes: |
+      Mountain Pulses & Wheat. Mixed funding 60% GOL / 40% FAO-IFAD per
+      attributesJson. Donor reporting to FAO/IFAD requires per-source
+      utilisation visibility — primary use case for the multi-fund model.
+
+  - code: ENV_PRG_2025_003_FY2526
+    programme_code: PRG_2025_003
+    fiscal_year: "2025/26"
+    currency: LSL
+    allocated_amount: "180000.00"
+    status: active
+    revision: "1"
+    notes: |
+      Smallholder E-Voucher Pilot. Donor-funded: World Bank — SADP-II.
+      Single source.
+
+  - code: ENV_PRG_2025_004_FY2526
+    programme_code: PRG_2025_004
+    fiscal_year: "2025/26"
+    currency: LSL
+    allocated_amount: "2500000.00"
+    status: active
+    revision: "1"
+    notes: |
+      Drought Emergency Relief. Three-source: WFP (40%) + UNICEF (30%) +
+      GoL emergency reserve (30%). Highest stakes — operator visibility into
+      remaining envelope is critical given fast burn rate during emergencies.
+
+budget_envelope_source:
+  # ---- PRG_2025_001 — single source (GOL) ----
+  - code: SRC_GOL_PRG_2025_001_FY2526
+    envelope_code: ENV_PRG_2025_001_FY2526
+    source_code: GOL
+    source_name: Government of Lesotho — MAFSN Annual Budget
+    donor_class: government
+    share_percent: "100.00"
+    allocated_amount: "1200000.00"
+    status: active
+
+  # ---- PRG_2025_002 — 60/40 GOL / FAO-IFAD ----
+  - code: SRC_GOL_PRG_2025_002_FY2526
+    envelope_code: ENV_PRG_2025_002_FY2526
+    source_code: GOL
+    source_name: Government of Lesotho
+    donor_class: government
+    share_percent: "60.00"
+    allocated_amount: "270000.00"
+    status: active
+
+  - code: SRC_FAO_IFAD_PRG_2025_002_FY2526
+    envelope_code: ENV_PRG_2025_002_FY2526
+    source_code: FAO_IFAD
+    source_name: FAO / IFAD
+    donor_class: multilateral_donor
+    share_percent: "40.00"
+    allocated_amount: "180000.00"
+    status: active
+
+  # ---- PRG_2025_003 — single source (World Bank SADP-II) ----
+  - code: SRC_WB_SADP_PRG_2025_003_FY2526
+    envelope_code: ENV_PRG_2025_003_FY2526
+    source_code: WB_SADP_II
+    source_name: World Bank — SADP-II
+    donor_class: multilateral_donor
+    share_percent: "100.00"
+    allocated_amount: "180000.00"
+    status: active
+
+  # ---- PRG_2025_004 — three sources (WFP/UNICEF/GOL emergency) ----
+  - code: SRC_WFP_PRG_2025_004_FY2526
+    envelope_code: ENV_PRG_2025_004_FY2526
+    source_code: WFP
+    source_name: World Food Programme
+    donor_class: multilateral_donor
+    share_percent: "40.00"
+    allocated_amount: "1000000.00"
+    status: active
+
+  - code: SRC_UNICEF_PRG_2025_004_FY2526
+    envelope_code: ENV_PRG_2025_004_FY2526
+    source_code: UNICEF
+    source_name: UNICEF
+    donor_class: multilateral_donor
+    share_percent: "30.00"
+    allocated_amount: "750000.00"
+    status: active
+
+  - code: SRC_GOL_EMERGENCY_PRG_2025_004_FY2526
+    envelope_code: ENV_PRG_2025_004_FY2526
+    source_code: GOL_EMERGENCY
+    source_name: Government of Lesotho — Emergency Reserve
+    donor_class: government
+    share_percent: "30.00"
+    allocated_amount: "750000.00"
+    status: active
+
+# Initial ALLOCATION events. Each envelope opens with a balanced posting
+# at envelope level + balanced postings at each source-contribution level.
+# All same transaction_id per envelope (ledger-line linkage), all share
+# correlation_type=manual + source_module=manual + actor=system_seed.
+#
+# Per methodology §3.1:
+#   - Debit ENV_X.ALLOCATED  +amount
+#   - Debit ENV_X.AVAILABLE  +amount  (the new envelope is fully unencumbered)
+#   - For each source contribution: same pair, prorated.
+#
+# (The conceptual EXTERNAL_TREASURY_AUTHORITY credit isn't materialised
+# as a ledger row in this implementation — it's the external counterparty
+# every ALLOCATION balances against. Implicit; documented in §3.1.)
+budget_event:
+  # ===== ENV_PRG_2025_001 =====
+  - transaction_id: tx_alloc_001
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_001_FY2526
+    account_path: ENV_PRG_2025_001_FY2526.ALLOCATED
+    direction: debit
+    amount: "1200000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+    notes: Initial allocation — Block Farming Lowlands FY 25/26.
+
+  - transaction_id: tx_alloc_001
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_001_FY2526
+    account_path: ENV_PRG_2025_001_FY2526.AVAILABLE
+    direction: debit
+    amount: "1200000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_001
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_001_FY2526
+    account_path: SRC_GOL_PRG_2025_001_FY2526.ALLOCATED
+    direction: debit
+    amount: "1200000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_001
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_001_FY2526
+    account_path: SRC_GOL_PRG_2025_001_FY2526.AVAILABLE
+    direction: debit
+    amount: "1200000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  # ===== ENV_PRG_2025_002 (multi-source 60/40) =====
+  - transaction_id: tx_alloc_002
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_002_FY2526
+    account_path: ENV_PRG_2025_002_FY2526.ALLOCATED
+    direction: debit
+    amount: "450000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+    notes: Initial allocation — Mountain Pulses (60% GOL / 40% FAO-IFAD).
+
+  - transaction_id: tx_alloc_002
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_002_FY2526
+    account_path: ENV_PRG_2025_002_FY2526.AVAILABLE
+    direction: debit
+    amount: "450000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_002
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_002_FY2526
+    account_path: SRC_GOL_PRG_2025_002_FY2526.ALLOCATED
+    direction: debit
+    amount: "270000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_002
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_002_FY2526
+    account_path: SRC_GOL_PRG_2025_002_FY2526.AVAILABLE
+    direction: debit
+    amount: "270000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_002
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_002_FY2526
+    account_path: SRC_FAO_IFAD_PRG_2025_002_FY2526.ALLOCATED
+    direction: debit
+    amount: "180000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_002
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_002_FY2526
+    account_path: SRC_FAO_IFAD_PRG_2025_002_FY2526.AVAILABLE
+    direction: debit
+    amount: "180000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  # ===== ENV_PRG_2025_003 (single source — World Bank) =====
+  - transaction_id: tx_alloc_003
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_003_FY2526
+    account_path: ENV_PRG_2025_003_FY2526.ALLOCATED
+    direction: debit
+    amount: "180000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+    notes: Initial allocation — E-Voucher Pilot (World Bank SADP-II).
+
+  - transaction_id: tx_alloc_003
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_003_FY2526
+    account_path: ENV_PRG_2025_003_FY2526.AVAILABLE
+    direction: debit
+    amount: "180000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_003
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_003_FY2526
+    account_path: SRC_WB_SADP_PRG_2025_003_FY2526.ALLOCATED
+    direction: debit
+    amount: "180000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_003
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_003_FY2526
+    account_path: SRC_WB_SADP_PRG_2025_003_FY2526.AVAILABLE
+    direction: debit
+    amount: "180000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  # ===== ENV_PRG_2025_004 (three sources — Drought Emergency) =====
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: ENV_PRG_2025_004_FY2526.ALLOCATED
+    direction: debit
+    amount: "2500000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+    notes: Initial allocation — Drought Emergency Relief (WFP/UNICEF/GOL 40/30/30).
+
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: ENV_PRG_2025_004_FY2526.AVAILABLE
+    direction: debit
+    amount: "2500000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: SRC_WFP_PRG_2025_004_FY2526.ALLOCATED
+    direction: debit
+    amount: "1000000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: SRC_WFP_PRG_2025_004_FY2526.AVAILABLE
+    direction: debit
+    amount: "1000000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: SRC_UNICEF_PRG_2025_004_FY2526.ALLOCATED
+    direction: debit
+    amount: "750000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: SRC_UNICEF_PRG_2025_004_FY2526.AVAILABLE
+    direction: debit
+    amount: "750000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: SRC_GOL_EMERGENCY_PRG_2025_004_FY2526.ALLOCATED
+    direction: debit
+    amount: "750000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+  - transaction_id: tx_alloc_004
+    event_type: ALLOCATION
+    envelope_code: ENV_PRG_2025_004_FY2526
+    account_path: SRC_GOL_EMERGENCY_PRG_2025_004_FY2526.AVAILABLE
+    direction: debit
+    amount: "750000.00"
+    currency: LSL
+    correlation_type: manual
+    source_module: manual
+    actor: system_seed
+
+# =====================================================================
+#  L4-1 / L4-3 automation — analyst-driven API endpoint declarations
+#
+#  Per RegBB §3.2 and the form-creator-api `/formcreator/apis` endpoint:
+#  any form spec'd by the analyst (mm_screen-generated OR pre-existing
+#  Joget form) can be exposed as a REST API by adding a row here.
+#
+#  apiKind values:
+#    - crud         — full CRUD (post, get, put, delete, list, ...).
+#                     Use for citizen-submit + read-back surfaces.
+#    - read_only    — list + get-by-id only. Operator inspection.
+#    - submit_only  — post + saveOrUpdate only. Append-only feeds.
+#
+#  The seeder POSTs each entry to /formcreator/apis. Idempotent: id is
+#  derived from `code` so re-runs update in place rather than spawning
+#  duplicates. Generated api_ids are recorded in
+#  _seeds/.api_endpoints.json for downstream test utilities to consume.
+# =====================================================================
+mm_api:
+  - code: API_SUBSIDY_APP_2025_CITIZEN
+    name: 2025 Subsidy Application — Citizen Submit API
+    formId: subsidyApplication2025
+    apiKind: crud
+    description: |
+      L4-1 / L4-3 automation. Programmatic submission of citizen
+      applications for the 12-scenario parity test. Full CRUD so the
+      test utility can post applications, read back the saved record
+      to verify storage, and clean up between scenarios.
+
+  - code: API_SUBSIDY_APP_2025_OPERATOR
+    name: 2025 Subsidy Application — Operator Read API
+    formId: subsidyApplicationOperator2025
+    apiKind: read_only
+    description: |
+      L4-1 / L4-3 automation. Read-only polling of application status
+      and eligibility outcome for assertion-against-ground-truth. Kept
+      read-only so test runs cannot accidentally mutate operator-side
+      decisions.
+
+_seed_business_keys:
+  subsidyApplication2025: national_id
+  md_village: code
+  budget_envelope: code
+  budget_envelope_source: code
+  # budget_event has no global business key — append-only ledger. Each row
+  # is uniquely identified by (transaction_id + account_path); the seeder
+  # treats it as no-dedupe (NO_CODE_DEDUPE_FORMS) so re-running pre-clears.
+  budget_event: code
+
+# =====================================================================
+#  Phase 3 IM Slice 1 — Inputs Management foundational MD + entities
+#  Per im-module SAD §5.1 + ADR-016 (IM uses MM-form-gen kernel only,
+#  not the RegBB framework). Native Joget MD forms; IDs follow the
+#  md_*/im_* convention rather than the legacy mdNN* numbering.
+# =====================================================================
+
+# NOTE: md_input_category was authored in Slice 1 then dropped in the cleanup
+# pass — the existing md27inputCategory (8 production rows: SEEDS, FERTILIZER,
+# PESTICIDES, IRRIGATION, LIVESTOCK_VET, FENCING, STORAGE, OTHER) is canonical.
+# md27inputCategory + md27input form the 2-tier input cascade per the user's
+# pre-Slice-1 design. See decision-log D35 addendum.
+
+# md27input — sample inputs migrated to the legacy MD.27 chain.
+# Re-seedable via the form-creator-api seed endpoint with businessKey=code.
+# md27input field ids are snake_case (see CLAUDE.md JWA inventory).
+md27input:
+  - code: SEED_MAIZE_PAN6479_25KG
+    name: Maize Seed PAN 6479, 25 kg bag
+    input_category: SEEDS
+    default_unit: BAG_25KG
+    estimated_cost_per_unit: "850.00"
+    typical_quantity_per_ha: "1"
+  - code: SEED_BEANS_KK15_50KG
+    name: Beans Seed KK15, 50 kg bag
+    input_category: SEEDS
+    default_unit: BAG_50KG
+    estimated_cost_per_unit: "1450.00"
+    typical_quantity_per_ha: "2"
+  - code: FERT_NPK_50KG
+    name: NPK 23-23-0 Fertiliser, 50 kg bag
+    input_category: FERTILIZER
+    default_unit: BAG_50KG
+    estimated_cost_per_unit: "780.00"
+    typical_quantity_per_ha: "4"
+  - code: FERT_UREA_50KG
+    name: Urea 46% N Fertiliser, 50 kg bag
+    input_category: FERTILIZER
+    default_unit: BAG_50KG
+    estimated_cost_per_unit: "720.00"
+    typical_quantity_per_ha: "3"
+
+md_input_unit:
+  - code: KG
+    name: Kilogram
+    abbreviation: kg
+    uom_family: mass
+  - code: BAG_25KG
+    name: 25 kg bag
+    abbreviation: 25kg
+    uom_family: mass
+  - code: BAG_50KG
+    name: 50 kg bag
+    abbreviation: 50kg
+    uom_family: mass
+  - code: LITRE
+    name: Litre
+    abbreviation: L
+    uom_family: volume
+  - code: PIECE
+    name: Piece (count)
+    abbreviation: pc
+    uom_family: count
+
+md_supplier_type:
+  - code: MANUFACTURER
+    name: Manufacturer
+    description: Produces the input directly; primary source of supply.
+  - code: DISTRIBUTOR
+    name: Distributor / wholesaler
+    description: Imports or wholesales inputs to MAFSN distribution points.
+  - code: COOPERATIVE
+    name: Farmer cooperative
+    description: Cooperative society that aggregates supply from member farmers.
+  - code: GOVERNMENT_AGENCY
+    name: Government agency
+    description: State-owned supplier (e.g. seed parastatal).
+
+# NOTE: md45DistribPoint was dropped from the seed in the May 2026 IM Slice 2
+# cleanup. md37collectionPoint (MD.37 - Resource Center) is the canonical
+# form for the same physical concept ("Resource Centre" is the MAFSN-formal
+# term; "Distribution Point" was a parallel-naming mistake). 60 real Lesotho
+# Resource Centres loaded into md37collectionPoint below from the canonical
+# docx (_08_Implementation/LESOTHO RESOURCE CENTRES with coordinates.docx).
+# md45DistribPoint form remains in the JWA but unused; future cleanup slice.
+
+md_voucher_status:
+  # Voucher lifecycle states per IM SAD §8.2 (status framework anchor).
+  # sort_order drives the display order in the admin list.
+  - code: issuable
+    name: Issuable (entitlement created, voucher not yet issued)
+    lifecycle_phase: active
+    sort_order: "10"
+  - code: issued
+    name: Issued (voucher in farmer's hands, awaiting redemption)
+    lifecycle_phase: active
+    sort_order: "20"
+  - code: redeemed
+    name: Redeemed (farmer received the input)
+    lifecycle_phase: terminal_success
+    sort_order: "30"
+  - code: reconciled
+    name: Reconciled (voucher accounted in supplier settlement)
+    lifecycle_phase: terminal_success
+    sort_order: "40"
+  - code: expired_unredeemed
+    name: Expired without redemption
+    lifecycle_phase: terminal_failure
+    sort_order: "50"
+  - code: cancelled
+    name: Cancelled (operator-initiated revocation)
+    lifecycle_phase: terminal_failure
+    sort_order: "60"
+
+# NOTE: im_input_catalog dropped in the cleanup pass — md27input (legacy MD.27)
+# is canonical. Sample inputs migrated to md27input section above with the
+# form-definition's snake_case keys (input_category, default_unit, etc.) and
+# mapped to the existing md27inputCategory codes (SEEDS, FERTILIZER).
+
+# Phase 3 IM Slice 2 (R2) — 60 real Lesotho Resource Centres from
+# _08_Implementation/LESOTHO RESOURCE CENTRES with coordinates.docx.
+# Loaded ALONGSIDE the existing CP001-CP010 placeholders (which are referenced
+# 243× across farm_location / parcellocation / sp_* tables — not deletable yet).
+# Mixed-format coordinates from docx (decimal, DMS, lat/lon swapped, forgotten
+# minus signs) normalised to decimal degrees. One centre's longitude (Thaba-chitja)
+# was malformed in the source docx and is left null — operator to fill.
+md37collectionPoint:
+  - code: CP_MANTSONYANE
+    name: Mantsonyane
+    district_code: thaba-tseka
+    gps_latitude:  "-29.55115"
+    gps_longitude: "28.26315"
+    is_active: "Yes"
+  - code: CP_SHEHONG_HONG
+    name: Shehong-hong
+    district_code: thaba-tseka
+    gps_latitude:  "-29.72218"
+    gps_longitude: "28.77143"
+    is_active: "Yes"
+  - code: CP_LESOBENG
+    name: Lesobeng
+    district_code: thaba-tseka
+    gps_latitude:  "-29.71367"
+    gps_longitude: "28.42984"
+    is_active: "Yes"
+  - code: CP_SEMENANYANE
+    name: Semenanyane
+    district_code: thaba-tseka
+    gps_latitude:  "-29.42137"
+    gps_longitude: "28.66014"
+    is_active: "Yes"
+  - code: CP_MOHANAPENG
+    name: Mohanapeng
+    district_code: thaba-tseka
+    gps_latitude:  "-29.59169"
+    gps_longitude: "28.67056"
+    is_active: "Yes"
+  - code: CP_KHOHLO_NTSO
+    name: Khohlo-Ntso
+    district_code: thaba-tseka
+    gps_latitude:  "-29.36989"
+    gps_longitude: "28.49827"
+    is_active: "Yes"
+  - code: CP_LILALA
+    name: Lilala
+    district_code: thaba-tseka
+    gps_latitude:  "-29.53838"
+    gps_longitude: "28.62358"
+    is_active: "Yes"
+  - code: CP_QHOALINYANE
+    name: Qhoalinyane
+    district_code: qachas-nek
+    gps_latitude:  "-30.04069"
+    gps_longitude: "28.35781"
+    is_active: "Yes"
+  - code: CP_THABA_CHITJA
+    name: Thaba-chitja
+    district_code: qachas-nek
+    gps_latitude:  "-30.05756"
+    is_active: "Yes"
+  - code: CP_TEBELLONG
+    name: Tebellong
+    district_code: qachas-nek
+    gps_latitude:  "-30.05750"
+    gps_longitude: "28.44944"
+    is_active: "Yes"
+  - code: CP_MATEBENG
+    name: Matebeng
+    district_code: qachas-nek
+    gps_latitude:  "-29.82000"
+    gps_longitude: "28.81000"
+    is_active: "Yes"
+  - code: CP_SEHLABATHEBE
+    name: Sehlabathebe
+    district_code: qachas-nek
+    gps_latitude:  "-29.91286"
+    gps_longitude: "29.04193"
+    is_active: "Yes"
+  - code: CP_LETLAPENG
+    name: Letlapeng
+    district_code: qachas-nek
+    gps_latitude:  "-30.08154"
+    gps_longitude: "28.67364"
+    is_active: "Yes"
+  - code: CP_MELIKANE
+    name: Melikane
+    district_code: qachas-nek
+    gps_latitude:  "-29.89962"
+    gps_longitude: "28.81521"
+    is_active: "Yes"
+  - code: CP_MEKALING
+    name: Mekaling
+    district_code: mohales-hoek
+    gps_latitude:  "-30.29472"
+    gps_longitude: "27.50278"
+    is_active: "Yes"
+  - code: CP_MAKHALENG
+    name: Makhaleng
+    district_code: mohales-hoek
+    gps_latitude:  "-30.15111"
+    gps_longitude: "27.47556"
+    is_active: "Yes"
+  - code: CP_HLOAHLENG
+    name: Hloahleng
+    district_code: mohales-hoek
+    gps_latitude:  "-30.03444"
+    gps_longitude: "28.20083"
+    is_active: "Yes"
+  - code: CP_TAUNG
+    name: Taung
+    district_code: mohales-hoek
+    gps_latitude:  "-30.08889"
+    gps_longitude: "27.41944"
+    is_active: "Yes"
+  - code: CP_PHAMONG
+    name: Phamong
+    district_code: mohales-hoek
+    gps_latitude:  "-30.25722"
+    gps_longitude: "27.80444"
+    is_active: "Yes"
+  - code: CP_RAMOSOTHOANE
+    name: Ramosothoane
+    district_code: mohales-hoek
+    gps_latitude:  "-29.90889"
+    gps_longitude: "27.94583"
+    is_active: "Yes"
+  - code: CP_MPHARANE
+    name: Mpharane
+    district_code: mohales-hoek
+    gps_latitude:  "-30.02444"
+    gps_longitude: "27.54639"
+    is_active: "Yes"
+  - code: CP_KETANE
+    name: Ketane
+    district_code: mohales-hoek
+    gps_latitude:  "-30.07333"
+    gps_longitude: "27.85972"
+    is_active: "Yes"
+  - code: CP_RIBANENG_RIBANENG
+    name: Ribaneng      Ribaneng
+    district_code: mafeteng
+    gps_latitude:  "-29.86333"
+    gps_longitude: "27.68278"
+    is_active: "Yes"
+  - code: CP_MATELILE
+    name: Matelile
+    district_code: mafeteng
+    gps_latitude:  "-29.81944"
+    gps_longitude: "27.51583"
+    is_active: "Yes"
+  - code: CP_MAKHAKHE
+    name: Makhakhe
+    district_code: mafeteng
+    gps_latitude:  "-29.72583"
+    gps_longitude: "27.56167"
+    is_active: "Yes"
+  - code: CP_THABANA_MORENA
+    name: Thabana Morena
+    district_code: mafeteng
+    gps_latitude:  "-29.92000"
+    gps_longitude: "27.42972"
+    is_active: "Yes"
+  - code: CP_RAMOKOATSI
+    name: Ramokoatsi
+    district_code: mafeteng
+    gps_latitude:  "-29.74694"
+    gps_longitude: "27.34722"
+    is_active: "Yes"
+  - code: CP_TSAKHOLO
+    name: Tsakholo
+    district_code: mafeteng
+    gps_latitude:  "-29.64750"
+    gps_longitude: "27.15778"
+    is_active: "Yes"
+  - code: CP_TEYATEYANENG
+    name: Teyateyaneng
+    district_code: berea
+    gps_latitude:  "-29.14758"
+    gps_longitude: "27.75149"
+    is_active: "Yes"
+  - code: CP_MAQHAKA
+    name: Maqhaka
+    district_code: berea
+    gps_latitude:  "-29.24253"
+    gps_longitude: "27.60616"
+    is_active: "Yes"
+  - code: CP_SEFIKENG
+    name: Sefikeng
+    district_code: berea
+    gps_latitude:  "-29.28255"
+    gps_longitude: "27.80992"
+    is_active: "Yes"
+  - code: CP_PILOT
+    name: Pilot
+    district_code: berea
+    gps_latitude:  "-29.21222"
+    gps_longitude: "27.86197"
+    is_active: "Yes"
+  - code: CP_MAPOTENG
+    name: Mapoteng
+    district_code: berea
+    gps_latitude:  "-29.11108"
+    gps_longitude: "27.96451"
+    is_active: "Yes"
+  - code: CP_CORN_EXCHANGE
+    name: Corn Exchange
+    district_code: berea
+    gps_latitude:  "-28.97128"
+    gps_longitude: "27.97618"
+    is_active: "Yes"
+  - code: CP_MORIJA
+    name: Morija
+    district_code: maseru
+    gps_latitude:  "-29.62333"
+    gps_longitude: "27.50417"
+    is_active: "Yes"
+  - code: CP_ROTHE
+    name: Rothe
+    district_code: maseru
+    gps_latitude:  "-29.56000"
+    gps_longitude: "27.45417"
+    is_active: "Yes"
+  - code: CP_MARAKABEI
+    name: Marakabei
+    district_code: maseru
+    gps_latitude:  "-29.54056"
+    gps_longitude: "28.13778"
+    is_active: "Yes"
+  - code: CP_HA_NTSI
+    name: Ha ntsi
+    district_code: maseru
+    gps_latitude:  "-29.40333"
+    gps_longitude: "27.76278"
+    is_active: "Yes"
+  - code: CP_SEMONKONG
+    name: Semonkong
+    district_code: maseru
+    gps_latitude:  "-29.84000"
+    gps_longitude: "28.06139"
+    is_active: "Yes"
+  - code: CP_MASIANOKENG
+    name: Masianokeng
+    district_code: maseru
+    gps_latitude:  "-29.40417"
+    gps_longitude: "27.56083"
+    is_active: "Yes"
+  - code: CP_RAMABANTA
+    name: Ramabanta
+    district_code: maseru
+    gps_latitude:  "-29.66528"
+    gps_longitude: "27.79528"
+    is_active: "Yes"
+  - code: CP_KHABO
+    name: Khabo
+    district_code: leribe
+    gps_latitude:  "-28.80972"
+    gps_longitude: "28.19639"
+    is_active: "Yes"
+  - code: CP_PEKA
+    name: Peka
+    district_code: leribe
+    gps_latitude:  "-28.96889"
+    gps_longitude: "27.76139"
+    is_active: "Yes"
+  - code: CP_MAPUTSOE
+    name: Maputsoe
+    district_code: leribe
+    gps_latitude:  "-28.89250"
+    gps_longitude: "27.92139"
+    is_active: "Yes"
+  - code: CP_MAHOBONG
+    name: Mahobong
+    district_code: leribe
+    gps_latitude:  "-28.93639"
+    gps_longitude: "28.16611"
+    is_active: "Yes"
+  - code: CP_PELANENG
+    name: Pelaneng
+    district_code: leribe
+    gps_latitude:  "-29.10694"
+    gps_longitude: "28.49500"
+    is_active: "Yes"
+  - code: CP_TALE
+    name: Tale
+    district_code: leribe
+    gps_latitude:  "-30.29194"
+    gps_longitude: "27.50583"
+    is_active: "Yes"
+  - code: CP_KHUKHUNE
+    name: Khukhune
+    district_code: butha-buthe
+    gps_latitude:  "-28.73556"
+    gps_longitude: "28.41167"
+    is_active: "Yes"
+  - code: CP_QHOLAQHOE
+    name: Qholaqhoe
+    district_code: butha-buthe
+    gps_latitude:  "-28.67222"
+    gps_longitude: "28.42278"
+    is_active: "Yes"
+  - code: CP_NQABENI
+    name: Nqabeni
+    district_code: butha-buthe
+    gps_latitude:  "-28.75278"
+    gps_longitude: "28.27639"
+    is_active: "Yes"
+  - code: CP_MATSOAING
+    name: Matsoaing
+    district_code: butha-buthe
+    gps_latitude:  "-28.61917"
+    gps_longitude: "28.58778"
+    is_active: "Yes"
+  - code: CP_NGOAJANE
+    name: Ngoajane
+    district_code: butha-buthe
+    gps_latitude:  "-28.71528"
+    gps_longitude: "28.49917"
+    is_active: "Yes"
+  - code: CP_SELOMO
+    name: Selomo
+    district_code: butha-buthe
+    gps_latitude:  "-28.77417"
+    gps_longitude: "28.34139"
+    is_active: "Yes"
+  - code: CP_RAMPAI
+    name: Rampai
+    district_code: butha-buthe
+    gps_latitude:  "-28.76306"
+    gps_longitude: "28.24667"
+    is_active: "Yes"
+  - code: CP_LEHLOHLA
+    name: Lehlohla
+    district_code: mokhotlong
+    gps_latitude:  "-29.31889"
+    gps_longitude: "28.78389"
+    is_active: "Yes"
+  - code: CP_LIBIBING
+    name: Libibing
+    district_code: mokhotlong
+    gps_latitude:  "-29.30972"
+    gps_longitude: "29.02750"
+    is_active: "Yes"
+  - code: CP_MALEFILOANE
+    name: Malefiloane
+    district_code: mokhotlong
+    gps_latitude:  "-29.34139"
+    gps_longitude: "29.17917"
+    is_active: "Yes"
+  - code: CP_MAPHOLANENG
+    name: Mapholaneng
+    district_code: mokhotlong
+    gps_latitude:  "-29.20306"
+    gps_longitude: "28.86000"
+    is_active: "Yes"
+  - code: CP_PHAHAMENG
+    name: Phahameng
+    district_code: mokhotlong
+    gps_latitude:  "-29.19250"
+    gps_longitude: "29.12111"
+    is_active: "Yes"
+  - code: CP_THABANG
+    name: Thabang
+    district_code: mokhotlong
+    gps_latitude:  "-29.28639"
+    gps_longitude: "29.05250"
+    is_active: "Yes"
+
+# Phase 3 IM Slice 2 — initial inventory + receipts.
+# Maseru depot is the canonical sample point with one row per sample input.
+# code = INV_<dp>_<input> synthetic key; quantity_on_hand seeded after a
+# matching im_stock_transaction RECEIPT (numbers chosen to mirror a typical
+# season-opening delivery from Pannar / LSC / Sasol Nitro).
+im_inventory:
+  - code: INV_CP_MORIJA_SEED_MAIZE_PAN6479_25KG
+    point_code: CP_MORIJA
+    input_code: SEED_MAIZE_PAN6479_25KG
+    quantity_on_hand: "200"
+    quantity_reserved: "0"
+    reorder_threshold: "40"
+    last_stock_count_date: "2026-04-30"
+    notes: Season-opening delivery from Pannar.
+  - code: INV_CP_MORIJA_SEED_BEANS_KK15_50KG
+    point_code: CP_MORIJA
+    input_code: SEED_BEANS_KK15_50KG
+    quantity_on_hand: "60"
+    quantity_reserved: "0"
+    reorder_threshold: "20"
+    last_stock_count_date: "2026-04-30"
+    notes: Cooperative supply from LSC.
+  - code: INV_CP_MORIJA_FERT_NPK_50KG
+    point_code: CP_MORIJA
+    input_code: FERT_NPK_50KG
+    quantity_on_hand: "500"
+    quantity_reserved: "0"
+    reorder_threshold: "100"
+    last_stock_count_date: "2026-04-30"
+    notes: Sasol Nitro bulk delivery, Q1 procurement.
+  - code: INV_CP_MORIJA_FERT_UREA_50KG
+    point_code: CP_MORIJA
+    input_code: FERT_UREA_50KG
+    quantity_on_hand: "300"
+    quantity_reserved: "0"
+    reorder_threshold: "60"
+    last_stock_count_date: "2026-04-30"
+    notes: Sasol Nitro top-dressing supply.
+
+# RECEIPT transactions matching the inventory positions above. Type=RECEIPT,
+# quantity equals on_hand (no issues yet — no vouchers exist in Phase 3 Slice 2).
+im_stock_transaction:
+  - code: TXN-20260415-0001
+    txn_date: "2026-04-15"
+    txn_type: RECEIPT
+    district_code: maseru
+    point_code: CP_MORIJA
+    supplier_code: SUP_PANNAR
+    supplier_invoice_no: PNR-INV-2026-0042
+    performed_by: MAFSN Procurement Officer
+    notes: Season-opening seed delivery (Pannar maize seed).
+  - code: TXN-20260418-0002
+    txn_date: "2026-04-18"
+    txn_type: RECEIPT
+    district_code: maseru
+    point_code: CP_MORIJA
+    supplier_code: SUP_LSC
+    supplier_invoice_no: LSC-GRN-2026-0118
+    performed_by: MAFSN Procurement Officer
+    notes: Cooperative bean seed delivery from LSC.
+  - code: TXN-20260420-0003
+    txn_date: "2026-04-20"
+    txn_type: RECEIPT
+    district_code: maseru
+    point_code: CP_MORIJA
+    supplier_code: SUP_SASOL_NITRO
+    supplier_invoice_no: SN-INV-2026-1042
+    performed_by: MAFSN Procurement Officer
+    notes: Q1 fertiliser delivery (NPK + Urea on the same Sasol Nitro invoice — see TXN-20260422-0004 for the urea half).
+  - code: TXN-20260422-0004
+    txn_date: "2026-04-22"
+    txn_type: RECEIPT
+    district_code: maseru
+    point_code: CP_MORIJA
+    supplier_code: SUP_SASOL_NITRO
+    supplier_invoice_no: SN-INV-2026-1043
+    performed_by: MAFSN Procurement Officer
+    notes: Top-dressing urea, second leg of the Sasol Nitro fertiliser delivery.
+
+# Phase 3 IM Slice 6d — line items for the 4 RECEIPT transactions above.
+# Each parent stock-txn has one or more lines (input_code + quantity + optional unit_price).
+# txn_id resolved by the seeder via _ref:im_stock_transaction:<code> to the parent's UUID.
+# Authored as multi-line where the real-world delivery covers more than one SKU.
+im_stock_txn_line:
+  - txn_id: "_ref:im_stock_transaction:TXN-20260415-0001"
+    input_code: SEED_MAIZE_PAN6479_25KG
+    quantity: "200"
+    unit_price: "180.00"
+    line_notes: Pannar 25kg sealed bags, season-opening lot.
+  - txn_id: "_ref:im_stock_transaction:TXN-20260418-0002"
+    input_code: SEED_BEANS_KK15_50KG
+    quantity: "60"
+    unit_price: "320.00"
+    line_notes: KK15 dry bean cultivar.
+  - txn_id: "_ref:im_stock_transaction:TXN-20260420-0003"
+    input_code: FERT_NPK_50KG
+    quantity: "500"
+    unit_price: "780.00"
+    line_notes: Compound NPK 23-23-0, basal application grade.
+  - txn_id: "_ref:im_stock_transaction:TXN-20260422-0004"
+    input_code: FERT_UREA_50KG
+    quantity: "300"
+    unit_price: "850.00"
+    line_notes: 46-0-0 prilled urea, top-dressing grade.
+
+# Phase 3 IM Slice 3 — Allocation Plan (header) + Allocation Lines (FormGrid children)
+# for PRG_2025_001 (Block Farming — Maize Lowlands 2025/26).
+# Lines reference plan via plan_id (Joget UUID, FormGrid-managed FK per D20).
+# The seeder resolves _ref:<formId>:<code> to the parent's UUID at insert time.
+im_allocation_plan:
+  - code: AP_PRG_2025_001_2025-26
+    name: "Block Farming — Maize Lowlands 2025/26 Allocation Plan"
+    programme_code: PRG_2025_001
+    cycle_label: "2025/26 lowlands maize season"
+    effective_from: "2025-08-01"
+    effective_to:   "2026-01-31"
+    status: approved
+    approved_by: "Program Manager (Demo)"
+    approval_date: "2025-07-15"
+    notes: |
+      Initial allocation. ~M101,400 committed across 4 lowlands Resource Centres
+      (Morija, Teyateyaneng, Peka, Ribaneng), 2 inputs (NPK 50kg, Maize seed
+      PAN 6479 25kg), and 2 farmer categories (Smallholder primary; Emerging
+      pilot at 2 centres).
+
+im_allocation_line:
+  # ----- SMALLHOLDER (8 lines: 4 centres × 2 inputs) -----
+  - code: AL_2025-26_MOR_NPK_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_MORIJA
+    input_code: FERT_NPK_50KG
+    farmer_category: SMALLHOLDER
+    quantity: "80"
+    priority_weight: "1"
+    notes: Maseru small-holders, NPK basal application.
+  - code: AL_2025-26_MOR_SEED_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_MORIJA
+    input_code: SEED_MAIZE_PAN6479_25KG
+    farmer_category: SMALLHOLDER
+    quantity: "80"
+    priority_weight: "1"
+    notes: Maseru small-holders, maize seed.
+  - code: AL_2025-26_TEY_NPK_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_TEYATEYANENG
+    input_code: FERT_NPK_50KG
+    farmer_category: SMALLHOLDER
+    quantity: "50"
+    priority_weight: "1"
+    notes: Berea small-holders, NPK.
+  - code: AL_2025-26_TEY_SEED_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_TEYATEYANENG
+    input_code: SEED_MAIZE_PAN6479_25KG
+    farmer_category: SMALLHOLDER
+    quantity: "50"
+    priority_weight: "1"
+    notes: Berea small-holders, maize seed.
+  - code: AL_2025-26_PEK_NPK_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_PEKA
+    input_code: FERT_NPK_50KG
+    farmer_category: SMALLHOLDER
+    quantity: "60"
+    priority_weight: "1"
+    notes: Leribe small-holders, NPK.
+  - code: AL_2025-26_PEK_SEED_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_PEKA
+    input_code: SEED_MAIZE_PAN6479_25KG
+    farmer_category: SMALLHOLDER
+    quantity: "60"
+    priority_weight: "1"
+    notes: Leribe small-holders, maize seed.
+  - code: AL_2025-26_RIB_NPK_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_RIBANENG
+    input_code: FERT_NPK_50KG
+    farmer_category: SMALLHOLDER
+    quantity: "40"
+    priority_weight: "1"
+    notes: Mafeteng small-holders, NPK.
+  - code: AL_2025-26_RIB_SEED_SH
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_RIBANENG
+    input_code: SEED_MAIZE_PAN6479_25KG
+    farmer_category: SMALLHOLDER
+    quantity: "40"
+    priority_weight: "1"
+    notes: Mafeteng small-holders, maize seed.
+
+  # ----- EMERGING farmers (2 lines: pilot at Morija + Peka) -----
+  - code: AL_2025-26_MOR_NPK_EM
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_MORIJA
+    input_code: FERT_NPK_50KG
+    farmer_category: EMERGING
+    quantity: "20"
+    priority_weight: "2"
+    notes: Maseru emerging-farmers pilot, NPK only (seed via own savings).
+  - code: AL_2025-26_PEK_NPK_EM
+    plan_id: "_ref:im_allocation_plan:AP_PRG_2025_001_2025-26"
+    point_code: CP_PEKA
+    input_code: FERT_NPK_50KG
+    farmer_category: EMERGING
+    quantity: "15"
+    priority_weight: "2"
+    notes: Leribe emerging-farmers pilot, NPK.
+
+im_supplier:
+  - supplier_code: SUP_PANNAR
+    supplier_name: Pannar Seed (Pty) Ltd — Lesotho branch
+    supplier_type: MANUFACTURER
+    trading_license_no: TL-2024-0042
+    contact_phone: +266 2231 4500
+    contact_email: lesotho@pannar.com
+    contact_person: Mpho Lebusa
+    district: maseru
+    physical_address: 23 Industrial Road, Maseru
+    certification_number: SAFCERT-2024-PNR-099
+    certification_expiry: "2027-03-31"
+    is_active: "Y"
+  - supplier_code: SUP_LSC
+    supplier_name: Lesotho Seed Cooperative
+    supplier_type: COOPERATIVE
+    trading_license_no: TL-2023-0118
+    contact_phone: +266 2233 7700
+    contact_email: info@lesothoseed.coop
+    contact_person: "'Nthabeleng Maphalla"
+    district: berea
+    physical_address: Cooperative House, Teyateyaneng
+    certification_number: COOP-CERT-LSC-2024-001
+    certification_expiry: "2026-12-31"
+    is_active: "Y"
+  - supplier_code: SUP_SASOL_NITRO
+    supplier_name: Sasol Nitro Lesotho
+    supplier_type: DISTRIBUTOR
+    trading_license_no: TL-2024-0007
+    contact_phone: +266 2231 9000
+    contact_email: nitro.lesotho@sasol.com
+    contact_person: Tšeliso Mokoma
+    district: maseru
+    physical_address: Industrial Park, Phase 2, Maseru
+    certification_number: ICCERT-LS-2025-014
+    certification_expiry: "2026-08-15"
+    is_active: "Y"
+
+_seed_order:
+  - md_village                        # L1-1 — cascading_select test data (deploy before mm_field)
+  - mm_institution
+  - mm_service
+  - mm_catalog
+  - mm_determinant
+  - mm_registration
+  - mm_screen
+  - mm_field
+  - mm_action
+  - mm_required_doc
+  - mm_fee
+  - mm_benefit
+  - mm_role
+  - mm_role_screen
+  - mm_api                            # L4-1 — analyst-driven API endpoint declarations
+  - mm_capability                     # capability registry (code dedupe)
+  - mm_capability_field               # per-capability fields (no-code dedupe — pre-cleared)
+  # L3-1 Budget Engine — envelopes, source contributions, initial allocations
+  - budget_envelope
+  - budget_envelope_source
+  - budget_event                      # append-only — pre-cleared per NO_CODE_DEDUPE rule below
+  - subsidyApplication2025
+  # Phase 3 IM Slice 1 (after May 2026 cleanup) — IM master data + entities.
+  # md27input + md37collectionPoint reuse the legacy MD.27 / MD.37 chains
+  # already in the JWA (md27inputCategory has 8 production rows; md37
+  # is now loaded with the 60 real Resource Centres from the docx).
+  # md_input_unit, md_supplier_type, md_voucher_status, im_supplier are
+  # genuine gap-fillers authored fresh in Slice 1.
+  - md_input_unit
+  - md_supplier_type
+  - md_voucher_status
+  - md27input                         # legacy MD.27 chain (md27inputCategory is parent)
+  - md37collectionPoint               # 60 real Lesotho Resource Centres (replaces md45DistribPoint)
+  - im_supplier
+  # Phase 3 IM Slice 2 — inventory spine. Order matters: md37collectionPoint
+  # + md27input + im_supplier above are the FK targets for inventory + txns.
+  - im_inventory
+  - im_stock_transaction       # parent header (Slice 6d shape — no input/qty)
+  - im_stock_txn_line          # FormGrid children (Slice 6d) — _ref to txn parent
+  # Phase 3 IM Slice 3 — allocation plan + lines. Plan first (parent),
+  # then lines (children with plan_id _ref to the plan's UUID).
+  - im_allocation_plan
+  - im_allocation_line

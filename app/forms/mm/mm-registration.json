@@ -1,0 +1,462 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "mm_registration",
+    "name": "MM - Registration",
+    "tableName": "mm_registration",
+    "description": "A registration the citizen applies for, configured within a Service. Single Window: a service may have several. Per RegBB spec \u00a74.1.3 / \u00a77.2.1. Lesotho extensions per D6 (scoring) and D16 (attributesJson + acceptanceWindow placement).",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "noPermissionMessage": "",
+    "postProcessor": {
+      "className": "",
+      "properties": {}
+    },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Identity"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "serviceId",
+                "label": "Parent Service",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_service",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Registration Code (immutable within service)",
+                "size": "32",
+                "maxlength": "32",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "mm_registration",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Registration code already exists",
+                    "mandatory": "true",
+                    "regex": "",
+                    "errorFormatMsg": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Registration Name",
+                "size": "255",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "entityInstitutionId",
+                "label": "Entity Institution (in charge of this registration; optional)",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "mm_institution",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(use service's institution)",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "displayOrder",
+                "label": "Display Order",
+                "size": "8",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "integer",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "resultName",
+                "label": "Result Name (e.g. MCTS Identity Card)",
+                "size": "255",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "resultTemplateId",
+                "label": "Credential Template ID (optional)",
+                "size": "64",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "applicabilitySection",
+        "label": "Applicability"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "applicabilityKind",
+                "label": "Applicability Kind",
+                "options": [
+                  {
+                    "value": "mandatory_for_all",
+                    "label": "Mandatory for all",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "mandatory_for_specific",
+                    "label": "Mandatory for specific (gated by determinant)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "optional_for_all",
+                    "label": "Optional for all",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "optional_for_specific",
+                    "label": "Optional for specific (gated by determinant)",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "value": "optional_for_all",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "applicabilityDeterminantId",
+                "label": "Applicability Determinant ID (when *_specific)",
+                "size": "64",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "windowSection",
+        "label": "Acceptance Window (per D16)"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "acceptanceWindowFrom",
+                "label": "Window From",
+                "format": "yyyy-MM-dd",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.DatePicker",
+              "properties": {
+                "id": "acceptanceWindowTo",
+                "label": "Window To",
+                "format": "yyyy-MM-dd",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "scoringSection",
+        "label": "Eligibility Evaluation Strategy (per D6)"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "evaluationStrategy",
+                "label": "Evaluation Strategy",
+                "options": [
+                  {
+                    "value": "all_must_pass",
+                    "label": "All must pass (Boolean only)",
+                    "grouping": ""
+                  },
+                  {
+                    "value": "score_based",
+                    "label": "Score-based (sums priority/bonus rules)",
+                    "grouping": ""
+                  }
+                ],
+                "optionsBinder": {
+                  "className": "",
+                  "properties": {}
+                },
+                "value": "all_must_pass",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true",
+                    "type": "",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "minimumScore",
+                "label": "Minimum Score (hard-fail floor)",
+                "size": "8",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "false",
+                    "type": "double",
+                    "message": ""
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "passingThreshold",
+                "label": "Passing Threshold (auto-pass at or above)",
+                "size": "8",
+                "value": "0",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "false",
+                    "type": "double",
+                    "message": ""
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "scoringNotes",
+                "label": "Scoring Notes",
+                "rows": "3",
+                "cols": "40",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "metadataSection",
+        "label": "Metadata"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "100%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "attributesJson",
+                "label": "Attributes (JSON) \u2014 programmeType, seasonCode, campaignType, legalBasis, fundingSource, distribModelCode, etc.",
+                "rows": "6",
+                "cols": "60",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "description",
+                "label": "Description",
+                "rows": "4",
+                "cols": "60",
+                "validator": {
+                  "className": "",
+                  "properties": {}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

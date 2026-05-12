@@ -1,0 +1,56 @@
+{
+  "id": "dl_report_envelope_detail",
+  "name": "Report \u2014 envelope state per programme",
+  "useSession": "false",
+  "showPageSizeSelector": "false",
+  "pageSize": 0,
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT e.c_code AS envelope, e.c_programme_code AS programme, e.c_currency AS currency,\n              e.c_allocated_amount::text AS allocated,\n              COALESCE((SELECT sum(c_amount::numeric)/2 FROM app_fd_budget_event\n                        WHERE c_envelope_code = e.c_code AND c_event_type='COMMITMENT'), 0)::text AS committed,\n              COALESCE((SELECT sum(c_amount::numeric)/2 FROM app_fd_budget_event\n                        WHERE c_envelope_code = e.c_code AND c_event_type='EXPENSE'), 0)::text AS expensed,\n              (e.c_allocated_amount::numeric -\n               COALESCE((SELECT sum(c_amount::numeric)/2 FROM app_fd_budget_event\n                         WHERE c_envelope_code = e.c_code AND c_event_type='COMMITMENT'), 0)\n              )::text AS available\n       FROM app_fd_budget_envelope e WHERE e.c_status='active'\n       ORDER BY e.c_programme_code",
+      "countSql": "SELECT 1",
+      "primaryKey": "envelope"
+    }
+  },
+  "columns": [
+    {
+      "id": "col_envelope",
+      "name": "envelope",
+      "label": "Envelope"
+    },
+    {
+      "id": "col_programme",
+      "name": "programme",
+      "label": "Programme"
+    },
+    {
+      "id": "col_currency",
+      "name": "currency",
+      "label": "Currency"
+    },
+    {
+      "id": "col_allocated",
+      "name": "allocated",
+      "label": "Allocated"
+    },
+    {
+      "id": "col_committed",
+      "name": "committed",
+      "label": "Committed"
+    },
+    {
+      "id": "col_expensed",
+      "name": "expensed",
+      "label": "Expensed"
+    },
+    {
+      "id": "col_available",
+      "name": "available",
+      "label": "Available"
+    }
+  ],
+  "rowActions": [],
+  "actions": [],
+  "filters": []
+}

@@ -1,0 +1,165 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spApplicationDocV2",
+    "name": "Application Document Request (v2)",
+    "description": "One row per programme document requirement seeded onto an application. Farmer uploads file; case worker sets status (VERIFIED / REJECTED / RESUBMIT) on review. Supersedes legacy spApplicationDoc.",
+    "tableName": "sp_application_doc_v2",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "postProcessor": {
+      "className": "",
+      "properties": {}
+    },
+    "postProcessorRunOn": "create",
+    "permission": {
+      "className": "",
+      "properties": {}
+    },
+    "noPermissionMessage": ""
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {"id": "main", "label": "Document"},
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "50%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "parent_id", "useDefaultWhenEmpty": "", "value": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "programme_doc_requirement_id", "useDefaultWhenEmpty": "", "value": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "doc_code", "label": "Document type code",
+                            "value": "", "size": "", "maxlength": "60",
+                            "readonly": "true", "readonlyLabel": "", "encryption": "",
+                            "workflowVariable": "", "style": "", "requiredSanitize": "",
+                            "storeNumeric": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "doc_label", "label": "Document",
+                            "value": "", "size": "", "maxlength": "200",
+                            "readonly": "true", "readonlyLabel": "", "encryption": "",
+                            "workflowVariable": "", "style": "", "requiredSanitize": "",
+                            "storeNumeric": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "doc_mandatory", "label": "Mandatory (Y/N)",
+                            "value": "", "size": "", "maxlength": "1",
+                            "readonly": "true", "readonlyLabel": "", "encryption": "",
+                            "workflowVariable": "", "style": "", "requiredSanitize": "",
+                            "storeNumeric": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "accepted_formats", "label": "Accepted formats",
+                            "value": "", "size": "", "maxlength": "100",
+                            "readonly": "true", "readonlyLabel": "", "encryption": "",
+                            "workflowVariable": "", "style": "", "requiredSanitize": "",
+                            "storeNumeric": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.TextField",
+             "properties": {"id": "max_size_kb", "label": "Max size (KB)",
+                            "value": "", "size": "", "maxlength": "8",
+                            "readonly": "true", "readonlyLabel": "", "encryption": "",
+                            "workflowVariable": "", "style": "", "requiredSanitize": "",
+                            "storeNumeric": "true",
+                            "validator": {"className": "", "properties": {}}}}
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "50%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.FileUpload",
+             "properties": {"id": "uploaded_file", "label": "Upload file",
+                            "maxSize": "10240",
+                            "fileType": "pdf;jpg;jpeg;png;doc;docx;xlsx;txt;md",
+                            "fileTypeMsg": "Unsupported file type \u2014 use PDF, image, Office or text format",
+                            "maxSizeMsg": "File too large \u2014 maximum 10 MB",
+                            "multiple": "", "removeFile": "",
+                            "attachment": "true",
+                            "permissionType": "", "padding": "",
+                            "size": "", "readonly": "",
+                            "resizeMethod": "", "resizeWidth": "",
+                            "resizeQuality": "0.8", "resizeHeight": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.DatePicker",
+             "properties": {"id": "uploaded_at", "label": "Uploaded at",
+                            "yearRange": "c-2:c+1",
+                            "dataFormat": "yyyy-MM-dd HH:mm:ss",
+                            "format": "", "datePickerType": "",
+                            "currentDateAs": "", "endDateFieldId": "",
+                            "startDateFieldId": "", "readonly": "true",
+                            "allowManual": "", "workflowVariable": "",
+                            "placeholder": "", "iconIncluded": false,
+                            "value": "", "readonlyLabel": "", "disableWeekends": "",
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.SelectBox",
+             "properties": {"id": "status", "label": "Status",
+                            "value": "MISSING",
+                            "controlField": "", "multiple": "", "readonly": "",
+                            "size": "", "iconIncluded": false,
+                            "readonlyLabel": "", "workflowVariable": "",
+                            "options": [],
+                            "optionsBinder": {
+                              "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                              "properties": {
+                                "formDefId": "md64documentStatus",
+                                "idColumn": "code",
+                                "labelColumn": "name",
+                                "addEmptyOption": "",
+                                "emptyLabel": "",
+                                "groupingColumn": "",
+                                "useAjax": "",
+                                "extraCondition": "e.customProperties.isActive = 'Y'",
+                                "cacheInterval": ""
+                              }
+                            },
+                            "validator": {
+                              "className": "org.joget.apps.form.lib.DefaultValidator",
+                              "properties": {"type": "", "message": "", "mandatory": "true"}
+                            }}},
+            {"className": "org.joget.apps.form.lib.SelectBox",
+             "properties": {"id": "rejection_reason", "label": "Rejection reason (if rejected)",
+                            "value": "",
+                            "controlField": "", "multiple": "", "readonly": "",
+                            "size": "", "iconIncluded": false,
+                            "readonlyLabel": "", "workflowVariable": "",
+                            "options": [],
+                            "optionsBinder": {
+                              "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                              "properties": {
+                                "formDefId": "md65docRejReason",
+                                "idColumn": "code",
+                                "labelColumn": "name",
+                                "addEmptyOption": "true",
+                                "emptyLabel": "",
+                                "groupingColumn": "",
+                                "useAjax": "",
+                                "extraCondition": "e.customProperties.isActive = 'Y'",
+                                "cacheInterval": ""
+                              }
+                            },
+                            "validator": {"className": "", "properties": {}}}},
+            {"className": "org.joget.apps.form.lib.TextArea",
+             "properties": {"id": "reviewer_note", "label": "Reviewer note",
+                            "value": "", "rows": "3", "cols": "50",
+                            "readonly": "", "readonlyLabel": "", "encryption": "",
+                            "workflowVariable": "", "placeholder": "Notes from the document reviewer (optional)",
+                            "validator": {"className": "", "properties": {}}}}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+# =============================================================================
+# D1.E — FarmerDerivedRefresh plugin spec
+# Phase 1, Subsidy Adjustment Plan
+# Skill: joget-plugin-dev
+# =============================================================================
+
+plugin:
+  className: global.govstack.farmer.lib.FarmerDerivedRefresh
+  bundle:
+    name: farmer-derived-plugin
+    artifactId: farmer-derived
+    version: 8.1-SNAPSHOT
+    style: gam-plugins-style          # follow gam-plugins/gs-plugins layout
+  base_class: org.joget.plugin.base.DefaultApplicationPlugin
+  type: ApplicationPlugin              # workflow tool plugin
+  description: |
+    Recomputes spFarmerDerived for one farmer or all farmers. Reads from
+    farmerIncomePrograms (latest), farmerBasicInfo, parcelRegistration,
+    livestock_details, and spProgParticip — writes to spFarmerDerived.
+    Idempotent. Safe to run multiple times per day. Triggered by
+    (a) Joget scheduler nightly, and (b) inline tool activity at the
+    start of subsidy_application_review workflow (refreshOneFarmer).
+
+# ----------------------------------------------------------------------------
+# Plugin properties (the JSON config in packageActivityPluginMap)
+# ----------------------------------------------------------------------------
+plugin_properties_schema:
+  scope:
+    type: select
+    options: [all, single]
+    default: all
+    description: "all = every farmer; single = one farmer by farmerCode"
+  farmerCode:
+    type: string
+    default: ""
+    description: "When scope=single, the farmer to refresh. Supports #variable.farmerCode#"
+  staleThresholdDays:
+    type: integer
+    default: 7
+    description: "Skip farmers whose c_lastrefreshed < N days old (scope=all only)"
+  dryRun:
+    type: boolean
+    default: false
+    description: "When true, log intended writes without persisting"
+
+# When invoked from a workflow, wrap in MultiTools per joget-workflow-gen rule:
+multitools_invocation_example:
+  pluginName: org.joget.apps.app.lib.MultiTools
+  pluginProperties:
+    runInMultiThread: ""
+    comment: "Refresh derived attributes for the applicant"
+    tools:
+      - className: global.govstack.farmer.lib.FarmerDerivedRefresh
+        properties:
+          scope: single
+          farmerCode: "#variable.farmerCode#"
+          staleThresholdDays: "0"     # always refresh on application submission
+
+# ----------------------------------------------------------------------------
+# Logic specification
+# ----------------------------------------------------------------------------
+logic:
+
+  for_each_farmer_in_scope:
+
+    step_1_load_farmer_data:
+      reads:
+        - form: farmerBasicInfo
+          where: id = farmerCode (or by external code)
+          fields_used: [id, dateOfBirth, gender, district, agroEcologicalZone]
+        - form: farmerIncomePrograms
+          where: parent_id = farmerBasicInfo.id
+          order_by: dateModified DESC
+          limit: 1
+          fields_used:
+            - foodSecurityCode    # NEW from D1.B (self-reported)
+            - everOnISP
+            - creditDefault
+            - mainSourceIncome
+            - averageAnnualIncome
+            - monthlyExpenditure
+            - supportProgram
+
+    step_2_compute_household_aggregates:
+      # spFarmerDerived already has columns for these — confirm they're populated
+      # by some other mechanism, or include the computation here. Recommend
+      # including: makes this plugin the single source of truth.
+      reads:
+        - form: farmerHousehold
+          where: parent_id = farmerBasicInfo.id
+        - form: householdMemberForm     # FormGrid children
+          where: parent_id = farmerHousehold.id
+      computes:
+        - totalHouseholdMembers
+        - childrenUnder5
+        - childrenUnder18
+        - adultsOver65
+        - workingAgeMembers
+        - householdDisabilityCount
+        - householdChronicallyIllCount
+        - householdOrphanCount
+        - dependencyRatio  # = (childrenUnder18 + adultsOver65) / workingAgeMembers
+        - femaleHeadedHousehold
+
+    step_3_compute_land_aggregates:
+      reads:
+        - form: parcelRegistration
+          where: farmer_id = farmerBasicInfo.nationalId
+        - form: parcelLocation, parcelGeometry, parcelClassification (linked)
+      computes:
+        - totalLandOwned
+        - totalLandRented
+        - totalLandAvailable
+        - totalCultivatedLand
+        - landUtilizationRate
+
+    step_4_compute_livestock_aggregates:
+      reads:
+        - form: livestockDetailsForm
+          where: parent_id linked through farmerCropsLivestock
+      computes:
+        - hasLivestock
+        - totalLivestockCount
+        - cattleCount
+        - smallRuminantCount
+        - poultryCount
+        - pigCount
+
+    step_5_compute_program_history:    # NEW — closes Gap 4
+      reads:
+        - form: spProgParticip
+          where: farmerCode = current farmer
+      computes:
+        - lastBenefitDate: MAX(lastBenefitDate)
+        - totalBenefitsReceivedLT: SUM(totalBenefitReceived)
+        - programsInLast2Seasons: COUNT(DISTINCT programCode) WHERE enrollmentDate >= today - 24 months
+        - activeSupProgramCount: COUNT(*) WHERE status IN ('ACTIVE','ENROLLED')
+
+    step_6_reconcile_food_security:    # NEW — closes Gap 11
+      logic: |
+        // Priority 1: self-reported, if set and recent
+        if (farmerIncomePrograms.foodSecurityCode != null
+            && farmerIncomePrograms.dateModified >= today - 90 days) {
+          currentFoodSecurityStatus = farmerIncomePrograms.foodSecurityCode;
+        }
+        // Priority 2: derived from observable indicators
+        else {
+          // Heuristic — tune against domain expert input
+          if (vulnerabilityScore >= 75 && averageAnnualIncome < 5000) {
+            currentFoodSecurityStatus = 'CRISIS';
+          } else if (vulnerabilityScore >= 50) {
+            currentFoodSecurityStatus = 'SEVERE';
+          } else if (vulnerabilityScore >= 25 || lastSeasonTotalHarvest < 5) {
+            currentFoodSecurityStatus = 'MODERATE';
+          } else {
+            currentFoodSecurityStatus = 'SECURE';
+          }
+        }
+
+    step_7_compute_vulnerability:
+      # Uses existing logic if already implemented elsewhere; otherwise:
+      formula: |
+        score = 0;
+        score += (femaleHeadedHousehold ? 15 : 0);
+        score += min(20, householdDisabilityCount * 10);
+        score += min(15, householdOrphanCount * 7);
+        score += (creditDefault ? 10 : 0);
+        score += min(15, hazardCount * 5);
+        score += (averageAnnualIncome < 5000 ? 25 : 0);
+        return score; // 0..100
+
+    step_8_persist:
+      writes:
+        form: spFarmerDerived
+        upsert_key: farmerCode
+        fields_set:
+          # Existing fields
+          - everOnISP
+          - inCreditDefault
+          - mainIncomeSource
+          - averageAnnualIncome
+          - monthlyExpenditure
+          - femaleHeadedHousehold
+          - totalHouseholdMembers
+          - childrenUnder5, childrenUnder18, adultsOver65, workingAgeMembers
+          - householdDisabilityCount, householdChronicallyIllCount, householdOrphanCount
+          - dependencyRatio
+          - totalLandOwned, totalLandRented, totalLandAvailable, totalCultivatedLand
+          - landUtilizationRate
+          - hasLivestock, totalLivestockCount, cattleCount, smallRuminantCount, poultryCount, pigCount
+          - hasCrops, totalCropTypes, lastSeasonTotalHarvest, usesFertilizer, usesPesticides
+          - conservationPracticeCount, conservationPracticeList
+          - vulnerabilityScore
+          - hazardsExperienced, hazardCount
+          - activeSupProgramCount
+          - lastRefreshed: NOW()
+          - refreshSource: 'FarmerDerivedRefresh-v1'
+          - dataQualityScore: computed (% of expected fields populated)
+          # NEW from D1.C
+          - currentFoodSecurityStatus
+          - lastBenefitDate
+          - totalBenefitsReceivedLT
+          - programsInLast2Seasons
+          - derivedSnapshotDate: today
+
+    step_9_audit:
+      writes_to: audit_log
+      fields:
+        - operation: FARMER_DERIVED_REFRESH
+        - farmerCode
+        - duration_ms
+        - status: SUCCESS | PARTIAL | FAILURE
+        - error_message (when applicable)
+
+# ----------------------------------------------------------------------------
+# FormDataDao operations
+# ----------------------------------------------------------------------------
+form_data_dao:
+  reads:
+    - { form: farmerBasicInfo,      method: load,    by: id }
+    - { form: farmerIncomePrograms, method: find,    by: parent_id, sort: dateModified DESC, limit: 1 }
+    - { form: farmerHousehold,      method: find,    by: parent_id }
+    - { form: householdMemberForm,  method: find,    by: parent_id }
+    - { form: parcelRegistration,   method: find,    by: farmer_id }
+    - { form: parcelGeometry,       method: load,    by: id }
+    - { form: livestockDetailsForm, method: find,    by: parent_id }
+    - { form: spProgParticip,       method: find,    by: farmerCode }
+  writes:
+    - { form: spFarmerDerived, method: saveOrUpdate, by: farmerCode }
+
+# ----------------------------------------------------------------------------
+# Failure handling
+# ----------------------------------------------------------------------------
+failure_handling:
+  per_farmer_failure: |
+    Catch any RuntimeException; log to audit_log with status=FAILURE and
+    error_message (truncated to 500 chars). Continue to next farmer.
+    Set spFarmerDerived.dataQualityScore to a low value or NULL.
+  batch_failure: |
+    If >50% of farmers fail in scope=all, abort and surface to scheduler
+    log so the next morning's Joget admin sees it.
+  idempotency: |
+    Same farmer + same input data + same scope = same output rows.
+    Tested by running twice consecutively and asserting equal column values
+    (excluding lastRefreshed/derivedSnapshotDate/dateModified).
+
+# ----------------------------------------------------------------------------
+# Maven / OSGi packaging
+# ----------------------------------------------------------------------------
+maven_pom_notes:
+  packaging: bundle
+  use_maven_bundle_plugin: true
+  embed_dependencies:
+    - none expected — only joget-core API
+  exports: []
+  imports:
+    - org.joget.apps.app.service.*
+    - org.joget.apps.form.service.*
+    - org.joget.apps.form.dao.FormDataDao
+    - org.joget.commons.util.*
+    - org.joget.plugin.base.*
+
+activator_registration: |
+  // In Activator.java
+  bundleContext.registerService(
+    Plugin.class.getName(),
+    new FarmerDerivedRefresh(),
+    null
+  );
+
+# ----------------------------------------------------------------------------
+# Tests
+# ----------------------------------------------------------------------------
+unit_tests:
+  - test: empty_farmer
+    given: farmer with no spProgParticip rows
+    expect:
+      programsInLast2Seasons: 0
+      lastBenefitDate: null
+      totalBenefitsReceivedLT: 0
+      derivedSnapshotDate: today
+
+  - test: farmer_with_one_recent_participation
+    given: spProgParticip with enrollmentDate = today - 6 months, totalBenefitReceived = 800
+    expect:
+      programsInLast2Seasons: 1
+      lastBenefitDate: that row's lastBenefitDate
+      totalBenefitsReceivedLT: 800
+
+  - test: farmer_with_old_participation
+    given: spProgParticip with enrollmentDate = today - 36 months
+    expect:
+      programsInLast2Seasons: 0       # outside 24-month window
+      totalBenefitsReceivedLT: that row's totalBenefitReceived  # still in lifetime
+
+  - test: food_security_self_reported
+    given: farmerIncomePrograms.foodSecurityCode = 'SEVERE', dateModified = today
+    expect: currentFoodSecurityStatus = 'SEVERE'
+
+  - test: food_security_inferred_high_vulnerability
+    given: foodSecurityCode = null, vulnerabilityScore = 80, averageAnnualIncome = 3000
+    expect: currentFoodSecurityStatus = 'CRISIS'
+
+  - test: idempotent
+    given: farmer with full data
+    when: run plugin twice consecutively
+    expect: same column values both times (excluding lastRefreshed)
+
+  - test: scope_single_nonexistent
+    given: scope=single, farmerCode='FR-DOES-NOT-EXIST'
+    expect: 0 rows updated, audit log warn entry, exit code SUCCESS
+
+integration_test:
+  setup: |
+    Snapshot of dev DB with 5 test farmers and 8 spProgParticip rows
+    (mix of recent + old, mix of program types).
+  run: scope=all
+  asserts: |
+    - spFarmerDerived has 5 rows after run (one per test farmer)
+    - All 5 have c_lastrefreshed = today
+    - currentFoodSecurityStatus matches expected per fixture spec
+    - programsInLast2Seasons matches manual SQL count
+
+# ----------------------------------------------------------------------------
+# Acceptance per Phase 1 plan
+# ----------------------------------------------------------------------------
+acceptance:
+  - Plugin builds with Maven, deploys to Joget without OSGi errors
+  - scope=single, farmerCode=FR-XXXXXX updates that farmer's spFarmerDerived
+  - scope=all completes in <5 min for 10k farmers (current dev has 94 — should
+    finish in under 10s)
+  - All 5 new D1.C fields populated correctly
+  - derivedSnapshotDate equals today
+  - Audit log entry per farmer per run

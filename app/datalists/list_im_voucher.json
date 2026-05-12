@@ -1,0 +1,68 @@
+{
+  "id": "list_im_voucher",
+  "name": "List: IM - Voucher",
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "issued_date_disp", "id": "column_0", "label": "Issued",       "width": "100px" },
+    { "name": "code",             "id": "column_1", "label": "Voucher code", "width": "180px" },
+    { "name": "status_disp",      "id": "column_2", "label": "Status",       "width": "120px" },
+    { "name": "farmer_nid",       "id": "column_3", "label": "Farmer NID",   "width": "120px" },
+    { "name": "farmer_name",      "id": "column_4", "label": "Farmer name",  "width": "200px" },
+    { "name": "programme_name",   "id": "column_5", "label": "Programme",    "width": "180px" },
+    { "name": "input_name",       "id": "column_6", "label": "Input",        "width": "180px" },
+    { "name": "centre_name",      "id": "column_7", "label": "Centre",       "width": "180px" },
+    { "name": "qty_disp",         "id": "column_8", "label": "Qty",          "width": "90px",  "alignment": "right" },
+    { "name": "expiry_date_disp", "id": "column_9", "label": "Expires",      "width": "100px" },
+    { "name": "print_link",       "id": "column_10","label": "",             "width": "70px",  "renderHtml": "true" }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [
+    {
+      "name": "status",
+      "label": "Status",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "programme_code",
+      "label": "Programme code",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "point_code",
+      "label": "Centre code",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "farmer_nid",
+      "label": "Farmer NID",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "code",
+      "label": "Voucher code",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    }
+  ],
+  "pageSizeSelectorOptions": "10,20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT v.id, v.c_code AS code, COALESCE(to_char(CAST(v.c_issued_date AS DATE), 'YYYY-MM-DD'), v.c_issued_date) AS issued_date_disp, COALESCE(to_char(CAST(v.c_expiry_date AS DATE), 'YYYY-MM-DD'), v.c_expiry_date) AS expiry_date_disp, COALESCE(s.c_name, v.c_status) AS status_disp, v.c_status AS status, v.c_farmer_nid AS farmer_nid, v.c_farmer_name AS farmer_name, v.c_programme_code AS programme_code, COALESCE(reg.c_name, v.c_programme_code) AS programme_name, v.c_input_code AS input_code, COALESCE(inp.c_name, v.c_input_code) AS input_name, v.c_point_code AS point_code, COALESCE(cp.c_name, v.c_point_code) AS centre_name, COALESCE(v.c_quantity,'') || COALESCE(' ' || NULLIF(inp.c_default_unit,''), '') AS qty_disp, '<a target=\"_blank\" href=\"/jw/web/userview/farmersPortal/v/_/im_print_voucher?c=' || v.c_code || '&a=' || COALESCE(REPLACE(v.c_farmer_name,'&','%26'),'') || '&n=' || COALESCE(v.c_farmer_nid,'') || '&p=' || COALESCE(v.c_programme_code,'') || '&pn=' || COALESCE(REPLACE(reg.c_name,'&','%26'),'') || '&i=' || COALESCE(REPLACE(inp.c_name,'&','%26'), v.c_input_code, '') || '&cn=' || COALESCE(REPLACE(cp.c_name,'&','%26'), v.c_point_code, '') || '&q=' || COALESCE(v.c_quantity,'') || '&u=' || COALESCE(inp.c_default_unit,'') || '&e=' || COALESCE(to_char(CAST(v.c_expiry_date AS DATE), 'YYYY-MM-DD'), v.c_expiry_date, '') || '&d=' || COALESCE(to_char(CAST(v.c_issued_date AS DATE), 'YYYY-MM-DD'), v.c_issued_date, '') || '&s=' || COALESCE(v.c_status,'') || '\" style=\"color:#1F4E79;font-weight:600;\">Print</a>' AS print_link FROM app_fd_im_voucher v LEFT JOIN app_fd_md_voucher_status s ON s.c_code = v.c_status LEFT JOIN app_fd_mm_registration reg ON reg.c_code = v.c_programme_code LEFT JOIN app_fd_md27input inp ON inp.c_code = v.c_input_code LEFT JOIN app_fd_md37collectionPoint cp ON cp.c_code = v.c_point_code ORDER BY v.c_issued_date DESC NULLS LAST, v.c_code DESC",
+      "countSql": "SELECT count(*) FROM app_fd_im_voucher",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

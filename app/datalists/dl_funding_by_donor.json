@@ -1,0 +1,35 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "donor_code",        "id": "column_dc",   "label": "Code",            "width": "100px" },
+    { "name": "donor_name",        "id": "column_dn",   "label": "Donor",           "width": "260px" },
+    { "name": "country",           "id": "column_ctry", "label": "Region",          "width": "150px" },
+    { "name": "num_programmes",    "id": "column_np",   "label": "Programmes",      "width": "100px", "alignment": "right" },
+    { "name": "donor_allocated",   "id": "column_da",   "label": "Allocated (LSL)", "width": "140px", "alignment": "right" },
+    { "name": "donor_committed",   "id": "column_dc2",  "label": "Committed",       "width": "140px", "alignment": "right" },
+    { "name": "donor_expensed",    "id": "column_de",   "label": "Expensed",        "width": "140px", "alignment": "right" },
+    { "name": "donor_remaining",   "id": "column_dr",   "label": "Remaining",       "width": "140px", "alignment": "right" },
+    { "name": "donor_used_pct",    "id": "column_dup",  "label": "Used %",          "width": "90px",  "alignment": "right" }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,50",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "IM Report: Funding by donor",
+  "id": "dl_funding_by_donor",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "WITH per_donor AS (SELECT d.c_code AS donor_code, d.c_name AS donor_name, COALESCE(d.c_country,'') AS country, COUNT(DISTINCT pf.c_programme_code) AS num_programmes, COALESCE(SUM(COALESCE(CAST(env.c_allocated_amount AS NUMERIC),0) * CAST(NULLIF(pf.c_share_percent,'') AS NUMERIC) / 100.0), 0) AS allocated_num, COALESCE(SUM(COALESCE(proj.committed,0) * CAST(NULLIF(pf.c_share_percent,'') AS NUMERIC) / 100.0), 0) AS committed_num, COALESCE(SUM(COALESCE(proj.expensed,0)  * CAST(NULLIF(pf.c_share_percent,'') AS NUMERIC) / 100.0), 0) AS expensed_num FROM app_fd_md_donor d LEFT JOIN app_fd_programme_funding pf ON pf.c_donor_code = d.c_code LEFT JOIN app_fd_budget_envelope env ON env.c_programme_code = pf.c_programme_code LEFT JOIN budget_projection proj ON proj.envelope_code = env.c_code GROUP BY d.c_code, d.c_name, d.c_country) SELECT donor_code, donor_name, country, num_programmes, to_char(allocated_num, 'FM999,999,999.00') AS donor_allocated, to_char(committed_num, 'FM999,999,999.00') AS donor_committed, to_char(expensed_num, 'FM999,999,999.00') AS donor_expensed, to_char(allocated_num - committed_num - expensed_num, 'FM999,999,999.00') AS donor_remaining, COALESCE(ROUND(((committed_num + expensed_num) * 100.0) / NULLIF(allocated_num,0), 1) || '%', '—') AS donor_used_pct FROM per_donor ORDER BY allocated_num DESC NULLS LAST, donor_code",
+      "countSql": "SELECT count(*) FROM app_fd_md_donor",
+      "primaryKey": "donor_code"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

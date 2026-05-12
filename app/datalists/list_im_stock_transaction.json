@@ -1,0 +1,89 @@
+{
+  "id": "list_im_stock_transaction",
+  "name": "List: IM - Stock Transaction",
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "txn_date",
+      "id": "column_0",
+      "label": "Date",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.DateFormatter",
+          "properties": { "format": "yyyy-MM-dd" }
+        }
+      ]
+    },
+    { "name": "code",     "id": "column_1", "label": "Txn code" },
+    { "name": "txn_type", "id": "column_2", "label": "Type" },
+    {
+      "name": "point_code",
+      "id": "column_3",
+      "label": "Point",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": { "formDefId": "md37collectionPoint", "idColumn": "code", "labelColumn": "name" }
+        }
+      ]
+    },
+    {
+      "name": "input_code",
+      "id": "column_4",
+      "label": "Input",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": { "formDefId": "md27input", "idColumn": "code", "labelColumn": "name" }
+        }
+      ]
+    },
+    { "name": "quantity", "id": "column_5", "label": "Qty" },
+    {
+      "name": "supplier_code",
+      "id": "column_6",
+      "label": "Supplier",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": { "formDefId": "im_supplier", "idColumn": "supplier_code", "labelColumn": "supplier_name" }
+        }
+      ]
+    },
+    { "name": "voucher_code", "id": "column_7", "label": "Voucher" },
+    { "name": "performed_by", "id": "column_8", "label": "By" }
+  ],
+  "pageSize": 0,
+  "orderBy": "txn_date",
+  "order": "DESC",
+  "filters": [
+    {
+      "name": "txn_type",
+      "label": "Type",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "point_code",
+      "label": "Point (code)",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    },
+    {
+      "name": "input_code",
+      "label": "Input (code)",
+      "type": { "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType", "properties": {} },
+      "operator": "AND"
+    }
+  ],
+  "pageSizeSelectorOptions": "10,20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": { "formDefId": "im_stock_transaction" }
+  },
+  "actions": []
+}

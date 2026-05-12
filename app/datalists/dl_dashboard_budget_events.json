@@ -1,0 +1,36 @@
+{
+  "id": "dl_dashboard_budget_events",
+  "name": "Dashboard \u2014 budget event types",
+  "useSession": "false",
+  "showPageSizeSelector": "false",
+  "pageSize": 0,
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT c_event_type AS event_type, count(*)::text AS count, COALESCE(sum(c_amount::numeric),0)::text AS amount\n       FROM app_fd_budget_event GROUP BY event_type ORDER BY count DESC",
+      "countSql": "SELECT 1",
+      "primaryKey": "event_type"
+    }
+  },
+  "columns": [
+    {
+      "id": "col_event_type",
+      "name": "event_type",
+      "label": "Event type"
+    },
+    {
+      "id": "col_count",
+      "name": "count",
+      "label": "Count"
+    },
+    {
+      "id": "col_amount",
+      "name": "amount",
+      "label": "Amount"
+    }
+  ],
+  "rowActions": [],
+  "actions": [],
+  "filters": []
+}

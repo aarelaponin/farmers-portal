@@ -1,0 +1,80 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "md_supplier_type",
+    "name": "MD - Supplier Type (IM)",
+    "tableName": "md_supplier_type",
+    "description": "Master data — supplier categorisation (MANUFACTURER, DISTRIBUTOR, COOPERATIVE, GOVERNMENT_AGENCY). Phase 3 IM Slice 1. Per im-module SAD §5.1.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "section1",
+        "label": "Supplier Type"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Code (immutable)",
+                "size": "32",
+                "maxlength": "32",
+                "placeholder": "UPPER_SNAKE_CASE, e.g. MANUFACTURER, COOPERATIVE",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "md_supplier_type",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Supplier Type code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Display name",
+                "size": "100",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "description",
+                "label": "Description",
+                "rows": "4",
+                "cols": "60"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

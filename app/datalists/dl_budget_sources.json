@@ -1,0 +1,41 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    { "name": "envelope_code",     "id": "column_envelope", "label": "Envelope" },
+    { "name": "source_code",       "id": "column_src",      "label": "Source" },
+    { "name": "source_name",       "id": "column_srcname",  "label": "Donor / fund" },
+    { "name": "donor_class",       "id": "column_srctype",  "label": "Class" },
+    { "name": "currency",          "id": "column_cur",      "label": "Cur." },
+    { "name": "allocated_disp",    "id": "column_alloc",    "label": "Allocated" },
+    { "name": "available_disp",    "id": "column_avail",    "label": "Available" },
+    { "name": "used_disp",         "id": "column_used",     "label": "Reserved+PreCom+Com" },
+    { "name": "utilisation_pct",   "id": "column_util",     "label": "Util %", "cssClass": "regbb-budget-util" },
+    { "name": "last_event_at",     "id": "column_last",     "label": "Last event",
+      "format": {
+        "className": "org.joget.plugin.enterprise.DateFormatter",
+        "properties": { "format": "yyyy-MM-dd HH:mm" }
+      }
+    }
+  ],
+  "pageSize": 0,
+  "orderBy": "",
+  "filters": [],
+  "pageSizeSelectorOptions": "10,20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "Budget — Per-source breakdown",
+  "id": "dl_budget_sources",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT COALESCE(es.id, bps.envelope_code || ':' || bps.source_contribution_code) AS id, bps.envelope_code, bps.source_contribution_code AS source_code, COALESCE(es.c_source_name, bps.source_contribution_code) AS source_name, COALESCE(es.c_donor_class, '—') AS donor_class, COALESCE(env.c_currency, 'LSL') AS currency, to_char(bps.allocated, 'FM999,999,999.00') AS allocated_disp, to_char(bps.available, 'FM999,999,999.00') AS available_disp, to_char(bps.reserved + bps.pre_committed + bps.committed, 'FM999,999,999.00') AS used_disp, ROUND(((bps.reserved + bps.pre_committed + bps.committed + bps.expensed) * 100.0) / NULLIF(bps.allocated, 0), 1) || '%' AS utilisation_pct, bps.last_event_at FROM budget_projection_by_source bps LEFT JOIN app_fd_budget_envelope_source es ON es.c_code = bps.source_contribution_code LEFT JOIN app_fd_budget_envelope env ON env.c_code = bps.envelope_code ORDER BY bps.envelope_code, bps.source_contribution_code",
+      "countSql": "SELECT count(*) FROM budget_projection_by_source",
+      "primaryKey": "id"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

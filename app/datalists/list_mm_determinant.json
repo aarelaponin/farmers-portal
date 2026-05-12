@@ -1,0 +1,141 @@
+{
+  "useSession": "false",
+  "showPageSizeSelector": "true",
+  "rowActions": [],
+  "columns": [
+    {
+      "name": "code",
+      "id": "column_code",
+      "label": "Code",
+      "width": "260px"
+    },
+    {
+      "name": "scope",
+      "id": "column_scope",
+      "label": "Scope",
+      "width": "110px"
+    },
+    {
+      "name": "serviceId",
+      "id": "column_service",
+      "label": "Service",
+      "width": "180px",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_service",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "registrationId",
+      "id": "column_registration",
+      "label": "Programme (eligibility only)",
+      "width": "180px",
+      "formats": [
+        {
+          "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+          "properties": {
+            "formDefId": "mm_registration",
+            "idColumn": "code",
+            "labelColumn": "name"
+          }
+        }
+      ]
+    },
+    {
+      "name": "tabCode",
+      "id": "column_tab",
+      "label": "Tab (quality only)",
+      "width": "120px"
+    },
+    {
+      "name": "ruleType",
+      "id": "column_ruletype",
+      "label": "Rule type (eligibility)",
+      "width": "120px"
+    },
+    {
+      "name": "severity",
+      "id": "column_severity",
+      "label": "Severity (quality)",
+      "width": "100px"
+    },
+    {
+      "name": "triggerOn",
+      "id": "column_trigger",
+      "label": "Triggers on",
+      "width": "100px"
+    },
+    {
+      "name": "aggregation",
+      "id": "column_aggregation",
+      "label": "Aggregation",
+      "width": "120px"
+    },
+    {
+      "name": "name",
+      "id": "column_name",
+      "label": "Name",
+      "width": "200px"
+    }
+  ],
+  "pageSize": 0,
+  "orderBy": "scope",
+  "order": "ASC",
+  "filters": [
+    {
+      "name": "scope",
+      "label": "Scope (eligibility / quality / bot_pull / …)",
+      "type": {
+        "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+        "properties": {}
+      },
+      "operator": "AND"
+    },
+    {
+      "name": "serviceId",
+      "label": "Service",
+      "type": {
+        "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+        "properties": {}
+      },
+      "operator": "AND"
+    },
+    {
+      "name": "code",
+      "label": "Code (partial match)",
+      "type": {
+        "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+        "properties": {}
+      },
+      "operator": "AND"
+    },
+    {
+      "name": "severity",
+      "label": "Severity (quality only — error / warning)",
+      "type": {
+        "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+        "properties": {}
+      },
+      "operator": "AND"
+    }
+  ],
+  "pageSizeSelectorOptions": "10,20,50,100",
+  "buttonPosition": "bothLeft",
+  "checkboxPosition": "left",
+  "name": "List: MM - Rule (unified — ADR-031)",
+  "id": "list_mm_determinant",
+  "binder": {
+    "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+    "properties": {
+      "formDefId": "mm_determinant"
+    }
+  },
+  "actions": [],
+  "order": ""
+}

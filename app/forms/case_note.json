@@ -1,0 +1,114 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "case_note",
+    "name": "Case Note",
+    "tableName": "case_note",
+    "description": "Free-form operator notes appended to an application. Append-only thread shown on the operator review form. Coexists with audit_log (which records lifecycle state transitions). Notes are operator-only — not exposed to citizens. Per the operator case-log v1 design.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "noteSection", "label": "" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.CustomHTML",
+              "properties": {
+                "id": "contextHeader",
+                "label": "",
+                "value": "<div id=\"caseNoteCtxHint\" style=\"background:#eef0fa;border-left:4px solid #3388ff;padding:10px 14px;margin:0 0 14px;border-radius:4px;font-size:0.95em;\"><div style=\"color:#777;\">Loading application context…</div></div><script>(function(){var id=new URLSearchParams(location.search).get('app_id')||'';if(!id){return;}var reviewUrl='/jw/web/userview/farmersPortal/v/_/subsidyApplicationOperator2025_crud?id='+encodeURIComponent(id)+'&_mode=edit';var box=document.getElementById('caseNoteCtxHint');var backLink='<a href=\"'+reviewUrl+'\" style=\"color:#3388ff;text-decoration:none;font-size:0.9em;\">← Back to application review (without saving)</a>';function render(name,nid,prog,district){var label=(name?name:'(name unknown)')+(nid?' · NID '+nid:'')+(prog?' · '+prog:'')+(district?' · '+district:'');box.innerHTML='<div style=\"font-weight:600;margin-bottom:4px;color:#1a1a4a;\">Adding note to application</div><div style=\"color:#222;font-size:1em;margin-bottom:6px;\">'+label+'</div><div>'+backLink+'</div>';}fetch('/jw/web/json/data/list/farmersPortal/list_subsidyApplicationOperator2025?_filter_id='+encodeURIComponent(id)+'&page=1&pageSize=1',{credentials:'same-origin'}).then(function(r){return r.json();}).then(function(env){var rows=(env&&env.data)||[];if(rows.length===0){render('','','','');return;}var row=rows[0];render(row.full_name||'',row.national_id||'',row.applied_programme||'',row.district||'');}).catch(function(e){render('','','','');});\n\n// Post-save redirect — only ARMED after the operator clicks Save.\n// Joget's add-mode reload appends `?_mode=add&_submitted=true` or shows\n// a \"Form Submitted\" banner after a successful submit; we listen for the\n// form's submit event, then begin watching the DOM for that banner\n// appearing AFTER submit. This guards against false-positives from\n// banner text that may already be on the page at initial render.\nfunction armPostSaveRedirect(){var redirected=false;function fire(){if(redirected)return;redirected=true;setTimeout(function(){window.location.href=reviewUrl;},600);}function attach(){var forms=document.querySelectorAll('form');for(var i=0;i<forms.length;i++){var f=forms[i];if(f.dataset.cnArm)continue;f.dataset.cnArm='1';f.addEventListener('submit',function(){var deadline=Date.now()+30000;var t=setInterval(function(){if(redirected||Date.now()>deadline){clearInterval(t);return;}var alerts=document.querySelectorAll('.alert, [class*=\"alert-success\"], .form-submitted, [id*=\"submitted\"]');for(var j=0;j<alerts.length;j++){if(/submitted/i.test(alerts[j].textContent||'')){clearInterval(t);fire();return;}}},250);});}}attach();new MutationObserver(attach).observe(document.body,{childList:true,subtree:true});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',armPostSaveRedirect);}else{armPostSaveRedirect();}})();</script>"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "application_id",
+                "label": "",
+                "value": "#requestParam.app_id#",
+                "useDefaultWhenEmpty": "true",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "Application id required" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "author",
+                "label": "",
+                "value": "#currentUser.username#",
+                "useDefaultWhenEmpty": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "created_at",
+                "label": "",
+                "value": "#date.format('yyyy-MM-dd HH:mm:ss')#",
+                "useDefaultWhenEmpty": "true"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "note_kind",
+                "label": "Note Kind",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md_case_note_kind",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "groupingColumn": "",
+                    "extraCondition": "",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "Choose a kind...",
+                    "useAjax": "",
+                    "cacheInterval": ""
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "Please pick a note kind" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "note_text",
+                "label": "Note",
+                "rows": "5",
+                "cols": "60",
+                "placeholder": "Free-form note — what you saw, who you spoke to, what should happen next...",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true", "type": "", "message": "Note text is required" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

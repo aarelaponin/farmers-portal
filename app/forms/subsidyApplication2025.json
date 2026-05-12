@@ -1,0 +1,58 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "subsidyApplication2025",
+    "name": "2025 Subsidy Application",
+    "tableName": "subsidy_app_2025",
+    "description": "Citizen-facing application for the 2025 Subsidy service. One Meta Wizard widget renders the six mm_screen rows under SUBSIDY_2025 as tabs (intro → applicant → parcel → crops → documents → review). All tabs persist into the same row in subsidy_app_2025; per-programme rules apply on submit via Determinants.",
+    "loadBinder":  { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "global.govstack.regbb.engine.binder.RegBbApplicationStoreBinder", "properties": {} },
+    "permission":  { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secWizard", "label": "" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "global.govstack.regbb.engine.element.MetaWizardElement",
+              "properties": {
+                "id": "appWizard",
+                "serviceId": "SUBSIDY_2025",
+                "screenIds": "",
+                "readonly": "N"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "eligibility_outcome",
+                "label": "Eligibility outcome (engine-populated)",
+                "value": "",
+                "useDefaultWhenEmpty": "false",
+                "workflowVariable": ""
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.HiddenField",
+              "properties": {
+                "id": "status",
+                "label": "Application status (engine-populated)",
+                "value": "",
+                "useDefaultWhenEmpty": "false",
+                "workflowVariable": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

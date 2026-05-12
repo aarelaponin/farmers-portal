@@ -1,0 +1,31 @@
+{
+  "id": "dl_dashboard_kpi",
+  "name": "Dashboard — KPI aggregates",
+  "useSession": "false",
+  "showPageSizeSelector": "false",
+  "pageSize": 1,
+  "binder": {
+    "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+    "properties": {
+      "datasource": "default",
+      "sql": "SELECT (SELECT count(*) FROM app_fd_farmerbasicinfo) AS farmers, (SELECT count(*) FROM app_fd_parcelregistration) AS parcels, (SELECT count(*) FROM app_fd_budget_envelope WHERE c_status='active') AS programmes, (SELECT count(*) FROM app_fd_subsidy_app_2025) AS applications, (SELECT count(*) FROM app_fd_subsidy_app_2025 WHERE c_status IN ('approved','auto_approved')) AS applications_approved, (SELECT count(*) FROM app_fd_im_voucher) AS vouchers_total, (SELECT count(*) FROM app_fd_im_voucher WHERE c_status='redeemed') AS vouchers_redeemed, (SELECT COALESCE(sum(c_allocated_amount::numeric),0) FROM app_fd_budget_envelope WHERE c_status='active') AS budget_allocated, (SELECT COALESCE(sum(c_amount::numeric),0)/2 FROM app_fd_budget_event WHERE c_event_type='COMMITMENT' AND c_direction='debit') AS budget_committed, (SELECT COALESCE(sum(c_amount::numeric),0)/2 FROM app_fd_budget_event WHERE c_event_type='EXPENSE' AND c_direction='debit') AS budget_expensed",
+      "countSql": "SELECT 1",
+      "primaryKey": "farmers"
+    }
+  },
+  "columns": [
+    {"id": "col_farmers",            "name": "farmers",             "label": "Farmers"},
+    {"id": "col_parcels",            "name": "parcels",             "label": "Parcels"},
+    {"id": "col_programmes",         "name": "programmes",          "label": "Programmes"},
+    {"id": "col_applications",       "name": "applications",        "label": "Applications"},
+    {"id": "col_apps_approved",      "name": "applications_approved","label": "Approved"},
+    {"id": "col_vouchers_total",     "name": "vouchers_total",      "label": "Vouchers"},
+    {"id": "col_vouchers_redeemed",  "name": "vouchers_redeemed",   "label": "Redeemed"},
+    {"id": "col_budget_allocated",   "name": "budget_allocated",    "label": "Allocated"},
+    {"id": "col_budget_committed",   "name": "budget_committed",    "label": "Committed"},
+    {"id": "col_budget_expensed",    "name": "budget_expensed",     "label": "Expensed"}
+  ],
+  "rowActions": [],
+  "actions": [],
+  "filters": []
+}

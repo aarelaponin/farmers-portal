@@ -1,0 +1,111 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "mm_capability_field",
+    "name": "MM - Capability Field",
+    "tableName": "mm_capability_field",
+    "description": "Per-field SQL definition for an mm_capability. Rule references $registry.<capability>.<code> resolve via this row's expression + filters. Named placeholders supported: :nid (applicant NID), :applicationId (current row id, empty in add-mode), and any key on EvalContext.data accessible as :<key> (e.g. :applied_programme).",
+    "loadBinder":  { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "storeBinder": { "className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {} },
+    "permission":  { "className": "", "properties": {} },
+    "noPermissionMessage": "",
+    "postProcessor": { "className": "", "properties": {} },
+    "postProcessorRunOn": "create"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": { "id": "secMain", "label": "Field" },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "capability_code",
+                "label": "Capability (FK to mm_capability.code)",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true" } }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Field code (the third segment of $registry.<cap>.<code>)",
+                "placeholder": "first_name | cultivated_total | prior_applications_this_programme",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true" } }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": { "id": "name", "label": "Display name" }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "result_type",
+                "label": "Result type",
+                "options": [
+                  { "value": "scalar",    "label": "scalar — single value (column read or aggregate)" },
+                  { "value": "first_row", "label": "first_row — first row's first column (LIMIT 1)" }
+                ],
+                "addEmptyOption": "false",
+                "value": "scalar"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "source_table",
+                "label": "Source table (or view)",
+                "placeholder": "app_fd_farmerbasicinfo",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true" } }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "expression",
+                "label": "SELECT expression",
+                "placeholder": "c_first_name | count(*) | sum(c_area_hectares) | TRIM(COALESCE(c_first_name,'') || ' ' || COALESCE(c_last_name,''))",
+                "rows": "3", "cols": "80",
+                "validator": { "className": "org.joget.apps.form.lib.DefaultValidator", "properties": { "mandatory": "true" } }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "where_clause",
+                "label": "WHERE clause (with named placeholders)",
+                "placeholder": "c_national_id = :nid AND c_applied_programme = :applied_programme AND id <> :applicationId",
+                "rows": "3", "cols": "80"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "default_when_no_anchor",
+                "label": "Default when applicant NID is empty",
+                "placeholder": "0 | (leave empty for null)"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "default_when_no_row",
+                "label": "Default when query returns nothing",
+                "placeholder": "0 | (leave empty for null)"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": { "id": "description", "label": "Description / notes", "rows": "2", "cols": "80" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
