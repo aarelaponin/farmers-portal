@@ -1,0 +1,36 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "distPointName",
+            "id": "column_0",
+            "label": "Point Name"
+        },
+        {
+            "name": "distPointType",
+            "id": "column_1",
+            "label": "Type"
+        },
+        {
+            "name": "districtCode",
+            "id": "column_2",
+            "label": "District"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Distribution Point Details",
+    "id": "list_imDistPtDetails",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "imDistPtDetails"}
+    },
+    "actions": [],
+    "order": ""
+}

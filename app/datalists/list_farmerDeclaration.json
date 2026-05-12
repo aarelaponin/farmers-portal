@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "parent_id",
+            "id": "column_0",
+            "label": "parent_id"
+        },
+        {
+            "name": "declaration_key",
+            "id": "column_1",
+            "label": "declaration_key"
+        },
+        {
+            "name": "declarationHeader",
+            "id": "column_2",
+            "label": ""
+        },
+        {
+            "name": "declarationText",
+            "id": "column_3",
+            "label": ""
+        },
+        {
+            "name": "declarationConsent",
+            "id": "column_4",
+            "label": ""
+        },
+        {
+            "name": "declarationFullName",
+            "id": "column_5",
+            "label": "Full Name (as per National ID)"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 01.07 - Farmer Declaration",
+    "id": "list_farmerDeclaration",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "farmerDeclaration"}
+    },
+    "actions": [],
+    "order": ""
+}

@@ -1,0 +1,62 @@
+# app_fd_md08educationlevel
+# 6 row(s) at sync time
+- id: "0ace5090-d641-4c7c-be32-4bf7f55de020"
+  datecreated: "2026-01-26 17:02:47.223000"
+  datemodified: "2026-01-26 17:02:47.223000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "unskilled"
+  c_name: "Unskilled/No Formal Education"
+
+- id: "1f14c8dd-8220-4876-a1f0-392c11638587"
+  datecreated: "2026-01-26 17:02:45.023000"
+  datemodified: "2026-01-26 17:02:45.023000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "university_degree"
+  c_name: "University Degree"
+
+- id: "6b6b78b9-800c-4959-b1ac-c67b50fc45ad"
+  datecreated: "2026-01-26 17:02:45.453000"
+  datemodified: "2026-01-26 17:02:45.453000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "college_diploma"
+  c_name: "College Diploma"
+
+- id: "9bc6cb17-88c4-48a9-87f1-f9353541c01c"
+  datecreated: "2026-01-26 17:02:45.872000"
+  datemodified: "2026-01-26 17:02:45.872000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "college_certificate"
+  c_name: "College Certificate"
+
+- id: "f30ac3f0-cf32-461a-81f0-3249e64b6450"
+  datecreated: "2026-01-26 17:02:46.738000"
+  datemodified: "2026-01-26 17:02:46.738000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "primary_school"
+  c_name: "Primary School"
+
+- id: "f32ce5ce-9cd7-4fea-ab5d-6606fbcee3b2"
+  datecreated: "2026-01-26 17:02:46.307000"
+  datemodified: "2026-01-26 17:02:46.307000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "high_school"
+  c_name: "High School"
+

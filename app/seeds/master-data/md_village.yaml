@@ -1,0 +1,134 @@
+# app_fd_md_village
+# 12 row(s) at sync time
+- id: "07005f04-4ba1-4075-83e7-9cd3606a4c21"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "mokhotlong-mapholaneng"
+  c_district: "mokhotlong"
+  c_name: "Mapholaneng"
+
+- id: "1458a30d-2f2d-4d92-ad77-121cc7b7a0e3"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "mafeteng-matlakeng"
+  c_district: "mafeteng"
+  c_name: "Matlakeng"
+
+- id: "5168541c-869b-490b-9760-1cd4ad953ab2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "mafeteng-phamotse"
+  c_district: "mafeteng"
+  c_name: "Ha Phamotse"
+
+- id: "7d02ae58-56e8-4b1e-b067-86a770e0e8b5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "maseru-thetsane"
+  c_district: "maseru"
+  c_name: "Thetsane"
+
+- id: "9ebaafe3-918c-4f77-9143-a7c9094e1671"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "maseru-mabote"
+  c_district: "maseru"
+  c_name: "Ha Mabote"
+
+- id: "a8b239d9-b544-414c-ae56-ca2c623b039c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "mokhotlong-sehonghong"
+  c_district: "mokhotlong"
+  c_name: "Sehonghong"
+
+- id: "aa1b7965-65ae-4dc6-9b6e-b908589c8190"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "mokhotlong-letseng"
+  c_district: "mokhotlong"
+  c_name: "Letšeng"
+
+- id: "ad26a8c9-fdbb-4da9-ae6d-02ff14cf0bd3"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "berea-mantsi"
+  c_district: "berea"
+  c_name: "Ha Mantsi"
+
+- id: "e7626dde-6202-4fc2-94c2-2f903f4eabd6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "berea-teyateyaneng"
+  c_district: "berea"
+  c_name: "Teyateyaneng"
+
+- id: "e8cafb61-94e8-4f2f-84ba-1b208398c958"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "mafeteng-mantsupa"
+  c_district: "mafeteng"
+  c_name: "Mantšupa"
+
+- id: "ea8a21a8-bda5-471d-b9a2-65f5a85b87ae"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "maseru-khubetsoana"
+  c_district: "maseru"
+  c_name: "Khubetsoana"
+
+- id: "fdfbf7e6-7682-46de-8ee8-b0b2a15a8668"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "berea-pulane"
+  c_district: "berea"
+  c_name: "Ha Pulane"
+

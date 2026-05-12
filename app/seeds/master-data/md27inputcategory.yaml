@@ -1,0 +1,114 @@
+# app_fd_md27inputcategory
+# 8 row(s) at sync time
+- id: "040a1471-42bd-4117-86ec-0ca9e86233c0"
+  datecreated: "2026-01-26 17:05:15.773000"
+  datemodified: "2026-01-26 17:05:15.773000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "60"
+  c_subcategory_source: ""
+  c_code: "STORAGE"
+  c_name: "Storage Materials"
+  c_default_unit: "units"
+  c_has_subcategory: "No"
+
+- id: "1410057b-cd9f-41ec-996b-20e293f61a85"
+  datecreated: "2026-01-26 17:05:14.079000"
+  datemodified: "2026-01-26 17:05:14.079000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "70"
+  c_subcategory_source: "md27pesticide"
+  c_code: "PESTICIDES"
+  c_name: "Pesticides"
+  c_default_unit: "litres"
+  c_has_subcategory: "Yes"
+
+- id: "453cd421-1d51-46c2-8561-0d7baf02ac0b"
+  datecreated: "2026-01-26 17:05:13.220000"
+  datemodified: "2026-01-26 17:05:13.220000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "70"
+  c_subcategory_source: "md19crops"
+  c_code: "SEEDS"
+  c_name: "Seeds"
+  c_default_unit: "kg"
+  c_has_subcategory: "Yes"
+
+- id: "67d0141e-c2ac-45e0-a8a8-bf6a6eda8ed6"
+  datecreated: "2026-01-26 17:05:14.506000"
+  datemodified: "2026-01-26 17:05:14.506000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "80"
+  c_subcategory_source: "md27livestockSupply"
+  c_code: "LIVESTOCK_VET"
+  c_name: "Livestock & Veterinary"
+  c_default_unit: "units"
+  c_has_subcategory: "Yes"
+
+- id: "9ee8b0b9-173a-461d-85b2-35f1d58a1dc4"
+  datecreated: "2026-01-26 17:05:16.193000"
+  datemodified: "2026-01-26 17:05:16.193000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "50"
+  c_subcategory_source: ""
+  c_code: "OTHER"
+  c_name: "Other Inputs"
+  c_default_unit: "units"
+  c_has_subcategory: "No"
+
+- id: "a421ccc5-cc88-4f92-bad2-86b0b376f98b"
+  datecreated: "2026-01-26 17:05:13.643000"
+  datemodified: "2026-01-26 17:05:13.643000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "60"
+  c_subcategory_source: "md27fertilizer"
+  c_code: "FERTILIZER"
+  c_name: "Fertilizer"
+  c_default_unit: "50kg_bags"
+  c_has_subcategory: "Yes"
+
+- id: "a865eb60-472b-420d-8b77-e136c2de3c27"
+  datecreated: "2026-01-26 17:05:14.933000"
+  datemodified: "2026-01-26 17:05:14.933000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "75"
+  c_subcategory_source: "md27irrigation"
+  c_code: "IRRIGATION"
+  c_name: "Irrigation Materials"
+  c_default_unit: "metres"
+  c_has_subcategory: "Yes"
+
+- id: "e53eadbd-fe62-4f3b-955f-d6cda7434ae7"
+  datecreated: "2026-01-26 17:05:15.355000"
+  datemodified: "2026-01-26 17:05:15.355000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "50"
+  c_subcategory_source: ""
+  c_code: "FENCING"
+  c_name: "Fencing Materials"
+  c_default_unit: "metres"
+  c_has_subcategory: "No"
+

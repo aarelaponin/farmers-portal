@@ -1,0 +1,106 @@
+# app_fd_md76exitreason
+# 8 row(s) at sync time
+- id: "md76exitReason-completed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "COMPLETED"
+  c_name: "Programme Completed"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md76exitReason-deceased"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DECEASED"
+  c_name: "Deceased"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "md76exitReason-fraud"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FRAUD"
+  c_name: "Fraud Detected"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md76exitReason-ineligible"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "INELIGIBLE"
+  c_name: "Lost Eligibility"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md76exitReason-non_compliance"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "NON_COMPLIANCE"
+  c_name: "Non-Compliance"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md76exitReason-other"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "OTHER"
+  c_name: "Other"
+  c_description: null
+  c_displayorder: "8"
+  c_isactive: "Y"
+
+- id: "md76exitReason-relocated"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "RELOCATED"
+  c_name: "Relocated"
+  c_description: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+
+- id: "md76exitReason-voluntary"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "VOLUNTARY"
+  c_name: "Voluntary Withdrawal"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

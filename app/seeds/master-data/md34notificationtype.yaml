@@ -1,0 +1,317 @@
+# app_fd_md34notificationtype
+# 21 row(s) at sync time
+- id: "085096ef-2658-4570-a8c1-6a9abc548fdf"
+  datecreated: "2026-01-26 17:05:45.727000"
+  datemodified: "2026-01-26 17:05:45.727000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "INFO_REQUESTED"
+  c_send_via_email: "Yes"
+  c_name: "Additional Information Requested"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_006"
+  c_priority: "High"
+
+- id: "18e10d58-456b-47de-ab1b-439bb7620c21"
+  datecreated: "2026-01-26 17:05:48.885000"
+  datemodified: "2026-01-26 17:05:48.885000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "DEADLINE_WARNING"
+  c_send_via_email: "Yes"
+  c_name: "Application Deadline Warning"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_013"
+  c_priority: "High"
+
+- id: "24a84acb-f3db-4cee-878c-1f8e46e0c50f"
+  datecreated: "2026-01-26 17:05:43.526000"
+  datemodified: "2026-01-26 17:05:43.526000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "APP_SUBMITTED"
+  c_send_via_email: "Yes"
+  c_name: "Application Submitted Confirmation"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_001"
+  c_priority: "High"
+
+- id: "3d7ae525-f288-45ae-9e1e-19224551fac8"
+  datecreated: "2026-01-26 17:05:44.796000"
+  datemodified: "2026-01-26 17:05:44.796000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "ELIGIBILITY_FAILED"
+  c_send_via_email: "Yes"
+  c_name: "Eligibility Check Failed"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_004"
+  c_priority: "High"
+
+- id: "7aea4aa8-741e-41d9-bc54-eb76d9513033"
+  datecreated: "2026-01-26 17:05:43.947000"
+  datemodified: "2026-01-26 17:05:43.947000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "APP_RECEIVED"
+  c_send_via_email: "Yes"
+  c_name: "Application Received"
+  c_send_via_push: "No"
+  c_template_id: "TPL_002"
+  c_priority: "Medium"
+
+- id: "7b929eb5-33fb-4373-b4f2-29b4fc02accf"
+  datecreated: "2026-01-26 17:05:47.923000"
+  datemodified: "2026-01-26 17:05:47.923000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "REMINDER"
+  c_send_via_email: "Yes"
+  c_name: "Reminder/Deadline Notice"
+  c_send_via_push: "No"
+  c_template_id: "TPL_011"
+  c_priority: "Medium"
+
+- id: "7ba88e87-5464-44d2-88a0-356cb6629dc3"
+  datecreated: "2026-01-26 17:05:46.635000"
+  datemodified: "2026-01-26 17:05:46.635000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "APP_APPROVED"
+  c_send_via_email: "Yes"
+  c_name: "Application Approved"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_008"
+  c_priority: "Critical"
+
+- id: "7e028989-d7d8-4394-aae9-1daa9f781355"
+  datecreated: "2026-01-26 17:05:44.368000"
+  datemodified: "2026-01-26 17:05:44.368000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "ELIGIBILITY_PASSED"
+  c_send_via_email: "Yes"
+  c_name: "Eligibility Check Passed"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_003"
+  c_priority: "High"
+
+- id: "cbc3fe33-d1ac-4750-96eb-14b86183e0ad"
+  datecreated: "2026-01-26 17:05:46.151000"
+  datemodified: "2026-01-26 17:05:46.151000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "FIELD_VISIT_SCHEDULED"
+  c_send_via_email: "Yes"
+  c_name: "Field Visit Scheduled"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_007"
+  c_priority: "High"
+
+- id: "d3d93602-ae94-480d-8985-ee97bb91fa7a"
+  datecreated: "2026-01-26 17:05:47.073000"
+  datemodified: "2026-01-26 17:05:47.073000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "APP_REJECTED"
+  c_send_via_email: "Yes"
+  c_name: "Application Rejected"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_009"
+  c_priority: "Critical"
+
+- id: "d61a5af5-e1b1-4c28-8c10-576c8689e14b"
+  datecreated: "2026-01-26 17:05:45.300000"
+  datemodified: "2026-01-26 17:05:45.300000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "DOC_UNDER_REVIEW"
+  c_send_via_email: "No"
+  c_name: "Documents Under Review"
+  c_send_via_push: "No"
+  c_template_id: "TPL_005"
+  c_priority: "Low"
+
+- id: "d8475024-b89c-4957-a7b2-63985200bbd8"
+  datecreated: "2026-01-26 17:05:48.353000"
+  datemodified: "2026-01-26 17:05:48.353000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "No"
+  c_code: "STATUS_UPDATE"
+  c_send_via_email: "Yes"
+  c_name: "Status Update"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_012"
+  c_priority: "Low"
+
+- id: "f768e675-4634-44ec-8469-e0629127c89e"
+  datecreated: "2026-01-26 17:05:47.497000"
+  datemodified: "2026-01-26 17:05:47.497000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_send_via_sms: "Yes"
+  c_code: "BENEFIT_READY"
+  c_send_via_email: "Yes"
+  c_name: "Benefit Ready for Collection"
+  c_send_via_push: "Yes"
+  c_template_id: "TPL_010"
+  c_priority: "Critical"
+
+- id: "md34not-ext-app_docs_required"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "APP_DOCS_REQUIRED"
+  c_send_via_email: null
+  c_name: "Documents Required"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+
+- id: "md34not-ext-app_under_review"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "APP_UNDER_REVIEW"
+  c_send_via_email: null
+  c_name: "Application Under Review"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+
+- id: "md34not-ext-benefit_issued"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "BENEFIT_ISSUED"
+  c_send_via_email: null
+  c_name: "Benefit Issued"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+
+- id: "md34not-ext-custom"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "CUSTOM"
+  c_send_via_email: null
+  c_name: "Custom Event"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+
+- id: "md34not-ext-distribution_open"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "DISTRIBUTION_OPEN"
+  c_send_via_email: null
+  c_name: "Distribution Opened"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+
+- id: "md34not-ext-enrolled"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "ENROLLED"
+  c_send_via_email: null
+  c_name: "Enrolled in Programme"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+
+- id: "md34not-ext-manual"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "MANUAL"
+  c_send_via_email: null
+  c_name: "Manual Trigger"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+
+- id: "md34not-ext-overdue"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_send_via_sms: null
+  c_code: "OVERDUE"
+  c_send_via_email: null
+  c_name: "Overdue Notification"
+  c_send_via_push: null
+  c_template_id: null
+  c_priority: null
+

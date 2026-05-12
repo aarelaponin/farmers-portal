@@ -1,0 +1,93 @@
+# app_fd_md52programstatus
+# 7 row(s) at sync time
+- id: "md52programStatus-active"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ACTIVE"
+  c_name: "Active"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md52programStatus-approved"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "APPROVED"
+  c_name: "Approved"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md52programStatus-archived"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ARCHIVED"
+  c_name: "Archived"
+  c_description: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+
+- id: "md52programStatus-closed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "CLOSED"
+  c_name: "Closed"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "md52programStatus-draft"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DRAFT"
+  c_name: "Draft"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md52programStatus-pending_approval"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PENDING_APPROVAL"
+  c_name: "Pending Approval"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md52programStatus-rejected"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "REJECTED"
+  c_name: "Rejected"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+

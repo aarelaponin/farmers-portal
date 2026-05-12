@@ -1,0 +1,329 @@
+# app_fd_mm_action
+# 14 row(s) at sync time
+- id: "1dc0bfc5-b681-4149-b355-78420a008bf1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RESERVE_ON_SUBMIT_PRG_004"
+  c_triggerjson: |-
+    {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_004"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_004"
+  c_name: "Budget reservation on application submit (PRG_004)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "24c32f0d-e3ed-48e6-80ee-a6cb1ac6c724"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RELEASE_ON_REJECT_PRG_003"
+  c_triggerjson: |-
+    {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_003"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_003"
+  c_name: "Budget release on application reject/withdrawal (PRG_003)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "2a2048c7-96be-47ea-a3b4-82f1f5f93e56"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RELEASE_ON_REJECT_PRG_001"
+  c_triggerjson: |-
+    {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_001"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_001"
+  c_name: "Budget release on application reject/withdrawal (PRG_001)"
+  c_description: |-
+    Fires when a citizen's submitted application is rejected (auto or
+    operator) or withdrawn. Reverses the prior RESERVATION.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "31cc7924-acc7-474a-a964-9ee23055d6f1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RESERVE_ON_SUBMIT_PRG_002"
+  c_triggerjson: |-
+    {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_002"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_002"
+  c_name: "Budget reservation on application submit (PRG_002)"
+  c_description: |-
+    Fires on PRG_002 submission. Posts RESERVATION + 60/40 proration
+    to GOL/FAO-IFAD source contributions.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "3b37400e-42a3-491d-80f3-ccda5acabc9e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RESERVE_ON_SUBMIT_PRG_003"
+  c_triggerjson: |-
+    {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_003"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_003"
+  c_name: "Budget reservation on application submit (PRG_003)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "48e13857-41dd-43d5-9f97-f37cf0662ba6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RELEASE_ON_REJECT_PRG_004"
+  c_triggerjson: |-
+    {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_004"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_004"
+  c_name: "Budget release on application reject/withdrawal (PRG_004)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "4d2effa8-f2a9-4a0b-a110-a492281ef933"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_PRE_COMMIT_ON_APPROVE_PRG_003"
+  c_triggerjson: |-
+    {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_003"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_003"
+  c_name: "Budget pre-commitment on operator approval (PRG_003)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "4eb99a27-0d89-4df0-8ce3-5ae637766dcb"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_PRE_COMMIT_ON_APPROVE_PRG_004"
+  c_triggerjson: |-
+    {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_004"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_004"
+  c_name: "Budget pre-commitment on operator approval (PRG_004)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "4f40bd68-9a66-432b-ba6c-b2d5b19ae878"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_PRE_COMMIT_ON_APPROVE_PRG_001"
+  c_triggerjson: |-
+    {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_001"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_001"
+  c_name: "Budget pre-commitment on operator approval (PRG_001)"
+  c_description: |-
+    Fires when an operator approves a PRG_001 application. Money moves
+    from ENV.RESERVED to ENV.PRE_COMMITTED. A beneficiary sub-ledger
+    account opens (BNF_<applicationId>) holding the obligation.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "5952147b-a0f6-44bd-830a-d3373b84d3ad"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_PRE_COMMIT_ON_APPROVE_PRG_002"
+  c_triggerjson: |-
+    {"eventType":"PRE_COMMITMENT","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_002"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_002"
+  c_name: "Budget pre-commitment on operator approval (PRG_002)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "5a7c3fd7-1618-4cbe-a8fa-504474b29644"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "NOTIFY_APPROVAL"
+  c_triggerjson: |-
+    {"onStatus":"approved","workflowId":"subsidy_2025_approval_notification"}
+    
+  c_kind: "status_change"
+  c_registrationid: ""
+  c_name: "Notify approval — fire downstream workflow"
+  c_description: |-
+    When an operator approves an application, fire the configured Joget
+    process. Slice 2-b uses RegBbWorkflowEchoTool to verify the handoff;
+    production replaces with notification + downstream tool steps designed
+    in Joget Process Builder by sysadmin.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "67444842-6fef-41dc-b09e-c01e8e9f6389"
+  datecreated: "2026-05-11 14:35:17.931000"
+  datemodified: "2026-05-11 14:35:17.931000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_configjson: |-
+    {
+      "fieldMappings": [
+        {
+          "target": "full_name",
+          "sourceCapability": "farmer",
+          "sourceField": "full_name"
+        },
+        {
+          "target": "date_of_birth",
+          "sourceCapability": "farmer",
+          "sourceField": "date_of_birth"
+        },
+        {
+          "target": "contact_phone",
+          "sourceCapability": "farmer",
+          "sourceField": "contact_phone"
+        },
+        {
+          "target": "gender",
+          "sourceCapability": "farmer",
+          "sourceField": "gender"
+        },
+        {
+          "target": "email_address",
+          "sourceCapability": "farmer",
+          "sourceField": "email"
+        }
+      ]
+    }
+  c_code: "AUTOFILL_FROM_FARMER_REGISTRY"
+  c_triggerjson: |-
+    {"fieldId":"national_id"}
+    
+  c_kind: "bot_pull"
+  c_registrationid: ""
+  c_name: "Auto-fill identity tab from farmer registry on NID entry"
+  c_description: |-
+    D11 / L2-3 — eliminate re-entry. Citizen types NID; the system
+    resolves identity fields from the farmer registry. Doesn't overwrite
+    values the citizen has already typed (JS guards against that). Audit
+    row records the auto-fill via the underlying capability adapter call.
+    
+    Targets are limited to fields that (a) exist on the APP_APPLICANT
+    screen AND (b) are resolvable via FarmerByNidAdapter. Notably district
+    is NOT here — the registry's farmerbasicinfo table doesn't carry it,
+    and farmerresidency hasn't been populated yet. When the residency
+    tab gets stable columns, add a farmerResidencyByNidAdapter capability
+    and extend mappings here without touching the kernel.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "b8f5143a-3b92-4cf3-a19f-6fca5aa65921"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RESERVE_ON_SUBMIT_PRG_001"
+  c_triggerjson: |-
+    {"eventType":"RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_001"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_001"
+  c_name: "Budget reservation on application submit (PRG_001)"
+  c_description: |-
+    Fires when a citizen submits a PRG_001 application. Posts a
+    RESERVATION transaction: M2,000 moves from ENV_PRG_2025_001.AVAILABLE
+    to ENV_PRG_2025_001.RESERVED, with full source proration (single
+    source: GOL 100%).
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+
+- id: "ef09f64c-075b-4b8a-abc0-87f54edf4b9d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_configjson: null
+  c_code: "BUDGET_RELEASE_ON_REJECT_PRG_002"
+  c_triggerjson: |-
+    {"eventType":"RELEASE_RESERVATION","amountFormulaRule":"BENEFIT_AMOUNT_PRG_2025_002"}
+    
+  c_kind: "budget_event"
+  c_registrationid: "PRG_2025_002"
+  c_name: "Budget release on application reject/withdrawal (PRG_002)"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_conditiondeterminantid: null
+

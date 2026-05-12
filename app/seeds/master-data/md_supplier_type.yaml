@@ -1,0 +1,46 @@
+# app_fd_md_supplier_type
+# 4 row(s) at sync time
+- id: "5cc98277-eea0-441b-ab1b-8fe310fb96f2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "COOPERATIVE"
+  c_name: "Farmer cooperative"
+  c_description: "Cooperative society that aggregates supply from member farmers."
+
+- id: "ba8cd9b1-8ea5-434a-ace9-e085c043de23"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "MANUFACTURER"
+  c_name: "Manufacturer"
+  c_description: "Produces the input directly; primary source of supply."
+
+- id: "bebc141c-bf22-4dc0-8e97-3dee4b2a644d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "DISTRIBUTOR"
+  c_name: "Distributor / wholesaler"
+  c_description: "Imports or wholesales inputs to MAFSN distribution points."
+
+- id: "f199f88a-abb6-443d-9b72-7fdc9752fe34"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "GOVERNMENT_AGENCY"
+  c_name: "Government agency"
+  c_description: "State-owned supplier (e.g. seed parastatal)."
+

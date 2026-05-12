@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Name"
+        },
+        {
+            "name": "template_id",
+            "id": "column_2",
+            "label": "Template Id"
+        },
+        {
+            "name": "send_via_sms",
+            "id": "column_3",
+            "label": "Send Via Sms"
+        },
+        {
+            "name": "send_via_email",
+            "id": "column_4",
+            "label": "Send Via Email"
+        },
+        {
+            "name": "send_via_push",
+            "id": "column_5",
+            "label": "Send Via Push"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.34 - Notification Type",
+    "id": "list_md34notificationType",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md34notificationType"}
+    },
+    "actions": [],
+    "order": ""
+}

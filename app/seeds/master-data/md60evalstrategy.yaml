@@ -1,0 +1,41 @@
+# app_fd_md60evalstrategy
+# 3 row(s) at sync time
+- id: "md60evalStrategy-all_must_pass"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ALL_MUST_PASS"
+  c_name: "All Must Pass"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md60evalStrategy-score_based"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SCORE_BASED"
+  c_name: "Score-Based"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md60evalStrategy-weighted"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "WEIGHTED"
+  c_name: "Weighted"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

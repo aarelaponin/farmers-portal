@@ -1,0 +1,65 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "spApplicationEligibilityTab",
+    "name": "Application Tab 2 — Eligibility",
+    "tableName": "sp_application_elig_tab",
+    "loadBinder": {"className": "global.govstack.application.binder.SeedingTabLoadBinder", "properties": {}},
+    "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder", "properties": {}},
+    "permission": {"className": "", "properties": {}},
+    "postProcessor": {
+      "className": "global.govstack.application.hook.ApplicationSeedingTool",
+      "properties": {}
+    },
+    "postProcessorRunOn": "both"
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {"id": "main", "label": "Eligibility self-attestation"},
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {"width": "100%"},
+          "elements": [
+            {"className": "org.joget.apps.form.lib.HiddenField",
+             "properties": {"id": "parent_id", "label": "Parent (application id)"}},
+            {"className": "org.joget.apps.form.lib.CustomHTML",
+             "properties": {
+               "id": "intro",
+               "label": "",
+               "value": "<p style='color:#445566;font-size:13px;margin:0 0 10px 0;'>Answer each criterion. Rows are auto-populated from the chosen programme on first save — they reflect that programme's eligibility rules.</p>"}},
+            {"className": "org.joget.plugin.enterprise.FormGrid",
+             "properties": {
+               "id": "eligibilityGrid",
+               "label": "Eligibility criteria",
+               "formDefId": "spApplicationEligibility",
+               "pageSize": "30",
+               "showRowNumber": "true",
+               "loadBinder": {
+                 "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                 "properties": {
+                   "formDefId": "spApplicationEligibility",
+                   "foreignKey": "parent_id"
+                 }
+               },
+               "storeBinder": {
+                 "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                 "properties": {
+                   "formDefId": "spApplicationEligibility",
+                   "foreignKey": "parent_id"
+                 }
+               },
+               "options": [
+                 {"value": "criterion_label",    "label": "Criterion",    "formatType": "text",    "format": "", "width": "320"},
+                 {"value": "criterion_severity", "label": "Severity",     "formatType": "text",    "format": "", "width": "100"},
+                 {"value": "field_category",    "label": "Category",     "formatType": "text",    "format": "", "width": "100"},
+                 {"value": "applicant_response", "label": "Your answer",  "formatType": "options", "format": "", "width": "140"},
+                 {"value": "evaluator_note",    "label": "Note",         "formatType": "text",    "format": "", "width": "200"}
+               ]}}
+          ]
+        }
+      ]
+    }
+  ]
+}

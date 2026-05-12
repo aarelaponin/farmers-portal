@@ -1,0 +1,80 @@
+# app_fd_md70originaldecision
+# 6 row(s) at sync time
+- id: "md70originalDecision-deducted"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DEDUCTED"
+  c_name: "Benefit Deducted"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md70originalDecision-disqualified"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISQUALIFIED"
+  c_name: "Disqualified"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "md70originalDecision-ineligible"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "INELIGIBLE"
+  c_name: "Found Ineligible"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md70originalDecision-partial"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PARTIAL"
+  c_name: "Partially Approved"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md70originalDecision-rejected"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "REJECTED"
+  c_name: "Rejected"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md70originalDecision-suspended"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SUSPENDED"
+  c_name: "Suspended"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+

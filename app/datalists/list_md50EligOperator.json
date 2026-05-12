@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Operator Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Operator Name"
+        },
+        {
+            "name": "symbol",
+            "id": "column_2",
+            "label": "Display Symbol"
+        },
+        {
+            "name": "sqlTemplate",
+            "id": "column_3",
+            "label": "SQL Template"
+        },
+        {
+            "name": "applicableTypes",
+            "id": "column_4",
+            "label": "Applicable Field Types"
+        },
+        {
+            "name": "requiresValue",
+            "id": "column_5",
+            "label": "Requires Value Input"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.50 - Eligibility Operator",
+    "id": "list_md50EligOperator",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md50EligOperator"}
+    },
+    "actions": [],
+    "order": ""
+}

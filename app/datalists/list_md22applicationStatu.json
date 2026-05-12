@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Name"
+        },
+        {
+            "name": "description",
+            "id": "column_2",
+            "label": "Description"
+        },
+        {
+            "name": "sequence",
+            "id": "column_3",
+            "label": "Sequence"
+        },
+        {
+            "name": "is_active",
+            "id": "column_4",
+            "label": "Is Active"
+        },
+        {
+            "name": "is_final",
+            "id": "column_5",
+            "label": "Is Final"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.22 - Application Status",
+    "id": "list_md22applicationStatu",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md22applicationStatu"}
+    },
+    "actions": [],
+    "order": ""
+}

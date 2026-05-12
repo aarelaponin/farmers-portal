@@ -1,0 +1,54 @@
+# app_fd_md57prioritymodel
+# 4 row(s) at sync time
+- id: "md57priorityModel-community"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "COMMUNITY"
+  c_name: "Community-Based Selection"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md57priorityModel-fcfs"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FCFS"
+  c_name: "First-Come First-Served"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md57priorityModel-priority_score"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PRIORITY_SCORE"
+  c_name: "Priority Score Based"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md57priorityModel-random"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "RANDOM"
+  c_name: "Random Selection"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

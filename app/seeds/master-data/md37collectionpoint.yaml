@@ -1,0 +1,1332 @@
+# app_fd_md37collectionpoint
+# 70 row(s) at sync time
+- id: "0343d9c0-c111-4745-8c19-b3210c27b500"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_LETLAPENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-30.08154"
+  c_gps_longitude: "28.67364"
+  c_name: "Letlapeng"
+  c_capacity_per_day: null
+
+- id: "04a944c4-7df5-4dc0-b8c3-271639472ef5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MORIJA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.62333"
+  c_gps_longitude: "27.50417"
+  c_name: "Morija"
+  c_capacity_per_day: null
+
+- id: "05c0c873-3d38-4b81-9256-018f572987d9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_LESOBENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.71367"
+  c_gps_longitude: "28.42984"
+  c_name: "Lesobeng"
+  c_capacity_per_day: null
+
+- id: "0e0c3d4d-5e57-48f7-8baf-0d4a6243c7e0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_THABANG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mokhotlong"
+  c_gps_latitude: "-29.28639"
+  c_gps_longitude: "29.05250"
+  c_name: "Thabang"
+  c_capacity_per_day: null
+
+- id: "14a45a22-24f6-4e15-9117-24bb8197385a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_RAMOKOATSI"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mafeteng"
+  c_gps_latitude: "-29.74694"
+  c_gps_longitude: "27.34722"
+  c_name: "Ramokoatsi"
+  c_capacity_per_day: null
+
+- id: "1e7ab692-bbac-4abe-a2c1-c8a9b00a41e5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MAHOBONG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "leribe"
+  c_gps_latitude: "-28.93639"
+  c_gps_longitude: "28.16611"
+  c_name: "Mahobong"
+  c_capacity_per_day: null
+
+- id: "209e7fd0-94ff-40ab-b5f9-ebe23fd81bf1"
+  datecreated: "2026-01-26 17:06:04.093000"
+  datemodified: "2026-01-26 17:06:04.093000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP009"
+  c_address: "Government Avenue"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0009"
+  c_contact_person: "Joseph Makhetha"
+  c_district_code: "quthing"
+  c_gps_latitude: "-30.4000"
+  c_gps_longitude: "27.7000"
+  c_name: "Quthing Service Office"
+  c_capacity_per_day: "110"
+
+- id: "27b894e3-b11c-4fb2-bedd-cf2cb5d40f2b"
+  datecreated: "2026-01-26 17:06:03.671000"
+  datemodified: "2026-01-26 17:06:03.671000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP008"
+  c_address: "Main Street"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0008"
+  c_contact_person: "Grace Mokhele"
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-30.1167"
+  c_gps_longitude: "28.6833"
+  c_name: "Qacha's Nek Distribution Point"
+  c_capacity_per_day: "90"
+
+- id: "2a1cd0f7-5829-440c-a359-258d7d784d5f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MAQHAKA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "berea"
+  c_gps_latitude: "-29.24253"
+  c_gps_longitude: "27.60616"
+  c_name: "Maqhaka"
+  c_capacity_per_day: null
+
+- id: "2bcd38df-78cd-4cc8-a472-694ce846a555"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_LEHLOHLA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mokhotlong"
+  c_gps_latitude: "-29.31889"
+  c_gps_longitude: "28.78389"
+  c_name: "Lehlohla"
+  c_capacity_per_day: null
+
+- id: "2c7381ef-bf98-40b3-b873-21729500b57c"
+  datecreated: "2026-01-26 17:06:04.527000"
+  datemodified: "2026-01-26 17:06:04.527000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP010"
+  c_address: "Central Market"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0010"
+  c_contact_person: "Agnes Phiri"
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.5167"
+  c_gps_longitude: "28.6167"
+  c_name: "Thaba-Tseka Highland Center"
+  c_capacity_per_day: "70"
+
+- id: "2c8705d6-2f97-498e-b9c3-f63d1adb6c51"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_RAMOSOTHOANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-29.90889"
+  c_gps_longitude: "27.94583"
+  c_name: "Ramosothoane"
+  c_capacity_per_day: null
+
+- id: "30419203-f196-49b0-ac78-d8818c9e91ee"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MATELILE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mafeteng"
+  c_gps_latitude: "-29.81944"
+  c_gps_longitude: "27.51583"
+  c_name: "Matelile"
+  c_capacity_per_day: null
+
+- id: "313c029d-0891-4336-bed9-98df9a3f1647"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_LILALA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.53838"
+  c_gps_longitude: "28.62358"
+  c_name: "Lilala"
+  c_capacity_per_day: null
+
+- id: "372fab9b-27ce-48e2-a0fe-7054c4b1b2d6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MAPHOLANENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mokhotlong"
+  c_gps_latitude: "-29.20306"
+  c_gps_longitude: "28.86000"
+  c_name: "Mapholaneng"
+  c_capacity_per_day: null
+
+- id: "37f9adff-65ec-406d-982d-93a17f2531c5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_SHEHONG_HONG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.72218"
+  c_gps_longitude: "28.77143"
+  c_name: "Shehong-hong"
+  c_capacity_per_day: null
+
+- id: "3ad14218-76ba-40c9-9493-3b6fdcf3eb17"
+  datecreated: "2026-01-26 17:06:01.073000"
+  datemodified: "2026-01-26 17:06:01.073000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP002"
+  c_address: "Teyateyaneng Road"
+  c_operating_days: "Mon-Sat"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0002"
+  c_contact_person: "Mary Khabo"
+  c_district_code: "berea"
+  c_gps_latitude: "-29.2000"
+  c_gps_longitude: "27.8500"
+  c_name: "Berea Agricultural Center"
+  c_capacity_per_day: "150"
+
+- id: "403eaa14-fef5-438b-a5dc-c49639d4f64c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_QHOLAQHOE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.67222"
+  c_gps_longitude: "28.42278"
+  c_name: "Qholaqhoe"
+  c_capacity_per_day: null
+
+- id: "447cb005-c6d5-48d5-bddb-927cab89bd43"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_PILOT"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "berea"
+  c_gps_latitude: "-29.21222"
+  c_gps_longitude: "27.86197"
+  c_name: "Pilot"
+  c_capacity_per_day: null
+
+- id: "4582516d-776e-43ef-aaa5-5f337378c792"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MANTSONYANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.55115"
+  c_gps_longitude: "28.26315"
+  c_name: "Mantsonyane"
+  c_capacity_per_day: null
+
+- id: "476e89fb-6c08-4037-9934-b1d48fa673cb"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_KHOHLO_NTSO"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.36989"
+  c_gps_longitude: "28.49827"
+  c_name: "Khohlo-Ntso"
+  c_capacity_per_day: null
+
+- id: "4aafbdbb-b6da-4cfd-b009-b3ba75a20b0e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MALEFILOANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mokhotlong"
+  c_gps_latitude: "-29.34139"
+  c_gps_longitude: "29.17917"
+  c_name: "Malefiloane"
+  c_capacity_per_day: null
+
+- id: "5409cf10-02cf-42fa-8470-739a9ecb8887"
+  datecreated: "2026-01-26 17:06:03.246000"
+  datemodified: "2026-01-26 17:06:03.246000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP007"
+  c_address: "Town Square"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0007"
+  c_contact_person: "David Ramokoena"
+  c_district_code: "mokhotlong"
+  c_gps_latitude: "-29.2833"
+  c_gps_longitude: "29.0667"
+  c_name: "Mokhotlong Mountain Center"
+  c_capacity_per_day: "80"
+
+- id: "554f6fa6-f271-4b5f-89e2-c195b12a0a25"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MASIANOKENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.40417"
+  c_gps_longitude: "27.56083"
+  c_name: "Masianokeng"
+  c_capacity_per_day: null
+
+- id: "601d1516-c998-4139-acbe-1e6124d9c723"
+  datecreated: "2026-01-26 17:06:02.813000"
+  datemodified: "2026-01-26 17:06:02.813000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP006"
+  c_address: "Church Road"
+  c_operating_days: "Mon-Sat"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0006"
+  c_contact_person: "Elizabeth Tau"
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.1500"
+  c_gps_longitude: "27.4667"
+  c_name: "Mohale's Hoek Service Center"
+  c_capacity_per_day: "130"
+
+- id: "641f4e48-375d-4dca-bfac-bf11ab3f20ab"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MPHARANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.02444"
+  c_gps_longitude: "27.54639"
+  c_name: "Mpharane"
+  c_capacity_per_day: null
+
+- id: "65e5f43f-db5a-406c-8f91-6b5429f9f287"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_SEMENANYANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.42137"
+  c_gps_longitude: "28.66014"
+  c_name: "Semenanyane"
+  c_capacity_per_day: null
+
+- id: "67274e18-ec5c-423a-a507-3cd0c5730f90"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_HLOAHLENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.03444"
+  c_gps_longitude: "28.20083"
+  c_name: "Hloahleng"
+  c_capacity_per_day: null
+
+- id: "68def630-daea-42d9-b869-8dc9f0ae9806"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MELIKANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-29.89962"
+  c_gps_longitude: "28.81521"
+  c_name: "Melikane"
+  c_capacity_per_day: null
+
+- id: "6a504e50-5b4a-4796-8e00-efb71ef54199"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_NQABENI"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.75278"
+  c_gps_longitude: "28.27639"
+  c_name: "Nqabeni"
+  c_capacity_per_day: null
+
+- id: "6f7e8b52-09b1-4d09-88a2-7536c354a288"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_PHAHAMENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mokhotlong"
+  c_gps_latitude: "-29.19250"
+  c_gps_longitude: "29.12111"
+  c_name: "Phahameng"
+  c_capacity_per_day: null
+
+- id: "702fa9ff-9f04-4fcd-bf12-9c5f0d793c5e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MARAKABEI"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.54056"
+  c_gps_longitude: "28.13778"
+  c_name: "Marakabei"
+  c_capacity_per_day: null
+
+- id: "70cdc067-3f79-4349-b095-c2a0c8f2f9e8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_TEYATEYANENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "berea"
+  c_gps_latitude: "-29.14758"
+  c_gps_longitude: "27.75149"
+  c_name: "Teyateyaneng"
+  c_capacity_per_day: null
+
+- id: "73762f13-a5fa-44cd-8c20-5b7b6d2d1884"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_SELOMO"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.77417"
+  c_gps_longitude: "28.34139"
+  c_name: "Selomo"
+  c_capacity_per_day: null
+
+- id: "74f1a746-1268-448c-afd3-eaa95cc5d36b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_THABANA_MORENA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mafeteng"
+  c_gps_latitude: "-29.92000"
+  c_gps_longitude: "27.42972"
+  c_name: "Thabana Morena"
+  c_capacity_per_day: null
+
+- id: "88d57e8f-a7f9-43b4-9509-74634298caf7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_KHUKHUNE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.73556"
+  c_gps_longitude: "28.41167"
+  c_name: "Khukhune"
+  c_capacity_per_day: null
+
+- id: "8c063fbe-12a1-43f8-9f1c-b90e4f7fd1d7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_HA_NTSI"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.40333"
+  c_gps_longitude: "27.76278"
+  c_name: "Ha ntsi"
+  c_capacity_per_day: null
+
+- id: "99dd0865-5c96-4dfa-894d-d476d9f03552"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_ROTHE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.56000"
+  c_gps_longitude: "27.45417"
+  c_name: "Rothe"
+  c_capacity_per_day: null
+
+- id: "9da88cd2-8861-4e7b-a794-c0bf292750fa"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MATSOAING"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.61917"
+  c_gps_longitude: "28.58778"
+  c_name: "Matsoaing"
+  c_capacity_per_day: null
+
+- id: "a1d499b6-88d4-487c-adb9-51c866d5afe0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_RAMPAI"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.76306"
+  c_gps_longitude: "28.24667"
+  c_name: "Rampai"
+  c_capacity_per_day: null
+
+- id: "a2480c2c-09f6-41c1-a5d5-3f135f95f656"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_NGOAJANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.71528"
+  c_gps_longitude: "28.49917"
+  c_name: "Ngoajane"
+  c_capacity_per_day: null
+
+- id: "a9919163-1ccb-4179-a0f7-4b93667838f9"
+  datecreated: "2026-01-26 17:06:00.646000"
+  datemodified: "2026-01-26 17:06:00.646000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP001"
+  c_address: "123 Main Street Maseru"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0001"
+  c_contact_person: "John Molefe"
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.3167"
+  c_gps_longitude: "27.4833"
+  c_name: "Maseru Main Depot"
+  c_capacity_per_day: "200"
+
+- id: "af456380-801a-456f-8126-6816640da4b5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_TEBELLONG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-30.05750"
+  c_gps_longitude: "28.44944"
+  c_name: "Tebellong"
+  c_capacity_per_day: null
+
+- id: "af89d95f-ba91-4f87-9059-baffa31b7988"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_SEHLABATHEBE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-29.91286"
+  c_gps_longitude: "29.04193"
+  c_name: "Sehlabathebe"
+  c_capacity_per_day: null
+
+- id: "b0438afc-60d3-43eb-b652-079be9a17945"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_TALE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "leribe"
+  c_gps_latitude: "-30.29194"
+  c_gps_longitude: "27.50583"
+  c_name: "Tale"
+  c_capacity_per_day: null
+
+- id: "b0778b07-1546-43b3-a229-77fa7e410dd8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MAKHALENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.15111"
+  c_gps_longitude: "27.47556"
+  c_name: "Makhaleng"
+  c_capacity_per_day: null
+
+- id: "b878cacb-df1f-4dba-8066-00b345363b31"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MAPOTENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "berea"
+  c_gps_latitude: "-29.11108"
+  c_gps_longitude: "27.96451"
+  c_name: "Mapoteng"
+  c_capacity_per_day: null
+
+- id: "be23892c-deed-4bf8-9346-7d2f24beb402"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_PELANENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "leribe"
+  c_gps_latitude: "-29.10694"
+  c_gps_longitude: "28.49500"
+  c_name: "Pelaneng"
+  c_capacity_per_day: null
+
+- id: "c2ca5afe-6c40-4ba6-aeac-7506a33e36c2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_KETANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.07333"
+  c_gps_longitude: "27.85972"
+  c_name: "Ketane"
+  c_capacity_per_day: null
+
+- id: "c32bf6a7-2326-47db-aa85-e63aed5f7861"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_RIBANENG_RIBANENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mafeteng"
+  c_gps_latitude: "-29.86333"
+  c_gps_longitude: "27.68278"
+  c_name: "Ribaneng      Ribaneng"
+  c_capacity_per_day: null
+
+- id: "c7207491-7fbc-49f6-b4dc-a28c27486e38"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MOHANAPENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "thaba-tseka"
+  c_gps_latitude: "-29.59169"
+  c_gps_longitude: "28.67056"
+  c_name: "Mohanapeng"
+  c_capacity_per_day: null
+
+- id: "c8a33265-dd0b-4b18-8a76-4132f18e19dc"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_RAMABANTA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.66528"
+  c_gps_longitude: "27.79528"
+  c_name: "Ramabanta"
+  c_capacity_per_day: null
+
+- id: "c976e053-06e0-4326-817b-5f92b106b68e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_PEKA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "leribe"
+  c_gps_latitude: "-28.96889"
+  c_gps_longitude: "27.76139"
+  c_name: "Peka"
+  c_capacity_per_day: null
+
+- id: "cf5bd067-6715-49dd-8f41-bee9533f4370"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_LIBIBING"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mokhotlong"
+  c_gps_latitude: "-29.30972"
+  c_gps_longitude: "29.02750"
+  c_name: "Libibing"
+  c_capacity_per_day: null
+
+- id: "d0773d35-28b0-41a2-82a8-bf007d30c79b"
+  datecreated: "2026-01-26 17:06:02.375000"
+  datemodified: "2026-01-26 17:06:02.375000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP005"
+  c_address: "Government Complex"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0005"
+  c_contact_person: "Thabo Nteso"
+  c_district_code: "mafeteng"
+  c_gps_latitude: "-29.8167"
+  c_gps_longitude: "27.2333"
+  c_name: "Mafeteng Regional Office"
+  c_capacity_per_day: "120"
+
+- id: "d12d84a4-269e-4e25-85b3-63d896eeed76"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_SEFIKENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "berea"
+  c_gps_latitude: "-29.28255"
+  c_gps_longitude: "27.80992"
+  c_name: "Sefikeng"
+  c_capacity_per_day: null
+
+- id: "d1f3628f-05a8-4309-9170-cf87fdd3d0d1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MAKHAKHE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mafeteng"
+  c_gps_latitude: "-29.72583"
+  c_gps_longitude: "27.56167"
+  c_name: "Makhakhe"
+  c_capacity_per_day: null
+
+- id: "d2cafeb0-e850-4315-90c6-1e0734878541"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_KHABO"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "leribe"
+  c_gps_latitude: "-28.80972"
+  c_gps_longitude: "28.19639"
+  c_name: "Khabo"
+  c_capacity_per_day: null
+
+- id: "d862a948-e851-4f8d-ae12-bd3d74b60caf"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_TSAKHOLO"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mafeteng"
+  c_gps_latitude: "-29.64750"
+  c_gps_longitude: "27.15778"
+  c_name: "Tsakholo"
+  c_capacity_per_day: null
+
+- id: "d8f17ca2-8c24-43a5-be27-8bdab507eb45"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MATEBENG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-29.82000"
+  c_gps_longitude: "28.81000"
+  c_name: "Matebeng"
+  c_capacity_per_day: null
+
+- id: "dbe47a1b-3cc1-49ad-9d21-82332b070aed"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_TAUNG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.08889"
+  c_gps_longitude: "27.41944"
+  c_name: "Taung"
+  c_capacity_per_day: null
+
+- id: "dce558ae-35c1-495f-8fde-dedf31aee865"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_QHOALINYANE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-30.04069"
+  c_gps_longitude: "28.35781"
+  c_name: "Qhoalinyane"
+  c_capacity_per_day: null
+
+- id: "dd9d4240-ae9b-49ac-aa49-3a4d28b3d5b2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_THABA_CHITJA"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "qachas-nek"
+  c_gps_latitude: "-30.05756"
+  c_gps_longitude: null
+  c_name: "Thaba-chitja"
+  c_capacity_per_day: null
+
+- id: "ddc12da6-d536-4b59-8182-3d0e0e1e86f9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MEKALING"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.29472"
+  c_gps_longitude: "27.50278"
+  c_name: "Mekaling"
+  c_capacity_per_day: null
+
+- id: "dfc56f89-058b-42e4-a8ff-92cfa46c2f04"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_MAPUTSOE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "leribe"
+  c_gps_latitude: "-28.89250"
+  c_gps_longitude: "27.92139"
+  c_name: "Maputsoe"
+  c_capacity_per_day: null
+
+- id: "dff802ef-3e9f-4da1-88f1-e0a42e734812"
+  datecreated: "2026-01-26 17:06:01.950000"
+  datemodified: "2026-01-26 17:06:01.950000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP004"
+  c_address: "Hlotse Town Center"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0004"
+  c_contact_person: "Sarah Letsie"
+  c_district_code: "leribe"
+  c_gps_latitude: "-28.8833"
+  c_gps_longitude: "28.0500"
+  c_name: "Leribe Distribution Center"
+  c_capacity_per_day: "180"
+
+- id: "e5f8d69d-f599-4a07-ba9d-84dcec408287"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_SEMONKONG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "maseru"
+  c_gps_latitude: "-29.84000"
+  c_gps_longitude: "28.06139"
+  c_name: "Semonkong"
+  c_capacity_per_day: null
+
+- id: "ebcb9206-c405-45fa-9100-d592d3659c6a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_CORN_EXCHANGE"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "berea"
+  c_gps_latitude: "-28.97128"
+  c_gps_longitude: "27.97618"
+  c_name: "Corn Exchange"
+  c_capacity_per_day: null
+
+- id: "f37af042-3d1d-48bb-9d31-afeecfda7647"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CP_PHAMONG"
+  c_address: null
+  c_operating_days: null
+  c_is_active: "Yes"
+  c_contact_phone: null
+  c_contact_person: null
+  c_district_code: "mohales-hoek"
+  c_gps_latitude: "-30.25722"
+  c_gps_longitude: "27.80444"
+  c_name: "Phamong"
+  c_capacity_per_day: null
+
+- id: "f535b3e6-cada-4c9f-96f9-7c8c39dde6b7"
+  datecreated: "2026-01-26 17:06:01.527000"
+  datemodified: "2026-01-26 17:06:01.527000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CP003"
+  c_address: "Main Road Butha-Buthe"
+  c_operating_days: "Mon-Fri"
+  c_is_active: "Yes"
+  c_contact_phone: "+266 5800 0003"
+  c_contact_person: "Peter Molapo"
+  c_district_code: "butha-buthe"
+  c_gps_latitude: "-28.7667"
+  c_gps_longitude: "28.2500"
+  c_name: "Butha-Buthe Service Point"
+  c_capacity_per_day: "100"
+

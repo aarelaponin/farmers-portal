@@ -1,0 +1,67 @@
+# app_fd_md85seedsource
+# 5 row(s) at sync time
+- id: "md85seedSource-credit"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "CREDIT"
+  c_name: "Credit"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md85seedSource-gift"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "GIFT"
+  c_name: "Gift"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md85seedSource-purchased"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PURCHASED"
+  c_name: "Purchased"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md85seedSource-saved"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SAVED"
+  c_name: "Saved from Previous Season"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md85seedSource-subsidy"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SUBSIDY"
+  c_name: "Subsidy"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+

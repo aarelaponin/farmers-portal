@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "itemId",
+            "id": "column_0",
+            "label": "Item ID"
+        },
+        {
+            "name": "harvestId",
+            "id": "column_1",
+            "label": "Harvest Record ID"
+        },
+        {
+            "name": "farmerIdRef",
+            "id": "column_2",
+            "label": "farmerIdRef"
+        },
+        {
+            "name": "seasonCode",
+            "id": "column_3",
+            "label": "seasonCode"
+        },
+        {
+            "name": "cropCode",
+            "id": "column_4",
+            "label": "Crop"
+        },
+        {
+            "name": "cropName",
+            "id": "column_5",
+            "label": "Crop Name"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Crop Harvest Item",
+    "id": "list_spCropHarvItem",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "spCropHarvItem"}
+    },
+    "actions": [],
+    "order": ""
+}

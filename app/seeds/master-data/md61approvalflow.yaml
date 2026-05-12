@@ -1,0 +1,41 @@
+# app_fd_md61approvalflow
+# 3 row(s) at sync time
+- id: "md61approvalFlow-emergency"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EMERGENCY"
+  c_name: "Emergency"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md61approvalFlow-express"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EXPRESS"
+  c_name: "Express"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md61approvalFlow-standard"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "STANDARD"
+  c_name: "Standard"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+

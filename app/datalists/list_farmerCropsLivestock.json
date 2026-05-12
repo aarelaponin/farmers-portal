@@ -1,0 +1,26 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "hasLivestock",
+            "id": "column_0",
+            "label": "Do you have livestock?"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 01.05 - Farmer Livestock",
+    "id": "list_farmerCropsLivestock",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "farmerCropsLivestock"}
+    },
+    "actions": [],
+    "order": ""
+}

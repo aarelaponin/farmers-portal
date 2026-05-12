@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Name"
+        },
+        {
+            "name": "has_subcategory",
+            "id": "column_2",
+            "label": "Has Subcategory"
+        },
+        {
+            "name": "subcategory_source",
+            "id": "column_3",
+            "label": "Subcategory Source"
+        },
+        {
+            "name": "default_unit",
+            "id": "column_4",
+            "label": "Default Unit"
+        },
+        {
+            "name": "typical_subsidy_percent",
+            "id": "column_5",
+            "label": "Typical Subsidy Percent"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.27 - Input Category",
+    "id": "list_md27inputCategory",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md27inputCategory"}
+    },
+    "actions": [],
+    "order": ""
+}

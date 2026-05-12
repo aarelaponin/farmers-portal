@@ -1,0 +1,184 @@
+# app_fd_md23documenttype
+# 14 row(s) at sync time
+- id: "1072dcae-e209-44ea-8f19-ed4c765eb2cd"
+  datecreated: "2026-01-26 17:03:54.464000"
+  datemodified: "2026-01-26 17:03:54.464000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG"
+  c_code: "MOBILE_MONEY_STMT"
+  c_name: "Mobile Money Statement"
+  c_description: "Mobile money transaction history"
+  c_max_size_mb: "2"
+
+- id: "2c880c84-1308-4c88-8f6c-b678b1131bec"
+  datecreated: "2026-01-26 17:03:55.744000"
+  datemodified: "2026-01-26 17:03:55.744000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG"
+  c_code: "RESIDENCE_PROOF"
+  c_name: "Proof of Residence"
+  c_description: "Utility bill or official letter"
+  c_max_size_mb: "2"
+
+- id: "39863c43-efaf-4718-b72d-669f5474eb49"
+  datecreated: "2026-01-26 17:03:52.767000"
+  datemodified: "2026-01-26 17:03:52.767000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG;PNG"
+  c_code: "NATIONAL_ID"
+  c_name: "Copy of National ID"
+  c_description: "Government-issued ID card"
+  c_max_size_mb: "2"
+
+- id: "54ca0d12-ae6b-4046-890e-5e68d171393e"
+  datecreated: "2026-01-26 17:03:53.614000"
+  datemodified: "2026-01-26 17:03:53.614000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG"
+  c_code: "RENTAL_AGREEMENT"
+  c_name: "Land Rental Agreement"
+  c_description: "Lease or rental contract"
+  c_max_size_mb: "5"
+
+- id: "7f064a2c-7dc0-4d60-a569-4bc4bebb3b8b"
+  datecreated: "2026-01-26 17:03:54.892000"
+  datemodified: "2026-01-26 17:03:54.892000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF"
+  c_code: "COOP_CERTIFICATE"
+  c_name: "Cooperative Registration"
+  c_description: "Cooperative registration certificate"
+  c_max_size_mb: "3"
+
+- id: "93130227-49bc-4606-9311-95460756289c"
+  datecreated: "2026-01-26 17:03:57.906000"
+  datemodified: "2026-01-26 17:03:57.906000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF"
+  c_code: "DISABILITY_CERT"
+  c_name: "Disability Certificate"
+  c_description: "Official disability documentation"
+  c_max_size_mb: "2"
+
+- id: "9acdf909-2dc7-47c1-a170-f966925c43b3"
+  datecreated: "2026-01-26 17:03:53.195000"
+  datemodified: "2026-01-26 17:03:53.195000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG"
+  c_code: "LAND_TITLE"
+  c_name: "Land Ownership Title"
+  c_description: "Proof of land ownership"
+  c_max_size_mb: "5"
+
+- id: "b45fbde8-355f-4237-8017-1c372d25e598"
+  datecreated: "2026-01-26 17:03:54.041000"
+  datemodified: "2026-01-26 17:03:54.041000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF"
+  c_code: "BANK_STATEMENT"
+  c_name: "Bank Account Statement"
+  c_description: "Recent bank statement"
+  c_max_size_mb: "3"
+
+- id: "d9242171-8156-4465-acf5-06dee4917782"
+  datecreated: "2026-01-26 17:03:55.313000"
+  datemodified: "2026-01-26 17:03:55.313000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG;XLSX"
+  c_code: "HARVEST_RECORDS"
+  c_name: "Previous Harvest Records"
+  c_description: "Harvest documentation"
+  c_max_size_mb: "3"
+
+- id: "dee7cdb6-a2ef-49af-88a9-e06b19903e69"
+  datecreated: "2026-01-26 17:03:58.326000"
+  datemodified: "2026-01-26 17:03:58.326000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG;PNG"
+  c_code: "OTHER"
+  c_name: "Other Supporting Documents"
+  c_description: "Additional documents"
+  c_max_size_mb: "5"
+
+- id: "e934f0bd-bc8f-4763-a744-b3a8cfbe15a7"
+  datecreated: "2026-01-26 17:03:56.590000"
+  datemodified: "2026-01-26 17:03:56.590000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF;JPG"
+  c_code: "TRAINING_CERT"
+  c_name: "Training Certificates"
+  c_description: "Agricultural training certificates"
+  c_max_size_mb: "2"
+
+- id: "f4b67ca0-c5fb-4f0f-b361-ca9a3d928d32"
+  datecreated: "2026-01-26 17:03:56.163000"
+  datemodified: "2026-01-26 17:03:56.163000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF"
+  c_code: "TAX_CLEARANCE"
+  c_name: "Tax Clearance Certificate"
+  c_description: "Tax compliance certificate"
+  c_max_size_mb: "2"
+
+- id: "f66abf81-ddfd-4476-b29b-94532a17985c"
+  datecreated: "2026-01-26 17:03:57.486000"
+  datemodified: "2026-01-26 17:03:57.486000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "PDF"
+  c_code: "RECOMMENDATION"
+  c_name: "Letter of Recommendation"
+  c_description: "Extension officer letter"
+  c_max_size_mb: "2"
+
+- id: "ff7ded97-9959-4fbd-8357-d1b8df991d41"
+  datecreated: "2026-01-26 17:03:57.065000"
+  datemodified: "2026-01-26 17:03:57.065000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_allowed_formats: "JPG;PNG"
+  c_code: "FARM_PHOTO"
+  c_name: "Farm Photo"
+  c_description: "Current farm photograph"
+  c_max_size_mb: "5"
+

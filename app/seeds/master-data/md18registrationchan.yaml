@@ -1,0 +1,122 @@
+# app_fd_md18registrationchan
+# 12 row(s) at sync time
+- id: "049c056b-c7e1-4806-88e4-23eb888449e1"
+  datecreated: "2026-01-26 17:03:34.806000"
+  datemodified: "2026-01-26 17:03:34.806000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "online"
+  c_name: "Online Self-Registration"
+
+- id: "4a0198f2-e0c0-4977-9158-54284737cc99"
+  datecreated: "2026-01-26 17:03:33.519000"
+  datemodified: "2026-01-26 17:03:33.519000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "office"
+  c_name: "Extension Office"
+
+- id: "865def6b-0a97-46ee-bda7-7865fecf0340"
+  datecreated: "2026-01-26 17:03:35.256000"
+  datemodified: "2026-01-26 17:03:35.256000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "community"
+  c_name: "Community Center"
+
+- id: "a67c6f77-0236-4497-abae-ab6495f0150a"
+  datecreated: "2026-01-26 17:03:34.383000"
+  datemodified: "2026-01-26 17:03:34.383000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mobile"
+  c_name: "Mobile Registration"
+
+- id: "bc67d4b1-855e-4eb7-85f0-4895d049db6d"
+  datecreated: "2026-01-26 17:03:33.959000"
+  datemodified: "2026-01-26 17:03:33.959000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "field"
+  c_name: "Field Visit"
+
+- id: "md18reg-ext-campaign"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "campaign"
+  c_name: "Outreach Campaign"
+
+- id: "md18reg-ext-email"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "email"
+  c_name: "Email"
+
+- id: "md18reg-ext-fieldvisit"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "field_visit"
+  c_name: "Field Visit"
+
+- id: "md18reg-ext-mobileapp"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "mobile_app"
+  c_name: "Mobile App"
+
+- id: "md18reg-ext-phone"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "phone"
+  c_name: "Phone Submission"
+
+- id: "md18reg-ext-portal"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "portal"
+  c_name: "Online Portal"
+
+- id: "md18reg-ext-sms"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "sms"
+  c_name: "SMS"
+

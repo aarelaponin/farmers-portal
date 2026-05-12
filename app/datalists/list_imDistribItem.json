@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "distributionCode",
+            "id": "column_0",
+            "label": "distributionCode"
+        },
+        {
+            "name": "inputCode",
+            "id": "column_1",
+            "label": "Input"
+        },
+        {
+            "name": "inputName",
+            "id": "column_2",
+            "label": "Input Name"
+        },
+        {
+            "name": "batchNumber",
+            "id": "column_3",
+            "label": "Batch Number"
+        },
+        {
+            "name": "quantity",
+            "id": "column_4",
+            "label": "Quantity"
+        },
+        {
+            "name": "unit",
+            "id": "column_5",
+            "label": "Unit"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Distribution Item",
+    "id": "list_imDistribItem",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "imDistribItem"}
+    },
+    "actions": [],
+    "order": ""
+}

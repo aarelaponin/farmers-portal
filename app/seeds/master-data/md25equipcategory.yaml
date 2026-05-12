@@ -1,0 +1,119 @@
+# app_fd_md25equipcategory
+# 9 row(s) at sync time
+- id: "176b492c-734e-4b92-bc7f-ac684237a461"
+  datecreated: "2026-01-26 17:04:04.582000"
+  datemodified: "2026-01-26 17:04:04.582000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "70"
+  c_code: "PEST_CONTROL"
+  c_requires_training: "Yes"
+  c_name: "Pest Control Equipment"
+  c_description: "Spraying and application equipment"
+
+- id: "50e16fae-a555-4fcd-b252-baca6417d48c"
+  datecreated: "2026-01-26 17:04:05.024000"
+  datemodified: "2026-01-26 17:04:05.024000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "80"
+  c_code: "IRRIGATION"
+  c_requires_training: "Yes"
+  c_name: "Irrigation Equipment"
+  c_description: "Water management systems"
+
+- id: "55c78ae4-b132-4ae3-99c5-16e9ea160849"
+  datecreated: "2026-01-26 17:04:05.917000"
+  datemodified: "2026-01-26 17:04:05.917000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "50"
+  c_code: "PROCESSING"
+  c_requires_training: "Yes"
+  c_name: "Processing Equipment"
+  c_description: "Threshing and processing equipment"
+
+- id: "577ab4fe-2702-407a-93a2-6c4c0b9d041b"
+  datecreated: "2026-01-26 17:04:05.446000"
+  datemodified: "2026-01-26 17:04:05.446000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "65"
+  c_code: "STORAGE"
+  c_requires_training: "No"
+  c_name: "Storage Equipment"
+  c_description: "Post-harvest storage"
+
+- id: "5a28d430-a273-4069-b6cf-353bbf0dc19e"
+  datecreated: "2026-01-26 17:04:06.771000"
+  datemodified: "2026-01-26 17:04:06.771000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "70"
+  c_code: "GENERAL_TOOLS"
+  c_requires_training: "No"
+  c_name: "General Farm Tools"
+  c_description: "Hand tools and implements"
+
+- id: "5daf5613-7b88-49c3-8b4a-330a1826746a"
+  datecreated: "2026-01-26 17:04:03.729000"
+  datemodified: "2026-01-26 17:04:03.729000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "60"
+  c_code: "TILLAGE"
+  c_requires_training: "Yes"
+  c_name: "Tillage Equipment"
+  c_description: "Land preparation equipment"
+
+- id: "664964f5-306e-4c59-a8b9-70f3acd56b21"
+  datecreated: "2026-01-26 17:04:07.205000"
+  datemodified: "2026-01-26 17:04:07.205000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "60"
+  c_code: "LIVESTOCK_EQUIP"
+  c_requires_training: "Yes"
+  c_name: "Livestock Equipment"
+  c_description: "Animal husbandry equipment"
+
+- id: "d3003e3c-1371-4eee-ab5b-199b04c82769"
+  datecreated: "2026-01-26 17:04:06.343000"
+  datemodified: "2026-01-26 17:04:06.343000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "40"
+  c_code: "TRANSPORT"
+  c_requires_training: "No"
+  c_name: "Transport Equipment"
+  c_description: "Farm transport and handling"
+
+- id: "f585847e-614e-4c57-b9ba-879875c4c370"
+  datecreated: "2026-01-26 17:04:04.149000"
+  datemodified: "2026-01-26 17:04:04.149000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_typical_subsidy_percent: "60"
+  c_code: "PLANTING"
+  c_requires_training: "Yes"
+  c_name: "Planting Equipment"
+  c_description: "Seeding and planting tools"
+

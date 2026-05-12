@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "parent_id",
+            "id": "column_0",
+            "label": "parent_id"
+        },
+        {
+            "name": "cropProduction",
+            "id": "column_1",
+            "label": "Was the household engaged in crop production last agricultural season?"
+        },
+        {
+            "name": "livestockProduction",
+            "id": "column_2",
+            "label": "Was the household engaged in livestock production last agricultural season?"
+        },
+        {
+            "name": "canReadWrite",
+            "id": "column_3",
+            "label": "Can the household head read and write?"
+        },
+        {
+            "name": "mainSourceFarmLabour",
+            "id": "column_4",
+            "label": "What is your main source of farm labour?"
+        },
+        {
+            "name": "mainSourceLivelihood",
+            "id": "column_5",
+            "label": "What is your main source of livelihood?"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 01.03 - Agricultural Activities",
+    "id": "list_farmerAgriculture",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "farmerAgriculture"}
+    },
+    "actions": [],
+    "order": ""
+}

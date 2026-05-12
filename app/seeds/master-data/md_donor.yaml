@@ -1,0 +1,86 @@
+# app_fd_md_donor
+# 6 row(s) at sync time
+- id: "0c455e90-d64a-4318-a5ab-34aa05b01624"
+  datecreated: "2026-05-06 21:34:42.785000"
+  datemodified: "2026-05-06 21:34:42.785000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_country: "test"
+  c_code: "PROBE_1778103281"
+  c_notes: null
+  c_name: "Build-22 timestamp probe"
+  c_focal_point: null
+  c_contact_email: null
+
+- id: "53a073c7-a31b-49a2-bbbf-e98ae6a64570"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_country: "International (EU)"
+  c_code: "EU"
+  c_notes: "Tentative co-financier; engagement under exploration as of 2026 Q2."
+  c_name: "European Union (DG INTPA)"
+  c_focal_point: "(TBD)"
+  c_contact_email: ""
+
+- id: "5baa0dc9-180d-4386-a5a2-5b2cd2b8ccc9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_country: "Lesotho"
+  c_code: "MAFSN_DOMESTIC"
+  c_notes: "Government of Lesotho domestic financing (Treasury appropriation)."
+  c_name: "MAFSN Domestic Budget"
+  c_focal_point: "Khotso Mosoeu"
+  c_contact_email: "khotso.mosoeu@gov.ls"
+
+- id: "7e0cc383-e519-4976-ab44-703b74348f2d"
+  datecreated: "2026-05-07 09:18:24.890000"
+  datemodified: "2026-05-07 10:10:28.253000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_country: null
+  c_code: "TEST_SMOKE_DROP"
+  c_notes: null
+  c_name: "smoke-test, safe to delete"
+  c_focal_point: null
+  c_contact_email: null
+
+- id: "920afc2d-edca-409a-8e7b-75d63ead1a44"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_country: "International (UN)"
+  c_code: "WFP"
+  c_notes: "Lead donor on Lesotho subsidy pilot 2025/26. SADP-II co-financier."
+  c_name: "World Food Programme"
+  c_focal_point: "Khauta Faku"
+  c_contact_email: "khauta.faku@wfp.org"
+
+- id: "e822fe54-904e-432b-91c6-a64fe88707c4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_country: "International (IBRD/IDA)"
+  c_code: "WORLD_BANK"
+  c_notes: "Historical co-financier; reserved code for future engagement."
+  c_name: "World Bank (IDA)"
+  c_focal_point: "(TBD)"
+  c_contact_email: ""
+

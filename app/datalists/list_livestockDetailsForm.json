@@ -1,0 +1,46 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "farmer_id",
+            "id": "column_0",
+            "label": "farmer_id"
+        },
+        {
+            "name": "livestockCategory",
+            "id": "column_1",
+            "label": "Livestock Category"
+        },
+        {
+            "name": "livestockType",
+            "id": "column_2",
+            "label": "Livestock Type"
+        },
+        {
+            "name": "numberOfMale",
+            "id": "column_3",
+            "label": "Number (Male)"
+        },
+        {
+            "name": "numberOfFemale",
+            "id": "column_4",
+            "label": "Number (Female)"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 01.05-1 - Livestock Details Form",
+    "id": "list_livestockDetailsForm",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "livestockDetailsForm"}
+    },
+    "actions": [],
+    "order": ""
+}

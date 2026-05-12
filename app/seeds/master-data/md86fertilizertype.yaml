@@ -1,0 +1,54 @@
+# app_fd_md86fertilizertype
+# 4 row(s) at sync time
+- id: "md86fertilizerType-basal"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "BASAL"
+  c_name: "Basal Application"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md86fertilizerType-foliar"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FOLIAR"
+  c_name: "Foliar Application"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md86fertilizerType-organic"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ORGANIC"
+  c_name: "Organic"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md86fertilizerType-top"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "TOP"
+  c_name: "Top Dressing"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+

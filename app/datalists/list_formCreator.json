@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "target_app_id",
+            "id": "column_0",
+            "label": "Target Application ID"
+        },
+        {
+            "name": "target_app_version",
+            "id": "column_1",
+            "label": "Version"
+        },
+        {
+            "name": "form_id",
+            "id": "column_2",
+            "label": "Form ID"
+        },
+        {
+            "name": "form_name",
+            "id": "column_3",
+            "label": "Form Name"
+        },
+        {
+            "name": "table_name",
+            "id": "column_4",
+            "label": "Table Name"
+        },
+        {
+            "name": "form_definition_json",
+            "id": "column_5",
+            "label": "File Upload"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Form Creator",
+    "id": "list_formCreator",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "formCreator"}
+    },
+    "actions": [],
+    "order": ""
+}

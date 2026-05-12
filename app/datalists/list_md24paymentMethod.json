@@ -1,0 +1,41 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Name"
+        },
+        {
+            "name": "description",
+            "id": "column_2",
+            "label": "Description"
+        },
+        {
+            "name": "requires_account_number",
+            "id": "column_3",
+            "label": "Requires Account Number"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.24 - Payment Method",
+    "id": "list_md24paymentMethod",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md24paymentMethod"}
+    },
+    "actions": [],
+    "order": ""
+}

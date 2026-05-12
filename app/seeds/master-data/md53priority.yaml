@@ -1,0 +1,41 @@
+# app_fd_md53priority
+# 3 row(s) at sync time
+- id: "md53priority-high"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "HIGH"
+  c_name: "High"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md53priority-low"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "LOW"
+  c_name: "Low"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md53priority-normal"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "NORMAL"
+  c_name: "Normal"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+

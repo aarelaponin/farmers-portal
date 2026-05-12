@@ -1,0 +1,132 @@
+# app_fd_md72appealstatus
+# 10 row(s) at sync time
+- id: "md72appealStatus-acknowledged"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ACKNOWLEDGED"
+  c_name: "Acknowledged"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-closed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "CLOSED"
+  c_name: "Closed"
+  c_description: null
+  c_displayorder: "8"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-draft"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DRAFT"
+  c_name: "Draft"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-escalated"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ESCALATED"
+  c_name: "Escalated"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-info_requested"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "INFO_REQUESTED"
+  c_name: "Information Requested"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-overdue"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "OVERDUE"
+  c_name: "Overdue"
+  c_description: null
+  c_displayorder: "10"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-resolved"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "RESOLVED"
+  c_name: "Resolved"
+  c_description: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-submitted"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SUBMITTED"
+  c_name: "Submitted"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-under_review"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "UNDER_REVIEW"
+  c_name: "Under Review"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md72appealStatus-withdrawn"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "WITHDRAWN"
+  c_name: "Withdrawn"
+  c_description: null
+  c_displayorder: "9"
+  c_isactive: "Y"
+

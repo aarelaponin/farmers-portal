@@ -1,0 +1,118 @@
+# app_fd_mm_registration
+# 4 row(s) at sync time
+- id: "04b34b8f-ffc3-4fe7-83c9-a7bd3e814299"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_attributesjson: |-
+    {"programmeType":"INPUT_SUBSIDY","seasonCode":"2024-25-summer",
+     "legalBasis":"Subsidy Policy 2003 §4.2.1",
+     "fundingSource":"Government of Lesotho — MAFSN Annual Budget"}
+    
+  c_code: "PRG_2025_001"
+  c_acceptancewindowfrom: "2025-08-01"
+  c_evaluationstrategy: "all_must_pass"
+  c_displayorder: null
+  c_applicabilitykind: "optional_for_specific"
+  c_passingthreshold: "150"
+  c_scoringnotes: null
+  c_description: "Lowlands intensive crop strategy; Block Farming Programme since 2005/06."
+  c_minimumscore: "50"
+  c_resultname: null
+  c_applicabilitydeterminantid: "DET_LOWLANDS"
+  c_acceptancewindowto: "2026-01-31"
+  c_resulttemplateid: null
+  c_name: "Block Farming — Maize Lowlands 2025/26"
+  c_entityinstitutionid: null
+  c_serviceid: "SUBSIDY_2025"
+
+- id: "9c7d359a-74f5-4680-b314-c444f1bc5696"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_attributesjson: |-
+    {"programmeType":"VOUCHER","seasonCode":"2024-25-summer",
+     "legalBasis":"Subsidy Policy 2003 §1.2.viii (investment) + §2.4 (private-sector distribution)",
+     "fundingSource":"Donor: World Bank — SADP-II"}
+    
+  c_code: "PRG_2025_003"
+  c_acceptancewindowfrom: "2025-07-01"
+  c_evaluationstrategy: "all_must_pass"
+  c_displayorder: null
+  c_applicabilitykind: "optional_for_specific"
+  c_passingthreshold: "70"
+  c_scoringnotes: null
+  c_description: "Pilot under World Bank SADP-II; private-sector e-voucher distribution."
+  c_minimumscore: "0"
+  c_resultname: null
+  c_applicabilitydeterminantid: "DET_SMALLHOLDER"
+  c_acceptancewindowto: "2025-12-31"
+  c_resulttemplateid: null
+  c_name: "Smallholder E-Voucher Pilot 2025/26"
+  c_entityinstitutionid: null
+  c_serviceid: "SUBSIDY_2025"
+
+- id: "d57ab9e7-7da1-419a-b78b-70aced6e50ae"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_attributesjson: |-
+    {"programmeType":"INPUT_SUBSIDY","seasonCode":"2025-winter",
+     "legalBasis":"Subsidy Policy 2003 §4.3",
+     "fundingSource":"Mixed: 60% Government of Lesotho, 40% FAO/IFAD"}
+    
+  c_code: "PRG_2025_002"
+  c_acceptancewindowfrom: "2025-04-01"
+  c_evaluationstrategy: "all_must_pass"
+  c_displayorder: null
+  c_applicabilitykind: "optional_for_specific"
+  c_passingthreshold: "50"
+  c_scoringnotes: null
+  c_description: "Mountains & Senqu River Valley strategy. Wheat/peas/beans favoured."
+  c_minimumscore: "0"
+  c_resultname: null
+  c_applicabilitydeterminantid: "DET_MOUNTAINS_OR_SENQU"
+  c_acceptancewindowto: "2025-06-30"
+  c_resulttemplateid: null
+  c_name: "Mountain Pulses & Wheat — Winter 2025"
+  c_entityinstitutionid: null
+  c_serviceid: "SUBSIDY_2025"
+
+- id: "f868a305-4bd4-4816-aea2-9e34b0c58374"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_attributesjson: |-
+    {"programmeType":"EMERGENCY","seasonCode":"2024-25-summer",
+     "legalBasis":"DMA Declaration 2025-001; Subsidy Policy §2.2.2",
+     "fundingSource":"Donor: WFP + UNICEF + Government emergency reserve"}
+    
+  c_code: "PRG_2025_004"
+  c_acceptancewindowfrom: "2025-09-01"
+  c_evaluationstrategy: "all_must_pass"
+  c_displayorder: null
+  c_applicabilitykind: "optional_for_specific"
+  c_passingthreshold: null
+  c_scoringnotes: null
+  c_description: "Emergency response to acute food insecurity."
+  c_minimumscore: null
+  c_resultname: null
+  c_applicabilitydeterminantid: "DET_DROUGHT_DECLARED"
+  c_acceptancewindowto: "2026-03-31"
+  c_resulttemplateid: null
+  c_name: "Drought Emergency Relief 2025"
+  c_entityinstitutionid: null
+  c_serviceid: "SUBSIDY_2025"
+

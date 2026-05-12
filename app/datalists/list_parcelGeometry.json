@@ -1,0 +1,46 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "parent_id",
+            "id": "column_0",
+            "label": "parent_id"
+        },
+        {
+            "name": "area_hectares",
+            "id": "column_1",
+            "label": "area_hectares"
+        },
+        {
+            "name": "perimeter_meters",
+            "id": "column_2",
+            "label": "perimeter_meters"
+        },
+        {
+            "name": "vertex_count",
+            "id": "column_3",
+            "label": "vertex_count"
+        },
+        {
+            "name": "centroid_lat",
+            "id": "column_4",
+            "label": "centroid_lat"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 02.02 - Parcel Geometry",
+    "id": "list_parcelGeometry",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "parcelGeometry"}
+    },
+    "actions": [],
+    "order": ""
+}

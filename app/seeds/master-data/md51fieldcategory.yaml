@@ -1,0 +1,132 @@
+# app_fd_md51fieldcategory
+# 10 row(s) at sync time
+- id: "0ab4f8af-fbfe-429b-bd63-7c59dd4f928e"
+  datecreated: "2026-01-26 17:19:43.354000"
+  datemodified: "2026-01-26 17:19:43.354000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "AGRICULTURAL"
+  c_name: "Agricultural"
+  c_displayorder: "4"
+  c_description: "Farm and agricultural data"
+  c_isactive: "Y"
+
+- id: "0e72305a-3808-46e1-9e88-ac0a81ceaba9"
+  datecreated: "2026-01-26 17:19:44.203000"
+  datemodified: "2026-01-26 17:19:44.203000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "DERIVED"
+  c_name: "Derived"
+  c_displayorder: "6"
+  c_description: "Calculated or computed fields"
+  c_isactive: "Y"
+
+- id: "0f62fb39-8003-4835-a7c0-a163b15b7bc2"
+  datecreated: "2026-01-26 17:19:45.198000"
+  datemodified: "2026-01-26 17:19:45.198000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "OTHER"
+  c_name: "Other"
+  c_displayorder: "8"
+  c_description: "Miscellaneous fields"
+  c_isactive: "Y"
+
+- id: "40c30e22-c9c9-406c-9da1-f955fb18feee"
+  datecreated: "2026-01-26 17:19:41.920000"
+  datemodified: "2026-01-26 17:19:41.920000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "DEMOGRAPHIC"
+  c_name: "Demographic"
+  c_displayorder: "1"
+  c_description: "Personal and demographic attributes"
+  c_isactive: "Y"
+
+- id: "40fd6a55-7080-4002-aa00-f18703dd00b6"
+  datecreated: "2026-01-26 17:19:44.683000"
+  datemodified: "2026-01-26 17:19:44.683000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "PROGRAM"
+  c_name: "Program"
+  c_displayorder: "7"
+  c_description: "Program-specific enrollment data"
+  c_isactive: "Y"
+
+- id: "6b04aed3-8e1e-48a9-bc8b-700f7fa00056"
+  datecreated: "2026-01-26 17:19:43.773000"
+  datemodified: "2026-01-26 17:19:43.773000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "ECONOMIC"
+  c_name: "Economic"
+  c_displayorder: "5"
+  c_description: "Income and financial indicators"
+  c_isactive: "Y"
+
+- id: "cat-foodsecurity-001"
+  datecreated: "2026-04-25 22:49:46.788420"
+  datemodified: "2026-04-25 22:49:46.788420"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FOOD_SECURITY"
+  c_name: "Food Security"
+  c_displayorder: "9"
+  c_description: "Household food security status & vulnerability indicators"
+  c_isactive: "Y"
+
+- id: "cat-programhistory-001"
+  datecreated: "2026-04-25 22:49:46.788420"
+  datemodified: "2026-04-25 22:49:46.788420"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PROGRAM_HISTORY"
+  c_name: "Program History"
+  c_displayorder: "10"
+  c_description: "Cross-programme participation & dependency indicators"
+  c_isactive: "Y"
+
+- id: "ea3a1df8-3f70-4203-bea0-b0987ea54da6"
+  datecreated: "2026-01-26 17:19:42.821000"
+  datemodified: "2026-01-26 17:19:42.821000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "HOUSEHOLD"
+  c_name: "Household"
+  c_displayorder: "3"
+  c_description: "Household composition and characteristics"
+  c_isactive: "Y"
+
+- id: "fddbf914-b8a2-4f17-b4a8-82c5b3c1e941"
+  datecreated: "2026-01-26 17:19:42.360000"
+  datemodified: "2026-01-26 17:19:42.360000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LOCATION"
+  c_name: "Location"
+  c_displayorder: "2"
+  c_description: "Geographic and administrative location data"
+  c_isactive: "Y"
+

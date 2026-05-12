@@ -1,0 +1,449 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "parent_id",
+                                "value": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "id": "sectionBenefitInstruction",
+                                "label": "",
+                                "value": "<div class=\"alert alert-info\"><strong>Instructions:</strong> Configure the benefit distribution model, payment methods, and define individual benefit items. The Benefit Model is set in the Timeline & Budget tab.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "id": "benefitModelCode_display",
+                                "label": "",
+                                "value": "<div class=\"alert alert-secondary\"><strong>Benefit Model:</strong> Refer to <em>Tab 2 - Timeline & Budget</em> for the selected benefit model (Fixed Amount, Percentage, Package, or Voucher).</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Distribution Model",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "md40DistribModel",
+                                        "labelColumn": "name",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "",
+                                        "idColumn": "code"
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "distribModelCode",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "md24paymentMethod",
+                                        "labelColumn": "name",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "",
+                                        "idColumn": "code"
+                                    }
+                                },
+                                "options": [],
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "workflowVariable": "",
+                                "label": "Allowed Payment Methods",
+                                "id": "allowedPaymentMethods",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Input Package",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                                    "properties": {
+                                        "addEmptyOption": "true",
+                                        "groupingColumn": "",
+                                        "useAjax": "",
+                                        "formDefId": "md46InputPackage",
+                                        "labelColumn": "name",
+                                        "extraCondition": "",
+                                        "cacheInterval": "",
+                                        "emptyLabel": "",
+                                        "idColumn": "code"
+                                    }
+                                },
+                                "options": [],
+                                "workflowVariable": "",
+                                "id": "inputPackageCode",
+                                "iconIncluded": false,
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "sectionBenefitConfig",
+                "label": "Benefit Configuration"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "id": "sectionDistribution",
+                                "label": "",
+                                "value": "<div class=\"alert alert-light\"><strong>Distribution Settings:</strong> Configure partial benefits and verification requirements.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Allow Partial Benefit?",
+                                "id": "allowPartialBenefit",
+                                "value": "N",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "fullWidth": "",
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Yes",
+                                        "value": "Y",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "No",
+                                        "value": "N",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Requires Verification?",
+                                "id": "requiresVerification",
+                                "value": "Y",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Benefit Description",
+                                "id": "benefitDescription",
+                                "rows": "3",
+                                "cols": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "readonly": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Benefit Notes",
+                                "id": "benefitNotes",
+                                "rows": "3",
+                                "cols": "",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "sectionDistribution",
+                "label": "Distribution Settings"
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "id": "sectionBenefitItems",
+                                "label": "",
+                                "value": "<div class=\"alert alert-light\"><strong>Benefit Items:</strong> List individual items (inputs, equipment, training, cash) that comprise this program's benefits.</div>"
+                            }
+                        },
+                        {
+                            "className": "org.joget.plugin.enterprise.FormGrid",
+                            "properties": {
+                                "validateMaxRow": "",
+                                "formDefId": "spBenefitItemRow",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "pageSize": "20",
+                                "requestParams": [],
+                                "enableSorting": "",
+                                "storeBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "spBenefitItemRow",
+                                        "foreignKey": "program_id"
+                                    }
+                                },
+                                "readonly": "",
+                                "deleteGridData": "",
+                                "options": [
+                                    {
+                                        "format": "",
+                                        "width": "100",
+                                        "label": "Type",
+                                        "formatType": "options",
+                                        "value": "itemType"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "150",
+                                        "label": "Item Name",
+                                        "formatType": "text",
+                                        "value": "itemName"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "80",
+                                        "label": "Qty",
+                                        "formatType": "text",
+                                        "value": "quantity"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "60",
+                                        "label": "Unit",
+                                        "formatType": "text",
+                                        "value": "unit"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "100",
+                                        "label": "Unit Cost",
+                                        "formatType": "text",
+                                        "value": "unitCost"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "80",
+                                        "label": "Subsidy %",
+                                        "formatType": "text",
+                                        "value": "subsidyPercent"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "100",
+                                        "label": "Total Cost",
+                                        "formatType": "text",
+                                        "value": "totalCost"
+                                    },
+                                    {
+                                        "format": "",
+                                        "width": "100",
+                                        "label": "Subsidy Amt",
+                                        "formatType": "text",
+                                        "value": "subsidyAmount"
+                                    }
+                                ],
+                                "id": "benefitItems",
+                                "abortRelatedRunningProcesses": "",
+                                "height": "400",
+                                "showRowNumber": "true",
+                                "disabledDelete": "",
+                                "validateMinRow": "",
+                                "submit-label-normal": "",
+                                "uniqueKey": "",
+                                "errorMessage": "",
+                                "deleteSubformData": "",
+                                "deleteMessage": "",
+                                "label": "Benefit Items",
+                                "deleteFiles": "",
+                                "loadBinder": {
+                                    "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                                    "properties": {
+                                        "formDefId": "spBenefitItemRow",
+                                        "foreignKey": "program_id"
+                                    }
+                                },
+                                "disabledAdd": "",
+                                "submit-label-readonly": "",
+                                "width": "100%",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "autoPopulate": "",
+                                "id": "sectionBenefitSummary",
+                                "label": "",
+                                "value": "<!-- Benefit items summary (total cost, total subsidy) calculated via JavaScript. Deferred. -->"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "sectionItems",
+                "label": "Benefit Items"
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "03.05 - Benefits Definition",
+        "description": "Program benefit configuration and item definitions",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "spProgramBenefits",
+        "postProcessor": {
+            "className": "global.govstack.formquality.hook.FormQualityPostProcessor",
+            "properties": {
+                "serviceId": "farmers_subsidy"
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "sp_program_benefits"
+    }
+}

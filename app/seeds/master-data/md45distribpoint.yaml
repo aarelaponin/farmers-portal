@@ -1,0 +1,132 @@
+# app_fd_md45distribpoint
+# 5 row(s) at sync time
+- id: "12ee6b6d-db38-4d8f-9a12-2f62defa03bc"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_hascoldstorage: null
+  c_gpslongitude: null
+  c_code: "DP_LERIBE_HUB"
+  c_districtcode: "leribe"
+  c_contactemail: null
+  c_linkeddealercode: null
+  c_contactperson: null
+  c_pointtype: "district_depot"
+  c_isactive: "Y"
+  c_operatinghours: null
+  c_councilcode: null
+  c_name: "Leribe District Hub"
+  c_physicaladdress: "Hlotse, Leribe"
+  c_storagetonnes: null
+  c_village: null
+  c_contactphone: "+266 5800 0002"
+  c_capacityfarmersday: null
+  c_gpslatitude: null
+
+- id: "28469c0e-7231-4298-a58c-93a3c09cc623"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_hascoldstorage: null
+  c_gpslongitude: null
+  c_code: "DP_MASERU_DEPOT"
+  c_districtcode: "maseru"
+  c_contactemail: null
+  c_linkeddealercode: null
+  c_contactperson: null
+  c_pointtype: "district_depot"
+  c_isactive: "Y"
+  c_operatinghours: null
+  c_councilcode: null
+  c_name: "Maseru Central Depot"
+  c_physicaladdress: "MAFSN HQ, Maseru West"
+  c_storagetonnes: null
+  c_village: null
+  c_contactphone: "+266 5800 0001"
+  c_capacityfarmersday: null
+  c_gpslatitude: null
+
+- id: "8ab662b3-f38a-4809-b534-03562cbea3ac"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_hascoldstorage: null
+  c_gpslongitude: null
+  c_code: "DP_QUTHING_HUB"
+  c_districtcode: "quthing"
+  c_contactemail: null
+  c_linkeddealercode: null
+  c_contactperson: null
+  c_pointtype: "district_depot"
+  c_isactive: "Y"
+  c_operatinghours: null
+  c_councilcode: null
+  c_name: "Quthing District Hub"
+  c_physicaladdress: "Moyeni"
+  c_storagetonnes: null
+  c_village: null
+  c_contactphone: "+266 5800 0004"
+  c_capacityfarmersday: null
+  c_gpslatitude: null
+
+- id: "b5259b0c-c03d-4ea5-90cd-bd8f1d6c632c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_hascoldstorage: null
+  c_gpslongitude: null
+  c_code: "DP_BEREA_HUB"
+  c_districtcode: "berea"
+  c_contactemail: null
+  c_linkeddealercode: null
+  c_contactperson: null
+  c_pointtype: "district_depot"
+  c_isactive: "Y"
+  c_operatinghours: null
+  c_councilcode: null
+  c_name: "Berea District Hub"
+  c_physicaladdress: "Teyateyaneng"
+  c_storagetonnes: null
+  c_village: null
+  c_contactphone: "+266 5800 0005"
+  c_capacityfarmersday: null
+  c_gpslatitude: null
+
+- id: "dc3a6cd9-c037-4b70-ae20-41ad0bb46de2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_hascoldstorage: null
+  c_gpslongitude: null
+  c_code: "DP_MAFETENG_HUB"
+  c_districtcode: "mafeteng"
+  c_contactemail: null
+  c_linkeddealercode: null
+  c_contactperson: null
+  c_pointtype: "district_depot"
+  c_isactive: "Y"
+  c_operatinghours: null
+  c_councilcode: null
+  c_name: "Mafeteng District Hub"
+  c_physicaladdress: "Mafeteng town centre"
+  c_storagetonnes: null
+  c_village: null
+  c_contactphone: "+266 5800 0003"
+  c_capacityfarmersday: null
+  c_gpslatitude: null
+

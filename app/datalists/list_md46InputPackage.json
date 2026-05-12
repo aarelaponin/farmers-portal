@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Package Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Package Name"
+        },
+        {
+            "name": "description",
+            "id": "column_2",
+            "label": "Description"
+        },
+        {
+            "name": "targetCategory",
+            "id": "column_3",
+            "label": "Target Farmer Category"
+        },
+        {
+            "name": "packageValue",
+            "id": "column_4",
+            "label": "Package Value"
+        },
+        {
+            "name": "applicableZones",
+            "id": "column_5",
+            "label": "Applicable Zones"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.46 - Input Package",
+    "id": "list_md46InputPackage",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md46InputPackage"}
+    },
+    "actions": [],
+    "order": ""
+}

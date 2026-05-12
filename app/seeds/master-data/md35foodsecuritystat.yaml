@@ -1,0 +1,50 @@
+# app_fd_md35foodsecuritystat
+# 4 row(s) at sync time
+- id: "85934d74-0dba-49a3-b74b-53b1a91b8ded"
+  datecreated: "2026-01-26 17:05:51.870000"
+  datemodified: "2026-01-26 17:05:51.870000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CRISIS"
+  c_name: "Food Security Crisis"
+  c_severity_level: "4"
+  c_priority_weight: "20"
+
+- id: "87de44da-dcb1-49fa-b97f-d58b77104f05"
+  datecreated: "2026-01-26 17:05:51.446000"
+  datemodified: "2026-01-26 17:05:51.446000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "SEVERE"
+  c_name: "Severely Food Insecure"
+  c_severity_level: "3"
+  c_priority_weight: "10"
+
+- id: "a70587b8-33b5-4a09-83eb-67b0b0e81608"
+  datecreated: "2026-01-26 17:05:50.935000"
+  datemodified: "2026-01-26 17:05:50.935000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "MODERATE"
+  c_name: "Moderately Food Insecure"
+  c_severity_level: "2"
+  c_priority_weight: "5"
+
+- id: "c44ddf44-7782-4c74-b690-decc7ae3e082"
+  datecreated: "2026-01-26 17:05:50.511000"
+  datemodified: "2026-01-26 17:05:50.511000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "SECURE"
+  c_name: "Food Secure"
+  c_severity_level: "1"
+  c_priority_weight: "0"
+

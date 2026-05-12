@@ -1,0 +1,1022 @@
+# app_fd_mm_field
+# 30 row(s) at sync time
+- id: "013a05ea-06d8-4bae-971c-33e7a2bb93f7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "eligibility_summary"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Eligibility Outcome"
+  c_optionscatalogid: null
+  c_storagekey: "eligibility_summary_panel"
+  c_childscreenid: null
+  c_screenid: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "0"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "07f8dd30-b0e2-40d7-a551-ba4cf178982d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "number"
+  c_helptext: "Total cultivated area on this parcel for the upcoming season."
+  c_datatype: "number"
+  c_label: "Cultivated Area (hectares)"
+  c_optionscatalogid: null
+  c_storagekey: "area_hectares"
+  c_childscreenid: null
+  c_screenid: "c9ddf949-cf35-4a3e-a22f-a16c5a0e915c"
+  c_claimtype: "parcel.areaHectares"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "4"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "0c0f6098-fa8d-4963-afaf-1b9668a67fd8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "radio"
+  c_helptext: "Required for Drought Emergency Relief."
+  c_datatype: "string"
+  c_label: "Has your parcel been impacted by the 2025 drought?"
+  c_optionscatalogid: "YES_NO"
+  c_storagekey: "drought_affected_decl"
+  c_childscreenid: null
+  c_screenid: "3d30df36-744b-41cc-82f1-3ab6be360ef2"
+  c_claimtype: "applicant.droughtAffectedDeclaration"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "4"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "16772ec2-e3a3-4724-b3db-2c5299c0eddb"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "gis_polygon"
+  c_helptext: |-
+    Walk the parcel boundary (mobile GPS) or click points on the map
+    (desktop) to capture the polygon. Area, perimeter, and vertex
+    count are computed automatically as you draw.
+    
+  c_datatype: "string"
+  c_label: "Draw Parcel Boundary"
+  c_optionscatalogid: null
+  c_storagekey: "parcel_geometry"
+  c_childscreenid: null
+  c_screenid: "c9ddf949-cf35-4a3e-a22f-a16c5a0e915c"
+  c_claimtype: "parcel.geometry"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "6"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: |-
+    {
+      "defaultZoom": 15,
+      "mapHeight": 500,
+      "minVertices": 3,
+      "maxVertices": 50
+    }
+    
+  c_referencedformid: null
+
+- id: "1fac4a17-e39f-4d9c-be2e-cb0899af7857"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "textarea"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Operator Comment"
+  c_optionscatalogid: null
+  c_storagekey: "decision_comment"
+  c_childscreenid: null
+  c_screenid: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "4"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "22e7e758-8e6e-4b56-9968-fad4204f7bc3"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "textarea"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Additional Notes"
+  c_optionscatalogid: null
+  c_storagekey: "notes"
+  c_childscreenid: null
+  c_screenid: "3d30df36-744b-41cc-82f1-3ab6be360ef2"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "5"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "342e75a7-8af6-4ca7-aff1-4c21f75a4979"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "select"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "District"
+  c_optionscatalogid: "LESOTHO_DISTRICTS"
+  c_storagekey: "district"
+  c_childscreenid: null
+  c_screenid: "c9ddf949-cf35-4a3e-a22f-a16c5a0e915c"
+  c_claimtype: "parcel.district"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "1"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: "Y"
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "37c4d9c9-37da-460b-9ebe-94b6c77a0d0b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "budget_hint"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Budget Impact"
+  c_optionscatalogid: null
+  c_storagekey: "budget_hint_panel"
+  c_childscreenid: null
+  c_screenid: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "1"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "3dcb3c16-da75-4694-970e-530c3439977e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "radio"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Gender"
+  c_optionscatalogid: "GENDER"
+  c_storagekey: "gender"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.gender"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "3"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "3e36bef1-6e97-4129-8ec1-ea97f816d44c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "select"
+  c_helptext: "Determines which programme(s) you may apply for."
+  c_datatype: "string"
+  c_label: "Agro-Ecological Zone"
+  c_optionscatalogid: "AGRO_ZONES"
+  c_storagekey: "agro_zone"
+  c_childscreenid: null
+  c_screenid: "c9ddf949-cf35-4a3e-a22f-a16c5a0e915c"
+  c_claimtype: "parcel.agroZone"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "2"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "3ee9ad2c-31d5-4bae-9066-56f6ea2362a8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "file_upload"
+  c_helptext: |-
+    Optional. Upload one extra identity document if applicable
+    (passport scan, employer letter, etc.). PDF/JPG/PNG up to 5 MB.
+    
+  c_datatype: "string"
+  c_label: "Optional ID Attachment"
+  c_optionscatalogid: null
+  c_storagekey: "extra_id_attachment"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.extraIdAttachment"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "7"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "4504d752-9edf-426d-b128-cde859ef76dd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "text"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Mobile Phone (+266 XXXX XXXX)"
+  c_optionscatalogid: null
+  c_storagekey: "contact_phone"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.contactPhone"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "5"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "5b9f73bc-8234-45a8-84d1-2a695a9e3d8d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "cascading_select"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Village Name"
+  c_optionscatalogid: "md_village"
+  c_storagekey: "village_name"
+  c_childscreenid: null
+  c_screenid: "c9ddf949-cf35-4a3e-a22f-a16c5a0e915c"
+  c_claimtype: "parcel.village"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "3"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: "district"
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "60b1b6e1-4664-4e91-b441-7dca1d94bda5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "number"
+  c_helptext: "0–100. Ignored for all_must_pass strategies (e.g. PRG_2025_004 Drought Emergency)."
+  c_datatype: "number"
+  c_label: "Recommended Score (for score_based programmes)"
+  c_optionscatalogid: null
+  c_storagekey: "decision_score"
+  c_childscreenid: null
+  c_screenid: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  c_claimtype: "operator.recommendedScore"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "3"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: "Y"
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "6c447356-acd9-4078-bffb-d166124b8048"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "text"
+  c_helptext: "13-digit national identity number issued by the Department of National Identity. Other fields auto-fill if you're already in the registry."
+  c_datatype: "string"
+  c_label: "National ID"
+  c_optionscatalogid: null
+  c_storagekey: "national_id"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.nationalId"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: "AUTOFILL_FROM_FARMER_REGISTRY"
+  c_registrationids: null
+  c_orderindex: "1"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "7cd505fc-cf9d-4633-b0aa-a3c436cf440a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "text"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Full Name"
+  c_optionscatalogid: null
+  c_storagekey: "full_name"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.fullName"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "2"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: "Y"
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "8430798d-6c7a-4702-b871-a933ccc2b1a4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "signature"
+  c_helptext: "Sign here to confirm the personal details above are correct."
+  c_datatype: "string"
+  c_label: "Applicant Signature"
+  c_optionscatalogid: null
+  c_storagekey: "applicant_signature"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.signature"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "6"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "861918c7-dcd1-48f8-9432-3c6f1c1cf4b7"
+  datecreated: "2026-05-12 07:55:33.462000"
+  datemodified: "2026-05-12 07:55:33.462000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "note_thread"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: ""
+  c_optionscatalogid: null
+  c_storagekey: "case_notes"
+  c_childscreenid: null
+  c_screenid: "6b3b4375-4144-45f8-9b67-b64ecd72fc65"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "10"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: "N"
+  c_optionsfilterfield: null
+  c_widgetconfig: ""
+  c_referencedformid: null
+
+- id: "8ac27e9a-0dc2-4a39-a24c-4db7e1e031b1"
+  datecreated: "2026-05-11 13:52:33.332000"
+  datemodified: "2026-05-11 13:52:33.332000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "notification_timeline"
+  c_helptext: "Every email/SMS dispatched for this application — auto-generated, read-only."
+  c_datatype: "string"
+  c_label: "Notifications sent for this application"
+  c_optionscatalogid: null
+  c_storagekey: "notification_timeline_panel"
+  c_childscreenid: null
+  c_screenid: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "10"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "8c95b4f6-34a8-432a-95d7-81406b3b5675"
+  datecreated: "2026-05-11 14:35:16.494000"
+  datemodified: "2026-05-11 14:35:16.494000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "text"
+  c_helptext: "Used for application notifications. Auto-filled from the farmer registry when you enter your National ID."
+  c_datatype: "string"
+  c_label: "Email address"
+  c_optionscatalogid: null
+  c_storagekey: "email_address"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "55"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "983b8bfc-7324-4081-ad58-7e8d9b88b51a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "date"
+  c_helptext: null
+  c_datatype: "date"
+  c_label: "Date of Birth"
+  c_optionscatalogid: null
+  c_storagekey: "date_of_birth"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.dateOfBirth"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "4"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "98f9845f-776a-4a1b-94cd-ebfe3f73cbb7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "radio"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Decision"
+  c_optionscatalogid: "DECISION_OUTCOMES"
+  c_storagekey: "decision"
+  c_childscreenid: null
+  c_screenid: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  c_claimtype: "operator.decision"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "2"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: "Y"
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "b51276a5-8fdf-4785-85b6-3ac35fd2c3be"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "radio"
+  c_helptext: "Required for Block Farming programmes."
+  c_datatype: "string"
+  c_label: "Member of a Block Farming Cooperative?"
+  c_optionscatalogid: "YES_NO"
+  c_storagekey: "block_farming_member"
+  c_childscreenid: null
+  c_screenid: "3d30df36-744b-41cc-82f1-3ab6be360ef2"
+  c_claimtype: "applicant.blockFarmingMember"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "2"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "b8da4a9b-866a-4a60-aeba-e016e3e008fd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "date"
+  c_helptext: null
+  c_datatype: "date"
+  c_label: "Decision Date"
+  c_optionscatalogid: null
+  c_storagekey: "decided_at"
+  c_childscreenid: null
+  c_screenid: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "5"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "b96eb454-d665-41e1-a560-b64a2341b293"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "text"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Cooperative Name"
+  c_optionscatalogid: null
+  c_storagekey: "cooperative_name"
+  c_childscreenid: null
+  c_screenid: "3d30df36-744b-41cc-82f1-3ab6be360ef2"
+  c_claimtype: "applicant.cooperativeName"
+  c_addlabel: null
+  c_requirednessdeterminantid: "DET_BLOCK_FARMING_MEMBER"
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "3"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: "DET_BLOCK_FARMING_MEMBER"
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "ba2fddc9-77bc-4ebd-a053-9c35a1f809d2"
+  datecreated: "2026-05-11 14:24:11.210000"
+  datemodified: "2026-05-11 15:37:05.488000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_optionsbinderjson: ""
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "checkbox"
+  c_helptext: "Tick the box and save to formally submit your application. Without this tick, your changes are saved as DRAFT and you can return later."
+  c_datatype: "string"
+  c_label: "Submission"
+  c_optionscatalogid: "SUBMIT_CONFIRMATION"
+  c_storagekey: "submit_confirmation"
+  c_childscreenid: null
+  c_screenid: "0496bcb6-419d-477a-ab3b-1406f519e565"
+  c_claimtype: null
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "20"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "bc78ffac-cf33-4736-9d9c-9edd8128eede"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "select"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Primary Crop (intended)"
+  c_optionscatalogid: "CROPS"
+  c_storagekey: "primary_crop"
+  c_childscreenid: null
+  c_screenid: "3d30df36-744b-41cc-82f1-3ab6be360ef2"
+  c_claimtype: "parcel.primaryCrop"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "1"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "c6bd4e9b-3d0f-4eb6-86bc-cf3790c497cf"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "select"
+  c_helptext: null
+  c_datatype: "string"
+  c_label: "Land Tenure"
+  c_optionscatalogid: "TENURE_TYPES"
+  c_storagekey: "tenure_type"
+  c_childscreenid: null
+  c_screenid: "c9ddf949-cf35-4a3e-a22f-a16c5a0e915c"
+  c_claimtype: "parcel.tenureType"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "5"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "d8cc04a9-8b2d-4996-a23b-3b835c1d4200"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "select"
+  c_helptext: "Pick one of the four 2025 subsidy programmes. The system will check your eligibility for the selected programme on submit."
+  c_datatype: "string"
+  c_label: "Applying for"
+  c_optionscatalogid: "PROGRAMMES_2025"
+  c_storagekey: "applied_programme"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "application.appliedProgramme"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "0"
+  c_defaultbehavioronerror: "required"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: "Y"
+  c_optionsfilterfield: null
+  c_widgetconfig: null
+  c_referencedformid: null
+
+- id: "fe07be4e-b401-4272-b6b3-59a6e82a8a0b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_optionsbinderjson: null
+  c_validationrulesjson: null
+  c_minrows: null
+  c_widget: "repeating_group"
+  c_helptext: |-
+    Add household members covered by this application. The kernel
+    renders this as an editable grid.
+    
+  c_datatype: "string"
+  c_label: "Household Members for this Application"
+  c_optionscatalogid: null
+  c_storagekey: "application_household_members"
+  c_childscreenid: null
+  c_screenid: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  c_claimtype: "applicant.householdMembers"
+  c_addlabel: null
+  c_requirednessdeterminantid: null
+  c_maxrows: null
+  c_actionids: null
+  c_registrationids: null
+  c_orderindex: "8"
+  c_defaultbehavioronerror: "optional"
+  c_removelabel: null
+  c_visibilitydeterminantid: null
+  c_displayonlist: null
+  c_optionsfilterfield: null
+  c_widgetconfig: |-
+    {
+      "foreignKey": "farmer_id",
+      "pageSize": 10,
+      "height": 350,
+      "validateMinRow": 0,
+      "options": [
+        { "value": "memberName",   "label": "Name",        "width": "200", "formatType": "text"    },
+        { "value": "sex",          "label": "Sex",         "width": "80",  "formatType": "options" },
+        { "value": "date_of_birth","label": "DoB",         "width": "120", "formatType": "date",   "format": "dd/MM/yyyy" },
+        { "value": "relationship", "label": "Relationship","width": "150", "formatType": "options" }
+      ]
+    }
+    
+  c_referencedformid: "householdMemberForm"
+

@@ -1,0 +1,62 @@
+# app_fd_mm_role
+# 3 row(s) at sync time
+- id: "1de91dc7-fd92-4f3a-ac7e-d4c0782e434d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_applicabilitydeterminantid: null
+  c_code: "ISSUER"
+  c_kind: "issue"
+  c_registrationid: null
+  c_name: "Benefit Issuer"
+  c_description: |-
+    Officer responsible for issuing the approved benefit (input voucher,
+    seed pack delivery, e-voucher activation).
+    
+  c_position: "3"
+  c_entityinstitutionid: "MIN_AGRO"
+  c_serviceid: "SUBSIDY_2025"
+
+- id: "db1832b1-c723-4886-b501-7b494d79d39d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_applicabilitydeterminantid: null
+  c_code: "REVIEWER"
+  c_kind: "review"
+  c_registrationid: null
+  c_name: "Application Reviewer"
+  c_description: |-
+    Front-line officer who reviews submitted applications for completeness
+    and obvious eligibility issues. First role in the processing chain.
+    
+  c_position: "1"
+  c_entityinstitutionid: "MIN_AGRO"
+  c_serviceid: "SUBSIDY_2025"
+
+- id: "dc6da93b-4e97-4ef9-88ba-b3c1e2222162"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_applicabilitydeterminantid: null
+  c_code: "APPROVER"
+  c_kind: "approve"
+  c_registrationid: null
+  c_name: "Programme Approver"
+  c_description: |-
+    Senior officer who makes the final approval/rejection decision based
+    on the reviewer's recommendation and the engine's eligibility outcome.
+    
+  c_position: "2"
+  c_entityinstitutionid: "MIN_AGRO"
+  c_serviceid: "SUBSIDY_2025"
+

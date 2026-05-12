@@ -1,0 +1,222 @@
+# app_fd_mm_capability_field
+# 12 row(s) at sync time
+- id: "03023a55-216b-4d52-b2af-012e318a2f69"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "contact_phone"
+  c_expression: "c_mobile_number"
+  c_capability_code: "farmer"
+  c_name: "Mobile (alias)"
+  c_description: "Aliased — schema column is c_mobile_number."
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "084dc152-81b0-4046-b624-17465b9c4b5f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "gender"
+  c_expression: "c_gender"
+  c_capability_code: "farmer"
+  c_name: null
+  c_description: null
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "22faf990-04fa-4ec0-9a8f-209254853b10"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid AND c_applied_programme = :applied_programme AND id <> :applicationId"
+  c_code: "prior_applications_this_programme"
+  c_expression: "count(*)"
+  c_capability_code: "subsidy"
+  c_name: "Prior applications by this NID for the same programme"
+  c_description: |-
+    Used by DET_NO_DUPLICATE_<programme> rules. Excludes the current
+    application's own row (id <> :applicationId) so a re-evaluation of
+    the applicant's own draft doesn't trigger a false duplicate signal.
+    
+  c_default_when_no_anchor: "0"
+  c_default_when_no_row: "0"
+  c_source_table: "app_fd_subsidy_app_2025"
+
+- id: "5631767d-c5c3-40a0-8581-4877b92b8c81"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "f.c_national_id = :nid"
+  c_code: "cultivated_total"
+  c_expression: "COALESCE(sum(CAST(NULLIF(g.c_area_hectares,'') AS NUMERIC(12,4))), 0)"
+  c_capability_code: "parcels_summary"
+  c_name: "Sum of c_area_hectares"
+  c_description: null
+  c_default_when_no_anchor: "0"
+  c_default_when_no_row: "0"
+  c_source_table: "app_fd_parcelregistration p JOIN app_fd_farmerbasicinfo f ON f.id = p.c_parent_id JOIN app_fd_parcelgeometry g ON g.c_parent_id = p.id"
+
+- id: "74b2429c-32a1-4de5-9f1f-0fc086d25362"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "full_name"
+  c_expression: "TRIM(COALESCE(c_first_name,'') || ' ' || COALESCE(c_last_name,''))"
+  c_capability_code: "farmer"
+  c_name: "Full name (computed)"
+  c_description: null
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "7e56970c-bf5e-48f2-b1ff-ef26e7a84fb5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "first_name"
+  c_expression: "c_first_name"
+  c_capability_code: "farmer"
+  c_name: null
+  c_description: null
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "811e8d18-0011-4ae2-9dba-71969484103f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "date_of_birth"
+  c_expression: "c_date_of_birth"
+  c_capability_code: "farmer"
+  c_name: null
+  c_description: null
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "82958cac-6389-4602-b78a-bb128e827540"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "email"
+  c_expression: "c_email_address"
+  c_capability_code: "farmer"
+  c_name: null
+  c_description: null
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "9001ae90-aa08-49e3-a8de-c2f7c3070d1d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "national_id"
+  c_expression: "c_national_id"
+  c_capability_code: "farmer"
+  c_name: "National ID"
+  c_description: null
+  c_default_when_no_anchor: ""
+  c_default_when_no_row: ""
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "90a085e4-ff79-4a1c-8e3f-6baf2eec3581"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "f.c_national_id = :nid"
+  c_code: "largest_parcel"
+  c_expression: "max(CAST(NULLIF(g.c_area_hectares,'') AS NUMERIC(12,4)))"
+  c_capability_code: "parcels_summary"
+  c_name: "Max parcel size (Ha)"
+  c_description: null
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_parcelregistration p JOIN app_fd_farmerbasicinfo f ON f.id = p.c_parent_id JOIN app_fd_parcelgeometry g ON g.c_parent_id = p.id"
+
+- id: "ba8d2176-a8a8-4529-9f06-f6f7896a50f7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "c_national_id = :nid"
+  c_code: "last_name"
+  c_expression: "c_last_name"
+  c_capability_code: "farmer"
+  c_name: null
+  c_description: null
+  c_default_when_no_anchor: null
+  c_default_when_no_row: null
+  c_source_table: "app_fd_farmerbasicinfo"
+
+- id: "e11a9b76-9f2f-45c2-8418-373278652258"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_result_type: "scalar"
+  c_where_clause: "f.c_national_id = :nid"
+  c_code: "parcel_count"
+  c_expression: "count(*)"
+  c_capability_code: "parcels_summary"
+  c_name: "Number of parcels"
+  c_description: null
+  c_default_when_no_anchor: "0"
+  c_default_when_no_row: "0"
+  c_source_table: "app_fd_parcelregistration p JOIN app_fd_farmerbasicinfo f ON f.id = p.c_parent_id"
+

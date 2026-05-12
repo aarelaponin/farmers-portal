@@ -1,0 +1,106 @@
+# app_fd_md80notifcategory
+# 8 row(s) at sync time
+- id: "md80notifCategory-alert"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ALERT"
+  c_name: "Alert"
+  c_description: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+
+- id: "md80notifCategory-application"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "APPLICATION"
+  c_name: "Application"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md80notifCategory-distribution"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISTRIBUTION"
+  c_name: "Distribution"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md80notifCategory-eligibility"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ELIGIBILITY"
+  c_name: "Eligibility"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md80notifCategory-enrollment"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ENROLLMENT"
+  c_name: "Enrollment"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md80notifCategory-general"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "GENERAL"
+  c_name: "General"
+  c_description: null
+  c_displayorder: "8"
+  c_isactive: "Y"
+
+- id: "md80notifCategory-payment"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PAYMENT"
+  c_name: "Payment"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md80notifCategory-reminder"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "REMINDER"
+  c_name: "Reminder"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+

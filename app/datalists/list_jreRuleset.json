@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "rulesetCode",
+            "id": "column_0",
+            "label": "Ruleset Code"
+        },
+        {
+            "name": "rulesetName",
+            "id": "column_1",
+            "label": "Ruleset Name"
+        },
+        {
+            "name": "status",
+            "id": "column_2",
+            "label": "Status"
+        },
+        {
+            "name": "version",
+            "id": "column_3",
+            "label": "Version"
+        },
+        {
+            "name": "script",
+            "id": "column_4",
+            "label": "Rule Script"
+        },
+        {
+            "name": "effectiveFrom",
+            "id": "column_5",
+            "label": "Effective From"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: JRE Ruleset",
+    "id": "list_jreRuleset",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "jreRuleset"}
+    },
+    "actions": [],
+    "order": ""
+}

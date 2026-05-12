@@ -1,0 +1,90 @@
+# app_fd_md21programtype
+# 8 row(s) at sync time
+- id: "1c92e22b-6439-42fd-92bd-109b82b0baac"
+  datecreated: "2026-01-26 17:03:42.778000"
+  datemodified: "2026-01-26 17:03:42.778000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "VOUCHER"
+  c_name: "Voucher Program"
+  c_description: "E-vouchers for inputs"
+
+- id: "4e808eeb-5331-4ede-9f02-9bf6c0611830"
+  datecreated: "2026-01-26 17:03:43.635000"
+  datemodified: "2026-01-26 17:03:43.635000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "TRAINING"
+  c_name: "Training Support"
+  c_description: "Agricultural training courses"
+
+- id: "62ccd704-8d81-4d2e-a172-25dda3ca69c3"
+  datecreated: "2026-01-26 17:03:43.205000"
+  datemodified: "2026-01-26 17:03:43.205000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "EQUIPMENT"
+  c_name: "Equipment Support"
+  c_description: "Farm equipment and tools"
+
+- id: "8315526b-d91a-4cd5-9d4c-1593cf8b8ecc"
+  datecreated: "2026-01-26 17:03:44.060000"
+  datemodified: "2026-01-26 17:03:44.060000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LIVESTOCK"
+  c_name: "Livestock Support"
+  c_description: "Livestock and veterinary support"
+
+- id: "8dce7cf5-8325-4151-9b35-eb7ee47edaf4"
+  datecreated: "2026-01-26 17:03:44.898000"
+  datemodified: "2026-01-26 17:03:44.898000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "EMERGENCY"
+  c_name: "Emergency Relief"
+  c_description: "Disaster/emergency support"
+
+- id: "a3c54a18-bade-4941-8d74-756911f03d7a"
+  datecreated: "2026-01-26 17:03:44.479000"
+  datemodified: "2026-01-26 17:03:44.479000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "MIXED"
+  c_name: "Mixed Program"
+  c_description: "Combination of support types"
+
+- id: "b49e1d23-712d-4940-bb17-57a662c9ff5f"
+  datecreated: "2026-01-26 17:03:41.920000"
+  datemodified: "2026-01-26 17:03:41.920000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "INPUT_SUBSIDY"
+  c_name: "Input Subsidy"
+  c_description: "Seeds/fertilizer/pesticides support"
+
+- id: "ce2b55ec-f28e-4f3f-abea-c2af1bfcdc45"
+  datecreated: "2026-01-26 17:03:42.349000"
+  datemodified: "2026-01-26 17:03:42.349000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CASH_TRANSFER"
+  c_name: "Cash Transfer"
+  c_description: "Direct cash payments"
+

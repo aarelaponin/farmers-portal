@@ -1,0 +1,150 @@
+# app_fd_mm_screen
+# 8 row(s) at sync time
+- id: "0496bcb6-419d-477a-ab3b-1406f519e565"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_kind: "review"
+  c_orderindex: "6"
+  c_description: "Confirm the application before sending."
+  c_serviceid: "SUBSIDY_2025"
+  c_title: "Review & Submit"
+  c_visibilitydeterminantid: null
+  c_code: "APP_REVIEW"
+  c_audience: "citizen"
+  c_guidekind: null
+
+- id: "3cefda79-67f7-489f-bdac-6e9f25a3edf4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_kind: "documents"
+  c_orderindex: "5"
+  c_description: |-
+    Uploads. Required documents differ by programme — list comes from
+    mm_required_doc rows scoped to the matching registration.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_title: "Required Documents"
+  c_visibilitydeterminantid: null
+  c_code: "APP_DOCUMENTS"
+  c_audience: "citizen"
+  c_guidekind: null
+
+- id: "3d30df36-744b-41cc-82f1-3ab6be360ef2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_kind: "form"
+  c_orderindex: "4"
+  c_description: "What the applicant grows and produces."
+  c_serviceid: "SUBSIDY_2025"
+  c_title: "Crops & Activities"
+  c_visibilitydeterminantid: null
+  c_code: "APP_CROPS"
+  c_audience: "citizen"
+  c_guidekind: null
+
+- id: "6b3b4375-4144-45f8-9b67-b64ecd72fc65"
+  datecreated: "2026-05-12 07:55:32.790000"
+  datemodified: "2026-05-12 07:55:32.790000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_kind: null
+  c_orderindex: null
+  c_description: null
+  c_serviceid: null
+  c_title: "Case Notes"
+  c_visibilitydeterminantid: null
+  c_code: "OPERATOR_CASE_NOTES"
+  c_audience: null
+  c_guidekind: null
+
+- id: "89de041b-6a9f-4940-ae7e-3471f12eec5d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_kind: "form"
+  c_orderindex: "2"
+  c_description: "Identity and contact details of the applicant."
+  c_serviceid: "SUBSIDY_2025"
+  c_title: "Applicant Identity"
+  c_visibilitydeterminantid: null
+  c_code: "APP_APPLICANT"
+  c_audience: "citizen"
+  c_guidekind: null
+
+- id: "b9b3b0ff-3c1a-43cb-ac51-e8098a40455d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_kind: "form"
+  c_orderindex: "10"
+  c_description: |-
+    Operator decision section. Renders alongside the citizen's submitted
+    data (which the operator inspects in readonly mode via Meta Screen
+    widgets pointing at APP_APPLICANT / APP_PARCEL / APP_CROPS).
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_title: "Operator Decision"
+  c_visibilitydeterminantid: null
+  c_code: "OP_DECISION"
+  c_audience: "operator"
+  c_guidekind: null
+
+- id: "c9ddf949-cf35-4a3e-a22f-a16c5a0e915c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_kind: "form"
+  c_orderindex: "3"
+  c_description: "Where the farm is located and how big it is."
+  c_serviceid: "SUBSIDY_2025"
+  c_title: "Parcel Information"
+  c_visibilitydeterminantid: null
+  c_code: "APP_PARCEL"
+  c_audience: "citizen"
+  c_guidekind: null
+
+- id: "da29b0d1-5068-423e-83be-029b489c61fd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_kind: "guide"
+  c_orderindex: "1"
+  c_description: |-
+    Choose a programme below to begin your application. Each card shows
+    whether you're currently eligible based on the information already
+    captured. If a programme says "Need more information" — fill in the
+    next tabs and return here to re-evaluate.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_title: "Welcome — 2025 Subsidy Application"
+  c_visibilitydeterminantid: null
+  c_code: "APP_INTRO"
+  c_audience: "citizen"
+  c_guidekind: "catalogue"
+

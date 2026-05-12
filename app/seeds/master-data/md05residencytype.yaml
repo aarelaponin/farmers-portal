@@ -1,0 +1,32 @@
+# app_fd_md05residencytype
+# 3 row(s) at sync time
+- id: "3e7833d0-4638-4242-982d-313f11822a36"
+  datecreated: "2026-01-26 17:02:37.197000"
+  datemodified: "2026-01-26 17:02:37.197000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "urban"
+  c_name: "Urban"
+
+- id: "53c67e6f-f60d-407e-84fa-43f6a48073d8"
+  datecreated: "2026-01-26 17:02:37.616000"
+  datemodified: "2026-01-26 17:02:37.616000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "peri-urban"
+  c_name: "Peri-Urban"
+
+- id: "69f0d64d-cc59-4c6e-ba9b-5849d45ed772"
+  datecreated: "2026-01-26 17:02:36.766000"
+  datemodified: "2026-01-26 17:02:36.766000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "rural"
+  c_name: "Rural"
+

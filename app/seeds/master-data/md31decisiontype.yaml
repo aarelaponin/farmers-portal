@@ -1,0 +1,93 @@
+# app_fd_md31decisiontype
+# 7 row(s) at sync time
+- id: "3ac093d5-fa1c-4054-af66-b31242a15b6d"
+  datecreated: "2026-01-26 17:05:30.369000"
+  datemodified: "2026-01-26 17:05:30.369000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_is_final: "Yes"
+  c_code: "PARTIAL_APPROVAL"
+  c_name: "Partially Approved"
+  c_triggers_payment: "Yes"
+  c_requires_reason: "Yes"
+
+- id: "6161e136-9144-4c4a-9311-774194697224"
+  datecreated: "2026-01-26 17:05:27.649000"
+  datemodified: "2026-01-26 17:05:27.649000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_is_final: "Yes"
+  c_code: "APPROVED"
+  c_name: "Approved"
+  c_triggers_payment: "Yes"
+  c_requires_reason: "No"
+
+- id: "7a57a0bd-a0a1-4bad-9238-660bb206a66a"
+  datecreated: "2026-01-26 17:05:28.523000"
+  datemodified: "2026-01-26 17:05:28.523000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_is_final: "No"
+  c_code: "PENDING_INFO"
+  c_name: "Pending Additional Information"
+  c_triggers_payment: "No"
+  c_requires_reason: "Yes"
+
+- id: "839dfc75-24d9-484a-ae51-9e25894596e5"
+  datecreated: "2026-01-26 17:05:28.084000"
+  datemodified: "2026-01-26 17:05:28.084000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_is_final: "Yes"
+  c_code: "REJECTED"
+  c_name: "Rejected"
+  c_triggers_payment: "No"
+  c_requires_reason: "Yes"
+
+- id: "acf67024-b51b-4ca4-85bb-1b8dde340df0"
+  datecreated: "2026-01-26 17:05:29.024000"
+  datemodified: "2026-01-26 17:05:29.024000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_is_final: "No"
+  c_code: "CONDITIONALLY_APPROVED"
+  c_name: "Conditionally Approved"
+  c_triggers_payment: "No"
+  c_requires_reason: "Yes"
+
+- id: "f811dc7b-19eb-4728-ab87-193327d7ebc8"
+  datecreated: "2026-01-26 17:05:29.942000"
+  datemodified: "2026-01-26 17:05:29.942000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_is_final: "No"
+  c_code: "UNDER_INVESTIGATION"
+  c_name: "Under Investigation"
+  c_triggers_payment: "No"
+  c_requires_reason: "Yes"
+
+- id: "f9ab425c-8919-49a6-b49f-3c88cba9d47a"
+  datecreated: "2026-01-26 17:05:29.488000"
+  datemodified: "2026-01-26 17:05:29.488000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_is_final: "No"
+  c_code: "ESCALATED"
+  c_name: "Escalated for Review"
+  c_triggers_payment: "No"
+  c_requires_reason: "Yes"
+

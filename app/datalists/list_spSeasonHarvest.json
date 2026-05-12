@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "harvestId",
+            "id": "column_0",
+            "label": "Record ID"
+        },
+        {
+            "name": "farmerIdRef",
+            "id": "column_1",
+            "label": "Farmer"
+        },
+        {
+            "name": "farmerCode",
+            "id": "column_2",
+            "label": "Farmer Code"
+        },
+        {
+            "name": "farmerName",
+            "id": "column_3",
+            "label": "Farmer Name"
+        },
+        {
+            "name": "nationalId",
+            "id": "column_4",
+            "label": "National ID"
+        },
+        {
+            "name": "seasonCode",
+            "id": "column_5",
+            "label": "Agricultural Season"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Seasonal Harvest Record",
+    "id": "list_spSeasonHarvest",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "spSeasonHarvest"}
+    },
+    "actions": [],
+    "order": ""
+}

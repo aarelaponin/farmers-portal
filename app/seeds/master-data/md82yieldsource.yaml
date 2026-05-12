@@ -1,0 +1,67 @@
+# app_fd_md82yieldsource
+# 5 row(s) at sync time
+- id: "md82yieldSource-baseline"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "BASELINE"
+  c_name: "Baseline (md49)"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md82yieldSource-extension"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EXTENSION"
+  c_name: "Extension Officer"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md82yieldSource-farmer"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FARMER"
+  c_name: "Farmer-Reported"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md82yieldSource-historical"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "HISTORICAL"
+  c_name: "Historical Average"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md82yieldSource-manual"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "MANUAL"
+  c_name: "Manual Entry"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+

@@ -1,0 +1,54 @@
+# app_fd_md78notifchannel
+# 4 row(s) at sync time
+- id: "md78notifChannel-email"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EMAIL"
+  c_name: "Email"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md78notifChannel-push"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PUSH"
+  c_name: "Push Notification"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md78notifChannel-sms"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SMS"
+  c_name: "SMS"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md78notifChannel-ussd"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "USSD"
+  c_name: "USSD"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+

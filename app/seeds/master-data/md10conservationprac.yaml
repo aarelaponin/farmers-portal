@@ -1,0 +1,182 @@
+# app_fd_md10conservationprac
+# 18 row(s) at sync time
+- id: "0b262d70-05e1-4b0f-bc62-5dcc05b1ad1d"
+  datecreated: "2026-02-02 17:42:30.642000"
+  datemodified: "2026-02-02 17:42:30.642000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "grass_strips"
+  c_name: "Grass Strips / Buffer Zones"
+
+- id: "21543e1b-ef10-45ef-bcbc-56416b447539"
+  datecreated: "2026-02-02 17:42:10.992000"
+  datemodified: "2026-02-02 17:42:10.992000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "composting"
+  c_name: "Composting"
+
+- id: "405ec325-986a-4932-bb5b-909505e449db"
+  datecreated: "2026-01-26 17:02:58.687000"
+  datemodified: "2026-01-26 17:02:58.687000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "water_harvesting"
+  c_name: "Water Harvesting"
+
+- id: "441b8ee5-41b8-44b5-8206-803213fe51b7"
+  datecreated: "2026-01-26 17:02:53.646000"
+  datemodified: "2026-01-26 17:02:53.646000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "no_till"
+  c_name: "No Till"
+
+- id: "4c3c2750-620d-4ce0-8b9d-6e3715361ca5"
+  datecreated: "2026-01-26 17:02:56.242000"
+  datemodified: "2026-01-26 17:02:56.242000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "crop_residue"
+  c_name: "Maintenance of Crop Residue"
+
+- id: "62fb12f8-6966-4054-9df7-62097c8fd881"
+  datecreated: "2026-01-26 17:02:54.940000"
+  datemodified: "2026-01-26 17:02:54.940000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "crop_rotation"
+  c_name: "Crop Rotation"
+
+- id: "6b4376e1-6e5c-42d6-8f26-c5a014a5e0b4"
+  datecreated: "2026-01-26 17:02:55.373000"
+  datemodified: "2026-01-26 17:02:55.373000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "improved_fallow"
+  c_name: "Improved Fallow"
+
+- id: "ac58d38b-43d5-471e-b884-1e58dafd202c"
+  datecreated: "2026-01-26 17:02:57.153000"
+  datemodified: "2026-01-26 17:02:57.153000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "contours"
+  c_name: "Contours"
+
+- id: "b364a3e2-bb4e-4c4f-abba-8246dd637919"
+  datecreated: "2026-02-02 17:41:46.354000"
+  datemodified: "2026-02-02 17:41:46.354000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "intercropping"
+  c_name: "Intercropping"
+
+- id: "c58043dd-74df-43df-b2cd-19c0a6292666"
+  datecreated: "2026-01-26 17:02:57.685000"
+  datemodified: "2026-01-26 17:02:57.685000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "terraces"
+  c_name: "Terraces"
+
+- id: "cc6690a5-f5a7-4442-a44e-f9148b22772e"
+  datecreated: "2026-01-26 17:02:58.175000"
+  datemodified: "2026-01-26 17:02:58.175000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "agro_forestry"
+  c_name: "Agro-forestry Nurseries"
+
+- id: "d0ef66ea-7e70-49c9-be2d-8b414818f6ff"
+  datecreated: "2026-02-02 17:40:45.365000"
+  datemodified: "2026-02-02 17:40:45.365000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "ipm"
+  c_name: "Integrated Pest Management"
+
+- id: "d50e1477-add9-436e-8c0a-6506b9bab877"
+  datecreated: "2026-02-02 17:41:27.528000"
+  datemodified: "2026-02-02 17:41:27.528000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "cover_cropping"
+  c_name: "Cover Cropping"
+
+- id: "db0868b5-a290-435d-886b-98c15e79aed9"
+  datecreated: "2026-01-26 17:02:54.511000"
+  datemodified: "2026-01-26 17:02:54.511000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "ripping"
+  c_name: "Ripping"
+
+- id: "edb77f49-0c2a-4880-b846-e286bf4f03ee"
+  datecreated: "2026-01-26 17:02:56.672000"
+  datemodified: "2026-01-26 17:02:56.672000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mulching"
+  c_name: "Mulching"
+
+- id: "ee14c56e-9352-4c83-8a83-0c4542188112"
+  datecreated: "2026-01-26 17:02:54.080000"
+  datemodified: "2026-01-26 17:02:54.080000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "planting_basins"
+  c_name: "Planting Basins"
+
+- id: "ef4cecf7-a0f8-4f8e-941f-97eacc730127"
+  datecreated: "2026-02-02 17:41:00.882000"
+  datemodified: "2026-02-02 17:41:00.882000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "icls"
+  c_name: "Integrated Crop-Livestock Systems"
+
+- id: "f97737bd-7bd1-477d-8633-82b661c7fe70"
+  datecreated: "2026-01-26 17:02:55.809000"
+  datemodified: "2026-01-26 17:02:55.809000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "fertilizer_tree"
+  c_name: "Use of Fertilizer Tree/Crop"
+

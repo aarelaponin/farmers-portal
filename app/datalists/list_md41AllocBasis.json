@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Name"
+        },
+        {
+            "name": "description",
+            "id": "column_2",
+            "label": "Description"
+        },
+        {
+            "name": "calculationUnit",
+            "id": "column_3",
+            "label": "Calculation Unit"
+        },
+        {
+            "name": "requiresFarmerData",
+            "id": "column_4",
+            "label": "Requires Farmer Data"
+        },
+        {
+            "name": "formula",
+            "id": "column_5",
+            "label": "Calculation Formula"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.41 - Allocation Basis",
+    "id": "list_md41AllocBasis",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md41AllocBasis"}
+    },
+    "actions": [],
+    "order": ""
+}

@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "national_id",
+            "id": "column_0",
+            "label": "National ID"
+        },
+        {
+            "name": "first_name",
+            "id": "column_1",
+            "label": "First Name"
+        },
+        {
+            "name": "last_name",
+            "id": "column_2",
+            "label": "Last Name"
+        },
+        {
+            "name": "gender",
+            "id": "column_3",
+            "label": "Gender"
+        },
+        {
+            "name": "date_of_birth",
+            "id": "column_4",
+            "label": "Date of Birth"
+        },
+        {
+            "name": "marital_status",
+            "id": "column_5",
+            "label": "Marital Status"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 01.01 - Farmer Basic Information",
+    "id": "list_farmerBasicInfo",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "farmerBasicInfo"}
+    },
+    "actions": [],
+    "order": ""
+}

@@ -1,0 +1,43 @@
+# app_fd_mm_service
+# 2 row(s) at sync time
+- id: "7809a3cc-362c-4c12-a6a8-c101409575c0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_attributesjson: null
+  c_code: "SUBSIDY_2025"
+  c_institutionid: null
+  c_publishedat: null
+  c_name: "Farmers Subsidy 2025"
+  c_description: |-
+    Single-Window service for the 2025 subsidy season. Houses four
+    registrations (Block Farming, Mountain Pulses, E-Voucher Pilot,
+    Drought Emergency) under one citizen-facing entry point.
+    
+  c_version: null
+  c_status: null
+
+- id: "b7022a57-d151-4f02-9941-6c9141b37bfa"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_attributesjson: null
+  c_code: "INPUTS_2025"
+  c_institutionid: null
+  c_publishedat: null
+  c_name: "Inputs Management 2025/26 Cycle"
+  c_description: |-
+    Inputs Management module — supply-chain side of the subsidy programme:
+    catalogue, supplier registry, inventory, allocation plans, voucher
+    issuance, distribution events. Triggered downstream of subsidy
+    approval (mm_action ISSUE_IM_ENTITLEMENT, future slice).
+    
+  c_version: null
+  c_status: null
+

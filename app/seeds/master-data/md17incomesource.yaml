@@ -1,0 +1,102 @@
+# app_fd_md17incomesource
+# 10 row(s) at sync time
+- id: "029489e0-e1f8-4462-93e3-a9f27af4a3ba"
+  datecreated: "2026-01-26 17:03:29.421000"
+  datemodified: "2026-01-26 17:03:29.421000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "non_farm_business"
+  c_name: "Non-farm Business"
+
+- id: "0aeb23e2-4bba-489b-b316-d1ef1aebe594"
+  datecreated: "2026-01-26 17:03:28.575000"
+  datemodified: "2026-01-26 17:03:28.575000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "informal_employment"
+  c_name: "Informal Employment"
+
+- id: "0f61b3ad-8596-4b31-beed-0d0a2dacc878"
+  datecreated: "2026-01-26 17:03:29.837000"
+  datemodified: "2026-01-26 17:03:29.837000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "income_rentals"
+  c_name: "Income from Rentals"
+
+- id: "2d01025b-030d-496f-98ec-1932097e2e20"
+  datecreated: "2026-01-26 17:03:30.714000"
+  datemodified: "2026-01-26 17:03:30.714000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "transfers_assistance"
+  c_name: "Transfer and social assistance program"
+
+- id: "5a2c7161-03d3-405e-9dee-c9f7f6676184"
+  datecreated: "2026-01-26 17:03:28.146000"
+  datemodified: "2026-01-26 17:03:28.146000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "formal_employment"
+  c_name: "Formal Employment"
+
+- id: "87bb63c0-84cd-4268-88c8-8aedd01fcfa8"
+  datecreated: "2026-01-26 17:03:29.001000"
+  datemodified: "2026-01-26 17:03:29.001000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "farming"
+  c_name: "Farming (crops/livestock/fish/bees)"
+
+- id: "a33dcfea-afc1-4e38-bffd-e7541db0bd1f"
+  datecreated: "2026-01-26 17:03:30.294000"
+  datemodified: "2026-01-26 17:03:30.294000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "family_support"
+  c_name: "Support from family or non-family"
+
+- id: "c2fe79cd-9c13-4bf8-9a5f-97a845b731c5"
+  datecreated: "2026-01-26 17:03:31.143000"
+  datemodified: "2026-01-26 17:03:31.143000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "remittances"
+  c_name: "Remittances from abroad"
+
+- id: "e4d19c15-1fd4-4877-9ae0-b33d30e53f04"
+  datecreated: "2026-01-26 17:03:31.570000"
+  datemodified: "2026-01-26 17:03:31.570000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "pension"
+  c_name: "Pension"
+
+- id: "e86f90ba-10b5-42c4-84d0-e35a87f5b051"
+  datecreated: "2026-01-26 17:03:31.991000"
+  datemodified: "2026-01-26 17:03:31.991000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other"
+  c_name: "Other"
+

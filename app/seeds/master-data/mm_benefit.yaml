@@ -1,0 +1,198 @@
+# app_fd_mm_benefit
+# 7 row(s) at sync time
+- id: "00bbaa06-48fc-4077-923e-c8c5b9f99f4f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formulajson: null
+  c_code: "BEN_002_SEED_WHEAT"
+  c_quantity: "50"
+  c_kind: "input"
+  c_itemcode: "SEED-WHEAT"
+  c_displayorder: "1"
+  c_description: null
+  c_label: "Wheat Seed — 50 kg"
+  c_subsidyamount: null
+  c_subsidypercent: "75"
+  c_unit: "kg"
+  c_farmercontribution: null
+  c_paymenttiming: "post_decision"
+  c_triggerdeterminantid: null
+  c_unitcost: "150"
+  c_paymentmethods: "in_kind"
+  c_registrationid: "PRG_2025_002"
+  c_serviceid: "SUBSIDY_2025"
+  c_category: "seed"
+  c_name: "Wheat seed pack (50 kg)"
+
+- id: "2b8a8b28-b211-4474-9a97-efd17e505701"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formulajson: null
+  c_code: "BEN_003_EVOUCHER"
+  c_quantity: "1"
+  c_kind: "voucher"
+  c_itemcode: "EVOUCHER-2000"
+  c_displayorder: "1"
+  c_description: null
+  c_label: "Smallholder E-Voucher — 2,000 LSL"
+  c_subsidyamount: null
+  c_subsidypercent: "100"
+  c_unit: "voucher"
+  c_farmercontribution: null
+  c_paymenttiming: "post_decision"
+  c_triggerdeterminantid: null
+  c_unitcost: "2000"
+  c_paymentmethods: "e_voucher"
+  c_registrationid: "PRG_2025_003"
+  c_serviceid: "SUBSIDY_2025"
+  c_category: "voucher"
+  c_name: "E-Voucher (2000 LSL)"
+
+- id: "45e256da-f0f7-4999-9d9b-de3bca84bb40"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formulajson: null
+  c_code: "BEN_004_SEED_SURVIVAL"
+  c_quantity: "1"
+  c_kind: "input"
+  c_itemcode: "SEED-SURVIVAL"
+  c_displayorder: "2"
+  c_description: null
+  c_label: "Drought-Tolerant Seed Survival Pack"
+  c_subsidyamount: null
+  c_subsidypercent: "100"
+  c_unit: "pack"
+  c_farmercontribution: null
+  c_paymenttiming: "post_decision"
+  c_triggerdeterminantid: null
+  c_unitcost: "350"
+  c_paymentmethods: "in_kind"
+  c_registrationid: "PRG_2025_004"
+  c_serviceid: "SUBSIDY_2025"
+  c_category: "seed"
+  c_name: "Drought-tolerant seed pack"
+
+- id: "8dbee529-09dc-41ed-afeb-b64aaa755575"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formulajson: null
+  c_code: "BEN_001_FERT_NPK"
+  c_quantity: "100"
+  c_kind: "input"
+  c_itemcode: "FERT-NPK"
+  c_displayorder: "2"
+  c_description: null
+  c_label: "NPK 23:21:0 Fertiliser — 100 kg"
+  c_subsidyamount: null
+  c_subsidypercent: "80"
+  c_unit: "kg"
+  c_farmercontribution: null
+  c_paymenttiming: "post_decision"
+  c_triggerdeterminantid: null
+  c_unitcost: "240"
+  c_paymentmethods: "in_kind"
+  c_registrationid: "PRG_2025_001"
+  c_serviceid: "SUBSIDY_2025"
+  c_category: "fertiliser"
+  c_name: "NPK Fertiliser (100 kg)"
+
+- id: "e1af7514-af2e-423a-a039-1c234bd883cf"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formulajson: null
+  c_code: "BEN_004_FOOD_KIT"
+  c_quantity: "1"
+  c_kind: "in_kind"
+  c_itemcode: "FOOD-KIT-30"
+  c_displayorder: "1"
+  c_description: null
+  c_label: "Emergency Food Kit — 30-day household ration"
+  c_subsidyamount: null
+  c_subsidypercent: "100"
+  c_unit: "kit"
+  c_farmercontribution: null
+  c_paymenttiming: "post_decision"
+  c_triggerdeterminantid: null
+  c_unitcost: "1500"
+  c_paymentmethods: "in_kind"
+  c_registrationid: "PRG_2025_004"
+  c_serviceid: "SUBSIDY_2025"
+  c_category: "emergency_relief"
+  c_name: "Emergency food kit (30 days)"
+
+- id: "fd2fd125-f628-45f2-9eab-df803becb821"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formulajson: null
+  c_code: "BEN_001_SEED_MAIZE"
+  c_quantity: "50"
+  c_kind: "input"
+  c_itemcode: "SEED-MAIZE"
+  c_displayorder: "1"
+  c_description: null
+  c_label: "Hybrid Maize Seed — 50 kg"
+  c_subsidyamount: null
+  c_subsidypercent: "80"
+  c_unit: "kg"
+  c_farmercontribution: null
+  c_paymenttiming: "post_decision"
+  c_triggerdeterminantid: null
+  c_unitcost: "180"
+  c_paymentmethods: "in_kind"
+  c_registrationid: "PRG_2025_001"
+  c_serviceid: "SUBSIDY_2025"
+  c_category: "seed"
+  c_name: "Maize seed pack (50 kg)"
+
+- id: "feef57ca-5ccc-491a-82b2-2b22e3720799"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formulajson: null
+  c_code: "BEN_002_SEED_PEAS"
+  c_quantity: "20"
+  c_kind: "input"
+  c_itemcode: "SEED-PEAS"
+  c_displayorder: "2"
+  c_description: null
+  c_label: "Pea Seed — 20 kg"
+  c_subsidyamount: null
+  c_subsidypercent: "75"
+  c_unit: "kg"
+  c_farmercontribution: null
+  c_paymenttiming: "post_decision"
+  c_triggerdeterminantid: null
+  c_unitcost: "200"
+  c_paymentmethods: "in_kind"
+  c_registrationid: "PRG_2025_002"
+  c_serviceid: "SUBSIDY_2025"
+  c_category: "seed"
+  c_name: "Pea seed pack (20 kg)"
+

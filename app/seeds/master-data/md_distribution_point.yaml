@@ -1,0 +1,77 @@
+# app_fd_md_distribution_point
+# 5 row(s) at sync time
+- id: "58638195-e41d-454a-8834-d11a77e6efc9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_point_type: "district_depot"
+  c_physical_address: "Hlotse, Leribe"
+  c_code: "DP_LERIBE_HUB"
+  c_is_active: "Y"
+  c_contact_phone: "+266 5800 0002"
+  c_district: "leribe"
+  c_name: "Leribe District Hub"
+
+- id: "6082048b-d6bd-493b-81e8-a30cb25327bc"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_point_type: "district_depot"
+  c_physical_address: "Moyeni"
+  c_code: "DP_QUTHING_HUB"
+  c_is_active: "Y"
+  c_contact_phone: "+266 5800 0004"
+  c_district: "quthing"
+  c_name: "Quthing District Hub"
+
+- id: "93a25bea-ea56-40ca-a2c6-859267529c25"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_point_type: "district_depot"
+  c_physical_address: "Mafeteng town centre"
+  c_code: "DP_MAFETENG_HUB"
+  c_is_active: "Y"
+  c_contact_phone: "+266 5800 0003"
+  c_district: "mafeteng"
+  c_name: "Mafeteng District Hub"
+
+- id: "d6c270fd-3540-461e-995d-c933ee4c272c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_point_type: "district_depot"
+  c_physical_address: "MAFSN HQ, Maseru West"
+  c_code: "DP_MASERU_DEPOT"
+  c_is_active: "Y"
+  c_contact_phone: "+266 5800 0001"
+  c_district: "maseru"
+  c_name: "Maseru Central Depot"
+
+- id: "d86f1152-6d08-4628-b244-108c5f063cef"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_point_type: "district_depot"
+  c_physical_address: "Teyateyaneng"
+  c_code: "DP_BEREA_HUB"
+  c_is_active: "Y"
+  c_contact_phone: "+266 5800 0005"
+  c_district: "berea"
+  c_name: "Berea District Hub"
+

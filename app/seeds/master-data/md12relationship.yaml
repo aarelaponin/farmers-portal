@@ -1,0 +1,72 @@
+# app_fd_md12relationship
+# 7 row(s) at sync time
+- id: "00ed7cea-b0e8-4930-ba5b-e71166ca2f28"
+  datecreated: "2026-01-26 17:03:07.105000"
+  datemodified: "2026-01-26 17:03:07.105000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "child"
+  c_name: "Child (own/step)"
+
+- id: "09a5381d-1db1-4bbc-94b2-4b3939bc9885"
+  datecreated: "2026-01-26 17:03:08.440000"
+  datemodified: "2026-01-26 17:03:08.440000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other"
+  c_name: "Other Relatives"
+
+- id: "515a5657-f438-4be0-b70a-419f3cbf6edf"
+  datecreated: "2026-01-26 17:03:06.686000"
+  datemodified: "2026-01-26 17:03:06.686000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "spouse"
+  c_name: "Spouse"
+
+- id: "5a48094b-66eb-486d-9769-266b88d970bc"
+  datecreated: "2026-01-26 17:03:09.300000"
+  datemodified: "2026-01-26 17:03:09.300000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "unrelated"
+  c_name: "Unrelated"
+
+- id: "7a87445f-26c2-486e-ab1d-75255a7fb11d"
+  datecreated: "2026-01-26 17:03:07.526000"
+  datemodified: "2026-01-26 17:03:07.526000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "parent"
+  c_name: "Parent/Parent in-law"
+
+- id: "9a00b08b-4e8c-409a-bf6f-869e31292234"
+  datecreated: "2026-01-26 17:03:08.012000"
+  datemodified: "2026-01-26 17:03:08.012000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "sibling"
+  c_name: "Brother/Sister"
+
+- id: "d8159130-fecd-4bc3-a188-2d827577f548"
+  datecreated: "2026-01-26 17:03:08.874000"
+  datemodified: "2026-01-26 17:03:08.874000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "self"
+  c_name: "Self"
+

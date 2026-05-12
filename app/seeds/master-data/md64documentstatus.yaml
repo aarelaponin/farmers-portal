@@ -1,0 +1,93 @@
+# app_fd_md64documentstatus
+# 7 row(s) at sync time
+- id: "70491628-2a45-4725-b7af-0bb14cc3c019"
+  datecreated: "2026-04-27 22:27:18.359000"
+  datemodified: "2026-04-27 22:27:18.359000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "UPLOADED"
+  c_name: "Uploaded"
+  c_description: ""
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "d813264b-d57b-4370-b87d-df29f529306f"
+  datecreated: "2026-04-27 22:26:41.942000"
+  datemodified: "2026-04-27 22:26:41.942000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "MISSING"
+  c_name: "Missing"
+  c_description: ""
+  c_displayorder: "0"
+  c_isactive: "Y"
+
+- id: "md64documentStatus-expired"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EXPIRED"
+  c_name: "Expired"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md64documentStatus-pending"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PENDING"
+  c_name: "Pending"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md64documentStatus-rejected"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "REJECTED"
+  c_name: "Rejected"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md64documentStatus-resubmit"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "RESUBMIT"
+  c_name: "Awaiting Resubmission"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md64documentStatus-verified"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "VERIFIED"
+  c_name: "Verified"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+

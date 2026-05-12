@@ -1,0 +1,57 @@
+# app_fd_md191cropcategory
+# 5 row(s) at sync time
+- id: "1b287183-caea-4ae6-b067-a367ad841fce"
+  datecreated: "2026-01-26 17:18:39.120000"
+  datemodified: "2026-01-26 17:18:39.120000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "tubers"
+  c_name: "Tubers"
+  c_isactive: "Y"
+
+- id: "25c212f9-b6b0-4951-bd45-679da2e32ef7"
+  datecreated: "2026-01-26 17:18:38.211000"
+  datemodified: "2026-01-26 17:18:38.211000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "cereals"
+  c_name: "Cereals"
+  c_isactive: "Y"
+
+- id: "7fa87114-848d-4937-adfd-4a7a18a71d29"
+  datecreated: "2026-01-26 17:18:38.688000"
+  datemodified: "2026-01-26 17:18:38.688000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "legumes"
+  c_name: "Legumes"
+  c_isactive: "Y"
+
+- id: "893f01f3-f5d7-4477-ae80-6824f305f473"
+  datecreated: "2026-01-26 17:18:39.994000"
+  datemodified: "2026-01-26 17:18:39.994000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other"
+  c_name: "Other"
+  c_isactive: "Y"
+
+- id: "c8fc8fef-6766-4b5d-a137-f3a9401889c4"
+  datecreated: "2026-01-26 17:18:39.568000"
+  datemodified: "2026-01-26 17:18:39.568000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "vegetables"
+  c_name: "Vegetables"
+  c_isactive: "Y"
+

@@ -1,0 +1,53 @@
+# app_fd_mm_capability
+# 3 row(s) at sync time
+- id: "02d4a119-7a42-4506-96d9-97d0fd5cd721"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "farmer"
+  c_name: "Farmer registry"
+  c_description: |-
+    Single-row lookup against app_fd_farmerbasicinfo keyed by national_id.
+    Exposes the farmer's identity fields to eligibility rules and to
+    L2-3 bot_pull NID auto-fill. Replaces the legacy FarmerByNidAdapter
+    Java class.
+    
+  c_fields: null
+
+- id: "12f26a88-aa70-4470-89e6-cc34a98fac8c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "subsidy"
+  c_name: "Subsidy applications"
+  c_description: |-
+    Counts an applicant's existing subsidy applications, scoped by the
+    programme they're currently applying for. Used by
+    DET_NO_DUPLICATE_<programme> rules to prevent double-submission
+    (L4-1 D-003 fix). Replaces SubsidyApplicationCountAdapter.
+    
+  c_fields: null
+
+- id: "214ad159-82bc-4bac-9b52-15ba76175656"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "parcels_summary"
+  c_name: "Parcels summary"
+  c_description: |-
+    Aggregates a farmer's parcels. Used by every parcel-aware programme
+    rule (DET_SMALLHOLDER's "≤ 5 ha cultivated", DET_AREA_NONZERO's "> 0
+    ha"). Replaces ParcelsSummaryAdapter. Joins
+    app_fd_farmerbasicinfo → app_fd_parcelregistration via parent_id.
+    
+  c_fields: null
+

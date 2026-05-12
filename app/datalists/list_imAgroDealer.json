@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "dealerCode",
+            "id": "column_0",
+            "label": "Dealer Code"
+        },
+        {
+            "name": "businessName",
+            "id": "column_1",
+            "label": "Business Name"
+        },
+        {
+            "name": "businessRegNo",
+            "id": "column_2",
+            "label": "Business Registration Number"
+        },
+        {
+            "name": "taxId",
+            "id": "column_3",
+            "label": "Tax Identification Number"
+        },
+        {
+            "name": "dealerCategory",
+            "id": "column_4",
+            "label": "Dealer Category"
+        },
+        {
+            "name": "businessDescription",
+            "id": "column_5",
+            "label": "Business Description"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Agro-Dealer Registration",
+    "id": "list_imAgroDealer",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "imAgroDealer"}
+    },
+    "actions": [],
+    "order": ""
+}

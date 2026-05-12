@@ -1,0 +1,54 @@
+# app_fd_md74escalationlevel
+# 4 row(s) at sync time
+- id: "md74escalationLevel-l1"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "L1"
+  c_name: "Level 1 — Officer"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md74escalationLevel-l2"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "L2"
+  c_name: "Level 2 — Supervisor"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md74escalationLevel-l3"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "L3"
+  c_name: "Level 3 — District"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md74escalationLevel-l4"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "L4"
+  c_name: "Level 4 — Ministry"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+

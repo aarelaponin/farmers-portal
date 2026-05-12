@@ -1,0 +1,80 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "md_input_category",
+    "name": "MD - Input Category (IM)",
+    "tableName": "md_input_category",
+    "description": "Master data — agricultural input categories for the Inputs Management module (e.g. SEED, FERTILISER, AGROCHEMICAL). Phase 3 IM Slice 1. Per im-module SAD §5.1.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "section1",
+        "label": "Input Category"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Code (immutable, business identifier)",
+                "size": "32",
+                "maxlength": "32",
+                "placeholder": "UPPER_SNAKE_CASE, e.g. SEED, FERTILISER",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "md_input_category",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Input Category code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Display name",
+                "size": "100",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "description",
+                "label": "Description",
+                "rows": "4",
+                "cols": "60"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

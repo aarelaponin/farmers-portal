@@ -1,0 +1,222 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "app_resolver_field_map",
+    "name": "Identity Resolver Field Map",
+    "description": "One row per source-field → target-field mapping for an identity resolver. Defines exactly which data the resolver exposes when a lookup succeeds. See _design/identity-resolver-design.md §3.2.",
+    "tableName": "app_resolver_field_map",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "permission": {
+      "className": "",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "binding",
+        "label": "Mapping binding"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "resolverConfigId",
+                "label": "Resolver Config ID (FK)",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "sourceFieldId",
+                "label": "Source Field ID",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "targetFieldId",
+                "label": "Target Field ID",
+                "size": "60",
+                "maxlength": "60",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "displayOrder",
+                "label": "Display Order",
+                "size": "10",
+                "maxlength": "10",
+                "value": "100",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "regex": "^[0-9]+$",
+                    "regexMessage": "Integer only"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "isActive",
+                "label": "Active",
+                "value": "Y",
+                "options": [
+                  {"value": "Y", "label": "Yes"},
+                  {"value": "N", "label": "No"}
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "chained",
+        "label": "Chained source (optional — for fields living on a related subform)"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "chainedSourceFormId",
+                "label": "Chained Source Form ID",
+                "size": "60",
+                "maxlength": "60"
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "chainedJoinField",
+                "label": "Chained Join Field",
+                "size": "60",
+                "maxlength": "60",
+                "value": "parent_id"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "behaviour",
+        "label": "Resolution behaviour on the target form"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.Radio",
+              "properties": {
+                "id": "readonlyAfterResolve",
+                "label": "Lock target field after resolve?",
+                "value": "Y",
+                "options": [
+                  {"value": "Y", "label": "Yes — read-only"},
+                  {"value": "N", "label": "No — citizen can edit"}
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": {
+            "width": "50%"
+          },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "resolveStrategy",
+                "label": "Resolve Strategy",
+                "value": "OVERWRITE",
+                "options": [
+                  {"value": "OVERWRITE", "label": "Overwrite — always replace target value"},
+                  {"value": "FILL_IF_EMPTY", "label": "Fill if empty — keep existing non-empty value"},
+                  {"value": "IGNORE_IF_USER_EDITED", "label": "Ignore if user has edited the target"}
+                ],
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "mandatory": "true"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

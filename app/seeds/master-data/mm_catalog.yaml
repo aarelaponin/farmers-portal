@@ -1,0 +1,206 @@
+# app_fd_mm_catalog
+# 9 row(s) at sync time
+- id: "483a83f2-d945-4cbe-aaf7-2c033152e678"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "GENDER"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "Gender"
+  c_description: null
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"male","label":"Male"},
+     {"value":"female","label":"Female"}]
+    
+
+- id: "4fb00d6e-e02b-48b7-a132-125800adfd7f"
+  datecreated: "2026-05-11 15:37:04.263000"
+  datemodified: "2026-05-11 15:37:04.263000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "SUBMIT_CONFIRMATION"
+  c_scope: "form"
+  c_imcapabilityref: null
+  c_name: "Submission confirmation"
+  c_description: null
+  c_source: null
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: "[{\"value\": \"Y\", \"label\": \"I confirm submission of this application\"}]"
+
+- id: "53fa84cc-d019-48e7-953b-ea9e8de53e56"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "LESOTHO_DISTRICTS"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "Lesotho Districts"
+  c_description: |-
+    Static for now. When D21 cascading filter lands, replace with
+    source=joget_form pointing at md03district to inherit the canonical
+    MD list.
+    
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"berea","label":"Berea"},
+     {"value":"butha_buthe","label":"Butha-Buthe"},
+     {"value":"leribe","label":"Leribe"},
+     {"value":"mafeteng","label":"Mafeteng"},
+     {"value":"maseru","label":"Maseru"},
+     {"value":"mohales_hoek","label":"Mohale's Hoek"},
+     {"value":"mokhotlong","label":"Mokhotlong"},
+     {"value":"qachas_nek","label":"Qacha's Nek"},
+     {"value":"quthing","label":"Quthing"},
+     {"value":"thaba_tseka","label":"Thaba-Tseka"}]
+    
+
+- id: "58f48621-75d5-469f-afd3-5307fbf81469"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "YES_NO"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "Yes / No"
+  c_description: null
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"yes","label":"Yes"},
+     {"value":"no","label":"No"}]
+    
+
+- id: "6e807305-8a57-4075-95c1-2cd657b7b613"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "CROPS"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "Common Crops"
+  c_description: null
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"maize","label":"Maize"},
+     {"value":"wheat","label":"Wheat"},
+     {"value":"sorghum","label":"Sorghum"},
+     {"value":"beans","label":"Beans"},
+     {"value":"peas","label":"Peas"},
+     {"value":"potatoes","label":"Potatoes"}]
+    
+
+- id: "74165c96-ab37-4bb0-ae35-f1c7e269490c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "PROGRAMMES_2025"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "2025 Subsidy Programmes"
+  c_description: |-
+    Static for now. When the engine learns to read source=registry catalogs,
+    replace with imCapabilityRef pointing at mm_registration so newly added
+    programmes auto-appear in the dropdown.
+    
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"PRG_2025_001","label":"Block Farming — Maize Lowlands 2025/26"},
+     {"value":"PRG_2025_002","label":"Mountain Pulses & Wheat — Winter 2025"},
+     {"value":"PRG_2025_003","label":"Smallholder E-Voucher Pilot 2025/26"},
+     {"value":"PRG_2025_004","label":"Drought Emergency Relief 2025"}]
+    
+
+- id: "7a3e648c-08b5-433b-9246-4176ca97b0ba"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "AGRO_ZONES"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "Agro-Ecological Zones"
+  c_description: null
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"lowlands","label":"Lowlands (under 1800 m)"},
+     {"value":"foothills","label":"Foothills (1800–2000 m)"},
+     {"value":"mountains","label":"Mountains (over 2000 m)"},
+     {"value":"senqu_river_valley","label":"Senqu River Valley"}]
+    
+
+- id: "944c3115-51d3-46ee-9169-c4a8025b957b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "TENURE_TYPES"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "Land Tenure"
+  c_description: null
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"customary","label":"Customary (chief-allocated)"},
+     {"value":"leasehold","label":"Registered leasehold"},
+     {"value":"cooperative","label":"Cooperative / association"},
+     {"value":"sharecrop","label":"Sharecrop arrangement"}]
+    
+
+- id: "b9731f85-a904-460c-9295-927a8a88706f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "DECISION_OUTCOMES"
+  c_scope: "instance"
+  c_imcapabilityref: null
+  c_name: "Operator Decision Outcomes"
+  c_description: null
+  c_source: "static"
+  c_serviceid: null
+  c_version: null
+  c_itemsjson: |-
+    [{"value":"approve","label":"Approve"},
+     {"value":"reject","label":"Reject"},
+     {"value":"send_back","label":"Send back to applicant for clarification"}]
+    
+

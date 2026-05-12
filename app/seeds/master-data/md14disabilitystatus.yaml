@@ -1,0 +1,32 @@
+# app_fd_md14disabilitystatus
+# 3 row(s) at sync time
+- id: "5d4c1d09-94f3-4528-a627-2e94e745065c"
+  datecreated: "2026-01-26 17:03:15.057000"
+  datemodified: "2026-01-26 17:03:15.057000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "yes_with_cert"
+  c_name: "Yes - Disability Medical Assessment Form"
+
+- id: "dc1645df-f5cf-4177-ac92-9e222492503e"
+  datecreated: "2026-01-26 17:03:14.632000"
+  datemodified: "2026-01-26 17:03:14.632000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "yes_no_cert"
+  c_name: "Yes - No Certificate"
+
+- id: "ff49ed9b-56ef-4467-96ab-2b7ee470cce4"
+  datecreated: "2026-01-26 17:03:14.190000"
+  datemodified: "2026-01-26 17:03:14.190000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "none"
+  c_name: "No Disability"
+

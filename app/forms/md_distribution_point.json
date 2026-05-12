@@ -1,0 +1,155 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "md_distribution_point",
+    "name": "MD - Distribution Point (IM)",
+    "tableName": "md_distribution_point",
+    "description": "Master data — physical distribution points where inputs are stocked and handed to farmers (district depot, sub-district hub, mobile distribution event). Phase 3 IM Slice 1. Per im-module SAD §5.1 + §12 glossary.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identificationSection",
+        "label": "Distribution Point"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "code",
+                "label": "Code (immutable)",
+                "size": "32",
+                "maxlength": "32",
+                "placeholder": "UPPER_SNAKE_CASE, e.g. DP_MASERU_DEPOT, DP_LERIBE_HUB",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "md_distribution_point",
+                    "fieldId": "code",
+                    "errorDuplicateMsg": "This Distribution Point code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "name",
+                "label": "Display name",
+                "size": "100",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "point_type",
+                "label": "Point type",
+                "options": [
+                  { "value": "district_depot", "label": "District depot (permanent)" },
+                  { "value": "sub_district_hub", "label": "Sub-district hub (permanent)" },
+                  { "value": "mobile", "label": "Mobile distribution event" },
+                  { "value": "supplier_premises", "label": "Supplier premises (direct delivery)" }
+                ],
+                "addEmptyOption": "true",
+                "emptyLabel": "(select)",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "district",
+                "label": "District",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md03district",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "physical_address",
+                "label": "Physical address",
+                "size": "200"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "contact_phone",
+                "label": "Contact phone",
+                "size": "32"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "statusSection",
+        "label": "Status"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "is_active",
+                "label": "Active?",
+                "options": [
+                  { "value": "Y", "label": "Yes" },
+                  { "value": "N", "label": "No" }
+                ],
+                "value": "Y"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

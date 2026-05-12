@@ -1,0 +1,54 @@
+# app_fd_md54reportingfreq
+# 4 row(s) at sync time
+- id: "md54reportingFreq-annual"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ANNUAL"
+  c_name: "Annual"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md54reportingFreq-monthly"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "MONTHLY"
+  c_name: "Monthly"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md54reportingFreq-quarterly"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "QUARTERLY"
+  c_name: "Quarterly"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md54reportingFreq-weekly"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "WEEKLY"
+  c_name: "Weekly"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+

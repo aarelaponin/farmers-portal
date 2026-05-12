@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "campaignCode",
+            "id": "column_0",
+            "label": "Campaign"
+        },
+        {
+            "name": "distPointCode",
+            "id": "column_1",
+            "label": "Distribution Point"
+        },
+        {
+            "name": "assignedCapacity",
+            "id": "column_2",
+            "label": "Assigned Capacity (farmers)"
+        },
+        {
+            "name": "scheduleStart",
+            "id": "column_3",
+            "label": "Distribution Start"
+        },
+        {
+            "name": "scheduleEnd",
+            "id": "column_4",
+            "label": "Distribution End"
+        },
+        {
+            "name": "contactPerson",
+            "id": "column_5",
+            "label": "Contact Person"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Campaign Distribution Point",
+    "id": "list_imCampaignDistPt",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "imCampaignDistPt"}
+    },
+    "actions": [],
+    "order": ""
+}

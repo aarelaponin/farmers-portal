@@ -1,0 +1,142 @@
+# app_fd_mm_required_doc
+# 7 row(s) at sync time
+- id: "162556a4-7d2b-407d-842c-89d2b040c23b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_requiredness: "mandatory"
+  c_capturefieldsjson: null
+  c_code: "DOC_NID_FRONT"
+  c_helptext: "Scan or photo of the FRONT side of your national ID card. Legible, full card visible."
+  c_deliverymode: "upload"
+  c_maxsizebytes: "5242880"
+  c_registrationid: ""
+  c_label: "National ID (front)"
+  c_serviceid: "SUBSIDY_2025"
+  c_acceptedtypes: "pdf,jpg,png"
+  c_conditiondeterminantid: null
+  c_name: "National ID — front"
+
+- id: "23bf5766-59bb-4f62-a8b0-faebe038c949"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_requiredness: "mandatory"
+  c_capturefieldsjson: null
+  c_code: "DOC_VULN_004"
+  c_helptext: null
+  c_deliverymode: "upload"
+  c_maxsizebytes: "5242880"
+  c_registrationid: "PRG_2025_004"
+  c_label: "Vulnerability Assessment (LVAC or extension officer signed)"
+  c_serviceid: "SUBSIDY_2025"
+  c_acceptedtypes: "pdf"
+  c_conditiondeterminantid: null
+  c_name: "Vulnerability assessment"
+
+- id: "28fad03b-ccbf-4d1e-ae8b-010b64c2569e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_requiredness: "mandatory"
+  c_capturefieldsjson: null
+  c_code: "DOC_COOP_MEMBER_001"
+  c_helptext: null
+  c_deliverymode: "upload"
+  c_maxsizebytes: "5242880"
+  c_registrationid: "PRG_2025_001"
+  c_label: "Cooperative Membership Certificate"
+  c_serviceid: "SUBSIDY_2025"
+  c_acceptedtypes: "pdf"
+  c_conditiondeterminantid: null
+  c_name: "Cooperative membership certificate"
+
+- id: "2b12b64b-4e00-4f3b-ac52-df30958046ed"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_requiredness: "mandatory"
+  c_capturefieldsjson: null
+  c_code: "DOC_LAND_002"
+  c_helptext: null
+  c_deliverymode: "upload"
+  c_maxsizebytes: "5242880"
+  c_registrationid: "PRG_2025_002"
+  c_label: "Proof of Land Use Rights (mountain or Senqu valley parcel)"
+  c_serviceid: "SUBSIDY_2025"
+  c_acceptedtypes: "pdf,jpg,png"
+  c_conditiondeterminantid: null
+  c_name: "Land tenure proof"
+
+- id: "369fe853-417f-4a13-b71a-148f892a4393"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_requiredness: "mandatory"
+  c_capturefieldsjson: null
+  c_code: "DOC_SH_DECL_003"
+  c_helptext: null
+  c_deliverymode: "upload"
+  c_maxsizebytes: "2097152"
+  c_registrationid: "PRG_2025_003"
+  c_label: "Smallholder Self-Declaration Form"
+  c_serviceid: "SUBSIDY_2025"
+  c_acceptedtypes: "pdf"
+  c_conditiondeterminantid: null
+  c_name: "Smallholder self-declaration"
+
+- id: "3ee19d97-d537-4edc-8fb1-c38cc6492021"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_requiredness: "mandatory"
+  c_capturefieldsjson: null
+  c_code: "DOC_LAND_001"
+  c_helptext: null
+  c_deliverymode: "upload"
+  c_maxsizebytes: "5242880"
+  c_registrationid: "PRG_2025_001"
+  c_label: "Proof of Land Use Rights"
+  c_serviceid: "SUBSIDY_2025"
+  c_acceptedtypes: "pdf,jpg,png"
+  c_conditiondeterminantid: null
+  c_name: "Land tenure proof"
+
+- id: "c17a2309-b75e-4407-aea2-1d1307975d90"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_requiredness: "mandatory"
+  c_capturefieldsjson: null
+  c_code: "DOC_NID_BACK"
+  c_helptext: "Scan or photo of the BACK side of your national ID card. Same applicant as the front."
+  c_deliverymode: "upload"
+  c_maxsizebytes: "5242880"
+  c_registrationid: ""
+  c_label: "National ID (back)"
+  c_serviceid: "SUBSIDY_2025"
+  c_acceptedtypes: "pdf,jpg,png"
+  c_conditiondeterminantid: null
+  c_name: "National ID — back"
+

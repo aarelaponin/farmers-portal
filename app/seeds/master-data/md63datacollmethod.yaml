@@ -1,0 +1,54 @@
+# app_fd_md63datacollmethod
+# 4 row(s) at sync time
+- id: "md63dataCollMethod-field_reports"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FIELD_REPORTS"
+  c_name: "Field Reports"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md63dataCollMethod-mixed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "MIXED"
+  c_name: "Mixed Methods"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md63dataCollMethod-survey"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SURVEY"
+  c_name: "Survey"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md63dataCollMethod-system_auto"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SYSTEM_AUTO"
+  c_name: "System Automatic"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+

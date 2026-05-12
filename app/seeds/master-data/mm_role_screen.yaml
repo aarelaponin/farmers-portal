@@ -1,0 +1,122 @@
+# app_fd_mm_role_screen
+# 6 row(s) at sync time
+- id: "39e40ee4-d520-4644-8b08-6b1bd7d572f6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_mode: "list"
+  c_handbuiltformid: null
+  c_notes: "Applications in status=reviewed, awaiting final approval."
+  c_roleid: "APPROVER"
+  c_kind: "inbox"
+  c_registrationid: null
+  c_sectionsjson: null
+  c_serviceid: "SUBSIDY_2025"
+  c_code: "APPROVER_INBOX"
+  c_name: "Approver — Inbox"
+
+- id: "3a32d646-4d14-4b1b-b7ff-062bfdf89661"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_mode: "issuance"
+  c_handbuiltformid: null
+  c_notes: "Phase 1 stub. Week 4+ adds an issuance screen with benefit-pickup tracking."
+  c_roleid: "ISSUER"
+  c_kind: "review"
+  c_registrationid: null
+  c_sectionsjson: |-
+    {"sections":[
+      {"screen":"APP_APPLICANT","mode":"readonly"},
+      {"screen":"APP_PARCEL","mode":"readonly"}
+    ]}
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_code: "ISSUER_ISSUE"
+  c_name: "Issuer — Benefit Issuance"
+
+- id: "4cfed678-f3fc-4990-8c9d-6858c6516d43"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_mode: "readonly_inspection_with_decision"
+  c_handbuiltformid: null
+  c_notes: null
+  c_roleid: "APPROVER"
+  c_kind: "review"
+  c_registrationid: null
+  c_sectionsjson: |-
+    {"sections":[
+      {"screen":"APP_APPLICANT","mode":"readonly"},
+      {"screen":"APP_PARCEL","mode":"readonly"},
+      {"screen":"APP_CROPS","mode":"readonly"},
+      {"screen":"OP_DECISION","mode":"editable"}
+    ]}
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_code: "APPROVER_DECIDE"
+  c_name: "Approver — Final Decision"
+
+- id: "c735a860-8b46-4deb-b4b3-71d7b1e969df"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_mode: "list"
+  c_handbuiltformid: null
+  c_notes: "Approved applications awaiting benefit issuance."
+  c_roleid: "ISSUER"
+  c_kind: "inbox"
+  c_registrationid: null
+  c_sectionsjson: null
+  c_serviceid: "SUBSIDY_2025"
+  c_code: "ISSUER_INBOX"
+  c_name: "Issuer — Inbox"
+
+- id: "dc402a9f-3393-4757-b5ad-266b3a965437"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_mode: "list"
+  c_handbuiltformid: null
+  c_notes: "List of applications in status=submitted; reviewer picks one to review."
+  c_roleid: "REVIEWER"
+  c_kind: "inbox"
+  c_registrationid: null
+  c_sectionsjson: null
+  c_serviceid: "SUBSIDY_2025"
+  c_code: "REVIEWER_INBOX"
+  c_name: "Reviewer — Inbox"
+
+- id: "fcc44ecc-9685-46f2-937a-cd6edcff39be"
+  datecreated: "2026-05-12 07:55:33.986000"
+  datemodified: "2026-05-12 07:55:33.986000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_mode: "readonly_inspection_with_decision"
+  c_handbuiltformid: null
+  c_notes: "Reviewer sees citizen-submitted data read-only, fills OP_DECISION."
+  c_roleid: "REVIEWER"
+  c_kind: "review"
+  c_registrationid: null
+  c_sectionsjson: "{\"sections\": [{\"screen\": \"APP_APPLICANT\", \"mode\": \"readonly\"}, {\"screen\": \"APP_PARCEL\", \"mode\": \"readonly\"}, {\"screen\": \"APP_CROPS\", \"mode\": \"readonly\"}, {\"screen\": \"APP_DOCUMENTS\", \"mode\": \"readonly\"}, {\"screen\": \"OP_DECISION\", \"mode\": \"editable\"}, {\"screen\": \"OPERATOR_CASE_NOTES\", \"mode\": \"editable\"}]}"
+  c_serviceid: "SUBSIDY_2025"
+  c_code: "REVIEWER_REVIEW"
+  c_name: "Reviewer — Application Review"
+

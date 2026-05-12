@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "scopeCode",
+            "id": "column_0",
+            "label": "Scope Code"
+        },
+        {
+            "name": "fieldId",
+            "id": "column_1",
+            "label": "Field ID"
+        },
+        {
+            "name": "fieldLabel",
+            "id": "column_2",
+            "label": "Field Label"
+        },
+        {
+            "name": "category",
+            "id": "column_3",
+            "label": "Category"
+        },
+        {
+            "name": "fieldType",
+            "id": "column_4",
+            "label": "Field Type"
+        },
+        {
+            "name": "applicableOperators",
+            "id": "column_5",
+            "label": "Applicable Operators"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: JRE Field Definition",
+    "id": "list_jreFieldDefinition",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "jreFieldDefinition"}
+    },
+    "actions": [],
+    "order": ""
+}

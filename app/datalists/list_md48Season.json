@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Season Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Season Name"
+        },
+        {
+            "name": "seasonType",
+            "id": "column_2",
+            "label": "Season Type"
+        },
+        {
+            "name": "agriculturalYear",
+            "id": "column_3",
+            "label": "Agricultural Year"
+        },
+        {
+            "name": "startDate",
+            "id": "column_4",
+            "label": "Season Start Date"
+        },
+        {
+            "name": "endDate",
+            "id": "column_5",
+            "label": "Season End Date"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.48 - Agricultural Season",
+    "id": "list_md48Season",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md48Season"}
+    },
+    "actions": [],
+    "order": ""
+}

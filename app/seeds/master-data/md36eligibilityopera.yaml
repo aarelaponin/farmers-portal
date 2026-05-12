@@ -1,0 +1,156 @@
+# app_fd_md36eligibilityopera
+# 14 row(s) at sync time
+- id: "04643c2e-7360-45ea-b8d9-78d560b37596"
+  datecreated: "2026-01-26 17:05:58.559000"
+  datemodified: "2026-01-26 17:05:58.559000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "IS_NOT_EMPTY"
+  c_name: "Is Not Empty"
+  c_applies_to_type: "All"
+
+- id: "0bbc2f7f-a83c-4a49-b200-056588aeeb57"
+  datecreated: "2026-01-26 17:05:58.122000"
+  datemodified: "2026-01-26 17:05:58.122000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "IS_EMPTY"
+  c_name: "Is Empty"
+  c_applies_to_type: "All"
+
+- id: "0c119f1a-7e78-4d6f-ac16-ab40ac30e1c0"
+  datecreated: "2026-01-26 17:05:55.161000"
+  datemodified: "2026-01-26 17:05:55.161000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "GREATER_EQUAL"
+  c_name: "Greater Than or Equal"
+  c_applies_to_type: "Number;Date"
+
+- id: "0c183ed2-3e4e-44ee-b6d6-bc7acfa51bb5"
+  datecreated: "2026-01-26 17:05:56.432000"
+  datemodified: "2026-01-26 17:05:56.432000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "IN_LIST"
+  c_name: "Is One Of"
+  c_applies_to_type: "Text;Number"
+
+- id: "12c0016f-869e-4620-a93c-203c6eacbc54"
+  datecreated: "2026-01-26 17:05:57.694000"
+  datemodified: "2026-01-26 17:05:57.694000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "STARTS_WITH"
+  c_name: "Starts With"
+  c_applies_to_type: "Text"
+
+- id: "32502a75-bb3f-46f9-b7cc-b2c5831deef6"
+  datecreated: "2026-01-26 17:05:53.855000"
+  datemodified: "2026-01-26 17:05:53.855000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "NOT_EQUALS"
+  c_name: "Not Equals"
+  c_applies_to_type: "Text;Number;Date;Boolean"
+
+- id: "32fbef1e-82e7-4b3f-804d-05f63e8eac69"
+  datecreated: "2026-01-26 17:05:53.428000"
+  datemodified: "2026-01-26 17:05:53.428000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "EQUALS"
+  c_name: "Equals"
+  c_applies_to_type: "Text;Number;Date;Boolean"
+
+- id: "38386b97-41f0-4242-b9fd-33182abfabfe"
+  datecreated: "2026-01-26 17:05:56.007000"
+  datemodified: "2026-01-26 17:05:56.007000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BETWEEN"
+  c_name: "Between"
+  c_applies_to_type: "Number;Date"
+
+- id: "56278ff8-adc0-4038-be67-950dd2fa3d8f"
+  datecreated: "2026-01-26 17:05:54.312000"
+  datemodified: "2026-01-26 17:05:54.312000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "GREATER_THAN"
+  c_name: "Greater Than"
+  c_applies_to_type: "Number;Date"
+
+- id: "64ec4f1b-e81a-43fb-b3da-22673ee01ae1"
+  datecreated: "2026-01-26 17:05:54.729000"
+  datemodified: "2026-01-26 17:05:54.729000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LESS_THAN"
+  c_name: "Less Than"
+  c_applies_to_type: "Number;Date"
+
+- id: "839d087b-774c-445a-90b7-9cd2100ccdf1"
+  datecreated: "2026-01-26 17:05:58.975000"
+  datemodified: "2026-01-26 17:05:58.975000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "INCLUDES"
+  c_name: "Includes (multi-select)"
+  c_applies_to_type: "Array"
+
+- id: "8c7434a6-c430-455c-b02c-28ee1dac5221"
+  datecreated: "2026-01-26 17:05:55.580000"
+  datemodified: "2026-01-26 17:05:55.580000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LESS_EQUAL"
+  c_name: "Less Than or Equal"
+  c_applies_to_type: "Number;Date"
+
+- id: "b595cf58-cef6-4671-b4c9-eeb6db19f854"
+  datecreated: "2026-01-26 17:05:57.276000"
+  datemodified: "2026-01-26 17:05:57.276000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CONTAINS"
+  c_name: "Contains"
+  c_applies_to_type: "Text"
+
+- id: "bae468dc-4419-4225-8dd0-a2341d50d374"
+  datecreated: "2026-01-26 17:05:56.848000"
+  datemodified: "2026-01-26 17:05:56.848000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "NOT_IN_LIST"
+  c_name: "Is Not One Of"
+  c_applies_to_type: "Text;Number"
+

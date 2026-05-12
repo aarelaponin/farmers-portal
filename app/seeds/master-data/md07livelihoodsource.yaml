@@ -1,0 +1,32 @@
+# app_fd_md07livelihoodsource
+# 3 row(s) at sync time
+- id: "1c206134-f9a7-4489-aa26-fe50c25ea782"
+  datecreated: "2026-01-26 17:02:42.927000"
+  datemodified: "2026-01-26 17:02:42.927000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "off_farm"
+  c_name: "Off-farm"
+
+- id: "4f2270af-ff7b-4b91-821e-4f89afa2c0bb"
+  datecreated: "2026-01-26 17:02:42.506000"
+  datemodified: "2026-01-26 17:02:42.506000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "on_farm"
+  c_name: "On-farm"
+
+- id: "cf08aa44-0ed3-4c00-b563-8d27e9916a02"
+  datecreated: "2026-01-26 17:02:43.437000"
+  datemodified: "2026-01-26 17:02:43.437000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mixed"
+  c_name: "Mixed (On and Off-farm)"
+

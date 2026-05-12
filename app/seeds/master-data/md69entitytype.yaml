@@ -1,0 +1,93 @@
+# app_fd_md69entitytype
+# 7 row(s) at sync time
+- id: "md69entityType-application"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "APPLICATION"
+  c_name: "Application"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md69entityType-distribution"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISTRIBUTION"
+  c_name: "Distribution"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md69entityType-enrollment"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ENROLLMENT"
+  c_name: "Enrollment"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md69entityType-entitlement"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ENTITLEMENT"
+  c_name: "Entitlement"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md69entityType-notification"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "NOTIFICATION"
+  c_name: "Notification"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "md69entityType-program"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PROGRAM"
+  c_name: "Programme"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md69entityType-voucher"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "VOUCHER"
+  c_name: "Voucher"
+  c_description: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+

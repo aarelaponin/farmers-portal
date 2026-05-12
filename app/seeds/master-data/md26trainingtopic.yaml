@@ -1,0 +1,134 @@
+# app_fd_md26trainingtopic
+# 12 row(s) at sync time
+- id: "3694d029-94a3-4241-8c22-48aafccdeed0"
+  datecreated: "2026-01-26 17:04:49.309000"
+  datemodified: "2026-01-26 17:04:49.309000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LIVESTOCK_MGMT"
+  c_name: "Livestock Management"
+  c_target_group: "Livestock farmers"
+
+- id: "3a1b4389-c7f7-4eb7-a28e-16a07bc0d7b6"
+  datecreated: "2026-01-26 17:04:51.590000"
+  datemodified: "2026-01-26 17:04:51.590000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CROP_ROTATION"
+  c_name: "Crop Rotation Planning"
+  c_target_group: "Crop farmers"
+
+- id: "4549bba8-d6ed-405a-8b49-0c47de335acb"
+  datecreated: "2026-01-26 17:04:48.884000"
+  datemodified: "2026-01-26 17:04:48.884000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "IRRIGATION_TECH"
+  c_name: "Irrigation Techniques"
+  c_target_group: "All farmers"
+
+- id: "48fe8091-9519-41e7-8efd-2ccbaa3d499f"
+  datecreated: "2026-01-26 17:04:50.740000"
+  datemodified: "2026-01-26 17:04:50.740000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CLIMATE_SMART"
+  c_name: "Climate-Smart Agriculture"
+  c_target_group: "All farmers"
+
+- id: "4b830943-10b0-498f-8baa-03c6c9acbec3"
+  datecreated: "2026-01-26 17:04:52.441000"
+  datemodified: "2026-01-26 17:04:52.441000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BEEKEEPING"
+  c_name: "Beekeeping"
+  c_target_group: "All farmers"
+
+- id: "7da3eaa7-5bde-46d7-91d1-1b3e4156625b"
+  datecreated: "2026-01-26 17:04:49.804000"
+  datemodified: "2026-01-26 17:04:49.804000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "POST_HARVEST"
+  c_name: "Post-Harvest Handling"
+  c_target_group: "All farmers"
+
+- id: "85c49532-9268-4985-b55d-f96ae59b9c37"
+  datecreated: "2026-01-26 17:04:48.405000"
+  datemodified: "2026-01-26 17:04:48.405000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "SOIL_MANAGEMENT"
+  c_name: "Soil Health Management"
+  c_target_group: "All farmers"
+
+- id: "8a43f4c4-c07b-4d97-9095-5e4c1215680a"
+  datecreated: "2026-01-26 17:04:51.159000"
+  datemodified: "2026-01-26 17:04:51.159000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "FARM_BUSINESS"
+  c_name: "Farm Business Management"
+  c_target_group: "All farmers"
+
+- id: "8a86ac39-b7ff-41f2-8acf-a618a0e5f714"
+  datecreated: "2026-01-26 17:04:52.013000"
+  datemodified: "2026-01-26 17:04:52.013000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "GREENHOUSE"
+  c_name: "Greenhouse Management"
+  c_target_group: "Vegetable farmers"
+
+- id: "9b0f5b34-ca2d-4ee9-9873-47df2fb9a0be"
+  datecreated: "2026-01-26 17:04:50.319000"
+  datemodified: "2026-01-26 17:04:50.319000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "ORGANIC_FARMING"
+  c_name: "Organic Farming"
+  c_target_group: "All farmers"
+
+- id: "af82ea06-88fc-4f15-b86c-8e6865bd3eb3"
+  datecreated: "2026-01-26 17:04:47.987000"
+  datemodified: "2026-01-26 17:04:47.987000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "PEST_MANAGEMENT"
+  c_name: "Integrated Pest Management"
+  c_target_group: "Crop farmers"
+
+- id: "d03f1173-1cd3-42ec-8011-c36afe796532"
+  datecreated: "2026-01-26 17:04:47.554000"
+  datemodified: "2026-01-26 17:04:47.554000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CONSERVATION_AGRIC"
+  c_name: "Conservation Agriculture"
+  c_target_group: "All farmers"
+

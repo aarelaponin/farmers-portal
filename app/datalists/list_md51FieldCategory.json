@@ -1,0 +1,46 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Category Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Category Name"
+        },
+        {
+            "name": "description",
+            "id": "column_2",
+            "label": "Description"
+        },
+        {
+            "name": "displayOrder",
+            "id": "column_3",
+            "label": "Display Order"
+        },
+        {
+            "name": "isActive",
+            "id": "column_4",
+            "label": "Active"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.51 - Field Category",
+    "id": "list_md51FieldCategory",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md51FieldCategory"}
+    },
+    "actions": [],
+    "order": ""
+}

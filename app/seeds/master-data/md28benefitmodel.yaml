@@ -1,0 +1,79 @@
+# app_fd_md28benefitmodel
+# 7 row(s) at sync time
+- id: "16cdc4f3-dc9f-46e9-b653-e62650c7fa1f"
+  datecreated: "2026-01-26 17:05:19.233000"
+  datemodified: "2026-01-26 17:05:19.233000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "TIERED"
+  c_name: "Tiered Benefits"
+  c_description: "Different tiers/levels of benefits"
+
+- id: "69ccb7e1-6e8b-470e-87bc-38af1cea4639"
+  datecreated: "2026-01-26 17:05:18.727000"
+  datemodified: "2026-01-26 17:05:18.727000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "PACKAGE"
+  c_name: "Input Package"
+  c_description: "Pre-defined package of inputs"
+
+- id: "8608ded9-42ec-461c-b43b-c0a9aafd8efc"
+  datecreated: "2026-01-26 17:05:17.861000"
+  datemodified: "2026-01-26 17:05:17.861000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "FIXED_AMOUNT"
+  c_name: "Fixed Amount Per Farmer"
+  c_description: "Same amount for all beneficiaries"
+
+- id: "96543895-e5f5-4456-9206-268376d72e2c"
+  datecreated: "2026-01-26 17:05:18.287000"
+  datemodified: "2026-01-26 17:05:18.287000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "PERCENTAGE"
+  c_name: "Percentage Cost Coverage"
+  c_description: "Percentage of eligible costs covered"
+
+- id: "ac0f0964-559b-488b-a86d-b2ae5e9581ff"
+  datecreated: "2026-01-26 17:05:20.624000"
+  datemodified: "2026-01-26 17:05:20.624000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "HYBRID"
+  c_name: "Hybrid/Custom Formula"
+  c_description: "Custom calculation formula"
+
+- id: "d9258f44-0d5d-4549-bcce-8b73305ff4bd"
+  datecreated: "2026-01-26 17:05:20.121000"
+  datemodified: "2026-01-26 17:05:20.121000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "MATCHING"
+  c_name: "Matching Grant"
+  c_description: "Government matches farmer contribution"
+
+- id: "e9c01d5e-87da-4838-a499-f4fbf1bbd3d7"
+  datecreated: "2026-01-26 17:05:19.704000"
+  datemodified: "2026-01-26 17:05:19.704000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "PER_UNIT"
+  c_name: "Per-Unit Subsidy"
+  c_description: "Subsidy per hectare/livestock head"
+

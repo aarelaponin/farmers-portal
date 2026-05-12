@@ -1,0 +1,194 @@
+# app_fd_md22applicationstatu
+# 12 row(s) at sync time
+- id: "0f8ff357-b3fe-48a2-9954-6526696fd7b5"
+  datecreated: "2026-01-26 17:03:50.811000"
+  datemodified: "2026-01-26 17:03:50.811000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "11"
+  c_is_final: "Yes"
+  c_code: "BENEFIT_ISSUED"
+  c_is_active: "No"
+  c_color: "green"
+  c_name: "Benefit Issued"
+  c_icon: "gift"
+  c_description: "Subsidy/benefit provided"
+
+- id: "229b57db-de7c-46fa-8fc7-bdbc34ef8b20"
+  datecreated: "2026-01-26 17:03:48.195000"
+  datemodified: "2026-01-26 17:03:48.195000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "5"
+  c_is_final: "No"
+  c_code: "DOCUMENT_REVIEW"
+  c_is_active: "Yes"
+  c_color: "orange"
+  c_name: "Document Review"
+  c_icon: "file-text"
+  c_description: "Reviewing uploaded documents"
+
+- id: "445ac2aa-0a3b-41f1-82aa-63afe4447a72"
+  datecreated: "2026-01-26 17:03:48.618000"
+  datemodified: "2026-01-26 17:03:48.618000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "6"
+  c_is_final: "No"
+  c_code: "FIELD_VERIFICATION"
+  c_is_active: "Yes"
+  c_color: "orange"
+  c_name: "Field Verification"
+  c_icon: "map-pin"
+  c_description: "Extension officer field visit"
+
+- id: "5427e282-c644-45d2-a1a8-128c6557878a"
+  datecreated: "2026-01-26 17:03:51.233000"
+  datemodified: "2026-01-26 17:03:51.233000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "12"
+  c_is_final: "Yes"
+  c_code: "COMPLETED"
+  c_is_active: "No"
+  c_color: "green"
+  c_name: "Completed"
+  c_icon: "check-circle"
+  c_description: "Process completed"
+
+- id: "7b98143a-daa4-40ee-9bbd-ac21dce57bca"
+  datecreated: "2026-01-26 17:03:49.048000"
+  datemodified: "2026-01-26 17:03:49.048000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "7"
+  c_is_final: "No"
+  c_code: "PENDING_INFO"
+  c_is_active: "Yes"
+  c_color: "yellow"
+  c_name: "Pending Information"
+  c_icon: "alert-circle"
+  c_description: "Awaiting farmer response"
+
+- id: "80ad50b9-8b81-4fb2-8c03-d8051772cc18"
+  datecreated: "2026-01-26 17:03:49.897000"
+  datemodified: "2026-01-26 17:03:49.897000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "9"
+  c_is_final: "Yes"
+  c_code: "REJECTED"
+  c_is_active: "No"
+  c_color: "red"
+  c_name: "Rejected"
+  c_icon: "x"
+  c_description: "Application rejected"
+
+- id: "812ca62f-378f-414d-99f5-769bcbc582ed"
+  datecreated: "2026-01-26 17:03:46.405000"
+  datemodified: "2026-01-26 17:03:46.405000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "1"
+  c_is_final: "No"
+  c_code: "DRAFT"
+  c_is_active: "Yes"
+  c_color: "gray"
+  c_name: "Draft"
+  c_icon: "edit"
+  c_description: "Application started but not submitted"
+
+- id: "82a52ea6-f2c6-4f49-848c-341e0f2d7a8e"
+  datecreated: "2026-01-26 17:03:47.766000"
+  datemodified: "2026-01-26 17:03:47.766000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "4"
+  c_is_final: "No"
+  c_code: "ELIGIBILITY_CHECK"
+  c_is_active: "Yes"
+  c_color: "blue"
+  c_name: "Eligibility Verification"
+  c_icon: "check-circle"
+  c_description: "Checking eligibility criteria"
+
+- id: "88d6ec67-5951-4e74-b8b5-5451a1a2efe4"
+  datecreated: "2026-01-26 17:03:50.324000"
+  datemodified: "2026-01-26 17:03:50.324000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "10"
+  c_is_final: "Yes"
+  c_code: "WITHDRAWN"
+  c_is_active: "No"
+  c_color: "gray"
+  c_name: "Withdrawn"
+  c_icon: "minus-circle"
+  c_description: "Withdrawn by farmer"
+
+- id: "8a8e1ddf-2f0f-4955-b723-6917e2ab03c9"
+  datecreated: "2026-01-26 17:03:47.333000"
+  datemodified: "2026-01-26 17:03:47.333000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "3"
+  c_is_final: "No"
+  c_code: "UNDER_REVIEW"
+  c_is_active: "Yes"
+  c_color: "blue"
+  c_name: "Under Review"
+  c_icon: "eye"
+  c_description: "Being reviewed by staff"
+
+- id: "8d2c4c2f-3589-43f9-b3f2-4b39a124a427"
+  datecreated: "2026-01-26 17:03:46.828000"
+  datemodified: "2026-01-26 17:03:46.828000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "2"
+  c_is_final: "No"
+  c_code: "SUBMITTED"
+  c_is_active: "Yes"
+  c_color: "blue"
+  c_name: "Submitted"
+  c_icon: "send"
+  c_description: "Application submitted awaiting review"
+
+- id: "a6b109d0-95d3-4918-bbbd-3091d9c068e9"
+  datecreated: "2026-01-26 17:03:49.467000"
+  datemodified: "2026-01-26 17:03:49.467000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_sequence: "8"
+  c_is_final: "Yes"
+  c_code: "APPROVED"
+  c_is_active: "No"
+  c_color: "green"
+  c_name: "Approved"
+  c_icon: "check"
+  c_description: "Application approved"
+

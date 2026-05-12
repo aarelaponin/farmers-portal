@@ -1,0 +1,101 @@
+# app_fd_md20supportprogram
+# 9 row(s) at sync time
+- id: "2c5078ef-fbdb-41d7-8cf5-5794b08db790"
+  datecreated: "2026-01-26 17:03:40.270000"
+  datemodified: "2026-01-26 17:03:40.270000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "none"
+  c_acronym: ""
+  c_name: "None"
+
+- id: "31e2df33-bbe5-4024-b977-8e91c5d0f86e"
+  datecreated: "2026-01-26 17:03:37.725000"
+  datemodified: "2026-01-26 17:03:37.725000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "input_subsidy"
+  c_acronym: "ISP"
+  c_name: "Input Subsidy Programme"
+
+- id: "42e6dbbe-cfce-4c91-b3f4-91396692137d"
+  datecreated: "2026-01-26 17:03:37.295000"
+  datemodified: "2026-01-26 17:03:37.295000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "child_grant"
+  c_acronym: "CGP"
+  c_name: "Child Grant Programme"
+
+- id: "6ec52051-3c9e-42b7-9d42-7b07a4afde7e"
+  datecreated: "2026-01-26 17:03:38.576000"
+  datemodified: "2026-01-26 17:03:38.576000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "block_farming"
+  c_acronym: "BF"
+  c_name: "Block Farming"
+
+- id: "91948155-569d-4411-9646-90b88e1a0f81"
+  datecreated: "2026-01-26 17:03:39.426000"
+  datemodified: "2026-01-26 17:03:39.426000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "disability_grant"
+  c_acronym: "DG"
+  c_name: "Disability Grant"
+
+- id: "ae0cfd7b-3628-4c50-8bb0-8890db4f7648"
+  datecreated: "2026-01-26 17:03:39.847000"
+  datemodified: "2026-01-26 17:03:39.847000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "school_feeding"
+  c_acronym: "SFP"
+  c_name: "School Feeding Programme"
+
+- id: "c2cb5491-c8d6-4dfd-9e83-aed49c04a22f"
+  datecreated: "2026-01-26 17:03:38.155000"
+  datemodified: "2026-01-26 17:03:38.155000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "wamp"
+  c_acronym: "WAMP"
+  c_name: "WAMP"
+
+- id: "e9fa863e-fc76-4977-8c7e-5003e287c686"
+  datecreated: "2026-01-26 17:03:36.867000"
+  datemodified: "2026-01-26 17:03:36.867000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "public_assistance"
+  c_acronym: "PAS"
+  c_name: "Public Assistance Scheme"
+
+- id: "ee1b1268-951c-47b2-9f2f-cd80e2a58cb6"
+  datecreated: "2026-01-26 17:03:39.001000"
+  datemodified: "2026-01-26 17:03:39.001000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "old_age_pension"
+  c_acronym: "OAP"
+  c_name: "Old Age Pension"
+

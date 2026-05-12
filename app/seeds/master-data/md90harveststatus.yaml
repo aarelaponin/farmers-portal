@@ -1,0 +1,67 @@
+# app_fd_md90harveststatus
+# 5 row(s) at sync time
+- id: "md90harvestStatus-approved"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "APPROVED"
+  c_name: "Approved"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md90harvestStatus-draft"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DRAFT"
+  c_name: "Draft"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md90harvestStatus-rejected"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "REJECTED"
+  c_name: "Rejected"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md90harvestStatus-submitted"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SUBMITTED"
+  c_name: "Submitted"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md90harvestStatus-verified"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "VERIFIED"
+  c_name: "Verified"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

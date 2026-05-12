@@ -1,0 +1,67 @@
+# app_fd_md84seedtype
+# 5 row(s) at sync time
+- id: "md84seedType-improved"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "IMPROVED"
+  c_name: "Improved"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md84seedType-local"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "LOCAL"
+  c_name: "Local"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md84seedType-mixed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "MIXED"
+  c_name: "Mixed"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md84seedType-recycled"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "RECYCLED"
+  c_name: "Recycled"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md84seedType-unknown"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "UNKNOWN"
+  c_name: "Unknown"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+

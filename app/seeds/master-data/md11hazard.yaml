@@ -1,0 +1,132 @@
+# app_fd_md11hazard
+# 13 row(s) at sync time
+- id: "25e5adf6-26d7-47b2-853f-759fcefe1814"
+  datecreated: "2026-01-26 17:03:01.108000"
+  datemodified: "2026-01-26 17:03:01.108000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "crop_pests"
+  c_name: "Significant Crop Pests Outbreak"
+
+- id: "57cc8b80-7b5c-4ed5-843d-ef170158ce3f"
+  datecreated: "2026-01-26 17:03:04.596000"
+  datemodified: "2026-01-26 17:03:04.596000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "strong_winds"
+  c_name: "Strong Winds"
+
+- id: "71cd19d6-f2c7-49e9-8341-d84cb99ce1a8"
+  datecreated: "2026-01-26 17:03:03.427000"
+  datemodified: "2026-01-26 17:03:03.427000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "hail"
+  c_name: "Hail Damage"
+
+- id: "809be1d7-0b90-4085-9fd8-08579146dc75"
+  datecreated: "2026-01-26 17:03:02.477000"
+  datemodified: "2026-01-26 17:03:02.477000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "wild_fire"
+  c_name: "Wild fire"
+
+- id: "83686242-6727-4e77-b984-25542ecafc29"
+  datecreated: "2026-01-26 17:03:02.999000"
+  datemodified: "2026-01-26 17:03:02.999000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "lack_inputs"
+  c_name: "Lack of inputs"
+
+- id: "93161f21-7615-4cc4-831a-674cc5938d76"
+  datecreated: "2026-01-26 17:03:00.245000"
+  datemodified: "2026-01-26 17:03:00.245000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "dry_spell"
+  c_name: "Dry Spell (>10 days without rain)"
+
+- id: "93c637c8-5501-4dcf-8a2a-8b782fa8d517"
+  datecreated: "2026-01-26 17:03:00.677000"
+  datemodified: "2026-01-26 17:03:00.677000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "flooding"
+  c_name: "Flooding"
+
+- id: "93ea6636-7bd3-4092-ac8f-d3e5c4ea875e"
+  datecreated: "2026-01-26 17:03:01.527000"
+  datemodified: "2026-01-26 17:03:01.527000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "crop_disease"
+  c_name: "Significant Crop Disease Outbreak"
+
+- id: "9d28df1b-a8c9-4dd8-9772-64ce8c119dae"
+  datecreated: "2026-01-26 17:03:04.162000"
+  datemodified: "2026-01-26 17:03:04.162000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "frost"
+  c_name: "Frost"
+
+- id: "e5aa491d-2cf8-44c5-89b5-0b3b5534054e"
+  datecreated: "2026-01-26 17:03:01.952000"
+  datemodified: "2026-01-26 17:03:01.952000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "crop_damage_animals"
+  c_name: "Crop damage by animals/Birds"
+
+- id: "md11hazard-ext-none"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "NONE"
+  c_name: "No Hazard"
+
+- id: "md11hazard-ext-other"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "OTHER"
+  c_name: "Other Hazard"
+
+- id: "md11hazard-ext-theft"
+  datecreated: "2026-04-26 11:41:00.580494"
+  datemodified: "2026-04-26 11:41:00.580494"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "THEFT"
+  c_name: "Theft"
+

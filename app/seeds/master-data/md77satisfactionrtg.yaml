@@ -1,0 +1,67 @@
+# app_fd_md77satisfactionrtg
+# 5 row(s) at sync time
+- id: "md77satisfactionRtg-1"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "1"
+  c_name: "1 — Very Dissatisfied"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md77satisfactionRtg-2"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "2"
+  c_name: "2 — Dissatisfied"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md77satisfactionRtg-3"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "3"
+  c_name: "3 — Neutral"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md77satisfactionRtg-4"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "4"
+  c_name: "4 — Satisfied"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md77satisfactionRtg-5"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "5"
+  c_name: "5 — Very Satisfied"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+

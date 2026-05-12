@@ -1,0 +1,254 @@
+# app_fd_md19crops
+# 21 row(s) at sync time
+- id: "22529b94-9d49-400f-b8de-eec4e166bd43"
+  datecreated: "2026-01-26 17:18:43.493000"
+  datemodified: "2026-01-26 17:18:43.493000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "wheat"
+  c_crop_category: "cereals"
+  c_name: "Wheat"
+  c_isactive: "Y"
+
+- id: "237742d0-c46a-4aa2-b94f-f09aa31c5c0e"
+  datecreated: "2026-01-26 17:18:47.847000"
+  datemodified: "2026-01-26 17:18:47.847000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "spinach"
+  c_crop_category: "vegetables"
+  c_name: "Spinach"
+  c_isactive: "Y"
+
+- id: "25904d0d-c9ab-4edc-a4c4-bda2f97a435d"
+  datecreated: "2026-01-26 17:18:49.588000"
+  datemodified: "2026-01-26 17:18:49.588000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "pumpkin"
+  c_crop_category: "vegetables"
+  c_name: "Pumpkin"
+  c_isactive: "Y"
+
+- id: "27a1a77a-0abe-4caf-bafc-063e4e6545ec"
+  datecreated: "2026-01-26 17:18:44.345000"
+  datemodified: "2026-01-26 17:18:44.345000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "soybeans"
+  c_crop_category: "legumes"
+  c_name: "Soybeans"
+  c_isactive: "Y"
+
+- id: "3db2a5f0-ddcc-4d6a-aab1-b748526d03a2"
+  datecreated: "2026-01-26 17:18:45.620000"
+  datemodified: "2026-01-26 17:18:45.620000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "sweet_potatoes"
+  c_crop_category: "tubers"
+  c_name: "Sweet Potatoes"
+  c_isactive: "Y"
+
+- id: "42f1d74c-da06-42a7-adfd-0a3c01b4f30f"
+  datecreated: "2026-01-26 17:18:42.053000"
+  datemodified: "2026-01-26 17:18:42.053000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "sorghum"
+  c_crop_category: "cereals"
+  c_name: "Sorghum"
+  c_isactive: "Y"
+
+- id: "4875e71b-03ef-4145-867e-adb0f6fe6364"
+  datecreated: "2026-01-26 17:18:42.929000"
+  datemodified: "2026-01-26 17:18:42.929000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "millet"
+  c_crop_category: "cereals"
+  c_name: "Millet"
+  c_isactive: "Y"
+
+- id: "4eb46a8a-a5f7-4630-9b94-ebc3662c4451"
+  datecreated: "2026-01-26 17:18:44.769000"
+  datemodified: "2026-01-26 17:18:44.769000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "potatoes"
+  c_crop_category: "tubers"
+  c_name: "Potatoes"
+  c_isactive: "Y"
+
+- id: "58ce255b-ec2e-4a4f-9a91-98a1a2c79e74"
+  datecreated: "2026-01-26 17:18:47.312000"
+  datemodified: "2026-01-26 17:18:47.312000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "rape"
+  c_crop_category: "vegetables"
+  c_name: "Rape"
+  c_isactive: "Y"
+
+- id: "5d649926-763e-4542-8335-2751ec659967"
+  datecreated: "2026-01-26 17:18:45.189000"
+  datemodified: "2026-01-26 17:18:45.189000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mixed_beans"
+  c_crop_category: "legumes"
+  c_name: "Mixed Beans"
+  c_isactive: "Y"
+
+- id: "619fa69a-437e-48f1-8215-44f0c48d475f"
+  datecreated: "2026-01-26 17:18:48.694000"
+  datemodified: "2026-01-26 17:18:48.694000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "onion"
+  c_crop_category: "vegetables"
+  c_name: "Onion"
+  c_isactive: "Y"
+
+- id: "6b2feaba-45f9-4813-9093-1c1185505c37"
+  datecreated: "2026-01-26 17:18:46.889000"
+  datemodified: "2026-01-26 17:18:46.889000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "cowpeas"
+  c_crop_category: "legumes"
+  c_name: "Cowpeas"
+  c_isactive: "Y"
+
+- id: "7f1111a1-5067-4b79-9726-faa833fec771"
+  datecreated: "2026-01-26 17:18:50.515000"
+  datemodified: "2026-01-26 17:18:50.515000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other"
+  c_crop_category: "other"
+  c_name: "Other"
+  c_isactive: "Y"
+
+- id: "82a174de-2836-4cd5-8f6e-504911c95ae6"
+  datecreated: "2026-01-26 17:18:46.046000"
+  datemodified: "2026-01-26 17:18:46.046000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "cabbage"
+  c_crop_category: "vegetables"
+  c_name: "Cabbage"
+  c_isactive: "Y"
+
+- id: "a8c706d2-40f4-4960-a391-3988c9301347"
+  datecreated: "2026-01-26 17:18:41.619000"
+  datemodified: "2026-01-26 17:18:41.619000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "maize"
+  c_crop_category: "cereals"
+  c_name: "Maize"
+  c_isactive: "Y"
+
+- id: "b082e6ca-219c-4b32-be09-ec356501e8a0"
+  datecreated: "2026-01-26 17:18:46.471000"
+  datemodified: "2026-01-26 17:18:46.471000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "pigeon_peas"
+  c_crop_category: "legumes"
+  c_name: "Pigeon Peas"
+  c_isactive: "Y"
+
+- id: "bfdd368f-dccc-4618-a9fe-4685c245d63f"
+  datecreated: "2026-01-26 17:18:42.499000"
+  datemodified: "2026-01-26 17:18:42.499000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "rice"
+  c_crop_category: "cereals"
+  c_name: "Rice"
+  c_isactive: "Y"
+
+- id: "c40ea598-6968-4cd8-b797-18c384afa343"
+  datecreated: "2026-01-26 17:18:43.926000"
+  datemodified: "2026-01-26 17:18:43.926000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "groundnuts"
+  c_crop_category: "legumes"
+  c_name: "Groundnuts"
+  c_isactive: "Y"
+
+- id: "d4b70b2c-174d-4267-adfe-a20c37ed2d68"
+  datecreated: "2026-01-26 17:18:49.112000"
+  datemodified: "2026-01-26 17:18:49.112000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "carrots"
+  c_crop_category: "vegetables"
+  c_name: "Carrots"
+  c_isactive: "Y"
+
+- id: "d4fe701e-c4e1-4d3a-9d3d-a7d55a4e356a"
+  datecreated: "2026-01-26 17:18:48.272000"
+  datemodified: "2026-01-26 17:18:48.272000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "tomato"
+  c_crop_category: "vegetables"
+  c_name: "Tomato"
+  c_isactive: "Y"
+
+- id: "f183cdae-1d62-4adc-a0e4-baca54f8ca5c"
+  datecreated: "2026-01-26 17:18:50.017000"
+  datemodified: "2026-01-26 17:18:50.017000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "butternut"
+  c_crop_category: "vegetables"
+  c_name: "Butternut"
+  c_isactive: "Y"
+

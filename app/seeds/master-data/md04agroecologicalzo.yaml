@@ -1,0 +1,42 @@
+# app_fd_md04agroecologicalzo
+# 4 row(s) at sync time
+- id: "6aaee5bf-fdbf-46b4-91b0-49f2bc36c89c"
+  datecreated: "2026-01-26 17:02:33.789000"
+  datemodified: "2026-01-26 17:02:33.789000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "lowlands"
+  c_name: "Lowlands"
+
+- id: "8840164f-6c15-43b9-9a14-e98c769d9d5a"
+  datecreated: "2026-01-26 17:02:34.224000"
+  datemodified: "2026-01-26 17:02:34.224000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "foothills"
+  c_name: "Foothills"
+
+- id: "9ae9f1fb-e4bc-4572-968a-e1902138c6ef"
+  datecreated: "2026-01-26 17:02:34.730000"
+  datemodified: "2026-01-26 17:02:34.730000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mountains"
+  c_name: "Mountains"
+
+- id: "9b541358-f0da-478c-8b1e-c6ab3aaf39c5"
+  datecreated: "2026-01-26 17:02:35.154000"
+  datemodified: "2026-01-26 17:02:35.154000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "senqu_valley"
+  c_name: "Senqu River Valley"
+

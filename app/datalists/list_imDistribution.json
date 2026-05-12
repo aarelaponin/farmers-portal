@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "transactionCode",
+            "id": "column_0",
+            "label": "Transaction Code"
+        },
+        {
+            "name": "campaignCode",
+            "id": "column_1",
+            "label": "Campaign"
+        },
+        {
+            "name": "entitlementCode",
+            "id": "column_2",
+            "label": "Entitlement"
+        },
+        {
+            "name": "farmerCode",
+            "id": "column_3",
+            "label": "Farmer ID"
+        },
+        {
+            "name": "farmerNationalId",
+            "id": "column_4",
+            "label": "National ID"
+        },
+        {
+            "name": "farmerName",
+            "id": "column_5",
+            "label": "Farmer Name"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Input Distribution",
+    "id": "list_imDistribution",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "imDistribution"}
+    },
+    "actions": [],
+    "order": ""
+}

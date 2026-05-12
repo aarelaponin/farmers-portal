@@ -1,0 +1,119 @@
+# app_fd_md68appealtype
+# 9 row(s) at sync time
+- id: "md68appealType-application_rejection"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "APPLICATION_REJECTION"
+  c_name: "Application Rejection"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md68appealType-benefit_amount"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "BENEFIT_AMOUNT"
+  c_name: "Benefit Amount"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md68appealType-distribution_issue"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISTRIBUTION_ISSUE"
+  c_name: "Distribution Issue"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md68appealType-document_rejection"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DOCUMENT_REJECTION"
+  c_name: "Document Rejection"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md68appealType-eligibility_decision"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ELIGIBILITY_DECISION"
+  c_name: "Eligibility Decision"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md68appealType-enrollment_denied"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ENROLLMENT_DENIED"
+  c_name: "Enrollment Denied"
+  c_description: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+
+- id: "md68appealType-eval_dispute"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EVAL_DISPUTE"
+  c_name: "Evaluation Dispute"
+  c_description: null
+  c_displayorder: "8"
+  c_isactive: "Y"
+
+- id: "md68appealType-other"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "OTHER"
+  c_name: "Other"
+  c_description: null
+  c_displayorder: "9"
+  c_isactive: "Y"
+
+- id: "md68appealType-payment_issue"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PAYMENT_ISSUE"
+  c_name: "Payment Issue"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+

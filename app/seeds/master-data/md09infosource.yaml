@@ -1,0 +1,82 @@
+# app_fd_md09infosource
+# 8 row(s) at sync time
+- id: "0781edd3-67ff-4daf-8bfb-90aa90998de1"
+  datecreated: "2026-01-26 17:02:49.679000"
+  datemodified: "2026-01-26 17:02:49.679000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "newspaper"
+  c_name: "Newspaper/Publication"
+
+- id: "17504a62-7c38-4be9-840d-e9d1ae6011eb"
+  datecreated: "2026-01-26 17:02:51.113000"
+  datemodified: "2026-01-26 17:02:51.113000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mobile_phone"
+  c_name: "Mobile Phone/SMS"
+
+- id: "67f11b88-5f2b-4479-8667-02d7c059adad"
+  datecreated: "2026-01-26 17:02:51.542000"
+  datemodified: "2026-01-26 17:02:51.542000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "television"
+  c_name: "Television"
+
+- id: "b7356871-4a74-477a-8e40-7fd3d43f6654"
+  datecreated: "2026-01-26 17:02:49.252000"
+  datemodified: "2026-01-26 17:02:49.252000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "radio"
+  c_name: "Radio"
+
+- id: "c32f8ec1-4a63-42be-9f25-a0a120d98809"
+  datecreated: "2026-01-26 17:02:50.602000"
+  datemodified: "2026-01-26 17:02:50.602000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "extension_meetings"
+  c_name: "Extension Meetings"
+
+- id: "cf5d1a63-4ffa-4eb9-a38c-77cf2c194170"
+  datecreated: "2026-01-26 17:02:52.047000"
+  datemodified: "2026-01-26 17:02:52.047000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other_farmers"
+  c_name: "Other Farmers"
+
+- id: "f2cb44c8-55ea-4221-9e29-4a38fc157b60"
+  datecreated: "2026-01-26 17:02:48.739000"
+  datemodified: "2026-01-26 17:02:48.739000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "public_gathering"
+  c_name: "Public Gathering"
+
+- id: "ff6ade6f-6c80-4d91-9363-692bc530aa18"
+  datecreated: "2026-01-26 17:02:50.179000"
+  datemodified: "2026-01-26 17:02:50.179000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "internet"
+  c_name: "Internet"
+

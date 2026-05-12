@@ -1,0 +1,93 @@
+# app_fd_md65docrejreason
+# 7 row(s) at sync time
+- id: "md65docRejReason-expired"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EXPIRED"
+  c_name: "Document Expired"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md65docRejReason-forged"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FORGED"
+  c_name: "Suspected Forgery"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md65docRejReason-illegible"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ILLEGIBLE"
+  c_name: "Illegible"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md65docRejReason-incomplete"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "INCOMPLETE"
+  c_name: "Incomplete"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md65docRejReason-mismatch"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "MISMATCH"
+  c_name: "Information Mismatch"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "md65docRejReason-other"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "OTHER"
+  c_name: "Other"
+  c_description: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+
+- id: "md65docRejReason-wrong_type"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "WRONG_TYPE"
+  c_name: "Wrong Document Type"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

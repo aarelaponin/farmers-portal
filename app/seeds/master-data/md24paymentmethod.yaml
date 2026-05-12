@@ -1,0 +1,74 @@
+# app_fd_md24paymentmethod
+# 6 row(s) at sync time
+- id: "5786d758-32f1-4a94-b1c4-bb47f0053299"
+  datecreated: "2026-01-26 17:03:59.823000"
+  datemodified: "2026-01-26 17:03:59.823000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BANK_TRANSFER"
+  c_requires_account_number: "Yes"
+  c_name: "Direct Bank Transfer"
+  c_description: "Direct transfer to bank account"
+
+- id: "7036f0e7-5694-4819-8f95-d96d03c4e522"
+  datecreated: "2026-01-26 17:04:01.177000"
+  datemodified: "2026-01-26 17:04:01.177000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "E_VOUCHER"
+  c_requires_account_number: "No"
+  c_name: "E-Voucher"
+  c_description: "Electronic voucher code"
+
+- id: "820a7056-fa84-454a-a7c6-ff82dcb3a100"
+  datecreated: "2026-01-26 17:04:00.752000"
+  datemodified: "2026-01-26 17:04:00.752000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CASH_AGENT"
+  c_requires_account_number: "No"
+  c_name: "Cash via Agent"
+  c_description: "Cash collection at agent location"
+
+- id: "a9e85398-9760-43df-87ab-bf7622392daa"
+  datecreated: "2026-01-26 17:04:01.598000"
+  datemodified: "2026-01-26 17:04:01.598000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "IN_KIND"
+  c_requires_account_number: "No"
+  c_name: "In-Kind Distribution"
+  c_description: "Physical inputs delivery"
+
+- id: "cdc53613-eb38-41c2-b4e6-6ef2edc93516"
+  datecreated: "2026-01-26 17:04:02.026000"
+  datemodified: "2026-01-26 17:04:02.026000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CHECK"
+  c_requires_account_number: "No"
+  c_name: "Bank Check"
+  c_description: "Paper check issuance"
+
+- id: "e2a5b5a6-43f5-40fe-bcf0-0e406f8aa2f7"
+  datecreated: "2026-01-26 17:04:00.249000"
+  datemodified: "2026-01-26 17:04:00.249000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "MOBILE_MONEY"
+  c_requires_account_number: "Yes"
+  c_name: "Mobile Money"
+  c_description: "Mobile wallet transfer"
+

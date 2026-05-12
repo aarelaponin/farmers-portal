@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "income_programs_key",
+            "id": "column_0",
+            "label": "income_programs_key"
+        },
+        {
+            "name": "mainSourceIncome",
+            "id": "column_1",
+            "label": "Main source of income for the household?"
+        },
+        {
+            "name": "income_sources",
+            "id": "column_2",
+            "label": "Income sources (last 12 months)"
+        },
+        {
+            "name": "gainfulEmployment",
+            "id": "column_3",
+            "label": "Are you in gainful employment where a monthly salary is earned?"
+        },
+        {
+            "name": "governmentEmployed",
+            "id": "column_4",
+            "label": "If yes, are you employed by the Government of Lesotho?"
+        },
+        {
+            "name": "parent_id",
+            "id": "column_5",
+            "label": "parent_id"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 01.06 - Farmer Income and Programs",
+    "id": "list_farmerIncomePrograms",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "farmerIncomePrograms"}
+    },
+    "actions": [],
+    "order": ""
+}

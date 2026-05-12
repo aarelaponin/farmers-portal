@@ -1,0 +1,54 @@
+# app_fd_md59ruletype
+# 4 row(s) at sync time
+- id: "md59ruleType-bonus"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "BONUS"
+  c_name: "Bonus"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md59ruleType-exclusion"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EXCLUSION"
+  c_name: "Exclusion"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md59ruleType-inclusion"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "INCLUSION"
+  c_name: "Inclusion"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md59ruleType-priority"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PRIORITY"
+  c_name: "Priority"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

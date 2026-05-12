@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "districtCode",
+            "id": "column_1",
+            "label": "District"
+        },
+        {
+            "name": "cropCode",
+            "id": "column_2",
+            "label": "Crop"
+        },
+        {
+            "name": "seasonType",
+            "id": "column_3",
+            "label": "Season Type"
+        },
+        {
+            "name": "zoneCode",
+            "id": "column_4",
+            "label": "Agro-Ecological Zone"
+        },
+        {
+            "name": "expectedYieldPerHa",
+            "id": "column_5",
+            "label": "Expected Yield (50kg bags/ha)"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.49 - Expected Yield Baseline",
+    "id": "list_md49ExpYield",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md49ExpYield"}
+    },
+    "actions": [],
+    "order": ""
+}

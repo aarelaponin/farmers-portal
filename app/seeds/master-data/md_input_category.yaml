@@ -1,0 +1,46 @@
+# app_fd_md_input_category
+# 4 row(s) at sync time
+- id: "1afaa5a4-ce7f-4e84-b1d6-03a560c9b47a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "AGROCHEMICAL"
+  c_name: "Agrochemical"
+  c_description: "Pesticides, herbicides, fungicides used to protect crops."
+
+- id: "445aadb2-d32b-4402-a7c4-6a51bac9ce5e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "TOOL"
+  c_name: "Hand tool / equipment"
+  c_description: "Hoes, spades, knapsack sprayers, etc. issued via subsidy."
+
+- id: "a62006a9-956c-43b0-a7c8-39c8b5f85fd0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SEED"
+  c_name: "Seed"
+  c_description: "Crop seed inputs — maize, sorghum, beans, peas, wheat, etc."
+
+- id: "da31ce14-073e-4bf9-86e5-ec6b5a163bf7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "FERTILISER"
+  c_name: "Fertiliser"
+  c_description: "Mineral fertilisers (NPK, urea, etc.) plus organic amendments."
+

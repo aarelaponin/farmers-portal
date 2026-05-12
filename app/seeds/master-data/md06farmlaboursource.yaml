@@ -1,0 +1,52 @@
+# app_fd_md06farmlaboursource
+# 5 row(s) at sync time
+- id: "0bbefa09-f9c0-4ba0-8b6d-d6ba528bf891"
+  datecreated: "2026-01-26 17:02:39.163000"
+  datemodified: "2026-01-26 17:02:39.163000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "family"
+  c_name: "Family"
+
+- id: "0db0e593-719e-404f-83ed-f8c0afdf8550"
+  datecreated: "2026-01-26 17:02:40.925000"
+  datemodified: "2026-01-26 17:02:40.925000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mixed"
+  c_name: "Mixed"
+
+- id: "72c2fa07-fe0e-429f-b6a6-c60cb9415d46"
+  datecreated: "2026-01-26 17:02:39.582000"
+  datemodified: "2026-01-26 17:02:39.582000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "seasonal_hired"
+  c_name: "Seasonally Hired"
+
+- id: "756ba7e5-e732-4ea9-918a-3977ed07feee"
+  datecreated: "2026-01-26 17:02:40.058000"
+  datemodified: "2026-01-26 17:02:40.058000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "permanent_hired"
+  c_name: "Permanently Hired"
+
+- id: "b7cc7997-e059-408b-be9b-16f359fd3470"
+  datecreated: "2026-01-26 17:02:40.480000"
+  datemodified: "2026-01-26 17:02:40.480000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "communal"
+  c_name: "Communal/Shared"
+

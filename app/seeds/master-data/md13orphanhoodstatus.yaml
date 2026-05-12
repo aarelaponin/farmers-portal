@@ -1,0 +1,52 @@
+# app_fd_md13orphanhoodstatus
+# 5 row(s) at sync time
+- id: "19fdbb13-ccd6-4913-849e-69180ed66573"
+  datecreated: "2026-01-26 17:03:12.178000"
+  datemodified: "2026-01-26 17:03:12.178000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "both_deceased"
+  c_name: "Both Deceased"
+
+- id: "6f3867e0-cd8c-4de7-8739-f1916e5870a7"
+  datecreated: "2026-01-26 17:03:12.598000"
+  datemodified: "2026-01-26 17:03:12.598000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "unknown"
+  c_name: "Unknown"
+
+- id: "7112efb4-dd62-4c54-b0dd-722eb8a0f5be"
+  datecreated: "2026-01-26 17:03:11.751000"
+  datemodified: "2026-01-26 17:03:11.751000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "father_only"
+  c_name: "Only Father Alive"
+
+- id: "95b84b4b-21f3-4b4f-a6c1-9444d74ad5a8"
+  datecreated: "2026-01-26 17:03:11.320000"
+  datemodified: "2026-01-26 17:03:11.320000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mother_only"
+  c_name: "Only Mother Alive"
+
+- id: "d3e19720-5a3d-4ed2-994f-be768c1e5796"
+  datecreated: "2026-01-26 17:03:10.900000"
+  datemodified: "2026-01-26 17:03:10.900000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "both_alive"
+  c_name: "Both Parents Alive"
+

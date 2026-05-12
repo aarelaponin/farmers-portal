@@ -1,0 +1,102 @@
+# app_fd_md03district
+# 10 row(s) at sync time
+- id: "22c98cae-f5b9-42ef-b112-168a548f34cc"
+  datecreated: "2026-01-26 17:02:28.593000"
+  datemodified: "2026-01-26 17:02:28.593000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "berea"
+  c_name: "Berea"
+
+- id: "3ae4568f-b5d8-46af-a367-d639a5b2367e"
+  datecreated: "2026-01-26 17:02:29.881000"
+  datemodified: "2026-01-26 17:02:29.881000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mokhotlong"
+  c_name: "Mokhotlong"
+
+- id: "3e5ec8f6-fba7-4225-bb77-6ddb623663d4"
+  datecreated: "2026-01-26 17:02:31.664000"
+  datemodified: "2026-01-26 17:02:31.664000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "quthing"
+  c_name: "Quthing"
+
+- id: "70b44666-5afb-4ac7-9b0c-722e58318a3a"
+  datecreated: "2026-01-26 17:02:28.136000"
+  datemodified: "2026-01-26 17:02:28.136000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "maseru"
+  c_name: "Maseru"
+
+- id: "ac04f08c-08eb-40d7-ac5d-101d12edf51a"
+  datecreated: "2026-01-26 17:02:30.315000"
+  datemodified: "2026-01-26 17:02:30.315000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "thaba-tseka"
+  c_name: "Thaba-Tseka"
+
+- id: "ad3e0b39-2ead-495b-92b3-7de4f214b71f"
+  datecreated: "2026-01-26 17:02:29.023000"
+  datemodified: "2026-01-26 17:02:29.023000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "leribe"
+  c_name: "Leribe"
+
+- id: "e437fa4b-1624-46d7-a00e-4cdf3360cc4d"
+  datecreated: "2026-01-26 17:02:29.449000"
+  datemodified: "2026-01-26 17:02:29.449000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "butha-buthe"
+  c_name: "Butha-Buthe"
+
+- id: "e9b0ebb1-02ac-4fe6-ac76-56b8b395bd2c"
+  datecreated: "2026-01-26 17:02:31.159000"
+  datemodified: "2026-01-26 17:02:31.159000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "qachas-nek"
+  c_name: "Qacha's Nek"
+
+- id: "eb22ce52-e9e5-4c4e-81f0-cf6dbbec86fa"
+  datecreated: "2026-01-26 17:02:32.180000"
+  datemodified: "2026-02-03 07:14:44.133000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "mohales-hoek"
+  c_name: "Mohale's Hoek"
+
+- id: "f7166439-f181-482b-bfe0-8f45736b052a"
+  datecreated: "2026-01-26 17:02:30.738000"
+  datemodified: "2026-01-26 17:02:30.738000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "mafeteng"
+  c_name: "Mafeteng"
+

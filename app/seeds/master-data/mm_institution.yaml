@@ -1,0 +1,15 @@
+# app_fd_mm_institution
+# 1 row(s) at sync time
+- id: "ae0375bf-c178-4361-b39e-9ab6c8318564"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_contactinfojson: null
+  c_name: "Ministry of Agriculture and Food Security"
+  c_parentinstitutionid: null
+  c_type: null
+  c_code: "MIN_AGRO"
+

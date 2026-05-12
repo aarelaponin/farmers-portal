@@ -1,0 +1,68 @@
+# app_fd_md161livestockcategory
+# 6 row(s) at sync time
+- id: "08bed88d-3448-4e37-b08c-fff9cd98d550"
+  datecreated: "2026-01-26 17:18:34.252000"
+  datemodified: "2026-01-26 17:18:34.252000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "large_livestock"
+  c_name: "Large Livestock"
+  c_isactive: "Y"
+
+- id: "420e5051-907a-4bc5-ad01-dc44c94e00d0"
+  datecreated: "2026-01-26 17:18:35.159000"
+  datemodified: "2026-01-26 17:18:35.159000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "poultry"
+  c_name: "Poultry"
+  c_isactive: "Y"
+
+- id: "51dc405f-900e-467d-937b-9e1bbd082c8e"
+  datecreated: "2026-01-26 17:18:34.701000"
+  datemodified: "2026-01-26 17:18:34.701000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "small_livestock"
+  c_name: "Small Livestock"
+  c_isactive: "Y"
+
+- id: "a7f0d5a1-7ff1-43c9-a81d-685812f9f3dd"
+  datecreated: "2026-01-26 17:18:36.095000"
+  datemodified: "2026-01-26 17:18:36.095000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "wildlife"
+  c_name: "Wildlife"
+  c_isactive: "Y"
+
+- id: "d02353ec-7b59-42b5-aab1-beaff177f807"
+  datecreated: "2026-01-26 17:18:35.666000"
+  datemodified: "2026-01-26 17:18:35.666000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "working_animals"
+  c_name: "Working Animals"
+  c_isactive: "Y"
+
+- id: "d94630f0-a20b-4e6c-af87-8e208fd7958a"
+  datecreated: "2026-01-26 17:18:36.532000"
+  datemodified: "2026-01-26 17:18:36.532000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other"
+  c_name: "Other"
+  c_isactive: "Y"
+

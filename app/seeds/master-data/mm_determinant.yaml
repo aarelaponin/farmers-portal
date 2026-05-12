@@ -1,0 +1,1390 @@
+# app_fd_mm_determinant
+# 51 row(s) at sync time
+- id: "023795b5-d92d-427b-9b01-c1b62b637110"
+  datecreated: "2026-05-11 10:41:07.944000"
+  datemodified: "2026-05-11 10:42:14.648000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.phone_format_valid"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_farmerbasicinfo WHERE c_parent_id='#recordId#'   AND COALESCE(TRIM(c_mobile_number),'') <> ''   AND length(regexp_replace(c_mobile_number, '[^0-9]', '', 'g')) NOT IN (8, 11)"
+  c_description: "Operator-editable: relax the digit-count check or add country-specific prefix validation here."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "Mobile number does not look valid for Lesotho. Expected 8 digits (e.g. 58515039) or +266 + 8 digits (e.g. +266 58515039)."
+  c_name: "Identity Phone Format Valid"
+  c_targetvalue: ""
+  c_severity: "warning"
+  c_triggeron: "save"
+  c_aggregation: ""
+  c_affectedfields: "mobile_number"
+  c_tabcode: ""
+
+- id: "034fc8f6-8996-4bc2-8a85-37c7304384f3"
+  datecreated: "2026-05-11 10:41:07.921000"
+  datemodified: "2026-05-11 10:42:14.629000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.has_contact"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_farmerbasicinfo WHERE c_parent_id='#recordId#'   AND COALESCE(TRIM(c_mobile_number),'') = ''   AND COALESCE(TRIM(c_email_address),'') = ''"
+  c_description: "Operator-editable: change either the failmessage, or the SQL to allow contact-less registration in special cases (e.g. paper-only applicants)."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "At least one contact channel is required — provide mobile number, email address, or both. Without contact details, the Ministry cannot notify you about your applications."
+  c_name: "Identity Has At Least One Contact"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: ""
+  c_affectedfields: "mobile_number,email_address"
+  c_tabcode: ""
+
+- id: "0b0debd2-31c5-4bd2-ab28-b0bc8ebf2719"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_NO_DUPLICATE_PRG_004"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_004"
+  c_rulejson: "$registry.subsidy.prior_applications_this_programme == \"0\""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "You have already submitted an application for this programme. Each applicant may apply once per cycle."
+  c_name: "No prior application for this programme (PRG_2025_004)"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "0c32b95e-9ef6-4f3d-8531-bcc549ee4ea3"
+  datecreated: "2026-05-07 10:15:31.331000"
+  datemodified: "2026-05-11 10:42:14.669000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.mobile_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_farmerbasicinfo WHERE c_parent_id='#recordId#'   AND (c_mobile_number IS NULL OR TRIM(c_mobile_number)='')"
+  c_description: "Retired (May 2026). Replaced by identity.has_contact which permits email-only farmers. Kept active as a soft hint so MAFSN staff are still nudged to capture mobile when possible."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "Mobile number is missing. Email may be used as the sole channel if preferred. (This rule is retained as a warning only — the binding gate is identity.has_contact.)"
+  c_name: "Identity Mobile Required (legacy — retired by identity.has_contact)"
+  c_targetvalue: ""
+  c_severity: "warning"
+  c_triggeron: "save"
+  c_aggregation: ""
+  c_affectedfields: "mobile_number"
+  c_tabcode: ""
+
+- id: "0cfa177f-917a-4e53-879a-c08638fd53e1"
+  datecreated: "2026-05-07 10:15:31.217000"
+  datemodified: "2026-05-07 10:19:51.621000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "application.applicant_id_set"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 FROM app_fd_sp_application
+            WHERE id = '#recordId#' AND (c_applicant_id IS NULL OR c_applicant_id = '')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: applicant. Severity: ERROR."
+  c_serviceid: "farmer_application"
+  c_failmessage: "Applicant identity not resolved — enter National ID and tab away."
+  c_name: "Application Applicant Id Set"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "applicant_id"
+  c_tabcode: "applicant"
+
+- id: "0ec64767-9e68-4e24-8654-a089037e62f4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_allowslowpath: "N"
+  c_scope: "budget_amount"
+  c_ruletype: "assignment"
+  c_registrationid: "PRG_2025_001"
+  c_rulejson: ""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: ""
+  c_name: "Block Farming — flat M2,000 per applicant"
+  c_targetvalue: "2000.00"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "270d711a-34e8-4d89-a544-f7a653196191"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "DECISION_DEFAULT_REJECT"
+  c_allowslowpath: "N"
+  c_scope: "decision_to_status"
+  c_ruletype: "assignment"
+  c_registrationid: ""
+  c_rulejson: "decision_value == 'reject'"
+  c_description: null
+  c_serviceid: ""
+  c_failmessage: ""
+  c_name: "Default — reject → rejected"
+  c_targetvalue: "rejected"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "2abc9db4-20e1-4a5d-8c49-2f395d23acdb"
+  datecreated: "2026-05-07 10:15:31.360000"
+  datemodified: "2026-05-07 10:19:51.751000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "location.district_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_parcellocation WHERE c_parent_id='#recordId#' AND (c_district IS NULL OR TRIM(c_district)='')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: location. Severity: ERROR."
+  c_serviceid: "parcel_registration"
+  c_failmessage: "District must be selected."
+  c_name: "Location District Required"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "district"
+  c_tabcode: "location"
+
+- id: "3138607b-af69-494d-8db3-f21e20874733"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_NO_DUPLICATE_PRG_003"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_003"
+  c_rulejson: "$registry.subsidy.prior_applications_this_programme == \"0\""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "You have already submitted an application for this programme. Each applicant may apply once per cycle."
+  c_name: "No prior application for this programme (PRG_2025_003)"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "31946d74-75a2-44ba-b2f2-a5f622cd8cb6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_NO_DUPLICATE_PRG_001"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_001"
+  c_rulejson: "$registry.subsidy.prior_applications_this_programme == \"0\""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "You have already submitted an application for this programme. Each applicant may apply once per cycle."
+  c_name: "No prior application for this programme (PRG_2025_001)"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "34bfe3b6-ed7d-4495-a00f-29dffba9e428"
+  datecreated: "2026-05-07 10:15:31.368000"
+  datemodified: "2026-05-07 10:19:51.757000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "location.parcel_number_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_parcellocation WHERE c_parent_id='#recordId#' AND (c_parcel_number IS NULL OR TRIM(c_parcel_number)='')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: location. Severity: ERROR."
+  c_serviceid: "parcel_registration"
+  c_failmessage: "Parcel number is required."
+  c_name: "Location Parcel Number Required"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "parcel_number"
+  c_tabcode: "location"
+
+- id: "3f15ec73-e3fa-45fa-85ce-2b2bdea6f8e1"
+  datecreated: "2026-05-07 10:15:31.238000"
+  datemodified: "2026-05-07 10:19:51.636000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "application.declaration_signed"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 FROM app_fd_spapplication
+    WHERE id = '#recordId#' AND (c_acceptdeclaration IS NULL OR c_acceptdeclaration <> 'Y')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: declaration. Severity: WARNING."
+  c_serviceid: "farmer_application"
+  c_failmessage: "Declaration not signed."
+  c_name: "Application Declaration Signed"
+  c_targetvalue: ""
+  c_severity: "warning"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "acceptDeclaration"
+  c_tabcode: "declaration"
+
+- id: "401ba02a-72a3-484c-9e21-d69ca57bc1fe"
+  datecreated: "2026-05-07 10:15:31.346000"
+  datemodified: "2026-05-07 10:19:51.740000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.national_id_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_farmerbasicinfo WHERE c_parent_id='#recordId#' AND (c_national_id IS NULL OR TRIM(c_national_id)='')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: identity. Severity: ERROR."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "National ID must not be blank."
+  c_name: "Identity National Id Required"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "national_id"
+  c_tabcode: "identity"
+
+- id: "421450e8-f53c-4131-8401-90290a55ad72"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_AREA_NONZERO"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_001"
+  c_rulejson: "area_hectares > 0"
+  c_description: |-
+    Block Farming applications must declare a non-zero cultivated parcel.
+    A nil or missing area indicates an incomplete application; the rule
+    returns FALSE on zero, NULL on missing — both are caught by aggregation.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "Cultivated area must be greater than zero hectares."
+  c_name: "Applicant has declared a positive cultivated area"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "427f5d00-a40c-4ad4-928b-7f0b0377dfb2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_DROUGHT_DECLARED"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_004"
+  c_rulejson: "district in ['mafeteng','mohales_hoek','qachas_nek','quthing'] AND drought_affected_decl == 'yes'"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "Emergency Relief is limited to drought-declared districts and self-declared affected applicants."
+  c_name: "Applicant in a drought-declared district"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "4a16ef21-6e33-41b0-91bb-a9af58b8940d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "50"
+  c_actionjson: null
+  c_code: "DET_FARMER_REGISTERED"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_001"
+  c_rulejson: "$registry.farmer.first_name != \"\""
+  c_description: |-
+    Block Farming participants must be on the national farmer registry.
+    Touches a different table than the application's own data, so this
+    rule routes through the SqlPathEvaluator (slice 1B-b).
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "Applicant is not yet registered in the farmer registry; complete farmer registration first."
+  c_name: "Applicant is registered in the farmer registry"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "51329874-d58b-44f5-8bdd-9abe610879cf"
+  datecreated: "2026-05-07 10:15:31.272000"
+  datemodified: "2026-05-07 10:19:51.665000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "benefits.at_least_one_item"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 WHERE NOT EXISTS (
+      SELECT 1 FROM app_fd_sp_benefit_item bi
+      JOIN app_fd_sp_program_benefits b ON bi.c_program_id = b.id
+      WHERE b.c_parent_id = '#recordId#')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: benefits. Severity: ERROR."
+  c_serviceid: "farmers_subsidy"
+  c_failmessage: "Programme must declare at least one benefit item."
+  c_name: "Benefits At Least One Item"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "benefitItems"
+  c_tabcode: "benefits"
+
+- id: "53a16e0f-45d2-4087-9520-d812575a73ca"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "BENEFIT_AMOUNT_PRG_2025_004"
+  c_allowslowpath: "N"
+  c_scope: "budget_amount"
+  c_ruletype: "assignment"
+  c_registrationid: "PRG_2025_004"
+  c_rulejson: ""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: |-
+    Note: 1C-era expression rule will replace this flat with
+    base + per-dependent (e.g. M5,000 + M1,000 × dependents under 12).
+    
+  c_name: "Drought Emergency Relief — flat M5,000 per applicant"
+  c_targetvalue: "5000.00"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "588fe8d6-7853-46d7-82ef-4fd38c4fcee2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "INIT_STATUS_DEFAULT_PENDING_CLARIFICATION"
+  c_allowslowpath: "N"
+  c_scope: "initial_status_assignment"
+  c_ruletype: "assignment"
+  c_registrationid: ""
+  c_rulejson: "disposition == 'indeterminate'"
+  c_description: null
+  c_serviceid: ""
+  c_failmessage: ""
+  c_name: "Default — data clarification on indeterminate"
+  c_targetvalue: "pending_data_clarification"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "5f46d6bc-1935-4a0a-98cb-2dbf6989c25b"
+  datecreated: "2026-05-07 10:15:31.302000"
+  datemodified: "2026-05-07 10:19:51.694000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "geometry.area_must_be_positive"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_parcelgeometry WHERE c_parent_id='#recordId#' AND (c_area_hectares IS NULL OR c_area_hectares='' OR CAST(c_area_hectares AS NUMERIC) <= 0)"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: geometry. Severity: ERROR."
+  c_serviceid: "parcel_registration"
+  c_failmessage: "Parcel area (ha) must be greater than zero."
+  c_name: "Geometry Area Must Be Positive"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "area_hectares"
+  c_tabcode: "geometry"
+
+- id: "60f39e90-b095-4df8-85e2-8b115793844c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "DECISION_DEFAULT_APPROVE"
+  c_allowslowpath: "N"
+  c_scope: "decision_to_status"
+  c_ruletype: "assignment"
+  c_registrationid: ""
+  c_rulejson: "decision_value == 'approve'"
+  c_description: null
+  c_serviceid: ""
+  c_failmessage: ""
+  c_name: "Default — approve → approved"
+  c_targetvalue: "approved"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "62f3a656-556c-4922-a7e8-e5fe1343328d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "INIT_STATUS_DEFAULT_AUTO_APPROVED"
+  c_allowslowpath: "N"
+  c_scope: "initial_status_assignment"
+  c_ruletype: "assignment"
+  c_registrationid: ""
+  c_rulejson: "disposition == 'eligibility_passed'"
+  c_description: null
+  c_serviceid: ""
+  c_failmessage: ""
+  c_name: "Default — auto-approve when eligibility passes"
+  c_targetvalue: "auto_approved"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "641882f7-7e4a-4fa4-a41b-d06a23160ca8"
+  datecreated: "2026-05-07 10:15:31.293000"
+  datemodified: "2026-05-07 10:19:51.683000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "geography.at_least_one_district"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 WHERE NOT EXISTS (
+      SELECT 1 FROM app_fd_sp_district_alloc da
+      JOIN app_fd_sp_program_geography g ON da.c_program_id = g.id
+      WHERE g.c_parent_id = '#recordId#')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: geography. Severity: ERROR."
+  c_serviceid: "farmers_subsidy"
+  c_failmessage: "Programme must declare at least one district allocation."
+  c_name: "Geography At Least One District"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "districtAllocations"
+  c_tabcode: "geography"
+
+- id: "6b2b500f-e3f5-4ed7-bea8-fc29e88bff19"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "TEST_FARMER_REGISTERED_HAS_NAME"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: ""
+  c_rulejson: "$registry.farmer.first_name != \"\""
+  c_description: |-
+    L2-1 regression test. /eval with applicantData.national_id matching a
+    registered farmer should return TRUE. /eval with a made-up NID (no row
+    in app_fd_farmerbasicinfo) should return NULL — the grammar's null-
+    propagation per spec §4.3.0.1.
+    
+  c_serviceid: ""
+  c_failmessage: "Farmer is not in the registry (no first_name)."
+  c_name: "TEST — farmer is registered (has a non-empty first_name)"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "6b3048b7-bd90-4027-adf3-1077976349a1"
+  datecreated: "2026-05-07 10:15:31.383000"
+  datemodified: "2026-05-07 10:19:51.768000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "timeline.budget_must_be_positive"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 FROM app_fd_sp_program_timeline
+    WHERE c_parent_id = '#recordId#'
+      AND (c_totalbudget IS NULL OR c_totalbudget = ''
+           OR CAST(c_totalbudget AS NUMERIC) <= 0)
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: timeline. Severity: ERROR."
+  c_serviceid: "farmers_subsidy"
+  c_failmessage: "Total budget must be greater than zero."
+  c_name: "Timeline Budget Must Be Positive"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "totalBudget"
+  c_tabcode: "timeline"
+
+- id: "6bcc82f6-669c-40c9-a415-7157900e6e97"
+  datecreated: "2026-05-07 10:15:31.309000"
+  datemodified: "2026-05-07 10:19:51.705000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "geometry.coordinates_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_parcelgeometry WHERE c_parent_id='#recordId#' AND (c_centroid_lat IS NULL OR c_centroid_lat='')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: geometry. Severity: ERROR."
+  c_serviceid: "parcel_registration"
+  c_failmessage: "GIS coordinates must be captured."
+  c_name: "Geometry Coordinates Required"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "centroid_lat"
+  c_tabcode: "geometry"
+
+- id: "6c4c1135-c074-43e8-8e25-c459021f279a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "DECISION_DEFAULT_SEND_BACK"
+  c_allowslowpath: "N"
+  c_scope: "decision_to_status"
+  c_ruletype: "assignment"
+  c_registrationid: ""
+  c_rulejson: "decision_value == 'send_back'"
+  c_description: null
+  c_serviceid: ""
+  c_failmessage: ""
+  c_name: "Default — send_back → sent_back"
+  c_targetvalue: "sent_back"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "6efcdcd2-04dd-4abc-a7ce-5bfedeadf5f7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_MOUNTAINS_OR_SENQU"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_002"
+  c_rulejson: "agro_zone in ['mountains','senqu_river_valley']"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "This programme is restricted to Mountain or Senqu River Valley applicants."
+  c_name: "Applicant farms in the Mountains or Senqu River Valley"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "74983e1c-1513-4b92-a4ad-38fc1915c90e"
+  datecreated: "2026-05-07 10:15:31.263000"
+  datemodified: "2026-05-07 10:19:51.658000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "application.programme_chosen"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 FROM app_fd_sp_application
+            WHERE id = '#recordId#' AND (c_programme_id IS NULL OR c_programme_id = '')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: applicant. Severity: ERROR."
+  c_serviceid: "farmer_application"
+  c_failmessage: "No programme selected."
+  c_name: "Application Programme Chosen"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "programme_id"
+  c_tabcode: "applicant"
+
+- id: "7f96d332-0cab-4ee5-a753-36e0f78f1dd6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "TEST_FARMER_HAS_PARCELS"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: ""
+  c_rulejson: "$registry.parcels_summary.parcel_count > 0"
+  c_description: |-
+    L2-1 capability-registry probe. Today returns FALSE for everyone
+    because parcelregistration.c_parent_id is empty across all 184 live
+    rows (data integrity gap noted in registry-integration SAD §5.3).
+    When that linkage is populated, this rule activates without code
+    change — the test of pluggability.
+    
+  c_serviceid: ""
+  c_failmessage: "Farmer has no parcels in the registry."
+  c_name: "TEST — farmer has at least one parcel registered"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "8586daeb-27de-40c3-b19c-6687a9b13817"
+  datecreated: "2026-05-07 10:15:31.285000"
+  datemodified: "2026-05-07 10:19:51.671000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "classification.cultivated_land_set"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_parcelclassification WHERE c_parent_id='#recordId#' AND (c_cultivatedland IS NULL OR TRIM(c_cultivatedland)='')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: classification. Severity: WARNING."
+  c_serviceid: "parcel_registration"
+  c_failmessage: "Cultivated land area should be specified."
+  c_name: "Classification Cultivated Land Set"
+  c_targetvalue: ""
+  c_severity: "warning"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "cultivatedland"
+  c_tabcode: "classification"
+
+- id: "85a4b993-0672-47ae-85ff-2c07ad677c86"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "GATE_LAUNCH_DEFAULT"
+  c_allowslowpath: "N"
+  c_scope: "programme_launch_gate"
+  c_ruletype: "inclusion"
+  c_registrationid: ""
+  c_rulejson: "coverage_ratio_pct <= 105"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "Estimated cost exceeds envelope allocation by more than 5%. Increase the envelope or reduce expected applicant count before launching."
+  c_name: "Default — coverage ratio ≤ 105% of envelope"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "85c1bc4d-481a-4f0a-91a3-873c25588d24"
+  datecreated: "2026-05-07 10:15:31.231000"
+  datemodified: "2026-05-07 10:19:51.629000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "application.at_least_one_benefit"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 WHERE NOT EXISTS (
+                SELECT 1 FROM app_fd_sp_application_ben_req
+                WHERE c_parent_id = '#recordId#'
+                  AND COALESCE(NULLIF(c_requested_qty,''),'0')::numeric > 0
+            )
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: benefits. Severity: ERROR."
+  c_serviceid: "farmer_application"
+  c_failmessage: "You must request at least one benefit (qty > 0)."
+  c_name: "Application At Least One Benefit"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "requested_qty"
+  c_tabcode: "benefits"
+
+- id: "8c929017-027c-4fb7-bc7a-9e952815ee98"
+  datecreated: "2026-05-07 10:15:31.353000"
+  datemodified: "2026-05-07 10:19:51.746000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.programme_name_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 FROM app_fd_sp_program_identity
+    WHERE c_parent_id = '#recordId#'
+      AND (c_programname IS NULL OR TRIM(c_programname) = '')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: identity. Severity: ERROR."
+  c_serviceid: "farmers_subsidy"
+  c_failmessage: "Programme name must not be blank."
+  c_name: "Identity Programme Name Required"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "programName"
+  c_tabcode: "identity"
+
+- id: "8cc54173-3734-4fed-8694-c070e6776343"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_SMALLHOLDER"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_003"
+  c_rulejson: "area_hectares <= 5"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "The E-Voucher Pilot is restricted to smallholders (≤ 5 ha)."
+  c_name: "Smallholder (≤ 5 ha cultivated area)"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "8d06b8cf-c388-445e-9fa0-c2ed109e02cf"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_NO_DUPLICATE_PRG_002"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_002"
+  c_rulejson: "$registry.subsidy.prior_applications_this_programme == \"0\""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "You have already submitted an application for this programme. Each applicant may apply once per cycle."
+  c_name: "No prior application for this programme (PRG_2025_002)"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "9632baab-fe6c-4130-8869-fe00fe11e6c7"
+  datecreated: "2026-05-07 10:15:31.255000"
+  datemodified: "2026-05-07 10:19:51.652000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "application.eligibility_mandatory_passed"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 FROM app_fd_sp_application_elig_chk
+            WHERE c_parent_id = '#recordId#'
+              AND c_criterion_severity = 'MANDATORY'
+              AND c_applicant_response = 'NO'
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: eligibility. Severity: ERROR."
+  c_serviceid: "farmer_application"
+  c_failmessage: "One or more mandatory eligibility criteria are not met."
+  c_name: "Application Eligibility Mandatory Passed"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "applicant_response"
+  c_tabcode: "eligibility"
+
+- id: "9f3ea7b4-4317-4c03-9b27-07cb6d81db0c"
+  datecreated: "2026-05-07 10:15:31.338000"
+  datemodified: "2026-05-07 10:19:51.734000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.name_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_farmerbasicinfo WHERE c_parent_id='#recordId#' AND (c_first_name IS NULL OR TRIM(c_first_name)='' OR c_last_name IS NULL OR TRIM(c_last_name)='')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: identity. Severity: ERROR."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "First name and last name are required."
+  c_name: "Identity Name Required"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "first_name,last_name"
+  c_tabcode: "identity"
+
+- id: "9f920c99-dbe3-4c38-afdc-5ffdc5611fc2"
+  datecreated: "2026-05-07 10:15:31.375000"
+  datemodified: "2026-05-07 10:19:51.763000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "monitoring.at_least_one_kpi"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 WHERE NOT EXISTS (
+      SELECT 1 FROM app_fd_sp_kpi k
+      JOIN app_fd_sp_program_monitor m ON k.c_program_id = m.id
+      WHERE m.c_parent_id = '#recordId#')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: monitoring. Severity: WARNING."
+  c_serviceid: "farmers_subsidy"
+  c_failmessage: "Programme should declare at least one KPI before activation."
+  c_name: "Monitoring At Least One Kpi"
+  c_targetvalue: ""
+  c_severity: "warning"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "kpis"
+  c_tabcode: "monitoring"
+
+- id: "a5b61c45-9706-44ce-8bb9-f5e5e3ac033e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_allowslowpath: "N"
+  c_scope: "budget_amount"
+  c_ruletype: "assignment"
+  c_registrationid: "PRG_2025_003"
+  c_rulejson: ""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: ""
+  c_name: "E-Voucher Pilot — flat M1,500 per applicant"
+  c_targetvalue: "1500.00"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "a83fadb0-2856-4e54-8ad9-2da7adccce67"
+  datecreated: "2026-05-11 10:41:07.954000"
+  datemodified: "2026-05-11 10:42:14.659000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "application.applicant_has_recipient"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_subsidy_app_2025 a LEFT JOIN app_fd_farmerbasicinfo f   ON f.c_national_id = a.c_applicant_national_id WHERE a.id = '#recordId#'   AND COALESCE(TRIM(f.c_email_address),'') = ''   AND COALESCE(TRIM(f.c_mobile_number),'') = ''"
+  c_description: "Operator-editable: tweak the failmessage or extend the SQL to also require a verified contact, once a verification flow lands."
+  c_serviceid: "farmer_application"
+  c_failmessage: "The applicant's farmer registry has no contact channels. The applicant cannot be notified about this application. Update the farmer's mobile or email before submitting."
+  c_name: "Application Applicant Has Contact Channel"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: ""
+  c_affectedfields: "applicant_national_id"
+  c_tabcode: ""
+
+- id: "b02c3ed7-765b-4985-8ec4-c3e999ae66cc"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "INIT_STATUS_DEFAULT_PENDING_REVIEW"
+  c_allowslowpath: "N"
+  c_scope: "initial_status_assignment"
+  c_ruletype: "assignment"
+  c_registrationid: ""
+  c_rulejson: "disposition == 'eligibility_pending_review'"
+  c_description: null
+  c_serviceid: ""
+  c_failmessage: ""
+  c_name: "Default — operator review on pending_review disposition"
+  c_targetvalue: "pending_operator_review"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "b186be76-2404-47a4-b8de-b5be01478ed7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "INIT_STATUS_DEFAULT_AUTO_REJECTED"
+  c_allowslowpath: "N"
+  c_scope: "initial_status_assignment"
+  c_ruletype: "assignment"
+  c_registrationid: ""
+  c_rulejson: "disposition == 'eligibility_failed_mandatory'"
+  c_description: null
+  c_serviceid: ""
+  c_failmessage: ""
+  c_name: "Default — auto-reject on mandatory eligibility failure"
+  c_targetvalue: "auto_rejected"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "b5d4e00f-f24a-49a1-a4f6-ba84865e8b5e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "100"
+  c_actionjson: null
+  c_code: "DET_LOWLANDS"
+  c_allowslowpath: "N"
+  c_scope: "applicability"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_001"
+  c_rulejson: "agro_zone == 'lowlands'"
+  c_description: |-
+    Block Farming — Maize Lowlands targets the lowlands intensive crop
+    strategy. Mountain / Senqu applicants are not eligible.
+    
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "This programme is restricted to Lowlands applicants."
+  c_name: "Applicant farms in the Lowlands"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "c28b8c0c-064d-45db-b0b3-8b08dd0a8262"
+  datecreated: "2026-05-07 10:15:31.246000"
+  datemodified: "2026-05-07 10:19:51.644000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "application.eligibility_all_answered"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: |-
+    SELECT 1 FROM app_fd_sp_application_elig_chk
+            WHERE c_parent_id = '#recordId#'
+              AND (c_applicant_response IS NULL OR c_applicant_response = '')
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: eligibility. Severity: ERROR."
+  c_serviceid: "farmer_application"
+  c_failmessage: "Some eligibility criteria are unanswered."
+  c_name: "Application Eligibility All Answered"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "applicant_response"
+  c_tabcode: "eligibility"
+
+- id: "c3b0283d-65e8-42df-a8ea-125149c3c14d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "DET_BLOCK_FARMING_MEMBER"
+  c_allowslowpath: "N"
+  c_scope: "field"
+  c_ruletype: "inclusion"
+  c_registrationid: ""
+  c_rulejson: "block_farming_member == 'yes'"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "Cooperative name only required when the applicant is a Block Farming member."
+  c_name: "Applicant has declared Block Farming Cooperative membership"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "d54a02c1-3d4f-40e9-ae4b-567c5c95dfcd"
+  datecreated: "2026-05-11 10:41:07.934000"
+  datemodified: "2026-05-11 10:42:14.638000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.email_format_valid"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_farmerbasicinfo WHERE c_parent_id='#recordId#'   AND COALESCE(TRIM(c_email_address),'') <> ''   AND c_email_address !~ '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$'"
+  c_description: "Operator-editable: tighten or loosen the regex via this rule. Default is lenient RFC-like check."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "Email address does not look valid. Expected format: name@example.com"
+  c_name: "Identity Email Format Valid"
+  c_targetvalue: ""
+  c_severity: "warning"
+  c_triggeron: "save"
+  c_aggregation: ""
+  c_affectedfields: "email_address"
+  c_tabcode: ""
+
+- id: "e87d9ae8-a507-4475-8b34-0ccfa778dc03"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "GATE_LAUNCH_DROUGHT_RELIEF"
+  c_allowslowpath: "N"
+  c_scope: "programme_launch_gate"
+  c_ruletype: "inclusion"
+  c_registrationid: "PRG_2025_004"
+  c_rulejson: "coverage_ratio_pct <= 110"
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: "Drought-relief overrun exceeds 10% of the envelope. Coordinate with WFP/UNICEF/Treasury for additional contribution before launching."
+  c_name: "Drought Emergency — coverage ratio ≤ 110% (emergency reserve drawable)"
+  c_targetvalue: null
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+
+- id: "ecb6e383-3626-49f4-b54e-fa255b99b88b"
+  datecreated: "2026-05-07 10:15:31.316000"
+  datemodified: "2026-05-07 10:19:51.715000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "household.at_least_one_member"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 WHERE NOT EXISTS (SELECT 1 FROM app_fd_household_members hm JOIN app_fd_farmer_household fh ON hm.c_farmer_id=fh.id WHERE fh.c_parent_id='#recordId#')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: household. Severity: WARNING."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "At least one household member should be declared."
+  c_name: "Household At Least One Member"
+  c_targetvalue: ""
+  c_severity: "warning"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "members"
+  c_tabcode: "household"
+
+- id: "ee8f078e-b2c2-4f7d-8ce4-b4b1ed10928a"
+  datecreated: "2026-05-07 10:15:31.323000"
+  datemodified: "2026-05-07 10:19:51.722000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_score: ""
+  c_actionjson: ""
+  c_code: "identity.gender_required"
+  c_allowslowpath: ""
+  c_scope: "quality"
+  c_ruletype: ""
+  c_registrationid: ""
+  c_rulejson: "SELECT 1 FROM app_fd_farmerbasicinfo WHERE c_parent_id='#recordId#' AND (c_gender IS NULL OR TRIM(c_gender)='')"
+  c_description: "Migrated from qa_rule (ADR-031 Slice B). Tab: identity. Severity: ERROR."
+  c_serviceid: "farmer_registration"
+  c_failmessage: "Gender must be set."
+  c_name: "Identity Gender Required"
+  c_targetvalue: ""
+  c_severity: "error"
+  c_triggeron: "save"
+  c_aggregation: "issue_list"
+  c_affectedfields: "gender"
+  c_tabcode: "identity"
+
+- id: "f3f1ac42-efa7-4684-b37b-93cb8e69d43d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_score: "0"
+  c_actionjson: null
+  c_code: "BENEFIT_AMOUNT_PRG_2025_002"
+  c_allowslowpath: "N"
+  c_scope: "budget_amount"
+  c_ruletype: "assignment"
+  c_registrationid: "PRG_2025_002"
+  c_rulejson: ""
+  c_description: null
+  c_serviceid: "SUBSIDY_2025"
+  c_failmessage: ""
+  c_name: "Mountain Pulses — flat M2,000 per applicant"
+  c_targetvalue: "2000.00"
+  c_severity: null
+  c_triggeron: null
+  c_aggregation: null
+  c_affectedfields: null
+  c_tabcode: null
+

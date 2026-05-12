@@ -1,0 +1,57 @@
+# app_fd_md02language
+# 5 row(s) at sync time
+- id: "303ca03a-dcab-4f77-9d9e-2495e300921e"
+  datecreated: "2026-01-26 17:02:25.621000"
+  datemodified: "2026-01-26 17:02:25.621000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "english"
+  c_name: "English"
+  c_iso_code: "en"
+
+- id: "563a8f06-6456-4bf1-8863-b98e11e6b690"
+  datecreated: "2026-01-26 17:02:25.122000"
+  datemodified: "2026-01-26 17:02:25.122000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "sesotho"
+  c_name: "Sesotho"
+  c_iso_code: "st"
+
+- id: "89b0ffb8-6c97-47ff-a15e-663f2454030d"
+  datecreated: "2026-01-26 17:02:26.047000"
+  datemodified: "2026-01-26 17:02:26.047000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "zulu"
+  c_name: "Zulu"
+  c_iso_code: "zu"
+
+- id: "992b79f6-6139-4d17-bdd0-16f8bd12d5c7"
+  datecreated: "2026-03-06 12:08:33.456000"
+  datemodified: "2026-03-06 12:08:33.456000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_code: "sp"
+  c_name: "Sephuthi"
+  c_iso_code: "sephuthi"
+
+- id: "f61a19bb-1498-43b9-af9c-7bf5f464b06e"
+  datecreated: "2026-01-26 17:02:26.534000"
+  datemodified: "2026-01-26 17:02:26.534000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "xhosa"
+  c_name: "Xhosa"
+  c_iso_code: "xh"
+

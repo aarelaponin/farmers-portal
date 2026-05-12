@@ -1,0 +1,41 @@
+# app_fd_md55geographicscope
+# 3 row(s) at sync time
+- id: "md55geographicScope-district"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISTRICT"
+  c_name: "District-Level"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md55geographicScope-national"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "NATIONAL"
+  c_name: "National (All Districts)"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md55geographicScope-zone"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "ZONE"
+  c_name: "Agro-Ecological Zone"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

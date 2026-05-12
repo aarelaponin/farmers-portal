@@ -1,0 +1,62 @@
+# app_fd_md_input_unit
+# 5 row(s) at sync time
+- id: "041a5c15-0bc9-48f2-8377-5116b0e17cda"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BAG_25KG"
+  c_uom_family: "mass"
+  c_name: "25 kg bag"
+  c_abbreviation: "25kg"
+
+- id: "27b977f3-1dec-4921-a3e7-6b58b3e087fc"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BAG_50KG"
+  c_uom_family: "mass"
+  c_name: "50 kg bag"
+  c_abbreviation: "50kg"
+
+- id: "9f26ece6-5622-4e52-acc9-819f66796107"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "KG"
+  c_uom_family: "mass"
+  c_name: "Kilogram"
+  c_abbreviation: "kg"
+
+- id: "be44417f-1760-497e-8949-87816ad56544"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "PIECE"
+  c_uom_family: "count"
+  c_name: "Piece (count)"
+  c_abbreviation: "pc"
+
+- id: "f4fd8cdc-6ec7-48c0-9357-6a9464433a66"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "LITRE"
+  c_uom_family: "volume"
+  c_name: "Litre"
+  c_abbreviation: "L"
+

@@ -1,0 +1,74 @@
+# app_fd_md27input
+# 4 row(s) at sync time
+- id: "185b5bcb-4ce0-422d-beac-935141e4315e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_input_category: "SEEDS"
+  c_code: "SEED_BEANS_KK15_50KG"
+  c_typical_quantity_per_ha: "2"
+  c_name: "Beans Seed KK15, 50 kg bag"
+  c_estimated_cost_per_unit: "1450.00"
+  c_category: null
+  c_pesticide_type: null
+  c_default_unit: "BAG_50KG"
+  c_typical_quantity: null
+  c_target: null
+
+- id: "8983a4f4-776b-48b3-8eaf-357ed8b3b457"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_input_category: "FERTILIZER"
+  c_code: "FERT_NPK_50KG"
+  c_typical_quantity_per_ha: "4"
+  c_name: "NPK 23-23-0 Fertiliser, 50 kg bag"
+  c_estimated_cost_per_unit: "780.00"
+  c_category: null
+  c_pesticide_type: null
+  c_default_unit: "BAG_50KG"
+  c_typical_quantity: null
+  c_target: null
+
+- id: "a59da18c-6954-4b45-8c73-738546e5b72c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_input_category: "FERTILIZER"
+  c_code: "FERT_UREA_50KG"
+  c_typical_quantity_per_ha: "3"
+  c_name: "Urea 46% N Fertiliser, 50 kg bag"
+  c_estimated_cost_per_unit: "720.00"
+  c_category: null
+  c_pesticide_type: null
+  c_default_unit: "BAG_50KG"
+  c_typical_quantity: null
+  c_target: null
+
+- id: "b605f5bb-02b7-4f7f-a4db-7bdb3df42612"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_input_category: "SEEDS"
+  c_code: "SEED_MAIZE_PAN6479_25KG"
+  c_typical_quantity_per_ha: "1"
+  c_name: "Maize Seed PAN 6479, 25 kg bag"
+  c_estimated_cost_per_unit: "850.00"
+  c_category: null
+  c_pesticide_type: null
+  c_default_unit: "BAG_25KG"
+  c_typical_quantity: null
+  c_target: null
+

@@ -1,0 +1,67 @@
+# app_fd_md73resolutiondec
+# 5 row(s) at sync time
+- id: "md73resolutionDec-dismissed_late"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISMISSED_LATE"
+  c_name: "Dismissed - Late Submission"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md73resolutionDec-dismissed_procedural"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISMISSED_PROCEDURAL"
+  c_name: "Dismissed - Procedural"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md73resolutionDec-dismissed_valid"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DISMISSED_VALID"
+  c_name: "Dismissed - Valid Original Decision"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md73resolutionDec-partially_upheld"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PARTIALLY_UPHELD"
+  c_name: "Partially Upheld"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md73resolutionDec-upheld"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "UPHELD"
+  c_name: "Appeal Upheld"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+

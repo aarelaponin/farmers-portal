@@ -1,0 +1,35 @@
+# app_fd_md15areaunits
+# 3 row(s) at sync time
+- id: "11d0aa46-dbb0-4cfd-8df1-862cf6cf11ce"
+  datecreated: "2026-01-26 17:03:16.625000"
+  datemodified: "2026-01-26 17:03:16.625000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_hectare_conversion: "0.4047"
+  c_code: "acre"
+  c_name: "Acre"
+
+- id: "391c30b4-c48e-4c55-af9f-e7f26c01004d"
+  datecreated: "2026-01-26 17:03:17.123000"
+  datemodified: "2026-01-26 17:03:17.123000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_hectare_conversion: "1.0"
+  c_code: "hectare"
+  c_name: "Hectare"
+
+- id: "d595a368-30d3-4c39-ae28-736995d08b28"
+  datecreated: "2026-01-26 17:03:17.549000"
+  datemodified: "2026-01-26 17:03:17.549000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_hectare_conversion: "0.0001"
+  c_code: "sq_metres"
+  c_name: "Square Metres"
+

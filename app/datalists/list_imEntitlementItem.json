@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "entitlementCode",
+            "id": "column_0",
+            "label": "entitlementCode"
+        },
+        {
+            "name": "inputCode",
+            "id": "column_1",
+            "label": "Input"
+        },
+        {
+            "name": "inputName",
+            "id": "column_2",
+            "label": "Input Name"
+        },
+        {
+            "name": "inputCategory",
+            "id": "column_3",
+            "label": "Category"
+        },
+        {
+            "name": "qtyEntitled",
+            "id": "column_4",
+            "label": "Quantity Entitled"
+        },
+        {
+            "name": "unit",
+            "id": "column_5",
+            "label": "Unit"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Entitlement Item",
+    "id": "list_imEntitlementItem",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "imEntitlementItem"}
+    },
+    "actions": [],
+    "order": ""
+}

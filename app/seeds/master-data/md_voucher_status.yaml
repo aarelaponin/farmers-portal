@@ -1,0 +1,74 @@
+# app_fd_md_voucher_status
+# 6 row(s) at sync time
+- id: "299c708f-2fc7-4e20-bb0d-6c8b45ade53c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "expired_unredeemed"
+  c_name: "Expired without redemption"
+  c_lifecycle_phase: "terminal_failure"
+  c_sort_order: "50"
+
+- id: "61ca6587-835b-4cb5-96bb-844f9173978c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "redeemed"
+  c_name: "Redeemed (farmer received the input)"
+  c_lifecycle_phase: "terminal_success"
+  c_sort_order: "30"
+
+- id: "731f6bbe-eefe-40b6-934d-9916cdd7b15c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "issued"
+  c_name: "Issued (voucher in farmer's hands, awaiting redemption)"
+  c_lifecycle_phase: "active"
+  c_sort_order: "20"
+
+- id: "dce1332b-1de6-4836-89d4-7cb34fe04b49"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "issuable"
+  c_name: "Issuable (entitlement created, voucher not yet issued)"
+  c_lifecycle_phase: "active"
+  c_sort_order: "10"
+
+- id: "dcef03ae-79c0-4dc6-be69-6814b62f32fd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "reconciled"
+  c_name: "Reconciled (voucher accounted in supplier settlement)"
+  c_lifecycle_phase: "terminal_success"
+  c_sort_order: "40"
+
+- id: "f6358971-ce07-4d66-a518-60b095eabf05"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "cancelled"
+  c_name: "Cancelled (operator-initiated revocation)"
+  c_lifecycle_phase: "terminal_failure"
+  c_sort_order: "60"
+

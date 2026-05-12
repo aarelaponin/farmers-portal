@@ -1,0 +1,54 @@
+# app_fd_md87irrigationtype
+# 4 row(s) at sync time
+- id: "md87irrigationType-drip"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "DRIP"
+  c_name: "Drip Irrigation"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md87irrigationType-full"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FULL"
+  c_name: "Full Irrigation"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md87irrigationType-rainfed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "RAINFED"
+  c_name: "Rainfed"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md87irrigationType-supplemental"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SUPPLEMENTAL"
+  c_name: "Supplemental Irrigation"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

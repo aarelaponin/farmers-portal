@@ -1,0 +1,112 @@
+# app_fd_md30targetgroup
+# 10 row(s) at sync time
+- id: "11d21efb-d912-4172-9a13-c68cc8be0cf2"
+  datecreated: "2026-01-26 17:05:24.004000"
+  datemodified: "2026-01-26 17:05:24.004000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "COOPERATIVES"
+  c_name: "Farmer Cooperatives"
+  c_description: "Registered farmer groups"
+
+- id: "16562a5f-df0d-4e8a-bd00-27c03771defa"
+  datecreated: "2026-01-26 17:05:24.432000"
+  datemodified: "2026-01-26 17:05:24.432000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LIVESTOCK"
+  c_name: "Livestock Farmers"
+  c_description: "Primary livestock producers"
+
+- id: "1913848a-6c39-4820-afc2-c5e02314439c"
+  datecreated: "2026-01-26 17:05:22.273000"
+  datemodified: "2026-01-26 17:05:22.273000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "SMALLHOLDER"
+  c_name: "Smallholder Farmers"
+  c_description: "Farmers with less than 2 hectares"
+
+- id: "25c46a7e-c951-4a68-ae3d-43d241f14a91"
+  datecreated: "2026-01-26 17:05:24.856000"
+  datemodified: "2026-01-26 17:05:24.856000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CROP"
+  c_name: "Crop Farmers"
+  c_description: "Primary crop producers"
+
+- id: "4a58acb7-160b-4e7d-ac63-3942dfe3ca4f"
+  datecreated: "2026-01-26 17:05:25.707000"
+  datemodified: "2026-01-26 17:05:25.707000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "DISABLED"
+  c_name: "Farmers with Disability"
+  c_description: "Persons with disabilities"
+
+- id: "6e6f49ca-2ad2-48a9-b0f4-b6093580e2ec"
+  datecreated: "2026-01-26 17:05:26.125000"
+  datemodified: "2026-01-26 17:05:26.125000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "ELDERLY"
+  c_name: "Elderly Farmers"
+  c_description: "Farmers aged 60 years and above"
+
+- id: "7e53d633-d96f-49a3-99d4-6ebc2513ceea"
+  datecreated: "2026-01-26 17:05:23.155000"
+  datemodified: "2026-01-26 17:05:23.155000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "WOMEN"
+  c_name: "Women Farmers"
+  c_description: "Female-headed households"
+
+- id: "80777e75-ab51-40da-87b4-d406505380f7"
+  datecreated: "2026-01-26 17:05:23.576000"
+  datemodified: "2026-01-26 17:05:23.576000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "YOUTH"
+  c_name: "Youth Farmers"
+  c_description: "Farmers aged 18-35 years"
+
+- id: "89b66943-9b4d-48b9-8ff1-4210cefa3527"
+  datecreated: "2026-01-26 17:05:25.287000"
+  datemodified: "2026-01-26 17:05:25.287000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "VULNERABLE"
+  c_name: "Vulnerable Households"
+  c_description: "Food insecure or at-risk households"
+
+- id: "e4b2b77e-db51-4696-a347-98a1c3a83312"
+  datecreated: "2026-01-26 17:05:22.728000"
+  datemodified: "2026-01-26 17:05:22.728000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "COMMERCIAL"
+  c_name: "Commercial Farmers"
+  c_description: "Large-scale commercial operations"
+

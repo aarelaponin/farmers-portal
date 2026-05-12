@@ -1,0 +1,184 @@
+# app_fd_md32rejectionreason
+# 14 row(s) at sync time
+- id: "17b42aa7-f62b-40c5-bac2-a16b7a47e583"
+  datecreated: "2026-01-26 17:05:37.307000"
+  datemodified: "2026-01-26 17:05:37.307000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "PREVIOUS_BENEFICIARY"
+  c_farmer_message: "You received similar benefit recently"
+  c_name: "Already Benefited from Similar Program"
+  c_can_reapply: "No"
+  c_category: "Eligibility"
+
+- id: "19c8c67e-a127-4dd2-b09e-e404c227b0d0"
+  datecreated: "2026-01-26 17:05:35.498000"
+  datemodified: "2026-01-26 17:05:35.498000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "FARM_NOT_VERIFIED"
+  c_farmer_message: "Unable to verify farm details"
+  c_name: "Farm Could Not Be Verified"
+  c_can_reapply: "Yes"
+  c_category: "Verification"
+
+- id: "39a06625-7334-49ac-a642-b175aa57f664"
+  datecreated: "2026-01-26 17:05:33.699000"
+  datemodified: "2026-01-26 17:05:33.699000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BUDGET_EXHAUSTED"
+  c_farmer_message: "Program funds have been fully allocated"
+  c_name: "Program Budget Exhausted"
+  c_can_reapply: "No"
+  c_category: "Budget"
+
+- id: "4853bdff-a83e-4502-abf9-993fa1e953a9"
+  datecreated: "2026-01-26 17:05:33.280000"
+  datemodified: "2026-01-26 17:05:33.280000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "DUPLICATE_APP"
+  c_farmer_message: "You already applied for this program"
+  c_name: "Duplicate Application"
+  c_can_reapply: "No"
+  c_category: "Validation"
+
+- id: "59469870-38d0-4140-a2f1-9986c47831af"
+  datecreated: "2026-01-26 17:05:31.954000"
+  datemodified: "2026-01-26 17:05:31.954000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "NOT_ELIGIBLE"
+  c_farmer_message: "You don't meet program requirements"
+  c_name: "Does Not Meet Eligibility Criteria"
+  c_can_reapply: "No"
+  c_category: "Eligibility"
+
+- id: "73e2e2b9-1045-4d8c-b169-6465428ad828"
+  datecreated: "2026-01-26 17:05:36.392000"
+  datemodified: "2026-01-26 17:05:36.392000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "INELIGIBLE_DISTRICT"
+  c_farmer_message: "Your district is not covered by this program"
+  c_name: "Not in Target District"
+  c_can_reapply: "No"
+  c_category: "Eligibility"
+
+- id: "7e5944f6-ce26-4b12-a46e-d47e2bf61300"
+  datecreated: "2026-01-26 17:05:32.375000"
+  datemodified: "2026-01-26 17:05:32.375000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "INCOMPLETE_DOCS"
+  c_farmer_message: "Please submit all required documents"
+  c_name: "Incomplete Documentation"
+  c_can_reapply: "Yes"
+  c_category: "Documentation"
+
+- id: "8745fc17-d78b-4112-812a-fdb305b8782e"
+  datecreated: "2026-01-26 17:05:35.060000"
+  datemodified: "2026-01-26 17:05:35.060000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "NO_RESPONSE"
+  c_farmer_message: "You didn't respond to our request"
+  c_name: "No Response to Info Request"
+  c_can_reapply: "Yes"
+  c_category: "Communication"
+
+- id: "9bdb8324-3d44-42e6-b667-a51562119c1d"
+  datecreated: "2026-01-26 17:05:34.138000"
+  datemodified: "2026-01-26 17:05:34.138000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "MISREPRESENTATION"
+  c_farmer_message: "Information provided is not accurate"
+  c_name: "False Information Provided"
+  c_can_reapply: "No"
+  c_category: "Fraud"
+
+- id: "a09fc0da-54fc-4108-8440-7f173fb91792"
+  datecreated: "2026-01-26 17:05:35.917000"
+  datemodified: "2026-01-26 17:05:35.917000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CONFLICTING_DATA"
+  c_farmer_message: "Information conflicts with our records"
+  c_name: "Data Conflicts with Records"
+  c_can_reapply: "Yes"
+  c_category: "Validation"
+
+- id: "a72eb718-7a2e-4ab6-a925-e0c4682d09aa"
+  datecreated: "2026-01-26 17:05:32.856000"
+  datemodified: "2026-01-26 17:05:32.856000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "INVALID_DOCS"
+  c_farmer_message: "Documents are not clear or valid"
+  c_name: "Invalid/Unreadable Documents"
+  c_can_reapply: "Yes"
+  c_category: "Documentation"
+
+- id: "cc941ad2-bf45-4e7d-a89d-d6274bb8e487"
+  datecreated: "2026-01-26 17:05:34.564000"
+  datemodified: "2026-01-26 17:05:34.564000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LATE_SUBMISSION"
+  c_farmer_message: "Application period has closed"
+  c_name: "Submitted After Deadline"
+  c_can_reapply: "No"
+  c_category: "Timing"
+
+- id: "ecb7a4d6-1455-438f-abd2-4180973e5196"
+  datecreated: "2026-01-26 17:05:36.813000"
+  datemodified: "2026-01-26 17:05:36.813000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "LAND_SIZE"
+  c_farmer_message: "Your land doesn't meet size requirements"
+  c_name: "Land Size Outside Range"
+  c_can_reapply: "No"
+  c_category: "Eligibility"
+
+- id: "f9114ac2-f31c-45e8-bd2d-dda4a8ae8373"
+  datecreated: "2026-01-26 17:05:37.733000"
+  datemodified: "2026-01-26 17:05:37.733000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "OTHER"
+  c_farmer_message: "See detailed explanation"
+  c_name: "Other Reason"
+  c_can_reapply: "Varies"
+  c_category: "General"
+

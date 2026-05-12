@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "campaignCode",
+            "id": "column_0",
+            "label": "Campaign Code"
+        },
+        {
+            "name": "status",
+            "id": "column_1",
+            "label": "status"
+        },
+        {
+            "name": "campaignName",
+            "id": "column_2",
+            "label": "Campaign Name"
+        },
+        {
+            "name": "campaignType",
+            "id": "column_3",
+            "label": "Campaign Type"
+        },
+        {
+            "name": "programCode",
+            "id": "column_4",
+            "label": "Linked Program"
+        },
+        {
+            "name": "description",
+            "id": "column_5",
+            "label": "Description"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Campaign Management",
+    "id": "list_imCampaign",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "imCampaign"}
+    },
+    "actions": [],
+    "order": ""
+}

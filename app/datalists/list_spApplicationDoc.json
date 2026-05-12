@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "documentId",
+            "id": "column_0",
+            "label": "Document ID"
+        },
+        {
+            "name": "applicationCode",
+            "id": "column_1",
+            "label": "Application Code"
+        },
+        {
+            "name": "farmerIdRef",
+            "id": "column_2",
+            "label": "farmerIdRef"
+        },
+        {
+            "name": "farmerCode",
+            "id": "column_3",
+            "label": "Farmer Code"
+        },
+        {
+            "name": "documentType",
+            "id": "column_4",
+            "label": "Document Type"
+        },
+        {
+            "name": "documentTypeName",
+            "id": "column_5",
+            "label": "Document Type Name"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: Application Document",
+    "id": "list_spApplicationDoc",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "spApplicationDoc"}
+    },
+    "actions": [],
+    "order": ""
+}

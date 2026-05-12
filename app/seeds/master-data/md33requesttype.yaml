@@ -1,0 +1,93 @@
+# app_fd_md33requesttype
+# 7 row(s) at sync time
+- id: "02b20cbd-4f06-4013-b5b4-1fa1fb6eb44b"
+  datecreated: "2026-01-26 17:05:40.991000"
+  datemodified: "2026-01-26 17:05:40.991000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "FIELD_VISIT"
+  c_name: "Schedule Field Verification Visit"
+  c_description: "Arrange farm visit appointment"
+  c_can_extend_deadline: "Yes"
+  c_response_deadline_days: "21"
+
+- id: "0d96eb1c-356f-4f16-a01f-5503da42d8bb"
+  datecreated: "2026-01-26 17:05:39.274000"
+  datemodified: "2026-01-26 17:05:39.274000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CLARIFICATION"
+  c_name: "Need Clarification on Responses"
+  c_description: "Farmer answers need clarification"
+  c_can_extend_deadline: "Yes"
+  c_response_deadline_days: "7"
+
+- id: "12d8b671-af54-416b-918f-e000126d4a60"
+  datecreated: "2026-01-26 17:05:41.939000"
+  datemodified: "2026-01-26 17:05:41.939000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BANK_DETAILS"
+  c_name: "Provide/Correct Payment Details"
+  c_description: "Bank or mobile money info needed"
+  c_can_extend_deadline: "Yes"
+  c_response_deadline_days: "7"
+
+- id: "1b2970ec-3839-49b6-888c-1da1f8400c80"
+  datecreated: "2026-01-26 17:05:40.131000"
+  datemodified: "2026-01-26 17:05:40.131000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "VERIFICATION"
+  c_name: "Information Needs Verification"
+  c_description: "Verify details with authorities"
+  c_can_extend_deadline: "No"
+  c_response_deadline_days: "14"
+
+- id: "358bf32b-b44e-4c0d-8421-68353aaa580e"
+  datecreated: "2026-01-26 17:05:39.704000"
+  datemodified: "2026-01-26 17:05:39.704000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "ADDITIONAL_DOC"
+  c_name: "Additional Document Required"
+  c_description: "Missing or additional document needed"
+  c_can_extend_deadline: "Yes"
+  c_response_deadline_days: "14"
+
+- id: "37b46b97-4c62-4dd6-a485-41a0708aa8ca"
+  datecreated: "2026-01-26 17:05:41.504000"
+  datemodified: "2026-01-26 17:05:41.504000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "CORRECTION"
+  c_name: "Correct Errors in Application"
+  c_description: "Fix errors or inconsistencies"
+  c_can_extend_deadline: "Yes"
+  c_response_deadline_days: "7"
+
+- id: "f5fd9cdf-baa6-4a62-8f96-5070b8ffc600"
+  datecreated: "2026-01-26 17:05:40.561000"
+  datemodified: "2026-01-26 17:05:40.561000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "UPDATE_PROFILE"
+  c_name: "Please Update Farmer Profile"
+  c_description: "Profile information needs updating"
+  c_can_extend_deadline: "Yes"
+  c_response_deadline_days: "7"
+

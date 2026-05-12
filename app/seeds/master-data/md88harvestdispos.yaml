@@ -1,0 +1,80 @@
+# app_fd_md88harvestdispos
+# 6 row(s) at sync time
+- id: "md88harvestDispos-consumption"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "CONSUMPTION"
+  c_name: "Household Consumption"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md88harvestDispos-gift"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "GIFT"
+  c_name: "Gift"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md88harvestDispos-lost"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "LOST"
+  c_name: "Lost"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+
+- id: "md88harvestDispos-sale"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SALE"
+  c_name: "Sold"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md88harvestDispos-seed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SEED"
+  c_name: "Saved as Seed"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md88harvestDispos-storage"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "STORAGE"
+  c_name: "Storage"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+

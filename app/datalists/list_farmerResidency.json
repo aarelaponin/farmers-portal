@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "district",
+            "id": "column_0",
+            "label": "District"
+        },
+        {
+            "name": "village",
+            "id": "column_1",
+            "label": "Village Name"
+        },
+        {
+            "name": "communityCouncil",
+            "id": "column_2",
+            "label": "Community Council"
+        },
+        {
+            "name": "agroEcologicalZone",
+            "id": "column_3",
+            "label": "Agro-Ecological Zone"
+        },
+        {
+            "name": "residency_type",
+            "id": "column_4",
+            "label": "Residency Type"
+        },
+        {
+            "name": "yearsInArea",
+            "id": "column_5",
+            "label": "Years lived in this area"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: 01.02 - Farmer Location and Farm",
+    "id": "list_farmerResidency",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "farmerResidency"}
+    },
+    "actions": [],
+    "order": ""
+}

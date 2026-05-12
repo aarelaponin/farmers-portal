@@ -1,0 +1,80 @@
+# app_fd_md83yieldstatus
+# 6 row(s) at sync time
+- id: "md83yieldStatus-excellent"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "EXCELLENT"
+  c_name: "Excellent"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md83yieldStatus-failed"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "FAILED"
+  c_name: "Failed"
+  c_description: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+
+- id: "md83yieldStatus-good"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "GOOD"
+  c_name: "Good"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md83yieldStatus-moderate"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "MODERATE"
+  c_name: "Moderate"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md83yieldStatus-poor"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "POOR"
+  c_name: "Poor"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md83yieldStatus-total_loss"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "TOTAL_LOSS"
+  c_name: "Total Loss"
+  c_description: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+

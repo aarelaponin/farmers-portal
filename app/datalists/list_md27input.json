@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Name"
+        },
+        {
+            "name": "input_category",
+            "id": "column_2",
+            "label": "Input Category"
+        },
+        {
+            "name": "category",
+            "id": "column_3",
+            "label": "Category"
+        },
+        {
+            "name": "pesticide_type",
+            "id": "column_4",
+            "label": "Pesticide Type"
+        },
+        {
+            "name": "default_unit",
+            "id": "column_5",
+            "label": "Default Unit"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.27 - Input",
+    "id": "list_md27input",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md27input"}
+    },
+    "actions": [],
+    "order": ""
+}

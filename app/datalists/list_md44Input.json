@@ -1,0 +1,51 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Input Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Input Name"
+        },
+        {
+            "name": "categoryCode",
+            "id": "column_2",
+            "label": "Category"
+        },
+        {
+            "name": "subcategoryCode",
+            "id": "column_3",
+            "label": "Subcategory"
+        },
+        {
+            "name": "description",
+            "id": "column_4",
+            "label": "Description"
+        },
+        {
+            "name": "unitOfMeasure",
+            "id": "column_5",
+            "label": "Unit of Measure"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.44 - Input Catalogue",
+    "id": "list_md44Input",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md44Input"}
+    },
+    "actions": [],
+    "order": ""
+}

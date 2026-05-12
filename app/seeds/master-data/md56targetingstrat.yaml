@@ -1,0 +1,54 @@
+# app_fd_md56targetingstrat
+# 4 row(s) at sync time
+- id: "md56targetingStrat-categorical"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "CATEGORICAL"
+  c_name: "Categorical"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md56targetingStrat-combined"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "COMBINED"
+  c_name: "Combined"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md56targetingStrat-geographic"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "GEOGRAPHIC"
+  c_name: "Geographic"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+
+- id: "md56targetingStrat-universal"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "UNIVERSAL"
+  c_name: "Universal"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+

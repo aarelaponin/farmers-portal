@@ -1,0 +1,207 @@
+{
+  "className": "org.joget.apps.form.model.Form",
+  "properties": {
+    "id": "im_input_catalog",
+    "name": "IM - Input Catalog",
+    "tableName": "im_input_catalog",
+    "description": "Inputs Management — the SKU catalogue. One row per stock-keeping unit (e.g. 'Maize Seed XYZ 25kg', 'NPK Fertiliser 50kg'). Procurement officer authors. References md_input_category + md_input_unit by code (D20). Phase 3 IM Slice 1. Per im-module SAD §5.1.",
+    "loadBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    },
+    "storeBinder": {
+      "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+      "properties": {}
+    }
+  },
+  "elements": [
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "identitySection",
+        "label": "Identity"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "input_code",
+                "label": "Input code (immutable)",
+                "size": "48",
+                "maxlength": "48",
+                "placeholder": "UPPER_SNAKE_CASE, e.g. SEED_MAIZE_XYZ_25KG",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                  "properties": {
+                    "formDefId": "im_input_catalog",
+                    "fieldId": "input_code",
+                    "errorDuplicateMsg": "This input code already exists",
+                    "mandatory": "true"
+                  }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "input_name",
+                "label": "Display name",
+                "size": "200",
+                "placeholder": "e.g. Maize Seed Variety XYZ, 25kg bag",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "category_code",
+                "label": "Category",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md_input_category",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "unit_code",
+                "label": "Unit of issue",
+                "options": [],
+                "optionsBinder": {
+                  "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                  "properties": {
+                    "formDefId": "md_input_unit",
+                    "idColumn": "code",
+                    "labelColumn": "name",
+                    "addEmptyOption": "true",
+                    "emptyLabel": "(select)"
+                  }
+                },
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": { "mandatory": "true" }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "specificationsSection",
+        "label": "Specifications"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "manufacturer",
+                "label": "Manufacturer / brand",
+                "size": "200"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "pack_size",
+                "label": "Pack size (descriptive)",
+                "size": "100",
+                "placeholder": "e.g. 25 kg bag, 1 L bottle"
+              }
+            },
+            {
+              "className": "org.joget.apps.form.lib.TextField",
+              "properties": {
+                "id": "default_unit_price",
+                "label": "Default unit price (LSL)",
+                "size": "16",
+                "placeholder": "e.g. 250.00",
+                "validator": {
+                  "className": "org.joget.apps.form.lib.DefaultValidator",
+                  "properties": {
+                    "type": "numeric",
+                    "message": "Must be a numeric amount"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "50%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.TextArea",
+              "properties": {
+                "id": "specifications",
+                "label": "Technical specifications",
+                "rows": "5",
+                "cols": "60",
+                "placeholder": "Free-text specs. Composition, certification ref, application notes."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "org.joget.apps.form.model.Section",
+      "properties": {
+        "id": "statusSection",
+        "label": "Status"
+      },
+      "elements": [
+        {
+          "className": "org.joget.apps.form.model.Column",
+          "properties": { "width": "100%" },
+          "elements": [
+            {
+              "className": "org.joget.apps.form.lib.SelectBox",
+              "properties": {
+                "id": "is_active",
+                "label": "Active in current cycle?",
+                "options": [
+                  { "value": "Y", "label": "Yes" },
+                  { "value": "N", "label": "No" }
+                ],
+                "value": "Y"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

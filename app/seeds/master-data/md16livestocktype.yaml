@@ -1,0 +1,200 @@
+# app_fd_md16livestocktype
+# 18 row(s) at sync time
+- id: "0258857a-0dc1-45de-84a7-51db9ffed02d"
+  datecreated: "2026-01-26 17:03:24.868000"
+  datemodified: "2026-01-26 17:03:24.868000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "horses"
+  c_name: "Horses"
+  c_category: "working_animals"
+
+- id: "089bca5f-8396-4b69-bcd0-1ada63c5824a"
+  datecreated: "2026-01-26 17:03:21.450000"
+  datemodified: "2026-01-26 17:03:21.450000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "ducks"
+  c_name: "Ducks"
+  c_category: "poultry"
+
+- id: "0a093c0a-91ff-4b33-8325-e1592a07958f"
+  datecreated: "2026-01-26 17:03:19.176000"
+  datemodified: "2026-01-26 17:03:19.176000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "cattle-beef"
+  c_name: "Cattle (Beef)"
+  c_category: "large_livestock"
+
+- id: "1156da46-4740-4b30-9a71-d07c864323df"
+  datecreated: "2026-01-26 17:03:24.438000"
+  datemodified: "2026-01-26 17:03:24.438000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "donkeys"
+  c_name: "Donkeys"
+  c_category: "working_animals"
+
+- id: "15b96221-b6f7-4279-b91c-6826f0330a87"
+  datecreated: "2026-01-26 17:03:23.586000"
+  datemodified: "2026-01-26 17:03:23.586000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "sheep"
+  c_name: "Sheep"
+  c_category: "small_livestock"
+
+- id: "1c918d4e-d4d0-499b-ab68-3159c2778ee1"
+  datecreated: "2026-01-26 17:03:23.159000"
+  datemodified: "2026-01-26 17:03:23.159000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "pigs"
+  c_name: "Pigs"
+  c_category: "large_livestock"
+
+- id: "4b038ccd-3f0d-44b8-a9d9-8fff89070ee2"
+  datecreated: "2026-01-26 17:03:26.610000"
+  datemodified: "2026-01-26 17:03:26.610000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other"
+  c_name: "Other"
+  c_category: "other"
+
+- id: "582b39e1-b98f-485f-8ff1-426afd196450"
+  datecreated: "2026-01-26 17:03:20.569000"
+  datemodified: "2026-01-26 17:03:20.569000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "chicken-village"
+  c_name: "Chicken (Village)"
+  c_category: "poultry"
+
+- id: "8007ea4d-5401-4cca-811a-f4e4f8ae9e4a"
+  datecreated: "2026-01-26 17:03:20.141000"
+  datemodified: "2026-01-26 17:03:20.141000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "chicken-broiler"
+  c_name: "Chicken (Broiler)"
+  c_category: "poultry"
+
+- id: "80e1ad30-66a2-4470-a239-7374a80d4e65"
+  datecreated: "2026-01-26 17:03:26.174000"
+  datemodified: "2026-01-26 17:03:26.174000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "rabbits"
+  c_name: "Rabbits"
+  c_category: "small_livestock"
+
+- id: "8317da04-560f-4b40-a189-5e96e3812402"
+  datecreated: "2026-01-26 17:03:24.015000"
+  datemodified: "2026-01-26 17:03:24.015000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "goats"
+  c_name: "Goats"
+  c_category: "small_livestock"
+
+- id: "85b001cf-dc28-46d5-bcc1-5daa5f5034e5"
+  datecreated: "2026-01-26 17:03:22.297000"
+  datemodified: "2026-01-26 17:03:22.297000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "other_poultry"
+  c_name: "Other Poultry"
+  c_category: "poultry"
+
+- id: "960a4119-f565-4be2-870e-2d9e319214c7"
+  datecreated: "2026-01-26 17:03:21.868000"
+  datemodified: "2026-01-26 17:03:21.868000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "guinea_fowl"
+  c_name: "Guinea Fowl"
+  c_category: "poultry"
+
+- id: "aeb0a3ae-eb92-4a01-85bc-895804e8f47b"
+  datecreated: "2026-01-26 17:03:21.025000"
+  datemodified: "2026-01-26 17:03:21.025000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "chicken-layers"
+  c_name: "Chicken (Layers)"
+  c_category: "poultry"
+
+- id: "d71dfe4b-84c8-493c-9dfe-538678da25e8"
+  datecreated: "2026-01-26 17:03:25.304000"
+  datemodified: "2026-01-26 17:03:25.304000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "bees"
+  c_name: "Bees"
+  c_category: "other"
+
+- id: "e2942f42-e1ef-4036-8e68-39eeea51aca7"
+  datecreated: "2026-01-26 17:03:25.746000"
+  datemodified: "2026-01-26 17:03:25.746000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "dogs"
+  c_name: "Dogs"
+  c_category: "other"
+
+- id: "eef1a8de-ab50-49b2-b672-17ca92419410"
+  datecreated: "2026-01-26 17:03:19.694000"
+  datemodified: "2026-01-26 17:03:19.694000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "cattle-dairy"
+  c_name: "Cattle (Dairy)"
+  c_category: "large_livestock"
+
+- id: "f608ab97-116b-491f-8011-1470bb6fdb89"
+  datecreated: "2026-01-26 17:03:22.721000"
+  datemodified: "2026-01-26 17:03:22.721000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "game"
+  c_name: "Game"
+  c_category: "wildlife"
+

@@ -1,0 +1,54 @@
+# app_fd_md62monitoringapp
+# 4 row(s) at sync time
+- id: "md62monitoringApp-continuous"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "CONTINUOUS"
+  c_name: "Continuous"
+  c_description: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+
+- id: "md62monitoringApp-periodic"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "PERIODIC"
+  c_name: "Periodic"
+  c_description: null
+  c_displayorder: "2"
+  c_isactive: "Y"
+
+- id: "md62monitoringApp-post_hoc"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "POST_HOC"
+  c_name: "Post-Hoc"
+  c_description: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+
+- id: "md62monitoringApp-sampling"
+  datecreated: "2026-04-26 11:39:57.502627"
+  datemodified: "2026-04-26 11:39:57.502627"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_code: "SAMPLING"
+  c_name: "Sampling"
+  c_description: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+

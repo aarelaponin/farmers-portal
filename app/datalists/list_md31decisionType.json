@@ -1,0 +1,46 @@
+{
+    "useSession": "false",
+    "showPageSizeSelector": "true",
+    "rowActions": [],
+    "columns": [
+        {
+            "name": "code",
+            "id": "column_0",
+            "label": "Code"
+        },
+        {
+            "name": "name",
+            "id": "column_1",
+            "label": "Name"
+        },
+        {
+            "name": "is_final",
+            "id": "column_2",
+            "label": "Is Final"
+        },
+        {
+            "name": "requires_reason",
+            "id": "column_3",
+            "label": "Requires Reason"
+        },
+        {
+            "name": "triggers_payment",
+            "id": "column_4",
+            "label": "Triggers Payment"
+        }
+    ],
+    "pageSize": 0,
+    "orderBy": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "name": "List: MD.31 - Decision Type",
+    "id": "list_md31decisionType",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {"formDefId": "md31decisionType"}
+    },
+    "actions": [],
+    "order": ""
+}

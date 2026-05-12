@@ -1,0 +1,62 @@
+# app_fd_md01maritalstatus
+# 6 row(s) at sync time
+- id: "1cbfa62e-ba3c-44b0-ac9d-fc67018ad4e1"
+  datecreated: "2026-01-26 17:02:21.036000"
+  datemodified: "2026-01-26 17:02:21.036000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "single"
+  c_name: "Single"
+
+- id: "720afcec-9cb1-421c-887e-d75b3df897b5"
+  datecreated: "2026-01-26 17:02:22.860000"
+  datemodified: "2026-01-26 17:02:22.860000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "separated"
+  c_name: "Separated"
+
+- id: "79b415ff-0e02-49c6-ab5d-50084be161e5"
+  datecreated: "2026-01-26 17:02:22.359000"
+  datemodified: "2026-01-26 17:02:22.359000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "widowed"
+  c_name: "Widowed"
+
+- id: "a33b7e36-f446-48f0-bf1d-5c93b8ae137e"
+  datecreated: "2026-01-26 17:02:23.279000"
+  datemodified: "2026-01-26 17:02:23.279000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "cohabiting"
+  c_name: "Cohabiting"
+
+- id: "cbac6609-a01f-43d7-925b-1046f4f01346"
+  datecreated: "2026-01-26 17:02:21.933000"
+  datemodified: "2026-01-26 17:02:21.933000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "divorced"
+  c_name: "Divorced"
+
+- id: "cbcc0d6f-9fa0-4a08-ac51-7fc017e70b4b"
+  datecreated: "2026-01-26 17:02:21.459000"
+  datemodified: "2026-01-26 17:02:21.459000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "married"
+  c_name: "Married"
+
