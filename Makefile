@@ -14,18 +14,28 @@
 PYTHON ?= python3
 PYTEST ?= $(PYTHON) -m pytest
 
-.PHONY: help test test-baseline test-perf test-l4 test-im test-all sync sync-push sync-dry clean
+.PHONY: help test test-baseline test-perf test-l4 test-im test-all \
+        sync sync-push sync-dry \
+        build-plugins install-app fresh-install \
+        clean
 
 help:
-	@echo "Farmers Portal regression suite + sync ritual"
+	@echo "Farmers Portal — regression, sync ritual, fresh-install"
 	@echo ""
+	@echo "Install from this repo (see INSTALL.md for the full playbook):"
+	@echo "  make build-plugins   build the 12 mandatory plugin JARs (→ dist/plugins/)"
+	@echo "  make install-app     push forms/datalists/userviews + seed master-data"
+	@echo "  make fresh-install   install-app + foundational smoke test"
+	@echo ""
+	@echo "Regression tests (require a working install):"
 	@echo "  make test          baseline (layers 1+2): userview + MD + datalist + API + form save/load"
 	@echo "  make test-perf     perf baseline (read-side timing)"
 	@echo "  make test-l4       L4 parity (eligibility regression)"
 	@echo "  make test-im       IM end-to-end smoke"
 	@echo "  make test-all      everything above"
 	@echo ""
-	@echo "  make sync          pull App Composer edits + commit (no push) — see ADR-033"
+	@echo "Bidirectional sync (after App Composer edits — see ADR-033):"
+	@echo "  make sync          pull App Composer edits + commit (no push)"
 	@echo "  make sync-push     pull + commit + push to origin/main"
 	@echo "  make sync-dry      pull only, show diff, no commit"
 	@echo ""
@@ -67,6 +77,24 @@ test-im:
 test-all: test-baseline test-perf test-l4 test-im
 	@echo ""
 	@echo "==> All tests passed."
+
+# ---------------------------------------------------------------------------
+# Fresh-install path — see INSTALL.md for the operator-facing playbook
+# ---------------------------------------------------------------------------
+build-plugins:
+	@echo "==> Building 12 mandatory plugin JARs → dist/plugins/"
+	@./plugins/build-all.sh
+
+install-app:
+	@echo "==> Pushing forms / datalists / userviews + seeding master-data"
+	$(PYTHON) tooling/install_app.py
+
+fresh-install: install-app
+	@echo ""
+	@echo "==> Smoke test (foundational regression)"
+	@$(MAKE) test
+	@echo ""
+	@echo "==> fresh-install complete. Browse to \$$JOGET_BASE_URL/web/userview/farmersPortal/v/_/home"
 
 # ---------------------------------------------------------------------------
 # Sync ritual (per ADR-033 — bidirectional app-state sync)

@@ -48,74 +48,28 @@ Substantially GovStack-conformant for the H1 horizon. See `docs/architecture/gov
 └── .gitignore
 ```
 
-## Prerequisites
+## Installing from this repo
 
-- **Java 11** (OpenJDK)
-- **Maven 3.6+**
-- **Joget DX 8.1.x** — running locally (Docker or native install) or on a remote dev instance
-- **PostgreSQL 13+** — Joget's backing DB
-- **Python 3.9+** — for the tooling scripts
+The full end-to-end install playbook — fresh Joget, plugin builds, app shell creation, API credentials, configuration push, master-data seed, smoke test — lives in **[INSTALL.md](INSTALL.md)**. Allow about an hour the first time.
 
-## Setting up locally
+Quick sketch of the path, for orientation only:
 
-### 1. Fetch vendored external source
+1. Install Joget DX 8.1.x per [Joget's knowledge base](https://dev.joget.org/community/display/DX8/Joget+DX+8+Installation) and configure it against your Postgres.
+2. Create the empty `farmersPortal` app in App Composer.
+3. `cp .env.example .env`, fill in PG\* values.
+4. `make build-plugins` — produces the 12 mandatory JARs under `dist/plugins/`. See `plugins/BUILD.md` for the mandatory vs optional split.
+5. Upload each JAR via App Composer → Manage Plugins (form-creator-api first).
+6. Create an API Builder credential against the `formcreator` API; fill `JOGET_API_ID` / `JOGET_API_KEY` in `.env`.
+7. `make fresh-install` — pushes 218 forms / 226 datalists / 1 userview, seeds 117 master-data tables, runs the smoke test.
 
-The `jw-community/` and `api-builder/` directories are gitignored. Joget Community Edition and API Builder source are needed for plugin builds against their SPI:
-
-```bash
-# (script to be authored — placeholder for now)
-tooling/fetch-vendored.sh
-```
-
-### 2. Build the plugins
+After install, regression tests live in:
 
 ```bash
-cd plugins/<plugin-name>
-./deploy/repack.sh        # sandbox-friendly build (uses javac + local m2)
-# OR
-mvn clean package         # standard Maven build
+make test         # baseline (layers 1+2) — ~1 min
+make test-l4      # eligibility regression
+make test-im      # IM end-to-end
+make test-all     # everything
 ```
-
-Built JARs land in each plugin's `target/`. Upload to Joget via App Composer or the form-creator-api endpoint (see CLAUDE.md).
-
-### 3. Configure environment
-
-The dev environment expects these environment variables (defaults are dev-only):
-
-```bash
-export JOGET_BASE_URL="http://20.87.213.78:8080/jw"     # dev URL
-export JOGET_API_KEY="<see dev credentials file>"
-export PGHOST="joget-pgsql-sa.postgres.database.azure.com"
-export PGDATABASE="jogetdb"
-export PGUSER="jogetadmin"
-export PGPASSWORD="<see dev credentials file>"
-```
-
-Dev credentials are stored OUTSIDE this repo at `~/IdeaProjects/rsr/secrets/lst-credentials.txt` (or wherever your local setup keeps them). **Never commit credentials.**
-
-### 4. Deploy forms / datalists / userviews
-
-```bash
-cd tooling/
-python3 seed.py                              # full fixture seed
-python3 push_userview.py                     # push the navigation
-python3 build_api_reference.py               # regenerate docs/developer/api_reference.md
-```
-
-### 5. Run the e2e test harness
-
-```bash
-cd tooling/
-python3 test_w3_lifecycle_e2e.py             # application lifecycle, 12 assertions
-python3 test_eligibility_e2e.py              # 12 scenarios
-python3 test_notification_e2e.py             # email queue lifecycle
-python3 test_budget_engine_e2e.py            # budget event chain
-python3 test_im_e2e.py                       # full IM lifecycle
-python3 test_im_stacking.py                  # multi-programme stress
-python3 test_budget_suite.py                 # budget reports + controls
-```
-
-All seven should pass green against a healthy dev instance.
 
 ## Where to start reading
 
@@ -139,11 +93,9 @@ As of 2026-05-12 (pre-UAT):
 - UAT entry blocked on: MAFSN-provisioned UAT environment, Keycloak realm, SMTP gateway choice (Khotso request out 2026-05-11), named UAT participants.
 - Polyrepo extraction policy: lazy, per-plugin, triggered by concrete reuse demand. See ADR-032.
 
-## Credentials and the "DEV-only" hygiene rule
+## Credentials
 
-Several files in this repo contain dev-only credentials (Joget admin password, Postgres dev password, dev API key). These are illustrative dev values, not production credentials. **Before any public release** — including the planned GovStack publication of the RegBB plugins — all such values must be replaced with environment-variable placeholders. The full scrub is queued as part of the Pass B polyrepo split.
-
-In the meantime: **do not make this repo public**. Treat it as a private-team repository.
+This repo does not carry production secrets. Local install reads credentials from a gitignored `.env` (see `.env.example` for the template) and from `~/IdeaProjects/rsr/secrets/lst-credentials.txt` (or your own equivalent path) for the bidirectional sync ritual. Where dev-environment values appear in source code as defaults, they target the Lesotho dev Azure VM with non-sensitive dev data — they are not production credentials. Treat any value committed to this repo as **public knowledge**; never commit anything that needs to stay secret.
 
 ## License
 
