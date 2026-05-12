@@ -1160,3 +1160,15 @@ Set in Joget's `setenv.sh`. Going live = edit one line (`testMode=N`), restart T
 **Trade-off accepted.** Temporary duplication during the window between extraction and Pass C (the eventual consolidation that switches farmers-portal to Maven-artifact consumption + removes in-tree copies). Manual sync discipline: bug fixes land in the standalone repo first, then copied into farmers-portal's in-tree copy.
 
 **Reference.** ADR-032 (`docs/architecture/adr/adr-032-lazy-polyrepo-extraction.md`). Cross-project handover note for GAM at `x_archive/NOTE-for-GAM-adopting-joget-status-framework.md`. Supersedes the "Tier 1 + Tier 2 polyrepo split, Pass B post-UAT" framing in the GovStack alignment report §7.3.
+
+## D56 — Bidirectional app-state sync (2026-05-12)
+
+**Decision.** Adopt per-asset-class sync discipline: plugin source push-only (local IDE → Joget); forms/datalists/userviews/master-data push+pull (push via `form-creator-api`, pull via `tooling/sync_pull.py` against Postgres); XPDL workflows + app-level properties manual on-demand only.
+
+**Why.** A May-2026 audit found the repo contained ~40% of what was actually deployed in Joget (83/218 forms, 64/226 datalists). Root cause: push-only workflow — App Composer edits never flowed back. This blocked the fresh-install-from-repo claim and made the public repo embarrassing.
+
+**Mechanism.** `tooling/sync_pull.py` queries Postgres for `app_form` / `app_datalist` / `app_userview` and dumps to individual JSONs. For master-data tables (`app_fd_md*`, `app_fd_mm_*`), dumps rows to per-form YAMLs under `app/seeds/master-data/`. Applies credential-placeholder substitution to all output. One-command ritual: `python3 tooling/sync_pull.py && git diff app/ && git commit && git push`.
+
+**Trade-off accepted.** Sync is operator-disciplined, not automatic. Joget's built-in git would auto-commit on every save but requires VM filesystem access we don't have. ADR-033 is the right design for now; revisit when VM access is sorted.
+
+**Reference.** ADR-033 (`docs/architecture/adr/adr-033-bidirectional-app-state-sync.md`).
