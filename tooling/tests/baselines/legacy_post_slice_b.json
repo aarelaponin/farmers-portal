@@ -1,0 +1,57 @@
+{
+  "fixture_count": 10,
+  "outcomes": {
+    "benefits.at_least_one_item::prog001": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "geography.at_least_one_district::prog001": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "household.at_least_one_member::c6b2008d-ee7c-4c10-b294-997287101387": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "identity.gender_required::c6b2008d-ee7c-4c10-b294-997287101387": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "identity.mobile_required::c6b2008d-ee7c-4c10-b294-997287101387": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "identity.name_required::c6b2008d-ee7c-4c10-b294-997287101387": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "identity.national_id_required::c6b2008d-ee7c-4c10-b294-997287101387": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "identity.programme_name_required::prog001": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "monitoring.at_least_one_kpi::prog001": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    },
+    "timeline.budget_must_be_positive::prog001": {
+      "error": null,
+      "fired": false,
+      "rowCount": 0
+    }
+  },
+  "record_count": 2,
+  "rule_count": 21
+}
