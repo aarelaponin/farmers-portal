@@ -62,6 +62,33 @@ if [[ -n "$ONLY" ]]; then
     MANDATORY=("${FILTERED[@]}")
 fi
 
+# ─── Preflight: vendored Joget source must be present ────────────────────────
+# Plugin compilation depends on jw-community and api-builder being checked out
+# at the repo root. They're gitignored as vendored read-references — see
+# plugins/BUILD.md "Prerequisite: vendored Joget source" for the clone commands.
+MISSING_VENDORED=()
+[[ -f "$REPO_ROOT/jw-community/wflow-core/pom.xml" ]] || MISSING_VENDORED+=("jw-community")
+[[ -f "$REPO_ROOT/api-builder/apibuilder_api/pom.xml" ]] || MISSING_VENDORED+=("api-builder")
+if [[ ${#MISSING_VENDORED[@]} -gt 0 ]]; then
+    echo
+    echo "[build-all] !! preflight failed — vendored Joget source missing:"
+    for v in "${MISSING_VENDORED[@]}"; do
+        echo "             $REPO_ROOT/$v/"
+    done
+    echo
+    echo "Clone the missing tree(s) at the repo root before building:"
+    echo
+    if [[ " ${MISSING_VENDORED[*]} " == *" jw-community "* ]]; then
+        echo "  cd $REPO_ROOT && git clone --branch 8.1-RELEASE https://github.com/jogetworkflow/jw-community.git"
+    fi
+    if [[ " ${MISSING_VENDORED[*]} " == *" api-builder "* ]]; then
+        echo "  cd $REPO_ROOT && git clone --branch 7.0-SNAPSHOT https://github.com/jogetworkflow/api-builder.git"
+    fi
+    echo
+    echo "See plugins/BUILD.md or INSTALL.md step 4 for the full prerequisite."
+    exit 1
+fi
+
 # ─── Build loop ──────────────────────────────────────────────────────────────
 mkdir -p "$DIST"
 echo "[build-all] dist=$DIST  mode=$([ $USE_REPACK -eq 1 ] && echo repack || echo mvn)"

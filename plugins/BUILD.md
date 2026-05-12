@@ -2,6 +2,19 @@
 
 This directory holds **29 plugin sources**. Not all of them are needed to run the Farmers Portal app — most are legacy experiments retained for forensic context. This file documents which JARs the app actually depends on, the order to build them in, and how each one builds.
 
+## Prerequisite: vendored Joget source
+
+Plugins build against the Joget Community Edition source tree and the API Builder source tree. Neither is committed to this repo (they're gitignored as vendored read-references — large external projects with their own release cadence). Before running `plugins/build-all.sh` for the first time, clone both at the repo root, **on the branches pinned below**:
+
+```bash
+git clone --branch 8.1-RELEASE https://github.com/jogetworkflow/jw-community.git
+git clone --branch 7.0-SNAPSHOT https://github.com/jogetworkflow/api-builder.git
+```
+
+The branches above match Joget DX 8.1.1 — the binary release this app is built against. If you target a different Joget version, you will need to pick matching branches and may hit API drift; this app is not tested against other Joget versions.
+
+`plugins/build-all.sh` runs a preflight check and fails fast with a clear message if either tree is missing — you don't need to wait for Maven to time out.
+
 ## Mandatory plugins (12)
 
 These are the JARs you must upload into Joget for the `farmersPortal` app to function. Every form, datalist, and userview in `app/` references at least one element class from this set.

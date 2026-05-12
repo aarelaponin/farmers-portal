@@ -47,25 +47,42 @@ In App Composer: **Design Apps → New App**. Set:
 
 Save. You'll now see an empty `farmersPortal` app in the Design Apps list. This is the container we'll fill in the remaining steps.
 
-### 4. Build the plugin JARs
+### 4. Fetch the vendored Joget source
+
+The plugins build against Joget Community Edition source and API Builder source, neither of which is committed to this repo (they are large external trees, gitignored as vendored read-references). Clone both at the repo root, **on the branches pinned below** — these match the Joget DX 8.1.1 binary you installed in step 2:
+
+```bash
+git clone --branch 8.1-RELEASE https://github.com/jogetworkflow/jw-community.git
+git clone --branch 7.0-SNAPSHOT https://github.com/jogetworkflow/api-builder.git
+```
+
+Verify the layout is right:
+
+```bash
+ls jw-community/wflow-core/pom.xml api-builder/apibuilder_api/pom.xml
+```
+
+Both files should exist. If `jw-community/` or `api-builder/` are missing, `plugins/build-all.sh` will fail fast with a clear message rather than spend 30 seconds in Maven before erroring out cryptically.
+
+Skipping this step is the most common install failure — plugin builds will fail with `package org.joget... does not exist` if `jw-community/` is absent.
+
+### 5. Build the plugin JARs
 
 The repo carries 29 plugin source trees under `plugins/`; only 12 are mandatory. See `plugins/BUILD.md` for the list and the rationale. Build them all in one go:
 
 ```bash
-plugins/build-all.sh
+make build-plugins
 ```
 
-The script picks `mvn package` by default (sandbox: pass `--repack` to use the direct-javac path instead). On a clean machine the first run takes 5–10 minutes because Maven downloads its dependencies. Built JARs land in `dist/plugins/`.
+Under the hood: `plugins/build-all.sh` picks `mvn package` by default (sandbox: pass `--repack` to use the direct-javac path instead). On a clean machine the first run takes 5–10 minutes because Maven downloads its dependencies. Built JARs land in `dist/plugins/`.
 
-If a build fails, the error is usually missing Joget source — clone `https://github.com/jogetworkflow/jw-community` into `jw-community/` at the repo root (DX 8.1 branch) and re-run. The repo's `.gitignore` excludes `jw-community/` because it's a vendored read-reference, not part of the project source.
-
-### 5. Upload the plugin JARs to Joget
+### 6. Upload the plugin JARs to Joget
 
 In App Composer: **Admin Bar → Manage Plugins → Upload**. Upload each JAR in `dist/plugins/`, one at a time. **Start with `form-creator-api`** — every other step depends on it. After each upload, the bundle should appear in "Active" state; if not, click into it and Start.
 
 This step is intentionally manual: plugin uploads bypass the API-credential check, so there's no scripted path that doesn't also bypass it. Twelve clicks total.
 
-### 6. Create the form-creator-api credential
+### 7. Create the form-creator-api credential
 
 App Composer → Open `farmersPortal` → **API Builder**. You should now see a `formcreator` API in the list (it was registered when you uploaded the form-creator-api JAR).
 
@@ -77,11 +94,11 @@ Open it, then create an **API Credential**:
 Open `.env` and fill in both values:
 
 ```bash
-JOGET_API_ID=API-<the-uuid-from-step-6>
+JOGET_API_ID=API-<the-uuid-from-step-7>
 JOGET_API_KEY=<the-secret-you-set>
 ```
 
-### 7. Source `.env` and bootstrap the Python venv
+### 8. Source `.env` and bootstrap the Python venv
 
 ```bash
 set -a; source .env; set +a       # export everything in .env
@@ -89,7 +106,7 @@ bash tooling/bootstrap.sh         # creates tooling/.venv with PyYAML + psycopg2
 source tooling/.venv/bin/activate
 ```
 
-### 8. Install the app — push forms, datalists, userview, then seed master-data
+### 9. Install the app — push forms, datalists, userview, then seed master-data
 
 ```bash
 make fresh-install
@@ -102,9 +119,9 @@ That's the rest of the install in one command. Under the hood:
 
 Run time: about 3–4 minutes against a local Joget. Re-running is safe and idempotent — every artefact upserts by its business key.
 
-If any push errors, the script reports per-artefact HTTP status and continues. Common failure: a form references a custom plugin element class that didn't make it into the JAR uploads — go back to step 5 and check that the relevant mandatory plugin is in "Active" state.
+If any push errors, the script reports per-artefact HTTP status and continues. Common failure: a form references a custom plugin element class that didn't make it into the JAR uploads — go back to step 6 and check that the relevant mandatory plugin is in "Active" state.
 
-### 9. Verify the install
+### 10. Verify the install
 
 ```bash
 make test                         # foundational regression (layers 1+2, ~1 min)
@@ -135,6 +152,6 @@ Then browse to `http://localhost:8080/jw/web/userview/farmersPortal/v/_/home` �
 
 **App Composer's API Builder is empty after uploading form-creator-api.** Restart the Joget Tomcat once. Some Joget DX 8.1 versions don't refresh the API registry on bundle install — only on JVM start.
 
-**Plugin build fails with "package org.joget... does not exist".** You don't have `jw-community/` checked out next to the repo. Clone it; re-run `plugins/build-all.sh`.
+**Plugin build fails with "package org.joget... does not exist".** You skipped step 4 (fetch vendored Joget source). Clone `jw-community` and `api-builder` per that step; re-run `make build-plugins`.
 
 For anything not covered here, open an issue at https://github.com/aarelaponin/farmers-portal/issues.
