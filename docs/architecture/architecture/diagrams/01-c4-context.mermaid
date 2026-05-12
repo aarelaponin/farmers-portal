@@ -1,0 +1,50 @@
+%% C4 Level 1 — System Context
+%% The Lesotho Farmers Portal in its environment.
+%% Each external entity is named with the role/system that interacts with the portal.
+
+flowchart TB
+    classDef person fill:#08427B,stroke:#073B6F,color:#fff
+    classDef system fill:#1168BD,stroke:#0E5BA8,color:#fff,font-weight:bold
+    classDef external fill:#999999,stroke:#777777,color:#fff
+
+    farmer["👨‍🌾 Farmer / Citizen<br/><i>Submits subsidy<br/>application; collects<br/>inputs at centre</i>"]:::person
+
+    operator["👤 MAFSN Operator<br/><i>Reviews applications;<br/>handles exceptions;<br/>runs the daily inbox</i>"]:::person
+
+    counter["👤 Counter Operator<br/><i>Hands inputs to farmers<br/>at Resource Centre;<br/>captures signed receipt</i>"]:::person
+
+    warehouse["👤 Warehouse Manager<br/><i>Records stock receipts<br/>from suppliers; manages<br/>inventory + adjustments</i>"]:::person
+
+    finance["👤 Finance Lead<br/><i>Monitors envelope spend;<br/>signs off close-of-cycle;<br/>manual adjustments</i>"]:::person
+
+    me["👤 M&E Lead<br/><i>Programme outcomes;<br/>donor reporting;<br/>forensic queries</i>"]:::person
+
+    analyst["👤 MAFSN Analyst<br/><i>Authors programmes,<br/>determinants, allocation<br/>plans (configuration)</i>"]:::person
+
+    sysadmin["👤 Sysadmin<br/><i>Deploys plugins;<br/>API enablement;<br/>scheduled jobs</i>"]:::person
+
+    portal["⭐ Lesotho Farmers Portal<br/>(Joget DX 8.1)<br/><i>Subsidy + Inputs Management +<br/>Budget Engine + Registry</i>"]:::system
+
+    supplier["🏢 Supplier<br/><i>Pannar, LSC, Sasol Nitro<br/>— deliver inputs against<br/>POs; out-of-band</i>"]:::external
+
+    treasury["🏛 MoF Treasury<br/><i>Funds programme envelopes;<br/>receives close-of-cycle<br/>residual clawback</i>"]:::external
+
+    donor["🤝 Donors<br/><i>Provide programme funding;<br/>receive financial<br/>reconciliation reports</i>"]:::external
+
+    farmer -->|"applies for subsidy<br/>(citizen wizard)"| portal
+    farmer -->|"presents voucher;<br/>collects inputs;<br/>signs receipt"| portal
+
+    operator -->|"reviews inbox,<br/>handles edge cases"| portal
+    counter -->|"redeems vouchers;<br/>captures receipts"| portal
+    warehouse -->|"records receipts +<br/>adjustments + transfers"| portal
+    finance -->|"monitors budget;<br/>signs reconciliations"| portal
+    me -->|"runs reports +<br/>forensic queries"| portal
+    analyst -->|"authors programmes,<br/>rules, plans"| portal
+    sysadmin -->|"deploys + configures<br/>(API Builder, JAR upload)"| portal
+
+    portal -.->|"farmer pickup notice<br/>(SMS, future)"| farmer
+    supplier -.->|"physical inputs delivered<br/>to Resource Centres"| portal
+    portal -.->|"clawback at close;<br/>MANUAL_CLAWBACK"| treasury
+    treasury -.->|"opening allocation;<br/>MANUAL_TOP_UP"| portal
+    portal -.->|"reconciliation reports<br/>(quarterly)"| donor
+    donor -.->|"funding agreements,<br/>top-ups"| treasury

@@ -1,0 +1,6 @@
+code,name
+both_alive,Both Parents Alive
+both_deceased,Both Deceased
+father_only,Only Father Alive
+mother_only,Only Mother Alive
+unknown,Unknown

@@ -1,0 +1,4 @@
+national_id,first_name,last_name,gender,dob,phone,email,district,village,agro_zone,gps_lat,gps_lon,owned_rented_land_ha,cultivated_land_ha
+066257236627,Mants'ali,Panyane,female,1985-10-01,+26659518328,,maseru,maseru-mabote,lowlands,-29.31,27.48,3.5,3.0
+0000022116106827,Mosito,Nkhets'e,male,1987-04-17,+26663082744,,thaba-tseka,mokhotlong-sehonghong,mountains,-29.55,28.28,2.8,2.5
+0123456789101,Lineo 10,Mathaba,female,1964-02-05,+26657504979,,mafeteng,mafeteng-phamotse,lowlands,-29.83,27.25,4.0,3.8

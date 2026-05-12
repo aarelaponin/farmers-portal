@@ -1,0 +1,71 @@
+code,name,district_code
+CP001,Maseru Main Depot,maseru
+CP002,Berea Agricultural Center,berea
+CP003,Butha-Buthe Service Point,butha-buthe
+CP004,Leribe Distribution Center,leribe
+CP005,Mafeteng Regional Office,mafeteng
+CP006,Mohale's Hoek Service Center,mohales-hoek
+CP007,Mokhotlong Mountain Center,mokhotlong
+CP008,Qacha's Nek Distribution Point,qachas-nek
+CP009,Quthing Service Office,quthing
+CP010,Thaba-Tseka Highland Center,thaba-tseka
+CP_CORN_EXCHANGE,Corn Exchange,berea
+CP_HA_NTSI,Ha ntsi,maseru
+CP_HLOAHLENG,Hloahleng,mohales-hoek
+CP_KETANE,Ketane,mohales-hoek
+CP_KHABO,Khabo,leribe
+CP_KHOHLO_NTSO,Khohlo-Ntso,thaba-tseka
+CP_KHUKHUNE,Khukhune,butha-buthe
+CP_LEHLOHLA,Lehlohla,mokhotlong
+CP_LESOBENG,Lesobeng,thaba-tseka
+CP_LETLAPENG,Letlapeng,qachas-nek
+CP_LIBIBING,Libibing,mokhotlong
+CP_LILALA,Lilala,thaba-tseka
+CP_MAHOBONG,Mahobong,leribe
+CP_MAKHAKHE,Makhakhe,mafeteng
+CP_MAKHALENG,Makhaleng,mohales-hoek
+CP_MALEFILOANE,Malefiloane,mokhotlong
+CP_MANTSONYANE,Mantsonyane,thaba-tseka
+CP_MAPHOLANENG,Mapholaneng,mokhotlong
+CP_MAPOTENG,Mapoteng,berea
+CP_MAPUTSOE,Maputsoe,leribe
+CP_MAQHAKA,Maqhaka,berea
+CP_MARAKABEI,Marakabei,maseru
+CP_MASIANOKENG,Masianokeng,maseru
+CP_MATEBENG,Matebeng,qachas-nek
+CP_MATELILE,Matelile,mafeteng
+CP_MATSOAING,Matsoaing,butha-buthe
+CP_MEKALING,Mekaling,mohales-hoek
+CP_MELIKANE,Melikane,qachas-nek
+CP_MOHANAPENG,Mohanapeng,thaba-tseka
+CP_MORIJA,Morija,maseru
+CP_MPHARANE,Mpharane,mohales-hoek
+CP_NGOAJANE,Ngoajane,butha-buthe
+CP_NQABENI,Nqabeni,butha-buthe
+CP_PEKA,Peka,leribe
+CP_PELANENG,Pelaneng,leribe
+CP_PHAHAMENG,Phahameng,mokhotlong
+CP_PHAMONG,Phamong,mohales-hoek
+CP_PILOT,Pilot,berea
+CP_QHOALINYANE,Qhoalinyane,qachas-nek
+CP_QHOLAQHOE,Qholaqhoe,butha-buthe
+CP_RAMABANTA,Ramabanta,maseru
+CP_RAMOKOATSI,Ramokoatsi,mafeteng
+CP_RAMOSOTHOANE,Ramosothoane,mohales-hoek
+CP_RAMPAI,Rampai,butha-buthe
+CP_RIBANENG_RIBANENG,Ribaneng      Ribaneng,mafeteng
+CP_ROTHE,Rothe,maseru
+CP_SEFIKENG,Sefikeng,berea
+CP_SEHLABATHEBE,Sehlabathebe,qachas-nek
+CP_SELOMO,Selomo,butha-buthe
+CP_SEMENANYANE,Semenanyane,thaba-tseka
+CP_SEMONKONG,Semonkong,maseru
+CP_SHEHONG_HONG,Shehong-hong,thaba-tseka
+CP_TALE,Tale,leribe
+CP_TAUNG,Taung,mohales-hoek
+CP_TEBELLONG,Tebellong,qachas-nek
+CP_TEYATEYANENG,Teyateyaneng,berea
+CP_THABA_CHITJA,Thaba-chitja,qachas-nek
+CP_THABANA_MORENA,Thabana Morena,mafeteng
+CP_THABANG,Thabang,mokhotlong
+CP_TSAKHOLO,Tsakholo,mafeteng

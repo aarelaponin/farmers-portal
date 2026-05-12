@@ -1,0 +1,86 @@
+%% Sequence — voucher lifecycle, end-to-end
+%% Covers: application submit → eligibility → voucher issue → COMMITMENT
+%%       → redemption (full or partial) → EXPENSE → distribution receipt
+%% Plus the side branches: cancel, expire.
+
+sequenceDiagram
+    autonumber
+    actor Farmer
+    actor Operator as Counter Operator
+    participant CitizenAPI as Citizen API<br/>(AppFormAPI<br/>/form/subsidyApp...)
+    participant Worker as EligibilityProcessing<br/>Worker (scheduled)
+    participant Engine as Determinant<br/>Evaluator
+    participant Voucher as VoucherIssuance<br/>Tool
+    participant Budget as BudgetEngine
+    participant Redeem as VoucherRedemption<br/>Tool
+    participant DB as PostgreSQL<br/>(app_fd_*)
+    participant Ledger as budget_event<br/>(append-only)
+
+    rect rgb(238, 245, 255)
+    Note over Farmer,Ledger: Phase 1 — Application + auto-approval
+    Farmer->>CitizenAPI: POST /form/subsidy_app_2025<br/>(NID, district, ...)
+    CitizenAPI->>DB: INSERT app_fd_subsidy_app_2025<br/>status=pending_review
+    CitizenAPI->>DB: INSERT processing_queue<br/>(ADR-030)
+    CitizenAPI-->>Farmer: 200 OK + application_id
+
+    Worker->>DB: SELECT FROM processing_queue
+    Worker->>Engine: evaluate(applicant, programme)
+    Engine->>DB: SELECT mm_determinant for programme
+    Engine->>DB: SELECT registry data ($registry.farmer.*)
+    Engine-->>Worker: disposition=eligibility_passed
+    Worker->>DB: UPDATE app_fd_subsidy_app_2025<br/>status=auto_approved<br/>+ eligibility_outcome JSON
+    Worker->>DB: INSERT reg_bb_eval_audit
+    end
+
+    rect rgb(245, 250, 240)
+    Note over Worker,Ledger: Phase 2 — Voucher issuance + COMMITMENT
+    Worker->>Voucher: issueFor(application_id)
+    Voucher->>DB: find active im_allocation_plan<br/>WHERE programme + active
+    Voucher->>DB: find im_allocation_line WHERE<br/>(district, farmer_category,<br/>matches applicant)
+    Voucher->>DB: INSERT app_fd_im_voucher<br/>code=VCH-..., status=issued
+    Voucher->>Budget: dispatchDirect(<br/>envelope, COMMITMENT,<br/>qty × unit_price,<br/>idem='voucher_issued:CODE')
+    Budget->>Ledger: INSERT 2 ledger lines<br/>(debit COMMITTED,<br/>credit PRE_COMMITTED)
+    end
+
+    rect rgb(245, 245, 250)
+    Note over Farmer,Ledger: Phase 3 — Redemption + EXPENSE (may repeat for partials)
+    Farmer->>Operator: presents voucher code<br/>(arrives at centre)
+    Operator->>Redeem: redeem(<br/>voucherCode, point,<br/>agentName, qty)
+    Redeem->>DB: SELECT im_voucher (validate)
+    Redeem->>DB: SELECT im_voucher_redemption<br/>(sum prior partials)
+    Redeem->>DB: SELECT im_inventory<br/>(check on-hand)
+    Note right of Redeem: validates: status,<br/>expiry, point match,<br/>qty ≤ remaining,<br/>qty ≤ on-hand
+    Redeem->>DB: INSERT im_voucher_redemption<br/>code=RDM-..., qty
+    Redeem->>DB: UPDATE im_voucher<br/>status=redeemed OR partially_redeemed<br/>(per remaining)
+    Redeem->>DB: UPDATE im_inventory<br/>quantity_on_hand -= qty
+    Redeem->>Budget: dispatchDirect(<br/>envelope, EXPENSE,<br/>qty × unit_price,<br/>idem='voucher_redeemed:CODE:RDM-XXXX')
+    Budget->>Ledger: INSERT 2 ledger lines<br/>(debit EXPENSED,<br/>credit COMMITTED)
+    Redeem-->>Operator: status=ok, RDM-..., before/after qty
+    end
+
+    rect rgb(250, 245, 245)
+    Note over Operator,DB: Phase 4 — Signed receipt (Counter Operator records handover)
+    Operator->>CitizenAPI: hand farmer the inputs;<br/>open Distribution Receipt form
+    Operator->>DB: INSERT app_fd_im_distribution<br/>+ farmer_signature.png<br/>+ operator_signature.png
+    end
+
+    rect rgb(250, 240, 240)
+    Note over Worker,Ledger: SIDE BRANCH — Voucher expiry (sweeper, daily)
+    Worker->>Worker: sweep (e.g. 02:00 daily)
+    Worker->>DB: SELECT WHERE status IN<br/>('issued','partially_redeemed')<br/>AND expiry_date < today
+    Worker->>Ledger: SELECT original COMMITMENT<br/>− Σ EXPENSE for voucher
+    Worker->>DB: UPDATE im_voucher<br/>status=expired
+    Worker->>Budget: dispatchDirect(<br/>envelope, RELEASE_COMMITMENT,<br/>unspent,<br/>idem='voucher_expired:CODE')
+    Budget->>Ledger: INSERT 2 ledger lines<br/>(debit AVAILABLE,<br/>credit COMMITTED)
+    end
+
+    rect rgb(250, 240, 240)
+    Note over Operator,Ledger: SIDE BRANCH — Operator cancels (applicant withdrew)
+    Operator->>Voucher: POST /budget/cancel-voucher<br/>(voucherCode, reason, actor)
+    Voucher->>DB: validate status<br/>('issued' or 'partially_redeemed')
+    Voucher->>Ledger: read original COMMITMENT<br/>− Σ EXPENSE
+    Voucher->>Budget: dispatchDirect(<br/>envelope, RELEASE_COMMITMENT,<br/>unspent,<br/>idem='voucher_cancelled:CODE')
+    Budget->>Ledger: INSERT 2 ledger lines
+    Voucher->>DB: UPDATE im_voucher<br/>status=cancelled<br/>+ reason in notes
+    Voucher-->>Operator: status=ok, releasedAmount
+    end

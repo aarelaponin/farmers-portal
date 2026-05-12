@@ -1,0 +1,66 @@
+%% Deployment — physical / network topology
+%% The Lesotho Farmers Portal runs as a single Joget DX 8.1 instance with
+%% an external Postgres. This is the dev environment — UAT and prod will
+%% mirror the topology with separated DB instances.
+
+flowchart TB
+    classDef azure fill:#0078D4,stroke:#005A9E,color:#fff
+    classDef vm fill:#3498db,stroke:#2980b9,color:#fff
+    classDef db fill:#e67e22,stroke:#d35400,color:#fff
+    classDef store fill:#95a5a6,stroke:#7f8c8d,color:#fff
+    classDef external fill:#999999,stroke:#777777,color:#fff
+    classDef person fill:#08427B,stroke:#073B6F,color:#fff
+
+    farmer["👨‍🌾 Farmer<br/><i>(browser, mobile)</i>"]:::person
+    operator["👤 Operator<br/><i>(browser, desktop)</i>"]:::person
+    devops["👤 Devops / sysadmin"]:::person
+
+    subgraph azure_cloud["☁ Azure (or comparable cloud)"]
+
+        subgraph vm["VM — appserver (Linux)"]
+            joget["📦 Joget DX 8.1 (Tomcat)<br/>Port 8080<br/><i>JVM (Java 11)</i>"]:::vm
+            jwa["📁 wflow/<br/>app_formuploads/<br/><i>signatures, invoice scans<br/>— file-system blob store</i>"]:::store
+            plugins_dir["📁 wflow/app_plugins/<br/><i>OSGi plugin .jar files<br/>(reg-bb-engine, form-creator-api,<br/>api-builder, GIS, smartsearch, ...)</i>"]:::store
+            joget --- jwa
+            joget --- plugins_dir
+        end
+
+        subgraph pgsql_managed["Azure Postgres (managed)<br/>joget-pgsql-sa"]
+            pg["🐘 PostgreSQL 14+<br/><i>jogetdb<br/>SSL required</i>"]:::db
+            tables["💾 ~200 tables<br/>app_fd_* (form data)<br/>app_form, app_userview,<br/>app_datalist, app_builder<br/>budget_event, budget_projection<br/>processing_queue, reg_bb_eval_audit"]:::db
+            pg --- tables
+        end
+
+        joget -->|"JDBC over SSL<br/>(connection pool;<br/>~10–50 connections)"| pg
+
+    end
+
+    farmer -->|"HTTPS<br/>citizen wizard"| joget
+    operator -->|"HTTPS<br/>operator screens<br/>+ App Composer"| joget
+    devops -->|"SSH<br/>(JAR upload via scp,<br/>then App Composer<br/>UI plugin upload)"| vm
+    devops -->|"PSQL<br/>(read-only, audit/forensics)"| pg
+
+    subgraph backups["☁ Backups (Azure)"]
+        snapshot["💾 Daily DB snapshot<br/><i>30-day retention<br/>(Azure-managed)</i>"]:::store
+        jaroffsite["💾 JAR + JWA artefacts<br/><i>Git-tracked (this repo)<br/>+ build artefacts in CI</i>"]:::store
+    end
+    pg -.->|"daily snapshot"| snapshot
+    devops -.->|"git commit / push"| jaroffsite
+
+    subgraph clients_world["Field"]
+        rcs["🏪 Resource Centres<br/><i>~70 across Lesotho;<br/>browser-only access<br/>(no local data)</i>"]:::external
+        moa["🏢 MAFSN HQ<br/><i>Maseru — operators,<br/>finance, M&E</i>"]:::external
+    end
+
+    rcs -.->|"WAN (broadband or<br/>3G/4G), HTTPS"| joget
+    moa -.->|"office LAN, HTTPS"| joget
+
+    subgraph deploy_flow["Deployment flow (out of band)"]
+        direction LR
+        commit["git commit<br/>(JAR source)"] --> build["Maven / repack.sh<br/>build .jar"]
+        build --> upload["scp to /tmp on VM<br/>OR upload via App Composer"]
+        upload --> activator["Joget OSGi reloads<br/>plugin; Activator runs;<br/>services registered"]
+    end
+
+    devops -.-> commit
+    activator -.-> joget

@@ -1,0 +1,152 @@
+%% ER diagram — IM-module domain entities
+%% Relationships are between Joget form-data tables (app_fd_*).
+%% Master-data references use the entity's business `code` (D20).
+%% FormGrid-managed parent→child links use Joget's UUID `id`.
+
+erDiagram
+    farmerBasicInfo ||--o{ subsidyApp_2025 : "applies (national_id)"
+    farmerBasicInfo ||--o{ farmerResidency : "owns (national_id)"
+    farmerBasicInfo ||--o{ farmerAgriculture : "owns"
+    farmerBasicInfo ||--o{ parcelRegistration : "owns"
+
+    subsidyApp_2025 ||--o| im_voucher : "auto-issues (application_id)"
+    mm_registration ||--o{ subsidyApp_2025 : "applied_programme"
+    mm_registration ||--o{ mm_determinant : "evaluates"
+
+    im_allocation_plan ||--o{ im_allocation_line : "defines (FormGrid)"
+    md37collectionPoint ||--o{ im_allocation_line : "point_code"
+    md27input ||--o{ im_allocation_line : "input_code"
+    md42farmer_category ||--o{ im_allocation_line : "farmer_category"
+
+    im_voucher ||--o{ im_voucher_redemption : "redeems (voucher_code)"
+    im_voucher ||--o| im_distribution : "signed for (voucher_code)"
+
+    md37collectionPoint ||--o{ im_voucher : "point_code"
+    md27input ||--o{ im_voucher : "input_code"
+    md03district ||--o{ md37collectionPoint : "district_code"
+
+    im_supplier ||--o{ im_stock_txn : "supplied_by (RECEIPT)"
+    im_stock_txn ||--o{ im_stock_txn_line : "lines (FormGrid)"
+    md37collectionPoint ||--o{ im_stock_txn : "point_code"
+    md27input ||--o{ im_stock_txn_line : "input_code"
+
+    md37collectionPoint ||--|{ im_inventory : "running stock at"
+    md27input ||--|{ im_inventory : "of input"
+
+    mm_registration ||--o| budget_envelope : "FY-suffix envelope"
+    budget_envelope ||--o{ budget_event : "ledger entries"
+    im_voucher ||--o{ budget_event : "correlation_id (voucher events)"
+    subsidyApp_2025 ||--o{ budget_event : "correlation_id (RESERVATION/PRE_COMMITMENT)"
+
+    farmerBasicInfo {
+        string national_id PK
+        string first_name
+        string last_name
+        string gender
+        string mobile_number
+    }
+
+    subsidyApp_2025 {
+        string id PK
+        string national_id FK
+        string applied_programme FK
+        string status
+        string eligibility_outcome
+        string district
+    }
+
+    im_voucher {
+        string code PK
+        string application_id FK
+        string farmer_nid FK
+        string programme_code FK
+        string input_code FK
+        string point_code FK
+        string quantity
+        string status
+        string issued_date
+        string expiry_date
+    }
+
+    im_voucher_redemption {
+        string code PK
+        string voucher_code FK
+        string redemption_date
+        string redemption_point
+        string redeemed_by
+        string quantity_redeemed
+    }
+
+    im_distribution {
+        string code PK
+        string voucher_code FK
+        string distribution_date
+        string operator_name
+        string farmer_signature
+        string operator_signature
+    }
+
+    im_allocation_plan {
+        string code PK
+        string programme_code FK
+        string cycle_label
+        string status
+        string effective_from
+        string effective_to
+    }
+
+    im_allocation_line {
+        string id PK
+        string plan_id FK
+        string point_code FK
+        string input_code FK
+        string farmer_category FK
+        string quantity
+    }
+
+    im_inventory {
+        string code PK
+        string point_code FK
+        string input_code FK
+        string quantity_on_hand
+        string quantity_reserved
+        string reorder_threshold
+    }
+
+    im_stock_txn {
+        string code PK
+        string txn_type
+        string txn_date
+        string district_code FK
+        string point_code FK
+        string supplier_code FK
+        string supplier_invoice_no
+        string supplier_invoice_file
+        string posted_at
+    }
+
+    im_stock_txn_line {
+        string id PK
+        string txn_id FK
+        string input_code FK
+        string quantity
+        string unit_price
+    }
+
+    budget_envelope {
+        string code PK
+        string programme_code FK
+        string currency
+        string status
+    }
+
+    budget_event {
+        string id PK
+        string envelope_code FK
+        string event_type
+        string direction
+        string amount
+        string account_path
+        string correlation_id
+        string idempotency_key
+    }

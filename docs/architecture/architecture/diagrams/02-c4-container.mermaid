@@ -1,0 +1,66 @@
+%% C4 Level 2 — Container
+%% What's inside the Joget DX 8.1 instance that runs the Lesotho Farmers Portal.
+
+flowchart TB
+    classDef container fill:#438DD5,stroke:#3978C9,color:#fff
+    classDef datastore fill:#438DD5,stroke:#3978C9,color:#fff,stroke-dasharray: 5 5
+    classDef plugin fill:#85BBF0,stroke:#5D90C9,color:#000
+    classDef person fill:#08427B,stroke:#073B6F,color:#fff
+    classDef external fill:#999999,stroke:#777777,color:#fff
+
+    farmer["👨‍🌾 Farmer / Operator<br/>(via browser)"]:::person
+    sysadmin["👤 Sysadmin"]:::person
+
+    subgraph joget["Joget DX 8.1 — Tomcat / JVM"]
+        direction TB
+
+        userview["📦 Userview<br/><i>(navigation, menus,<br/>HtmlPage screens)</i>"]:::container
+
+        forms["📦 Forms + datalists<br/><i>(8 IM forms, ~119 total<br/>+ 5 IM reports + ~100 lists)</i>"]:::container
+
+        appcomposer["📦 App Composer<br/><i>(authoring UI for<br/>analysts + sysadmins)</i>"]:::container
+
+        subgraph plugins["OSGi Plugin Bundles"]
+            direction TB
+            regbb["🔌 reg-bb-engine<br/><i>(Determinant evaluator,<br/>BudgetEngine, MM kernel,<br/>Voucher tools, /budget API)</i>"]:::plugin
+            formcreator["🔌 form-creator-api<br/><i>(/formcreator/* APIs:<br/>seed, forms, datalists,<br/>userviews, apis)</i>"]:::plugin
+            apibuilder["🔌 API Builder<br/><i>(per-form CRUD APIs;<br/>auth & path enablement)</i>"]:::plugin
+            others["🔌 Other plugins<br/><i>(GIS, smartsearch,<br/>mm-screen, …)</i>"]:::plugin
+        end
+
+        scheduler["⏱ Scheduled Workflow Tools<br/><i>(eligibility worker,<br/>projection refresh,<br/>expiry sweeper, threshold<br/>monitor)</i>"]:::container
+    end
+
+    subgraph data["PostgreSQL — primary DB"]
+        direction TB
+        appfd["💾 app_fd_*<br/><i>Form-data tables<br/>(applications, vouchers,<br/>redemptions, inventory,<br/>distributions, mm_*)</i>"]:::datastore
+        ledger["💾 budget_event +<br/>budget_projection<br/><i>Append-only ledger +<br/>materialised view</i>"]:::datastore
+        evalaudit["💾 reg_bb_eval_audit<br/><i>Determinant evaluation<br/>audit trail</i>"]:::datastore
+        queue["💾 processing_queue +<br/>processing_dead_letter<br/><i>Async eligibility queue<br/>(ADR-030)</i>"]:::datastore
+    end
+
+    fileuploads["📁 wflow/app_formuploads/<br/><i>File system —<br/>signatures, invoice scans</i>"]:::external
+
+    farmer -->|"HTTPS<br/>(citizen wizard,<br/>operator screens)"| userview
+    sysadmin -->|"HTTPS"| appcomposer
+    sysadmin -->|"upload .jwa /<br/>plugin .jar"| plugins
+
+    userview --> forms
+    forms --> regbb
+    forms --> others
+
+    appcomposer -.->|"authoring writes<br/>via /formcreator API"| formcreator
+    formcreator -.->|"refreshes Joget<br/>cache + DAO"| forms
+
+    regbb -->|"reads/writes via<br/>FormDataDao + JDBC"| appfd
+    regbb -->|"writes events<br/>(append-only)"| ledger
+    regbb -->|"writes audit<br/>rows"| evalaudit
+    regbb -->|"enqueue / drain"| queue
+    forms -->|"Hibernate-mapped<br/>CRUD"| appfd
+    forms -.->|"file upload<br/>(signatures, scans)"| fileuploads
+
+    scheduler -->|"invokes Voucher tools,<br/>projection refresh,<br/>threshold check"| regbb
+
+    apibuilder -.->|"routes /api/{path}<br/>with auth"| regbb
+    apibuilder -.->|"routes /api/{path}<br/>with auth"| formcreator
+    apibuilder -.->|"per-form CRUD APIs"| forms
