@@ -2,7 +2,11 @@
 
 Generic status-lifecycle framework for Joget DX 8.x plugins. Provides a single, reusable foundation for "can this status transition happen?" plus auditable execution of the transition.
 
-Adopted from the proven pattern in `gam-plugins/gam-framework`, generalised so any consuming plugin can register its own entity types and status enums without duplicating the validate-load-store-audit machinery.
+Any consuming plugin can register its own entity types and status enums without duplicating the validate-load-store-audit machinery. Used by multiple projects including the Lesotho Farmers Portal (RegBB Building Block implementation) and the GAM banking workflow.
+
+## License
+
+Apache License 2.0. See `LICENSE`.
 
 ## What's in the box
 
