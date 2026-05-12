@@ -18,7 +18,7 @@ import urllib.error
 import urllib.request
 
 JOGET_BASE_URL = os.environ.get("JOGET_BASE_URL", "http://20.87.213.78:8080/jw")
-JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  "a5af1181f77b4a62b481725b6410e965")
+JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  os.environ.get("JOGET_API_KEY", ""))
 BUDGET_API_ID  = os.environ.get("BUDGET_API_ID",  "API-BUDGET")
 
 ENDPOINT = JOGET_BASE_URL + "/api/budget/ces/estimate"

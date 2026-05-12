@@ -25,7 +25,7 @@ DB = dict(
     port=5432,
     dbname="jogetdb",
     user="jogetadmin",
-    password="Joget@DB#2026!",
+    password=os.environ.get("PGPASSWORD", ""),
     sslmode="require",
 )
 

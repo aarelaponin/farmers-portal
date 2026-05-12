@@ -27,7 +27,7 @@ Usage:
 import argparse, json, os, sys, time, urllib.error, urllib.request
 
 JOGET = os.environ.get("JOGET_BASE_URL", "http://20.87.213.78:8080/jw")
-JOGET_API_KEY = os.environ.get("JOGET_API_KEY", "a5af1181f77b4a62b481725b6410e965")
+JOGET_API_KEY = os.environ.get("JOGET_API_KEY", "")
 CITIZEN_API_ID = "API-API_SUBSIDY_APP_2025_CITIZEN"
 APP_ID = "farmersPortal"
 PROGRAMME = "PRG_2025_001"
@@ -78,7 +78,7 @@ def db():
     import psycopg2
     return psycopg2.connect(
         host="joget-pgsql-sa.postgres.database.azure.com", dbname="jogetdb",
-        user="jogetadmin", password="Joget@DB#2026!", port=5432, sslmode="require")
+        user="jogetadmin", password=os.environ.get("PGPASSWORD", ""), port=5432, sslmode="require")
 
 def query_one(sql, params=()):
     conn = db()

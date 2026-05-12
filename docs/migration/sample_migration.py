@@ -38,7 +38,7 @@ import urllib.request
 # ---------------------------------------------------------------------------
 
 BASE_URL = os.environ.get("PORTAL_BASE", "http://20.87.213.78:8080/jw")
-API_KEY  = os.environ.get("PORTAL_KEY",  "a5af1181f77b4a62b481725b6410e965")
+API_KEY  = os.environ.get("PORTAL_KEY",  os.environ.get("JOGET_API_KEY", ""))
 
 # API IDs — stable across environments.
 API_FARMER_BASIC_INFO = "API-a7735b09-36be-453d-a385-cdff0c3df7b0"

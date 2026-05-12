@@ -160,7 +160,7 @@ The credentials in this dev instance:
 
 | Header | Value |
 |---|---|
-| `api_key` | `a5af1181f77b4a62b481725b6410e965` |
+| `api_key` | `<JOGET_API_KEY>` (set via env var; see `~/IdeaProjects/rsr/secrets/lst-credentials.txt` for dev) |
 
 The `api_id` is per-API — see the `Auth` column of each provider section below. In production this changes per environment; pull from the Joget `app_builder` table:
 

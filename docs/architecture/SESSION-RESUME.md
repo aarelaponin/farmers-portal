@@ -288,7 +288,7 @@ python3 tooling/push_userview.py v
 
 | API | api_id | api_key |
 |---|---|---|
-| `formcreator` | `API-e7878006-c15a-425e-9c36-bebc7c4d085c` | `a5af1181f77b4a62b481725b6410e965` |
+| `formcreator` | `API-e7878006-c15a-425e-9c36-bebc7c4d085c` | `<JOGET_API_KEY>` |
 | `regbb` (eval, submit) | `API-168e3678-1f9a-46fc-8c19-d0d9a917eb73` | (same) |
 | `budget` | `API-BUDGET` | (same) |
 | `gis` | `API-d5e0a0cc-a12a-4360-84b5-d794691c732e` | (same) |

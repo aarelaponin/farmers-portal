@@ -368,10 +368,10 @@ The api_key is shared (one credential per app — `farmerPortal`); the **api_id 
 
 | API Builder API | api_id (UUID, header) | api_key (shared) | Endpoint examples |
 | --- | --- | --- | --- |
-| `formcreator` (form-creator-api) | `API-e7878006-c15a-425e-9c36-bebc7c4d085c` | `a5af1181f77b4a62b481725b6410e965` | `/jw/api/formcreator/formcreator/{forms,seed,clear,datalists,userviews}` |
-| `regbb` (RegBbEvalApi) | `API-168e3678-1f9a-46fc-8c19-d0d9a917eb73` | `a5af1181f77b4a62b481725b6410e965` | `/jw/api/regbb/{eval,submit}` |
-| `gis` (GisApiProvider) | (look up in `app_builder` where `name='gis'`) | `a5af1181f77b4a62b481725b6410e965` | `/jw/api/gis/gis/calculate` |
-| MD.xx generated APIs (one per master-data form) | per-API in `app_builder` | `a5af1181f77b4a62b481725b6410e965` | `/jw/api/<apiPath>/...` |
+| `formcreator` (form-creator-api) | `API-e7878006-c15a-425e-9c36-bebc7c4d085c` | `<JOGET_API_KEY>` | `/jw/api/formcreator/formcreator/{forms,seed,clear,datalists,userviews}` |
+| `regbb` (RegBbEvalApi) | `API-168e3678-1f9a-46fc-8c19-d0d9a917eb73` | `<JOGET_API_KEY>` | `/jw/api/regbb/{eval,submit}` |
+| `gis` (GisApiProvider) | (look up in `app_builder` where `name='gis'`) | `<JOGET_API_KEY>` | `/jw/api/gis/gis/calculate` |
+| MD.xx generated APIs (one per master-data form) | per-API in `app_builder` | `<JOGET_API_KEY>` | `/jw/api/<apiPath>/...` |
 
 Source-verified: `api-builder/apibuilder_plugins/.../service/ApiBuilder.java` ≈ line 745 enforces `apiId.startsWith("API-")` against the `api_id` request header; that header value is matched to the API definition's UUID in `app_builder.id`. The api_key matches a row in the `api_credential` table by `apikey` value (which is *not* scoped per-API in this instance — there is one `farmerPortal` credential covering everything).
 
@@ -387,14 +387,14 @@ Pass them as either query params (`?api_id=...&api_key=...`) or, preferably, as 
 # regbb /eval
 curl -X POST -H "Content-Type: application/json" \
   -H "api_id: API-168e3678-1f9a-46fc-8c19-d0d9a917eb73" \
-  -H "api_key: a5af1181f77b4a62b481725b6410e965" \
+  -H "api_key: <JOGET_API_KEY>" \
   -d '{"determinantCode":"...","applicantData":{...}}' \
   'http://20.87.213.78:8080/jw/api/regbb/eval'
 
 # formcreator /forms
 curl -X POST -H "Content-Type: application/json" \
   -H "api_id: API-e7878006-c15a-425e-9c36-bebc7c4d085c" \
-  -H "api_key: a5af1181f77b4a62b481725b6410e965" \
+  -H "api_key: <JOGET_API_KEY>" \
   --data-binary @app/forms/mm/mm-field.json \
   'http://20.87.213.78:8080/jw/api/formcreator/formcreator/forms?createCrud=false'
 ```

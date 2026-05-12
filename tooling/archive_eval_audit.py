@@ -42,7 +42,7 @@ except ImportError:
 PG_HOST     = os.environ.get("PGHOST",     "joget-pgsql-sa.postgres.database.azure.com")
 PG_DATABASE = os.environ.get("PGDATABASE", "jogetdb")
 PG_USER     = os.environ.get("PGUSER",     "jogetadmin")
-PG_PASSWORD = os.environ.get("PGPASSWORD", "Joget@DB#2026!")
+PG_PASSWORD = os.environ.get("PGPASSWORD", os.environ.get("PGPASSWORD", ""))
 PG_PORT     = int(os.environ.get("PGPORT", "5432"))
 
 LIVE_TABLE    = "app_fd_reg_bb_eval_audit"

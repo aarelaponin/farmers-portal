@@ -35,16 +35,16 @@ import psycopg2
 PG = dict(
     host="joget-pgsql-sa.postgres.database.azure.com",
     dbname="jogetdb", user="jogetadmin",
-    password="Joget@DB#2026!", port=5432, sslmode="require",
+    password=os.environ.get("PGPASSWORD", ""), port=5432, sslmode="require",
 )
 JOGET = "http://20.87.213.78:8080/jw"
 HEADERS = {
     "Content-Type": "application/json",
     "api_id":  "API-e7878006-c15a-425e-9c36-bebc7c4d085c",
-    "api_key": "a5af1181f77b4a62b481725b6410e965",
+    "api_key": os.environ.get("JOGET_API_KEY", ""),
 }
 API_ID  = "API-e7878006-c15a-425e-9c36-bebc7c4d085c"
-API_KEY = "a5af1181f77b4a62b481725b6410e965"
+API_KEY = os.environ.get("JOGET_API_KEY", "")
 
 LEGACY_BASE = "/jw/web/json/data/list/"
 NEW_BASE    = "/jw/api/formcreator/formcreator/data/list"

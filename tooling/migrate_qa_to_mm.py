@@ -33,10 +33,10 @@ import psycopg2
 PG_HOST     = "joget-pgsql-sa.postgres.database.azure.com"
 PG_DATABASE = "jogetdb"
 PG_USER     = "jogetadmin"
-PG_PASSWORD = "Joget@DB#2026!"
+PG_PASSWORD = os.environ.get("PGPASSWORD", "")
 
 JOGET_BASE_URL    = "http://20.87.213.78:8080/jw"
-JOGET_API_KEY     = "a5af1181f77b4a62b481725b6410e965"
+JOGET_API_KEY     = os.environ.get("JOGET_API_KEY", "")
 FORMCREATOR_API_ID = "API-e7878006-c15a-425e-9c36-bebc7c4d085c"
 
 

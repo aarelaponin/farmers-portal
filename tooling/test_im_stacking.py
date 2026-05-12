@@ -37,7 +37,7 @@ import urllib.error
 import urllib.request
 
 JOGET_BASE_URL = os.environ.get("JOGET_BASE_URL", "http://20.87.213.78:8080/jw")
-JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  "a5af1181f77b4a62b481725b6410e965")
+JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  os.environ.get("JOGET_API_KEY", ""))
 BUDGET_API_ID  = "API-BUDGET"
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
@@ -110,7 +110,7 @@ def db_connect():
         host=os.environ.get("PGHOST", "joget-pgsql-sa.postgres.database.azure.com"),
         dbname=os.environ.get("PGDATABASE", "jogetdb"),
         user=os.environ.get("PGUSER", "jogetadmin"),
-        password=os.environ.get("PGPASSWORD", "Joget@DB#2026!"),
+        password=os.environ.get("PGPASSWORD", os.environ.get("PGPASSWORD", "")),
         port=int(os.environ.get("PGPORT", "5432")),
         sslmode="require")
 

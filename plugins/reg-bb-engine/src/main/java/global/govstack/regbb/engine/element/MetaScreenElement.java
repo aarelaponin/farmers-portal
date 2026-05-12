@@ -470,7 +470,7 @@ public class MetaScreenElement extends Element implements FormBuilderPaletteElem
         pairsJson.append("]");
 
         String apiId  = "API-168e3678-1f9a-46fc-8c19-d0d9a917eb73";
-        String apiKey = "a5af1181f77b4a62b481725b6410e965";
+        String apiKey = System.getenv("JOGET_API_KEY");
 
         StringBuilder js = new StringBuilder();
         js.append("<script>(function(){")
@@ -1330,7 +1330,7 @@ public class MetaScreenElement extends Element implements FormBuilderPaletteElem
                 // convention (working in production today).
                 props.put("apiEndpoint", "/jw/api/gis/gis");
                 props.put("apiId",       "API-d5e0a0cc-a12a-4360-84b5-d794691c732e");
-                props.put("apiKey",      "a5af1181f77b4a62b481725b6410e965");
+                props.put("apiKey",      System.getenv("JOGET_API_KEY"));
                 break;
             case "repeating_group":
                 // L1-6 (subsidy-to-IM backlog) — embed an existing Joget
@@ -2213,7 +2213,7 @@ public class MetaScreenElement extends Element implements FormBuilderPaletteElem
         //   2. On focusout of any wizard input — keeps the catalogue in
         //      sync as the citizen types (debounced ~300ms).
         String apiId       = "API-168e3678-1f9a-46fc-8c19-d0d9a917eb73";
-        String apiKey      = "a5af1181f77b4a62b481725b6410e965";
+        String apiKey      = System.getenv("JOGET_API_KEY");
         html.append("<script>")
             .append("(function(){")
             .append("var SERVICE='").append(htmlEscape(serviceCode)).append("';")

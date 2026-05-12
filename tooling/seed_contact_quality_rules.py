@@ -23,7 +23,7 @@ import argparse, datetime, json, sys, urllib.error, urllib.request
 
 JOGET   = "http://20.87.213.78:8080/jw"
 API_ID  = "API-e7878006-c15a-425e-9c36-bebc7c4d085c"
-API_KEY = "a5af1181f77b4a62b481725b6410e965"
+API_KEY = os.environ.get("JOGET_API_KEY", "")
 HEADERS = {
     "Content-Type": "application/json",
     "api_id":  API_ID,

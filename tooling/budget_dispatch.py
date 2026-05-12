@@ -24,7 +24,7 @@ import urllib.request
 import uuid
 
 JOGET_BASE_URL = os.environ.get("JOGET_BASE_URL", "http://20.87.213.78:8080/jw")
-JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  "a5af1181f77b4a62b481725b6410e965")
+JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  os.environ.get("JOGET_API_KEY", ""))
 
 # api_id for budget API — created by a one-shot POST to
 # /formcreator/apis with className=BudgetApi after deploying form-creator-api

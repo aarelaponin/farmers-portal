@@ -30,7 +30,7 @@ Bonus work that landed during W1-W3 but isn't in the plan: operator case-log v1 
 |---|---|
 | Joget URL | `http://20.87.213.78:8080/jw` |
 | Joget app id | `farmersPortal` |
-| Joget API key (formcreator) | `a5af1181f77b4a62b481725b6410e965` |
+| Joget API key (formcreator) | `<JOGET_API_KEY>` |
 | formcreator api_id | `API-e7878006-c15a-425e-9c36-bebc7c4d085c` |
 | regbb api_id | `API-168e3678-1f9a-46fc-8c19-d0d9a917eb73` |
 | reg-bb-engine bundle current build | **build-139** (W3 lifecycle fix; AppAudit no longer seeds from c_status) |

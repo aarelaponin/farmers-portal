@@ -53,12 +53,12 @@ import psycopg2
 # ---------------------------------------------------------------------------
 
 JOGET_BASE_URL = os.environ.get("JOGET_BASE_URL", "http://20.87.213.78:8080/jw")
-JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  "a5af1181f77b4a62b481725b6410e965")
+JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  os.environ.get("JOGET_API_KEY", ""))
 
 PG_HOST     = os.environ.get("PGHOST",     "joget-pgsql-sa.postgres.database.azure.com")
 PG_DATABASE = os.environ.get("PGDATABASE", "jogetdb")
 PG_USER     = os.environ.get("PGUSER",     "jogetadmin")
-PG_PASSWORD = os.environ.get("PGPASSWORD", "Joget@DB#2026!")
+PG_PASSWORD = os.environ.get("PGPASSWORD", os.environ.get("PGPASSWORD", ""))
 
 
 # ---------------------------------------------------------------------------

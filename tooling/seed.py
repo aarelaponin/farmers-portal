@@ -53,7 +53,7 @@ except ImportError:
 
 JOGET_BASE_URL = os.environ.get("JOGET_BASE_URL", "http://20.87.213.78:8080/jw")
 JOGET_API_ID   = os.environ.get("JOGET_API_ID",   "API-e7878006-c15a-425e-9c36-bebc7c4d085c")
-JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  "a5af1181f77b4a62b481725b6410e965")
+JOGET_API_KEY  = os.environ.get("JOGET_API_KEY",  os.environ.get("JOGET_API_KEY", ""))
 APP_ID         = os.environ.get("JOGET_APP_ID",   "farmersPortal")
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
@@ -173,7 +173,7 @@ def bulk_fetch_lookup_via_seed(form_id, codes):
     import psycopg2
     conn = psycopg2.connect(
         host='joget-pgsql-sa.postgres.database.azure.com',
-        dbname='jogetdb', user='jogetadmin', password='Joget@DB#2026!',
+        dbname='jogetdb', user='jogetadmin', password=os.environ.get("PGPASSWORD", ""),
         port=5432, sslmode='require')
     cur = conn.cursor()
     placeholders = ",".join(["%s"] * len(codes))

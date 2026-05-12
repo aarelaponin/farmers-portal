@@ -45,12 +45,12 @@ except ImportError:
 PG_HOST     = os.environ.get("PGHOST",     "joget-pgsql-sa.postgres.database.azure.com")
 PG_DATABASE = os.environ.get("PGDATABASE", "jogetdb")
 PG_USER     = os.environ.get("PGUSER",     "jogetadmin")
-PG_PASSWORD = os.environ.get("PGPASSWORD", "Joget@DB#2026!")
+PG_PASSWORD = os.environ.get("PGPASSWORD", os.environ.get("PGPASSWORD", ""))
 PG_PORT     = int(os.environ.get("PGPORT", "5432"))
 
 JOGET_BASE   = os.environ.get("JOGET_BASE_URL", "http://20.87.213.78:8080/jw")
 BUDGET_API   = "API-BUDGET"
-SHARED_KEY   = "a5af1181f77b4a62b481725b6410e965"
+SHARED_KEY   = os.environ.get("JOGET_API_KEY", "")
 
 # Sandbox envelope used by control tests. We seed it into app_fd_budget_envelope
 # via form-creator-api.seed (HARD-RULE compliant — goes through DAO).

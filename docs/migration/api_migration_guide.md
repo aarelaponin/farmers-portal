@@ -83,7 +83,7 @@ Every API call needs **two HTTP headers**:
 | Header | Value | Notes |
 |---|---|---|
 | `api_id` | The API definition's UUID (e.g. `API-a7735b09-36be-453d-a385-cdff0c3df7b0`) | One per endpoint — see Section 4 for the full list |
-| `api_key` | `a5af1181f77b4a62b481725b6410e965` | Currently the shared `farmerPortal` key for dev. **For your migration, request a fresh dedicated credential pair from MAFSN ICT** so your activity is auditable separately. |
+| `api_key` | `<JOGET_API_KEY>` | Currently the shared `farmerPortal` key for dev. **For your migration, request a fresh dedicated credential pair from MAFSN ICT** so your activity is auditable separately. |
 
 A third optional header is `Content-Type: application/json` for POST
 bodies.
@@ -102,7 +102,7 @@ which means auth passed):
 ```bash
 curl -X POST -H "Content-Type: application/json" \
      -H "api_id: API-a7735b09-36be-453d-a385-cdff0c3df7b0" \
-     -H "api_key: a5af1181f77b4a62b481725b6410e965" \
+     -H "api_key: <JOGET_API_KEY>" \
      -d '{}' \
      "http://20.87.213.78:8080/jw/api/form/farmerBasicInfo"
 ```
@@ -544,7 +544,7 @@ A minimal end-to-end migration script lives at
 import csv, json, urllib.request
 
 BASE = "http://20.87.213.78:8080/jw"  # or your environment's URL
-KEY  = "a5af1181f77b4a62b481725b6410e965"  # ASK FOR YOUR DEDICATED KEY
+KEY  = "<JOGET_API_KEY>"  # ASK FOR YOUR DEDICATED KEY
 
 API_FBI    = "API-a7735b09-36be-453d-a385-cdff0c3df7b0"
 API_RES    = "API-30dcfc48-44bf-4aaf-95df-8370590be7b4"
