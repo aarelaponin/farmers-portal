@@ -76,15 +76,29 @@ make build-plugins
 
 Under the hood: `plugins/build-all.sh` picks `mvn package` by default (sandbox: pass `--repack` to use the direct-javac path instead). On a clean machine the first run takes 5–10 minutes because Maven downloads its dependencies. Built JARs land in `dist/plugins/`.
 
-### 6. Upload the plugin JARs to Joget
+### 6. Download API Builder from Joget Marketplace
 
-In App Composer: **Admin Bar → Manage Plugins → Upload**. Upload each JAR in `dist/plugins/`, one at a time. **Start with `form-creator-api`** — every other step depends on it. After each upload, the bundle should appear in "Active" state; if not, click into it and Start.
+API Builder is **not** bundled with standard Joget DX 8.1.1 — it ships as a separate Marketplace plugin. Every form-creator-api endpoint depends on it (form-creator-api extends API Builder's `ApiPluginAbstract` SPI), so this JAR must be uploaded **before** any of our own plugin JARs.
 
-This step is intentionally manual: plugin uploads bypass the API-credential check, so there's no scripted path that doesn't also bypass it. Twelve clicks total.
+Browse to https://marketplace.joget.org, search for **"API Builder"**, and download version **7.0.11** (or any 7.0.x that matches the `7.0-SNAPSHOT` branch you cloned in step 4). Save the JAR — typically named `apibuilder_plugins-7.0.11.jar` — somewhere convenient. You'll upload it in the next step alongside our own JARs.
 
-### 7. Create the form-creator-api credential
+If Marketplace requires registration, register a free Joget Community account. The download is free for community use.
 
-App Composer → Open `farmersPortal` → **API Builder**. You should now see a `formcreator` API in the list (it was registered when you uploaded the form-creator-api JAR).
+### 7. Upload all plugin JARs to Joget
+
+In App Composer: **Admin Bar → Manage Plugins → Upload**. Upload one JAR at a time, in this order:
+
+1. **`apibuilder_plugins-7.0.11.jar`** (from step 6 — must be first, everything else depends on its SPI)
+2. **`form-creator-api`** (from `dist/plugins/` — must be second, the other 11 plugins are pushed via its endpoints)
+3. The remaining 11 mandatory plugins from `dist/plugins/`, in any order
+
+After each upload, the bundle should appear in "Active" state. If not, click into it and Start. Common reason for a bundle to not auto-activate: it depends on something not yet uploaded — re-upload after the dependency lands.
+
+This step is intentionally manual: plugin uploads bypass the API-credential check, so there's no scripted path that doesn't also bypass it. Thirteen clicks total.
+
+### 8. Create the form-creator-api credential
+
+App Composer → Open `farmersPortal` → **API Builder**. You should now see a `formcreator` API in the list (it was registered when you uploaded the form-creator-api JAR in step 7).
 
 Open it, then create an **API Credential**:
 
@@ -94,11 +108,11 @@ Open it, then create an **API Credential**:
 Open `.env` and fill in both values:
 
 ```bash
-JOGET_API_ID=API-<the-uuid-from-step-7>
+JOGET_API_ID=API-<the-uuid-from-step-8>
 JOGET_API_KEY=<the-secret-you-set>
 ```
 
-### 8. Source `.env` and bootstrap the Python venv
+### 9. Source `.env` and bootstrap the Python venv
 
 ```bash
 set -a; source .env; set +a       # export everything in .env
@@ -106,7 +120,7 @@ bash tooling/bootstrap.sh         # creates tooling/.venv with PyYAML + psycopg2
 source tooling/.venv/bin/activate
 ```
 
-### 9. Install the app — push forms, datalists, userview, then seed master-data
+### 10. Install the app — push forms, datalists, userview, then seed master-data
 
 ```bash
 make fresh-install
@@ -119,9 +133,9 @@ That's the rest of the install in one command. Under the hood:
 
 Run time: about 3–4 minutes against a local Joget. Re-running is safe and idempotent — every artefact upserts by its business key.
 
-If any push errors, the script reports per-artefact HTTP status and continues. Common failure: a form references a custom plugin element class that didn't make it into the JAR uploads — go back to step 6 and check that the relevant mandatory plugin is in "Active" state.
+If any push errors, the script reports per-artefact HTTP status and continues. Common failure: a form references a custom plugin element class that didn't make it into the JAR uploads — go back to step 7 and check that the relevant mandatory plugin is in "Active" state.
 
-### 10. Verify the install
+### 11. Verify the install
 
 ```bash
 make test                         # foundational regression (layers 1+2, ~1 min)
@@ -147,6 +161,10 @@ Then browse to `http://localhost:8080/jw/web/userview/farmersPortal/v/_/home` �
 **`install_app.py` returns HTTP 401 on every form.** Wrong `JOGET_API_KEY`, or the credential isn't enabled in App Builder. Open the credential in App Composer and ensure "Active" is checked.
 
 **A specific form fails with "plugin not installed: org.joget...".** A mandatory JAR is missing or its bundle is Inactive. Open Admin Bar → Manage Plugins, search for the named class, and check the bundle's state. CLAUDE.md's "Custom plugins installed in THIS Joget instance" section maps element class names to JARs.
+
+**`form-creator-api` bundle fails to activate with `NoClassDefFoundError: org/joget/api/...`.** You uploaded form-creator-api before API Builder. The class hierarchy in form-creator-api extends API Builder's SPI; without API Builder present, the bundle can't link. Go back to step 6 — download API Builder from Joget Marketplace and upload it first; then re-upload form-creator-api (no need to remove it first, the upload upserts).
+
+**`make install-app` returns "API Builder API not found".** API Builder is installed but the `formcreator` API definition didn't register. This happens occasionally on first install — restart the Joget Tomcat once; the API Builder runtime registers all installed API plugins on JVM start.
 
 **Seed phase fails with "form X does not exist".** A master-data YAML references a form whose JSON wasn't pushed in Phase 1 — likely because the JSON file is malformed. Search the Phase 1 log for that form id; fix the JSON; re-run `make fresh-install`.
 

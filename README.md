@@ -59,9 +59,10 @@ Quick sketch of the path, for orientation only:
 3. `cp .env.example .env`, fill in PG\* values.
 4. Clone the vendored Joget source: `git clone --branch 8.1-RELEASE https://github.com/jogetworkflow/jw-community.git` and `git clone --branch 7.0-SNAPSHOT https://github.com/jogetworkflow/api-builder.git` at the repo root.
 5. `make build-plugins` — produces the 12 mandatory JARs under `dist/plugins/`. See `plugins/BUILD.md` for the mandatory vs optional split.
-6. Upload each JAR via App Composer → Manage Plugins (form-creator-api first).
-7. Create an API Builder credential against the `formcreator` API; fill `JOGET_API_ID` / `JOGET_API_KEY` in `.env`.
-8. `make fresh-install` — pushes 218 forms / 226 datalists / 1 userview, seeds 117 master-data tables, runs the smoke test.
+6. Download API Builder from [Joget Marketplace](https://marketplace.joget.org) (search "API Builder", version 7.0.x) — it's a separate Marketplace plugin, not part of the standard Joget install.
+7. Upload all plugin JARs via App Composer → Manage Plugins. Order: API Builder first, then form-creator-api, then the rest.
+8. Create an API Builder credential against the `formcreator` API; fill `JOGET_API_ID` / `JOGET_API_KEY` in `.env`.
+9. `make fresh-install` — pushes 218 forms / 226 datalists / 1 userview, seeds 117 master-data tables, runs the smoke test.
 
 After install, regression tests live in:
 

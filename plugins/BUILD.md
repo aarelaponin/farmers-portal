@@ -2,6 +2,12 @@
 
 This directory holds **29 plugin sources**. Not all of them are needed to run the Farmers Portal app — most are legacy experiments retained for forensic context. This file documents which JARs the app actually depends on, the order to build them in, and how each one builds.
 
+## Prerequisite: Joget Marketplace — API Builder
+
+**API Builder is not bundled with standard Joget DX 8.1.1.** It must be downloaded separately from Joget Marketplace (https://marketplace.joget.org — search "API Builder", version 7.0.x, free) and uploaded to your Joget instance **before** any of the 12 plugins below. Every form-creator-api endpoint extends API Builder's `ApiPluginAbstract` SPI; without API Builder present, form-creator-api fails to activate.
+
+The repo's `plugins/apibuilder_plugins-7.0.11.jar` is local-only (gitignored) — this file is what gets uploaded in INSTALL.md step 6 / 7. We don't redistribute it via git because (a) it's a Marketplace asset with its own license terms and (b) we want strangers pinned to a known-good version they obtain from the canonical source.
+
 ## Prerequisite: vendored Joget source
 
 Plugins build against the Joget Community Edition source tree and the API Builder source tree. Neither is committed to this repo (they're gitignored as vendored read-references — large external projects with their own release cadence). Before running `plugins/build-all.sh` for the first time, clone both at the repo root, **on the branches pinned below**:
