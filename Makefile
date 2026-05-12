@@ -14,16 +14,20 @@
 PYTHON ?= python3
 PYTEST ?= $(PYTHON) -m pytest
 
-.PHONY: help test test-baseline test-perf test-l4 test-im test-all clean
+.PHONY: help test test-baseline test-perf test-l4 test-im test-all sync sync-push sync-dry clean
 
 help:
-	@echo "Farmers Portal regression suite"
+	@echo "Farmers Portal regression suite + sync ritual"
 	@echo ""
 	@echo "  make test          baseline (layers 1+2): userview + MD + datalist + API + form save/load"
 	@echo "  make test-perf     perf baseline (read-side timing)"
 	@echo "  make test-l4       L4 parity (eligibility regression)"
 	@echo "  make test-im       IM end-to-end smoke"
 	@echo "  make test-all      everything above"
+	@echo ""
+	@echo "  make sync          pull App Composer edits + commit (no push) — see ADR-033"
+	@echo "  make sync-push     pull + commit + push to origin/main"
+	@echo "  make sync-dry      pull only, show diff, no commit"
 	@echo ""
 	@echo "  make clean         remove .pytest_cache"
 
@@ -63,6 +67,18 @@ test-im:
 test-all: test-baseline test-perf test-l4 test-im
 	@echo ""
 	@echo "==> All tests passed."
+
+# ---------------------------------------------------------------------------
+# Sync ritual (per ADR-033 — bidirectional app-state sync)
+# ---------------------------------------------------------------------------
+sync:
+	@./tooling/sync.sh
+
+sync-push:
+	@./tooling/sync.sh --push
+
+sync-dry:
+	@./tooling/sync.sh --dry-run
 
 clean:
 	rm -rf .pytest_cache tooling/tests/__pycache__ tooling/tests/.pytest_cache

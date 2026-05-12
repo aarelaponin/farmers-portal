@@ -4,6 +4,24 @@
 Joget DX 8.x application: agricultural subsidy management system (ASMS) for Lesotho.
 App ID: `farmersPortal` | Main JWA: `APP_farmersPortal-*.jwa`
 
+## Sync ritual (ADR-033 — read this before any session that touches `app/`)
+
+The repo holds the canonical source for forms, datalists, userviews, and master-data. **App Composer edits in Joget DO NOT auto-flow back to the repo** — they have to be pulled. If the user mentions "did some App Composer work", "edited a form in the UI", or anything similar, run the sync ritual to capture those edits.
+
+**One command:**
+
+```bash
+make sync          # pull + commit (no push)
+make sync-push     # pull + commit + push to origin/main
+make sync-dry      # pull only, show diff, no commit
+```
+
+Or directly: `./tooling/sync.sh [--push|--dry-run|--no-commit]`.
+
+Reads `PGPASSWORD` from environment or from `~/IdeaProjects/rsr/secrets/lst-credentials.txt`. Calls `tooling/sync_pull.py` which dumps forms / datalists / userviews / `app_fd_md*` / `app_fd_mm_*` tables into `app/`. Applies credential placeholder substitution. Idempotent.
+
+See `docs/architecture/adr/adr-033-bidirectional-app-state-sync.md` for the architecture.
+
 ## ⛔ HARD RULE — Joget-native API only. Never raw SQL on Joget metadata or form data.
 
 **Never** write to `app_form`, `app_userview`, `app_datalist`, `app_package`, any
