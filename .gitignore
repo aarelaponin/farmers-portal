@@ -13,14 +13,17 @@ x_archive/
 
 # ─── Vendored external source ─────────────────────────────────────────────
 # Joget DX 8 source tree + API Builder source, used for reading only.
-# Both have their own .git. Fetch via `tooling/fetch-vendored.sh`.
-jw-community/
-api-builder/
+# Both have their own .git. See INSTALL.md step 4 for the clone commands.
+# Leading slash root-anchors so `app/api-builder/` (App Builder definitions
+# pulled by sync_pull.py) is NOT matched — only the root vendored clone is.
+/jw-community/
+/api-builder/
 
 # ─── Built artifacts ──────────────────────────────────────────────────────
 *.jar
 *.war
 *.jwa
+!app/snapshots/*.jwa
 *.class
 target/
 build/

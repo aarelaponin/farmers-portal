@@ -23,6 +23,12 @@ What it does, in order:
   3. Push every `app/userviews/*.json` via /formcreator/userviews
   4. Seed every `app/seeds/master-data/*.yaml` (the md*+mm_* tables that
      sync_pull.py dumped) via /formcreator/seed
+  5. Provision every `app/api-builder/*.json` (App Builder API endpoint
+     definitions for /jw/api/<name>/data routes) via /formcreator/apis
+  6. Seed every `app/seeds/data/*.yaml` (operational data — applications,
+     vouchers, registry entries, audit, budget ledger) via /formcreator/seed
+  7. Report `app/seeds/environment.yaml` so the operator can manually
+     restore env vars (Id Generator counters etc.) via App Composer
 
 What it does NOT do:
   * Upload plugin JARs (manual step via App Composer — security boundary)
@@ -74,6 +80,7 @@ FORMS_URL      = JOGET_BASE_URL + "/api/formcreator/formcreator/forms"
 DATALISTS_URL  = JOGET_BASE_URL + "/api/formcreator/formcreator/datalists"
 USERVIEWS_URL  = JOGET_BASE_URL + "/api/formcreator/formcreator/userviews"
 SEED_URL       = JOGET_BASE_URL + "/api/formcreator/formcreator/seed"
+APIS_URL       = JOGET_BASE_URL + "/api/formcreator/formcreator/apis"
 
 _HERE       = pathlib.Path(__file__).resolve().parent
 _REPO_ROOT  = _HERE.parent
@@ -81,6 +88,9 @@ FORMS_DIR     = _REPO_ROOT / "app" / "forms"
 DATALISTS_DIR = _REPO_ROOT / "app" / "datalists"
 USERVIEWS_DIR = _REPO_ROOT / "app" / "userviews"
 SEEDS_DIR     = _REPO_ROOT / "app" / "seeds" / "master-data"
+DATA_DIR      = _REPO_ROOT / "app" / "seeds" / "data"
+API_BUILDER_DIR = _REPO_ROOT / "app" / "api-builder"
+ENV_VARS_FILE   = _REPO_ROOT / "app" / "seeds" / "environment.yaml"
 
 # Columns produced by sync_pull.py that we MUST NOT push back via /seed —
 # they're metadata Joget assigns. id is regenerated; the rest are populated
@@ -356,6 +366,164 @@ def seed_master_data(dry_run=False):
     return err
 
 
+# ─── Phase 5: App Builder API endpoint definitions ──────────────────────────
+
+def provision_apis(dry_run=False):
+    """Re-provision App Builder API endpoint definitions from
+    app/api-builder/*.json. Each file is an envelope sync_pull.py wrote:
+    {id, name, type, appId, appVersion, description, json} — where `json`
+    is the original API definition string Joget stored.
+
+    Posts to /formcreator/apis with the shape seed.py uses for mm_api rows.
+    Idempotent: form-creator-api upserts by (appId, name)."""
+    if not API_BUILDER_DIR.is_dir():
+        print(f"\n=== Phase 5: API Builder — directory missing, skipping ===")
+        print("    (run `make sync` first to capture API definitions from a")
+        print("     reachable Joget instance, then re-run install_app.py)")
+        return 0
+    files = sorted(API_BUILDER_DIR.glob("*.json"))
+    print(f"\n=== Phase 5: API Builder ({len(files)} endpoints) ===")
+    ok = err = 0
+    for f in files:
+        try:
+            env = json.loads(f.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            print(f"  {f.name:40s} BAD JSON: {e}")
+            err += 1
+            continue
+        name = env.get("name")
+        if not name:
+            print(f"  {f.name:40s} missing 'name'")
+            err += 1
+            continue
+        if dry_run:
+            print(f"  {name:40s} (would provision)")
+            ok += 1
+            continue
+        # /formcreator/apis upsert payload — same shape as seed.py uses for
+        # mm_api rows. The 'json' field carries the original API definition
+        # string Joget stored; form-creator-api passes it through to
+        # AppBuilderDao.add() / .update() which round-trips it byte-faithfully.
+        payload = {
+            "appId":       APP_ID,
+            "code":        name,
+            "name":        name,
+            "description": env.get("description") or "",
+            # Pass through the original API definition unchanged.
+            "json":        env.get("json", ""),
+        }
+        status, body = post_json(APIS_URL, payload)
+        if status == 200:
+            inner = unwrap_message(body) or {}
+            api_id = inner.get("apiId", "") if isinstance(inner, dict) else ""
+            print(f"  {name:40s} ok ({api_id})")
+            ok += 1
+        else:
+            print(f"  {name:40s} HTTP {status} — {body[:150]}")
+            err += 1
+    print(f"--- Phase 5 done: {ok} ok, {err} errors ---")
+    return err
+
+
+# ─── Phase 6: Operational data restore ──────────────────────────────────────
+
+def seed_operational_data(dry_run=False):
+    """Seed every YAML under app/seeds/data/ via /formcreator/seed. Same
+    mechanism as master-data; different table population. Idempotent: forms
+    with a `code` business key upsert; forms without it INSERT new rows on
+    every run (so re-running install_app.py on an already-restored instance
+    will produce duplicates for code-less tables). Acceptable trade-off for
+    a one-shot disaster-recovery install."""
+    if not DATA_DIR.is_dir():
+        print(f"\n=== Phase 6: Operational data — directory missing, skipping ===")
+        print("    (no app/seeds/data/ to restore — fresh install with no")
+        print("     captured operational state. This is normal for a stranger")
+        print("     installing from a public-repo clone.)")
+        return 0
+    files = sorted(DATA_DIR.glob("*.yaml"))
+    print(f"\n=== Phase 6: Operational data ({len(files)} tables) ===")
+    ok = err = empty = 0
+    for f in files:
+        form_id = f.stem
+        try:
+            data = yaml.safe_load(f.read_text(encoding="utf-8"))
+        except yaml.YAMLError as e:
+            print(f"  {form_id:30s} BAD YAML: {e}")
+            err += 1
+            continue
+        if not data:
+            empty += 1
+            continue
+        seed_rows = _yaml_rows_to_seed_rows(data)
+        if not seed_rows:
+            empty += 1
+            continue
+        if dry_run:
+            print(f"  {form_id:30s} (would seed {len(seed_rows)} rows)")
+            ok += 1
+            continue
+        payload = {
+            "appId": APP_ID,
+            "fixtures": [{
+                "formId":      form_id,
+                "businessKey": "code",
+                "rows":        seed_rows,
+            }],
+        }
+        status, body = post_json(SEED_URL, payload)
+        if status == 200:
+            inner = unwrap_message(body) or {}
+            results = inner.get("results", []) if isinstance(inner, dict) else []
+            if results:
+                r = results[0]
+                ins = r.get("inserted", 0)
+                upd = r.get("updated", 0)
+                errs = r.get("errors", [])
+                if errs:
+                    print(f"  {form_id:30s} inserted={ins} updated={upd} "
+                          f"errors={len(errs)} (first: {errs[0]!s:.80s})")
+                    err += 1
+                else:
+                    print(f"  {form_id:30s} inserted={ins} updated={upd}")
+                    ok += 1
+            else:
+                print(f"  {form_id:30s} ok (no result detail)")
+                ok += 1
+        else:
+            print(f"  {form_id:30s} HTTP {status} — {body[:150]}")
+            err += 1
+    print(f"--- Phase 6 done: {ok} ok, {err} errors, {empty} empty ---")
+    return err
+
+
+# ─── Phase 7: Environment variable advisory ─────────────────────────────────
+
+def report_env_vars(dry_run=False):
+    """Report contents of app/seeds/environment.yaml so the operator can
+    manually re-create env vars via App Composer. We don't have a
+    form-creator-api endpoint for env vars (would need a small plugin
+    extension); manual re-creation is two clicks per row in App Composer."""
+    if not ENV_VARS_FILE.is_file():
+        return 0
+    print(f"\n=== Phase 7: Environment variables (advisory) ===")
+    try:
+        rows = yaml.safe_load(ENV_VARS_FILE.read_text(encoding="utf-8")) or []
+    except yaml.YAMLError:
+        print(f"  ! could not parse {ENV_VARS_FILE.name}")
+        return 1
+    if not rows:
+        print("  (none captured)")
+        return 0
+    print("  App Composer → Open farmersPortal → 'Environment Variables' tab.")
+    print("  Re-create each of the following manually:")
+    for row in rows:
+        if isinstance(row, dict):
+            print(f"    {row.get('id'):20s} = {row.get('value')!r}    "
+                  f"({row.get('remarks','')})")
+    print(f"--- Phase 7 done: {len(rows)} env vars to manually restore ---")
+    return 0
+
+
 # ─── Orchestration ──────────────────────────────────────────────────────────
 
 def main():
@@ -384,6 +552,11 @@ def main():
         total_errs += push_userviews(args.dry_run)
     if not args.skip_data:
         total_errs += seed_master_data(args.dry_run)
+    if not args.only_data:
+        total_errs += provision_apis(args.dry_run)
+    if not args.skip_data:
+        total_errs += seed_operational_data(args.dry_run)
+        total_errs += report_env_vars(args.dry_run)
 
     print()
     if total_errs == 0:
