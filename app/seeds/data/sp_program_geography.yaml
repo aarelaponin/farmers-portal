@@ -1,0 +1,58 @@
+# app_fd_sp_program_geography
+# 4 row(s) at sync time
+- id: "prog001-geog"
+  datecreated: "2026-04-26 12:40:25.808027"
+  datemodified: "2026-04-27 09:30:14.309000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_targetzones: "foothills;lowlands"
+  c_collectionpoints: "CP002;CP004;CP005;CP001"
+  c_geographynotes: "Lowland districts only. Foothill villages within these districts also eligible."
+  c_parent_id: "prog001"
+  c_geographicscope: "DISTRICT"
+  c_targetdistricts: "berea;leribe;mafeteng;maseru"
+
+- id: "prog002-geog"
+  datecreated: "2026-04-26 12:40:31.319088"
+  datemodified: "2026-04-26 13:11:03.140000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_targetzones: "mountains;senqu_valley"
+  c_collectionpoints: "CP006;CP007;CP008;CP009;CP010"
+  c_geographynotes: "Mountain districts. Senqu River Valley villages (Mohale's Hoek + Quthing) included."
+  c_parent_id: "prog002"
+  c_geographicscope: "DISTRICT"
+  c_targetdistricts: "mohales-hoek;mokhotlong;qachas-nek;quthing;thaba-tseka"
+
+- id: "prog003-geog"
+  datecreated: "2026-04-26 12:40:36.455576"
+  datemodified: "2026-05-06 20:00:48.002000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_targetzones: "lowlands"
+  c_collectionpoints: "CP005;CP001"
+  c_geographynotes: "Pilot districts only. 6 registered agro-dealers participating per district."
+  c_parent_id: "prog003"
+  c_geographicscope: "DISTRICT"
+  c_targetdistricts: "mafeteng;maseru"
+
+- id: "prog004-geog"
+  datecreated: "2026-04-26 12:40:40.916888"
+  datemodified: "2026-05-08 08:12:16.649000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_targetzones: "foothills;lowlands;mountains;senqu_valley"
+  c_collectionpoints: "CP002;CP003;CP004;CP005;CP001;CP006;CP007;CP008;CP009;CP010"
+  c_geographynotes: "All 10 districts. Distribution proportional to drought severity index."
+  c_parent_id: "prog004"
+  c_geographicscope: "NATIONAL"
+  c_targetdistricts: ""
+

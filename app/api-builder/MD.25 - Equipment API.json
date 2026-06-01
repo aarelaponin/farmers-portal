@@ -1,0 +1,9 @@
+{
+  "id": "API-73618175-a3ec-4867-a949-d6e0184f985d",
+  "name": "MD.25 - Equipment API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md25equipment\",\n            \"ignorePermission\": \"\",\n            \"id\": \"7C314C1E-113B-4AED-9E2B-9419CBF02F7C\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.25 - Equipment API\",\n        \"description\": \"Auto-generated API for form: md25equipment\",\n        \"id\": \"API-73618175-a3ec-4867-a949-d6e0184f985d\"\n    }\n}\n"
+}

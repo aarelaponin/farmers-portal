@@ -1,0 +1,9 @@
+{
+  "id": "API-c5433d20-0c8d-4fb8-a9c0-685c89244d40",
+  "name": "MD.23 - Document Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md23documentType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"FA1B82D8-7D9F-4FA1-9D28-903AC7A2E80B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.23 - Document Type API\",\n        \"description\": \"Auto-generated API for form: md23documentType\",\n        \"id\": \"API-c5433d20-0c8d-4fb8-a9c0-685c89244d40\"\n    }\n}\n"
+}

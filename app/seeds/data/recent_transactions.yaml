@@ -1,0 +1,41 @@
+# app_fd_recent_transactions
+# 3 row(s) at sync time
+- id: "015199f6-310b-4167-8fd2-5379744a3997"
+  datecreated: "2024-12-11 16:02:33"
+  datemodified: "2024-12-11 16:14:43"
+  createdby: "Gurujot"
+  createdbyname: "Gurujot Singh"
+  modifiedby: "Gurujot"
+  modifiedbyname: "Gurujot Singh"
+  c_date: "May 23, 2024"
+  c_image: ""
+  c_amount: "+$1000"
+  c_name: "Health Track"
+  c_type: "Income"
+
+- id: "3b84bebd-cb7c-460a-a7c3-7a1b4d5173fb"
+  datecreated: "2024-12-11 16:02:20"
+  datemodified: "2024-12-11 16:02:20"
+  createdby: "Gurujot"
+  createdbyname: "Gurujot Singh"
+  modifiedby: "Gurujot"
+  modifiedbyname: "Gurujot Singh"
+  c_date: "May 24, 2024"
+  c_image: null
+  c_amount: "-$200"
+  c_name: "Eco Build"
+  c_type: "Expense"
+
+- id: "c0cf64cc-650d-437c-837d-8e9940292c2e"
+  datecreated: "2024-12-11 16:02:06"
+  datemodified: "2024-12-11 16:02:06"
+  createdby: "Gurujot"
+  createdbyname: "Gurujot Singh"
+  modifiedby: "Gurujot"
+  modifiedbyname: "Gurujot Singh"
+  c_date: "May 25, 2024"
+  c_image: null
+  c_amount: "-$500"
+  c_name: "Swift Ads"
+  c_type: "Payment"
+

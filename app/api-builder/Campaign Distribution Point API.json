@@ -1,0 +1,9 @@
+{
+  "id": "API-86c98510-d669-493c-a645-1b033f336131",
+  "name": "Campaign Distribution Point API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imCampaignDistPt\",\n            \"ignorePermission\": \"\",\n            \"id\": \"6C92A791-14B4-4A42-A410-1E7801E65A05\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Campaign Distribution Point API\",\n        \"description\": \"Auto-generated API for form: imCampaignDistPt\",\n        \"id\": \"API-86c98510-d669-493c-a645-1b033f336131\"\n    }\n}\n"
+}

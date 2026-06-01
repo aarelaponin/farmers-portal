@@ -1,0 +1,9 @@
+{
+  "id": "API-f41b2ef4-b33c-4843-bc5b-ff4e8885ffbd",
+  "name": "MD.20 - Support Program API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md20supportProgram\",\n            \"ignorePermission\": \"\",\n            \"id\": \"129914F7-52DD-4AA3-A581-E8E81B359345\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.20 - Support Program API\",\n        \"description\": \"Auto-generated API for form: md20supportProgram\",\n        \"id\": \"API-f41b2ef4-b33c-4843-bc5b-ff4e8885ffbd\"\n    }\n}\n"
+}

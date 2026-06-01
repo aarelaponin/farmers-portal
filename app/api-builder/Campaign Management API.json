@@ -1,0 +1,9 @@
+{
+  "id": "API-9ca5f49c-14c8-4aa4-80a0-5c7297511b72",
+  "name": "Campaign Management API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imCampaign\",\n            \"ignorePermission\": \"\",\n            \"id\": \"FA1DDB2D-A80D-4B03-8956-D4ACD9EBE32E\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Campaign Management API\",\n        \"description\": \"Auto-generated API for form: imCampaign\",\n        \"id\": \"API-9ca5f49c-14c8-4aa4-80a0-5c7297511b72\"\n    }\n}\n"
+}

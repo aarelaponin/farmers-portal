@@ -1,0 +1,28 @@
+# app_fd_im_stock_txn_line
+# 2 row(s) at sync time
+- id: "04e6e95e-3c15-4ab8-9163-fcc28faff346"
+  datecreated: "2026-05-08 08:22:58.874000"
+  datemodified: "2026-05-08 08:22:58.874000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_txn_id: "16c9c8f3-e85a-4da4-85a0-889f3edf28d8"
+  c_quantity: "12"
+  c_line_notes: ""
+  c_unit_price: ""
+  c_input_code: "SEED_BEANS_KK15_50KG"
+
+- id: "b980949d-5b51-451a-9121-8ccc487209e5"
+  datecreated: "2026-05-06 13:40:12.172000"
+  datemodified: "2026-05-06 13:40:12.172000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_txn_id: "8fde9f8e-5cb2-4237-9e84-e7befae00182"
+  c_quantity: "20"
+  c_line_notes: ""
+  c_unit_price: ""
+  c_input_code: "FERT_NPK_50KG"
+

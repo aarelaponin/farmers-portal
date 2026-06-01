@@ -1,0 +1,9 @@
+{
+  "id": "API-0bb86819-ff34-41c4-88a4-de45fcfe970f",
+  "name": "MD.47 - Package Content API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md47PackageContent\",\n            \"ignorePermission\": \"\",\n            \"id\": \"C33D1998-CEA8-4671-A0A4-A0EA297EC49E\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.47 - Package Content API\",\n        \"description\": \"Auto-generated API for form: md47PackageContent\",\n        \"id\": \"API-0bb86819-ff34-41c4-88a4-de45fcfe970f\"\n    }\n}\n"
+}

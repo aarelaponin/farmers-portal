@@ -1,0 +1,9 @@
+{
+  "id": "API-068737d6-dfe3-423d-8ab7-e4299189b589",
+  "name": "01 - Farmer Registration Form API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"farmerRegistrationForm\",\n            \"ignorePermission\": \"\",\n            \"id\": \"719FDECB-F16D-4136-A77B-82CAAB3155A0\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01 - Farmer Registration Form API\",\n        \"description\": \"Auto-generated API for form: farmerRegistrationForm\",\n        \"id\": \"API-068737d6-dfe3-423d-8ab7-e4299189b589\"\n    }\n}\n"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "API-87e9df36-e3a9-4bff-86a7-d8fae9063c60",
+  "name": "MD.07 - Livelihood Source API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md07livelihoodSource\",\n            \"ignorePermission\": \"\",\n            \"id\": \"EBBC73FE-9052-4BC7-A622-FCB116347530\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.07 - Livelihood Source API\",\n        \"description\": \"Auto-generated API for form: md07livelihoodSource\",\n        \"id\": \"API-87e9df36-e3a9-4bff-86a7-d8fae9063c60\"\n    }\n}\n"
+}

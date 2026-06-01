@@ -1,0 +1,20 @@
+# app_fd_im_allocation_plan
+# 1 row(s) at sync time
+- id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_approved_by: "Program Manager (Demo)"
+  c_approval_date: "2025-07-15"
+  c_code: "AP_PRG_2025_001_2025-26"
+  c_notes: "Effective_to rolled to 2026-12-31 for demo."
+  c_cycle_label: "2025/26 lowlands maize season"
+  c_name: "Block Farming — Maize Lowlands 2025/26 Allocation Plan"
+  c_programme_code: "PRG_2025_001"
+  c_effective_to: "2026-12-31"
+  c_effective_from: "2025-08-01"
+  c_status: "approved"
+

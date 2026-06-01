@@ -1,0 +1,9 @@
+{
+  "id": "API-d87957ba-4555-480c-bef1-0c956e88903d",
+  "name": "02.03-1 - Crop Detail API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"cropDetailForm\",\n            \"ignorePermission\": \"\",\n            \"id\": \"516407F4-6328-4C03-BBB0-094A52FB7772\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"02.03-1 - Crop Detail API\",\n        \"description\": \"Auto-generated API for form: cropDetailForm\",\n        \"id\": \"API-d87957ba-4555-480c-bef1-0c956e88903d\"\n    }\n}\n"
+}

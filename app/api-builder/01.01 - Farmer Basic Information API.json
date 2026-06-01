@@ -1,0 +1,9 @@
+{
+  "id": "API-a7735b09-36be-453d-a385-cdff0c3df7b0",
+  "name": "01.01 - Farmer Basic Information API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"farmerBasicInfo\",\n            \"ignorePermission\": \"\",\n            \"id\": \"EE75FC45-BA27-4D10-8DB8-442865D6793F\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01.01 - Farmer Basic Information API\",\n        \"description\": \"Auto-generated API for form: farmerBasicInfo\",\n        \"id\": \"API-a7735b09-36be-453d-a385-cdff0c3df7b0\"\n    }\n}\n"
+}

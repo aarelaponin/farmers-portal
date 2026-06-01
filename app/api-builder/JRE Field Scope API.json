@@ -1,0 +1,9 @@
+{
+  "id": "API-b4b82e65-9623-4ee0-9138-01c48cd40bbe",
+  "name": "JRE Field Scope API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"jreFieldScope\",\n            \"ignorePermission\": \"\",\n            \"id\": \"F7C21DBC-7639-4FD5-9B48-49EBBD61A11F\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"JRE Field Scope API\",\n        \"description\": \"Auto-generated API for form: jreFieldScope\",\n        \"id\": \"API-b4b82e65-9623-4ee0-9138-01c48cd40bbe\"\n    }\n}\n"
+}

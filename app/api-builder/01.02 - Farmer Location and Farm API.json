@@ -1,0 +1,9 @@
+{
+  "id": "API-30dcfc48-44bf-4aaf-95df-8370590be7b4",
+  "name": "01.02 - Farmer Location and Farm API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"farmerResidency\",\n            \"ignorePermission\": \"\",\n            \"id\": \"9ADA2E06-5C35-4DF6-A9CA-67B9B191982B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01.02 - Farmer Location and Farm API\",\n        \"description\": \"Auto-generated API for form: farmerResidency\",\n        \"id\": \"API-30dcfc48-44bf-4aaf-95df-8370590be7b4\"\n    }\n}\n"
+}

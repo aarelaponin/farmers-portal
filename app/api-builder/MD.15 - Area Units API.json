@@ -1,0 +1,9 @@
+{
+  "id": "API-12aad22b-1588-4b44-ab54-97dfcd355573",
+  "name": "MD.15 - Area Units API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md15areaUnits\",\n            \"ignorePermission\": \"\",\n            \"id\": \"09DE9CA8-DF54-4475-8883-4D26EA513179\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.15 - Area Units API\",\n        \"description\": \"Auto-generated API for form: md15areaUnits\",\n        \"id\": \"API-12aad22b-1588-4b44-ab54-97dfcd355573\"\n    }\n}\n"
+}

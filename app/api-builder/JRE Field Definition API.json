@@ -1,0 +1,9 @@
+{
+  "id": "API-99c9c15b-e10b-49d0-99cb-577aa6bdcb70",
+  "name": "JRE Field Definition API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"jreFieldDefinition\",\n            \"ignorePermission\": \"\",\n            \"id\": \"5CAE9348-7689-4276-B418-26CC41C2BA4D\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"JRE Field Definition API\",\n        \"description\": \"Auto-generated API for form: jreFieldDefinition\",\n        \"id\": \"API-99c9c15b-e10b-49d0-99cb-577aa6bdcb70\"\n    }\n}\n"
+}

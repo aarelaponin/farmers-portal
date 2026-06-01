@@ -1,0 +1,338 @@
+# app_fd_sp_application_elig_chk
+# 21 row(s) at sync time
+- id: "05516892-0b4f-4e9a-a105-ffb79add6fe6"
+  datecreated: "2026-05-01 17:39:16.015000"
+  datemodified: "2026-05-01 17:39:16.015000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Block plan signed by chief & cooperative"
+  c_evaluator_note: ""
+  c_rule_type: "PRIORITY"
+  c_programme_criterion_id: "ec-003-03"
+  c_parent_id: "2dbc894e-b2b7-4499-a2a9-0d0c1030bf50"
+  c_field_category: "PROGRAMME"
+  c_applicant_response: ""
+  c_criterion_severity: "ADVISORY"
+
+- id: "05944cdd-a7af-4582-be98-5c56dc2b16a1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Parcel must be ≤ 2 ha"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-02"
+  c_parent_id: "ea956051-e930-4343-bab3-3b571d41f542"
+  c_field_category: "PARCEL"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "09ba2624-46bb-4799-97dd-a161c28160ae"
+  datecreated: "2026-05-01 17:39:18.015000"
+  datemodified: "2026-05-01 17:39:18.015000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Returning block member from prior season"
+  c_evaluator_note: ""
+  c_rule_type: "BONUS"
+  c_programme_criterion_id: "ec-003-05"
+  c_parent_id: "2dbc894e-b2b7-4499-a2a9-0d0c1030bf50"
+  c_field_category: "HOUSEHOLD"
+  c_applicant_response: ""
+  c_criterion_severity: "ADVISORY"
+
+- id: "314f4aa3-37bb-4ef4-a1a0-7630d6deb1b5"
+  datecreated: "2026-05-01 17:39:15.015000"
+  datemodified: "2026-05-01 17:39:15.015000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Contributing ≥0.5 ha to a block"
+  c_evaluator_note: ""
+  c_rule_type: "PRIORITY"
+  c_programme_criterion_id: "ec-003-02"
+  c_parent_id: "2dbc894e-b2b7-4499-a2a9-0d0c1030bf50"
+  c_field_category: "PARCEL"
+  c_applicant_response: ""
+  c_criterion_severity: "ADVISORY"
+
+- id: "33896eaa-f375-476f-a3aa-56a0cd1d9461"
+  datecreated: "2026-04-27 16:21:02.480000"
+  datemodified: "2026-04-27 19:40:38.033000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Cannot be enrolled in another input subsidy"
+  c_evaluator_note: ""
+  c_rule_type: "EXCLUSION"
+  c_programme_criterion_id: "ec-001-04"
+  c_parent_id: "419b6f0d-94c8-4487-9768-0f945ed8705d"
+  c_field_category: "HOUSEHOLD"
+  c_applicant_response: "YES"
+  c_criterion_severity: "ADVISORY"
+
+- id: "447bd7ca-249d-4090-bd1d-626aaa7b7760"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Farmer profile must be active"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-01"
+  c_parent_id: "dcb029a3-ffc2-4d04-bf11-ff36a10aaece"
+  c_field_category: "FARMER"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "498882f4-bd5d-4253-97a6-f3bb3354f67a"
+  datecreated: "2026-04-27 16:21:01.480000"
+  datemodified: "2026-04-27 19:40:38.033000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Must have grown cereal in previous season"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-03"
+  c_parent_id: "419b6f0d-94c8-4487-9768-0f945ed8705d"
+  c_field_category: "PARCEL"
+  c_applicant_response: "YES"
+  c_criterion_severity: "MANDATORY"
+
+- id: "501416d3-8c3b-4304-b51e-fdbe348acd48"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Must have grown cereal in previous season"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-03"
+  c_parent_id: "ea956051-e930-4343-bab3-3b571d41f542"
+  c_field_category: "PARCEL"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "5d3f4ac7-9ff2-4a53-a30a-32f336980a08"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Cannot be enrolled in another input subsidy"
+  c_evaluator_note: ""
+  c_rule_type: "EXCLUSION"
+  c_programme_criterion_id: "ec-001-04"
+  c_parent_id: "dcb029a3-ffc2-4d04-bf11-ff36a10aaece"
+  c_field_category: "HOUSEHOLD"
+  c_applicant_response: ""
+  c_criterion_severity: "ADVISORY"
+
+- id: "66e2412a-15d1-4bf1-96b1-06b4fd0211f7"
+  datecreated: "2026-04-27 16:20:59.480000"
+  datemodified: "2026-04-27 19:40:38.033000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Farmer profile must be active"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-01"
+  c_parent_id: "419b6f0d-94c8-4487-9768-0f945ed8705d"
+  c_field_category: "FARMER"
+  c_applicant_response: "YES"
+  c_criterion_severity: "MANDATORY"
+
+- id: "6b0b505b-da04-4084-a7f9-11b38853ab7a"
+  datecreated: "2026-05-01 17:39:14.015000"
+  datemodified: "2026-05-01 17:39:14.015000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Cooperative member"
+  c_evaluator_note: ""
+  c_rule_type: "PRIORITY"
+  c_programme_criterion_id: "ec-003-01"
+  c_parent_id: "2dbc894e-b2b7-4499-a2a9-0d0c1030bf50"
+  c_field_category: "FARMER"
+  c_applicant_response: "YES"
+  c_criterion_severity: "ADVISORY"
+
+- id: "6e4c3653-c41b-4117-8af4-a175d7d114ad"
+  datecreated: "2026-04-27 16:21:00.480000"
+  datemodified: "2026-04-27 19:40:38.033000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Parcel must be ≤ 2 ha"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-02"
+  c_parent_id: "419b6f0d-94c8-4487-9768-0f945ed8705d"
+  c_field_category: "PARCEL"
+  c_applicant_response: "YES"
+  c_criterion_severity: "MANDATORY"
+
+- id: "888eef89-42a7-4bc0-aa0f-1c5577c635f0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Must have grown cereal in previous season"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-03"
+  c_parent_id: "dcb029a3-ffc2-4d04-bf11-ff36a10aaece"
+  c_field_category: "PARCEL"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "9511ef20-0aa2-4f21-a490-c06151bbf03e"
+  datecreated: "2026-04-27 15:18:51.676022"
+  datemodified: "2026-04-27 15:49:57.013000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Cannot be enrolled in another input subsidy"
+  c_evaluator_note: ""
+  c_rule_type: "EXCLUSION"
+  c_programme_criterion_id: "ec-001-04"
+  c_parent_id: "54e98cd8-cb09-41b5-9e2d-b276f6aed4ab"
+  c_field_category: "HOUSEHOLD"
+  c_applicant_response: ""
+  c_criterion_severity: "ADVISORY"
+
+- id: "9b3c0d8b-a294-4199-a6b6-a23a7f102af4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Cannot be enrolled in another input subsidy"
+  c_evaluator_note: ""
+  c_rule_type: "EXCLUSION"
+  c_programme_criterion_id: "ec-001-04"
+  c_parent_id: "ea956051-e930-4343-bab3-3b571d41f542"
+  c_field_category: "HOUSEHOLD"
+  c_applicant_response: ""
+  c_criterion_severity: "ADVISORY"
+
+- id: "bcdc3f31-1990-430a-b1bc-ed0a1fcc5bc1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Farmer profile must be active"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-01"
+  c_parent_id: "ea956051-e930-4343-bab3-3b571d41f542"
+  c_field_category: "FARMER"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "c2f278b9-b428-4895-b379-a86f56f9e57e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_criterion_label: "Parcel must be ≤ 2 ha"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-02"
+  c_parent_id: "dcb029a3-ffc2-4d04-bf11-ff36a10aaece"
+  c_field_category: "PARCEL"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "ca1916ec-5ed1-4c04-962d-ccd2eb597d30"
+  datecreated: "2026-04-27 15:18:51.676022"
+  datemodified: "2026-04-27 15:49:57.013000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Farmer profile must be active"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-01"
+  c_parent_id: "54e98cd8-cb09-41b5-9e2d-b276f6aed4ab"
+  c_field_category: "FARMER"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "cad7ea6a-725d-49fd-b8bd-101f98072da2"
+  datecreated: "2026-04-27 15:18:51.676022"
+  datemodified: "2026-04-27 15:49:57.013000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Parcel must be ≤ 2 ha"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-02"
+  c_parent_id: "54e98cd8-cb09-41b5-9e2d-b276f6aed4ab"
+  c_field_category: "PARCEL"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "cb519151-7b36-47ff-8b87-f6f89feceb1f"
+  datecreated: "2026-05-01 17:39:17.015000"
+  datemodified: "2026-05-01 17:39:17.015000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Farmer profile must be active"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-003-04"
+  c_parent_id: "2dbc894e-b2b7-4499-a2a9-0d0c1030bf50"
+  c_field_category: "FARMER"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+
+- id: "d11e9ac9-d673-498a-9fad-1cf64cf662a5"
+  datecreated: "2026-04-27 15:18:51.676022"
+  datemodified: "2026-04-27 15:49:57.013000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_criterion_label: "Must have grown cereal in previous season"
+  c_evaluator_note: ""
+  c_rule_type: "INCLUSION"
+  c_programme_criterion_id: "ec-001-03"
+  c_parent_id: "54e98cd8-cb09-41b5-9e2d-b276f6aed4ab"
+  c_field_category: "PARCEL"
+  c_applicant_response: ""
+  c_criterion_severity: "MANDATORY"
+

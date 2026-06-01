@@ -1,0 +1,9 @@
+{
+  "id": "API-d84be52d-dc8c-4ca7-8d22-5d289817bd11",
+  "name": "MD.17 - Income Source API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md17incomeSource\",\n            \"ignorePermission\": \"\",\n            \"id\": \"B597AA1F-B019-417F-93E7-A181DAC667D3\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.17 - Income Source API\",\n        \"description\": \"Auto-generated API for form: md17incomeSource\",\n        \"id\": \"API-d84be52d-dc8c-4ca7-8d22-5d289817bd11\"\n    }\n}\n"
+}

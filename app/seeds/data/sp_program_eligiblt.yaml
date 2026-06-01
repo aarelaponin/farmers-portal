@@ -1,0 +1,54 @@
+# app_fd_sp_program_eligiblt
+# 4 row(s) at sync time
+- id: "prog001-elig"
+  datecreated: "2026-04-26 12:40:26.442426"
+  datemodified: "2026-04-26 12:40:26.442430"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_parent_id: "prog001"
+  c_evaluationstrategy: "SCORE_BASED"
+  c_eligibilitynotes: "Targeting score combines smallholder land area, food security status, and recent participation history."
+  c_passingthreshold: "50"
+  c_minimumscore: "40"
+
+- id: "prog002-elig"
+  datecreated: "2026-04-26 12:40:31.956112"
+  datemodified: "2026-04-26 13:50:56.516000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "prog002"
+  c_evaluationstrategy: "SCORE_BASED"
+  c_eligibilitynotes: "Community recommendation + smallholder + altitude residency check."
+  c_passingthreshold: "40"
+  c_minimumscore: "30"
+
+- id: "prog003-elig"
+  datecreated: "2026-04-26 12:40:37.135428"
+  datemodified: "2026-05-06 20:01:23.347000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "prog003"
+  c_evaluationstrategy: "SCORE_BASED"
+  c_eligibilitynotes: "Stricter targeting: food security MODERATE+ AND vulnerability ≥50 AND not enrolled in concurrent programmes."
+  c_passingthreshold: "60"
+  c_minimumscore: "55"
+
+- id: "prog004-elig"
+  datecreated: "2026-04-26 12:40:41.633672"
+  datemodified: "2026-05-08 08:13:37.506000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "prog004"
+  c_evaluationstrategy: "ALL_MUST_PASS"
+  c_eligibilitynotes: "Mandatory: household resident in Lesotho + flagged SEVERE/CRISIS food security."
+  c_passingthreshold: "0"
+  c_minimumscore: "0"
+

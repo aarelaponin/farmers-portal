@@ -1,0 +1,9 @@
+{
+  "id": "API-0f99b01d-60c2-4ac8-94b7-4d97827ed6bd",
+  "name": "MD.37 - Collection Point API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md37collectionPoint\",\n            \"ignorePermission\": \"\",\n            \"id\": \"45CC72F5-76CB-4BC7-BACD-1E5E200EE68C\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.37 - Collection Point API\",\n        \"description\": \"Auto-generated API for form: md37collectionPoint\",\n        \"id\": \"API-0f99b01d-60c2-4ac8-94b7-4d97827ed6bd\"\n    }\n}\n"
+}

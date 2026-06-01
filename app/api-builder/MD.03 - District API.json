@@ -1,0 +1,9 @@
+{
+  "id": "API-d793713e-5b0d-4a51-b1d0-4f92bfc76022",
+  "name": "MD.03 - District API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md03district\",\n            \"ignorePermission\": \"\",\n            \"id\": \"2C24A11E-3B16-4919-AB79-CB758223F6EB\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.03 - District API\",\n        \"description\": \"Auto-generated API for form: md03district\",\n        \"id\": \"API-d793713e-5b0d-4a51-b1d0-4f92bfc76022\"\n    }\n}\n"
+}

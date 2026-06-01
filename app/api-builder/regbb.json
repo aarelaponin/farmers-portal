@@ -1,0 +1,9 @@
+{
+  "id": "API-168e3678-1f9a-46fc-8c19-d0d9a917eb73",
+  "name": "regbb",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": "",
+  "json": "{\"elements\":[{\"className\":\"global.govstack.regbb.engine.api.RegBbEvalApi\",\"properties\":{\"id\":\"764B4426-891E-4B92-CD2B-92A4E735E65C\",\"ENABLED_PATHS\":\"post:/eval;post:/submit;post:/catalogue/eval;post:/bot_pull/eval;get:/mdm/list\"}}],\"properties\":{\"name\":\"regbb\",\"description\":\"\",\"id\":\"API-168e3678-1f9a-46fc-8c19-d0d9a917eb73\"}}"
+}

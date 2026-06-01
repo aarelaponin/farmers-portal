@@ -1,0 +1,78 @@
+# app_fd_imentitlementitem
+# 4 row(s) at sync time
+- id: "43b8a5e6-ec62-441f-94dd-6ad0a55dd89d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmercontrib: "160.00"
+  c_inputcode: "SEED-MAIZE"
+  c_unit: "kg"
+  c_itemstatus: "PENDING_REDEMPTION"
+  c_entitlementcode: "EN-4140E0"
+  c_inputcategory: ""
+  c_qtyentitled: "20"
+  c_qtyredeemed: "0"
+  c_subsidyamount: "640.00"
+  c_inputname: "Improved Maize Seed (DEKALB)"
+  c_unitvalue: "40"
+
+- id: "91263761-478a-4a25-b6cf-2e254b3f223a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmercontrib: "0.00"
+  c_inputcode: "VOUCHER"
+  c_unit: "voucher"
+  c_itemstatus: "PENDING_REDEMPTION"
+  c_entitlementcode: "EN-0AFDB6"
+  c_inputcategory: ""
+  c_qtyentitled: "15"
+  c_qtyredeemed: "0"
+  c_subsidyamount: "22500.00"
+  c_inputname: "E-Voucher (LSL 1,500)"
+  c_unitvalue: "1500"
+
+- id: "98faa4d7-bfb7-4a39-b94d-9b1bac14f221"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmercontrib: "180.00"
+  c_inputcode: "FERT-UREA"
+  c_unit: "kg"
+  c_itemstatus: "PENDING_REDEMPTION"
+  c_entitlementcode: "EN-4140E0"
+  c_inputcategory: ""
+  c_qtyentitled: "50"
+  c_qtyredeemed: "0"
+  c_subsidyamount: "720.00"
+  c_inputname: "Top-Dressing Urea"
+  c_unitvalue: "18"
+
+- id: "be52e72e-b41a-480e-91d3-5e9312e9180c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmercontrib: "270.00"
+  c_inputcode: "FERT-NPK"
+  c_unit: "kg"
+  c_itemstatus: "PENDING_REDEMPTION"
+  c_entitlementcode: "EN-4140E0"
+  c_inputcategory: ""
+  c_qtyentitled: "90"
+  c_qtyredeemed: "0"
+  c_subsidyamount: "1080.00"
+  c_inputname: "Basal Fertilizer NPK 23-23-0"
+  c_unitvalue: "15"
+

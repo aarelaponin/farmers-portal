@@ -1,0 +1,9 @@
+{
+  "id": "API-f3aba569-7e44-49a7-ad0a-d90222b778f9",
+  "name": "MD.51 - Field Category API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md51FieldCategory\",\n            \"ignorePermission\": \"\",\n            \"id\": \"A1A8589F-624E-4E4C-A8FD-9C443994591A\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.51 - Field Category API\",\n        \"description\": \"Auto-generated API for form: md51FieldCategory\",\n        \"id\": \"API-f3aba569-7e44-49a7-ad0a-d90222b778f9\"\n    }\n}\n"
+}

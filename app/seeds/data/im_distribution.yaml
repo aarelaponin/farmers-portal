@@ -1,0 +1,34 @@
+# app_fd_im_distribution
+# 2 row(s) at sync time
+- id: "18c93c7f-909b-4c58-80ee-29402f814086"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_operator_name: "Mants'ali Panyane"
+  c_code: "DR-E2E-977BA5"
+  c_notes: "Inserted by test_im_e2e.py via formcreator /seed"
+  c_operator_signature: null
+  c_farmer_signature: null
+  c_distribution_date: "2026-05-06"
+  c_voucher_code: "VCH-20260506-0007"
+  c_witness_name: "(test — no witness)"
+
+- id: "9f53e680-23d7-4995-a32c-460bb7c421e9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_operator_name: "E2E Test Applicant CBCF6E52"
+  c_code: "DR-E2E-43B2C1"
+  c_notes: "Inserted by test_im_e2e.py via formcreator /seed"
+  c_operator_signature: null
+  c_farmer_signature: null
+  c_distribution_date: "2026-05-06"
+  c_voucher_code: "VCH-20260506-0005"
+  c_witness_name: "(test — no witness)"
+

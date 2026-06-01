@@ -1,0 +1,92 @@
+# app_fd_sp_application_ben_tab
+# 9 row(s) at sync time
+- id: "08e85c08-57fe-47d1-ad7f-916a8b568bb9"
+  datecreated: "2026-04-27 14:06:05.186000"
+  datemodified: "2026-04-27 14:06:05.186000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "d985433c-c4e4-4a06-af82-44acea0fac5c"
+  c_benefitgrid: "[{\"\":\"\",\"subsidy_percent\":\"\",\"item_code\":\"\",\"approved_qty\":\"\",\"programme_benefit_id\":\"\",\"requested_qty\":\"\",\"unit\":\"\",\"item_label\":\"\",\"parent_id\":\"\",\"subsidy_amount\":\"\",\"unit_cost\":\"\",\"default_quantity\":\"\",\"id\":\"1bf130b4-c9d0-49ab-a72f-48627f614947\",\"__UNIQUEKEY__\":\"36e0dab3-16d8-494d-ac08-30f555320cd7\",\"status\":\"APPROVED\"}]"
+
+- id: "0ed69682-f0d3-41fa-914a-521016c0fc69"
+  datecreated: "2026-04-27 13:53:09.218000"
+  datemodified: "2026-04-27 13:53:09.218000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "ae92edbc-8401-4b1a-9d80-ae5eaf6fe5f1"
+  c_benefitgrid: "[]"
+
+- id: "2f7831f8-45f4-4e43-9df0-ae804d3a21e5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_parent_id: "4e304b42-9869-49e0-a403-edc07edac0b7"
+  c_benefitgrid: null
+
+- id: "3821c9ba-5aa4-4c04-b577-fcd6fad82e8f"
+  datecreated: "2026-04-27 16:21:02.995000"
+  datemodified: "2026-04-27 20:09:59.288000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "4140e0a9-02e7-43f1-a18f-902a9250255b"
+  c_benefitgrid: null
+
+- id: "8bc4b2cc-a07d-4960-814d-0cc3599db80e"
+  datecreated: "2026-04-27 14:14:02.547000"
+  datemodified: "2026-04-27 14:28:42.589000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "59e00f07-8516-4e58-a71b-0e9d650640e3"
+  c_benefitgrid: "[{\"\":\"\",\"subsidy_percent\":\"\",\"item_code\":\"\",\"approved_qty\":\"10\",\"programme_benefit_id\":\"\",\"requested_qty\":\"10\",\"unit\":\"\",\"item_label\":\"\",\"parent_id\":\"\",\"subsidy_amount\":\"\",\"unit_cost\":\"\",\"default_quantity\":\"\",\"id\":\"20c1d7d8-eaba-4e33-9dee-4269759e58ad\",\"__UNIQUEKEY__\":\"f4fc9c39-530f-46c7-b336-f4d4c7b4edf8\",\"status\":\"APPROVED\"},{\"\":\"\",\"subsidy_percent\":\"\",\"item_code\":\"\",\"approved_qty\":\"11\",\"programme_benefit_id\":\"\",\"requested_qty\":\"11\",\"unit\":\"\",\"item_label\":\"\",\"parent_id\":\"\",\"subsidy_amount\":\"\",\"unit_cost\":\"\",\"default_quantity\":\"\",\"id\":\"d3474e67-036c-4c3f-9e93-6864bfd7659d\",\"__UNIQUEKEY__\":\"6662bfdd-cef6-4868-89c7-fcebccbdd1a1\",\"status\":\"APPROVED\"}]"
+
+- id: "8cf5daac-c1bc-4945-9e58-33b7a08072f9"
+  datecreated: "2026-05-01 17:40:08.659000"
+  datemodified: "2026-05-01 17:40:08.659000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "0afdb6b5-7a7d-46ec-a069-9e5cd17a1216"
+  c_benefitgrid: null
+
+- id: "d3ff0223-74f8-4cf9-9596-b3474b50e9a9"
+  datecreated: "2026-04-27 15:10:34.757166"
+  datemodified: "2026-04-27 15:49:59.765000"
+  createdby: "admin"
+  createdbyname: "Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "e6ba9e1b-9a45-4676-ad7d-477857f71fe8"
+  c_benefitgrid: "[]"
+
+- id: "d43f39ed-98bc-4aad-9fae-ee34898eee4d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_parent_id: "42f95b01-d3c8-4118-8674-35a1c903116c"
+  c_benefitgrid: null
+
+- id: "fbd0ab8a-ab4a-4370-8200-d80089957170"
+  datecreated: "2026-04-27 14:51:07.454000"
+  datemodified: "2026-04-27 14:51:52.657000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "f435f454-0047-42b9-a722-d0312452458e"
+  c_benefitgrid: null
+

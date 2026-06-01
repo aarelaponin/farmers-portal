@@ -1,0 +1,9 @@
+{
+  "id": "API-96be280f-ecb3-4558-a1f2-c5755a53e2e1",
+  "name": "MD.49 - Expected Yield Baseline API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md49ExpYield\",\n            \"ignorePermission\": \"\",\n            \"id\": \"5FD86208-62BF-4FAF-B9A4-03CA24551FCF\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.49 - Expected Yield Baseline API\",\n        \"description\": \"Auto-generated API for form: md49ExpYield\",\n        \"id\": \"API-96be280f-ecb3-4558-a1f2-c5755a53e2e1\"\n    }\n}\n"
+}

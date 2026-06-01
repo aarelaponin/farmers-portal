@@ -1,0 +1,9 @@
+{
+  "id": "API-f4d5691c-34ae-4cd7-9daa-d6f923be90a2",
+  "name": "Distribution Item API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imDistribItem\",\n            \"ignorePermission\": \"\",\n            \"id\": \"CBC9CA65-E377-48AA-BF23-BE056EDF93EF\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Distribution Item API\",\n        \"description\": \"Auto-generated API for form: imDistribItem\",\n        \"id\": \"API-f4d5691c-34ae-4cd7-9daa-d6f923be90a2\"\n    }\n}\n"
+}

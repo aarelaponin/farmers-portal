@@ -1,0 +1,66 @@
+# app_fd_sp_program_benefits
+# 4 row(s) at sync time
+- id: "prog001-bnft"
+  datecreated: "2026-04-26 12:40:26.230480"
+  datemodified: "2026-04-26 12:40:26.230486"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_benefitdescription: "Standard input package: 25 kg improved maize seed (DEKALB or equivalent), 100 kg basal NPK, 50 kg top-dressing urea."
+  c_requiresverification: "true"
+  c_distribmodelcode: "DIRECT_GOV"
+  c_parent_id: "prog001"
+  c_benefitnotes: "In-kind delivery via Block Coordinator at registered Resource Centres. No cash component."
+  c_allowedpaymentmethods: "IN_KIND"
+  c_inputpackagecode: ""
+  c_allowpartialbenefit: "false"
+
+- id: "prog002-bnft"
+  datecreated: "2026-04-26 12:40:31.742638"
+  datemodified: "2026-04-26 12:40:31.742650"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_benefitdescription: "Mountain package: 30 kg wheat seed (frost-tolerant variety), 10 kg pea seed, 10 kg bean seed, 100 kg basal NPK."
+  c_requiresverification: "true"
+  c_distribmodelcode: "DIRECT_GOV"
+  c_parent_id: "prog002"
+  c_benefitnotes: "In-kind via highland Resource Centres CP007, CP008, CP009, CP010."
+  c_allowedpaymentmethods: "IN_KIND"
+  c_inputpackagecode: ""
+  c_allowpartialbenefit: "false"
+
+- id: "prog003-bnft"
+  datecreated: "2026-04-26 12:40:36.923236"
+  datemodified: "2026-05-06 20:01:13.337000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_benefitdescription: "LSL 1,500 e-voucher delivered via SMS. Redeemable at registered agro-dealers for seeds, fertilizer, or pesticides per farmer choice."
+  c_requiresverification: ""
+  c_distribmodelcode: "E_VOUCHER"
+  c_parent_id: "prog003"
+  c_benefitnotes: "Triple verification: National ID + SMS code + dealer point-of-sale match."
+  c_allowedpaymentmethods: "E_VOUCHER;MOBILE_MONEY"
+  c_inputpackagecode: ""
+  c_allowpartialbenefit: ""
+
+- id: "prog004-bnft"
+  datecreated: "2026-04-26 12:40:41.340726"
+  datemodified: "2026-05-08 08:12:56.990000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_benefitdescription: "Tier 1: Cash LSL 4,000 × 3 monthly tranches (food-insecure households). Tier 2: Plus livestock fodder allocation 50 kg/cattle-equivalent for households with >5 LSU."
+  c_requiresverification: ""
+  c_distribmodelcode: "DIRECT_GOV"
+  c_parent_id: "prog004"
+  c_benefitnotes: "Cash via mobile money / cash agents. Fodder via Resource Centres."
+  c_allowedpaymentmethods: "CASH_AGENT;IN_KIND;MOBILE_MONEY"
+  c_inputpackagecode: ""
+  c_allowpartialbenefit: ""
+

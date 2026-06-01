@@ -1,0 +1,9 @@
+{
+  "id": "API-90b02a2c-8bbc-4a35-9b4e-dd3985e5100c",
+  "name": "MD.04 - Agro Ecological Zone API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md04agroEcologicalZo\",\n            \"ignorePermission\": \"\",\n            \"id\": \"96B0F605-4894-4339-9052-AEB6F6B33AF9\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.04 - Agro Ecological Zone API\",\n        \"description\": \"Auto-generated API for form: md04agroEcologicalZo\",\n        \"id\": \"API-90b02a2c-8bbc-4a35-9b4e-dd3985e5100c\"\n    }\n}\n"
+}

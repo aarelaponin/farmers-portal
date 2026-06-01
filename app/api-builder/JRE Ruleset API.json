@@ -1,0 +1,9 @@
+{
+  "id": "API-e88258f5-c588-4005-b461-2b706e5dc226",
+  "name": "JRE Ruleset API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"jreRuleset\",\n            \"ignorePermission\": \"\",\n            \"id\": \"17DF7EC4-02E5-4B9D-AEE1-748A65781458\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"JRE Ruleset API\",\n        \"description\": \"Auto-generated API for form: jreRuleset\",\n        \"id\": \"API-e88258f5-c588-4005-b461-2b706e5dc226\"\n    }\n}\n"
+}

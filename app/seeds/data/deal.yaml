@@ -1,0 +1,232 @@
+# app_fd_deal
+# 10 row(s) at sync time
+- id: "0912032f-9ebc-498f-86c7-4e4dd9c81696"
+  datecreated: "2025-05-11 12:42:29"
+  datemodified: "2025-08-15 11:36:43"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin1 Admin"
+  c_deal_date: "2025-05-06"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Acquisition"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "1003db5a-0180-4e04-940d-c71d1fca5c8b"
+  c_name: "Nexora Tech Smart Factory Initiative"
+  c_description_scope: null
+  c_deal_value_win: "100000.00"
+  c_comments_notes: null
+  c_deal_id: "Nexora Tech Smart Factory Initiative - 2025-05-06"
+  c_status: "Won"
+
+- id: "2dc76da5-84e3-4b1f-9293-3a8958dc6c42"
+  datecreated: "2025-05-11 12:38:57"
+  datemodified: "2025-05-11 12:38:57"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-14"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Investment"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "15f5efc4-7f3d-432b-81b8-0ae83e9e2640"
+  c_name: "Nexora Cloud Optimization Suite"
+  c_description_scope: null
+  c_deal_value_win: null
+  c_comments_notes: null
+  c_deal_id: "Nexora Cloud Optimization Suite - 2025-05-14"
+  c_status: "In Progress"
+
+- id: "5611b575-14ad-43fd-bdef-1ae8041ba552"
+  datecreated: "2025-05-11 12:41:04"
+  datemodified: "2025-05-11 12:41:04"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-21"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Joint Venture"
+  c_additional_information: ""
+  c_reason_for_loss: ""
+  c_deal_value_loss: "122.00"
+  c_competitor_involved: "5d9c9dde-ee4b-4087-b29d-e7af2a1e88d2"
+  c_name: "EduSpark Virtual Learning Expansion"
+  c_description_scope: null
+  c_deal_value_win: null
+  c_comments_notes: null
+  c_deal_id: "EduSpark Virtual Learning Expansion - 2025-05-21"
+  c_status: "Lost"
+
+- id: "596dc4cf-b692-49d0-872f-c37c708589ac"
+  datecreated: "2025-05-11 12:39:57"
+  datemodified: "2025-05-11 17:42:33"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-15"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Investment"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "8f84766b-ab45-4eb3-a251-ac9c52b4899d"
+  c_name: "MedixSoft AI Diagnostic Pilot"
+  c_description_scope: null
+  c_deal_value_win: "5.00"
+  c_comments_notes: null
+  c_deal_id: "MedixSoft AI Diagnostic Pilot - 2025-05-15"
+  c_status: "Won"
+
+- id: "5d84a067-36f0-4436-a579-26c18afcdd37"
+  datecreated: "2025-05-11 12:43:53"
+  datemodified: "2025-05-11 17:42:49"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-07"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Service Contract"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "5d9c9dde-ee4b-4087-b29d-e7af2a1e88d2"
+  c_name: "EduSpark AI Learning Companion Rollout"
+  c_description_scope: null
+  c_deal_value_win: null
+  c_comments_notes: null
+  c_deal_id: "EduSpark AI Learning Companion Rollout - 2025-05-07"
+  c_status: "Pending Approval"
+
+- id: "5ed13541-60d6-4f96-98ba-41eae90c4520"
+  datecreated: "2025-05-11 12:41:54"
+  datemodified: "2025-05-11 17:42:57"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-08"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Acquisition"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "cb651fa1-f786-41f0-8c9a-9caa1006e625"
+  c_name: "Finovate Capital API Integration"
+  c_description_scope: null
+  c_deal_value_win: null
+  c_comments_notes: null
+  c_deal_id: "Finovate Capital API Integration - 2025-05-08"
+  c_status: "On Hold"
+
+- id: "8575c989-08ea-40f5-b9a6-6388cf892101"
+  datecreated: "2025-05-11 12:39:28"
+  datemodified: "2025-05-11 17:43:04"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-07"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Investment"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "1003db5a-0180-4e04-940d-c71d1fca5c8b"
+  c_name: "GreenPeak Energy Grid Integration"
+  c_description_scope: null
+  c_deal_value_win: null
+  c_comments_notes: null
+  c_deal_id: "GreenPeak Energy Grid Integration - 2025-05-07"
+  c_status: "Pending Approval"
+
+- id: "aac24440-cad8-4e27-ac50-392bdbd6906c"
+  datecreated: "2025-05-11 12:40:24"
+  datemodified: "2025-05-11 17:43:11"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-22"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Partnership"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "408a7e82-76d0-46fc-a169-b009a0738c79"
+  c_name: "AeroNest Logistics Platform Deployment"
+  c_description_scope: null
+  c_deal_value_win: null
+  c_comments_notes: null
+  c_deal_id: "AeroNest Logistics Platform Deployment - 2025-05-22"
+  c_status: "Contract Review"
+
+- id: "d268f747-1b7b-4cc5-88d9-1028763cd707"
+  datecreated: "2025-05-11 12:43:30"
+  datemodified: "2025-05-11 12:43:30"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-14"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Investment"
+  c_additional_information: ""
+  c_reason_for_loss: ""
+  c_deal_value_loss: "10000.00"
+  c_competitor_involved: "8f84766b-ab45-4eb3-a251-ac9c52b4899d"
+  c_name: "MedixSoft Patient Portal Integration"
+  c_description_scope: null
+  c_deal_value_win: null
+  c_comments_notes: null
+  c_deal_id: "MedixSoft Patient Portal Integration - 2025-05-14"
+  c_status: "Lost"
+
+- id: "f905fcdc-4529-43e5-8dc8-f6886e8c2dcc"
+  datecreated: "2025-05-11 12:42:58"
+  datemodified: "2025-05-11 17:43:24"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_deal_date: "2025-05-07"
+  c_attachments_documents: ""
+  c_key_deliverables: null
+  c_risk_assessment: null
+  c_type: "Acquisition"
+  c_additional_information: ""
+  c_reason_for_loss: null
+  c_deal_value_loss: null
+  c_competitor_involved: "1003db5a-0180-4e04-940d-c71d1fca5c8b"
+  c_name: "GreenPeak Renewable Storage Deployment"
+  c_description_scope: null
+  c_deal_value_win: "150000.00"
+  c_comments_notes: null
+  c_deal_id: "GreenPeak Renewable Storage Deployment - 2025-05-07"
+  c_status: "Won"
+

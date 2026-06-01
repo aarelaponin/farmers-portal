@@ -1,0 +1,10 @@
+# app_environment_variable
+# 2 row(s) at sync time
+- id: "counter"
+  value: "214"
+  remarks: "Used for plugin: Id Generator Field"
+
+- id: "testCounter"
+  value: "1"
+  remarks: "Used for plugin: Id Generator Field"
+

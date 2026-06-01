@@ -1,0 +1,9 @@
+{
+  "id": "API-a7da17e7-37cb-49b2-8c6f-605939625125",
+  "name": "MD.34 - Notification Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md34notificationType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"901E1CB9-0749-4997-8ED1-397F5C2A95E5\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.34 - Notification Type API\",\n        \"description\": \"Auto-generated API for form: md34notificationType\",\n        \"id\": \"API-a7da17e7-37cb-49b2-8c6f-605939625125\"\n    }\n}\n"
+}

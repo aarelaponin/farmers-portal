@@ -1,0 +1,9 @@
+{
+  "id": "API-800d4e0c-a50d-494c-909a-5e1e27dd8685",
+  "name": "MD.26 - Training Topic API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md26trainingTopic\",\n            \"ignorePermission\": \"\",\n            \"id\": \"C1416ECD-2AEE-4381-8D91-B0AE65AB40B9\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.26 - Training Topic API\",\n        \"description\": \"Auto-generated API for form: md26trainingTopic\",\n        \"id\": \"API-800d4e0c-a50d-494c-909a-5e1e27dd8685\"\n    }\n}\n"
+}

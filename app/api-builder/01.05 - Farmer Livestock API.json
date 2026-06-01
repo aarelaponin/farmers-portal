@@ -1,0 +1,9 @@
+{
+  "id": "API-73375fcb-f3ed-4614-8450-72e9f0029ec1",
+  "name": "01.05 - Farmer Livestock API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"farmerCropsLivestock\",\n            \"ignorePermission\": \"\",\n            \"id\": \"C9D4414A-2010-4FA7-A908-55147317CD29\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01.05 - Farmer Livestock API\",\n        \"description\": \"Auto-generated API for form: farmerCropsLivestock\",\n        \"id\": \"API-73375fcb-f3ed-4614-8450-72e9f0029ec1\"\n    }\n}\n"
+}

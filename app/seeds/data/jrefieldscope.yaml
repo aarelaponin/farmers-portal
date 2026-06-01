@@ -1,0 +1,15 @@
+# app_fd_jrefieldscope
+# 1 row(s) at sync time
+- id: "jrescope-farmer-app"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_scopecode: "FARMER_APPLICATION"
+  c_scopename: "Farmer in Application Context"
+  c_contexttype: "PROGRAM"
+  c_description: "Fields available when evaluating a farmer's eligibility for a subsidy programme. Combines static farmer attributes with derived (spFarmerDerived) and program-history fields."
+  c_isactive: "Y"
+

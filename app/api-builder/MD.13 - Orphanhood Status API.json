@@ -1,0 +1,9 @@
+{
+  "id": "API-e4793a36-50ec-4e99-8aae-7f692baf0870",
+  "name": "MD.13 - Orphanhood Status API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md13orphanhoodStatus\",\n            \"ignorePermission\": \"\",\n            \"id\": \"F9A34F23-CF00-485D-8DDE-4B9F7EF6AE51\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.13 - Orphanhood Status API\",\n        \"description\": \"Auto-generated API for form: md13orphanhoodStatus\",\n        \"id\": \"API-e4793a36-50ec-4e99-8aae-7f692baf0870\"\n    }\n}\n"
+}

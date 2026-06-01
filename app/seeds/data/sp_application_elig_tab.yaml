@@ -1,0 +1,102 @@
+# app_fd_sp_application_elig_tab
+# 10 row(s) at sync time
+- id: "0a3eef82-7a99-4783-afca-c48d611a9a48"
+  datecreated: "2026-04-27 15:50:40.633000"
+  datemodified: "2026-04-27 15:50:40.633000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "3987fc65-5295-4876-a876-a2b69da5a195"
+  c_eligibilitygrid: null
+
+- id: "1f053d69-85e7-486b-a438-0b9079129fb8"
+  datecreated: "2026-04-27 14:05:46.197000"
+  datemodified: "2026-04-27 14:05:46.197000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "d985433c-c4e4-4a06-af82-44acea0fac5c"
+  c_eligibilitygrid: "[{\"\":\"\",\"criterion_label\":\"\",\"evaluator_note\":\"\",\"rule_type\":\"\",\"programme_criterion_id\":\"\",\"parent_id\":\"\",\"field_category\":\"\",\"applicant_response\":\"YES\",\"id\":\"34966fcc-18f1-4a82-ae09-816da205a626\",\"criterion_severity\":\"\",\"__UNIQUEKEY__\":\"9f4b7785-0b97-4612-8937-7d2b29739664\"}]"
+
+- id: "216880d2-c33d-4443-a379-228c7108eab3"
+  datecreated: "2026-04-27 13:52:52.134000"
+  datemodified: "2026-04-27 13:52:52.134000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "ae92edbc-8401-4b1a-9d80-ae5eaf6fe5f1"
+  c_eligibilitygrid: "[]"
+
+- id: "2dbc894e-b2b7-4499-a2a9-0d0c1030bf50"
+  datecreated: "2026-05-01 17:39:14.035000"
+  datemodified: "2026-05-01 17:39:14.035000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "0afdb6b5-7a7d-46ec-a069-9e5cd17a1216"
+  c_eligibilitygrid: null
+
+- id: "2e31407b-30a6-43c7-8e52-e7a39ed14227"
+  datecreated: "2026-04-27 14:50:51.690000"
+  datemodified: "2026-04-27 14:51:36.316000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "f435f454-0047-42b9-a722-d0312452458e"
+  c_eligibilitygrid: null
+
+- id: "2e35ffb9-ae58-4ee4-99cf-cefaee55c9f8"
+  datecreated: "2026-04-27 14:13:41.483000"
+  datemodified: "2026-04-27 14:49:57.050000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "59e00f07-8516-4e58-a71b-0e9d650640e3"
+  c_eligibilitygrid: "[{\"\":\"\",\"criterion_label\":\"\",\"evaluator_note\":\"\",\"rule_type\":\"\",\"programme_criterion_id\":\"\",\"parent_id\":\"\",\"field_category\":\"\",\"applicant_response\":\"YES\",\"id\":\"d3941376-7cd7-4614-bba9-6e26426978e1\",\"criterion_severity\":\"\",\"__UNIQUEKEY__\":\"caaef42a-3cca-4c8a-9051-74af641f3925\"},{\"\":\"\",\"criterion_label\":\"\",\"evaluator_note\":\"\",\"rule_type\":\"\",\"programme_criterion_id\":\"\",\"parent_id\":\"\",\"field_category\":\"\",\"applicant_response\":\"YES\",\"id\":\"64f9a18e-18cd-4a14-b148-fdf4fd928aa8\",\"criterion_severity\":\"\",\"__UNIQUEKEY__\":\"5b5673ba-3c35-4c48-9952-0b53a1e2b183\"},{\"\":\"\",\"criterion_label\":\"\",\"evaluator_note\":\"\",\"rule_type\":\"\",\"programme_criterion_id\":\"\",\"parent_id\":\"\",\"field_category\":\"\",\"applicant_response\":\"NA\",\"id\":\"0fe1901a-b840-495e-9145-3df6d6b69b54\",\"criterion_severity\":\"\",\"__UNIQUEKEY__\":\"0ec1c6ce-65aa-45c3-a6a7-8772f557353f\"}]"
+
+- id: "419b6f0d-94c8-4487-9768-0f945ed8705d"
+  datecreated: "2026-04-27 16:20:59.498000"
+  datemodified: "2026-04-27 19:40:38.049000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "4140e0a9-02e7-43f1-a18f-902a9250255b"
+  c_eligibilitygrid: null
+
+- id: "54e98cd8-cb09-41b5-9e2d-b276f6aed4ab"
+  datecreated: "2026-04-27 15:10:34.757166"
+  datemodified: "2026-04-27 15:49:57.029000"
+  createdby: "admin"
+  createdbyname: "Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parent_id: "e6ba9e1b-9a45-4676-ad7d-477857f71fe8"
+  c_eligibilitygrid: "[]"
+
+- id: "dcb029a3-ffc2-4d04-bf11-ff36a10aaece"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_parent_id: "42f95b01-d3c8-4118-8674-35a1c903116c"
+  c_eligibilitygrid: null
+
+- id: "ea956051-e930-4343-bab3-3b571d41f542"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_parent_id: "4e304b42-9869-49e0-a403-edc07edac0b7"
+  c_eligibilitygrid: null
+

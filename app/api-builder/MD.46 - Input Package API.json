@@ -1,0 +1,9 @@
+{
+  "id": "API-86e2cba0-dca8-49e9-8e03-bb3cf9a270c1",
+  "name": "MD.46 - Input Package API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md46InputPackage\",\n            \"ignorePermission\": \"\",\n            \"id\": \"3008C936-03A9-4B13-A422-9551EE23277D\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.46 - Input Package API\",\n        \"description\": \"Auto-generated API for form: md46InputPackage\",\n        \"id\": \"API-86e2cba0-dca8-49e9-8e03-bb3cf9a270c1\"\n    }\n}\n"
+}

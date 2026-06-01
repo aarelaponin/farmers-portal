@@ -1,0 +1,342 @@
+# app_fd_j_stock
+# 20 row(s) at sync time
+- id: "001"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "25.80"
+  c_closing: "25.95"
+  c_stockcode: "ABCD"
+  c_highest: "26.42"
+  c_date: "2015/11/01"
+  c_requestno: null
+  c_open: "26.24"
+  c_username: null
+
+- id: "002"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.18"
+  c_closing: "26.20"
+  c_stockcode: "ABCD"
+  c_highest: "26.46"
+  c_date: "2015/11/02"
+  c_requestno: null
+  c_open: "26.40"
+  c_username: null
+
+- id: "003"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.04"
+  c_closing: "26.08"
+  c_stockcode: "ABCD"
+  c_highest: "26.41"
+  c_date: "2015/11/03"
+  c_requestno: null
+  c_open: "26.37"
+  c_username: null
+
+- id: "004"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.15"
+  c_closing: "26.16"
+  c_stockcode: "ABCD"
+  c_highest: "26.90"
+  c_date: "2015/11/04"
+  c_requestno: null
+  c_open: "26.78"
+  c_username: null
+
+- id: "005"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.51"
+  c_closing: "26.58"
+  c_stockcode: "ABCD"
+  c_highest: "26.99"
+  c_date: "2015/11/05"
+  c_requestno: null
+  c_open: "26.86"
+  c_username: null
+
+- id: "006"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.50"
+  c_closing: "26.55"
+  c_stockcode: "ABCD"
+  c_highest: "27.11"
+  c_date: "2015/11/06"
+  c_requestno: null
+  c_open: "26.95"
+  c_username: null
+
+- id: "007"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.50"
+  c_closing: "26.77"
+  c_stockcode: "ABCD"
+  c_highest: "26.84"
+  c_date: "2015/11/07"
+  c_requestno: null
+  c_open: "27.06"
+  c_username: null
+
+- id: "008"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.43"
+  c_closing: "26.59"
+  c_stockcode: "ABCD"
+  c_highest: "26.83"
+  c_date: "2015/11/08"
+  c_requestno: null
+  c_open: "26.86"
+  c_username: null
+
+- id: "009"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.52"
+  c_closing: "26.59"
+  c_stockcode: "ABCD"
+  c_highest: "26.98"
+  c_date: "2015/11/09"
+  c_requestno: null
+  c_open: "27.10"
+  c_username: null
+
+- id: "010"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.99"
+  c_closing: "27.06"
+  c_stockcode: "ABCD"
+  c_highest: "27.33"
+  c_date: "2015/11/10"
+  c_requestno: null
+  c_open: "27.21"
+  c_username: null
+
+- id: "011"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.91"
+  c_closing: "27.21"
+  c_stockcode: "ABCD"
+  c_highest: "27.17"
+  c_date: "2015/11/11"
+  c_requestno: null
+  c_open: "27.37"
+  c_username: null
+
+- id: "012"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.60"
+  c_closing: "27.02"
+  c_stockcode: "ABCD"
+  c_highest: "27.15"
+  c_date: "2015/11/12"
+  c_requestno: null
+  c_open: "27.07"
+  c_username: null
+
+- id: "013"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.95"
+  c_closing: "26.96"
+  c_stockcode: "ABCD"
+  c_highest: "27.24"
+  c_date: "2015/11/13"
+  c_requestno: null
+  c_open: "27.33"
+  c_username: null
+
+- id: "014"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "26.95"
+  c_closing: "27.23"
+  c_stockcode: "ABCD"
+  c_highest: "27.41"
+  c_date: "2015/11/14"
+  c_requestno: null
+  c_open: "27.27"
+  c_username: null
+
+- id: "015"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "27.07"
+  c_closing: "27.25"
+  c_stockcode: "ABCD"
+  c_highest: "27.86"
+  c_date: "2015/11/15"
+  c_requestno: null
+  c_open: "27.81"
+  c_username: null
+
+- id: "016"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "27.29"
+  c_closing: "27.50"
+  c_stockcode: "ABCD"
+  c_highest: "28.00"
+  c_date: "2015/11/16"
+  c_requestno: null
+  c_open: "27.94"
+  c_username: null
+
+- id: "017"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "27.91"
+  c_closing: "27.97"
+  c_stockcode: "ABCD"
+  c_highest: "28.39"
+  c_date: "2015/11/17"
+  c_requestno: null
+  c_open: "28.26"
+  c_username: null
+
+- id: "018"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "28.05"
+  c_closing: "28.28"
+  c_stockcode: "ABCD"
+  c_highest: "28.30"
+  c_date: "2015/11/18"
+  c_requestno: null
+  c_open: "28.34"
+  c_username: null
+
+- id: "019"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "27.79"
+  c_closing: "27.90"
+  c_stockcode: "ABCD"
+  c_highest: "28.49"
+  c_date: "2015/11/19"
+  c_requestno: null
+  c_open: "28.34"
+  c_username: null
+
+- id: "020"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_firstname: null
+  c_lowest: "27.71"
+  c_closing: "27.77"
+  c_stockcode: "ABCD"
+  c_highest: "27.90"
+  c_date: "2015/11/20"
+  c_requestno: null
+  c_open: "27.84"
+  c_username: null
+

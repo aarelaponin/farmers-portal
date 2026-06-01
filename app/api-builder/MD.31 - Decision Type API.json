@@ -1,0 +1,9 @@
+{
+  "id": "API-f95f3a9b-1195-4d82-a93e-dc37e9318930",
+  "name": "MD.31 - Decision Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md31decisionType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"37B083A8-13E4-4D9D-A4D3-D77C070BFB23\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.31 - Decision Type API\",\n        \"description\": \"Auto-generated API for form: md31decisionType\",\n        \"id\": \"API-f95f3a9b-1195-4d82-a93e-dc37e9318930\"\n    }\n}\n"
+}

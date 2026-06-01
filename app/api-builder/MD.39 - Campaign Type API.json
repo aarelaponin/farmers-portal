@@ -1,0 +1,9 @@
+{
+  "id": "API-f5276cc6-81c8-4bcf-b018-b251a5b14ec8",
+  "name": "MD.39 - Campaign Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md39CampaignType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"CF581858-3E78-4CC2-87FB-00EC8173DBE3\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.39 - Campaign Type API\",\n        \"description\": \"Auto-generated API for form: md39CampaignType\",\n        \"id\": \"API-f5276cc6-81c8-4bcf-b018-b251a5b14ec8\"\n    }\n}\n"
+}

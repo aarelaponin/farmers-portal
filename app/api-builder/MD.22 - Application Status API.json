@@ -1,0 +1,9 @@
+{
+  "id": "API-8a3f4f66-617f-4cd4-a12f-4ebd69dc7f80",
+  "name": "MD.22 - Application Status API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md22applicationStatu\",\n            \"ignorePermission\": \"\",\n            \"id\": \"6D065117-D552-4524-873D-9AD052BE6966\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.22 - Application Status API\",\n        \"description\": \"Auto-generated API for form: md22applicationStatu\",\n        \"id\": \"API-8a3f4f66-617f-4cd4-a12f-4ebd69dc7f80\"\n    }\n}\n"
+}

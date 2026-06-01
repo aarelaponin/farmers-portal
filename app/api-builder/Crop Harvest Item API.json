@@ -1,0 +1,9 @@
+{
+  "id": "API-10870bc2-02d7-43ee-9a85-c16cfb05c5ae",
+  "name": "Crop Harvest Item API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spCropHarvItem\",\n            \"ignorePermission\": \"\",\n            \"id\": \"478CF6B1-998D-408A-91C2-481A423F3C7B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Crop Harvest Item API\",\n        \"description\": \"Auto-generated API for form: spCropHarvItem\",\n        \"id\": \"API-10870bc2-02d7-43ee-9a85-c16cfb05c5ae\"\n    }\n}\n"
+}

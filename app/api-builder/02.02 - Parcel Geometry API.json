@@ -1,0 +1,9 @@
+{
+  "id": "API-87d12ed1-074a-4368-9d9f-169dd2f04db1",
+  "name": "02.02 - Parcel Geometry API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"parcelGeometry\",\n            \"ignorePermission\": \"\",\n            \"id\": \"A36E8C04-99CC-4770-AD75-41EAB6B272F9\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"02.02 - Parcel Geometry API\",\n        \"description\": \"Auto-generated API for form: parcelGeometry\",\n        \"id\": \"API-87d12ed1-074a-4368-9d9f-169dd2f04db1\"\n    }\n}\n"
+}

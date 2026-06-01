@@ -1,0 +1,262 @@
+# app_fd_sp_application_ben_req
+# 13 row(s) at sync time
+- id: "208e71e7-67df-4ae1-8cd4-30e6217b4c8a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-NPK"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Basal Fertilizer NPK 23-23-0"
+  c_parent_id: "2f7831f8-45f4-4e43-9df0-ae804d3a21e5"
+  c_subsidy_amount: "1200"
+  c_unit_cost: "15"
+  c_default_quantity: "100"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-02"
+  c_status: "PENDING"
+
+- id: "37243c0a-ee5c-4c9c-889e-53bf8f09f743"
+  datecreated: "2026-04-27 16:21:04.982000"
+  datemodified: "2026-04-27 20:09:59.275000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_subsidy_percent: "80"
+  c_item_code: "SEED-MAIZE"
+  c_requested_qty: "30"
+  c_unit: "kg"
+  c_item_label: "Improved Maize Seed (DEKALB)"
+  c_parent_id: "3821c9ba-5aa4-4c04-b577-fcd6fad82e8f"
+  c_subsidy_amount: "800"
+  c_unit_cost: "40"
+  c_default_quantity: "25"
+  c_approved_qty: "20"
+  c_programme_benefit_id: "prog001-bi-01"
+  c_status: "REDUCED"
+
+- id: "4dbdfb7c-7d19-4927-a282-49da773a57bb"
+  datecreated: "2026-05-01 17:40:08.654000"
+  datemodified: "2026-05-01 17:40:08.654000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_subsidy_percent: "100"
+  c_item_code: "VOUCHER"
+  c_requested_qty: "15"
+  c_unit: "voucher"
+  c_item_label: "E-Voucher (LSL 1,500)"
+  c_parent_id: "8cf5daac-c1bc-4945-9e58-33b7a08072f9"
+  c_subsidy_amount: "1500"
+  c_unit_cost: "1500"
+  c_default_quantity: "1"
+  c_approved_qty: "15"
+  c_programme_benefit_id: "prog003-bi-01"
+  c_status: "APPROVED"
+
+- id: "68226c0a-a819-4268-ba38-15a86d4cfad7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-UREA"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Top-Dressing Urea"
+  c_parent_id: "d43f39ed-98bc-4aad-9fae-ee34898eee4d"
+  c_subsidy_amount: "720"
+  c_unit_cost: "18"
+  c_default_quantity: "50"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-03"
+  c_status: "PENDING"
+
+- id: "70a6645c-bc33-4b15-9acb-2665bd18dce5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_subsidy_percent: "80"
+  c_item_code: "SEED-MAIZE"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Improved Maize Seed (DEKALB)"
+  c_parent_id: "2f7831f8-45f4-4e43-9df0-ae804d3a21e5"
+  c_subsidy_amount: "800"
+  c_unit_cost: "40"
+  c_default_quantity: "25"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-01"
+  c_status: "PENDING"
+
+- id: "7174acfe-5cf8-4c2f-828e-9c80345d618b"
+  datecreated: "2026-04-27 16:21:03.982000"
+  datemodified: "2026-04-27 20:09:59.275000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-UREA"
+  c_requested_qty: "50"
+  c_unit: "kg"
+  c_item_label: "Top-Dressing Urea"
+  c_parent_id: "3821c9ba-5aa4-4c04-b577-fcd6fad82e8f"
+  c_subsidy_amount: "720"
+  c_unit_cost: "18"
+  c_default_quantity: "50"
+  c_approved_qty: "50"
+  c_programme_benefit_id: "prog001-bi-03"
+  c_status: "APPROVED"
+
+- id: "941beafd-49a0-4c02-b968-626a5c12efc4"
+  datecreated: "2026-04-27 15:18:51.676022"
+  datemodified: "2026-04-27 15:49:59.754000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-NPK"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Basal Fertilizer NPK 23-23-0"
+  c_parent_id: "d3ff0223-74f8-4cf9-9596-b3474b50e9a9"
+  c_subsidy_amount: "1200"
+  c_unit_cost: "15"
+  c_default_quantity: "100"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-02"
+  c_status: "PENDING"
+
+- id: "94fa3423-0325-4f87-9020-52df69db35d4"
+  datecreated: "2026-04-27 16:21:02.982000"
+  datemodified: "2026-04-27 20:09:59.275000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-NPK"
+  c_requested_qty: "90"
+  c_unit: "kg"
+  c_item_label: "Basal Fertilizer NPK 23-23-0"
+  c_parent_id: "3821c9ba-5aa4-4c04-b577-fcd6fad82e8f"
+  c_subsidy_amount: "1200"
+  c_unit_cost: "15"
+  c_default_quantity: "100"
+  c_approved_qty: "90"
+  c_programme_benefit_id: "prog001-bi-02"
+  c_status: "APPROVED"
+
+- id: "9706962c-c66d-4e35-8a9e-9f3d2cffb43e"
+  datecreated: "2026-04-27 15:18:51.676022"
+  datemodified: "2026-04-27 15:49:59.754000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_subsidy_percent: "80"
+  c_item_code: "SEED-MAIZE"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Improved Maize Seed (DEKALB)"
+  c_parent_id: "d3ff0223-74f8-4cf9-9596-b3474b50e9a9"
+  c_subsidy_amount: "800"
+  c_unit_cost: "40"
+  c_default_quantity: "25"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-01"
+  c_status: "PENDING"
+
+- id: "ab9d5ff8-a209-40cc-953d-38caf38bb171"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-NPK"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Basal Fertilizer NPK 23-23-0"
+  c_parent_id: "d43f39ed-98bc-4aad-9fae-ee34898eee4d"
+  c_subsidy_amount: "1200"
+  c_unit_cost: "15"
+  c_default_quantity: "100"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-02"
+  c_status: "PENDING"
+
+- id: "af369e21-414d-48ab-afd8-2e0cbff04384"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_subsidy_percent: "80"
+  c_item_code: "SEED-MAIZE"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Improved Maize Seed (DEKALB)"
+  c_parent_id: "d43f39ed-98bc-4aad-9fae-ee34898eee4d"
+  c_subsidy_amount: "800"
+  c_unit_cost: "40"
+  c_default_quantity: "25"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-01"
+  c_status: "PENDING"
+
+- id: "e93e5a3e-6f97-4041-b12f-89f4144718ff"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-UREA"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Top-Dressing Urea"
+  c_parent_id: "2f7831f8-45f4-4e43-9df0-ae804d3a21e5"
+  c_subsidy_amount: "720"
+  c_unit_cost: "18"
+  c_default_quantity: "50"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-03"
+  c_status: "PENDING"
+
+- id: "f1286814-4262-460d-85f6-38a263bedf76"
+  datecreated: "2026-04-27 15:18:51.676022"
+  datemodified: "2026-04-27 15:49:59.754000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_subsidy_percent: "80"
+  c_item_code: "FERT-UREA"
+  c_requested_qty: "0"
+  c_unit: "kg"
+  c_item_label: "Top-Dressing Urea"
+  c_parent_id: "d3ff0223-74f8-4cf9-9596-b3474b50e9a9"
+  c_subsidy_amount: "720"
+  c_unit_cost: "18"
+  c_default_quantity: "50"
+  c_approved_qty: ""
+  c_programme_benefit_id: "prog001-bi-03"
+  c_status: "PENDING"
+

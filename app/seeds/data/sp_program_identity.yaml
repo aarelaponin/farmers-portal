@@ -1,0 +1,86 @@
+# app_fd_sp_program_identity
+# 4 row(s) at sync time
+- id: "prog001-iden"
+  datecreated: "2026-04-26 12:40:25.147018"
+  datemodified: "2026-05-07 10:32:47.678000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_programtype: "INPUT_SUBSIDY"
+  c_campaigntype: ""
+  c_seasoncode: "2024-25-summer"
+  c_parent_id: "prog001"
+  c_programname: "Block Farming — Maize Lowlands 2025/26"
+  c_legalbasis: "Subsidy Policy 2003 §4.2.1 — Lowlands intensive crop strategy; Block Farming Programme since 2005/06"
+  c_description: "Coordinated block-farming subsidy for smallholder maize producers in the four lowland districts. Inputs (improved maize seed, basal & top-dressing fertilizer) delivered to community-organised contiguous land blocks for shared mechanisation. Continuation of the established Block Farming initiative."
+  c_objectives: |-
+    1. Raise maize yields above 1.5 t/ha threshold across 5,000 smallholder beneficiaries.
+    2. Promote contiguous-land cooperation (block farming) per policy §4.2.2.
+    3. Improve household food self-sufficiency in lowland districts
+  c_fundingsource: "Government of Lesotho — MAFSN Annual Budget"
+  c_programcode: "PRG-2025-001"
+
+- id: "prog002-iden"
+  datecreated: "2026-04-26 12:40:30.883348"
+  datemodified: "2026-05-08 08:40:48.746000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_programtype: "INPUT_SUBSIDY"
+  c_campaigntype: ""
+  c_seasoncode: "2025-winter"
+  c_parent_id: "prog002"
+  c_programname: "Mountain Pulses & Wheat — Winter 2025"
+  c_legalbasis: "Subsidy Policy 2003 §4.3 — Mountains & Senqu River Valley strategy. Wheat/peas/beans favoured; maize discouraged."
+  c_description: "Winter pulse and wheat input subsidy for highland farmers. Targets wheat, peas, beans — crops suited to mountain agro-ecological conditions per policy §4.3 (avoiding maize, which is not cost-effective at altitude due to frost)."
+  c_objectives: |-
+    1. Diversify highland cropping away from maize.
+    2. Strengthen winter food production in mountain communities.
+    3. Pilot conservation tillage practices.
+  c_fundingsource: "Mixed: 60% Government of Lesotho, 40% FAO/IFAD"
+  c_programcode: "PRG-2025-002"
+
+- id: "prog003-iden"
+  datecreated: "2026-04-26 12:40:36.032728"
+  datemodified: "2026-05-06 20:00:24.857000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_programtype: "VOUCHER"
+  c_campaigntype: ""
+  c_seasoncode: "2024-25-summer"
+  c_parent_id: "prog003"
+  c_programname: "Smallholder E-Voucher Pilot 2025/26"
+  c_legalbasis: "Subsidy Policy 2003 §1.2.viii (investment-leaning) + §2.4 (private-sector distribution). Pilot under World Bank SADP-II."
+  c_description: "E-voucher pilot covering 1,500 food-insecure smallholder households in Maseru and Mafeteng districts. SMS-delivered voucher (LSL 1,500 each) redeemable at registered agro-dealers for any combination of approved inputs."
+  c_objectives: |-
+    1. Test demand-driven input subsidy model vs. centrally-planned distribution.
+    2. Strengthen private-sector agro-dealer network.
+    3. Target food-insecure households (closes Phase 1 Gap 11).
+  c_fundingsource: "Donor: World Bank — Smallholder Agriculture Development Project Phase II"
+  c_programcode: "PRG-2025-003"
+
+- id: "prog004-iden"
+  datecreated: "2026-04-26 12:40:40.405048"
+  datemodified: "2026-05-08 08:11:31.657000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_programtype: "EMERGENCY"
+  c_campaigntype: ""
+  c_seasoncode: "2024-25-summer"
+  c_parent_id: "prog004"
+  c_programname: "Drought Emergency Relief 2025"
+  c_legalbasis: "Disaster Management Authority Declaration 2025-001. Subsidy Policy §2.2.2 — emergency response to acute food insecurity."
+  c_description: "Cross-district emergency relief responding to El Niño drought. Cash transfers (LSL 4,000 per household, 3 monthly tranches) plus livestock fodder for cattle-owning households. Targets all districts; auto-enrolment for households flagged severely food-insecure."
+  c_objectives: |-
+    1. Immediate food access for 3,000 severely-affected households.
+    2. Livestock survival (10,000 head fodder support).
+    3. Bridge until next harvest.
+  c_fundingsource: "Donor: WFP + UNICEF + Government emergency reserve"
+  c_programcode: "PRG-2025-004"
+

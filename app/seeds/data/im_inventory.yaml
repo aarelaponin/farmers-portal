@@ -1,0 +1,66 @@
+# app_fd_im_inventory
+# 4 row(s) at sync time
+- id: "0f654f10-a2d9-48aa-aea2-891e2c56735e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reorder_threshold: "40"
+  c_code: "INV_CP_MORIJA_SEED_MAIZE_PAN6479_25KG"
+  c_notes: "Season-opening delivery from Pannar. | -80 on 2026-05-06 (rdm=RDM-20260506-0002) | -40 on 2026-05-06 (rdm=RDM-20260506-0005) | -40 on 2026-05-06 (rdm=RDM-20260506-0006)"
+  c_last_stock_count_date: "2026-04-30"
+  c_quantity_reserved: "0"
+  c_quantity_on_hand: "40"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_point_code: "CP_MORIJA"
+
+- id: "3f403d0e-0505-43f5-9b84-cee24c7b17c6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reorder_threshold: "60"
+  c_code: "INV_CP_MORIJA_FERT_UREA_50KG"
+  c_notes: "Sasol Nitro top-dressing supply."
+  c_last_stock_count_date: "2026-04-30"
+  c_quantity_reserved: "0"
+  c_quantity_on_hand: "300"
+  c_input_code: "FERT_UREA_50KG"
+  c_point_code: "CP_MORIJA"
+
+- id: "da812fd3-5851-49f1-8dda-d68c41280589"
+  datecreated: "2026-05-06 21:37:53.959000"
+  datemodified: "2026-05-07 10:28:54.327000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reorder_threshold: "100"
+  c_code: "INV_CP_MORIJA_FERT_NPK_50KG"
+  c_notes: "Sasol Nitro bulk delivery, Q1 procurement. | -80 on 2026-05-06 (rdm=RDM-20260506-0001) | +20 on 2026-05-06 (txn=TXN-000203) | -80 on 2026-05-06 (rdm=RDM-20260506-0003) | -80 on 2026-05-06 (rdm=RDM-20260506-0004) | -30 on 2026-05-06 (rdm=RDM-20260506-0007) | -80 on 2026-05-06 (rdm=RDM-20260506-0008) | -80 on 2026-05-07 (rdm=RDM-20260507-0001)"
+  c_last_stock_count_date: "2026-04-30"
+  c_quantity_reserved: "0"
+  c_quantity_on_hand: "90.00"
+  c_input_code: "FERT_NPK_50KG"
+  c_point_code: "CP_MORIJA"
+
+- id: "fda00ad3-2bdb-46a5-83af-5f116469f48e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reorder_threshold: "20"
+  c_code: "INV_CP_MORIJA_SEED_BEANS_KK15_50KG"
+  c_notes: "Cooperative supply from LSC."
+  c_last_stock_count_date: "2026-04-30"
+  c_quantity_reserved: "0"
+  c_quantity_on_hand: "60"
+  c_input_code: "SEED_BEANS_KK15_50KG"
+  c_point_code: "CP_MORIJA"
+

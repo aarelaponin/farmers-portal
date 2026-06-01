@@ -1,0 +1,24 @@
+# app_fd_sp_program_doc_tab
+# 2 row(s) at sync time
+- id: "9f3c7640-1836-4cd1-925f-efd4548ecbcd"
+  datecreated: "2026-04-28 08:20:06.862000"
+  datemodified: "2026-05-07 10:32:58.674000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_mandatory_docs_block_submission: "Y"
+  c_parent_id: "prog001"
+  c_documentation_notes: ""
+
+- id: "efd812b5-5aa5-4255-9165-f0ddfd01aa7c"
+  datecreated: "2026-05-08 08:14:21.103000"
+  datemodified: "2026-05-08 08:14:21.103000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_mandatory_docs_block_submission: "Y"
+  c_parent_id: "prog004"
+  c_documentation_notes: ""
+

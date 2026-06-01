@@ -1,0 +1,9 @@
+{
+  "id": "API-d337ad69-a145-45ba-8971-89db94e01da1",
+  "name": "Distribution Point Details API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imDistPtDetails\",\n            \"ignorePermission\": \"\",\n            \"id\": \"8B8F451E-434C-41C3-8E0E-59F2E4CDA797\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Distribution Point Details API\",\n        \"description\": \"Auto-generated API for form: imDistPtDetails\",\n        \"id\": \"API-d337ad69-a145-45ba-8971-89db94e01da1\"\n    }\n}\n"
+}

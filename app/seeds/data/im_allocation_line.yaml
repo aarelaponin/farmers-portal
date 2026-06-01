@@ -1,0 +1,162 @@
+# app_fd_im_allocation_line
+# 10 row(s) at sync time
+- id: "1bcf1ad7-ec17-4950-90cf-52e881483bac"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_RIB_NPK_SH"
+  c_quantity: "40"
+  c_notes: "Mafeteng small-holders, NPK."
+  c_priority_weight: "1"
+  c_input_code: "FERT_NPK_50KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_RIBANENG"
+
+- id: "2a883530-38d8-4d61-a372-bd1fdae3085d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "EMERGING"
+  c_code: "AL_2025-26_MOR_NPK_EM"
+  c_quantity: "20"
+  c_notes: "Maseru emerging-farmers pilot, NPK only (seed via own savings)."
+  c_priority_weight: "2"
+  c_input_code: "FERT_NPK_50KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_MORIJA"
+
+- id: "4a9f0003-6da7-4717-9809-eba54fcd0791"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_TEY_SEED_SH"
+  c_quantity: "50"
+  c_notes: "Berea small-holders, maize seed."
+  c_priority_weight: "1"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_TEYATEYANENG"
+
+- id: "715c11d5-b4c2-4c8f-a10f-28d7e8df61f7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_MOR_NPK_SH"
+  c_quantity: "80"
+  c_notes: "Maseru small-holders, NPK basal application."
+  c_priority_weight: "1"
+  c_input_code: "FERT_NPK_50KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_MORIJA"
+
+- id: "74108204-dec2-4e24-892d-12ab22007543"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_MOR_SEED_SH"
+  c_quantity: "80"
+  c_notes: "Maseru small-holders, maize seed."
+  c_priority_weight: "1"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_MORIJA"
+
+- id: "83bf97df-15c1-4bdc-a28e-7254c8361162"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_PEK_NPK_SH"
+  c_quantity: "60"
+  c_notes: "Leribe small-holders, NPK."
+  c_priority_weight: "1"
+  c_input_code: "FERT_NPK_50KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_PEKA"
+
+- id: "9a23e5cb-a5a0-4cec-9195-53adc6c3d02e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_RIB_SEED_SH"
+  c_quantity: "40"
+  c_notes: "Mafeteng small-holders, maize seed."
+  c_priority_weight: "1"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_RIBANENG"
+
+- id: "c22f4942-f81c-4e2a-a599-2270d462b2dd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "EMERGING"
+  c_code: "AL_2025-26_PEK_NPK_EM"
+  c_quantity: "15"
+  c_notes: "Leribe emerging-farmers pilot, NPK."
+  c_priority_weight: "2"
+  c_input_code: "FERT_NPK_50KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_PEKA"
+
+- id: "c352d6a0-6508-4fea-b0bf-c37509b1d3b0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_PEK_SEED_SH"
+  c_quantity: "60"
+  c_notes: "Leribe small-holders, maize seed."
+  c_priority_weight: "1"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_PEKA"
+
+- id: "c5913438-3e50-4207-b635-e9899d51199a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_farmer_category: "SMALLHOLDER"
+  c_code: "AL_2025-26_TEY_NPK_SH"
+  c_quantity: "50"
+  c_notes: "Berea small-holders, NPK."
+  c_priority_weight: "1"
+  c_input_code: "FERT_NPK_50KG"
+  c_plan_id: "7d38a1dd-0e04-428e-9c74-aa7319297940"
+  c_point_code: "CP_TEYATEYANENG"
+

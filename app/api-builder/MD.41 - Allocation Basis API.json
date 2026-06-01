@@ -1,0 +1,9 @@
+{
+  "id": "API-37a60311-3857-45c0-96bb-794a528ebe59",
+  "name": "MD.41 - Allocation Basis API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md41AllocBasis\",\n            \"ignorePermission\": \"\",\n            \"id\": \"0983DC28-C3F7-4EF3-B4DD-F396DAC03E9C\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.41 - Allocation Basis API\",\n        \"description\": \"Auto-generated API for form: md41AllocBasis\",\n        \"id\": \"API-37a60311-3857-45c0-96bb-794a528ebe59\"\n    }\n}\n"
+}

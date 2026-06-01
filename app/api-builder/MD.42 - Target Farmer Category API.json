@@ -1,0 +1,9 @@
+{
+  "id": "API-545b64e8-3e8b-4ad7-9b82-2d6524b518bf",
+  "name": "MD.42 - Target Farmer Category API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md42TargetCategory\",\n            \"ignorePermission\": \"\",\n            \"id\": \"45DAC855-A7FD-453F-9FDD-0B92D298DB9C\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.42 - Target Farmer Category API\",\n        \"description\": \"Auto-generated API for form: md42TargetCategory\",\n        \"id\": \"API-545b64e8-3e8b-4ad7-9b82-2d6524b518bf\"\n    }\n}\n"
+}

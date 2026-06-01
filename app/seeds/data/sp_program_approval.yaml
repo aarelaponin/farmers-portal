@@ -1,0 +1,114 @@
+# app_fd_sp_program_approval
+# 4 row(s) at sync time
+- id: "prog001-appr"
+  datecreated: "2026-04-26 12:40:26.654472"
+  datemodified: "2026-04-26 12:40:26.654475"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_supervisorname: "Dr. Refiloe Mahase"
+  c_approvalnotes: "Approved by MAFSN Block Farming Steering Committee, 2025-07-12."
+  c_requireddocuments: "NATIONAL_ID;LAND_TITLE;RESIDENCE_PROOF"
+  c_approvercomments: null
+  c_programofficer: "Mpho Lerotholi"
+  c_contactemail: "mpho.lerotholi@maf.gov.ls"
+  c_supervisoremail: "refiloe.mahase@maf.gov.ls"
+  c_publishdate: "2025-07-15"
+  c_isactive: "true"
+  c_parent_id: "prog001"
+  c_notificationtypes: "APP_RECEIVED;APP_APPROVED;APP_REJECTED;BENEFIT_READY;BENEFIT_ISSUED"
+  c_contactphone: "+266 22317600"
+  c_approvalworkflow: "STANDARD"
+  c_rejectionreason: null
+  c_submittedby: null
+  c_approvedby: null
+  c_submitteddate: null
+  c_requestedstatus: null
+  c_approveddate: null
+  c_status: null
+
+- id: "prog002-appr"
+  datecreated: "2026-04-26 12:40:32.168144"
+  datemodified: "2026-04-26 12:40:32.168149"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_supervisorname: "Mamosa Sekota"
+  c_approvalnotes: "Co-funded with FAO; approved March 2025."
+  c_requireddocuments: "NATIONAL_ID;LAND_TITLE;RESIDENCE_PROOF;RECOMMENDATION"
+  c_approvercomments: null
+  c_programofficer: "Tšepo Mahao"
+  c_contactemail: "tsepo.mahao@maf.gov.ls"
+  c_supervisoremail: "mamosa.sekota@maf.gov.ls"
+  c_publishdate: "2025-03-20"
+  c_isactive: "true"
+  c_parent_id: "prog002"
+  c_notificationtypes: "APP_RECEIVED;APP_APPROVED;APP_REJECTED;BENEFIT_READY;BENEFIT_ISSUED;REMINDER"
+  c_contactphone: "+266 22317655"
+  c_approvalworkflow: "STANDARD"
+  c_rejectionreason: null
+  c_submittedby: null
+  c_approvedby: null
+  c_submitteddate: null
+  c_requestedstatus: null
+  c_approveddate: null
+  c_status: null
+
+- id: "prog003-appr"
+  datecreated: "2026-04-26 12:40:37.435247"
+  datemodified: "2026-05-06 20:01:31.520000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_supervisorname: "Mosenene Mokhachane"
+  c_approvalnotes: "WB-funded; expedited approval workflow. Subject to MAFSN + WB joint sign-off."
+  c_requireddocuments: "NATIONAL_ID;MOBILE_MONEY_STMT;RESIDENCE_PROOF"
+  c_approvercomments: ""
+  c_programofficer: "Limpho Phakoe"
+  c_contactemail: "limpho.phakoe@sadp.gov.ls"
+  c_supervisoremail: "m.mokhachane@sadp.gov.ls"
+  c_publishdate: "2025-08-15"
+  c_isactive: "Y"
+  c_parent_id: "prog003"
+  c_notificationtypes: "APP_APPROVED;APP_REJECTED;APP_SUBMITTED;BENEFIT_ISSUED;BENEFIT_READY;REMINDER"
+  c_contactphone: "+266 22311818"
+  c_approvalworkflow: "EXPRESS"
+  c_rejectionreason: ""
+  c_submittedby: ""
+  c_approvedby: ""
+  c_submitteddate: ""
+  c_requestedstatus: ""
+  c_approveddate: ""
+  c_status: "DRAFT"
+
+- id: "prog004-appr"
+  datecreated: "2026-04-26 12:40:41.844249"
+  datemodified: "2026-05-08 08:14:07.609000"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_supervisorname: "Director, DMA"
+  c_approvalnotes: "Emergency activation; auto-approved per DMA emergency protocol."
+  c_requireddocuments: "NATIONAL_ID"
+  c_approvercomments: ""
+  c_programofficer: "Mosa Lephoto (Emergency Coord.)"
+  c_contactemail: "emergency@dma.gov.ls"
+  c_supervisoremail: "director@dma.gov.ls"
+  c_publishdate: "2025-01-15"
+  c_isactive: "Y"
+  c_parent_id: "prog004"
+  c_notificationtypes: "BENEFIT_ISSUED;BENEFIT_READY;CUSTOM"
+  c_contactphone: "+266 22317300"
+  c_approvalworkflow: "EMERGENCY"
+  c_rejectionreason: ""
+  c_submittedby: ""
+  c_approvedby: ""
+  c_submitteddate: ""
+  c_requestedstatus: ""
+  c_approveddate: ""
+  c_status: "DRAFT"
+

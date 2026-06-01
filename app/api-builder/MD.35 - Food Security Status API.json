@@ -1,0 +1,9 @@
+{
+  "id": "API-62453663-3f7e-475f-a168-2716c478d6cc",
+  "name": "MD.35 - Food Security Status API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md35foodSecurityStat\",\n            \"ignorePermission\": \"\",\n            \"id\": \"381D49B1-C6E1-46A9-A308-F5AE574FA36C\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.35 - Food Security Status API\",\n        \"description\": \"Auto-generated API for form: md35foodSecurityStat\",\n        \"id\": \"API-62453663-3f7e-475f-a168-2716c478d6cc\"\n    }\n}\n"
+}

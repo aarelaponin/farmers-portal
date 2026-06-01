@@ -1,0 +1,121 @@
+# app_fd_budget_envelope_src
+# 7 row(s) at sync time
+- id: "324766d1-9a19-48c6-a6aa-dd69cab490fa"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SRC_FAO_IFAD_PRG_2025_002_FY2526"
+  c_notes: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_allocated_amount: "180000.00"
+  c_source_code: "FAO_IFAD"
+  c_source_name: "FAO / IFAD"
+  c_share_percent: "40.00"
+  c_donor_class: "multilateral_donor"
+  c_status: "active"
+
+- id: "3f3cf36e-8786-4b0d-aa26-41e048c03969"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SRC_GOL_PRG_2025_002_FY2526"
+  c_notes: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_allocated_amount: "270000.00"
+  c_source_code: "GOL"
+  c_source_name: "Government of Lesotho"
+  c_share_percent: "60.00"
+  c_donor_class: "government"
+  c_status: "active"
+
+- id: "785eda08-3aa6-4845-a187-5834820ef35e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SRC_WB_SADP_PRG_2025_003_FY2526"
+  c_notes: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_allocated_amount: "180000.00"
+  c_source_code: "WB_SADP_II"
+  c_source_name: "World Bank — SADP-II"
+  c_share_percent: "100.00"
+  c_donor_class: "multilateral_donor"
+  c_status: "active"
+
+- id: "b5def6b1-c4f6-46d9-a964-68be542bb791"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SRC_UNICEF_PRG_2025_004_FY2526"
+  c_notes: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_allocated_amount: "750000.00"
+  c_source_code: "UNICEF"
+  c_source_name: "UNICEF"
+  c_share_percent: "30.00"
+  c_donor_class: "multilateral_donor"
+  c_status: "active"
+
+- id: "d2a4a869-e125-41af-a20f-d76fe40139fa"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SRC_GOL_EMERGENCY_PRG_2025_004_FY2526"
+  c_notes: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_allocated_amount: "750000.00"
+  c_source_code: "GOL_EMERGENCY"
+  c_source_name: "Government of Lesotho — Emergency Reserve"
+  c_share_percent: "30.00"
+  c_donor_class: "government"
+  c_status: "active"
+
+- id: "f06443b0-b5ba-4fc2-b668-20c79927f0ac"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SRC_WFP_PRG_2025_004_FY2526"
+  c_notes: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_allocated_amount: "1000000.00"
+  c_source_code: "WFP"
+  c_source_name: "World Food Programme"
+  c_share_percent: "40.00"
+  c_donor_class: "multilateral_donor"
+  c_status: "active"
+
+- id: "fcb71c55-6846-4369-968f-d13bcf4810df"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "SRC_GOL_PRG_2025_001_FY2526"
+  c_notes: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_allocated_amount: "1200000.00"
+  c_source_code: "GOL"
+  c_source_name: "Government of Lesotho — MAFSN Annual Budget"
+  c_share_percent: "100.00"
+  c_donor_class: "government"
+  c_status: "active"
+

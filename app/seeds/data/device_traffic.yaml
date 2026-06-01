@@ -1,0 +1,32 @@
+# app_fd_device_traffic
+# 3 row(s) at sync time
+- id: "1cc7f0ca-4db1-48dd-95d9-4e9002cfea98"
+  datecreated: "2024-12-10 12:14:16"
+  datemodified: "2024-12-10 12:16:07"
+  createdby: "Gurujot"
+  createdbyname: "Gurujot Singh"
+  modifiedby: "Gurujot"
+  modifiedbyname: "Gurujot Singh"
+  c_percentage: "14"
+  c_device: "Tablet"
+
+- id: "8b697ca2-b748-4e90-8194-405cf81734aa"
+  datecreated: "2024-12-10 12:14:23"
+  datemodified: "2024-12-10 12:16:10"
+  createdby: "Gurujot"
+  createdbyname: "Gurujot Singh"
+  modifiedby: "Gurujot"
+  modifiedbyname: "Gurujot Singh"
+  c_percentage: "23"
+  c_device: "Mobile"
+
+- id: "e6962451-cace-43df-b5ab-6601ae62637c"
+  datecreated: "2024-12-10 12:14:10"
+  datemodified: "2024-12-10 12:16:13"
+  createdby: "Gurujot"
+  createdbyname: "Gurujot Singh"
+  modifiedby: "Gurujot"
+  modifiedbyname: "Gurujot Singh"
+  c_percentage: "63"
+  c_device: "Desktop"
+

@@ -1,0 +1,9 @@
+{
+  "id": "API-c671449c-6df0-4f59-9685-79c094d35981",
+  "name": "Seasonal Harvest Record API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spSeasonHarvest\",\n            \"ignorePermission\": \"\",\n            \"id\": \"E9EB0805-C746-446B-90B9-7D37D41175F6\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Seasonal Harvest Record API\",\n        \"description\": \"Auto-generated API for form: spSeasonHarvest\",\n        \"id\": \"API-c671449c-6df0-4f59-9685-79c094d35981\"\n    }\n}\n"
+}

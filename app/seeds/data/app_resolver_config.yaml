@@ -1,0 +1,20 @@
+# app_fd_app_resolver_config
+# 1 row(s) at sync time
+- id: "13153d4f-0bb7-4a93-aef7-7d85c4a27f35"
+  datecreated: "2026-04-27 12:42:05.619586"
+  datemodified: "2026-04-27 12:42:05.619586"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_sourcelookupfield: "national_id"
+  c_multiplematchespolicy: "ERROR"
+  c_sourceformid: "farmerBasicInfo"
+  c_configid: "farmerByNid"
+  c_cacheseconds: "0"
+  c_notfoundmessage: "This National ID is not yet registered. Please register the farmer first."
+  c_name: "Farmer lookup by National ID"
+  c_description: "Foundational identity → farmer registry resolution. Source: farmerBasicInfo."
+  c_isactive: "Y"
+  c_notfoundactionurl: "/jw/web/userview/farmersPortal/v/_/farmerRegistrationForm_crud?_mode=add&national_id=#value#"
+

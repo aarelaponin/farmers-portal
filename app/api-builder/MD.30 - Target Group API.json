@@ -1,0 +1,9 @@
+{
+  "id": "API-b446dc15-6b9e-45b8-83f8-14a6f439b2f6",
+  "name": "MD.30 - Target Group API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md30targetGroup\",\n            \"ignorePermission\": \"\",\n            \"id\": \"C9A72B14-3CAF-45BD-9013-880C911821AC\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.30 - Target Group API\",\n        \"description\": \"Auto-generated API for form: md30targetGroup\",\n        \"id\": \"API-b446dc15-6b9e-45b8-83f8-14a6f439b2f6\"\n    }\n}\n"
+}

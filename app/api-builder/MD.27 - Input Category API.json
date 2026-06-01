@@ -1,0 +1,9 @@
+{
+  "id": "API-f9cc0e2a-72e4-4beb-ba92-f6ec8b81be21",
+  "name": "MD.27 - Input Category API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md27inputCategory\",\n            \"ignorePermission\": \"\",\n            \"id\": \"0CA552DC-983D-47F9-B0D1-F9C07A88C960\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.27 - Input Category API\",\n        \"description\": \"Auto-generated API for form: md27inputCategory\",\n        \"id\": \"API-f9cc0e2a-72e4-4beb-ba92-f6ec8b81be21\"\n    }\n}\n"
+}

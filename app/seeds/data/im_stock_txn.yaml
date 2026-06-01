@@ -1,0 +1,146 @@
+# app_fd_im_stock_txn
+# 6 row(s) at sync time
+- id: "16c9c8f3-e85a-4da4-85a0-889f3edf28d8"
+  datecreated: "2026-05-08 08:22:58.879000"
+  datemodified: "2026-05-08 08:22:58.879000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_transfer_partner_point: ""
+  c_code: "TXN-20260415-0001"
+  c_quantity: "200"
+  c_notes: "Season-opening seed delivery."
+  c_performed_by: "MAFSN Procurement Officer"
+  c_supplier_invoice_no: "PNR-INV-2026-0042"
+  c_voucher_code: ""
+  c_point_code: "CP_MORIJA"
+  c_reason_code: ""
+  c_txn_date: "2026-04-15"
+  c_txn_type: "RECEIPT"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_supplier_code: "SUP_PANNAR"
+  c_supplier_invoice_file: ""
+  c_district_code: "maseru"
+  c_posted_at: ""
+
+- id: "288046f9-7e0a-4b4d-96df-73e089baeaf1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_transfer_partner_point: null
+  c_code: "TXN-20260420-0003"
+  c_quantity: "500"
+  c_notes: "Q1 NPK delivery."
+  c_performed_by: "MAFSN Procurement Officer"
+  c_supplier_invoice_no: "SN-INV-2026-1042"
+  c_voucher_code: null
+  c_point_code: "CP_MORIJA"
+  c_reason_code: null
+  c_txn_date: "2026-04-20"
+  c_txn_type: "RECEIPT"
+  c_input_code: "FERT_NPK_50KG"
+  c_supplier_code: "SUP_SASOL_NITRO"
+  c_supplier_invoice_file: null
+  c_district_code: null
+  c_posted_at: null
+
+- id: "547ad7d3-2915-4a6e-8254-63d2362788a9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_transfer_partner_point: null
+  c_code: "TXN-20260418-0002"
+  c_quantity: "60"
+  c_notes: "Cooperative bean seed."
+  c_performed_by: "MAFSN Procurement Officer"
+  c_supplier_invoice_no: "LSC-GRN-2026-0118"
+  c_voucher_code: null
+  c_point_code: "CP_MORIJA"
+  c_reason_code: null
+  c_txn_date: "2026-04-18"
+  c_txn_type: "RECEIPT"
+  c_input_code: "SEED_BEANS_KK15_50KG"
+  c_supplier_code: "SUP_LSC"
+  c_supplier_invoice_file: null
+  c_district_code: null
+  c_posted_at: null
+
+- id: "63ae6751-c4a8-4ff8-9d11-96dedbe7fa8f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_transfer_partner_point: null
+  c_code: "TXN-20260422-0004"
+  c_quantity: "300"
+  c_notes: "Top-dressing urea, paired with the NPK delivery."
+  c_performed_by: "MAFSN Procurement Officer"
+  c_supplier_invoice_no: "SN-INV-2026-1043"
+  c_voucher_code: null
+  c_point_code: "CP_MORIJA"
+  c_reason_code: null
+  c_txn_date: "2026-04-22"
+  c_txn_type: "RECEIPT"
+  c_input_code: "FERT_UREA_50KG"
+  c_supplier_code: "SUP_SASOL_NITRO"
+  c_supplier_invoice_file: null
+  c_district_code: null
+  c_posted_at: null
+
+- id: "8fde9f8e-5cb2-4237-9e84-e7befae00182"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_transfer_partner_point: ""
+  c_code: "TXN-000203"
+  c_quantity: null
+  c_notes: ""
+  c_performed_by: ""
+  c_supplier_invoice_no: ""
+  c_voucher_code: ""
+  c_point_code: "CP_MORIJA"
+  c_reason_code: ""
+  c_txn_date: "2026-05-05"
+  c_txn_type: "RECEIPT"
+  c_input_code: null
+  c_supplier_code: ""
+  c_supplier_invoice_file: ""
+  c_district_code: "maseru"
+  c_posted_at: "2026-05-06T13:40:12Z"
+
+- id: "cc9aaa94-0c40-4129-94d5-2646cb3441c8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_transfer_partner_point: null
+  c_code: "TXN-SLICE6-1778069703"
+  c_quantity: "100"
+  c_notes: "Slice 6a smoke test — should auto-update inventory."
+  c_performed_by: "slice6-smoke"
+  c_supplier_invoice_no: "PNR-INV-SLICE6-001"
+  c_voucher_code: null
+  c_point_code: "CP_MORIJA"
+  c_reason_code: null
+  c_txn_date: "2026-05-06"
+  c_txn_type: "RECEIPT"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_supplier_code: "SUP_PANNAR"
+  c_supplier_invoice_file: null
+  c_district_code: null
+  c_posted_at: null
+

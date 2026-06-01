@@ -1,0 +1,9 @@
+{
+  "id": "API-8b9c8353-52b4-4662-8f0d-bc0c49983a77",
+  "name": "Farmer Derived Attributes API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spFarmerDerived\",\n            \"ignorePermission\": \"\",\n            \"id\": \"07CCB939-75F2-4583-9C76-94111180DB3B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Farmer Derived Attributes API\",\n        \"description\": \"Auto-generated API for form: spFarmerDerived\",\n        \"id\": \"API-8b9c8353-52b4-4662-8f0d-bc0c49983a77\"\n    }\n}\n"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "API-74dfe89a-47a9-4551-80e6-e410287d6ce1",
+  "name": "01.03 - Agricultural Activities API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"farmerAgriculture\",\n            \"ignorePermission\": \"\",\n            \"id\": \"B104A230-F6E3-40A1-8337-16B7EFED2670\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01.03 - Agricultural Activities API\",\n        \"description\": \"Auto-generated API for form: farmerAgriculture\",\n        \"id\": \"API-74dfe89a-47a9-4551-80e6-e410287d6ce1\"\n    }\n}\n"
+}

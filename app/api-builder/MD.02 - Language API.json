@@ -1,0 +1,9 @@
+{
+  "id": "API-5a747ccc-2c1b-4eb8-9d6c-081f9960690b",
+  "name": "MD.02 - Language API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md02language\",\n            \"ignorePermission\": \"\",\n            \"id\": \"4961FD69-DB31-42A6-9A51-4A786F82DB44\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.02 - Language API\",\n        \"description\": \"Auto-generated API for form: md02language\",\n        \"id\": \"API-5a747ccc-2c1b-4eb8-9d6c-081f9960690b\"\n    }\n}\n"
+}

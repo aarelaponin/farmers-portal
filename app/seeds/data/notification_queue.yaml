@@ -1,0 +1,1622 @@
+# app_fd_notification_queue
+# 60 row(s) at sync time
+- id: "03495d97-537d-453e-bcb6-5e8eb339e91c"
+  datecreated: "2026-05-11 18:10:54.213000"
+  datemodified: "2026-05-11 18:10:57.521000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-DF8B62A7\",\"first_name\":\"Tumelo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:10:57Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your subsidy application has been received — AP-DF8B62A7"
+  c_testmode: "Y"
+  c_correlationid: "AP-DF8B62A7"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "084b84b9-4d5d-4c48-8579-248df055fd9d"
+  datecreated: "2026-05-11 19:37:21.789000"
+  datemodified: "2026-05-11 19:37:31.118000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_APPROVED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-7471B42D\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:37:31Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Good news — your subsidy application is approved (AP-7471B42D)"
+  c_testmode: "Y"
+  c_correlationid: "AP-7471B42D"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "0d0e547b-f51c-4986-9385-06d9ad652eb4"
+  datecreated: "2026-05-12 08:49:27.521000"
+  datemodified: "2026-05-12 08:49:36.992000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-12\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-CEB97282\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-12T08:49:36Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-CEB97282"
+  c_testmode: "Y"
+  c_correlationid: "AP-CEB97282"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "1839e26f-ac87-41e1-88f7-0d4a4440cb07"
+  datecreated: "2026-05-11 12:49:03.154000"
+  datemodified: "2026-05-11 12:49:13.049000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0006\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-C113757C\",\"first_name\":\"Molato\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T12:49:13Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → N/a] Your voucher is ready — VCH-20260511-0006"
+  c_testmode: "Y"
+  c_correlationid: "AP-C113757C"
+  c_backend: "gmail"
+  c_intendedrecipient: "N/a"
+  c_intendedrecipientstatus: null
+
+- id: "1b64be9c-9728-4970-bc0b-6a630b0e78b7"
+  datecreated: "2026-05-11 12:46:30.289000"
+  datemodified: "2026-05-11 12:46:39.932000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_REJECTED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"reason\":\"Eligibility rules did not match this programme.\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-C0155240\",\"validity_days\":\"30\",\"first_name\":\"Molato\",\"district_phone\":\"your district office\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T12:46:39Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → N/a] Decision on your subsidy application — AP-C0155240"
+  c_testmode: "Y"
+  c_correlationid: "AP-C0155240"
+  c_backend: "gmail"
+  c_intendedrecipient: "N/a"
+  c_intendedrecipientstatus: null
+
+- id: "1f47cbee-93d9-410c-80f6-8ff40c7cde84"
+  datecreated: "2026-05-11 19:16:04.304000"
+  datemodified: "2026-05-11 19:16:07.651000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-15A0EF40\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:16:07Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-15A0EF40"
+  c_testmode: "Y"
+  c_correlationid: "AP-15A0EF40"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "2462ea14-7622-4755-a741-e2374fa72ac6"
+  datecreated: "2026-05-11 14:41:09.413000"
+  datemodified: "2026-05-11 14:41:09.437000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"0012345\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0007\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-05493778\",\"first_name\":\"Thabo\",\"farmer_name\":\"Thabo Thabiso\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T14:41:09Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→+266 58515039] Motho ea ratehang Thabo Thabiso, voucher ea hau VCH-20260511-0007 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-05493778"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "+266 58515039"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "27452b82-1f49-48e1-8f58-6aaf16826f18"
+  datecreated: "2026-05-11 14:40:49.921000"
+  datemodified: "2026-05-11 14:40:59.457000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_APPROVED"
+  c_varsjson: "{\"national_id\":\"0012345\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-05493778\",\"validity_days\":\"30\",\"first_name\":\"Thabo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Thabo Thabiso\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T14:40:59Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → thabangthabiso@gmail.com] Good news — your subsidy application is approved (AP-05493778)"
+  c_testmode: "Y"
+  c_correlationid: "AP-05493778"
+  c_backend: "gmail"
+  c_intendedrecipient: "thabangthabiso@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "2806c614-eb98-4cc4-9839-6f2cac5a12af"
+  datecreated: "2026-05-19 11:54:59.447000"
+  datemodified: "2026-05-19 11:55:02.870000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"6789234\",\"submitted_date\":\"2026-05-19\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-AEE0E74B\",\"first_name\":\"Khotso\",\"district_phone\":\"your district office\",\"farmer_name\":\"Khotso Mosoeu\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-19T11:55:02Z"
+  c_locale: "EN"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → <no intended recipient — applicant has no email>] Your subsidy application has been received — AP-AEE0E74B"
+  c_testmode: "Y"
+  c_correlationid: "AP-AEE0E74B"
+  c_backend: "gmail"
+  c_intendedrecipient: ""
+  c_intendedrecipientstatus: "no_contact_on_registry"
+
+- id: "28d2be17-cbae-4aa0-a87f-9ef4f38ea18a"
+  datecreated: "2026-05-11 18:51:16.385000"
+  datemodified: "2026-05-11 18:51:20.062000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-F0733789\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:51:20Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-F0733789"
+  c_testmode: "Y"
+  c_correlationid: "AP-F0733789"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "2ad88b87-da98-4098-ba3d-0916e5dcc695"
+  datecreated: "2026-05-11 19:37:31.192000"
+  datemodified: "2026-05-11 19:37:41.648000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0015\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-7471B42D\",\"first_name\":\"Mants'ali\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:37:41Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your voucher is ready — VCH-20260511-0015"
+  c_testmode: "Y"
+  c_correlationid: "AP-7471B42D"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "30c7c333-d803-40a3-9ac8-e2b15c013a74"
+  datecreated: "2026-05-11 19:06:10.132000"
+  datemodified: "2026-05-11 19:06:13.576000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-90F41A84\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:06:13Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-90F41A84"
+  c_testmode: "Y"
+  c_correlationid: "AP-90F41A84"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "3347345e-e1ea-4226-a030-2400c7ba2c4a"
+  datecreated: "2026-05-11 14:41:19.432000"
+  datemodified: "2026-05-11 14:41:19.456000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"0012345\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0008\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-05493778\",\"first_name\":\"Thabo\",\"farmer_name\":\"Thabo Thabiso\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T14:41:19Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→+266 58515039] Motho ea ratehang Thabo Thabiso, voucher ea hau VCH-20260511-0008 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-05493778"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "+266 58515039"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "33870023-63eb-4018-bb78-444d0999f9f1"
+  datecreated: "2026-05-11 19:33:08.278000"
+  datemodified: "2026-05-11 19:33:17.800000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-409E456D\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:33:17Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-409E456D"
+  c_testmode: "Y"
+  c_correlationid: "AP-409E456D"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "3518ffc5-7344-43e6-b9dd-87898a9caeca"
+  datecreated: "2026-05-11 18:51:20.331000"
+  datemodified: "2026-05-11 18:51:29.856000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-F0733789\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:51:29Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-F0733789"
+  c_testmode: "Y"
+  c_correlationid: "AP-F0733789"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "39e4b708-0b29-457d-a05d-496253c41f0d"
+  datecreated: "2026-05-12 08:47:10.606000"
+  datemodified: "2026-05-12 08:47:15"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-12\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-8197B801\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-12T08:47:15Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-8197B801"
+  c_testmode: "Y"
+  c_correlationid: "AP-8197B801"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "3dbedc0e-746f-430a-98ac-6c0eb2be8b70"
+  datecreated: "2026-05-11 19:06:13.875000"
+  datemodified: "2026-05-11 19:06:23.316000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-90F41A84\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:06:23Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-90F41A84"
+  c_testmode: "Y"
+  c_correlationid: "AP-90F41A84"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "4057ffa8-300d-43a4-b739-35dc7223a2f9"
+  datecreated: "2026-05-12 08:45:57.341000"
+  datemodified: "2026-05-12 08:46:00.615000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-12\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-366ED586\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-12T08:46:00Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-366ED586"
+  c_testmode: "Y"
+  c_correlationid: "AP-366ED586"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "4388f494-e202-46f9-a914-60c90d91fbf9"
+  datecreated: "2026-05-11 12:49:03.098000"
+  datemodified: "2026-05-11 12:49:03.122000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0005\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-C113757C\",\"first_name\":\"Molato\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T12:49:03Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→+26657218900] Motho ea ratehang Molato Nonyana, voucher ea hau VCH-20260511-0005 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-C113757C"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "+26657218900"
+  c_intendedrecipientstatus: null
+
+- id: "47503464-ac97-4f85-98ea-4a32f3da25e8"
+  datecreated: "2026-05-11 16:36:44.340000"
+  datemodified: "2026-05-11 16:36:54.315000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0011\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-D06AABDB\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T16:36:54Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your voucher is ready — VCH-20260511-0011"
+  c_testmode: "Y"
+  c_correlationid: "AP-D06AABDB"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "4c0808c3-7621-4648-bba1-0ed6f76b0934"
+  datecreated: "2026-05-11 12:46:26.790000"
+  datemodified: "2026-05-11 12:46:30.038000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-C0155240\",\"first_name\":\"Molato\",\"district_phone\":\"your district office\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T12:46:30Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → N/a] Your subsidy application has been received — AP-C0155240"
+  c_testmode: "Y"
+  c_correlationid: "AP-C0155240"
+  c_backend: "gmail"
+  c_intendedrecipient: "N/a"
+  c_intendedrecipientstatus: null
+
+- id: "4fd75c70-6f57-43fd-ae54-a5396ea819dc"
+  datecreated: "2026-05-19 11:55:03.145000"
+  datemodified: "2026-05-19 11:55:12.609000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"6789234\",\"decision_date\":\"2026-05-19\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-AEE0E74B\",\"validity_days\":\"30\",\"first_name\":\"Khotso\",\"district_phone\":\"your district office\",\"farmer_name\":\"Khotso Mosoeu\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-19T11:55:12Z"
+  c_locale: "EN"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → <no intended recipient — applicant has no email>] Your application is under review — AP-AEE0E74B"
+  c_testmode: "Y"
+  c_correlationid: "AP-AEE0E74B"
+  c_backend: "gmail"
+  c_intendedrecipient: ""
+  c_intendedrecipientstatus: "no_contact_on_registry"
+
+- id: "50982888-3294-46c8-889b-645f1214a802"
+  datecreated: "2026-05-11 18:20:30.814000"
+  datemodified: "2026-05-11 18:20:40.614000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-E55D02A3\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:20:40Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-E55D02A3"
+  c_testmode: "Y"
+  c_correlationid: "AP-E55D02A3"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "558535ff-b7b8-4b3c-b8ec-853d63c4bb3c"
+  datecreated: "2026-05-11 19:37:17.825000"
+  datemodified: "2026-05-11 19:37:21.515000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-7471B42D\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:37:21Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-7471B42D"
+  c_testmode: "Y"
+  c_correlationid: "AP-7471B42D"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "57aa81b2-e133-4ea2-bbab-f319385b91ef"
+  datecreated: "2026-05-11 18:21:43.849000"
+  datemodified: "2026-05-11 18:21:53.705000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-A1CEAE21\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:21:53Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-A1CEAE21"
+  c_testmode: "Y"
+  c_correlationid: "AP-A1CEAE21"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "5f267dee-3db3-45be-bad9-79348b60dff1"
+  datecreated: "2026-05-11 15:36:23.183000"
+  datemodified: "2026-05-11 15:36:32.703000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_APPROVED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-03795009\",\"validity_days\":\"30\",\"first_name\":\"Tumelo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T15:36:32Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Good news — your subsidy application is approved (AP-03795009)"
+  c_testmode: "Y"
+  c_correlationid: "AP-03795009"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "61ebe181-8301-42f4-b042-879ea912b633"
+  datecreated: "2026-05-11 18:20:27.339000"
+  datemodified: "2026-05-11 18:20:30.558000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-E55D02A3\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:20:30Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-E55D02A3"
+  c_testmode: "Y"
+  c_correlationid: "AP-E55D02A3"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "73762469-b639-4da6-b0d1-5a0c4e61988e"
+  datecreated: "2026-05-12 08:47:15.126000"
+  datemodified: "2026-05-12 08:47:23.812000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-12\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-8197B801\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-12T08:47:23Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-8197B801"
+  c_testmode: "Y"
+  c_correlationid: "AP-8197B801"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "765e1431-7dd2-41e6-a729-535a94abdfb8"
+  datecreated: "2026-05-11 19:33:04.548000"
+  datemodified: "2026-05-11 19:33:07.908000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-409E456D\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:33:07Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-409E456D"
+  c_testmode: "Y"
+  c_correlationid: "AP-409E456D"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "7725048a-d319-43d3-84ee-437d9c0e7b14"
+  datecreated: "2026-05-12 08:49:23.824000"
+  datemodified: "2026-05-12 08:49:27.273000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-12\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-CEB97282\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-12T08:49:27Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-CEB97282"
+  c_testmode: "Y"
+  c_correlationid: "AP-CEB97282"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "797ed3b4-affd-4d12-a6de-a6f0d797cee2"
+  datecreated: "2026-05-11 12:48:53.253000"
+  datemodified: "2026-05-11 12:49:03.086000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0005\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-C113757C\",\"first_name\":\"Molato\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T12:49:03Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → N/a] Your voucher is ready — VCH-20260511-0005"
+  c_testmode: "Y"
+  c_correlationid: "AP-C113757C"
+  c_backend: "gmail"
+  c_intendedrecipient: "N/a"
+  c_intendedrecipientstatus: null
+
+- id: "8348356a-e309-420f-bd78-125ad69a9573"
+  datecreated: "2026-05-11 18:26:53.729000"
+  datemodified: "2026-05-11 18:26:56.929000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-5A63D047\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:26:56Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-5A63D047"
+  c_testmode: "Y"
+  c_correlationid: "AP-5A63D047"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "909078a5-57d5-45cd-868f-9db98af0b0b1"
+  datecreated: "2026-05-11 18:10:57.809000"
+  datemodified: "2026-05-11 18:11:07.279000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_APPROVED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-DF8B62A7\",\"validity_days\":\"30\",\"first_name\":\"Tumelo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:11:07Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Good news — your subsidy application is approved (AP-DF8B62A7)"
+  c_testmode: "Y"
+  c_correlationid: "AP-DF8B62A7"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "9c16a3f0-204c-4844-b7f5-e46cb7de5d01"
+  datecreated: "2026-05-11 14:40:59.552000"
+  datemodified: "2026-05-11 14:41:09.402000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"0012345\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0007\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-05493778\",\"first_name\":\"Thabo\",\"farmer_name\":\"Thabo Thabiso\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T14:41:09Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → thabangthabiso@gmail.com] Your voucher is ready — VCH-20260511-0007"
+  c_testmode: "Y"
+  c_correlationid: "AP-05493778"
+  c_backend: "gmail"
+  c_intendedrecipient: "thabangthabiso@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "9e7465c4-7f33-4bb2-a541-82b720fcd310"
+  datecreated: "2026-05-11 15:36:42.709000"
+  datemodified: "2026-05-11 15:36:42.729000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0009\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-03795009\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T15:36:42Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→68656865] Motho ea ratehang Tumelo Qacha, voucher ea hau VCH-20260511-0009 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-03795009"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "68656865"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "a1dfe098-ebe2-480b-b1a8-1e1eb0cd8511"
+  datecreated: "2026-05-11 14:41:09.468000"
+  datemodified: "2026-05-11 14:41:19.423000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"0012345\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0008\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-05493778\",\"first_name\":\"Thabo\",\"farmer_name\":\"Thabo Thabiso\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T14:41:19Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → thabangthabiso@gmail.com] Your voucher is ready — VCH-20260511-0008"
+  c_testmode: "Y"
+  c_correlationid: "AP-05493778"
+  c_backend: "gmail"
+  c_intendedrecipient: "thabangthabiso@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "a33e0e53-066c-4f66-8594-8d47be7b5f26"
+  datecreated: "2026-05-11 18:11:07.345000"
+  datemodified: "2026-05-11 18:11:17.244000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0013\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-DF8B62A7\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:11:17Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your voucher is ready — VCH-20260511-0013"
+  c_testmode: "Y"
+  c_correlationid: "AP-DF8B62A7"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "a3e45673-c7bc-45b4-8986-5706b11dfac6"
+  datecreated: "2026-05-11 18:11:17.254000"
+  datemodified: "2026-05-11 18:11:17.279000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0013\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-DF8B62A7\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T18:11:17Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→68656865] Motho ea ratehang Tumelo Qacha, voucher ea hau VCH-20260511-0013 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-DF8B62A7"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "68656865"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "a77c8a55-3929-4f0c-ba75-822bcd8b6ca3"
+  datecreated: "2026-05-11 16:36:54.325000"
+  datemodified: "2026-05-11 16:36:54.345000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0011\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-D06AABDB\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T16:36:54Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→68656865] Motho ea ratehang Tumelo Qacha, voucher ea hau VCH-20260511-0011 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-D06AABDB"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "68656865"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "aa87734e-6592-4108-9b2b-418ff1a50bf5"
+  datecreated: "2026-05-11 19:37:51.018000"
+  datemodified: "2026-05-11 19:37:51.043000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0016\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-7471B42D\",\"first_name\":\"Mants'ali\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T19:37:51Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→+26659518328] Motho ea ratehang Mants'ali Panyane, voucher ea hau VCH-20260511-0016 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-7471B42D"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "+26659518328"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "aafae92e-057f-4ee9-b3b5-6f0d2bb88f45"
+  datecreated: "2026-05-11 16:36:54.373000"
+  datemodified: "2026-05-11 16:37:04.283000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0012\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-D06AABDB\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T16:37:04Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your voucher is ready — VCH-20260511-0012"
+  c_testmode: "Y"
+  c_correlationid: "AP-D06AABDB"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "ad678e5a-ae65-42ab-99c1-e1e55cb36ff8"
+  datecreated: "2026-05-11 19:16:08.023000"
+  datemodified: "2026-05-11 19:16:17.506000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-15A0EF40\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:16:17Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-15A0EF40"
+  c_testmode: "Y"
+  c_correlationid: "AP-15A0EF40"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "adbca436-b6a0-4a00-83df-f4899b00a7ec"
+  datecreated: "2026-05-11 18:11:17.311000"
+  datemodified: "2026-05-11 18:11:27.270000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0014\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-DF8B62A7\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:11:27Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your voucher is ready — VCH-20260511-0014"
+  c_testmode: "Y"
+  c_correlationid: "AP-DF8B62A7"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "aeac97bc-b1d9-4c97-b8a3-7aad364dc215"
+  datecreated: "2026-05-11 18:26:57.204000"
+  datemodified: "2026-05-11 18:27:06.896000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-5A63D047\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:27:06Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-5A63D047"
+  c_testmode: "Y"
+  c_correlationid: "AP-5A63D047"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "b033c158-26b0-4e2f-b4e4-7e07b0e26c3a"
+  datecreated: "2026-05-11 12:49:13.058000"
+  datemodified: "2026-05-11 12:49:13.079000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0006\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-C113757C\",\"first_name\":\"Molato\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T12:49:13Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→+26657218900] Motho ea ratehang Molato Nonyana, voucher ea hau VCH-20260511-0006 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-C113757C"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "+26657218900"
+  c_intendedrecipientstatus: null
+
+- id: "b1111b05-afc5-4e19-9e8a-147c0d6544da"
+  datecreated: "2026-05-11 12:48:43.329000"
+  datemodified: "2026-05-11 12:48:53.189000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_APPROVED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-C113757C\",\"validity_days\":\"30\",\"first_name\":\"Molato\",\"district_phone\":\"your district office\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T12:48:53Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → N/a] Good news — your subsidy application is approved (AP-C113757C)"
+  c_testmode: "Y"
+  c_correlationid: "AP-C113757C"
+  c_backend: "gmail"
+  c_intendedrecipient: "N/a"
+  c_intendedrecipientstatus: null
+
+- id: "bcddecec-5b64-4a2a-848d-27234f736787"
+  datecreated: "2026-05-11 18:21:40.626000"
+  datemodified: "2026-05-11 18:21:43.665000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-A1CEAE21\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T18:21:43Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your subsidy application has been received — AP-A1CEAE21"
+  c_testmode: "Y"
+  c_correlationid: "AP-A1CEAE21"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "be97148d-9955-4107-bec5-d279a56f293e"
+  datecreated: "2026-05-11 15:36:42.757000"
+  datemodified: "2026-05-11 15:36:52.715000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0010\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-03795009\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T15:36:52Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your voucher is ready — VCH-20260511-0010"
+  c_testmode: "Y"
+  c_correlationid: "AP-03795009"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "c0c6f236-73a7-486e-82f9-737873523d33"
+  datecreated: "2026-05-11 16:37:04.290000"
+  datemodified: "2026-05-11 16:37:04.307000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0012\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-D06AABDB\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T16:37:04Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→68656865] Motho ea ratehang Tumelo Qacha, voucher ea hau VCH-20260511-0012 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-D06AABDB"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "68656865"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "c10135ce-ebfd-4e8e-ad29-9d1e5eaa48ae"
+  datecreated: "2026-05-11 15:36:52.723000"
+  datemodified: "2026-05-11 15:36:52.744000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0010\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-03795009\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T15:36:52Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→68656865] Motho ea ratehang Tumelo Qacha, voucher ea hau VCH-20260511-0010 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-03795009"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "68656865"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "c751bebf-9333-48f9-97dc-f520d149d9d3"
+  datecreated: "2026-05-11 12:48:39.953000"
+  datemodified: "2026-05-11 12:48:43.108000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"02555522267\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-C113757C\",\"first_name\":\"Molato\",\"district_phone\":\"your district office\",\"farmer_name\":\"Molato Nonyana\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T12:48:43Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → N/a] Your subsidy application has been received — AP-C113757C"
+  c_testmode: "Y"
+  c_correlationid: "AP-C113757C"
+  c_backend: "gmail"
+  c_intendedrecipient: "N/a"
+  c_intendedrecipientstatus: null
+
+- id: "d1767ea3-4813-48bb-9cb6-2c1948983174"
+  datecreated: "2026-05-11 14:40:46.261000"
+  datemodified: "2026-05-11 14:40:49.624000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"0012345\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-05493778\",\"first_name\":\"Thabo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Thabo Thabiso\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T14:40:49Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → thabangthabiso@gmail.com] Your subsidy application has been received — AP-05493778"
+  c_testmode: "Y"
+  c_correlationid: "AP-05493778"
+  c_backend: "gmail"
+  c_intendedrecipient: "thabangthabiso@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "d3cfb0c3-28f5-4872-aa26-a9d1f20ceafb"
+  datecreated: "2026-05-11 18:11:27.279000"
+  datemodified: "2026-05-11 18:11:27.302000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0014\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-DF8B62A7\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T18:11:27Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→68656865] Motho ea ratehang Tumelo Qacha, voucher ea hau VCH-20260511-0014 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-DF8B62A7"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "68656865"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "d585ccdd-a259-4a50-ae20-eed828f2f002"
+  datecreated: "2026-05-11 15:36:19.604000"
+  datemodified: "2026-05-11 15:36:22.932000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-03795009\",\"first_name\":\"Tumelo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T15:36:22Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your subsidy application has been received — AP-03795009"
+  c_testmode: "Y"
+  c_correlationid: "AP-03795009"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "da73995e-b407-4fca-9ae5-bbb5afaede4e"
+  datecreated: "2026-05-12 08:46:00.843000"
+  datemodified: "2026-05-12 08:46:10.593000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_UNDER_REVIEW"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"decision_date\":\"2026-05-12\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-366ED586\",\"validity_days\":\"30\",\"first_name\":\"Mants'ali\",\"district_phone\":\"your district office\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-12T08:46:10Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your application is under review — AP-366ED586"
+  c_testmode: "Y"
+  c_correlationid: "AP-366ED586"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "dc7b753f-06f7-44c1-9d63-16754bb64701"
+  datecreated: "2026-05-11 16:36:34.696000"
+  datemodified: "2026-05-11 16:36:44.282000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_APPROVED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"decision_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-D06AABDB\",\"validity_days\":\"30\",\"first_name\":\"Tumelo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T16:36:44Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Good news — your subsidy application is approved (AP-D06AABDB)"
+  c_testmode: "Y"
+  c_correlationid: "AP-D06AABDB"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "f5525d03-aac4-4056-97f0-c5cfdc25b113"
+  datecreated: "2026-05-11 19:37:41.661000"
+  datemodified: "2026-05-11 19:37:41.689000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0015\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-7471B42D\",\"first_name\":\"Mants'ali\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "SMS"
+  c_sentat: "2026-05-11T19:37:41Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "+26658515039"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "+26658515039"
+  c_subject: "[TEST→+26659518328] Motho ea ratehang Mants'ali Panyane, voucher ea hau VCH-20260511-0015 ea LSL {amount} e lokile. E sebetsa ho fihlela 2026-12-31. PIN: {pin}"
+  c_testmode: "Y"
+  c_correlationid: "AP-7471B42D"
+  c_backend: "LOG_ONLY"
+  c_intendedrecipient: "+26659518328"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "f621f0cf-fd85-4692-ba86-7a6af9703ad9"
+  datecreated: "2026-05-11 19:37:41.724000"
+  datemodified: "2026-05-11 19:37:51.008000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"066257236627\",\"benefit_description\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0016\",\"benefit\":\"80 unit(s) of SEED_MAIZE_PAN6479_25KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-7471B42D\",\"first_name\":\"Mants'ali\",\"farmer_name\":\"Mants'ali Panyane\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T19:37:51Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → Pmantsali@gmail.com] Your voucher is ready — VCH-20260511-0016"
+  c_testmode: "Y"
+  c_correlationid: "AP-7471B42D"
+  c_backend: "gmail"
+  c_intendedrecipient: "Pmantsali@gmail.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "f98c4cd2-83e5-4f9e-8dbe-459ec9fc1ad4"
+  datecreated: "2026-05-11 16:36:31.191000"
+  datemodified: "2026-05-11 16:36:34.405000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "APP_SUBMITTED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"submitted_date\":\"2026-05-11\",\"district_name\":\"your local\",\"programme_name\":\"PRG_2025_001\",\"program_name\":\"PRG_2025_001\",\"application_code\":\"AP-D06AABDB\",\"first_name\":\"Tumelo\",\"district_phone\":\"your district office\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T16:36:34Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your subsidy application has been received — AP-D06AABDB"
+  c_testmode: "Y"
+  c_correlationid: "AP-D06AABDB"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+
+- id: "fb208236-69c1-4f97-b076-9f5b3b07b733"
+  datecreated: "2026-05-11 15:36:32.765000"
+  datemodified: "2026-05-11 15:36:42.700000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_eventcode: "VOUCHER_ISSUED"
+  c_varsjson: "{\"national_id\":\"325658894166\",\"benefit_description\":\"80 unit(s) of FERT_NPK_50KG\",\"program_name\":\"PRG_2025_001\",\"expiry_date\":\"2026-12-31\",\"voucher_code\":\"VCH-20260511-0009\",\"benefit\":\"80 unit(s) of FERT_NPK_50KG\",\"district_phone\":\"your district office\",\"district_name\":\"maseru\",\"programme_name\":\"PRG_2025_001\",\"issued_date\":\"2026-05-11\",\"application_code\":\"AP-03795009\",\"first_name\":\"Tumelo\",\"farmer_name\":\"Tumelo Qacha\"}"
+  c_lasterror: null
+  c_toname: null
+  c_scheduledfor: null
+  c_channel: "EMAIL"
+  c_sentat: "2026-05-11T15:36:42Z"
+  c_locale: "ST"
+  c_priority: "NORMAL"
+  c_toaddress: "aarelaponin@gmail.com"
+  c_status: "sent"
+  c_attempts: "0"
+  c_actualrecipient: "aarelaponin@gmail.com"
+  c_subject: "[TEST → qacha@tumelo.com] Your voucher is ready — VCH-20260511-0009"
+  c_testmode: "Y"
+  c_correlationid: "AP-03795009"
+  c_backend: "gmail"
+  c_intendedrecipient: "qacha@tumelo.com"
+  c_intendedrecipientstatus: "resolved"
+

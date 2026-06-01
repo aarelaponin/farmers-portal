@@ -1,0 +1,9 @@
+{
+  "id": "API-d883d4db-cfdc-447c-83be-4837c22a0d8a",
+  "name": "Eligibility Evaluation Result API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spEligResult\",\n            \"ignorePermission\": \"\",\n            \"id\": \"4FE58085-E506-4D0F-9D8E-F71AC45AF0D6\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Eligibility Evaluation Result API\",\n        \"description\": \"Auto-generated API for form: spEligResult\",\n        \"id\": \"API-d883d4db-cfdc-447c-83be-4837c22a0d8a\"\n    }\n}\n"
+}

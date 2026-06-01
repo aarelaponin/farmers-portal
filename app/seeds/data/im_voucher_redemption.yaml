@@ -1,0 +1,164 @@
+# app_fd_im_voucher_redemption
+# 9 row(s) at sync time
+- id: "1e06455d-728f-4de3-90b8-5ed34f1b3d45"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "RDM-20260506-0002"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "80"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "f72f6fef-0b13-4d71-a1d2-75b0c8254e87"
+  c_voucher_code: "VCH-20260506-0002"
+  c_redeemed_by: "slice6-smoke"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+
+- id: "28375b95-7911-44b0-9d28-75d16e529ee7"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "RDM-20260506-0001"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "80"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "92e22b15-a1fd-4e1f-aabf-afdeae14582b"
+  c_voucher_code: "VCH-20260506-0001"
+  c_redeemed_by: "mmmm"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+
+- id: "30522d8e-fbd0-4d8f-b6c9-9b9f9fd3c778"
+  datecreated: "2026-05-06 21:37:53.878000"
+  datemodified: "2026-05-06 21:37:53.878000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "RDM-20260506-0008"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "80"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "922ac23c-0c81-4309-b66d-45c7626099f3"
+  c_voucher_code: "VCH-20260506-0013"
+  c_redeemed_by: "Mants'ali Panyane"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+
+- id: "44393ebd-9b6d-4127-ba99-2e36d59ab972"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "RDM-20260506-0004"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "80"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "3178de96-64d1-46cb-b633-4bc243f771fc"
+  c_voucher_code: "VCH-20260506-0007"
+  c_redeemed_by: "Mants'ali Panyane"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+
+- id: "60313d9e-d1ea-4606-90f0-20d4ae302394"
+  datecreated: "2026-05-07 10:28:54.245000"
+  datemodified: "2026-05-07 10:28:54.245000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "RDM-20260507-0001"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "80"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "a4a0c024-2b86-41ae-a683-91253a3baea8"
+  c_voucher_code: "VCH-20260507-0001"
+  c_redeemed_by: "Mants'ali Panyane"
+  c_redemption_date: "2026-05-07"
+  c_status: "completed"
+
+- id: "d4f1e833-5653-4508-a771-452fa29d9af9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "RDM-20260506-0007"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "30"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "160923de-5480-4f32-9912-e401078a1e22"
+  c_voucher_code: "VCH-20260506-0009"
+  c_redeemed_by: "test-partial-c"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+
+- id: "ed80bf3c-dbe0-4c43-b889-7e2b23943fb0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "RDM-20260506-0005"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "40"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "01f97e44-f638-4d67-80ba-40ae6d9d475e"
+  c_voucher_code: "VCH-20260506-0006"
+  c_redeemed_by: "test-partial-a"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+
+- id: "f883405e-36f7-41c6-985d-fdcb819fbd9f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "RDM-20260506-0003"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "80"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "94e36107-7b22-4bc8-a0b5-d48b51417c8a"
+  c_voucher_code: "VCH-20260506-0005"
+  c_redeemed_by: "E2E Test Applicant CBCF6E52"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+
+- id: "fdf915b6-1119-404d-ad59-0936587b0dbb"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "RDM-20260506-0006"
+  c_redemption_point: "CP_MORIJA"
+  c_quantity_redeemed: "40"
+  c_signature_or_thumbprint: null
+  c_notes: "Redeemed via VoucherRedemptionTool"
+  c_voucher_id: "01f97e44-f638-4d67-80ba-40ae6d9d475e"
+  c_voucher_code: "VCH-20260506-0006"
+  c_redeemed_by: "test-partial-b"
+  c_redemption_date: "2026-05-06"
+  c_status: "completed"
+

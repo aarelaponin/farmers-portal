@@ -1,0 +1,9 @@
+{
+  "id": "API-d6725eec-e7cf-40e4-955f-6a3ea57fe781",
+  "name": "run-eligibility-worker",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": "",
+  "json": "{\"elements\":[{\"className\":\"global.govstack.regbb.engine.api.BudgetApi\",\"properties\":{\"id\":\"C5F2D3E3-9FB4-4248-21CB-72EE426A5EF8\",\"ENABLED_PATHS\":\"post:/ces/estimate;get:/timeseries;post:/run-threshold-monitor;post:/dispatch;post:/run-projection-refresh;post:/run-eligibility-worker\"}}],\"properties\":{\"name\":\"run-eligibility-worker\",\"description\":\"\",\"id\":\"API-d6725eec-e7cf-40e4-955f-6a3ea57fe781\"}}"
+}

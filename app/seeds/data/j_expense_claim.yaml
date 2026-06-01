@@ -1,0 +1,152 @@
+# app_fd_j_expense_claim
+# 6 row(s) at sync time
+- id: "3cde3f07-1db0-43c1-b314-19e3a2253358"
+  datecreated: "2025-04-29 10:37:26"
+  datemodified: "2025-04-29 10:40:46"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_specd: null
+  c_financeapprovedby: null
+  c_approveddate: "2025-04-29"
+  c_remark: "Printer ink, stationery, and office chairs"
+  c_title: "Office Supplies Purchase - Q2"
+  c_selectapprover: "admin"
+  c_financeapproveddate: null
+  c_total: "300.00"
+  c_finance_comments: null
+  c_ref: "0005"
+  c_approval_comments: null
+  c_approvedby: "Admin Admin"
+  c_createddate: "2025-04-29"
+  c_receipt: ""
+  c_claimant: "Admin Admin"
+  c_status: "Resubmit"
+  c_username: "admin"
+
+- id: "3f7b7064-cee9-4ca1-ace6-d01396235ef1"
+  datecreated: "2025-04-29 11:23:00"
+  datemodified: "2025-04-29 11:24:23"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_specd: null
+  c_financeapprovedby: "Admin Admin"
+  c_approveddate: "2025-04-29"
+  c_remark: "Taxi fares, client lunch, and meeting room rental"
+  c_title: "Client Meeting - Kuala Lumpur"
+  c_selectapprover: "admin"
+  c_financeapproveddate: "2025-04-29"
+  c_total: "150.00"
+  c_finance_comments: ""
+  c_ref: "0007"
+  c_approval_comments: null
+  c_approvedby: "Admin Admin"
+  c_createddate: "2025-04-29"
+  c_receipt: ""
+  c_claimant: "Admin Admin"
+  c_status: "Verified by Finance"
+  c_username: "admin"
+
+- id: "44dbe867-d02d-44d4-80fc-49caab9253a1"
+  datecreated: "2025-04-29 10:36:40"
+  datemodified: "2025-04-29 10:41:17"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_specd: null
+  c_financeapprovedby: null
+  c_approveddate: "2025-04-29"
+  c_remark: "Monthly reimbursement for internet service for April"
+  c_title: "Home Internet Claim (Remote Work)"
+  c_selectapprover: "admin"
+  c_financeapproveddate: null
+  c_total: "150.00"
+  c_finance_comments: null
+  c_ref: "0004"
+  c_approval_comments: null
+  c_approvedby: "Admin Admin"
+  c_createddate: "2025-04-29"
+  c_receipt: ""
+  c_claimant: "Admin Admin"
+  c_status: "Approved by HOD"
+  c_username: "admin"
+
+- id: "b92c591e-4af3-4e42-9f79-11f0cf1a82a6"
+  datecreated: "2025-04-29 10:34:36"
+  datemodified: "2025-04-29 10:40:22"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_specd: null
+  c_financeapprovedby: null
+  c_approveddate: "2025-04-29"
+  c_remark: "Flight tickets, hotel stay, and conference registration fee"
+  c_title: "Singapore Conference Expenses"
+  c_selectapprover: "admin"
+  c_financeapproveddate: null
+  c_total: "800.00"
+  c_finance_comments: null
+  c_ref: "0003"
+  c_approval_comments: null
+  c_approvedby: "Admin Admin"
+  c_createddate: "2025-04-29"
+  c_receipt: ""
+  c_claimant: "Admin Admin"
+  c_status: "Rejected by HOD"
+  c_username: "admin"
+
+- id: "ca394956-5d17-4b9d-a1a6-cd1077fd2c2d"
+  datecreated: "2025-04-29 10:38:48"
+  datemodified: "2025-04-29 10:40:07"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_specd: null
+  c_financeapprovedby: "Admin Admin"
+  c_approveddate: "2025-04-29"
+  c_remark: "Venue booking, food catering, and team activity expenses"
+  c_title: "Team Building Event - October"
+  c_selectapprover: "admin"
+  c_financeapproveddate: "2025-04-29"
+  c_total: "3000.00"
+  c_finance_comments: ""
+  c_ref: "0006"
+  c_approval_comments: null
+  c_approvedby: "Admin Admin"
+  c_createddate: "2025-04-29"
+  c_receipt: ""
+  c_claimant: "Admin Admin"
+  c_status: "Verified by Finance"
+  c_username: "admin"
+
+- id: "f3cad012-02a2-497f-9152-cc6c59e730f5"
+  datecreated: "2025-04-29 10:29:04"
+  datemodified: "2025-04-29 10:33:14"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_specd: null
+  c_financeapprovedby: null
+  c_approveddate: null
+  c_remark: "Includes airfare, hotel, meals, and local transport receipts."
+  c_title: "China Business Trip - July 2025"
+  c_selectapprover: "admin"
+  c_financeapproveddate: null
+  c_total: "1650.00"
+  c_finance_comments: null
+  c_ref: "0002"
+  c_approval_comments: null
+  c_approvedby: null
+  c_createddate: "2025-04-29"
+  c_receipt: ""
+  c_claimant: "Admin Admin"
+  c_status: "Submitted"
+  c_username: "admin"
+

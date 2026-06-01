@@ -1,0 +1,9 @@
+{
+  "id": "API-52180880-5a5c-4d01-aa04-f384a0632b3f",
+  "name": "MD.44 - Input Catalogue API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md44Input\",\n            \"ignorePermission\": \"\",\n            \"id\": \"C8689C88-C353-4ED3-8969-312785C0158C\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.44 - Input Catalogue API\",\n        \"description\": \"Auto-generated API for form: md44Input\",\n        \"id\": \"API-52180880-5a5c-4d01-aa04-f384a0632b3f\"\n    }\n}\n"
+}

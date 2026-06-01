@@ -1,0 +1,9 @@
+{
+  "id": "API-018629fd-1c12-419f-bebe-fbff2de34eba",
+  "name": "MD.43 - Dealer Category API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md43DealerCategory\",\n            \"ignorePermission\": \"\",\n            \"id\": \"69BA9A8B-C8DF-415D-8D49-07A03C344308\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.43 - Dealer Category API\",\n        \"description\": \"Auto-generated API for form: md43DealerCategory\",\n        \"id\": \"API-018629fd-1c12-419f-bebe-fbff2de34eba\"\n    }\n}\n"
+}

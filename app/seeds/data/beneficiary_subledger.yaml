@@ -1,0 +1,1221 @@
+# app_fd_beneficiary_subledger
+# 53 row(s) at sync time
+- id: "00cef459-099d-4081-a69a-1313f5694638"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_67b2eadb-b09b-4a0b-a68c-eaee7ed0f873"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "67b2eadb-b09b-4a0b-a68c-eaee7ed0f873"
+  c_applicant_name: "Lineo 10 Mathaba"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789101"
+  c_pre_committed_at: "2026-05-06 07:15:25.056"
+  c_status: "open"
+
+- id: "059eb9c1-c73b-4abc-b352-7b66a151e994"
+  datecreated: "2026-05-11 14:40:49.874000"
+  datemodified: "2026-05-11 14:40:49.874000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_05493778-a4e4-460b-bed9-1c00c78a1781"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "05493778-a4e4-460b-bed9-1c00c78a1781"
+  c_applicant_name: "Thabo Thabiso"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0012345"
+  c_pre_committed_at: "2026-05-11 14:40:49.874"
+  c_status: "open"
+
+- id: "285b2f63-fdd2-4bc3-9ab1-842c794f8f26"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_91b44e05-367d-43e6-b8ea-3deab7b6c147"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "5000.00"
+  c_application_id: "91b44e05-367d-43e6-b8ea-3deab7b6c147"
+  c_applicant_name: "'Nthabiseng Mafa"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_004"
+  c_amount_by_source_json: "{\"SRC_GOL_EMERGENCY_PRG_2025_004_FY2526\":1500.00,\"SRC_UNICEF_PRG_2025_004_FY2526\":1500.00,\"SRC_WFP_PRG_2025_004_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "1968111000234"
+  c_pre_committed_at: "2026-05-06 07:15:08.207"
+  c_status: "open"
+
+- id: "2911419e-7f2a-4207-bc26-a6401f88ccb0"
+  datecreated: "2026-05-11 11:49:57.922000"
+  datemodified: "2026-05-11 11:49:57.922000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_2fa069f5-fb5c-4acb-bd22-7a5126065b44"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "2fa069f5-fb5c-4acb-bd22-7a5126065b44"
+  c_applicant_name: "Phatela Phatela"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789234"
+  c_pre_committed_at: "2026-05-11 11:49:57.922"
+  c_status: "open"
+
+- id: "291594da-24f7-4f49-9e89-0207d651d925"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_21d111b4-9728-4416-8b5d-49248397f559"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "21d111b4-9728-4416-8b5d-49248397f559"
+  c_applicant_name: "Lineo 10 Mathaba"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789101"
+  c_pre_committed_at: "2026-05-06 07:15:21.854"
+  c_status: "open"
+
+- id: "292ae040-8761-4989-90ff-74f54bf8fd80"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_d9516810-04ed-46f6-837c-cf051be53d98"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "d9516810-04ed-46f6-837c-cf051be53d98"
+  c_applicant_name: "Lerato Mokoena"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "1985041500123"
+  c_pre_committed_at: "2026-05-06 19:35:52.352"
+  c_status: "open"
+
+- id: "2aeeb013-a8e2-4b26-8801-cc4476fbdf4a"
+  datecreated: "2026-05-10 12:33:34.252000"
+  datemodified: "2026-05-10 12:33:34.252000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_1cf4704a-8bd2-4cec-b68f-f0b66ae77805"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "1cf4704a-8bd2-4cec-b68f-f0b66ae77805"
+  c_applicant_name: "Tumelo Qacha"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "325658894166"
+  c_pre_committed_at: "2026-05-10 12:33:34.252"
+  c_status: "open"
+
+- id: "2f50feb4-820b-4e97-ac72-1fc30c34955d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_6bb2858a-dc23-4fa4-8299-6ec31b28e166"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "6bb2858a-dc23-4fa4-8299-6ec31b28e166"
+  c_applicant_name: "Rorisang Monokoane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_002"
+  c_amount_by_source_json: "{\"SRC_FAO_IFAD_PRG_2025_002_FY2526\":800.00,\"SRC_GOL_PRG_2025_002_FY2526\":1200.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "011251286921"
+  c_pre_committed_at: "2026-05-06 07:15:36.186"
+  c_status: "open"
+
+- id: "317a928f-968b-425b-a9bc-443d64ee4133"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_30f6098e-6c67-4314-84cd-b2122cc7a201"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "30f6098e-6c67-4314-84cd-b2122cc7a201"
+  c_applicant_name: "Mosito Nkhets'e"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0000022116106827"
+  c_pre_committed_at: "2026-05-06 07:15:18.626"
+  c_status: "open"
+
+- id: "4066578c-1713-46f5-afc9-47c1ad1e8b7c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_a0cb3508-d27a-4d0e-8692-70e38b72c090"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "5000.00"
+  c_application_id: "a0cb3508-d27a-4d0e-8692-70e38b72c090"
+  c_applicant_name: "Rorisang Monokoane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_004"
+  c_amount_by_source_json: "{\"SRC_GOL_EMERGENCY_PRG_2025_004_FY2526\":1500.00,\"SRC_UNICEF_PRG_2025_004_FY2526\":1500.00,\"SRC_WFP_PRG_2025_004_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "011251286921"
+  c_pre_committed_at: "2026-05-04 08:44:24.333"
+  c_status: "open"
+
+- id: "41888c16-df2f-4890-a5a3-f5fe6e08b703"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_9c067d56-94a6-472a-8967-5288ef0b680b"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "9c067d56-94a6-472a-8967-5288ef0b680b"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-06 14:28:55.492"
+  c_status: "open"
+
+- id: "423e5819-d238-4783-896b-4d65fbb0cc3a"
+  datecreated: "2026-05-10 21:12:19.313000"
+  datemodified: "2026-05-10 21:12:19.313000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_ac85eea1-f798-4470-b731-7b2ab10247d1"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "ac85eea1-f798-4470-b731-7b2ab10247d1"
+  c_applicant_name: "Nteboheleng  Nkopane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "4545876544467"
+  c_pre_committed_at: "2026-05-10 21:12:19.313"
+  c_status: "open"
+
+- id: "44fea011-9949-432a-99a0-a34d2c689c2b"
+  datecreated: "2026-05-11 09:12:48.241000"
+  datemodified: "2026-05-11 09:12:48.241000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_ed166949-d007-4ffa-b752-5f1a2d28065f"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "ed166949-d007-4ffa-b752-5f1a2d28065f"
+  c_applicant_name: "RETHABILE  MOSEME"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "5032256478952"
+  c_pre_committed_at: "2026-05-11 09:12:48.241"
+  c_status: "open"
+
+- id: "4b0d7b9e-21c2-483a-96e2-3dfc370e9693"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_b1244e7f-e124-4217-af50-90f06f8c2269"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "b1244e7f-e124-4217-af50-90f06f8c2269"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-04 08:44:02.740"
+  c_status: "open"
+
+- id: "4f698adf-6c06-4d89-9ed7-b34ec6e4752d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_635a6a85-6fee-4940-b283-31b7cc8314ba"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "635a6a85-6fee-4940-b283-31b7cc8314ba"
+  c_applicant_name: "Thabo Sekhoane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_002"
+  c_amount_by_source_json: "{\"SRC_FAO_IFAD_PRG_2025_002_FY2526\":800.00,\"SRC_GOL_PRG_2025_002_FY2526\":1200.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "1972081200456"
+  c_pre_committed_at: "2026-05-06 07:15:08.396"
+  c_status: "open"
+
+- id: "61505156-2bd0-42f9-ae90-45cfa8ae5b1e"
+  datecreated: "2026-05-11 15:36:23.142000"
+  datemodified: "2026-05-11 15:36:23.142000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_03795009-f039-4a6d-8890-5cc915b3b398"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "03795009-f039-4a6d-8890-5cc915b3b398"
+  c_applicant_name: "Tumelo Qacha"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "325658894166"
+  c_pre_committed_at: "2026-05-11 15:36:23.142"
+  c_status: "open"
+
+- id: "66606b36-7f13-497e-a39a-8b3a67606681"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_29c051da-8db7-4bef-859a-e3cb9ee5cac3"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "29c051da-8db7-4bef-859a-e3cb9ee5cac3"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-05 20:56:03.463"
+  c_status: "open"
+
+- id: "68778952-1ac0-44ea-a657-3d543b0f1ffe"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_25bf581a-0496-4118-ac3f-c94bf6ca348d"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "5000.00"
+  c_application_id: "25bf581a-0496-4118-ac3f-c94bf6ca348d"
+  c_applicant_name: "Rorisang Monokoane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_004"
+  c_amount_by_source_json: "{\"SRC_GOL_EMERGENCY_PRG_2025_004_FY2526\":1500.00,\"SRC_UNICEF_PRG_2025_004_FY2526\":1500.00,\"SRC_WFP_PRG_2025_004_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "011251286921"
+  c_pre_committed_at: "2026-05-06 07:15:39.336"
+  c_status: "open"
+
+- id: "6d1b9897-0935-4132-a14c-47a332150828"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_54d18809-e4ee-48cb-b757-81a80f93c637"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "54d18809-e4ee-48cb-b757-81a80f93c637"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-06 15:27:05.510"
+  c_status: "open"
+
+- id: "6db77828-3e35-4eff-9c34-46840cef6548"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_46906408-13c5-4750-b88e-5f30fa40301c"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "46906408-13c5-4750-b88e-5f30fa40301c"
+  c_applicant_name: "Mosito Nkhets'e"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_002"
+  c_amount_by_source_json: "{\"SRC_FAO_IFAD_PRG_2025_002_FY2526\":800.00,\"SRC_GOL_PRG_2025_002_FY2526\":1200.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0000022116106827"
+  c_pre_committed_at: "2026-05-05 20:56:10.803"
+  c_status: "open"
+
+- id: "71fc9e96-2e04-4364-85bf-3396c3700d03"
+  datecreated: "2026-05-07 10:28:47.080000"
+  datemodified: "2026-05-07 10:28:47.080000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_f1a3432e-6314-4217-b89e-aa0294265d2d"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "f1a3432e-6314-4217-b89e-aa0294265d2d"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-07 10:28:47.079"
+  c_status: "open"
+
+- id: "7c25bc2f-a01b-457f-a024-ca7e585b225c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_9dbd2b0c-534a-4783-a250-3c76f50924b0"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "5000.00"
+  c_application_id: "9dbd2b0c-534a-4783-a250-3c76f50924b0"
+  c_applicant_name: "Lineo 10 Mathaba"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_004"
+  c_amount_by_source_json: "{\"SRC_GOL_EMERGENCY_PRG_2025_004_FY2526\":1500.00,\"SRC_UNICEF_PRG_2025_004_FY2526\":1500.00,\"SRC_WFP_PRG_2025_004_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789101"
+  c_pre_committed_at: "2026-05-06 07:15:26.659"
+  c_status: "open"
+
+- id: "8097244c-e783-469f-9c1b-a8e4ed8813be"
+  datecreated: "2026-05-11 18:10:57.764000"
+  datemodified: "2026-05-11 18:10:57.764000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_df8b62a7-00c0-43f4-a80e-09e876ce99cc"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "df8b62a7-00c0-43f4-a80e-09e876ce99cc"
+  c_applicant_name: "Tumelo Qacha"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "325658894166"
+  c_pre_committed_at: "2026-05-11 18:10:57.764"
+  c_status: "open"
+
+- id: "80e59c5a-d4bc-4436-a63e-49225921129f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_60e47cc6-a3c8-46f9-994e-9d62fe36a297"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "60e47cc6-a3c8-46f9-994e-9d62fe36a297"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-05 20:45:22.055"
+  c_status: "open"
+
+- id: "82feaae0-f246-4fe1-8a2b-b806c79466b5"
+  datecreated: "2026-05-11 16:36:34.656000"
+  datemodified: "2026-05-11 16:36:34.656000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_d06aabdb-d269-455a-a480-33c8190d8e06"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "d06aabdb-d269-455a-a480-33c8190d8e06"
+  c_applicant_name: "Tumelo Qacha"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "325658894166"
+  c_pre_committed_at: "2026-05-11 16:36:34.656"
+  c_status: "open"
+
+- id: "865c04a6-fb4d-474c-aa08-9f65a43adf43"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_a20c2c80-41ea-4ae2-a8ac-8a596dbc003a"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "a20c2c80-41ea-4ae2-a8ac-8a596dbc003a"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-06 15:21:01.199"
+  c_status: "open"
+
+- id: "87225984-ccfb-4366-9a3b-5a4ac083fe8c"
+  datecreated: "2026-05-11 12:48:43.302000"
+  datemodified: "2026-05-11 12:48:43.302000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_c113757c-c59b-4751-8c13-9dbd32160926"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "c113757c-c59b-4751-8c13-9dbd32160926"
+  c_applicant_name: "Molato Nonyana"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "02555522267"
+  c_pre_committed_at: "2026-05-11 12:48:43.302"
+  c_status: "open"
+
+- id: "891a7366-ffd4-48d8-99bd-a20f22a48e3a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_b64c7f06-e930-4a60-8f6d-7d18a0f7cb63"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "b64c7f06-e930-4a60-8f6d-7d18a0f7cb63"
+  c_applicant_name: "Rorisang Monokoane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "011251286921"
+  c_pre_committed_at: "2026-05-04 08:44:23.049"
+  c_status: "open"
+
+- id: "8cf44521-5f24-475f-ac3a-54c11e256946"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_74737f0b-e65b-4250-9758-0890f9cfce11"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "74737f0b-e65b-4250-9758-0890f9cfce11"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-06 15:27:05.385"
+  c_status: "open"
+
+- id: "8eca8d46-1ee0-4c59-b7fa-1d362d2f9d4e"
+  datecreated: "2026-05-10 18:48:26.963000"
+  datemodified: "2026-05-10 18:48:26.963000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_1c6e2102-1380-4b50-b792-f9bb715ff7f2"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "1c6e2102-1380-4b50-b792-f9bb715ff7f2"
+  c_applicant_name: "Lerato Lerato"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "056789321444"
+  c_pre_committed_at: "2026-05-10 18:48:26.962"
+  c_status: "open"
+
+- id: "97d93f97-eac2-4d12-9a8c-e1602b232b60"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_d9be4b58-def0-435f-a455-5a77f5447c36"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "d9be4b58-def0-435f-a455-5a77f5447c36"
+  c_applicant_name: "Mosito Nkhets'e"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0000022116106827"
+  c_pre_committed_at: "2026-05-05 20:56:12.099"
+  c_status: "open"
+
+- id: "9806d78e-3ba7-4df1-8ec5-a45e49b3310e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_66d43867-e6df-4fd0-a5b1-bf0940e9713f"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "66d43867-e6df-4fd0-a5b1-bf0940e9713f"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-05 20:45:19.356"
+  c_status: "open"
+
+- id: "9b1becbd-40ff-49ff-9798-0e66ea91c771"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_ac0e13c2-0426-4c72-a945-6c5c1e519599"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "ac0e13c2-0426-4c72-a945-6c5c1e519599"
+  c_applicant_name: "Mosito Nkhets'e"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0000022116106827"
+  c_pre_committed_at: "2026-05-04 08:44:07.796"
+  c_status: "open"
+
+- id: "9b452608-cffa-405e-94e0-8274a05252f8"
+  datecreated: "2026-05-06 21:37:29.366000"
+  datemodified: "2026-05-06 21:37:29.366000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_31a56191-d541-4df7-8846-4f145e4b70dc"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "31a56191-d541-4df7-8846-4f145e4b70dc"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-06 21:37:29.366"
+  c_status: "open"
+
+- id: "a0443d76-0e2c-4233-b76a-a92ace96a6a2"
+  datecreated: "2026-05-10 12:46:44.253000"
+  datemodified: "2026-05-10 12:46:44.253000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_326a70ae-24cb-4a05-8840-7ea9a0c20dc5"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "326a70ae-24cb-4a05-8840-7ea9a0c20dc5"
+  c_applicant_name: "Grace Mantutle Set\"soana"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "012118275522"
+  c_pre_committed_at: "2026-05-10 12:46:44.253"
+  c_status: "open"
+
+- id: "a8aaf04e-8a28-447b-a81e-62f55df32647"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_05e674a5-b87e-4f60-b9d9-4112d519f51a"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "05e674a5-b87e-4f60-b9d9-4112d519f51a"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-06 07:15:08.050"
+  c_status: "open"
+
+- id: "b2e7d13d-f182-44c8-96de-d0c69c3bd9ed"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_1f725176-47f9-4308-bc58-60276647ee14"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "1f725176-47f9-4308-bc58-60276647ee14"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-05 20:56:06.479"
+  c_status: "open"
+
+- id: "b5938430-fb2c-4a1c-a2db-1afe00a0b043"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_a4bc680f-e2f9-491e-9387-45405e21b91d"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "a4bc680f-e2f9-491e-9387-45405e21b91d"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-04 08:44:00.387"
+  c_status: "open"
+
+- id: "b66836c6-65b9-4cb1-b788-d6af45b90850"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_e7af4a56-fe8b-418f-857d-83c12e81f392"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "e7af4a56-fe8b-418f-857d-83c12e81f392"
+  c_applicant_name: "Rorisang Monokoane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_002"
+  c_amount_by_source_json: "{\"SRC_FAO_IFAD_PRG_2025_002_FY2526\":800.00,\"SRC_GOL_PRG_2025_002_FY2526\":1200.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "011251286921"
+  c_pre_committed_at: "2026-05-04 08:44:21.845"
+  c_status: "open"
+
+- id: "be094c5e-fb92-4c23-b7f3-4c5f53732c6b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_c1276125-76c8-4a34-8ebf-2822430ccd1b"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "c1276125-76c8-4a34-8ebf-2822430ccd1b"
+  c_applicant_name: "Mosito Nkhets'e"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_002"
+  c_amount_by_source_json: "{\"SRC_FAO_IFAD_PRG_2025_002_FY2526\":800.00,\"SRC_GOL_PRG_2025_002_FY2526\":1200.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0000022116106827"
+  c_pre_committed_at: "2026-05-06 07:15:17.011"
+  c_status: "open"
+
+- id: "be3a6fe7-b2d7-42cf-a1d3-80f0f8eab081"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_a3e1b23f-3599-4710-b863-12423430392b"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "a3e1b23f-3599-4710-b863-12423430392b"
+  c_applicant_name: "Rorisang Monokoane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "011251286921"
+  c_pre_committed_at: "2026-05-06 07:15:37.727"
+  c_status: "open"
+
+- id: "c0aa3609-261f-4e8f-80e2-a1a3677d1a6c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_72ef3431-a6e7-4364-aaeb-e266131daf7d"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "72ef3431-a6e7-4364-aaeb-e266131daf7d"
+  c_applicant_name: "Lineo 10 Mathaba"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789101"
+  c_pre_committed_at: "2026-05-06 15:19:49.424"
+  c_status: "open"
+
+- id: "c32a7930-28d9-4b1c-b752-f46c4280347d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_e3e07c29-90d8-432a-a128-2487d5a8a36c"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "e3e07c29-90d8-432a-a128-2487d5a8a36c"
+  c_applicant_name: "E2E Test Applicant D7EAE096"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "TEST-D7EAE096"
+  c_pre_committed_at: "2026-05-06 19:35:52.265"
+  c_status: "open"
+
+- id: "c53ea2c4-6bc1-4746-b101-81fd97840031"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_5acba3f0-5827-4bd0-b5f5-db93ac78fab4"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "5acba3f0-5827-4bd0-b5f5-db93ac78fab4"
+  c_applicant_name: "Lineo 10 Mathaba"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789101"
+  c_pre_committed_at: "2026-05-04 08:44:10.361"
+  c_status: "open"
+
+- id: "c652e188-9c11-4e8e-98f1-6ec046be9c59"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_f7a3b8fc-fbab-46c0-90ef-636c57f633c3"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "f7a3b8fc-fbab-46c0-90ef-636c57f633c3"
+  c_applicant_name: "Lineo 10 Mathaba"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789101"
+  c_pre_committed_at: "2026-05-04 08:44:12.925"
+  c_status: "open"
+
+- id: "d27bc1fe-df51-4979-85bf-ab7bf8817468"
+  datecreated: "2026-05-10 19:13:06.927000"
+  datemodified: "2026-05-10 19:13:06.927000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_180466dc-4a98-41e9-b568-5dd130293068"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "180466dc-4a98-41e9-b568-5dd130293068"
+  c_applicant_name: "Molato Nonyana"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "02555522267"
+  c_pre_committed_at: "2026-05-10 19:13:06.927"
+  c_status: "open"
+
+- id: "d5587cd1-6280-40a0-b295-f9a85203f891"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_6bf6ce30-cbd3-491d-aeec-7393e28a5ffc"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "5000.00"
+  c_application_id: "6bf6ce30-cbd3-491d-aeec-7393e28a5ffc"
+  c_applicant_name: "Lineo 10 Mathaba"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_004_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_004"
+  c_amount_by_source_json: "{\"SRC_GOL_EMERGENCY_PRG_2025_004_FY2526\":1500.00,\"SRC_UNICEF_PRG_2025_004_FY2526\":1500.00,\"SRC_WFP_PRG_2025_004_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0123456789101"
+  c_pre_committed_at: "2026-05-04 08:44:14.190"
+  c_status: "open"
+
+- id: "d60da088-fb68-4ec3-ab15-5f20d7b8a04d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_87364eef-6a68-4cfd-8bfa-8482963f7f21"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "87364eef-6a68-4cfd-8bfa-8482963f7f21"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-06 07:15:12.174"
+  c_status: "open"
+
+- id: "e41e2449-c7aa-4f7e-9406-d128991a68a0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_af8d0432-f13f-4773-9498-484b51ae88fd"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "1500.00"
+  c_application_id: "af8d0432-f13f-4773-9498-484b51ae88fd"
+  c_applicant_name: "Mpho Letsoela"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_003_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_003"
+  c_amount_by_source_json: "{\"SRC_WB_SADP_PRG_2025_003_FY2526\":1500.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "1990061800789"
+  c_pre_committed_at: "2026-05-06 07:15:08.471"
+  c_status: "open"
+
+- id: "e8557eda-3a42-4bed-83fd-e7a15165f331"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_67c53066-5450-417a-be5b-8195566f8b66"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "67c53066-5450-417a-be5b-8195566f8b66"
+  c_applicant_name: "Mosito Nkhets'e"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_002_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_002"
+  c_amount_by_source_json: "{\"SRC_FAO_IFAD_PRG_2025_002_FY2526\":800.00,\"SRC_GOL_PRG_2025_002_FY2526\":1200.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "0000022116106827"
+  c_pre_committed_at: "2026-05-04 08:44:06.452"
+  c_status: "open"
+
+- id: "f5c2031f-0af8-4eff-87bf-06ad82c940d3"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_b1dd8c18-731e-4e7c-911e-5e1f2e884322"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "b1dd8c18-731e-4e7c-911e-5e1f2e884322"
+  c_applicant_name: "E2E Test Applicant E133631E"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "TEST-E133631E"
+  c_pre_committed_at: "2026-05-06 14:23:08.567"
+  c_status: "open"
+
+- id: "f756facf-22bf-4178-a9f5-64fe2bda2557"
+  datecreated: "2026-05-11 19:37:21.742000"
+  datemodified: "2026-05-11 19:37:21.742000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_code: "BNF_7471b42d-e622-4757-9f0e-9f6f9730933b"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "7471b42d-e622-4757-9f0e-9f6f9730933b"
+  c_applicant_name: "Mants'ali Panyane"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "066257236627"
+  c_pre_committed_at: "2026-05-11 19:37:21.742"
+  c_status: "open"
+
+- id: "fe90d54f-0b62-4657-b1d4-3d79f37aee5f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "BNF_0b75d3c2-f4c8-4c2a-a4ff-47075e2ff00e"
+  c_closed_at: null
+  c_notes: null
+  c_amount_total: "2000.00"
+  c_application_id: "0b75d3c2-f4c8-4c2a-a4ff-47075e2ff00e"
+  c_applicant_name: "E2E Test Applicant CBCF6E52"
+  c_expensed_at: null
+  c_envelope_code: "ENV_PRG_2025_001_FY2526"
+  c_rule_version: "BENEFIT_AMOUNT_PRG_2025_001"
+  c_amount_by_source_json: "{\"SRC_GOL_PRG_2025_001_FY2526\":2000.00}"
+  c_committed_at: null
+  c_voucher_id: null
+  c_applicant_national_id: "TEST-CBCF6E52"
+  c_pre_committed_at: "2026-05-06 14:24:13.014"
+  c_status: "open"
+

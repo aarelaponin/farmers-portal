@@ -1,0 +1,9 @@
+{
+  "id": "API-c42f149f-76f4-4a54-bc51-48b1aa72dc79",
+  "name": "MD.12 - Relationship API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md12relationship\",\n            \"ignorePermission\": \"\",\n            \"id\": \"FCC1A129-A01C-4BFB-B830-AA1DD0F27541\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.12 - Relationship API\",\n        \"description\": \"Auto-generated API for form: md12relationship\",\n        \"id\": \"API-c42f149f-76f4-4a54-bc51-48b1aa72dc79\"\n    }\n}\n"
+}

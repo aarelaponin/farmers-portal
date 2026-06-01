@@ -1,0 +1,9 @@
+{
+  "id": "API-d5e0a0cc-a12a-4360-84b5-d794691c732e",
+  "name": "parcelGisServer",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": "",
+  "json": "{\"elements\":[{\"className\":\"global.govstack.gisserver.lib.GisApiProvider\",\"properties\":{\"id\":\"60B31AAD-9806-4AAB-4C6B-107CCFA8DA43\",\"ENABLED_PATHS\":\"post:/gis/batchCalculate;post:/gis/checkOverlap;get:/gis/nearbyParcels;get:/gis/reverseGeocode;post:/gis/validate;post:/gis/calculate;get:/gis/geocode;get:/gis/health;post:/gis/simplify\",\"info\":\"GIS Geometry API provides REST endpoints for polygon geometry operations including calculate, validate, simplify, and overlap checking.\"}}],\"properties\":{\"name\":\"parcelGisServer\",\"description\":\"\",\"id\":\"API-d5e0a0cc-a12a-4360-84b5-d794691c732e\"}}"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "API-d632f6f4-6252-4ff1-b76c-c84d3bb2901c",
+  "name": "MD.28 - Benefit Model API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md28benefitModel\",\n            \"ignorePermission\": \"\",\n            \"id\": \"204C2D4D-9669-4312-A496-7A5498BD5ACF\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.28 - Benefit Model API\",\n        \"description\": \"Auto-generated API for form: md28benefitModel\",\n        \"id\": \"API-d632f6f4-6252-4ff1-b76c-c84d3bb2901c\"\n    }\n}\n"
+}

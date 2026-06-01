@@ -1,0 +1,78 @@
+# app_fd_im_input_catalog
+# 4 row(s) at sync time
+- id: "300b6eee-8d02-4780-b056-be2b4bc89dfe"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_is_active: "Y"
+  c_input_name: "NPK 23-23-0 Fertiliser, 50 kg bag"
+  c_category_code: "FERTILISER"
+  c_pack_size: "50 kg bag"
+  c_unit_code: "BAG_50KG"
+  c_default_unit_price: "780.00"
+  c_input_code: "FERT_NPK_50KG"
+  c_specifications: |-
+    Compound fertiliser for basal application. Standard ratio for cereals.
+    
+  c_manufacturer: "Sasol Nitro"
+
+- id: "4faccc75-d44c-4e95-a2a3-ebf4f5a15188"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_is_active: "Y"
+  c_input_name: "Maize Seed PAN 6479, 25 kg bag"
+  c_category_code: "SEED"
+  c_pack_size: "25 kg bag"
+  c_unit_code: "BAG_25KG"
+  c_default_unit_price: "850.00"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_specifications: |-
+    White hybrid maize. Maturity ~140 days. Recommended for lowlands.
+    
+  c_manufacturer: "Pannar Seed (Pty) Ltd"
+
+- id: "9572d4f0-a8c1-4fff-b897-18c15dda06bf"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_is_active: "Y"
+  c_input_name: "Beans Seed KK15, 50 kg bag"
+  c_category_code: "SEED"
+  c_pack_size: "50 kg bag"
+  c_unit_code: "BAG_50KG"
+  c_default_unit_price: "1450.00"
+  c_input_code: "SEED_BEANS_KK15_50KG"
+  c_specifications: |-
+    Determinate dry bean variety. Suited to mountains and foothills.
+    
+  c_manufacturer: "Lesotho Seed Cooperative"
+
+- id: "dd8c000f-ee5f-4f0d-b30f-f77fb3633e02"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_is_active: "Y"
+  c_input_name: "Urea 46% N Fertiliser, 50 kg bag"
+  c_category_code: "FERTILISER"
+  c_pack_size: "50 kg bag"
+  c_unit_code: "BAG_50KG"
+  c_default_unit_price: "720.00"
+  c_input_code: "FERT_UREA_50KG"
+  c_specifications: |-
+    Top-dressing fertiliser, applied 4-6 weeks after planting.
+    
+  c_manufacturer: "Sasol Nitro"
+

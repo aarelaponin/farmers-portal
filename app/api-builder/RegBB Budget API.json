@@ -1,0 +1,9 @@
+{
+  "id": "API-BUDGET",
+  "name": "RegBB Budget API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": "Custom plugin API for global.govstack.regbb.engine.api.BudgetApi",
+  "json": "{\"elements\":[{\"className\":\"global.govstack.regbb.engine.api.BudgetApi\",\"properties\":{\"id\":\"9DA1E330-5740-4D4F-AA7A-C96E1BC76FB7\",\"label\":\"\",\"ENABLED_PATHS\":\"post:/dispatch;post:/ces/estimate;get:/timeseries;post:/run-threshold-monitor;post:/run-projection-refresh;post:/run-eligibility-worker;post:/issue-vouchers;post:/redeem-voucher;post:/expire-vouchers;post:/cancel-voucher\"}}],\"properties\":{\"name\":\"RegBB Budget API\",\"description\":\"Custom plugin API for global.govstack.regbb.engine.api.BudgetApi\",\"id\":\"API-BUDGET\"}}"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "API-6f1f37bd-2867-42ac-aafd-58cb346ac59c",
+  "name": "Program Participation History API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spProgParticip\",\n            \"ignorePermission\": \"\",\n            \"id\": \"A2525278-8154-4D8F-BEBD-36465709F73B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Program Participation History API\",\n        \"description\": \"Auto-generated API for form: spProgParticip\",\n        \"id\": \"API-6f1f37bd-2867-42ac-aafd-58cb346ac59c\"\n    }\n}\n"
+}

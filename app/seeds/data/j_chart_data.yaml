@@ -1,0 +1,86 @@
+# app_fd_j_chart_data
+# 7 row(s) at sync time
+- id: "0015"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parameter3: "13"
+  c_value: "28"
+  c_parameter2: "Amazon Web Services"
+  c_parameter1: "Infrastructure As A Service"
+
+- id: "0016"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parameter3: "34"
+  c_value: "5"
+  c_parameter2: "Google"
+  c_parameter1: "Infrastructure As A Service"
+
+- id: "0017"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parameter3: "26"
+  c_value: "7"
+  c_parameter2: "IBM"
+  c_parameter1: "Infrastructure As A Service"
+
+- id: "0018"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parameter3: "43"
+  c_value: "10"
+  c_parameter2: "Microsoft"
+  c_parameter1: "Infrastructure As A Service"
+
+- id: "0019"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parameter3: "7"
+  c_value: "43"
+  c_parameter2: "Other"
+  c_parameter1: "Infrastructure As A Service"
+
+- id: "0020"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parameter3: "2"
+  c_value: "3"
+  c_parameter2: "Rackspace"
+  c_parameter1: "Infrastructure As A Service"
+
+- id: "0021"
+  datecreated: null
+  datemodified: null
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_parameter3: "14"
+  c_value: "4"
+  c_parameter2: "Salesforce"
+  c_parameter1: "Infrastructure As A Service"
+

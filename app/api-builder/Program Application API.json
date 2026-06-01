@@ -1,0 +1,9 @@
+{
+  "id": "API-f8a3bf52-ad6e-4a3a-947e-a92c301fc138",
+  "name": "Program Application API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spApplication\",\n            \"ignorePermission\": \"\",\n            \"id\": \"537FAE0F-3F97-491B-8B27-1EEA836E8DBA\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Program Application API\",\n        \"description\": \"Auto-generated API for form: spApplication\",\n        \"id\": \"API-f8a3bf52-ad6e-4a3a-947e-a92c301fc138\"\n    }\n}\n"
+}

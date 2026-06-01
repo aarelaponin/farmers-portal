@@ -1,0 +1,9 @@
+{
+  "id": "API-f276b1a6-3a94-4953-9257-f1fda2175114",
+  "name": "02 - Parcel Registration API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"parcelRegistration\",\n            \"ignorePermission\": \"\",\n            \"id\": \"C2586D73-BBA9-44D7-B250-2C07FED9632D\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"02 - Parcel Registration API\",\n        \"description\": \"Auto-generated API for form: parcelRegistration\",\n        \"id\": \"API-f276b1a6-3a94-4953-9257-f1fda2175114\"\n    }\n}\n"
+}

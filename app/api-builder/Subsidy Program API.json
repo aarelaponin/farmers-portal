@@ -1,0 +1,9 @@
+{
+  "id": "API-f00fc097-7999-40d5-b790-a23aa4cbc553",
+  "name": "Subsidy Program API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spProgram\",\n            \"ignorePermission\": \"\",\n            \"id\": \"FA5AAFF7-EAEE-4898-A431-13787EEA534B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Subsidy Program API\",\n        \"description\": \"Auto-generated API for form: spProgram\",\n        \"id\": \"API-f00fc097-7999-40d5-b790-a23aa4cbc553\"\n    }\n}\n"
+}

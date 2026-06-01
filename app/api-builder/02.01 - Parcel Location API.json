@@ -1,0 +1,9 @@
+{
+  "id": "API-939995e0-7cc6-4d82-ae34-fa58546f3b77",
+  "name": "02.01 - Parcel Location API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"parcelLocation\",\n            \"ignorePermission\": \"\",\n            \"id\": \"FD21AD20-4BC1-4E33-9104-3905320F07C0\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"02.01 - Parcel Location API\",\n        \"description\": \"Auto-generated API for form: parcelLocation\",\n        \"id\": \"API-939995e0-7cc6-4d82-ae34-fa58546f3b77\"\n    }\n}\n"
+}

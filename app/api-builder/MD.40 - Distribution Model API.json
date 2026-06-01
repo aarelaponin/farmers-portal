@@ -1,0 +1,9 @@
+{
+  "id": "API-5faaef0c-7955-4d32-b940-13e2f7d4b8e2",
+  "name": "MD.40 - Distribution Model API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md40DistribModel\",\n            \"ignorePermission\": \"\",\n            \"id\": \"8E9C8BE8-E6EC-43E5-9F9C-B58D00D5BDFA\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.40 - Distribution Model API\",\n        \"description\": \"Auto-generated API for form: md40DistribModel\",\n        \"id\": \"API-5faaef0c-7955-4d32-b940-13e2f7d4b8e2\"\n    }\n}\n"
+}

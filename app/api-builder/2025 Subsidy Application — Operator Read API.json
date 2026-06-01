@@ -1,0 +1,9 @@
+{
+  "id": "API-API_SUBSIDY_APP_2025_OPERATOR",
+  "name": "2025 Subsidy Application \u2014 Operator Read API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": "Auto-generated API for form: subsidyApplicationOperator2025 (kind=read_only)",
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"subsidyApplicationOperator2025\",\n            \"ignorePermission\": \"\",\n            \"id\": \"FBB30361-7DDB-43C5-B93E-8A5D22072869\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"get:/{recordId};get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"2025 Subsidy Application \u2014 Operator Read API\",\n        \"description\": \"Auto-generated API for form: subsidyApplicationOperator2025 (kind=read_only)\",\n        \"id\": \"API-API_SUBSIDY_APP_2025_OPERATOR\"\n    }\n}\n"
+}

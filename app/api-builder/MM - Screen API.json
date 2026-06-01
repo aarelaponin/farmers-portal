@@ -1,0 +1,9 @@
+{
+  "id": "API-886c6cf5-09e7-4391-bdb1-b252e2a6e181",
+  "name": "MM - Screen API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"mm_screen\",\n            \"ignorePermission\": \"\",\n            \"id\": \"AE79FAD5-E65B-4052-8BA1-535591F8FBEC\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MM - Screen API\",\n        \"description\": \"Auto-generated API for form: mm_screen\",\n        \"id\": \"API-886c6cf5-09e7-4391-bdb1-b252e2a6e181\"\n    }\n}\n"
+}

@@ -1,0 +1,134 @@
+# app_fd_j_crm_contact
+# 6 row(s) at sync time
+- id: "31176bad-a8a5-419b-9a68-34d88be4bfc7"
+  datecreated: "2025-04-28 13:50:15"
+  datemodified: "2025-04-28 15:40:18"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_lastname: "Thompson"
+  c_country: null
+  c_address: null
+  c_city: null
+  c_mobile: "+1 555 123 4567"
+  c_photo: "pexels-augustocarneirojr-30479363.jpg"
+  c_office: "+1 555 765 4321"
+  c_title: "Project Manager"
+  c_addressavailable: "No"
+  c_firstname: "Sarah"
+  c_attachment: ""
+  c_state: null
+  c_account: "00003"
+  c_email: "sarah.thompson@sakuratechsolutions.com"
+
+- id: "38564b56-f985-45e4-ac16-d39f9fbf006b"
+  datecreated: "2025-04-28 12:46:41"
+  datemodified: "2025-04-28 15:18:06"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_lastname: "Doe"
+  c_country: null
+  c_address: null
+  c_city: null
+  c_mobile: "+1234567890"
+  c_photo: "pexels-maide-arslan-128712163-31750448.jpg"
+  c_office: "+0987654321"
+  c_title: "Auditor"
+  c_addressavailable: "No"
+  c_firstname: "John"
+  c_attachment: ""
+  c_state: null
+  c_account: "00002"
+  c_email: "johndoe@globex.com"
+
+- id: "4427511c-eec2-4b04-866e-f77ccdcd2ca7"
+  datecreated: "2025-04-28 13:49:16"
+  datemodified: "2025-04-28 15:19:26"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_lastname: "Wilson"
+  c_country: null
+  c_address: null
+  c_city: null
+  c_mobile: "+1 234 567 8901"
+  c_photo: "pexels-simon-robben-55958-614810.jpg"
+  c_office: "+1 345 678 9012"
+  c_title: "Senior Software Engineer"
+  c_addressavailable: "No"
+  c_firstname: "James"
+  c_attachment: ""
+  c_state: null
+  c_account: "00003"
+  c_email: "james.wilson@sakuratechsolutions.com"
+
+- id: "95341d72-9d61-4c9f-8591-bb6fed9b02c9"
+  datecreated: "2025-04-28 12:47:28"
+  datemodified: "2025-04-28 15:18:36"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_lastname: "Smith"
+  c_country: null
+  c_address: null
+  c_city: null
+  c_mobile: "+1987654321"
+  c_photo: "pexels-cottonbro-4065187.jpg"
+  c_office: "+1122334455"
+  c_title: "Senior Engineer"
+  c_addressavailable: "No"
+  c_firstname: "Jane"
+  c_attachment: ""
+  c_state: null
+  c_account: "00002"
+  c_email: "janesmith@globex.com"
+
+- id: "c640e3b4-d9ba-4a06-bc06-a0d9abed6e10"
+  datecreated: "2025-04-28 12:41:54"
+  datemodified: "2025-04-28 15:17:51"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_lastname: "Carter"
+  c_country: null
+  c_address: null
+  c_city: null
+  c_mobile: "+1 555-987-6543"
+  c_photo: "pexels-pixabay-415829.jpg"
+  c_office: "+1 555-123-4567"
+  c_title: "Sales Manager"
+  c_addressavailable: "No"
+  c_firstname: "Emily"
+  c_attachment: ""
+  c_state: null
+  c_account: "00001"
+  c_email: "emily.carter@acmecorp.com"
+
+- id: "eb009c49-6316-4d58-86ca-b56748e88a46"
+  datecreated: "2025-04-28 12:42:32"
+  datemodified: "2025-04-28 15:17:20"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_lastname: "Lee"
+  c_country: null
+  c_address: null
+  c_city: null
+  c_mobile: "+1 555-222-3344"
+  c_photo: "pexels-gabby-k-5384445.jpg"
+  c_office: "+1 555-888-7777"
+  c_title: "Software Engineer"
+  c_addressavailable: "No"
+  c_firstname: "Jason"
+  c_attachment: ""
+  c_state: null
+  c_account: "00001"
+  c_email: "jason.lee@acmecorp.com"
+

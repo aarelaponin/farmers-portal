@@ -1,0 +1,9 @@
+{
+  "id": "API-350ea25a-ed41-4c26-b22a-37c7bb304267",
+  "name": "Notification Template API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spNotifTemplate\",\n            \"ignorePermission\": \"\",\n            \"id\": \"325C10B1-A658-4DE2-87B4-749F3D9639A0\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Notification Template API\",\n        \"description\": \"Auto-generated API for form: spNotifTemplate\",\n        \"id\": \"API-350ea25a-ed41-4c26-b22a-37c7bb304267\"\n    }\n}\n"
+}

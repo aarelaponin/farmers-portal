@@ -1,0 +1,9 @@
+{
+  "id": "API-56d73871-9cb6-4445-a20d-5e6b5a0e591d",
+  "name": "MD.10 - Conservation Practice API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md10conservationPrac\",\n            \"ignorePermission\": \"\",\n            \"id\": \"D44B0FB0-A448-4448-A82F-D4B944E07F53\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.10 - Conservation Practice API\",\n        \"description\": \"Auto-generated API for form: md10conservationPrac\",\n        \"id\": \"API-56d73871-9cb6-4445-a20d-5e6b5a0e591d\"\n    }\n}\n"
+}

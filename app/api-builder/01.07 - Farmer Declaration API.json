@@ -1,0 +1,9 @@
+{
+  "id": "API-b8c3c520-c2df-4a28-b77a-c7990f6d4295",
+  "name": "01.07 - Farmer Declaration API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"farmerDeclaration\",\n            \"ignorePermission\": \"\",\n            \"id\": \"5C9B7D76-86C5-4B77-A3BF-8B7D70D5DE51\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01.07 - Farmer Declaration API\",\n        \"description\": \"Auto-generated API for form: farmerDeclaration\",\n        \"id\": \"API-b8c3c520-c2df-4a28-b77a-c7990f6d4295\"\n    }\n}\n"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "API-58bdcc61-c0bb-4fb7-907b-9fdeb920b2d6",
+  "name": "MD.24 - Payment Method API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md24paymentMethod\",\n            \"ignorePermission\": \"\",\n            \"id\": \"5D4BE8C3-CFE5-4C2A-9EDF-926B5B456C88\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.24 - Payment Method API\",\n        \"description\": \"Auto-generated API for form: md24paymentMethod\",\n        \"id\": \"API-58bdcc61-c0bb-4fb7-907b-9fdeb920b2d6\"\n    }\n}\n"
+}

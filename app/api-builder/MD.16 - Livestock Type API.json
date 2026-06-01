@@ -1,0 +1,9 @@
+{
+  "id": "API-1d668daa-66a0-41c7-b617-7a8154fa4302",
+  "name": "MD.16 - Livestock Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md16livestockType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"EC0DBBDA-BDC3-431F-BFDE-7361E315CAE7\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.16 - Livestock Type API\",\n        \"description\": \"Auto-generated API for form: md16livestockType\",\n        \"id\": \"API-1d668daa-66a0-41c7-b617-7a8154fa4302\"\n    }\n}\n"
+}

@@ -1,0 +1,88 @@
+# app_fd_budget_envelope
+# 4 row(s) at sync time
+- id: "a89ab92e-c0cb-4f11-ac22-d3e852a93fb0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "ENV_PRG_2025_002_FY2526"
+  c_notes: |-
+    Mountain Pulses & Wheat. Mixed funding 60% GOL / 40% FAO-IFAD per
+    attributesJson. Donor reporting to FAO/IFAD requires per-source
+    utilisation visibility — primary use case for the multi-fund model.
+    
+  c_fiscal_year: "2025/26"
+  c_programme_code: "PRG_2025_002"
+  c_allocated_amount: "450000.00"
+  c_currency: "LSL"
+  c_status: "active"
+  c_revision: "1"
+  c_frozen_reason: null
+  c_frozen_at: null
+
+- id: "bc4957f3-ebf9-49a2-b677-6ffec2a0d69f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "ENV_PRG_2025_001_FY2526"
+  c_notes: |-
+    Block Farming — Maize Lowlands. Single funding source: Government of
+    Lesotho own-source revenue per attributesJson "Subsidy Policy 2003 §4.2.1".
+    
+  c_fiscal_year: "2025/26"
+  c_programme_code: "PRG_2025_001"
+  c_allocated_amount: "1200000.00"
+  c_currency: "LSL"
+  c_status: "active"
+  c_revision: "1"
+  c_frozen_reason: null
+  c_frozen_at: null
+
+- id: "c589d938-a3ec-4785-a6dd-998825c2b867"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "ENV_PRG_2025_004_FY2526"
+  c_notes: |-
+    Drought Emergency Relief. Three-source: WFP (40%) + UNICEF (30%) +
+    GoL emergency reserve (30%). Highest stakes — operator visibility into
+    remaining envelope is critical given fast burn rate during emergencies.
+    
+  c_fiscal_year: "2025/26"
+  c_programme_code: "PRG_2025_004"
+  c_allocated_amount: "2500000.00"
+  c_currency: "LSL"
+  c_status: "active"
+  c_revision: "1"
+  c_frozen_reason: null
+  c_frozen_at: null
+
+- id: "e1f92399-b565-4e46-8d91-a5a5329d1341"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "ENV_PRG_2025_003_FY2526"
+  c_notes: |-
+    Smallholder E-Voucher Pilot. Donor-funded: World Bank — SADP-II.
+    Single source.
+    
+  c_fiscal_year: "2025/26"
+  c_programme_code: "PRG_2025_003"
+  c_allocated_amount: "180000.00"
+  c_currency: "LSL"
+  c_status: "active"
+  c_revision: "1"
+  c_frozen_reason: null
+  c_frozen_at: null
+

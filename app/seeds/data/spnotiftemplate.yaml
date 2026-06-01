@@ -1,0 +1,671 @@
+# app_fd_spnotiftemplate
+# 18 row(s) at sync time
+- id: "0d02499d-7967-4165-a329-fcfc359e2a1a"
+  datecreated: "2026-01-26 17:20:06.171000"
+  datemodified: "2026-05-11 10:49:07.935000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: ""
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Your subsidy application has been received — {application_code}"
+  c_emailbodyst: ""
+  c_templatecode: "APP_SUBMITTED"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: ""
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>Thank you. Your application for <strong>{program_name}</strong> has been received by the Ministry of Agriculture, Food Security and Nutrition.</p>
+    <p><strong>Application reference:</strong> {application_code}<br>
+    <strong>Submitted:</strong> {submitted_date}<br>
+    <strong>Programme:</strong> {program_name}</p>
+    <p><strong>What happens next:</strong></p>
+    <ol>
+    <li>Our team reviews your application against the eligibility rules.</li>
+    <li>If everything checks out, you will receive a follow-up email within 3 working days.</li>
+    <li>If approved, an electronic voucher will be issued automatically.</li>
+    </ol>
+    <p>You do not need to do anything right now.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, kopo ea hau {application_code} bakeng sa {program_name} e amoheletsoe. O tla fumana litaba tse ncha."
+  c_delayminutes: "0"
+  c_templatename: "Application Submitted Confirmation"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "APP_SUBMITTED"
+  c_smstemplateen: "Dear {farmer_name}, your application {application_code} for {program_name} has been received. You will receive updates on your status."
+  c_category: "APPLICATION"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "2b29025c-3640-409d-a70c-78260ca78c0f"
+  datecreated: "2026-01-26 17:20:07.553000"
+  datemodified: "2026-05-11 10:49:07.949000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: ""
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Good news — your subsidy application is approved ({application_code})"
+  c_emailbodyst: ""
+  c_templatecode: "APP_APPROVED"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p><strong>Your application for {program_name} has been APPROVED.</strong></p>
+    <p><strong>Application reference:</strong> {application_code}<br>
+    <strong>Decision date:</strong> {decision_date}<br>
+    <strong>Programme:</strong> {program_name}</p>
+    <p><strong>What happens next:</strong></p>
+    <ol>
+    <li>An electronic voucher is being issued to you. You will receive a separate email confirming the voucher details.</li>
+    <li>To redeem, visit any approved distribution point in your district. Bring your National ID.</li>
+    <li>If you do not redeem within {validity_days} days, the voucher expires and the benefit returns to the programme budget.</li>
+    </ol>
+    <p>You do not need to visit any office to claim approval.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: "Mahlohonolo {farmer_name}! Kopo ea hau {application_code} bakeng sa {program_name} e AMOHELETSOE. Molemo: LSL {amount}."
+  c_delayminutes: "0"
+  c_templatename: "Application Auto-Approved"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "APP_APPROVED"
+  c_smstemplateen: "Congratulations {farmer_name}! Your application {application_code} for {program_name} has been APPROVED. Benefit: LSL {amount}."
+  c_category: "APPLICATION"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "2fcca59b-d267-46cf-ac44-9c6d491b68e0"
+  datecreated: "2026-05-11 08:54:06.170000"
+  datemodified: "2026-05-11 10:49:07.997000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: null
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Voucher redemption confirmed — {redemption_code}"
+  c_emailbodyst: null
+  c_templatecode: "VOUCHER_REDEEMED"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: null
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>Your voucher has been redeemed at <strong>{point_name}</strong> on <strong>{redemption_date}</strong>.</p>
+    <p><strong>Redemption reference:</strong> {redemption_code}<br>
+    <strong>Voucher code:</strong> {voucher_code}<br>
+    <strong>Distribution point:</strong> {point_name}<br>
+    <strong>Date redeemed:</strong> {redemption_date}<br>
+    <strong>Benefit dispensed:</strong> {quantity_dispensed} of {benefit}</p>
+    <p><strong>Remaining on this voucher:</strong> {remaining_qty} of {benefit}</p>
+    <p>If your voucher still has a remaining quantity, you may visit a distribution point again before <strong>{expiry_date}</strong> to claim the remainder.</p>
+    <p style="background:#fff3e0;border-left:4px solid #ef6c00;padding:12px 16px;">Keep this email as proof of redemption. If anything looks wrong, contact your district office immediately.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: null
+  c_delayminutes: "0"
+  c_templatename: "Voucher Redeemed"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "VOUCHER_REDEEMED"
+  c_smstemplateen: null
+  c_category: "PAYMENT"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "402de64a-e469-43ea-be35-e42452d407e9"
+  datecreated: "2026-01-26 17:20:08.497000"
+  datemodified: "2026-05-11 10:49:07.988000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: ""
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Your voucher is ready — {voucher_code}"
+  c_emailbodyst: ""
+  c_templatecode: "VOUCHER_ISSUED"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>Your subsidy voucher has been issued. You can use this voucher at any approved distribution point to claim your benefit.</p>
+    <p><strong>Voucher code:</strong> <span style="font-family:monospace;font-size:1.3em;color:#1e6091;">{voucher_code}</span><br>
+    <strong>Programme:</strong> {programme_name}<br>
+    <strong>Issued on:</strong> {issued_date}<br>
+    <strong>Valid until:</strong> {expiry_date}<br>
+    <strong>Benefit:</strong> {benefit}</p>
+    <p><strong>How to redeem:</strong></p>
+    <ol>
+    <li>Visit any approved distribution point in your district.</li>
+    <li>Bring your National ID and the voucher code above.</li>
+    <li>The distribution-point operator will verify your identity and dispense your benefit.</li>
+    <li>You will receive a separate confirmation email after redemption.</li>
+    </ol>
+    <p><strong>Important:</strong> if you do not redeem by <strong>{expiry_date}</strong>, this voucher will expire and the benefit returns to the programme budget. A reminder will be sent 7 days before expiry.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, voucher ea hau {voucher_code} ea LSL {amount} e lokile. E sebetsa ho fihlela {expiry_date}. PIN: {pin}"
+  c_delayminutes: "0"
+  c_templatename: "Voucher Issued"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "VOUCHER_ISSUED"
+  c_smstemplateen: "Dear {farmer_name}, your e-voucher {voucher_code} worth LSL {amount} is ready. Valid until {expiry_date}. PIN: {pin}"
+  c_category: "PAYMENT"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "442b988c-2a61-450c-94fb-c23149449744"
+  datecreated: "2026-05-11 08:54:06.193000"
+  datemodified: "2026-05-11 10:49:08.014000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: null
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Your voucher has expired — {voucher_code}"
+  c_emailbodyst: null
+  c_templatecode: "VOUCHER_EXPIRED"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: null
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>This is a notification that your subsidy voucher has expired without being redeemed (or fully redeemed).</p>
+    <p><strong>Voucher code:</strong> {voucher_code}<br>
+    <strong>Programme:</strong> {programme_name}<br>
+    <strong>Issued on:</strong> {issued_date}<br>
+    <strong>Expired on:</strong> {expiry_date}<br>
+    <strong>Unredeemed quantity:</strong> {unredeemed_qty} of {benefit}</p>
+    <p><strong>What this means:</strong> the unredeemed portion has been returned to the programme budget for redistribution. You will not be charged anything; the system simply withdrew the unused benefit.</p>
+    <p>If you tried to redeem and were unable to, contact your district office within 14 days. We can investigate and, where appropriate, re-issue.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: null
+  c_delayminutes: "0"
+  c_templatename: "Voucher Expired (Unredeemed)"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "VOUCHER_EXPIRED"
+  c_smstemplateen: null
+  c_category: "PAYMENT"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "63b7496c-1e98-4808-85f5-648276268598"
+  datecreated: "2026-01-26 17:20:10.216000"
+  datemodified: "2026-01-26 17:20:10.216000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_scheduledtime: ""
+  c_emailenabled: "N"
+  c_emailsubjecten: ""
+  c_emailbodyst: ""
+  c_templatecode: "NEW_PROGRAM_AVAIL"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: ""
+  c_emailbodyen: ""
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, lenaneo le lecha '{program_name}' le butsoe. Kopa pele ho {deadline}. Etela ofisi ea hau."
+  c_delayminutes: "0"
+  c_templatename: "New Program Available"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "NEW_PROGRAM"
+  c_smstemplateen: "Dear {farmer_name}, a new program '{program_name}' is now open for applications. Apply by {deadline}. Visit your extension office."
+  c_category: "MARKETING"
+  c_operatorrecipients: null
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: null
+
+- id: "6a60568c-d1df-43cc-a721-a77b8573a3d3"
+  datecreated: "2026-01-26 17:20:09.792000"
+  datemodified: "2026-05-11 10:49:08.005000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: ""
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Reminder — your voucher expires in 7 days ({voucher_code})"
+  c_emailbodyst: ""
+  c_templatecode: "VOUCHER_EXPIRING"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>This is a friendly reminder. Your subsidy voucher expires in 7 days.</p>
+    <p><strong>Voucher code:</strong> {voucher_code}<br>
+    <strong>Programme:</strong> {programme_name}<br>
+    <strong>Expires on:</strong> <span style="color:#c62828;"><strong>{expiry_date}</strong></span><br>
+    <strong>Remaining benefit:</strong> {remaining_qty} of {benefit}</p>
+    <p style="background:#fff3e0;border-left:4px solid #ef6c00;padding:12px 16px;">If you do not redeem before the expiry date, this voucher will lapse and the benefit returns to the programme budget.</p>
+    <p>To redeem, visit any approved distribution point in your district. Bring your National ID and the voucher code above.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: "Tlhokomeliso: {farmer_name}, voucher ea hau {voucher_code} e fela ka {expiry_date}. Ka kopo e sebelise!"
+  c_delayminutes: "0"
+  c_templatename: "Voucher Expiring in 7 Days"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "VOUCHER_EXPIRING"
+  c_smstemplateen: "Warning: {farmer_name}, your voucher {voucher_code} expires on {expiry_date}. Please redeem before it expires!"
+  c_category: "PAYMENT"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "782b37ee-7be9-43ee-9ba0-3a6da5047b03"
+  datecreated: "2026-05-11 08:54:06.218000"
+  datemodified: "2026-05-11 10:49:08.033000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: null
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Budget alert: {programme_name} at {utilisation_pct}%"
+  c_emailbodyst: null
+  c_templatecode: "BUDGET_75PCT"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: null
+  c_emailbodyen: |-
+    <p>Hello <strong>{recipient_name}</strong>,</p>
+    <p>Programme budget envelope crossed 75% utilisation:</p>
+    <p><strong>Programme:</strong> {programme_name}<br>
+    <strong>Envelope:</strong> {envelope_code}<br>
+    <strong>Allocated:</strong> LSL {allocated}<br>
+    <strong>Committed:</strong> LSL {committed}<br>
+    <strong>Expensed:</strong> LSL {expensed}<br>
+    <strong>Available:</strong> LSL {available}<br>
+    <strong>Utilisation:</strong> {utilisation_pct}%</p>
+    <p style="background:#fff3e0;border-left:4px solid #ef6c00;padding:12px 16px;">At 90% utilisation the envelope automatically freezes (no new approvals).</p>
+    <p><a href="{portal_url}">Open budget dashboard</a></p>
+    <p>— Farmers Portal automation</p>
+  c_smstemplatest: null
+  c_delayminutes: "0"
+  c_templatename: "Budget Envelope at 75%"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "BUDGET_75PCT"
+  c_smstemplateen: null
+  c_category: "OPERATOR"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "FINANCE_OFFICERS"
+
+- id: "8b8d32f8-8b0a-442c-946d-3f7ec69e64fc"
+  datecreated: "2026-01-26 17:20:07.975000"
+  datemodified: "2026-05-11 10:49:07.969000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: ""
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Decision on your subsidy application — {application_code}"
+  c_emailbodyst: ""
+  c_templatecode: "APP_REJECTED"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>We have completed the review of your application for <strong>{program_name}</strong>.</p>
+    <p><strong>Application reference:</strong> {application_code}<br>
+    <strong>Decision:</strong> Not approved</p>
+    <p><strong>Reason:</strong></p>
+    <blockquote style="border-left:4px solid #6c757d;padding-left:16px;color:#495057;">{reason}</blockquote>
+    <p>This programme does not match your circumstances at this time. This is not a reflection on you — programmes are designed for specific groups. If your circumstances change, or if a future programme matches your situation better, you can apply again.</p>
+    <p><strong>What you can do next:</strong></p>
+    <ol>
+    <li>Other agricultural programmes may be available. Visit your district office to discuss what you might qualify for.</li>
+    <li>If you believe this decision is incorrect, visit your district office with supporting documents.</li>
+    </ol>
+    <p>We thank you for your interest in this programme.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, re maswabi kopo ea hau {application_code} ha e a atleha. Lebaka: {reason}. O ka ipiletsa matsatsing a 14."
+  c_delayminutes: "0"
+  c_templatename: "Application Rejected"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "APP_REJECTED"
+  c_smstemplateen: "Dear {farmer_name}, we regret that your application {application_code} was not successful. Reason: {reason}. You may appeal within 14 days."
+  c_category: "APPLICATION"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "954af916-cb58-49aa-afb1-0fafff2bd876"
+  datecreated: "2026-01-26 17:20:11.123000"
+  datemodified: "2026-01-26 17:20:11.123000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_scheduledtime: ""
+  c_emailenabled: "N"
+  c_emailsubjecten: ""
+  c_emailbodyst: ""
+  c_templatecode: "PAYMENT_SENT"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: ""
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, tefo ea LSL {amount} bakeng sa {program_name} e rometsoe ho {payment_method}. Ref: {reference}."
+  c_delayminutes: "0"
+  c_templatename: "Payment Sent"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "PAYMENT_SENT"
+  c_smstemplateen: "Dear {farmer_name}, payment of LSL {amount} for {program_name} has been sent to your {payment_method}. Ref: {reference}."
+  c_category: "PAYMENT"
+  c_operatorrecipients: null
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: null
+
+- id: "a7930583-cef9-46e1-a12b-810904542947"
+  datecreated: "2026-05-11 08:54:06.146000"
+  datemodified: "2026-05-11 10:49:07.978000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: null
+  c_emailenabled: "Y"
+  c_emailsubjecten: "{pending_count} applications waiting for supervisor review"
+  c_emailbodyst: null
+  c_templatecode: "APP_DECISION_PENDING"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: null
+  c_emailbodyen: |-
+    <p>Hello <strong>{supervisor_name}</strong>,</p>
+    <p>You have <strong>{pending_count} applications</strong> waiting for a supervisor decision. Some have been waiting more than 24 hours.</p>
+    <p><strong>Oldest waiting:</strong> {oldest_waiting_days} days<br>
+    <strong>Total in queue:</strong> {pending_count}</p>
+    <p><a href="{portal_url}" style="background:#1e6091;color:white;padding:10px 20px;text-decoration:none;border-radius:4px;display:inline-block;">Open operator inbox</a></p>
+    <p>Reviewing applications promptly helps citizens plan their season.</p>
+    <p>— Farmers Portal automation</p>
+  c_smstemplatest: null
+  c_delayminutes: "0"
+  c_templatename: "Supervisor Digest — Pending Decisions"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "APP_DECISION_PENDING"
+  c_smstemplateen: null
+  c_category: "OPERATOR"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "SUPERVISOR_OF_DISTRICT"
+
+- id: "b0279409-56f2-46c2-a809-546bdad388d3"
+  datecreated: "2026-05-11 08:54:06.206000"
+  datemodified: "2026-05-11 10:49:08.023000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: null
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Your voucher has been cancelled — {voucher_code}"
+  c_emailbodyst: null
+  c_templatecode: "VOUCHER_CANCELLED"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: null
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>Your subsidy voucher has been cancelled by Ministry staff.</p>
+    <p><strong>Voucher code:</strong> {voucher_code}<br>
+    <strong>Programme:</strong> {programme_name}<br>
+    <strong>Cancelled on:</strong> {cancelled_date}</p>
+    <p><strong>Reason:</strong></p>
+    <blockquote style="border-left:4px solid #6c757d;padding-left:16px;color:#495057;">{reason}</blockquote>
+    <p>The voucher is no longer valid. If you visit a distribution point with this voucher code, the system will refuse the redemption.</p>
+    <p>If you believe this cancellation is in error, contact your district office within 7 days.</p>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: null
+  c_delayminutes: "0"
+  c_templatename: "Voucher Cancelled"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "VOUCHER_CANCELLED"
+  c_smstemplateen: null
+  c_category: "PAYMENT"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+
+- id: "b5952db1-7b1a-4047-a41b-ed41dfb6856d"
+  datecreated: "2026-01-26 17:20:09.363000"
+  datemodified: "2026-01-26 17:20:09.363000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_scheduledtime: ""
+  c_emailenabled: "N"
+  c_emailsubjecten: ""
+  c_emailbodyst: ""
+  c_templatecode: "COLLECTION_REMINDER"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: ""
+  c_smstemplatest: "Khopotso: {farmer_name}, nka lisebelisoa tsa hau {location} hosane ({date}). Voucher: {voucher_code}. U se ke ua lebala!"
+  c_delayminutes: "0"
+  c_templatename: "Collection Reminder"
+  c_sendimmediately: "SCHEDULED"
+  c_smsenabled: "Y"
+  c_triggerevent: "COLLECTION_REMINDER"
+  c_smstemplateen: "Reminder: {farmer_name}, collect your inputs at {location} tomorrow ({date}). Voucher: {voucher_code}. Don't miss it!"
+  c_category: "DISTRIBUTION"
+  c_operatorrecipients: null
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: null
+
+- id: "c5741c4d-d504-40c0-8c32-37fa0a85ad8e"
+  datecreated: "2026-01-26 17:20:07.124000"
+  datemodified: "2026-01-26 17:20:07.124000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_scheduledtime: ""
+  c_emailenabled: "N"
+  c_emailsubjecten: ""
+  c_emailbodyst: ""
+  c_templatecode: "APP_DOCS_REQUIRED"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: ""
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, litokomane tse ling li hlokahala bakeng sa kopo ea hau {application_code}. Ka kopo etela ofisi e haufi."
+  c_delayminutes: "0"
+  c_templatename: "Additional Documents Required"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "APP_DOCS_REQUIRED"
+  c_smstemplateen: "Dear {farmer_name}, additional documents are required for your application {application_code}. Please visit the nearest extension office."
+  c_category: "APPLICATION"
+  c_operatorrecipients: null
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: null
+
+- id: "efba0f4b-ae96-4f05-8367-53fbcd966304"
+  datecreated: "2026-01-26 17:20:08.936000"
+  datemodified: "2026-01-26 17:20:08.936000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_scheduledtime: ""
+  c_emailenabled: "N"
+  c_emailsubjecten: ""
+  c_emailbodyst: ""
+  c_templatecode: "COLLECTION_SCHEDULED"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: ""
+  c_emailbodyen: ""
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, nka lisebelisoa tsa hau {location} ka {date}. Tlisa ID le voucher: {voucher_code}."
+  c_delayminutes: "0"
+  c_templatename: "Collection Scheduled"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "COLLECTION_SCHEDULED"
+  c_smstemplateen: "Dear {farmer_name}, collect your inputs at {location} on {date}. Bring your National ID and voucher code: {voucher_code}."
+  c_category: "DISTRIBUTION"
+  c_operatorrecipients: null
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: null
+
+- id: "f59481c9-4481-4147-a569-bec3fa378eb9"
+  datecreated: "2026-01-26 17:20:10.694000"
+  datemodified: "2026-01-26 17:20:10.694000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_scheduledtime: ""
+  c_emailenabled: "N"
+  c_emailsubjecten: ""
+  c_emailbodyst: ""
+  c_templatecode: "PROGRAM_DEADLINE"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: ""
+  c_emailbodyen: ""
+  c_smstemplatest: "Khopotso: {farmer_name}, nako ea kopo ea {program_name} ke {deadline}. Etsa kopo joale!"
+  c_delayminutes: "0"
+  c_templatename: "Application Deadline Approaching"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "PROGRAM_DEADLINE"
+  c_smstemplateen: "Reminder: {farmer_name}, application deadline for {program_name} is {deadline}. Apply now to avoid missing out!"
+  c_category: "MARKETING"
+  c_operatorrecipients: null
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: null
+
+- id: "f719f97e-4f1e-4293-a632-2ac59b007d19"
+  datecreated: "2026-05-11 08:54:06.231000"
+  datemodified: "2026-05-11 10:49:08.042000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: null
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Budget envelope FROZEN — no new approvals for {programme_name}"
+  c_emailbodyst: null
+  c_templatecode: "BUDGET_FROZEN"
+  c_isactive: "Y"
+  c_priority: "HIGH"
+  c_emailsubjectst: null
+  c_emailbodyen: |-
+    <p>Hello <strong>{recipient_name}</strong>,</p>
+    <p><strong>The budget envelope for {programme_name} has been frozen.</strong> No new applications can be approved for this programme until the envelope is unfrozen or topped up.</p>
+    <p><strong>Programme:</strong> {programme_name}<br>
+    <strong>Envelope:</strong> {envelope_code}<br>
+    <strong>Frozen at:</strong> {frozen_at}<br>
+    <strong>Reason:</strong> {reason}<br>
+    <strong>Allocated:</strong> LSL {allocated}<br>
+    <strong>Committed:</strong> LSL {committed}<br>
+    <strong>Expensed:</strong> LSL {expensed}<br>
+    <strong>Utilisation:</strong> {utilisation_pct}%</p>
+    <p><strong>What this means for citizens:</strong> existing vouchers continue to work; new applications will be auto-rejected.</p>
+    <p><strong>What this means for operators:</strong> field officers should not start new applications; pending applications can still be approved if balance covers them.</p>
+    <p><strong>What to do next:</strong></p>
+    <ol>
+    <li>Top up the envelope via Budget → Manual adjustments.</li>
+    <li>Re-allocate from another programme's available balance.</li>
+    <li>Roll forward unused balance from a prior cycle.</li>
+    </ol>
+    <p><a href="{portal_url}">Open budget dashboard</a></p>
+    <p>— Farmers Portal automation</p>
+  c_smstemplatest: null
+  c_delayminutes: "0"
+  c_templatename: "Budget Envelope Frozen"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "BUDGET_FROZEN"
+  c_smstemplateen: null
+  c_category: "OPERATOR"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "FINANCE_OFFICERS"
+
+- id: "fb7eca0c-1c10-4c78-a4f1-e39c318cf97d"
+  datecreated: "2026-01-26 17:20:06.696000"
+  datemodified: "2026-05-11 10:49:07.959000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_scheduledtime: ""
+  c_emailenabled: "Y"
+  c_emailsubjecten: "Your application is under review — {application_code}"
+  c_emailbodyst: ""
+  c_templatecode: "APP_UNDER_REVIEW"
+  c_isactive: "Y"
+  c_priority: "NORMAL"
+  c_emailsubjectst: ""
+  c_emailbodyen: |-
+    <p>Hello <strong>{first_name}</strong>,</p>
+    <p>Your application for <strong>{program_name}</strong> is being reviewed by our team.</p>
+    <p><strong>Application reference:</strong> {application_code}<br>
+    <strong>Status:</strong> Under review</p>
+    <p><strong>Why this review:</strong> some details on your application need a closer look from our staff. This is normal and does not mean anything is wrong.</p>
+    <p><strong>What happens next:</strong></p>
+    <ol>
+    <li>A district supervisor reviews your application. Most reviews complete within 3 working days.</li>
+    <li>You will receive a follow-up email when the decision is made.</li>
+    <li>You do not need to do anything right now.</li>
+    </ol>
+    <p>— Ministry of Agriculture, Food Security and Nutrition</p>
+  c_smstemplatest: "Motho ea ratehang {farmer_name}, kopo ea hau {application_code} e hlahlojoa. Ka kopo emela puisano e 'ngoe."
+  c_delayminutes: "0"
+  c_templatename: "Application Under Review"
+  c_sendimmediately: "IMMEDIATE"
+  c_smsenabled: "Y"
+  c_triggerevent: "APP_UNDER_REVIEW"
+  c_smstemplateen: "Dear {farmer_name}, your application {application_code} is now under review. Please wait for further communication."
+  c_category: "APPLICATION"
+  c_operatorrecipients: ""
+  c_emailbodyplaintext: null
+  c_emailbodyplaintextst: null
+  c_recipientresolver: "APPLICANT"
+

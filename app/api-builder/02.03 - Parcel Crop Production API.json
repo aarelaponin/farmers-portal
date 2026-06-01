@@ -1,0 +1,9 @@
+{
+  "id": "API-cccdca6c-3141-4484-b24c-669399968add",
+  "name": "02.03 - Parcel Crop Production API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"parcelCrops\",\n            \"ignorePermission\": \"\",\n            \"id\": \"DBF5A9D9-E5DA-4652-9B55-589CF9915340\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"02.03 - Parcel Crop Production API\",\n        \"description\": \"Auto-generated API for form: parcelCrops\",\n        \"id\": \"API-cccdca6c-3141-4484-b24c-669399968add\"\n    }\n}\n"
+}

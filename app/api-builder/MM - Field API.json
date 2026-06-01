@@ -1,0 +1,9 @@
+{
+  "id": "API-20014342-14bf-4bb9-b56d-a2d4df211ecb",
+  "name": "MM - Field API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"mm_field\",\n            \"ignorePermission\": \"\",\n            \"id\": \"079BBCD6-E04F-47A9-A2A7-E0B6D90AE2ED\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MM - Field API\",\n        \"description\": \"Auto-generated API for form: mm_field\",\n        \"id\": \"API-20014342-14bf-4bb9-b56d-a2d4df211ecb\"\n    }\n}\n"
+}

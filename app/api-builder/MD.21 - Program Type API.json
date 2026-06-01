@@ -1,0 +1,9 @@
+{
+  "id": "API-6ed39078-bfb1-4938-8e11-c6b26b1c9dc5",
+  "name": "MD.21 - Program Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md21programType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"5C419212-38CF-4F18-9460-B13ABF6B9D8B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.21 - Program Type API\",\n        \"description\": \"Auto-generated API for form: md21programType\",\n        \"id\": \"API-6ed39078-bfb1-4938-8e11-c6b26b1c9dc5\"\n    }\n}\n"
+}

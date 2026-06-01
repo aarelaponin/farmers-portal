@@ -1,0 +1,9 @@
+{
+  "id": "API-a24e8b71-de05-4035-bbf1-ae0be68aa5be",
+  "name": "01.04-1 - Household Member Form API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"householdMemberForm\",\n            \"ignorePermission\": \"\",\n            \"id\": \"4C1F1DD8-2036-4C38-BD1E-047E5753E4AD\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01.04-1 - Household Member Form API\",\n        \"description\": \"Auto-generated API for form: householdMemberForm\",\n        \"id\": \"API-a24e8b71-de05-4035-bbf1-ae0be68aa5be\"\n    }\n}\n"
+}

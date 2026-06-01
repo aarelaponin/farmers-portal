@@ -1,0 +1,9 @@
+{
+  "id": "API-6ab1f5e8-4087-4ecc-a04e-28429932c356",
+  "name": "MD.11 - Hazard API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md11hazard\",\n            \"ignorePermission\": \"\",\n            \"id\": \"D6E27DB0-C8B9-4D23-9828-DCFCB0405BCB\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.11 - Hazard API\",\n        \"description\": \"Auto-generated API for form: md11hazard\",\n        \"id\": \"API-6ab1f5e8-4087-4ecc-a04e-28429932c356\"\n    }\n}\n"
+}

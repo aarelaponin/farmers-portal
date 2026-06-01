@@ -1,0 +1,9 @@
+{
+  "id": "API-0733274d-dd71-4c92-9fb1-bf59cd77bc40",
+  "name": "MD.45 - Distribution Point API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md45DistribPoint\",\n            \"ignorePermission\": \"\",\n            \"id\": \"D20B462C-2946-4A55-B46E-034E3BB408B2\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.45 - Distribution Point API\",\n        \"description\": \"Auto-generated API for form: md45DistribPoint\",\n        \"id\": \"API-0733274d-dd71-4c92-9fb1-bf59cd77bc40\"\n    }\n}\n"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "API-a8a4405a-0d34-4a3b-b5c9-6bd8d6a464b1",
+  "name": "01.06 - Farmer Income and Programs API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"farmerIncomePrograms\",\n            \"ignorePermission\": \"\",\n            \"id\": \"FE69DDCA-A776-40F7-8CB2-EA18BB7FA898\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"01.06 - Farmer Income and Programs API\",\n        \"description\": \"Auto-generated API for form: farmerIncomePrograms\",\n        \"id\": \"API-a8a4405a-0d34-4a3b-b5c9-6bd8d6a464b1\"\n    }\n}\n"
+}

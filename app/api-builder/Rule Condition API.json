@@ -1,0 +1,9 @@
+{
+  "id": "API-31ce582b-59f4-4150-a746-d88f61bbaeba",
+  "name": "Rule Condition API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spRuleCondition\",\n            \"ignorePermission\": \"\",\n            \"id\": \"07371ECB-77ED-4852-87B0-D9BE425C5496\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Rule Condition API\",\n        \"description\": \"Auto-generated API for form: spRuleCondition\",\n        \"id\": \"API-31ce582b-59f4-4150-a746-d88f61bbaeba\"\n    }\n}\n"
+}

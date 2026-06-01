@@ -1,0 +1,9 @@
+{
+  "id": "API-1392ad15-d3b6-4dfe-95d8-dc227c54e8a1",
+  "name": "MD.08 - Education Level API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md08educationLevel\",\n            \"ignorePermission\": \"\",\n            \"id\": \"ED9D2C84-5560-42B1-BCD7-A02A216AD9F4\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.08 - Education Level API\",\n        \"description\": \"Auto-generated API for form: md08educationLevel\",\n        \"id\": \"API-1392ad15-d3b6-4dfe-95d8-dc227c54e8a1\"\n    }\n}\n"
+}

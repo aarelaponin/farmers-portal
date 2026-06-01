@@ -1,0 +1,9 @@
+{
+  "id": "API-27ec6a6f-e38f-409e-ad78-4a726f5dbda6",
+  "name": "MD.19 - Crops API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md19crops\",\n            \"ignorePermission\": \"\",\n            \"id\": \"0FD5B766-E79D-4ADE-90A2-D2CEBA8D82A9\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.19 - Crops API\",\n        \"description\": \"Auto-generated API for form: md19crops\",\n        \"id\": \"API-27ec6a6f-e38f-409e-ad78-4a726f5dbda6\"\n    }\n}\n"
+}

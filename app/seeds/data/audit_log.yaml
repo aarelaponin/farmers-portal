@@ -1,0 +1,3682 @@
+# app_fd_audit_log
+# 184 row(s) at sync time
+- id: "00075037-0a5d-424c-9fde-cfa980dea144"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "bcddecec-5b64-4a2a-848d-27234f736787"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:21:43.659961144Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "04ce8cfe-488f-42fd-8c99-f5374f11f6f9"
+  datecreated: "2026-05-11 18:26:56.945000"
+  datemodified: "2026-05-11 18:26:56.945000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "5a63d047-5473-4c2d-bf55-bfa3b0d0cac4"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "05a19f33-a5f6-40a2-81db-8772678d0356"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "47503464-ac97-4f85-98ea-4a32f3da25e8"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T16:36:54.310092983Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "05b3fef5-3a3c-4cad-b81d-983d4cc9cb7e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "0 errors, 0 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "verified"
+  c_from_status: "not_validated"
+  c_entity_id: "farmerRegistrationForm:c6b2008d-ee7c-4c10-b294-997287101387"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-06T19:59:03.607092817Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "0618b796-9607-41ff-8697-7f18819f5af1"
+  datecreated: "2026-05-11 16:36:44.345000"
+  datemodified: "2026-05-11 16:36:44.345000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "47503464-ac97-4f85-98ea-4a32f3da25e8"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "07622721-405f-4244-8629-7548d726b880"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "2 errors, 0 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "issues_detected"
+  c_from_status: "not_validated"
+  c_entity_id: "parcelRegistration:e6db8a99-1e5a-460d-a4a0-878a019efcc6"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-07T19:27:29.214899538Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "07a33311-b902-4d9c-825b-579ce1697fc6"
+  datecreated: "2026-05-11 12:49:03.160000"
+  datemodified: "2026-05-11 12:49:03.160000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "1839e26f-ac87-41e1-88f7-0d4a4440cb07"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "08873eee-7400-4cc1-9c93-48e0c6e69598"
+  datecreated: "2026-05-11 19:37:41.668000"
+  datemodified: "2026-05-11 19:37:41.668000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "f5525d03-aac4-4056-97f0-c5cfdc25b113"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "08aad40a-ed18-47d6-9f7c-057b30518ea0"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "61ebe181-8301-42f4-b042-879ea912b633"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:20:30.551096304Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "098e38c1-6637-4699-978e-0c447529ac6b"
+  datecreated: "2026-05-11 19:33:15.375000"
+  datemodified: "2026-05-11 19:33:15.375000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "017644b4-4cf4-49d0-a445-1d851d67f6eb"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "09e082dd-d5e1-4d35-8949-aef003066e80"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "1f47cbee-93d9-410c-80f6-8ff40c7cde84"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:16:07.644021605Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "0aa30a91-5c5f-42d0-8408-8be2750a28b8"
+  datecreated: "2026-05-11 18:26:53.790000"
+  datemodified: "2026-05-11 18:26:53.790000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "8348356a-e309-420f-bd78-125ad69a9573"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "0d2e1e9e-38bb-4e4f-bc1d-07d0f40323fa"
+  datecreated: "2026-05-11 19:06:17.252000"
+  datemodified: "2026-05-11 19:06:17.252000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "9c42a674-d426-4ced-9a52-ea9b22df177d"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1064e019-a571-48a8-8555-16224d733e2f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "fb208236-69c1-4f97-b076-9f5b3b07b733"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T15:36:42.694890408Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1177d7a5-cff5-417f-851f-ba1b3dcc0fe3"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "1839e26f-ac87-41e1-88f7-0d4a4440cb07"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:49:13.043866449Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "11b314e4-d772-474a-bc62-4e887358b803"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "0 errors, 0 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "verified"
+  c_from_status: "not_validated"
+  c_entity_id: "farmerRegistrationForm:5e895728-206d-40fc-935b-9450c19395a6"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-08T07:45:57.442842496Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "11d3e35b-5755-4a84-8f4c-278775d2bf8a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "0 errors, 0 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "verified"
+  c_from_status: "not_validated"
+  c_entity_id: "spProgramMain:prog004"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-08T08:14:21.254960500Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "11faf55a-af84-4eae-a0c2-7899e4a5e21a"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "558535ff-b7b8-4b3c-b8ec-853d63c4bb3c"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:37:21.508483682Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "14a06eec-7987-4c8f-b3d2-c83d65e41b36"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "[APPROVE] mmmmmmmmmmm"
+  c_entity_type: "DECISION"
+  c_to_status: "APPROVED"
+  c_from_status: "DRAFT"
+  c_entity_id: "sp_application:4140e0a9-02e7-43f1-a18f-902a9250255b"
+  c_triggered_by: "decision-engine-runtime / admin"
+  c_timestamp: "2026-04-28T14:54:20.984037927Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "184ea7e7-d318-4806-bc88-bbf47f8a8230"
+  datecreated: "2026-05-11 14:40:59.558000"
+  datemodified: "2026-05-11 14:40:59.558000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "9c16a3f0-204c-4844-b7f5-e46cb7de5d01"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "18e94dd5-a808-48ff-8b14-d75f39d82f44"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "aa87734e-6592-4108-9b2b-418ff1a50bf5"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:37:51.037451348Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "19183d71-fa6e-48ef-b561-85569c5423bf"
+  datecreated: "2026-05-11 18:26:57.210000"
+  datemodified: "2026-05-11 18:26:57.210000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "aeac97bc-b1d9-4c97-b8a3-7aad364dc215"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1988655b-0b26-4ec2-bd29-7389beb14024"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "5f267dee-3db3-45be-bad9-79348b60dff1"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T15:36:32.697291293Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1a917a66-e893-48aa-b2ed-e746a655d121"
+  datecreated: "2026-05-12 08:49:23.874000"
+  datemodified: "2026-05-12 08:49:23.874000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "7725048a-d319-43d3-84ee-437d9c0e7b14"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1b1d8399-f260-4163-8ffe-00d01df6bc14"
+  datecreated: "2026-05-11 18:21:43.854000"
+  datemodified: "2026-05-11 18:21:43.854000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "57aa81b2-e133-4ea2-bbab-f319385b91ef"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1b2895ea-dc82-4e32-8f9c-a5eec6128b57"
+  datecreated: "2026-05-11 14:40:49.912000"
+  datemodified: "2026-05-11 14:40:49.912000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — chain produced c_status=auto_approved"
+  c_entity_type: "APPLICATION"
+  c_to_status: "approved"
+  c_from_status: ""
+  c_entity_id: "05493778-a4e4-460b-bed9-1c00c78a1781"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1c71357e-0d13-480c-9c35-5fcff8adc9b8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "0 errors, 0 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "verified"
+  c_from_status: "not_validated"
+  c_entity_id: "farmerRegistrationForm:0f1973c6-688e-4406-bafa-ca87e9f5ef21"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-11T15:34:51.861461502Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1e56244d-5e77-47ba-b8b0-81924d85b153"
+  datecreated: "2026-05-11 15:36:42.762000"
+  datemodified: "2026-05-11 15:36:42.762000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "be97148d-9955-4107-bec5-d279a56f293e"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "1e56affc-4a4e-4253-aeeb-38af49825950"
+  datecreated: "2026-05-11 19:33:08.268000"
+  datemodified: "2026-05-11 19:33:08.268000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: "submitted"
+  c_entity_id: "409e456d-301d-470b-8981-b33befa70897"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "20ce8a29-0a45-4f71-a1c4-67da3f36d232"
+  datecreated: "2026-05-11 16:36:31.232000"
+  datemodified: "2026-05-11 16:36:31.232000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "f98c4cd2-83e5-4f9e-8dbe-459ec9fc1ad4"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "2221b4fc-1692-45a8-8adf-19be1ffd8725"
+  datecreated: "2026-05-11 15:36:22.948000"
+  datemodified: "2026-05-11 15:36:22.948000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "03795009-f039-4a6d-8890-5cc915b3b398"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "25b8f8f7-b29f-4268-a4f5-afb83bb78f0f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "3518ffc5-7344-43e6-b9dd-87898a9caeca"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:51:29.848988926Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "27383401-08d2-4acb-82d6-462dde653f88"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "797ed3b4-affd-4d12-a6de-a6f0d797cee2"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:49:03.081238336Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "2b93c480-14d7-41c1-8190-3d76c5121a72"
+  datecreated: "2026-05-11 12:46:30.295000"
+  datemodified: "2026-05-11 12:46:30.295000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_REJECTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "1b64be9c-9728-4970-bc0b-6a630b0e78b7"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "2b96a4cd-2592-46ea-9683-c0966ed66ac6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "c10135ce-ebfd-4e8e-ad29-9d1e5eaa48ae"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T15:36:52.739340303Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "2f92ce8c-3661-4aae-9100-49bb5754bb90"
+  datecreated: "2026-05-11 19:31:04.378000"
+  datemodified: "2026-05-11 19:31:04.378000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "05584dc0-8aac-4acb-8cbb-561b38515f96"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "3453148b-e376-449f-8c9c-beb0c72f324a"
+  datecreated: "2026-05-11 12:48:53.259000"
+  datemodified: "2026-05-11 12:48:53.259000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "797ed3b4-affd-4d12-a6de-a6f0d797cee2"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "35ef893d-9cdc-43fb-98b2-59487e8fc7c6"
+  datecreated: "2026-05-11 19:06:13.590000"
+  datemodified: "2026-05-11 19:06:13.590000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "90f41a84-fb1a-41bc-bbc2-3fcf2436e388"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "37f7520d-cf53-4d2d-99ea-f8ae3745301d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "2806c614-eb98-4cc4-9839-6f2cac5a12af"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-19T11:55:02.863477734Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "38af4cef-4a8b-43ca-9fbe-0969d5cc4745"
+  datecreated: "2026-05-11 19:16:08.013000"
+  datemodified: "2026-05-11 19:16:08.013000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: "submitted"
+  c_entity_id: "15a0ef40-da44-43ef-91ea-5f9e0c246189"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "3a964c5c-d5b9-4c0e-9876-e22bf223c0f4"
+  datecreated: "2026-05-11 12:48:40.046000"
+  datemodified: "2026-05-11 12:48:40.046000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "c751bebf-9333-48f9-97dc-f520d149d9d3"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "3b39091d-13f8-472b-ace2-ff2ec60d34bd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "c751bebf-9333-48f9-97dc-f520d149d9d3"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:48:43.101938868Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "3c39eede-9a2b-4f6c-80f4-d36f494d08ca"
+  datecreated: "2026-05-11 19:16:04.337000"
+  datemodified: "2026-05-11 19:16:04.337000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "1f47cbee-93d9-410c-80f6-8ff40c7cde84"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "3ca98df8-86fe-439b-9754-5ea48480892d"
+  datecreated: "2026-05-11 18:11:17.260000"
+  datemodified: "2026-05-11 18:11:17.260000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "a3e45673-c7bc-45b4-8986-5706b11dfac6"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "3f667fb1-4249-48bf-926c-9ecbe80de2df"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "1b64be9c-9728-4970-bc0b-6a630b0e78b7"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:46:39.925488213Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "41322d1b-0302-46f6-b09d-06f5cab02622"
+  datecreated: "2026-05-11 18:11:27.284000"
+  datemodified: "2026-05-11 18:11:27.284000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "d3cfb0c3-28f5-4872-aa26-a9d1f20ceafb"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "44385aef-70c1-47c0-a50a-d169b3785461"
+  datecreated: "2026-05-11 18:20:30.573000"
+  datemodified: "2026-05-11 18:20:30.573000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "e55d02a3-cbea-4b92-bdd4-83fa4853fb9d"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "462ee6c4-c602-49d2-87c0-c48088429d00"
+  datecreated: "2026-05-11 18:10:57.800000"
+  datemodified: "2026-05-11 18:10:57.800000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — chain produced c_status=auto_approved"
+  c_entity_type: "APPLICATION"
+  c_to_status: "approved"
+  c_from_status: ""
+  c_entity_id: "df8b62a7-00c0-43f4-a80e-09e876ce99cc"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "47653a4e-5636-4a8f-9829-9ddfeca4d397"
+  datecreated: "2026-05-11 19:16:08.030000"
+  datemodified: "2026-05-11 19:16:08.030000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "ad678e5a-ae65-42ab-99c1-e1e55cb36ff8"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "47d68bb6-3a0e-49b1-a0fd-4339edee7128"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "50982888-3294-46c8-889b-645f1214a802"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:20:40.608355749Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "48ae9be3-5c54-4c33-a964-e70c0431aaae"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "4057ffa8-300d-43a4-b739-35dc7223a2f9"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-12T08:46:00.609422179Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "4c56848a-49cb-449e-ae10-893d245759b5"
+  datecreated: "2026-05-11 18:27:49.311000"
+  datemodified: "2026-05-11 18:27:49.311000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "9c73558d-9ba9-4710-808b-b756542ff51a"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "4de36265-fe3c-46cb-aab9-643564c0cff8"
+  datecreated: "2026-05-11 18:33:56.320000"
+  datemodified: "2026-05-11 18:33:56.320000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "8fef8bd3-6cbe-4fa3-9ac7-da7104e9dfe9"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "4fc3a289-ac54-409d-8f8a-02a619e29f37"
+  datecreated: "2026-05-11 12:46:26.816000"
+  datemodified: "2026-05-11 12:46:26.816000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "4c0808c3-7621-4648-bba1-0ed6f76b0934"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "503a29c2-a05b-4561-912c-9d53e1bc1fc4"
+  datecreated: "2026-05-11 12:49:03.104000"
+  datemodified: "2026-05-11 12:49:03.104000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "4388f494-e202-46f9-a914-60c90d91fbf9"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "54b54ffb-41ca-46bf-b812-1111fc3fdf88"
+  datecreated: "2026-05-11 19:37:21.796000"
+  datemodified: "2026-05-11 19:37:21.796000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_APPROVED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "084b84b9-4d5d-4c48-8579-248df055fd9d"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "5553c707-b3c0-4f7d-9618-841ab869e6f9"
+  datecreated: "2026-05-11 14:41:19.438000"
+  datemodified: "2026-05-11 14:41:19.438000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "3347345e-e1ea-4226-a030-2400c7ba2c4a"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "568e3f78-d6df-4ce7-8682-15a062e1c984"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "f621f0cf-fd85-4692-ba86-7a6af9703ad9"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:37:51.000570613Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "56d1530e-c981-4f28-9eb1-4eebce541cbf"
+  datecreated: "2026-05-11 18:51:16.444000"
+  datemodified: "2026-05-11 18:51:16.444000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "28d2be17-cbae-4aa0-a87f-9ef4f38ea18a"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "58c7d35c-39de-4c54-a944-7af13ed520a1"
+  datecreated: "2026-05-11 18:50:51.424000"
+  datemodified: "2026-05-11 18:50:51.424000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — citizen confirmed submission on final tab"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "f0733789-e431-423f-9bc5-aa7c3d72eda6"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "5ab12003-3a02-44cd-9e09-ddccefa56ba1"
+  datecreated: "2026-05-11 14:41:09.473000"
+  datemodified: "2026-05-11 14:41:09.473000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "a1dfe098-ebe2-480b-b1a8-1e1eb0cd8511"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "5ba2cf21-2fbb-4975-bd2d-91bae7dd91e0"
+  datecreated: "2026-05-11 16:36:34.686000"
+  datemodified: "2026-05-11 16:36:34.686000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — chain produced c_status=auto_approved"
+  c_entity_type: "APPLICATION"
+  c_to_status: "approved"
+  c_from_status: ""
+  c_entity_id: "d06aabdb-d269-455a-a480-33c8190d8e06"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "5cf634b0-b410-406a-a361-2b1ad97ec3f0"
+  datecreated: "2026-05-11 18:51:20.338000"
+  datemodified: "2026-05-11 18:51:20.338000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "3518ffc5-7344-43e6-b9dd-87898a9caeca"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "5d8743a7-6125-4e1a-8dc1-24c7216bd8e3"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "9c16a3f0-204c-4844-b7f5-e46cb7de5d01"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T14:41:09.396165800Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "5f62a537-cd02-4b6a-8961-2aeabdfa8ff9"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "4c0808c3-7621-4648-bba1-0ed6f76b0934"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:46:30.031775501Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "607c6f31-80d0-44d9-832e-086c789f43c1"
+  datecreated: "2026-05-11 18:20:09.010000"
+  datemodified: "2026-05-11 18:20:09.010000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "e55d02a3-cbea-4b92-bdd4-83fa4853fb9d"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "60841edd-8dab-4b4f-bf45-0a74eeafbb96"
+  datecreated: "2026-05-11 19:16:07.692000"
+  datemodified: "2026-05-11 19:16:07.692000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "15a0ef40-da44-43ef-91ea-5f9e0c246189"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "61a6c7e8-d422-4fc4-8db6-e55439ac7079"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "57aa81b2-e133-4ea2-bbab-f319385b91ef"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:21:53.700029731Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "61d062b2-3531-4b9a-ad34-dfd7bf6f3753"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "[APPROVE] Approved (signed: Khotso)"
+  c_entity_type: "DECISION"
+  c_to_status: "APPROVED"
+  c_from_status: ""
+  c_entity_id: "sp_application:0afdb6b5-7a7d-46ec-a069-9e5cd17a1216"
+  c_triggered_by: "decision-engine-runtime / admin"
+  c_timestamp: "2026-05-01T17:41:42.101256691Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "6220b1b7-d06f-4649-90de-4c01e013242b"
+  datecreated: "2026-05-11 19:37:21.777000"
+  datemodified: "2026-05-11 19:37:21.777000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=auto_approved"
+  c_entity_type: "APPLICATION"
+  c_to_status: "approved"
+  c_from_status: "submitted"
+  c_entity_id: "7471b42d-e622-4757-9f0e-9f6f9730933b"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "6240e4a7-dd29-4885-abfe-a03ef589ec4b"
+  datecreated: "2026-05-11 12:49:13.063000"
+  datemodified: "2026-05-11 12:49:13.063000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "b033c158-26b0-4e2f-b4e4-7e07b0e26c3a"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "6315fbe6-1c49-4cd8-a6e1-3e18b5df7067"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "[APPROVE] mmmmmmmmmmm"
+  c_entity_type: "DECISION"
+  c_to_status: "APPROVED"
+  c_from_status: ""
+  c_entity_id: "sp_application:4140e0a9-02e7-43f1-a18f-902a9250255b"
+  c_triggered_by: "decision-engine-runtime / admin"
+  c_timestamp: "2026-04-27T19:51:39.207293563Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "635c72b9-59d4-48da-bd1f-ef3e1a497f50"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "2462ea14-7622-4755-a741-e2374fa72ac6"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T14:41:09.431322689Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "63de3443-52b5-42cb-97c9-e67086e7b190"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "28d2be17-cbae-4aa0-a87f-9ef4f38ea18a"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:51:20.054213404Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "6647ea1c-b476-4bca-9ab4-b1e00e2a3d70"
+  datecreated: "2026-05-11 18:11:17.317000"
+  datemodified: "2026-05-11 18:11:17.317000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "adbca436-b6a0-4a00-83df-f4899b00a7ec"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "66eaf5f7-68ac-4ed0-9609-307e7b88cb0d"
+  datecreated: "2026-05-11 19:37:51.024000"
+  datemodified: "2026-05-11 19:37:51.024000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "aa87734e-6592-4108-9b2b-418ff1a50bf5"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "67fd7c21-9a80-4046-ade6-33e448a06fd1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "0d0e547b-f51c-4986-9385-06d9ad652eb4"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-12T08:49:36.988476313Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "686acafa-d0bb-4510-9060-2bb69c1e6158"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "30c7c333-d803-40a3-9ac8-e2b15c013a74"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:06:13.570626334Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "6892c9ae-3f1c-4dab-b1ed-0e21bf7f42c4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "aeac97bc-b1d9-4c97-b8a3-7aad364dc215"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:27:06.889901303Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "6b0dfe40-e86e-49dc-8382-7d26eca029c2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "4388f494-e202-46f9-a914-60c90d91fbf9"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:49:03.117287897Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "6eb32e3b-c6cb-411d-aaac-36a935ec9971"
+  datecreated: "2026-05-11 19:37:17.909000"
+  datemodified: "2026-05-11 19:37:17.909000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "558535ff-b7b8-4b3c-b8ec-853d63c4bb3c"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "70433bff-6218-4e33-8b2e-b504967ebf7f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "2ad88b87-da98-4098-ba3d-0916e5dcc695"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:37:41.641281507Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "704e56db-877e-4990-b948-d5fd3211949d"
+  datecreated: "2026-05-11 14:40:46.325000"
+  datemodified: "2026-05-11 14:40:46.325000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "d1767ea3-4813-48bb-9cb6-2c1948983174"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "708cad08-2b0a-4453-b134-61deb1e934e5"
+  datecreated: "2026-05-11 15:36:23.189000"
+  datemodified: "2026-05-11 15:36:23.189000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_APPROVED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "5f267dee-3db3-45be-bad9-79348b60dff1"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "71b0974c-d3be-4693-932d-cda46d8d00ec"
+  datecreated: "2026-05-11 15:35:32.988000"
+  datemodified: "2026-05-11 15:35:32.988000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "03795009-f039-4a6d-8890-5cc915b3b398"
+  c_triggered_by: "citizen:admin"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "72df0d44-d841-43cc-b4c6-c5a813d1e539"
+  datecreated: "2026-05-11 14:40:49.642000"
+  datemodified: "2026-05-11 14:40:49.642000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "05493778-a4e4-460b-bed9-1c00c78a1781"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "7650fd4f-10a3-485d-8bbe-fdbbf1db9a41"
+  datecreated: "2026-05-11 15:36:32.770000"
+  datemodified: "2026-05-11 15:36:32.770000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "fb208236-69c1-4f97-b076-9f5b3b07b733"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "77ff2e50-d5a0-419c-87c5-eeeee66a1fd8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "b1111b05-afc5-4e19-9e8a-147c0d6544da"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:48:53.183357112Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "79158fca-6d64-41aa-be20-03c0624f7160"
+  datecreated: "2026-05-12 08:45:57.372000"
+  datemodified: "2026-05-12 08:45:57.372000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "4057ffa8-300d-43a4-b739-35dc7223a2f9"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "7a539baf-b067-40c8-93cf-51d6e46f0381"
+  datecreated: "2026-05-11 18:21:43.841000"
+  datemodified: "2026-05-11 18:21:43.841000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: ""
+  c_entity_id: "a1ceae21-512d-4c58-a305-59ef9419ab4e"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "7d19f49d-5a73-40c5-8d9f-7710b75973f8"
+  datecreated: "2026-05-11 18:10:27.643000"
+  datemodified: "2026-05-11 18:10:27.643000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "df8b62a7-00c0-43f4-a80e-09e876ce99cc"
+  c_triggered_by: "citizen:admin"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "819351bb-13af-4b10-898c-e00a38f5bbbc"
+  datecreated: "2026-05-11 18:11:07.351000"
+  datemodified: "2026-05-11 18:11:07.351000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "a33e0e53-066c-4f66-8594-8d47be7b5f26"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "83668324-887d-4db2-bd06-508574a2c674"
+  datecreated: "2026-05-11 16:37:04.294000"
+  datemodified: "2026-05-11 16:37:04.294000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "c0c6f236-73a7-486e-82f9-737873523d33"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "838384a9-adb0-419f-80ae-ed7c6cf579f4"
+  datecreated: "2026-05-11 14:41:09.419000"
+  datemodified: "2026-05-11 14:41:09.419000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "2462ea14-7622-4755-a741-e2374fa72ac6"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "83c17d4d-7f06-4e05-b331-1ec7d4259c53"
+  datecreated: "2026-05-11 16:36:34.700000"
+  datemodified: "2026-05-11 16:36:34.700000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_APPROVED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "dc7b753f-06f7-44c1-9d63-16754bb64701"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8417ac5b-90f6-4a77-8432-293bdacab22f"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "2 errors, 1 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "issues_detected"
+  c_from_status: "not_validated"
+  c_entity_id: "parcelRegistration:5469e1f3-8303-4603-83bc-ab30ce1928ae"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-18T18:38:17.258108935Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "84850d9e-0619-4dca-8e3f-3eb4a60d167b"
+  datecreated: "2026-05-11 15:36:19.667000"
+  datemodified: "2026-05-11 15:36:19.667000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "d585ccdd-a259-4a50-ae20-eed828f2f002"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "85f31714-1e60-4e44-b1f6-b3874e809025"
+  datecreated: "2026-05-11 19:33:04.587000"
+  datemodified: "2026-05-11 19:33:04.587000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "765e1431-7dd2-41e6-a729-535a94abdfb8"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "86ef6e49-a8df-4cb4-aff5-8515de8ef8eb"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "8348356a-e309-420f-bd78-125ad69a9573"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:26:56.922494421Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8795520e-c812-4a44-8441-3f60e047a6e7"
+  datecreated: "2026-05-12 08:46:00.836000"
+  datemodified: "2026-05-12 08:46:00.836000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: "submitted"
+  c_entity_id: "366ed586-fe21-435f-90ef-0280766b50c8"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "885e36d7-e041-4793-8c3f-60f539c5a7f2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "2 errors, 1 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "issues_detected"
+  c_from_status: "not_validated"
+  c_entity_id: "parcelRegistration:1161e9e0-6193-4ac3-95b6-8262064a64f6"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-08T19:31:53.354667419Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8871f9e6-5c57-4266-85fd-14112bd805c8"
+  datecreated: "2026-05-11 18:20:30.823000"
+  datemodified: "2026-05-11 18:20:30.823000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "50982888-3294-46c8-889b-645f1214a802"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "889c2c14-673c-478a-bfc8-6e0a92aa0ec4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "adbca436-b6a0-4a00-83df-f4899b00a7ec"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:11:27.264835666Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "88c9a849-4b80-4857-ab11-f2113306630c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "33870023-63eb-4018-bb78-444d0999f9f1"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:33:17.793397914Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8a0447cc-0d2d-4b84-acc4-e93a99c5e19e"
+  datecreated: "2026-05-12 08:48:30.769000"
+  datemodified: "2026-05-12 08:48:30.769000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen confirmed submission on final tab"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "ceb97282-e2b9-492b-86d2-c113901fd178"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8a103853-0c28-4178-92f7-0bc1b4c2cac4"
+  datecreated: "2026-05-11 18:20:30.806000"
+  datemodified: "2026-05-11 18:20:30.806000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: ""
+  c_entity_id: "e55d02a3-cbea-4b92-bdd4-83fa4853fb9d"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8ab7e34b-f297-45a8-b17b-2250bcbb1a2b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "a77c8a55-3929-4f0c-ba75-822bcd8b6ca3"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T16:36:54.340527692Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8abf35e3-098c-4954-bf9e-9e3ef19ddeab"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "[APPROVE] mmmmmmmmmmm"
+  c_entity_type: "DECISION"
+  c_to_status: "APPROVED"
+  c_from_status: "DRAFT"
+  c_entity_id: "sp_application:4140e0a9-02e7-43f1-a18f-902a9250255b"
+  c_triggered_by: "decision-engine-runtime / admin"
+  c_timestamp: "2026-04-27T20:10:11.278438353Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8ae6a652-1c92-4cc6-85aa-8f2c56df2523"
+  datecreated: "2026-05-11 19:04:15.511000"
+  datemodified: "2026-05-11 19:04:15.511000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "ed00431e-ec51-488f-8323-48aa0d65809a"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8c0697e0-025d-465b-9f0a-dbab172c8a76"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "aafae92e-057f-4ee9-b3b5-6f0d2bb88f45"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T16:37:04.278462907Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "8eb22276-979e-4e05-a14b-f7764a81bb3d"
+  datecreated: "2026-05-11 16:36:54.330000"
+  datemodified: "2026-05-11 16:36:54.330000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "a77c8a55-3929-4f0c-ba75-822bcd8b6ca3"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "9066abf0-762c-4f9c-bd98-ff45f507b9a1"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "d585ccdd-a259-4a50-ae20-eed828f2f002"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T15:36:22.925174221Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "915c7b10-fdad-4af3-bf0b-fce88bcea735"
+  datecreated: "2026-05-11 15:36:23.175000"
+  datemodified: "2026-05-11 15:36:23.175000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — chain produced c_status=auto_approved"
+  c_entity_type: "APPLICATION"
+  c_to_status: "approved"
+  c_from_status: ""
+  c_entity_id: "03795009-f039-4a6d-8890-5cc915b3b398"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "93286b4b-dbce-4d6c-bcb1-6ad9eaa58a9c"
+  datecreated: "2026-05-11 19:37:41.731000"
+  datemodified: "2026-05-11 19:37:41.731000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "f621f0cf-fd85-4692-ba86-7a6af9703ad9"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "938daffe-454e-415e-84ba-8cf43026cc37"
+  datecreated: "2026-05-11 14:40:16.685000"
+  datemodified: "2026-05-11 14:40:16.685000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "05493778-a4e4-460b-bed9-1c00c78a1781"
+  c_triggered_by: "citizen:admin"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "942d2b2a-52c5-40bd-9484-9eae967c7d0f"
+  datecreated: "2026-05-11 19:33:08.285000"
+  datemodified: "2026-05-11 19:33:08.285000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "33870023-63eb-4018-bb78-444d0999f9f1"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "945668d1-7dac-4125-874a-edae4f00af3d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "73762469-b639-4da6-b0d1-5a0c4e61988e"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-12T08:47:23.807788890Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "9b57716e-9d87-4b2e-82b3-a4d71e9f1133"
+  datecreated: "2026-05-11 18:21:43.679000"
+  datemodified: "2026-05-11 18:21:43.679000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "a1ceae21-512d-4c58-a305-59ef9419ab4e"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "9e5ce143-dbb5-4f22-ad4a-c426a660c6e0"
+  datecreated: "2026-05-11 18:10:54.273000"
+  datemodified: "2026-05-11 18:10:54.273000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "03495d97-537d-453e-bcb6-5e8eb339e91c"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "a2db9c2e-2991-409d-8ddf-660dbc3a5027"
+  datecreated: "2026-05-11 16:35:32.116000"
+  datemodified: "2026-05-11 16:35:32.116000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "d06aabdb-d269-455a-a480-33c8190d8e06"
+  c_triggered_by: "citizen:admin"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "a382d35f-aa1f-4e21-8b2d-5fa0ce401d62"
+  datecreated: "2026-05-11 19:16:15.344000"
+  datemodified: "2026-05-11 19:16:15.344000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "cd753041-c24e-405f-8ade-6c1a65476e3c"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "a442dbf5-5470-421d-a940-ee1294229cdb"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "da73995e-b407-4fca-9ae5-bbb5afaede4e"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-12T08:46:10.588304539Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "a67e266d-da58-4539-9b42-fbf3d7de8560"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "084b84b9-4d5d-4c48-8579-248df055fd9d"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:37:31.111154735Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "a6940a3b-a28e-499b-a763-22bf4ecc36cd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "d3cfb0c3-28f5-4872-aa26-a9d1f20ceafb"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:11:27.296416599Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "a6b38f6e-899e-4066-8da5-d3109b42f523"
+  datecreated: "2026-05-12 08:49:27.514000"
+  datemodified: "2026-05-12 08:49:27.514000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: "submitted"
+  c_entity_id: "ceb97282-e2b9-492b-86d2-c113901fd178"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "abe4242e-76e7-4fbe-9606-a4078233d09e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "4fd75c70-6f57-43fd-ae54-a5396ea819dc"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-19T11:55:12.603023607Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "adf482ab-54d7-488e-b854-a7bbad2738a9"
+  datecreated: "2026-05-11 19:32:18.125000"
+  datemodified: "2026-05-11 19:32:18.125000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen confirmed submission on final tab"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "409e456d-301d-470b-8981-b33befa70897"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ae435e03-fed7-4bda-b142-b54a4e99ba07"
+  datecreated: "2026-05-11 15:36:52.728000"
+  datemodified: "2026-05-11 15:36:52.728000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "c10135ce-ebfd-4e8e-ad29-9d1e5eaa48ae"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ae4c9cb0-19f2-41d8-8a02-d3b0d8b35a23"
+  datecreated: "2026-05-12 08:47:15.138000"
+  datemodified: "2026-05-12 08:47:15.138000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "73762469-b639-4da6-b0d1-5a0c4e61988e"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ae7e67ef-7dbb-4fb5-92fb-3dd76e84e8a3"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "765e1431-7dd2-41e6-a729-535a94abdfb8"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:33:07.901232972Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b0560d06-2ce9-4f1f-89ef-de3e23cd95ac"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "ad678e5a-ae65-42ab-99c1-e1e55cb36ff8"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:16:17.500161298Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b060220e-0b85-4b08-8f69-5c77978fdb75"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "f5525d03-aac4-4056-97f0-c5cfdc25b113"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:37:41.683130639Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b1aa0676-6f4c-4be9-af75-f0d68493b287"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "f98c4cd2-83e5-4f9e-8dbe-459ec9fc1ad4"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T16:36:34.399564701Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b1f50112-5604-415b-bd41-ce57298c2fff"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "3dbedc0e-746f-430a-98ac-6c0eb2be8b70"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T19:06:23.311333790Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b5f637be-a345-428f-9179-f1c362f39929"
+  datecreated: "2026-05-11 16:36:34.419000"
+  datemodified: "2026-05-11 16:36:34.419000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "d06aabdb-d269-455a-a480-33c8190d8e06"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b85002b7-a1e8-4221-9b53-9b480c43f835"
+  datecreated: "2026-05-19 11:55:03.136000"
+  datemodified: "2026-05-19 11:55:03.136000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: "submitted"
+  c_entity_id: "aee0e74b-4747-42f5-8694-912a239b081a"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b8f39199-2af9-45d6-9eb4-2eb866fbfaba"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "d1767ea3-4813-48bb-9cb6-2c1948983174"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T14:40:49.616931163Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b965960f-9026-450a-8d42-4da034ce6407"
+  datecreated: "2026-05-11 18:10:57.815000"
+  datemodified: "2026-05-11 18:10:57.815000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_APPROVED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "909078a5-57d5-45cd-868f-9db98af0b0b1"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "b9c5c611-2831-44c1-a38f-c9ce31b40fed"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "c0c6f236-73a7-486e-82f9-737873523d33"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T16:37:04.303418605Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ba375cfc-46cc-4a6b-93da-30cd9fd784ea"
+  datecreated: "2026-05-11 18:21:30.659000"
+  datemodified: "2026-05-11 18:21:30.659000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "a1ceae21-512d-4c58-a305-59ef9419ab4e"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "bb5edeb5-5e5a-432e-9f16-00b6f0cf731c"
+  datecreated: "2026-05-11 19:37:03.894000"
+  datemodified: "2026-05-11 19:37:03.894000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_reason: "citizen confirmed submission on final tab"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: "draft"
+  c_entity_id: "7471b42d-e622-4757-9f0e-9f6f9730933b"
+  c_triggered_by: "citizen:admin"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "bcf02ed3-c794-4cc7-b434-a2414ad281d7"
+  datecreated: "2026-05-12 08:47:10.611000"
+  datemodified: "2026-05-12 08:47:10.611000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "39e4b708-0b29-457d-a05d-496253c41f0d"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "c19ac589-b982-4d76-ae4e-9f9011d1b860"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "0 errors, 0 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "verified"
+  c_from_status: "not_validated"
+  c_entity_id: "spProgramMain:prog001"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-04-27T10:17:09.809570276Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "c2415ff4-e7aa-47da-81c9-7489125c28a0"
+  datecreated: "2026-05-11 18:10:57.538000"
+  datemodified: "2026-05-11 18:10:57.538000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "df8b62a7-00c0-43f4-a80e-09e876ce99cc"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "c5d035d3-90d9-4aa3-b6ab-2cda906c1213"
+  datecreated: "2026-05-11 18:52:40.983000"
+  datemodified: "2026-05-11 18:52:40.983000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "638880ec-2079-4ef9-88f7-2c24e54a8ee9"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "cc9bdccc-ea51-4d17-97ae-a8d708fb5178"
+  datecreated: "2026-05-11 19:37:31.202000"
+  datemodified: "2026-05-11 19:37:31.202000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "2ad88b87-da98-4098-ba3d-0916e5dcc695"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ce98851c-f094-41dd-b085-91ce48812f86"
+  datecreated: "2026-05-11 18:26:57.195000"
+  datemodified: "2026-05-11 18:26:57.195000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "seeded — chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: ""
+  c_entity_id: "5a63d047-5473-4c2d-bf55-bfa3b0d0cac4"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "cf7d511e-5efc-419a-a578-e04ef88c5508"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "9e7465c4-7f33-4bb2-a541-82b720fcd310"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T15:36:42.724278548Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "d20238a7-a404-4cce-95e7-02662ac463b2"
+  datecreated: "2026-05-11 18:21:40.632000"
+  datemodified: "2026-05-11 18:21:40.632000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "bcddecec-5b64-4a2a-848d-27234f736787"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "d217770a-a161-4d3a-a45a-abcdf33d8e63"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "b033c158-26b0-4e2f-b4e4-7e07b0e26c3a"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T12:49:13.073913815Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "d46486bc-fdae-4be2-a9f2-86fd7d07fcde"
+  datecreated: "2026-05-12 08:45:06.374000"
+  datemodified: "2026-05-12 08:45:06.374000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen confirmed submission on final tab"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "366ed586-fe21-435f-90ef-0280766b50c8"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "d587ea0f-0dc3-4b64-a38b-4e8c72fa8927"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "03495d97-537d-453e-bcb6-5e8eb339e91c"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:10:57.513812826Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "d8a279bf-7fc1-401a-ad29-3c1c29b67bf8"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "3347345e-e1ea-4226-a030-2400c7ba2c4a"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T14:41:19.450456198Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "dd5447b4-0bb7-47e7-b723-ff00fd24fee3"
+  datecreated: "2026-05-11 16:36:54.377000"
+  datemodified: "2026-05-11 16:36:54.377000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "aafae92e-057f-4ee9-b3b5-6f0d2bb88f45"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "de24a5d3-f904-438c-8c31-d3a6aec2b3a8"
+  datecreated: "2026-05-12 08:47:15.118000"
+  datemodified: "2026-05-12 08:47:15.118000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: "submitted"
+  c_entity_id: "8197b801-f2a3-43bb-97a6-18b6f469638f"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "dffd1b0a-f39f-44cd-a243-17b4edc93afc"
+  datecreated: "2026-05-11 15:36:42.714000"
+  datemodified: "2026-05-11 15:36:42.714000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "VOUCHER_ISSUED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "9e7465c4-7f33-4bb2-a541-82b720fcd310"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "e2a7c13b-90e6-4187-b4fa-d95d7e3f8558"
+  datecreated: "2026-05-11 18:26:35.898000"
+  datemodified: "2026-05-11 18:26:35.898000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "5a63d047-5473-4c2d-bf55-bfa3b0d0cac4"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "e3d1b2d6-bd64-4ae4-94b4-257d59b5bf54"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "be97148d-9955-4107-bec5-d279a56f293e"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T15:36:52.687113175Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "e55ad6d3-c611-4ac3-9d5b-c0629acf2d86"
+  datecreated: "2026-05-11 19:06:10.181000"
+  datemodified: "2026-05-11 19:06:10.181000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "30c7c333-d803-40a3-9ac8-e2b15c013a74"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "e63aca19-db7c-4aa4-9900-52d0a8b2397f"
+  datecreated: "2026-05-11 14:40:49.928000"
+  datemodified: "2026-05-11 14:40:49.928000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_APPROVED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "27452b82-1f49-48e1-8f58-6aaf16826f18"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "e7c0ea38-9293-4341-b37b-d927717255b1"
+  datecreated: "2026-05-12 08:47:09.106000"
+  datemodified: "2026-05-12 08:47:09.106000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen confirmed submission on final tab"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "8197b801-f2a3-43bb-97a6-18b6f469638f"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "e95df08d-2369-41c5-8b4b-8fd9a9c053ab"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "39e4b708-0b29-457d-a05d-496253c41f0d"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-12T08:47:14.995403711Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "e9ae1f98-eaf4-4db2-ab74-77e20be3450a"
+  datecreated: "2026-05-11 18:20:27.400000"
+  datemodified: "2026-05-11 18:20:27.400000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "61ebe181-8301-42f4-b042-879ea912b633"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ea638a85-ebae-461a-970e-083f3cf337a2"
+  datecreated: "2026-05-11 19:36:14.407000"
+  datemodified: "2026-05-11 19:36:14.407000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "7471b42d-e622-4757-9f0e-9f6f9730933b"
+  c_triggered_by: "citizen:admin"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ece683cc-80e7-4d7b-b1ad-5ebef571abc8"
+  datecreated: "2026-05-19 11:55:02.886000"
+  datemodified: "2026-05-19 11:55:02.886000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "application picked up by EligibilityProcessingWorker"
+  c_entity_type: "APPLICATION"
+  c_to_status: "submitted"
+  c_from_status: ""
+  c_entity_id: "aee0e74b-4747-42f5-8694-912a239b081a"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ef74236d-e683-46e8-8687-16f45da62ba5"
+  datecreated: "2026-05-12 08:46:00.847000"
+  datemodified: "2026-05-12 08:46:00.847000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "da73995e-b407-4fca-9ae5-bbb5afaede4e"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f2127381-593c-4b24-963e-066f3c554b8e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "27452b82-1f49-48e1-8f58-6aaf16826f18"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T14:40:59.450451078Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f251b7d3-c86e-489b-ad75-2fb373b29f86"
+  datecreated: "2026-05-11 18:42:25.160000"
+  datemodified: "2026-05-11 18:42:25.160000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "3f76c668-e991-4d63-a39b-fb37833e83df"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f3939677-3a28-46eb-be96-4bd7288cb3d9"
+  datecreated: "2026-05-11 18:49:37.264000"
+  datemodified: "2026-05-11 18:49:37.264000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "eff304e2-4e17-45ec-8ac0-6be6af5261b1"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f4ecd283-fda8-4fea-9fc2-68464bf357c6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "7725048a-d319-43d3-84ee-437d9c0e7b14"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-12T08:49:27.269728636Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f5d6eac0-4801-438a-b650-c3a4a441e2dc"
+  datecreated: "2026-05-11 18:39:22.623000"
+  datemodified: "2026-05-11 18:39:22.623000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "de77a57a-9d52-485f-b1cc-1c6ba3f12fe5"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f6024999-5195-47d6-8d2e-c03a66c2021c"
+  datecreated: "2026-05-11 12:48:43.335000"
+  datemodified: "2026-05-11 12:48:43.335000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_APPROVED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "b1111b05-afc5-4e19-9e8a-147c0d6544da"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f72500a5-92f9-402b-ba25-57a2e207121f"
+  datecreated: "2026-05-12 08:49:27.524000"
+  datemodified: "2026-05-12 08:49:27.524000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "0d0e547b-f51c-4986-9385-06d9ad652eb4"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f86750c8-4508-479e-978d-8f3cde5ef683"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "2 errors, 0 warnings"
+  c_entity_type: "FORM_QUALITY_ISSUE"
+  c_to_status: "issues_detected"
+  c_from_status: "not_validated"
+  c_entity_id: "parcelRegistration:f5c43ec2-c455-470a-9a76-444d0c71a624"
+  c_triggered_by: "form-quality-runtime"
+  c_timestamp: "2026-05-08T20:02:17.674186971Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "f88aaa27-d760-4ba3-9855-2116bb68b3e2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "909078a5-57d5-45cd-868f-9db98af0b0b1"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:11:07.272835534Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "faf6d1ed-87f5-45f4-9c72-52ad1dd8e3dd"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "a1dfe098-ebe2-480b-b1a8-1e1eb0cd8511"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T14:41:19.417227011Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "fb79a37d-06e5-4f3b-bf29-e789e9ba83f4"
+  datecreated: "2026-05-19 11:55:03.152000"
+  datemodified: "2026-05-19 11:55:03.152000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "4fd75c70-6f57-43fd-ae54-a5396ea819dc"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "fd865297-619f-424a-9040-486720b90735"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "dc7b753f-06f7-44c1-9d63-16754bb64701"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T16:36:44.276754997Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "fdac8dea-f76e-4ef4-b5fb-76386ddc258b"
+  datecreated: "2026-05-11 19:06:13.880000"
+  datemodified: "2026-05-11 19:06:13.880000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_UNDER_REVIEW created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "3dbedc0e-746f-430a-98ac-6c0eb2be8b70"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "fdc3e1e6-0f5b-4469-878d-0c937f348c67"
+  datecreated: "2026-05-11 19:06:13.865000"
+  datemodified: "2026-05-11 19:06:13.865000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "chain produced c_status=pending_data_clarification"
+  c_entity_type: "APPLICATION"
+  c_to_status: "pending_review"
+  c_from_status: "submitted"
+  c_entity_id: "90f41a84-fb1a-41bc-bbc2-3fcf2436e388"
+  c_triggered_by: "system:async-worker"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "fe64e5b3-447c-4e9d-8038-6f9ceaa28d70"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "smtp accepted via gmail"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "a33e0e53-066c-4f66-8594-8d47be7b5f26"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:11:17.238007866Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ff064c21-0e9b-4efa-9b60-50b401a61b6b"
+  datecreated: "2026-05-11 19:14:02.104000"
+  datemodified: "2026-05-11 19:14:02.104000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "citizen saved wizard tab (no submission yet)"
+  c_entity_type: "APPLICATION"
+  c_to_status: "draft"
+  c_from_status: ""
+  c_entity_id: "08b13d5e-1157-4f5a-8320-04eaee88e0a1"
+  c_triggered_by: "citizen:roleAnonymous"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ff4c8eb4-7179-42eb-a379-cc9ace754f7c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_reason: "backend LOG_ONLY accepted"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "sent"
+  c_from_status: "pending"
+  c_entity_id: "a3e45673-c7bc-45b4-8986-5706b11dfac6"
+  c_triggered_by: "dispatcher"
+  c_timestamp: "2026-05-11T18:11:17.274233382Z"
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+
+- id: "ffb79ac6-0f50-444d-9a32-7afe182dcf12"
+  datecreated: "2026-05-19 11:54:59.524000"
+  datemodified: "2026-05-19 11:54:59.524000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_reason: "APP_SUBMITTED created"
+  c_entity_type: "NOTIFICATION"
+  c_to_status: "pending"
+  c_from_status: ""
+  c_entity_id: "2806c614-eb98-4cc4-9839-6f2cac5a12af"
+  c_triggered_by: "dispatcher"
+  c_timestamp: null
+  c_old_status: null
+  c_actor: null
+  c_event_type: null
+  c_payload: null
+  c_new_status: null
+

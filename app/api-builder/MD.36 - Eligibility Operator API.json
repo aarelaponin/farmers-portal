@@ -1,0 +1,9 @@
+{
+  "id": "API-8d77639b-90e9-4b77-a974-6222b616b366",
+  "name": "MD.36 - Eligibility Operator API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md36eligibilityOpera\",\n            \"ignorePermission\": \"\",\n            \"id\": \"935E4847-99AF-4B4C-A439-47A232A94EE9\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.36 - Eligibility Operator API\",\n        \"description\": \"Auto-generated API for form: md36eligibilityOpera\",\n        \"id\": \"API-8d77639b-90e9-4b77-a974-6222b616b366\"\n    }\n}\n"
+}

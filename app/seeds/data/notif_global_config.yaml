@@ -1,0 +1,14 @@
+# app_fd_notif_global_config
+# 1 row(s) at sync time
+- id: "72b6be85-7d96-41d3-857f-a0f3613de415"
+  datecreated: "2026-05-11 11:19:15.957000"
+  datemodified: "2026-05-11 11:19:15.957000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_testrecipientemail: "aarelaponin@gmail.com"
+  c_notes: "Initialised 2026-05-11. Toggle Active=N when MAFSN authorises production sends."
+  c_testrecipientphone: "+26658515039"
+  c_testmodeactive: "Y"
+

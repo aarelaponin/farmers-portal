@@ -1,0 +1,470 @@
+# app_fd_subsidy_app_2025
+# 9 row(s) at sync time
+- id: "1c6e2102-1380-4b50-b792-f9bb715ff7f2"
+  datecreated: "2026-05-10 18:47:28.051000"
+  datemodified: "2026-05-10 18:48:26.674000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_national_id: "056789321444"
+  c_block_farming_member: "yes"
+  c_agro_zone: "lowlands"
+  c_primary_crop: "maize"
+  c_notes: ""
+  c_gender: "female"
+  c_contact_phone: ""
+  c_date_of_birth: "1972-02-01"
+  c_drought_affected_decl: "no"
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: "nnnn"
+  c_tenure_type: "customary"
+  c_full_name: "Lerato Lerato"
+  c_district: "maseru"
+  c_village_name: "maseru-khubetsoana"
+  c_area_hectares: "4"
+  c_decision_comment: null
+  c_decided_at: null
+  c_decision: null
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: ""
+  c_doc_doc_land_001: ""
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: ""
+  c_doc_doc_nid_back: ""
+  c_eligibility_outcome: "{\"disposition\":\"eligibility_passed\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-10T18:48:26Z\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "auto_approved"
+  c_applicant_signature: "%%%%BCdPi9BCnRYEfS0MIPNHTg==%%%%"
+  c_extra_id_attachment: ""
+  c_auto_center_lat: ""
+  c_centroid_lat: ""
+  c_parcel_geometry: ""
+  c_perimeter_meters: ""
+  c_vertex_count: ""
+  c_auto_center_lon: ""
+  c_lifecyclestate: null
+  c_notification_timeline_panel: null
+  c_email_address: null
+  c_submit_confirmation: null
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "2fa069f5-fb5c-4acb-bd22-7a5126065b44"
+  datecreated: "2026-05-11 11:49:32.851000"
+  datemodified: "2026-05-11 11:49:57.750000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_national_id: "0123456789234"
+  c_block_farming_member: "yes"
+  c_agro_zone: "lowlands"
+  c_primary_crop: "maize"
+  c_notes: ""
+  c_gender: "male"
+  c_contact_phone: "58925641"
+  c_date_of_birth: "1930-04-09"
+  c_drought_affected_decl: "no"
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: "kkkk"
+  c_tenure_type: "customary"
+  c_full_name: "Phatela Phatela"
+  c_district: "maseru"
+  c_village_name: "maseru-mabote"
+  c_area_hectares: "4"
+  c_decision_comment: null
+  c_decided_at: null
+  c_decision: null
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: ""
+  c_doc_doc_land_001: ""
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: ""
+  c_doc_doc_nid_back: ""
+  c_eligibility_outcome: "{\"disposition\":\"eligibility_passed\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-11T11:49:57Z\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "auto_approved"
+  c_applicant_signature: "%%%%gS4Z1a4Gyqej6FJ9SOdpCw==%%%%"
+  c_extra_id_attachment: ""
+  c_auto_center_lat: ""
+  c_centroid_lat: ""
+  c_parcel_geometry: ""
+  c_perimeter_meters: ""
+  c_vertex_count: ""
+  c_auto_center_lon: ""
+  c_lifecyclestate: null
+  c_notification_timeline_panel: null
+  c_email_address: null
+  c_submit_confirmation: null
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "3b85b4f8-3259-4b02-a6af-8fd926b7e4d0"
+  datecreated: "2026-05-11 09:09:23.938000"
+  datemodified: "2026-05-11 09:09:34.664000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_national_id: "68717345"
+  c_block_farming_member: "yes"
+  c_agro_zone: "lowlands"
+  c_primary_crop: "maize"
+  c_notes: ""
+  c_gender: "male"
+  c_contact_phone: "+26658562506"
+  c_date_of_birth: "2026-02-05"
+  c_drought_affected_decl: "no"
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: "kkkk"
+  c_tenure_type: "customary"
+  c_full_name: "Raleting Phatela"
+  c_district: "maseru"
+  c_village_name: "maseru-mabote"
+  c_area_hectares: ""
+  c_decision_comment: null
+  c_decided_at: null
+  c_decision: null
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: ""
+  c_doc_doc_land_001: ""
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: ""
+  c_doc_doc_nid_back: ""
+  c_eligibility_outcome: "{\"disposition\":\"eligibility_failed_mandatory\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-11T09:09:34Z\",\"failMessage\":\"Cultivated area must be greater than zero hectares.\",\"failedRule\":\"DET_AREA_NONZERO\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"FALSE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "auto_rejected"
+  c_applicant_signature: "%%%%wAejeNF9SpWzWg2KDuQtbA==%%%%"
+  c_extra_id_attachment: ""
+  c_auto_center_lat: ""
+  c_centroid_lat: ""
+  c_parcel_geometry: ""
+  c_perimeter_meters: ""
+  c_vertex_count: ""
+  c_auto_center_lon: ""
+  c_lifecyclestate: null
+  c_notification_timeline_panel: null
+  c_email_address: null
+  c_submit_confirmation: null
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "40f800ca-8549-4c10-81ff-b543f6ec7b62"
+  datecreated: "2026-05-19 12:15:03.397000"
+  datemodified: "2026-05-19 12:22:02.645000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_national_id: "787939456"
+  c_block_farming_member: "yes"
+  c_agro_zone: "lowlands"
+  c_primary_crop: "sorghum"
+  c_notes: ""
+  c_gender: "male"
+  c_contact_phone: "+27580919803"
+  c_date_of_birth: "2021-05-04"
+  c_drought_affected_decl: "yes"
+  c_applied_programme: "PRG_2025_003"
+  c_cooperative_name: "PEKA BLOCK"
+  c_tenure_type: "customary"
+  c_full_name: "lesiba lesiba"
+  c_district: "berea"
+  c_village_name: "berea-mantsi"
+  c_area_hectares: "8.2291"
+  c_decision_comment: "ELIGIBLE"
+  c_decided_at: "2026-06-19"
+  c_decision: "reject"
+  c_decision_score: "70"
+  c_appwizard: null
+  c_doc_doc_coop_member_001: null
+  c_doc_doc_land_001: null
+  c_doc_doc_sh_decl_003: "INTERNAL MEMO (1) (1).pdf"
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: "Access Failer.png"
+  c_doc_doc_nid_back: "Figma Screenshot.png"
+  c_eligibility_outcome: null
+  c_status: "rejected"
+  c_applicant_signature: "%%%%H+peLxeeM8z3C2vu15LALg==%%%%"
+  c_extra_id_attachment: ""
+  c_auto_center_lat: ""
+  c_centroid_lat: "{\"type\":\"Point\",\"coordinates\":[28.196860763194678,-29.602651093819468]}"
+  c_parcel_geometry: "{\"type\":\"Polygon\",\"coordinates\":[[[28.19522947061837,-29.60156899632586],[28.19866377077902,-29.60164362448569],[28.198706699531016,-29.603733190539938],[28.19484311185031,-29.60365856392639],[28.19522947061837,-29.60156899632586]]]}"
+  c_perimeter_meters: "1173.48"
+  c_vertex_count: "4"
+  c_auto_center_lon: ""
+  c_lifecyclestate: null
+  c_notification_timeline_panel: null
+  c_email_address: "khotso.mosoeu@gov.ls"
+  c_submit_confirmation: null
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "94551c2a-4082-4324-9626-ec9ef932aaee"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_national_id: "1995022700567"
+  c_block_farming_member: "yes"
+  c_agro_zone: "mountains"
+  c_primary_crop: "maize"
+  c_notes: "Mountain applicant — expected to fail PRG_2025_001 applicability determinant DET_LOWLANDS once the Determinant evaluator is online (Week 3 task #4)."
+  c_gender: "male"
+  c_contact_phone: "+266 5723 4567"
+  c_date_of_birth: "1995-02-27"
+  c_drought_affected_decl: "no"
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: "Thaba-Tseka Highland Cooperative"
+  c_tenure_type: "leasehold"
+  c_full_name: "Tšepiso Khabo"
+  c_district: "thaba_tseka"
+  c_village_name: "Ha Lebele"
+  c_area_hectares: "2.8"
+  c_decision_comment: null
+  c_decided_at: null
+  c_decision: null
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: null
+  c_doc_doc_land_001: null
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: null
+  c_doc_doc_nid_back: null
+  c_eligibility_outcome: "{\"disposition\":\"indeterminate\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-06T07:15:08Z\",\"failMessage\":\"rule_returned_null:applicant_data_incomplete\",\"failedRule\":\"DET_FARMER_REGISTERED\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"NULL\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"FALSE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "pending_data_clarification"
+  c_applicant_signature: null
+  c_extra_id_attachment: null
+  c_auto_center_lat: null
+  c_centroid_lat: null
+  c_parcel_geometry: null
+  c_perimeter_meters: null
+  c_vertex_count: null
+  c_auto_center_lon: null
+  c_lifecyclestate: null
+  c_notification_timeline_panel: null
+  c_email_address: null
+  c_submit_confirmation: null
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "ac85eea1-f798-4470-b731-7b2ab10247d1"
+  datecreated: "2026-05-10 21:12:05.493000"
+  datemodified: "2026-05-10 21:12:19.147000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_national_id: "4545876544467"
+  c_block_farming_member: "yes"
+  c_agro_zone: "lowlands"
+  c_primary_crop: "maize"
+  c_notes: ""
+  c_gender: "female"
+  c_contact_phone: "5912 7856 "
+  c_date_of_birth: "2026-02-01"
+  c_drought_affected_decl: "no"
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: "mmmm"
+  c_tenure_type: "customary"
+  c_full_name: "Nteboheleng  Nkopane"
+  c_district: "maseru"
+  c_village_name: "maseru-mabote"
+  c_area_hectares: "4"
+  c_decision_comment: null
+  c_decided_at: null
+  c_decision: null
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: ""
+  c_doc_doc_land_001: ""
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: ""
+  c_doc_doc_nid_back: ""
+  c_eligibility_outcome: "{\"disposition\":\"eligibility_passed\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-10T21:12:19Z\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "auto_approved"
+  c_applicant_signature: "%%%%su713nfcm+rVOzB8T17vMw==%%%%"
+  c_extra_id_attachment: ""
+  c_auto_center_lat: ""
+  c_centroid_lat: ""
+  c_parcel_geometry: ""
+  c_perimeter_meters: ""
+  c_vertex_count: ""
+  c_auto_center_lon: ""
+  c_lifecyclestate: null
+  c_notification_timeline_panel: null
+  c_email_address: null
+  c_submit_confirmation: null
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "ceb97282-e2b9-492b-86d2-c113901fd178"
+  datecreated: "2026-05-12 08:48:30.759000"
+  datemodified: "2026-05-12 08:49:27.510000"
+  createdby: "roleAnonymous"
+  createdbyname: null
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_national_id: "066257236627"
+  c_block_farming_member: null
+  c_agro_zone: null
+  c_primary_crop: null
+  c_notes: ""
+  c_gender: "female"
+  c_contact_phone: "+26659518328"
+  c_date_of_birth: "1985-10-01"
+  c_drought_affected_decl: null
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: ""
+  c_tenure_type: null
+  c_full_name: "Mants'ali Panyane"
+  c_district: "maseru"
+  c_village_name: null
+  c_area_hectares: ""
+  c_decision_comment: null
+  c_decided_at: null
+  c_decision: null
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: null
+  c_doc_doc_land_001: null
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: null
+  c_doc_doc_nid_back: null
+  c_eligibility_outcome: "{\"disposition\":\"indeterminate\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-12T08:49:27Z\",\"failMessage\":\"rule_returned_null:applicant_data_incomplete\",\"failedRule\":\"DET_LOWLANDS\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"FALSE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"NULL\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "pending_data_clarification"
+  c_applicant_signature: "%%%%1U/q+xq9C7NhZIyKcMgRBg==%%%%"
+  c_extra_id_attachment: null
+  c_auto_center_lat: ""
+  c_centroid_lat: ""
+  c_parcel_geometry: ""
+  c_perimeter_meters: ""
+  c_vertex_count: ""
+  c_auto_center_lon: ""
+  c_lifecyclestate: "pending_review"
+  c_notification_timeline_panel: null
+  c_email_address: "Pmantsali@gmail.com"
+  c_submit_confirmation: "Y"
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "d9516810-04ed-46f6-837c-cf051be53d98"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_national_id: "1985041500123"
+  c_block_farming_member: "yes"
+  c_agro_zone: "lowlands"
+  c_primary_crop: "maize"
+  c_notes: "Family of five; depends on maize for both consumption and surplus sale."
+  c_gender: "female"
+  c_contact_phone: "+266 5812 3456"
+  c_date_of_birth: "1985-04-15"
+  c_drought_affected_decl: "no"
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: "Mabote Block Farming Cooperative"
+  c_tenure_type: "customary"
+  c_full_name: "Lerato Mokoena"
+  c_district: "maseru"
+  c_village_name: "Ha Mabote"
+  c_area_hectares: "3.5"
+  c_decision_comment: "Bulk approval (operator inbox)"
+  c_decided_at: "2026-05-06 19:35:52"
+  c_decision: "approve"
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: null
+  c_doc_doc_land_001: null
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: null
+  c_doc_doc_nid_back: null
+  c_eligibility_outcome: "{\"disposition\":\"indeterminate\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-06T07:15:08Z\",\"failMessage\":\"rule_returned_null:applicant_data_incomplete\",\"failedRule\":\"DET_FARMER_REGISTERED\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"NULL\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "approved"
+  c_applicant_signature: null
+  c_extra_id_attachment: null
+  c_auto_center_lat: null
+  c_centroid_lat: null
+  c_parcel_geometry: null
+  c_perimeter_meters: null
+  c_vertex_count: null
+  c_auto_center_lon: null
+  c_lifecyclestate: null
+  c_notification_timeline_panel: null
+  c_email_address: null
+  c_submit_confirmation: null
+  c_casenoteslist: null
+  c_case_notes: null
+
+- id: "df8b62a7-00c0-43f4-a80e-09e876ce99cc"
+  datecreated: "2026-05-11 18:10:27.600000"
+  datemodified: "2026-05-11 18:10:57.626000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "roleAnonymous"
+  modifiedbyname: null
+  c_national_id: "325658894166"
+  c_block_farming_member: "yes"
+  c_agro_zone: "lowlands"
+  c_primary_crop: "maize"
+  c_notes: ""
+  c_gender: "male"
+  c_contact_phone: "68656865"
+  c_date_of_birth: "1968-02-05"
+  c_drought_affected_decl: "no"
+  c_applied_programme: "PRG_2025_001"
+  c_cooperative_name: "kkk"
+  c_tenure_type: "customary"
+  c_full_name: "Tumelo Qacha"
+  c_district: "maseru"
+  c_village_name: "maseru-mabote"
+  c_area_hectares: "4"
+  c_decision_comment: null
+  c_decided_at: null
+  c_decision: null
+  c_decision_score: null
+  c_appwizard: null
+  c_doc_doc_coop_member_001: ""
+  c_doc_doc_land_001: ""
+  c_doc_doc_sh_decl_003: null
+  c_doc_doc_land_002: null
+  c_doc_doc_vuln_004: null
+  c_doc_doc_nid_front: ""
+  c_doc_doc_nid_back: ""
+  c_eligibility_outcome: "{\"disposition\":\"eligibility_passed\",\"evaluationStrategy\":\"all_must_pass\",\"appliedProgramme\":\"PRG_2025_001\",\"evaluatedAt\":\"2026-05-11T18:10:57Z\",\"rulesEvaluated\":4,\"rulesJson\":\"[{\\\"code\\\":\\\"DET_AREA_NONZERO\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_FARMER_REGISTERED\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"},{\\\"code\\\":\\\"DET_LOWLANDS\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"fast\\\"},{\\\"code\\\":\\\"DET_NO_DUPLICATE_PRG_001\\\",\\\"outcome\\\":\\\"TRUE\\\",\\\"evaluator\\\":\\\"sql\\\"}]\"}"
+  c_status: "auto_approved"
+  c_applicant_signature: "%%%%tkI76Gf6vAfJmIoqeeSCpg==%%%%"
+  c_extra_id_attachment: ""
+  c_auto_center_lat: ""
+  c_centroid_lat: ""
+  c_parcel_geometry: ""
+  c_perimeter_meters: ""
+  c_vertex_count: ""
+  c_auto_center_lon: ""
+  c_lifecyclestate: ""
+  c_notification_timeline_panel: null
+  c_email_address: "qacha@tumelo.com"
+  c_submit_confirmation: ""
+  c_casenoteslist: null
+  c_case_notes: null
+

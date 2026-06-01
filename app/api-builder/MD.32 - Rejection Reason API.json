@@ -1,0 +1,9 @@
+{
+  "id": "API-a80f0a2b-2db6-435d-af38-79da829de41a",
+  "name": "MD.32 - Rejection Reason API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md32rejectionReason\",\n            \"ignorePermission\": \"\",\n            \"id\": \"9E838017-7BDF-43FC-9718-D71191C5B8C6\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.32 - Rejection Reason API\",\n        \"description\": \"Auto-generated API for form: md32rejectionReason\",\n        \"id\": \"API-a80f0a2b-2db6-435d-af38-79da829de41a\"\n    }\n}\n"
+}

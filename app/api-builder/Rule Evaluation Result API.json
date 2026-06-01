@@ -1,0 +1,9 @@
+{
+  "id": "API-f4ec21e9-5f09-4e33-9d0e-cd9ea95bf867",
+  "name": "Rule Evaluation Result API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spEligRuleResult\",\n            \"ignorePermission\": \"\",\n            \"id\": \"2565ECFD-D610-4042-8241-6CF19ED922D2\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Rule Evaluation Result API\",\n        \"description\": \"Auto-generated API for form: spEligRuleResult\",\n        \"id\": \"API-f4ec21e9-5f09-4e33-9d0e-cd9ea95bf867\"\n    }\n}\n"
+}

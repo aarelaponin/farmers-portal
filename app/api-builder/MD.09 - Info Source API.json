@@ -1,0 +1,9 @@
+{
+  "id": "API-e338d5a6-84a2-4799-b7d4-de0cdd66c227",
+  "name": "MD.09 - Info Source API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md09infoSource\",\n            \"ignorePermission\": \"\",\n            \"id\": \"4EF7B131-F9E6-4D25-8DDA-98F9A1521862\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.09 - Info Source API\",\n        \"description\": \"Auto-generated API for form: md09infoSource\",\n        \"id\": \"API-e338d5a6-84a2-4799-b7d4-de0cdd66c227\"\n    }\n}\n"
+}

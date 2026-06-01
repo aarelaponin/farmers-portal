@@ -1,0 +1,109 @@
+# app_fd_im_supplier
+# 5 row(s) at sync time
+- id: "2b0fde43-1c9c-4a30-a2eb-e2f93965e290"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_physical_address: "Industrial Park, Phase 2, Maseru"
+  c_is_active: "Y"
+  c_notes: null
+  c_contact_phone: "+266 2231 9000"
+  c_contact_person: "Tšeliso Mokoma"
+  c_supplier_type: "DISTRIBUTOR"
+  c_certification_number: "ICCERT-LS-2025-014"
+  c_contact_email: "nitro.lesotho@sasol.com"
+  c_certification_expiry: "2026-08-15"
+  c_district: "maseru"
+  c_trading_license_no: "TL-2024-0007"
+  c_supplier_name: "Sasol Nitro Lesotho"
+  c_supplier_code: "SUP_SASOL_NITRO"
+
+- id: "79a6ce0d-794e-40e0-858c-ad41be7b9652"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_physical_address: "Cooperative House, Teyateyaneng"
+  c_is_active: "Y"
+  c_notes: null
+  c_contact_phone: "+266 2233 7700"
+  c_contact_person: "'Nthabeleng Maphalla"
+  c_supplier_type: "COOPERATIVE"
+  c_certification_number: "COOP-CERT-LSC-2024-001"
+  c_contact_email: "info@lesothoseed.coop"
+  c_certification_expiry: "2026-12-31"
+  c_district: "berea"
+  c_trading_license_no: "TL-2023-0118"
+  c_supplier_name: "Lesotho Seed Cooperative"
+  c_supplier_code: "SUP_LSC"
+
+- id: "92f0c78f-bb44-4571-b2da-83d19fd91016"
+  datecreated: "2026-06-01 13:50:56.953000"
+  datemodified: "2026-06-01 13:50:56.953000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_physical_address: |-
+    MASERU
+    BOX 24
+  c_is_active: "Y"
+  c_notes: ""
+  c_contact_phone: "+26658019803"
+  c_contact_person: "Khotso Mosoeu"
+  c_supplier_type: "DISTRIBUTOR"
+  c_certification_number: "aGRO DEALER"
+  c_contact_email: "kkmosoeu@gmail.com"
+  c_certification_expiry: "2026-06-01"
+  c_district: "maseru"
+  c_trading_license_no: "0923"
+  c_supplier_name: "LS-3456"
+  c_supplier_code: "KHOTSO SUPPLIERS"
+
+- id: "963cffb8-e431-496e-9ced-2b2315598e5a"
+  datecreated: "2026-06-01 13:52:43.130000"
+  datemodified: "2026-06-01 13:52:43.130000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_physical_address: "Ministry of Agriculture, Food Security and Nutrition"
+  c_is_active: "Y"
+  c_notes: ""
+  c_contact_phone: "+26663055525"
+  c_contact_person: "Malereko Aletta Molefi"
+  c_supplier_type: "MANUFACTURER"
+  c_certification_number: ""
+  c_contact_email: "malereko.molefi@gov.ls"
+  c_certification_expiry: ""
+  c_district: ""
+  c_trading_license_no: "92929"
+  c_supplier_name: "MOITELI"
+  c_supplier_code: "UPS22"
+
+- id: "d0709668-d07b-4a23-88bc-25313eac71b2"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_physical_address: "23 Industrial Road, Maseru"
+  c_is_active: "Y"
+  c_notes: null
+  c_contact_phone: "+266 2231 4500"
+  c_contact_person: "Mpho Lebusa"
+  c_supplier_type: "MANUFACTURER"
+  c_certification_number: "SAFCERT-2024-PNR-099"
+  c_contact_email: "lesotho@pannar.com"
+  c_certification_expiry: "2027-03-31"
+  c_district: "maseru"
+  c_trading_license_no: "TL-2024-0042"
+  c_supplier_name: "Pannar Seed (Pty) Ltd — Lesotho branch"
+  c_supplier_code: "SUP_PANNAR"
+

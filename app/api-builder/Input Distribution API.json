@@ -1,0 +1,9 @@
+{
+  "id": "API-609deadc-6aad-4c8b-a744-d9fbaa9f087e",
+  "name": "Input Distribution API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imDistribution\",\n            \"ignorePermission\": \"\",\n            \"id\": \"1CE75C2B-F1F6-47FD-90E4-A27DA1470A1E\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Input Distribution API\",\n        \"description\": \"Auto-generated API for form: imDistribution\",\n        \"id\": \"API-609deadc-6aad-4c8b-a744-d9fbaa9f087e\"\n    }\n}\n"
+}

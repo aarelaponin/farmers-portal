@@ -1,0 +1,192 @@
+# app_fd_qa_issue
+# 10 row(s) at sync time
+- id: "3bcaf14c-8e2b-4fbc-a97e-c1b538b58411"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "5469e1f3-8303-4603-83bc-ab30ce1928ae"
+  c_rulecode: "geometry.coordinates_required"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "centroid_lat"
+  c_dateraised: "2026-05-18T18:38:17.207157139Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "GIS coordinates must be captured."
+  c_isactive: "Y"
+
+- id: "577f43d3-2b4e-4a79-b43e-5543da08a81d"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "5469e1f3-8303-4603-83bc-ab30ce1928ae"
+  c_rulecode: "geometry.area_must_be_positive"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "area_hectares"
+  c_dateraised: "2026-05-18T18:38:17.202041109Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "Parcel area (ha) must be greater than zero."
+  c_isactive: "Y"
+
+- id: "6910ef70-2a1e-4118-9740-3d6f06e1754e"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "e6db8a99-1e5a-460d-a4a0-878a019efcc6"
+  c_rulecode: "geometry.coordinates_required"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "centroid_lat"
+  c_dateraised: "2026-05-07T19:27:29.173106988Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "GIS coordinates must be captured."
+  c_isactive: "Y"
+
+- id: "816f86ca-b3aa-4a55-be12-518cebb4f7c6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "5469e1f3-8303-4603-83bc-ab30ce1928ae"
+  c_rulecode: "classification.cultivated_land_set"
+  c_severity: "WARNING"
+  c_dateresolved: ""
+  c_affectedfields: "cultivatedland"
+  c_dateraised: "2026-05-18T18:38:17.196936783Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "classification"
+  c_message: "Cultivated land area should be specified."
+  c_isactive: "Y"
+
+- id: "9f38e8ae-4736-4617-a1a7-a22b70e3593b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "e6db8a99-1e5a-460d-a4a0-878a019efcc6"
+  c_rulecode: "geometry.area_must_be_positive"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "area_hectares"
+  c_dateraised: "2026-05-07T19:27:29.166444533Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "Parcel area (ha) must be greater than zero."
+  c_isactive: "Y"
+
+- id: "a7c8e6fa-c809-4977-b55d-73edb05bde1c"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "f5c43ec2-c455-470a-9a76-444d0c71a624"
+  c_rulecode: "geometry.coordinates_required"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "centroid_lat"
+  c_dateraised: "2026-05-08T20:02:17.627082809Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "GIS coordinates must be captured."
+  c_isactive: "Y"
+
+- id: "ba57fd5d-19a1-41ec-9612-a6d36446a6b6"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "1161e9e0-6193-4ac3-95b6-8262064a64f6"
+  c_rulecode: "geometry.area_must_be_positive"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "area_hectares"
+  c_dateraised: "2026-05-08T19:31:53.309326648Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "Parcel area (ha) must be greater than zero."
+  c_isactive: "Y"
+
+- id: "c14a07fd-8bde-44c8-afa9-57d525d516ce"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "f5c43ec2-c455-470a-9a76-444d0c71a624"
+  c_rulecode: "geometry.area_must_be_positive"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "area_hectares"
+  c_dateraised: "2026-05-08T20:02:17.622427596Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "Parcel area (ha) must be greater than zero."
+  c_isactive: "Y"
+
+- id: "e3e9f0e7-5fa5-4f27-9ab8-9c71aaa44f2b"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "1161e9e0-6193-4ac3-95b6-8262064a64f6"
+  c_rulecode: "classification.cultivated_land_set"
+  c_severity: "WARNING"
+  c_dateresolved: ""
+  c_affectedfields: "cultivatedland"
+  c_dateraised: "2026-05-08T19:31:53.304811907Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "classification"
+  c_message: "Cultivated land area should be specified."
+  c_isactive: "Y"
+
+- id: "f571fa19-117d-4756-a7ee-c0d2360638a5"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_formid: "parcelRegistration"
+  c_recordid: "1161e9e0-6193-4ac3-95b6-8262064a64f6"
+  c_rulecode: "geometry.coordinates_required"
+  c_severity: "ERROR"
+  c_dateresolved: ""
+  c_affectedfields: "centroid_lat"
+  c_dateraised: "2026-05-08T19:31:53.313506468Z"
+  c_serviceid: "parcel_registration"
+  c_tabcode: "geometry"
+  c_message: "GIS coordinates must be captured."
+  c_isactive: "Y"
+

@@ -1,0 +1,9 @@
+{
+  "id": "API-98c60d22-498b-4941-a071-614dec827817",
+  "name": "MD.18 - Registration Channel API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md18registrationChan\",\n            \"ignorePermission\": \"\",\n            \"id\": \"5F5F95E3-33D8-4B6C-AFFC-03645CCCBB01\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.18 - Registration Channel API\",\n        \"description\": \"Auto-generated API for form: md18registrationChan\",\n        \"id\": \"API-98c60d22-498b-4941-a071-614dec827817\"\n    }\n}\n"
+}

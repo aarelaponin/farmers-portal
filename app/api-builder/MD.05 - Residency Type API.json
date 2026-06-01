@@ -1,0 +1,9 @@
+{
+  "id": "API-ea109d46-4992-4679-b47e-409dbcf44538",
+  "name": "MD.05 - Residency Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md05residencyType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"915937F1-F4B6-4A8B-A94F-FFDBDBF9A387\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.05 - Residency Type API\",\n        \"description\": \"Auto-generated API for form: md05residencyType\",\n        \"id\": \"API-ea109d46-4992-4679-b47e-409dbcf44538\"\n    }\n}\n"
+}

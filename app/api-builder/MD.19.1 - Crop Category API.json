@@ -1,0 +1,9 @@
+{
+  "id": "API-ff817174-4430-46d1-8916-6afd3cb88da3",
+  "name": "MD.19.1 - Crop Category API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md191cropCategory\",\n            \"ignorePermission\": \"\",\n            \"id\": \"2B7B14A7-8A82-4F74-ABF4-701D12CB7574\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.19.1 - Crop Category API\",\n        \"description\": \"Auto-generated API for form: md191cropCategory\",\n        \"id\": \"API-ff817174-4430-46d1-8916-6afd3cb88da3\"\n    }\n}\n"
+}

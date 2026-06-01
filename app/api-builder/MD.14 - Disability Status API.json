@@ -1,0 +1,9 @@
+{
+  "id": "API-67127c98-e6e6-4e50-8147-38b6ed9d5d05",
+  "name": "MD.14 - Disability Status API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md14disabilityStatus\",\n            \"ignorePermission\": \"\",\n            \"id\": \"47F45DE7-4249-48EF-87A0-1899FD0A7293\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.14 - Disability Status API\",\n        \"description\": \"Auto-generated API for form: md14disabilityStatus\",\n        \"id\": \"API-67127c98-e6e6-4e50-8147-38b6ed9d5d05\"\n    }\n}\n"
+}

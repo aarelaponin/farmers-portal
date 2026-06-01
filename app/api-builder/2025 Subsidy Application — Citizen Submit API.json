@@ -1,0 +1,9 @@
+{
+  "id": "API-API_SUBSIDY_APP_2025_CITIZEN",
+  "name": "2025 Subsidy Application \u2014 Citizen Submit API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": "Auto-generated API for form: subsidyApplication2025 (kind=crud)",
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"subsidyApplication2025\",\n            \"ignorePermission\": \"\",\n            \"id\": \"9C6D27F6-84AB-44FE-A969-F0AD4B40007B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"2025 Subsidy Application \u2014 Citizen Submit API\",\n        \"description\": \"Auto-generated API for form: subsidyApplication2025 (kind=crud)\",\n        \"id\": \"API-API_SUBSIDY_APP_2025_CITIZEN\"\n    }\n}\n"
+}

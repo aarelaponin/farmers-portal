@@ -1,0 +1,9 @@
+{
+  "id": "API-7da72818-40cc-4155-b336-8bba19523271",
+  "name": "MD.48 - Agricultural Season API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md48Season\",\n            \"ignorePermission\": \"\",\n            \"id\": \"A74FF79D-297B-4649-90DF-C113D9A3B04F\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.48 - Agricultural Season API\",\n        \"description\": \"Auto-generated API for form: md48Season\",\n        \"id\": \"API-7da72818-40cc-4155-b336-8bba19523271\"\n    }\n}\n"
+}

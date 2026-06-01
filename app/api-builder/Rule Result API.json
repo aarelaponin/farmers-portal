@@ -1,0 +1,9 @@
+{
+  "id": "API-dfd40e60-4a31-4582-918b-c93095f4be90",
+  "name": "Rule Result API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spRuleResult\",\n            \"ignorePermission\": \"\",\n            \"id\": \"933214F9-EC8D-43B2-A4FD-F3BC32C5DF11\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Rule Result API\",\n        \"description\": \"Auto-generated API for form: spRuleResult\",\n        \"id\": \"API-dfd40e60-4a31-4582-918b-c93095f4be90\"\n    }\n}\n"
+}

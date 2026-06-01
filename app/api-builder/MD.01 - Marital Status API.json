@@ -1,0 +1,9 @@
+{
+  "id": "API-b63f36c8-5fd3-4962-8a60-02dd9571735c",
+  "name": "MD.01 - Marital Status API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md01maritalStatus\",\n            \"ignorePermission\": \"\",\n            \"id\": \"623C19B0-91B5-4B06-A4A0-925C75FB2E58\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.01 - Marital Status API\",\n        \"description\": \"Auto-generated API for form: md01maritalStatus\",\n        \"id\": \"API-b63f36c8-5fd3-4962-8a60-02dd9571735c\"\n    }\n}\n"
+}

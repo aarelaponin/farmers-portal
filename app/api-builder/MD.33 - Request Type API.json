@@ -1,0 +1,9 @@
+{
+  "id": "API-6a86ce96-6b2d-4b09-9586-360bb6f8e217",
+  "name": "MD.33 - Request Type API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md33requestType\",\n            \"ignorePermission\": \"\",\n            \"id\": \"AE6ED3EF-44B7-40E4-9ED8-ECFE07A63920\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.33 - Request Type API\",\n        \"description\": \"Auto-generated API for form: md33requestType\",\n        \"id\": \"API-6a86ce96-6b2d-4b09-9586-360bb6f8e217\"\n    }\n}\n"
+}

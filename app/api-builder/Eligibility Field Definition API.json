@@ -1,0 +1,9 @@
+{
+  "id": "API-22b1b2b8-b34b-4fdf-94be-efc577c09266",
+  "name": "Eligibility Field Definition API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spEligField\",\n            \"ignorePermission\": \"\",\n            \"id\": \"B0FE3119-E611-4A9B-AE95-BE5BAAC2CBC4\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Eligibility Field Definition API\",\n        \"description\": \"Auto-generated API for form: spEligField\",\n        \"id\": \"API-22b1b2b8-b34b-4fdf-94be-efc577c09266\"\n    }\n}\n"
+}

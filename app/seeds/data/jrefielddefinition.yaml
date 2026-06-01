@@ -1,0 +1,398 @@
+# app_fd_jrefielddefinition
+# 18 row(s) at sync time
+- id: "jre-agro_zone"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "NB: form id is truncated to 24 chars (md04agroEcologicalZo)"
+  c_lookupvalues: null
+  c_displayorder: "5"
+  c_isactive: "Y"
+  c_lookupformid: "md04agroEcologicalZo"
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Agro-Ecological Zone"
+  c_applicableoperators: "=,!=,IN,NOT_IN"
+  c_category: "LOCATION"
+  c_fieldtype: "LOOKUP"
+  c_gridparentfield: null
+  c_fieldid: "agro_zone"
+
+- id: "jre-annual_income_lsl"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "In Lesotho Loti. From spFarmerDerived.averageAnnualIncome"
+  c_lookupvalues: null
+  c_displayorder: "14"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Annual Household Income (LSL)"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "ECONOMIC"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "annual_income_lsl"
+
+- id: "jre-cultivated_land_ha"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "From spFarmerDerived.totalCultivatedLand"
+  c_lookupvalues: null
+  c_displayorder: "12"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Total Cultivated Land (ha)"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "AGRICULTURAL"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "cultivated_land_ha"
+
+- id: "jre-dependents_under_18"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Sourced from spFarmerDerived.childrenUnder18"
+  c_lookupvalues: null
+  c_displayorder: "8"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Dependents Under 18"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "HOUSEHOLD"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "dependents_under_18"
+
+- id: "jre-disability_count"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Sourced from spFarmerDerived.householdDisabilityCount"
+  c_lookupvalues: null
+  c_displayorder: "10"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Members with Disability"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "HOUSEHOLD"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "disability_count"
+
+- id: "jre-district_code"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Lesotho district from MD.03"
+  c_lookupvalues: null
+  c_displayorder: "4"
+  c_isactive: "Y"
+  c_lookupformid: "md03district"
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "District"
+  c_applicableoperators: "=,!=,IN,NOT_IN"
+  c_category: "LOCATION"
+  c_fieldtype: "LOOKUP"
+  c_gridparentfield: null
+  c_fieldid: "district_code"
+
+- id: "jre-farmer_age"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Age in years of the household head (sourced from spFarmerDerived.headAge)"
+  c_lookupvalues: null
+  c_displayorder: "1"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Farmer Age"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "DEMOGRAPHIC"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "farmer_age"
+
+- id: "jre-farmer_gender"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Static options: male, female, other"
+  c_lookupvalues: "[{\"value\":\"male\",\"label\":\"Male\"},{\"value\":\"female\",\"label\":\"Female\"},{\"value\":\"other\",\"label\":\"Other\"}]"
+  c_displayorder: "2"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Farmer Gender"
+  c_applicableoperators: "=,!=,IN,NOT_IN"
+  c_category: "DEMOGRAPHIC"
+  c_fieldtype: "TEXT"
+  c_gridparentfield: null
+  c_fieldid: "farmer_gender"
+
+- id: "jre-female_headed_household"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "true / false (from spFarmerDerived)"
+  c_lookupvalues: "[{\"value\":\"true\",\"label\":\"Yes\"},{\"value\":\"false\",\"label\":\"No\"}]"
+  c_displayorder: "9"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Female-Headed Household"
+  c_applicableoperators: "=,!="
+  c_category: "HOUSEHOLD"
+  c_fieldtype: "BOOLEAN"
+  c_gridparentfield: null
+  c_fieldid: "female_headed_household"
+
+- id: "jre-food_security_status"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Critical for poverty-targeting (Policy Section 2.2.2). Values: SECURE, MODERATE, SEVERE, CRISIS. From spFarmerDerived.currentFoodSecurityStatus"
+  c_lookupvalues: null
+  c_displayorder: "16"
+  c_isactive: "Y"
+  c_lookupformid: "md35foodSecurityStat"
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Food Security Status"
+  c_applicableoperators: "=,!=,IN,NOT_IN"
+  c_category: "FOOD_SECURITY"
+  c_fieldtype: "LOOKUP"
+  c_gridparentfield: null
+  c_fieldid: "food_security_status"
+
+- id: "jre-has_livestock"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "From spFarmerDerived.hasLivestock"
+  c_lookupvalues: "[{\"value\":\"true\",\"label\":\"Yes\"},{\"value\":\"false\",\"label\":\"No\"}]"
+  c_displayorder: "13"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Has Livestock"
+  c_applicableoperators: "=,!="
+  c_category: "AGRICULTURAL"
+  c_fieldtype: "BOOLEAN"
+  c_gridparentfield: null
+  c_fieldid: "has_livestock"
+
+- id: "jre-household_size"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Total members (sourced from spFarmerDerived.totalHouseholdMembers)"
+  c_lookupvalues: null
+  c_displayorder: "7"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Household Size"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "HOUSEHOLD"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "household_size"
+
+- id: "jre-marital_status"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Picks from MD.01 Marital Status"
+  c_lookupvalues: null
+  c_displayorder: "3"
+  c_isactive: "Y"
+  c_lookupformid: "md01maritalStatus"
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Marital Status"
+  c_applicableoperators: "=,!=,IN,NOT_IN"
+  c_category: "DEMOGRAPHIC"
+  c_fieldtype: "LOOKUP"
+  c_gridparentfield: null
+  c_fieldid: "marital_status"
+
+- id: "jre-programs_last_2_seasons"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Anti-dependency check (Policy Section 1.2.iv). From spFarmerDerived.programsInLast2Seasons"
+  c_lookupvalues: null
+  c_displayorder: "17"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Active Programmes (Last 2 Seasons)"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "PROGRAM_HISTORY"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "programs_last_2_seasons"
+
+- id: "jre-residency_type"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Permanent vs seasonal vs transient"
+  c_lookupvalues: null
+  c_displayorder: "6"
+  c_isactive: "Y"
+  c_lookupformid: "md05residencyType"
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Residency Type"
+  c_applicableoperators: "=,!=,IN,NOT_IN"
+  c_category: "LOCATION"
+  c_fieldtype: "LOOKUP"
+  c_gridparentfield: null
+  c_fieldid: "residency_type"
+
+- id: "jre-total_benefits_lifetime"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Cumulative subsidy value across all programmes ever. From spFarmerDerived.totalBenefitsReceivedLT"
+  c_lookupvalues: null
+  c_displayorder: "18"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Total Benefits Received (Lifetime, LSL)"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "PROGRAM_HISTORY"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "total_benefits_lifetime"
+
+- id: "jre-total_land_ha"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "Critical for smallholder definition (<2 ha per Section 4.2.1 policy). From spFarmerDerived.totalLandAvailable"
+  c_lookupvalues: null
+  c_displayorder: "11"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Total Land Available (ha)"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "AGRICULTURAL"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "total_land_ha"
+
+- id: "jre-vulnerability_score"
+  datecreated: "2026-04-25 22:49:47.606282"
+  datemodified: "2026-04-25 22:49:47.606282"
+  createdby: "system"
+  createdbyname: null
+  modifiedby: "system"
+  modifiedbyname: null
+  c_aggregationfunctions: null
+  c_helptext: "0 (least) to 100 (most). From spFarmerDerived.vulnerabilityScore"
+  c_lookupvalues: null
+  c_displayorder: "15"
+  c_isactive: "Y"
+  c_lookupformid: null
+  c_isgrid: "N"
+  c_scopecode: "FARMER_APPLICATION"
+  c_fieldlabel: "Vulnerability Score"
+  c_applicableoperators: "=,!=,<,<=,>,>=,BETWEEN"
+  c_category: "ECONOMIC"
+  c_fieldtype: "NUMBER"
+  c_gridparentfield: null
+  c_fieldid: "vulnerability_score"
+

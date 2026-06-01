@@ -1,0 +1,9 @@
+{
+  "id": "API-96541dff-245e-42a7-86c1-3127a7f0726c",
+  "name": "Eligibility Rule API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spEligRule\",\n            \"ignorePermission\": \"\",\n            \"id\": \"095529FF-2E84-4853-AC3C-A8169239AC07\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Eligibility Rule API\",\n        \"description\": \"Auto-generated API for form: spEligRule\",\n        \"id\": \"API-96541dff-245e-42a7-86c1-3127a7f0726c\"\n    }\n}\n"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "API-9aadc592-8b93-4889-9231-63e803e5eda2",
+  "name": "fss",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": "Farmer Smart Search",
+  "json": "{\"elements\":[{\"className\":\"global.govstack.smartsearch.api.SmartSearchApiPlugin\",\"properties\":{\"enableFuzzyMatch\":\"true\",\"maxResults\":\"20\",\"description\":\"Smart Farmer Search API - Progressive criteria-based farmer lookup with fuzzy matching\",\"label\":\"Farmer Smart Search\",\"id\":\"2F7064B5-79D0-4389-5B4F-4B638EBDE4DB\",\"ENABLED_PATHS\":\"get:/community-councils;get:/lookup/{id};get:/villages;get:/search/byPhone/{phone};get:/cooperatives;get:/statistics;get:/search/byNationalId/{nationalId};post:/search\"}}],\"properties\":{\"licenseUrl\":\"\",\"contactEmail\":\"aare@fiscaladmin.com\",\"contactName\":\"\",\"name\":\"fss\",\"description\":\"Farmer Smart Search\",\"externalDocUrl\":\"\",\"id\":\"API-9aadc592-8b93-4889-9231-63e803e5eda2\",\"termsOfService\":\"\",\"licenseName\":\"\",\"externalDocDesc\":\"\",\"enableInternal\":\"\"}}"
+}

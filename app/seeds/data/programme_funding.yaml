@@ -1,0 +1,34 @@
+# app_fd_programme_funding
+# 2 row(s) at sync time
+- id: "eeb381ac-cd48-4dbe-b97a-5dd7e51b4922"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "FUND-202601"
+  c_notes: "WFP-financed share of the 2025/26 Fertilizer & Seed Subsidy envelope."
+  c_donor_code: "WFP"
+  c_programme_code: "PRG_2025_001"
+  c_effective_to: "2026-09-30"
+  c_grant_reference: "WFP-LSO-2026-001"
+  c_effective_from: "2025-10-01"
+  c_share_percent: "60"
+
+- id: "f817bbce-d2c3-44f7-9789-8efd2fa88042"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_code: "FUND-202602"
+  c_notes: "Government of Lesotho domestic counterpart financing."
+  c_donor_code: "MAFSN_DOMESTIC"
+  c_programme_code: "PRG_2025_001"
+  c_effective_to: "2026-09-30"
+  c_grant_reference: "GOL-MAFSN-2026-FY"
+  c_effective_from: "2025-10-01"
+  c_share_percent: "40"
+

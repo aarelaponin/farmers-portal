@@ -1,0 +1,9 @@
+{
+  "id": "API-d9c5626d-c7ca-4b37-9320-42e03b699157",
+  "name": "MD.06 - Farm Labour Source API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"md06farmLabourSource\",\n            \"ignorePermission\": \"\",\n            \"id\": \"6B109FFA-7971-46AF-861A-F532B8BA1C4B\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"MD.06 - Farm Labour Source API\",\n        \"description\": \"Auto-generated API for form: md06farmLabourSource\",\n        \"id\": \"API-d9c5626d-c7ca-4b37-9320-42e03b699157\"\n    }\n}\n"
+}

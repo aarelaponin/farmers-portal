@@ -1,0 +1,9 @@
+{
+  "id": "API-65a62b13-36e6-49b6-9c0b-d61eea37c08f",
+  "name": "Notification Log API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spNotification\",\n            \"ignorePermission\": \"\",\n            \"id\": \"939FB0A9-0112-4E94-A3AD-B1F08789578E\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Notification Log API\",\n        \"description\": \"Auto-generated API for form: spNotification\",\n        \"id\": \"API-65a62b13-36e6-49b6-9c0b-d61eea37c08f\"\n    }\n}\n"
+}

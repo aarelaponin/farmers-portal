@@ -1,0 +1,9 @@
+{
+  "id": "API-19867883-615c-4012-9a03-d3cb22e6290e",
+  "name": "02.04 - Parcel Classification API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"parcelClassification\",\n            \"ignorePermission\": \"\",\n            \"id\": \"E1EE1B8D-DBC4-4187-9273-D1FBC50F4BAA\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"02.04 - Parcel Classification API\",\n        \"description\": \"Auto-generated API for form: parcelClassification\",\n        \"id\": \"API-19867883-615c-4012-9a03-d3cb22e6290e\"\n    }\n}\n"
+}

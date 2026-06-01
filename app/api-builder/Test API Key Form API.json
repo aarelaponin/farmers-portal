@@ -1,0 +1,9 @@
+{
+  "id": "API-8330c296-fd8d-4d89-97db-9502b20c04cb",
+  "name": "Test API Key Form API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"testApiKey123\",\n            \"ignorePermission\": \"\",\n            \"id\": \"F4F44FEF-C1DD-4343-9158-F776E498888A\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Test API Key Form API\",\n        \"description\": \"Auto-generated API for form: testApiKey123\",\n        \"id\": \"API-8330c296-fd8d-4d89-97db-9502b20c04cb\"\n    }\n}\n"
+}

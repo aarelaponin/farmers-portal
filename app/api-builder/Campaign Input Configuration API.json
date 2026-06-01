@@ -1,0 +1,9 @@
+{
+  "id": "API-6d1126df-2f34-442d-918a-4cfdfaf4247a",
+  "name": "Campaign Input Configuration API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imCampaignInput\",\n            \"ignorePermission\": \"\",\n            \"id\": \"8F83AFA9-C8A4-4063-A901-876D252886D3\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Campaign Input Configuration API\",\n        \"description\": \"Auto-generated API for form: imCampaignInput\",\n        \"id\": \"API-6d1126df-2f34-442d-918a-4cfdfaf4247a\"\n    }\n}\n"
+}

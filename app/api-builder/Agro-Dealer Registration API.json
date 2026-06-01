@@ -1,0 +1,9 @@
+{
+  "id": "API-666c2191-fc31-4284-af96-ee7047c5386e",
+  "name": "Agro-Dealer Registration API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imAgroDealer\",\n            \"ignorePermission\": \"\",\n            \"id\": \"369DC65C-3E83-4FAF-A135-B8E0A53BB38F\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Agro-Dealer Registration API\",\n        \"description\": \"Auto-generated API for form: imAgroDealer\",\n        \"id\": \"API-666c2191-fc31-4284-af96-ee7047c5386e\"\n    }\n}\n"
+}

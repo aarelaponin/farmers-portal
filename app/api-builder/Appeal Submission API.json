@@ -1,0 +1,9 @@
+{
+  "id": "API-a6a09acc-4d5f-4800-a7c0-2ba8eef04800",
+  "name": "Appeal Submission API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"spAppeal\",\n            \"ignorePermission\": \"\",\n            \"id\": \"F6E8A765-0BAA-4D6A-BE83-ECCD19DE57C3\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Appeal Submission API\",\n        \"description\": \"Auto-generated API for form: spAppeal\",\n        \"id\": \"API-a6a09acc-4d5f-4800-a7c0-2ba8eef04800\"\n    }\n}\n"
+}

@@ -1,0 +1,44 @@
+# app_fd_j_sc_tran_t2
+# 3 row(s) at sync time
+- id: "33e4ef47-e41a-4bba-9aea-461210d7f552"
+  datecreated: "2025-08-04 14:13:04"
+  datemodified: "2025-08-04 14:13:04"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_popupselectbox: ""
+  c_selectbox: "admin"
+  c_checkbox: ""
+  c_ecounter: null
+  c_multiselectbox: ""
+  c_radio: ""
+
+- id: "397fe1ad-587e-4aa3-8c4b-fab77ede01b3"
+  datecreated: "2025-05-09 14:14:25"
+  datemodified: "2025-05-09 14:14:25"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_popupselectbox: ""
+  c_selectbox: "admin"
+  c_checkbox: ""
+  c_ecounter: null
+  c_multiselectbox: ""
+  c_radio: ""
+
+- id: "3e9caa2d-3012-4ace-8d7f-767a960c6dc3"
+  datecreated: "2025-05-28 12:42:29"
+  datemodified: "2025-05-28 12:42:34"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_popupselectbox: ""
+  c_selectbox: "admin"
+  c_checkbox: ""
+  c_ecounter: null
+  c_multiselectbox: ""
+  c_radio: ""
+

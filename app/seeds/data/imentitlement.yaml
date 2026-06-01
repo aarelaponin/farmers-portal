@@ -1,0 +1,78 @@
+# app_fd_imentitlement
+# 2 row(s) at sync time
+- id: "2e4f4d2e-ff7c-466f-997b-9accd50e23d4"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_smsnotifdate: null
+  c_districtcode: "mokhotlong"
+  c_voucherbalance: null
+  c_farmerphone: "+26659518328"
+  c_scheduleddate: null
+  c_distpointname: null
+  c_farmername: "Mants'ali Panyane"
+  c_farmercode: ""
+  c_voucherexpiry: null
+  c_farmernationalid: "066257236627"
+  c_eligibilityscore: null
+  c_entitlementcode: "EN-4140E0"
+  c_totalentitlevalue: "3050"
+  c_farmercontribtotal: "610.00"
+  c_vouchercode: null
+  c_campaigncode: "PRG-2025-001"
+  c_priorityrank: null
+  c_smsnotifsent: null
+  c_calculationdetails: "Generated from sp_application 4140e0a9-02e7-43f1-a18f-902a9250255b by admin"
+  c_voucherissuedate: null
+  c_distpointcode: null
+  c_approveddate: "Tue Apr 28 14:54:21 UTC 2026"
+  c_voucherpin: null
+  c_createddate: "Tue Apr 28 14:54:21 UTC 2026"
+  c_packagecode: "PRG-2025-001"
+  c_totalsubsidyvalue: "2440.00"
+  c_collectionstatus: null
+  c_firstredemptiondate: null
+  c_completiondate: null
+  c_status: "APPROVED"
+
+- id: "58234104-5300-4555-aa65-4de7a824e940"
+  datecreated: null
+  datemodified: null
+  createdby: null
+  createdbyname: null
+  modifiedby: null
+  modifiedbyname: null
+  c_smsnotifdate: null
+  c_districtcode: "Maseru"
+  c_voucherbalance: null
+  c_farmerphone: "56789012"
+  c_scheduleddate: null
+  c_distpointname: null
+  c_farmername: "Khotso Mosoeu"
+  c_farmercode: ""
+  c_voucherexpiry: null
+  c_farmernationalid: "01010101"
+  c_eligibilityscore: null
+  c_entitlementcode: "EN-0AFDB6"
+  c_totalentitlevalue: "22500"
+  c_farmercontribtotal: "0.00"
+  c_vouchercode: null
+  c_campaigncode: ""
+  c_priorityrank: null
+  c_smsnotifsent: null
+  c_calculationdetails: "Generated from sp_application 0afdb6b5-7a7d-46ec-a069-9e5cd17a1216 by admin"
+  c_voucherissuedate: null
+  c_distpointcode: null
+  c_approveddate: "Fri May 01 17:41:42 UTC 2026"
+  c_voucherpin: null
+  c_createddate: "Fri May 01 17:41:42 UTC 2026"
+  c_packagecode: ""
+  c_totalsubsidyvalue: "22500.00"
+  c_collectionstatus: null
+  c_firstredemptiondate: null
+  c_completiondate: null
+  c_status: "APPROVED"
+

@@ -1,0 +1,9 @@
+{
+  "id": "API-0d494035-6ba6-49f2-84d6-5674d0ddf164",
+  "name": "Farmer Entitlement API",
+  "type": "api",
+  "appId": "farmersPortal",
+  "appVersion": 1,
+  "description": null,
+  "json": "{\n    \"elements\": [{\n        \"className\": \"org.joget.api.lib.AppFormAPI\",\n        \"properties\": {\n            \"formDefId\": \"imEntitlement\",\n            \"ignorePermission\": \"\",\n            \"id\": \"0BB7635C-C4BD-43BC-BAB8-02C8C5F73A96\",\n            \"label\": \"\",\n            \"ENABLED_PATHS\": \"post:/;get:/{recordId};put:/;delete:/{recordId};post:/saveOrUpdate;post:/updateWithFiles;post:/addWithFiles;get:/list\"\n        }\n    }],\n    \"properties\": {\n        \"name\": \"Farmer Entitlement API\",\n        \"description\": \"Auto-generated API for form: imEntitlement\",\n        \"id\": \"API-0d494035-6ba6-49f2-84d6-5674d0ddf164\"\n    }\n}\n"
+}
