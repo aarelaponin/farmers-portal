@@ -1,0 +1,48 @@
+[{
+    "title": "Report Filter Panel",
+    "properties": [
+        { "name": "id", "label": "Id", "type": "hidden" },
+        { "name": "customId", "label": "Menu ID", "type": "textfield",
+          "regex_validation": "^[a-zA-Z0-9_]+$",
+          "description": "Unique id for this panel menu, e.g. financialStatements" },
+        { "name": "label", "label": "Label", "type": "textfield", "required": "True",
+          "value": "Report" },
+        { "name": "targetMenuId", "label": "Hosted report menu ID", "type": "textfield", "required": "True",
+          "description": "customId of the report menu to host below the panel (a JasperReports menu, datalist, or chart in this same userview)." },
+        { "name": "panelTitle", "label": "Panel title", "type": "textfield", "value": "FILTER CRITERIA" },
+        { "name": "columns", "label": "Grid columns", "type": "textfield", "value": "3",
+          "description": "Number of input columns in the panel." },
+        { "name": "applyLabel", "label": "Apply button text", "type": "textfield", "value": "Apply" },
+        { "name": "collapsedByDefault", "label": "Collapsed by default", "type": "checkbox",
+          "options": [ { "value": "true", "label": "" } ] },
+        { "name": "frameMinHeight", "label": "Report min height (px)", "type": "textfield", "value": "300" }
+    ]
+},
+{
+    "title": "Parameters",
+    "properties": [
+        {
+            "name": "parameters",
+            "label": "Parameters",
+            "type": "grid",
+            "description": "One row per filter. type = date | daterange | text | number | select | multiselect. For select/multiselect set optionsSource = static (use Static options 'code|label;code|label') or lookup (use Lookup table/code/name). default may be a hash variable, e.g. #date.now# or #currentUser.username#. Mark 'bound' = true to force the value from default (self-scoped, read-only). For daterange, the To picker uses 'To param name' / 'Default To'.",
+            "columns": [
+                { "key": "paramName", "label": "Param name" },
+                { "key": "label", "label": "Label" },
+                { "key": "type", "label": "Type" },
+                { "key": "default", "label": "Default" },
+                { "key": "optionsSource", "label": "Options source" },
+                { "key": "staticOptions", "label": "Static options" },
+                { "key": "lookupTable", "label": "Lookup table" },
+                { "key": "lookupCode", "label": "Lookup code col" },
+                { "key": "lookupName", "label": "Lookup name col" },
+                { "key": "lookupWhere", "label": "Lookup where" },
+                { "key": "lookupOrder", "label": "Lookup order" },
+                { "key": "toParamName", "label": "To param name" },
+                { "key": "defaultTo", "label": "Default To" },
+                { "key": "bound", "label": "Bound (true/false)" },
+                { "key": "colspan", "label": "Colspan" }
+            ]
+        }
+    ]
+}]

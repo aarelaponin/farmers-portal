@@ -1,5 +1,5 @@
 # app_fd_im_inventory
-# 4 row(s) at sync time
+# 5 row(s) at sync time
 - id: "0f654f10-a2d9-48aa-aea2-891e2c56735e"
   datecreated: null
   datemodified: null
@@ -31,6 +31,22 @@
   c_quantity_on_hand: "300"
   c_input_code: "FERT_UREA_50KG"
   c_point_code: "CP_MORIJA"
+
+- id: "aa43c3e7-0ab6-4607-bd27-8782e769b69a"
+  datecreated: "2026-06-17 06:34:58.285000"
+  datemodified: "2026-06-17 06:34:58.285000"
+  createdby: "admin"
+  createdbyname: "Admin Admin"
+  modifiedby: "admin"
+  modifiedbyname: "Admin Admin"
+  c_reorder_threshold: "20"
+  c_code: "maize"
+  c_notes: ""
+  c_last_stock_count_date: "2026-06-17"
+  c_quantity_reserved: "0"
+  c_quantity_on_hand: "100"
+  c_input_code: "SEED_MAIZE_PAN6479_25KG"
+  c_point_code: "CP001"
 
 - id: "da812fd3-5851-49f1-8dda-d68c41280589"
   datecreated: "2026-05-06 21:37:53.959000"

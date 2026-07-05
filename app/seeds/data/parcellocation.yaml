@@ -290,7 +290,7 @@
 
 - id: "11a5d3b7-cd5b-4f92-8408-dbc843d323fa"
   datecreated: "2026-02-03 14:03:40.013000"
-  datemodified: "2026-05-21 10:53:19.702000"
+  datemodified: "2026-06-02 09:30:51.252000"
   createdby: "admin"
   createdbyname: "Admin Admin"
   modifiedby: "admin"
@@ -304,7 +304,7 @@
   c_parcelname: ""
   c_village: "Motse-mocha"
   c_sub_centre: "Moyeni"
-  c_resource_centre: ""
+  c_resource_centre: "CP009"
 
 - id: "1269eb7c-85ae-4661-b15c-12071c18dc06"
   datecreated: "2026-03-04 15:32:57.481000"

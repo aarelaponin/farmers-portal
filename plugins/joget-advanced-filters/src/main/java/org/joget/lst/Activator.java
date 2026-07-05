@@ -16,6 +16,7 @@ public class Activator implements BundleActivator {
         registrationList.add(context.registerService(FilterPanelDecorator.class.getName(), new FilterPanelDecorator(), null));
         registrationList.add(context.registerService(DateRangeFilterType.class.getName(), new DateRangeFilterType(), null));
         registrationList.add(context.registerService(CascadingMdmSelectFilterType.class.getName(), new CascadingMdmSelectFilterType(), null));
+        registrationList.add(context.registerService(ReportFilterPanel.class.getName(), new ReportFilterPanel(), null));
     }
 
     public void stop(BundleContext context) {

@@ -1,9 +1,9 @@
 {
-  "id": "API-formCreatorApi",
+  "id": "API-e7878006-c15a-425e-9c36-bebc7c4d085c",
   "name": "formCreatorApi",
   "type": "api",
   "appId": "farmersPortal",
   "appVersion": 1,
-  "description": "Custom plugin API for global.govstack.formcreator.lib.FormCreatorServiceProvider",
-  "json": "{\"elements\":[{\"className\":\"global.govstack.formcreator.lib.FormCreatorServiceProvider\",\"properties\":{\"id\":\"13FF2AB4-8EBD-4F51-AB5C-9E5B1CB99188\",\"label\":\"\",\"ENABLED_PATHS\":\"post:/formcreator/forms;post:/formcreator/clear;post:/formcreator/seed;post:/formcreator/datalists;post:/formcreator/userviews;post:/regbb/eval;post:/regbb/submit;post:/formcreator/apis;post:/formcreator/apis/delete;get:/formcreator/data/list\"}}],\"properties\":{\"name\":\"formCreatorApi\",\"description\":\"Custom plugin API for global.govstack.formcreator.lib.FormCreatorServiceProvider\",\"id\":\"API-formCreatorApi\"}}"
+  "description": "",
+  "json": "{\"elements\":[{\"className\":\"global.govstack.formcreator.lib.FormCreatorServiceProvider\",\"properties\":{\"id\":\"74CA7C6C-7F78-4542-C158-474044EAEE71\",\"debugMode\":\"true\",\"ENABLED_PATHS\":\"post:/formcreator/forms;post:/formcreator/clear;post:/formcreator/seed;post:/formcreator/datalists;post:/formcreator/userviews;post:/regbb/eval;post:/regbb/submit;post:/formcreator/apis;post:/formcreator/apis/delete;get:/formcreator/data/list\"}}],\"properties\":{\"name\":\"formCreatorApi\",\"description\":\"\",\"id\":\"API-e7878006-c15a-425e-9c36-bebc7c4d085c\"}}"
 }
