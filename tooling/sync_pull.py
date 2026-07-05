@@ -159,10 +159,44 @@ def pull_master_data(cur, target_dir: str) -> tuple[int, int]:
 
 # ─── Operational data pull (everything else app_fd_*) ───────────────────────
 
+def _owned_operational_tables(cur, existing_data_dir: str) -> set:
+    """Return the set of physical app_fd_* tables that belong to APP_ID.
+
+    On a SHARED Joget database (several apps in one schema — as on the
+    Lesotho training server, which also hosts a driving-licence / national-ID
+    suite) app_fd_* form-data tables are NOT tagged by appid, so a blind
+    "pull every app_fd_*" scoops up other apps' tables. We scope to this
+    app by the union of:
+
+      1. tables declared by APP_ID's own forms (app_form.tablename), and
+      2. app_fd_* tables already tracked in the repo (app/seeds/data/*.yaml)
+         — this grandfathers in plugin-created tables that have no form
+         definition (e.g. reg_bb_eval_audit written by reg-bb-engine's
+         RoutingEvaluator).
+
+    Tables that are neither form-backed nor already tracked (i.e. another
+    app's tables) are excluded, so the pull never pollutes this repo with a
+    foreign app's data.
+    """
+    cur.execute(
+        "SELECT DISTINCT 'app_fd_' || tablename FROM app_form WHERE appid=%s",
+        (APP_ID,))
+    owned = {r[0] for r in cur.fetchall() if r[0]}
+    ddir = pathlib.Path(existing_data_dir)
+    if ddir.exists():
+        for f in ddir.glob("*.yaml"):
+            owned.add("app_fd_" + f.stem)
+    return owned
+
+
 def pull_operational_data(cur, target_dir: str) -> tuple[int, int]:
-    """Pull every app_fd_* table NOT matching md_*/mm_* as per-table YAML.
-    This is operational data — applications, vouchers, registry entries,
+    """Pull APP_ID's operational app_fd_* tables (NOT md_*/mm_*) as per-table
+    YAML. This is operational data — applications, vouchers, registry entries,
     audit logs, budget ledger, notification history, etc.
+
+    Scoping (see _owned_operational_tables): on a shared Joget DB the pull is
+    restricted to tables owned by APP_ID (form-declared + already-tracked),
+    so foreign apps sharing the database are never captured.
 
     Per ADR-033 this is *normally* excluded from the routine sync because
     on a production-shaped instance it would contain real citizen data.
@@ -173,6 +207,7 @@ def pull_operational_data(cur, target_dir: str) -> tuple[int, int]:
     /formcreator/seed which uses Joget's FormDataDao, not raw SQL.
     Returns (table_count, total_row_count)."""
     pathlib.Path(target_dir).mkdir(parents=True, exist_ok=True)
+    owned = _owned_operational_tables(cur, target_dir)
     cur.execute("""
         SELECT table_name FROM information_schema.tables
          WHERE table_schema='public'
@@ -181,7 +216,7 @@ def pull_operational_data(cur, target_dir: str) -> tuple[int, int]:
            AND table_name NOT LIKE 'app_fd_mm_%'
          ORDER BY table_name
     """)
-    tables = [r[0] for r in cur.fetchall()]
+    tables = [r[0] for r in cur.fetchall() if r[0] in owned]
     total_rows = 0
     for table in tables:
         total_rows += _dump_table_as_yaml(cur, table, pathlib.Path(target_dir))
