@@ -9,9 +9,9 @@ package global.govstack.regbb.engine;
  */
 public final class Build {
     /** Bumped by {@code deploy/repack.sh} on every build. */
-    public static final int    NUMBER = 140;
+    public static final int    NUMBER = 142;
     /** UTC ISO-8601 timestamp set at build time. */
-    public static final String TIMESTAMP = "2026-05-12T07:54:44Z";
+    public static final String TIMESTAMP = "2026-07-06T17:47:04Z";
     /** Convenience: short label for plugin descriptions / log lines. */
     public static final String STAMP = "build-" + String.format("%03d", NUMBER) + " @ " + TIMESTAMP;
 

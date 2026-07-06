@@ -91,6 +91,12 @@ public class Activator implements BundleActivator {
                 new BudgetApi(),
                 null));
 
+        // Session-authenticated voucher redemption endpoint (no API key).
+        registrationList.add(context.registerService(
+                global.govstack.regbb.engine.api.BudgetRedeemWeb.class.getName(),
+                new global.govstack.regbb.engine.api.BudgetRedeemWeb(),
+                null));
+
         // L3-1 3a — Budget hint column formatter for the operator inbox.
         registrationList.add(context.registerService(
                 BudgetHintFormatter.class.getName(),
