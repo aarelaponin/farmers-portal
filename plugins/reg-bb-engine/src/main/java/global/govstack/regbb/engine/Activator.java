@@ -97,6 +97,12 @@ public class Activator implements BundleActivator {
                 new global.govstack.regbb.engine.api.BudgetRedeemWeb(),
                 null));
 
+        // Session-authenticated read-only datalist endpoint for dashboards (no API key).
+        registrationList.add(context.registerService(
+                global.govstack.regbb.engine.api.DashboardDataWeb.class.getName(),
+                new global.govstack.regbb.engine.api.DashboardDataWeb(),
+                null));
+
         // L3-1 3a — Budget hint column formatter for the operator inbox.
         registrationList.add(context.registerService(
                 BudgetHintFormatter.class.getName(),
